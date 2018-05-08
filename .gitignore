@@ -97,5 +97,5 @@ wp-content/plugins/hello.php
 
 # End of https://www.gitignore.io/api/git,node,sass,bower,wordpress
 
-
+.DS_Store
 wp-config.php
