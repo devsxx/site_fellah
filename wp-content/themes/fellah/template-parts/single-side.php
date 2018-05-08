@@ -1,0 +1,33 @@
+
+<div class="facebook_box">
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12&appId=1630338777079719&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <div  class="fb-page" data-href="https://www.facebook.com/FellahAnnonces/" 
+            data-width="350" data-height="190" data-small-header="true" 
+            data-adapt-container-width="true" data-hide-cover="false"
+            data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/FellahAnnonces/" class="fb-xfbml-parse-ignore">
+                  <a href="https://www.facebook.com/FellahAnnonces/">Fellah.ma</a>
+            </blockquote>
+      </div>
+      <br>
+</div>
+
+<div class="categoris">
+      <div class="sidebare_titre">
+            <i class="fa fa-folder"></i>
+            <?php _e('Catégories','fellah'); ?>
+      </div>
+      <div class="categoris_container">
+            <ul>
+            <?php wp_list_categories( array( 'depth' => 0 ) ); ?>
+            </ul>
+      </div>
+</div>

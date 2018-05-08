@@ -1,0 +1,130 @@
+.header_bandeau{
+	height: oe_rem(275px);
+	@include flex(center, center, row);
+	background-color: $lighter_color;
+	margin-bottom: oe_rem(80px);
+	&.header_bandeau_home{
+		background: url(./img/bandeau.jpg) no-repeat 50%;
+		background-size: cover;
+	}
+	.titre{
+		color: #fff;
+		font-weight: 600;
+		font-size: oe_rem(38px);
+		text-transform: uppercase;
+		margin-bottom: oe_rem(65px);
+	}
+	.search_zone{
+		background-color: $light_color;
+		height: oe_rem(90px);
+		border-radius: oe_rem(4px);
+		padding: 0 oe_rem(25px);
+		@include flex(center, space-between, row);
+		input,
+		select{ 
+			color: $text_color;
+			font-size: oe_rem(19px); 
+			height: oe_rem(50px);
+			border-radius: oe_rem(4px);
+			padding: 0 oe_rem(14px);
+			border: none;
+			&[type="submit"]{
+				background-color: $text_color;
+				padding: 0 oe_rem(25px);
+				color: #fff;
+			}
+			&[type="checkbox"]{
+				height: auto;
+			}
+		}
+		.adverts-form-submit{
+			font-size: oe_rem(19px); 
+			height: oe_rem(50px);
+			line-height: oe_rem(50px);
+			border-radius: oe_rem(4px); 
+			border: none;
+			background-color: $text_color;
+			padding: 0 oe_rem(25px);
+			color: #fff;
+		}
+	}
+}
+
+
+.bandeau{
+	position: relative;
+	height: oe_rem(320px);
+	background-color: $light_color;
+	img{
+		width: 100%;
+	}
+	.info{
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 3; 
+		text-align: center;
+		@include flex(center,center,column);
+		.titre{
+			color: $main_text_color;
+			font-size: oe_rem(33px);  
+			font-weight: 300;
+		}
+		.description{
+			color: $main_text_color;
+			font-size: oe_rem(26px); 
+			margin: oe_rem(45px) 0 oe_rem(40px);
+			font-weight: 300;
+		}
+		a{   
+			@include button-variant(#fff, $main_color, $main_color);
+			height: oe_rem(50px);
+			line-height: oe_rem(50px);
+			padding: 0 oe_rem(20px);
+			min-width: oe_rem(175px);
+			border-radius: oe_rem(2px);
+		}
+	} 
+
+	@include media("<md"){
+		height: oe_rem(260px);
+		img{
+			height: 100%;
+		}
+		.info{
+			.titre{
+				font-size: oe_rem(40px); 
+			}
+			.description{
+				font-size: oe_rem(20px); 
+			}
+			a{
+				margin-top: oe_rem(20px); 
+			}
+		} 
+
+	} 
+
+	@include media("<sm"){
+		height: oe_rem(260px);
+		img{
+			height: 100%;
+		}
+		.info{
+			.titre{
+				font-size: oe_rem(25px); 
+			}
+			.description{
+				font-size: oe_rem(20px); 
+			}
+			a{
+				margin-top: oe_rem(20px); 
+			}
+		} 
+
+	} 
+
+}
+

@@ -1,0 +1,43 @@
+.home_actualites{
+	.actu{
+		position: relative;
+		a{
+			.bloc{
+				height: oe_rem(190px); 
+				border-radius: oe_rem(6px);
+				overflow: hidden;
+				.info{
+					color: white;
+					height: oe_rem(85px);  
+					opacity: 0; 
+					@include transition(opacity, .3s, ease-in-out);
+					padding: oe_rem(10px) oe_rem(15px);
+					@include flex(flex-start, center, column);
+					@include position(absolute,initial,0,0,0); 
+					background-color: rgba(11, 13, 12, 0.35); 
+					border-radius: 0 0 oe_rem(6px) oe_rem(6px);
+					.titre{
+						color: white;
+						font-size: oe_rem(14px);
+						line-height: oe_rem(26px);
+						font-weight: 200; 
+						text-transform: uppercase;
+						margin-bottom: oe_rem(10px);
+					}
+					.date{
+						color: white;
+						font-size: oe_rem(14px); 
+						font-weight: 200; 
+					}
+				}
+			}
+			&:hover{
+				.bloc{ 
+					.info{ 
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

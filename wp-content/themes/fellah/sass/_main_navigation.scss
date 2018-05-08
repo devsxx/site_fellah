@@ -1,0 +1,40 @@
+.main-navigation{
+	@include flex(center, flex-end, row);
+	height: oe_rem(150px);
+	&>div{
+		width: 100%;
+	}
+	.menu-toggle{
+		display: none;
+	}
+	font-size: oe_rem(15px);
+	font-weight: 600;
+	ul{
+		list-style: none;
+		@include flex(center, space-around, row);
+		padding: 0 oe_rem(15px);
+		margin: 0;
+		li{
+			
+			a{
+				text-transform: uppercase;
+				color: $main_text_color;
+				&:hover{
+					color: $text_color;
+				}
+			}
+			&.current-menu-item > ,
+			&.current-menu-parent > ,
+			&.current-menu-ancestor > {
+				a{
+					color: $text_color;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+

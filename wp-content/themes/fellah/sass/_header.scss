@@ -1,0 +1,93 @@
+// SITE HEADE
+.site-header{
+	height: oe_rem(150px);
+	.site-branding{
+		height: oe_rem(150px);
+		@include flex(center, flex-end, row);
+		.logo{ 
+		}
+		
+	}
+	.header_picto_container{
+		height: oe_rem(150px);
+		@include flex(center, flex-end, row);
+		.header_picto{
+			@include flex(center, flex-end, row);
+			.compte{
+				@include transition(all, .25s, ease-in-out);
+				padding: oe_rem(10px);
+				text-align: center;
+				cursor: pointer;
+				span{
+					opacity: 0;
+					font-size: oe_rem(14px);
+					font-weight: 400;
+					display: block;
+					padding-top: oe_rem(10px);
+				}
+				&:hover{
+					color: $text_color;
+					span{
+						opacity: 1;
+					}
+				}
+			}	
+		}
+	}
+
+	@include media("<lg") { 
+		padding-top: oe_rem(0);
+		padding-bottom: oe_rem(0);
+		.top{
+			height: auto;
+			.logo_sides{
+				border: none;
+				display: none !important;
+			}
+			.logo{
+				width: oe_rem(200px);
+				height: oe_rem(80px);   
+				margin: 0 auto;
+				@include flex(center, center, row);
+			}
+
+		}
+
+	}
+	
+}
+
+// MENU BURGER
+#menu_burger{
+	&.menu_icon {
+		width: oe_rem(46px);
+		height: oe_rem(32px);
+		overflow: hidden;
+		position: absolute;
+		top: 50%;
+		margin-top: oe_rem(-16px);
+		right: oe_rem(10px);
+		cursor: pointer;
+		display: none;
+
+		span {
+
+			@include transition();
+			display: block;
+			width: 100%;
+			position: absolute;
+			height: oe_rem(3px);
+			left: 0;
+			background: $white;;
+
+			&.menu_1 {    top: 0;}
+			&.menu_2 {    top: oe_rem(14px);}
+			&.menu_3 {    top: oe_rem(28px);}
+
+		}
+		@include media("<lg"){
+			display: block;
+		}
+	}	
+}
+

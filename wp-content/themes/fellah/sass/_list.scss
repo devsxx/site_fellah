@@ -1,0 +1,44 @@
+.list{
+	.list_element{
+		padding: oe_rem(15px) 0;
+		.image{
+			// border: 1px solid #f0f0f0;
+			// box-shadow: 1px 2px 6px #f0f0f0;
+			box-shadow: 0 10px 20px rgba(240,240,240,0.75), 0 6px 6px rgba(240,240,240,.9);
+		}
+		p{
+			margin: 0;
+		}
+	} 
+}
+
+
+
+
+.communiques{
+	.titre{
+		&.date_filtre{
+			font-size: oe_rem(18px); 
+			padding-top: oe_rem(20px);
+			padding-bottom: oe_rem(5px);
+			margin-bottom: oe_rem(20px);
+			border-bottom: oe_rem(1px) solid $main_color;
+		}
+	}
+
+	.element{
+		padding-left: 20px;
+		.date{
+			display: block;
+			font-size: oe_rem(10px);
+			font-weight: 500;
+			padding-top: oe_rem(5px);
+			
+		}
+		.pdf-link{
+			font-size: oe_rem(14px);
+			display: block;
+			padding: oe_rem(5px) 0 oe_rem(10px) 0;
+		}
+	}
+}

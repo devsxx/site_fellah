@@ -1,0 +1,84 @@
+/*!
+Theme Name: Fellah
+Theme URI: http://comenscene.me/
+Author: Oussama Elmaaroufy
+Author URI: http://comenscene.me/
+Description:  
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: fellah
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+TMZ is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+	Costume variables
+	Bootstrap
+	Font awesome
+	Site style
+--------------------------------------------------------------*/
+@import "variables";
+
+@import "../js/libs/font-awesome/scss/font-awesome";
+
+// Bootstrap
+@import "../js/libs/bootstrap/scss/bootstrap";
+
+// Import "include-media"
+@import "../js/libs/include-media/dist/include-media";
+
+// OWL Carousel 2
+@import "../js/libs/owl.carousel/src/scss/owl.carousel";
+@import "../js/libs/owl.carousel/src/scss/owl.theme.default";
+
+
+// Costume variables
+// @import "variables";
+@import "mixins";
+
+// Font site & awesome
+@import "fonts";
+
+
+// Site style
+@import "base";
+@import "form_element";
+@import "bandeaux";
+
+@import "header";
+@import "main_navigation";
+@import "side_menu";
+
+@import "home/home_header";
+@import "home/home_zones_activites";
+
+@import "home/home_video_bandeau";
+
+@import "home/home_activites";
+@import "home/home_stories";
+
+@import "home/home_events";
+
+@import "home/home_actus";
+
+@import "content_page";
+@import "alternative_content";
+@import "list";
+@import "annoces"; 
+@import "sliders";
+
+@import "blog";
+@import "adverts";
+  
+
+@import "footer";

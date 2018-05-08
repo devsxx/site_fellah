@@ -1,0 +1,174 @@
+.home_header{
+
+	background-color: $second_main_color;
+	@include flex(scretch,scretch, row);
+
+	.image{
+		flex: 1.5;
+		img{
+			width: 100%;
+		}
+	}
+
+	.citation{
+
+		flex: 1;
+		padding: oe_rem(50px) oe_rem(20px) ;
+
+		.bloc{
+			width: 80%;
+			.titre{
+				font-size: oe_rem(32px);
+				margin-bottom: oe_rem(40px);
+			}
+
+			.description{
+				font-size: oe_rem(18px);
+				color: $text_color;
+			}
+			
+			
+			
+		}
+
+	}
+
+	@include media("<xl"){ 
+		.citation{
+			padding: oe_rem(30px) oe_rem(15px) oe_rem(15px); 
+			.bloc{ 
+				flex: 1.5;
+			}
+		}
+	}
+
+	@include media("<lg"){
+		@include flex(scretch, scretch, column-reverse); 
+		.citation{
+			.bloc{ 
+				width: 100%; 
+				.titre{
+					font-size: oe_rem(32px);
+					margin-bottom: oe_rem(20px);
+				}
+			}
+		}
+	}
+
+	@include media("<md"){
+		@include flex(scretch, scretch, column-reverse);
+
+	}
+}
+
+
+
+/*qtranxs_widget*/
+
+#selecteur_lang{
+	height: 80px;
+    padding: 10px 0;
+	#lang_animate {
+		
+		.container_lang {
+			width: 40px;
+			height: 30px;
+			margin: 0px auto 10px;
+			perspective: 110px;
+			perspective-origin: -0% -0%;
+			.cube_lang{ 
+				animation: langRotate 3.5s ease-in-out infinite;
+				transform-style: preserve-3d;
+				transform: translateZ(-15px);
+				left: 15%;
+				position: relative;
+				margin: 0;
+				width: 30px;
+				height: 30px;
+				transition: 1s;
+				div {
+					width: 30px;
+					height: 30px;
+					position: absolute;
+					background-size: contain;    
+					backface-visibility: hidden;
+				}
+				
+				.fr {
+					transform: rotateY(0deg) translateZ(28px);
+					background-image: url(images/lang/en.png);
+				}
+				.en {
+					transform: rotateY(60deg) translateZ(28px);
+					background-image: url(images/lang/de.png);
+				}
+				.de {
+					transform: rotateY(120deg) translateZ(28px);
+					background-image: url(images/lang/es.png);
+				}
+				.es {
+					transform: rotateY(180deg) translateZ(28px);
+					background-image: url(images/lang/fr.png);
+				} 
+				.ja {
+					transform: rotateY(240deg) translateZ(28px);
+					background-image: url(images/lang/ja.png);
+				} 
+				.zh {
+					transform: rotateY(300deg) translateZ(28px);
+					background-image: url(images/lang/zh.png);
+				} 
+				&.active_en {
+					transform: translateZ(-15px) rotateY(0deg); 
+				}
+				&.active_de {
+					transform: translateZ(-15px) rotateY(90deg);
+				}
+				&.active_fr {
+					transform: translateZ(-15px) rotateY(180deg); 
+				}
+				&.active_es {
+					transform: translateZ(-15px) rotateY(270deg); 
+				}
+			}
+		}
+
+		.qtranxs_widget {
+			clear: both;
+			position: relative;
+			top: -11px;
+			ul li {
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+			select{
+				border: none;
+				font-size: 12px;
+				font-weight: 400;
+				padding: 0 16px 0 6px;
+				height: 30px;
+				color: #113b74;
+				background-color: transparent;
+				cursor: pointer;
+				margin: 0;
+			}
+		} 
+
+	}
+}
+
+@keyframes langRotate {
+	from {  transform: translateZ(-15px) rotateY(0deg);  }
+	15%  {  transform: translateZ(-15px) rotateY(60deg);  }
+	30%  {  transform: translateZ(-15px) rotateY(120deg);  }
+	50%  {  transform: translateZ(-15px) rotateY(180deg);  }
+	70%   {  transform: translateZ(-15px) rotateY(240deg);  }
+	85%  {  transform: translateZ(-15px) rotateY(300deg);  }
+	to   {  transform: translateZ(-15px) rotateY(360deg);  }
+}
+
+
+
+
+

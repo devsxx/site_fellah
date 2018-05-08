@@ -1,0 +1,79 @@
+
+
+.annoce_container{
+	width: oe_rem(250px);
+	margin-bottom: oe_rem(10px); 
+	.annoce{
+		width: oe_rem(225px);
+		border-radius: oe_rem(6px);
+		position: relative;
+		overflow: hidden;
+		&:after{
+			content: "";
+			background-image: url('./img/icons/annonce_loop.png');
+			background-repeat: no-repeat;
+			height: oe_rem(42px);
+			width: oe_rem(42px);
+			opacity: 0;
+			@include position(absolute, 50%, 50%, initial, initial);
+			@include transition(opacity, .25s, ease-in-out);
+			margin-top: oe_rem(-21px) ;
+			margin-right: oe_rem(-21px) ;
+		}
+		.hover{
+			cursor: pointer;
+			@include position(absolute, 0, 0, 0, 0);
+			background-color: rgba(255, 255, 255, .6);
+			opacity: 0;
+			transition: opacity .2s ease-in-out;
+		}
+	}
+
+	.info_container{
+		padding: oe_rem(25px) oe_rem(10px);
+		.info{
+			@include flex(center, space-between, row);
+			color: $main_text_color;
+			.date{
+				font-size: oe_rem(14px);
+				font-weight: 300;
+			}
+			.lieu{
+				font-size: oe_rem(14px);
+				font-weight: 300;
+			}
+		}
+		 
+		.titre{
+			font-size: oe_rem(17px);
+			height: oe_rem(82px);
+			padding: oe_rem(15px) 0;
+			font-weight: 100;
+			color: $main_text_color;
+		}
+		.cats{
+			font-size: oe_rem(14px);
+			font-weight: 300;
+			color: $main_text_color;
+			a{
+				color: $main_text_color;
+			}
+		}
+	}
+
+	 
+	&:hover{
+		border-radius: oe_rem(6px);
+		@include oe_box-shadow-light;
+		
+		.annoce{ 
+			border-radius: oe_rem(6px) oe_rem(6px) 0 0;
+			&:after{
+				opacity: 1;
+			}
+		}
+		.hover{
+			opacity: 1;
+		}
+	}
+}

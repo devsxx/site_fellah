@@ -1,0 +1,53 @@
+#zones_activites{
+	padding-top: oe_rem(50px);
+	padding-bottom: oe_rem(20px);
+	a{
+		.content{
+			margin-bottom: 30px;
+			.zone{
+				position: relative;
+				&:after{
+					font-weight: 300;
+					content: "+";  
+					color: $white;
+					font-size: oe_rem(54px) !important;
+					font: normal normal normal 14px/1 FontAwesome;
+					@include flex(center,center,row);
+					@include position(absolute,0,0,0,0);
+					background-color: rgba(9,104,134,.72);
+					@include transition();
+					opacity: 0;
+				}
+			}
+			.titre{
+				text-align: center;
+				font-size: oe_rem(18px);
+				color: $main_text_color;
+				padding: oe_rem(25px) 0;
+				.sous-titre{
+					font-weight: 300;
+					font-size: oe_rem(19px);
+					text-transform: none; 
+					line-height: oe_rem(25px);
+					color: $main_text_color;
+					margin: oe_rem(10px) 0 0 0;
+				}
+			}
+
+		}
+		&:hover{
+			.content{
+
+				.zone{
+					&:after{
+						opacity: 1;
+					}
+				}
+				.titre{
+					color: $main_color;
+				}
+
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.owl-carousel{
+
+   .owl-nav{
+      @include position(absolute, oe_rem(-100px), 20%, initial, initial);
+      margin: 0;
+      [class*='owl-'] { 
+         background: transparent; 
+         padding: 0;
+         margin: oe_rem(3px);
+         &:hover {
+            background: transparent;
+        }
+     }
+   }
+
+}

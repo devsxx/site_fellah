@@ -1,0 +1,146 @@
+#activites_stories{
+
+	@include flex(stretch,stretch,row);
+	@include clearfix();
+	.blocs{
+		flex: 1;
+		padding: oe_rem(20px) 0;
+		border-top: 1px solid $lighter_color;
+		border-left: 1px solid $lighter_color;
+		border-bottom: 1px solid $lighter_color;
+
+		.titre{
+			font-size: oe_rem(48px);
+			color: $light_color;
+			margin: oe_rem(30px) 0;
+			text-align: center;
+		}
+		.content{
+			width: oe_rem(460px);
+			margin: auto;
+			max-width: 100%;
+
+			a{
+				.text{
+					text-align: center;
+					.sous-titre{
+						font-size: oe_rem(29px);
+						margin: oe_rem(40px) 0 oe_rem(20px) 0;
+						color: $main_text_color;
+					}
+					.description{
+						font-size: oe_rem(19px);
+						ul{
+							li{
+								display: inline-block;
+								float: left;
+								padding: 0 oe_rem(4px);
+							}
+						}
+					}
+				}
+				
+				&:hover{
+					.text{
+						.sous-titre{
+							color: $main_color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.owl-theme {
+
+		.owl-nav { 
+			@include position(absolute, 50%, 0, initial, 0);
+			margin: 0;
+			margin-top: oe_rem(-58px);
+			[class*='owl-'] {
+				color: $lighter_color;
+				background: transparent;
+				border-radius: 50%;
+				position: absolute;
+			}
+			.owl-prev{
+				left: -20%;
+			}
+			.owl-next{
+				right: -20%;
+			}
+		}
+
+		@include media("<xl"){
+			.owl-nav {   
+			@include position(absolute, initial, 0, 70px, 0);
+				.owl-prev{
+					left: 0px;
+				}
+				.owl-next{
+					right: 0px;
+				}
+			}
+		}
+
+		@include media("<lg"){
+			.owl-nav {   
+			@include position(absolute, initial, 0, 70px, 0);
+				.owl-prev{
+					left: 0px;
+				}
+				.owl-next{
+					right: 0px;
+				}
+			}
+		}
+
+		@include media("<md"){
+			.owl-nav {   
+			@include position(absolute, initial, 0, 70px, 0);
+				.owl-prev{
+					left: 0px;
+				}
+				.owl-next{
+					right: 0px;
+				}
+			}
+		}
+
+	}
+
+
+	@include media("<xl"){ 
+		.blocs{  
+			.titre{ 
+				font-size: oe_rem(40px);
+			} 
+		}
+
+	}
+
+	@include media("<lg"){
+		@include flex(stretch, stretch, column); 
+		.blocs{ 
+			border-top: none;
+			border-right: 1px solid $lighter_color;
+			border-left: 1px solid $lighter_color;
+			border-bottom: 1px solid $lighter_color; 
+		}
+	}
+
+
+	@include media("<md"){
+		@include flex(stretch, stretch, column);
+		.blocs{ 
+			border-top: none;
+			border-right: 1px solid $lighter_color;
+			border-left: 1px solid $lighter_color;
+			border-bottom: 1px solid $lighter_color;
+			.titre{ 
+				font-size: oe_rem(30px);
+			} 
+		}
+
+	}
+}

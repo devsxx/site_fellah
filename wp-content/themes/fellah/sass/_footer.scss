@@ -1,0 +1,53 @@
+
+.site-footer { 
+	background-color: $second_main_color;
+	.site-info{
+		min-height: oe_rem(70px);
+		@include flex(center, flex-start, row);
+
+		.sprt{
+			font-size: oe_rem(14px);
+		}
+
+		a{
+			color: $main_text_color;
+			margin: 0 oe_rem(4px);
+			font-size: oe_rem(14px);
+			font-weight: 400;
+			@include transition();
+			&:hover,
+			&:active,
+			&:focus{
+				color: $text_color;
+				text-decoration: none; 
+			}
+		}
+		
+		span{
+			color: $main_text_color;
+			margin: 0 oe_rem(4px);
+			font-size: oe_rem(14px);
+		}
+
+		@include media("<md"){
+			padding: 4px;
+			.sprt{
+				display: none;
+			}
+
+			a{
+				display: block;
+				text-align: center; 
+				padding: 4px;
+				&:hover,
+				&:active,
+				&:focus{
+					border:none;
+					margin: auto;
+				}
+			}
+		}
+
+	}
+
+}

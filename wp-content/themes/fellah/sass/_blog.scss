@@ -1,0 +1,101 @@
+.page_blog{
+   .actu{
+      .bloc{
+         display: grid;
+         grid-template-columns: repeat(8, 1fr);
+         grid-column-gap: oe_rem(30px);
+         padding-bottom: oe_rem(40px);
+       
+         .left_bloc{
+            grid-column: 1/4;
+            .image{
+               border-radius: oe_rem(4px);
+               overflow: hidden;
+            }
+         }
+         .right_bloc{
+            grid-column: 4/9;
+            .info{
+               .date{
+                  font-size: oe_rem(14px);
+                  font-weight: 300;
+                  // padding-bottom: oe_rem(6px);
+               }
+               .titre{
+                  font-size: oe_rem(23px);
+                  font-weight: 100;
+                  a{
+                     color: $main_text_color;
+                     &:hover{
+                        color: $main_color;
+                        text-decoration: underline;
+                     }
+                  }
+               }
+               .cats{
+                  font-size: oe_rem(14px);
+                  font-weight: 300;
+                  padding: oe_rem(6px) 0;
+                  a{
+                     color: $main_text_color;
+                     &:hover{
+                        color: $main_color;
+                        text-decoration: underline;
+                     }
+                  }
+               }
+               .resume{
+                  font-size: oe_rem(17px);
+                  font-weight: 300;
+               }
+            } 
+         }
+      } 
+   }
+
+   .post-header{
+      .entry-meta{
+         padding: oe_rem(30px) 0 oe_rem(10px);
+         @include flex(center, flex-start, row);
+         .posted-on{
+            font-size: oe_rem(18px);
+            font-weight: 300;
+         }
+         .cats{
+            font-size: oe_rem(18px);
+            font-weight: 300;
+            padding-left: oe_rem(10px);
+         }
+         a{
+            color: $main_text_color;;
+         }
+      }
+   }
+}
+
+.sidebare_titre{
+   font-size: oe_rem(29px);
+   font-weight: 400;
+   padding: oe_rem(60px) 0 oe_rem(40px);
+   i{
+      color: $main_color;
+   }
+}
+
+.categoris_container{
+   padding: oe_rem(15px) 0;
+   background-color: $second_main_color;
+   ul{
+      font-size: oe_rem(20px);
+      font-weight: 300;
+      list-style: url('./img/icons/arrow_list.png');
+      li{
+         a{
+            color: $main_text_color;
+            &:hover{
+               color: $main_color;
+            }
+         }
+      }
+   }
+}
