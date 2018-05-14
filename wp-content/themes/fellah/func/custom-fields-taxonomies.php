@@ -41,7 +41,7 @@ function custom_fields_taxonomies_init() {
     ));
 
     // Connect taxonomy to a field in [adverts_add] form.
-    new Custom_Fields_Taxonomies_Handler( "taxonomy_type_annonce", "type_annonce");
+    new Custom_Fields_Taxonomies_Handler( "type_annonce", "type_annonce");
 }
 
 function custom_fields_localisation_taxonomies_init() {
@@ -72,7 +72,7 @@ function custom_fields_localisation_taxonomies_init() {
     // Connect taxonomy to a field in [adverts_add] form.
 
 
-    new Custom_Fields_Taxonomies_Handler( "taxonomy_localisation", "localisation");
+    new Custom_Fields_Taxonomies_Handler( "localisation", "localisation");
 }
 
 /**

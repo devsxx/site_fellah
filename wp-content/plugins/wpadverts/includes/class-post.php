@@ -101,6 +101,7 @@ class Adverts_Post {
         // Merge defaults with data from the Adverts_Form
         
         foreach($form->get_fields() as $field) {
+            //echo $field["name"]."<br/>";
             if(property_exists("WP_Post", $field["name"])) {
                 $data[$field["name"]] = $field["value"];
             } elseif(taxonomy_exists($field["name"])) {
@@ -109,6 +110,7 @@ class Adverts_Post {
                 $meta[$field["name"]] = array("field"=>$field, "value"=>$field["value"]);
             }
         }
+       
         
 
         if($post && $post->ID > 0) {
@@ -139,22 +141,16 @@ class Adverts_Post {
                 call_user_func( $callback_save, $post_id, $key, $value );
             }
         }
-        
+        // echo "<pre>";
+        // print_r($taxo);
+        // echo "</pre>";
+        // die();
         // Save taxonomies
         foreach($taxo as $key => $tax) {
+           
             wp_set_post_terms($post_id, $tax, $key);
-            
-            echo '<pre>';
-            echo ( $post_id ); 
-            echo '<br>';
-            var_dump ( $tax );
-            echo '<br>';
-            echo ( $key ); 
-            echo '<br>';
-            echo '<br>';
-            echo '</pre>';
         }
-        // die();
+        
         if( self::$_tmp_guid ) {
             // After save tmp_guid filter is no longer needed, remove it.
             self::$_tmp_guid = null;
