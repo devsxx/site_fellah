@@ -122,6 +122,7 @@ add_action( 'widgets_init', 'fellah_widgets_init' );
 function fellah_scripts() {
 	
 	wp_enqueue_style( 'fellah-fonts', 'https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,600,700' );
+	wp_enqueue_style( 'fellah-fonts-2', 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500' );
 	wp_enqueue_style( 'fellah-style', get_stylesheet_uri() );
 
 
@@ -227,7 +228,11 @@ require get_template_directory() . '/func/custom-fields-taxonomies.php';
 require get_template_directory() . '/func/override_templates.php';
 require get_template_directory() . '/func/search-by-category.php';
 // require get_template_directory() . '/func/search-by-price.php';
- 
+
+require get_template_directory() . '/func/compteur-vues.php';
+require get_template_directory() . '/func/breadcrumb.php';
+
+
 if( !defined("ADVERTS_FILE") ) {
 	define( "ADVERTS_FILE", __FILE__ );
 	define( "ADVERTS_PATH", plugin_dir_path( ADVERTS_FILE ) );

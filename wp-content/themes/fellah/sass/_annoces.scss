@@ -4,7 +4,7 @@
 	width: oe_rem(250px);
 	margin-bottom: oe_rem(10px); 
 	.annoce{
-		width: oe_rem(225px);
+		height: oe_rem(225px);
 		border-radius: oe_rem(6px);
 		position: relative;
 		overflow: hidden;
@@ -32,13 +32,14 @@
 	.info_container{
 		padding: oe_rem(25px) oe_rem(10px);
 		.info{
-			@include flex(center, space-between, row);
+			@include flex(center, flex-start, row);
 			color: $main_text_color;
 			.date{
 				font-size: oe_rem(14px);
 				font-weight: 300;
 			}
 			.lieu{
+				padding-left: oe_rem(14px);
 				font-size: oe_rem(14px);
 				font-weight: 300;
 			}
@@ -53,7 +54,7 @@
 		}
 		.cats{
 			font-size: oe_rem(14px);
-			font-weight: 300;
+			font-weight: 500;
 			color: $main_text_color;
 			a{
 				color: $main_text_color;

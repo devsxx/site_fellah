@@ -153,8 +153,9 @@ function adverts_localisation_taxonomies( $taxonomy = 'localisation' ) {
 
 add_filter("manage_edit-advert_columns", "my_adverts_edit_columns", 20);
 function my_adverts_edit_columns( $columns ) {
-    $columns["localisation"] = "Localisation";
-    $columns["type_annonce"] = "Type annonce";
+    $columns["localisation"] = __("Localisation");
+    $columns["type_annonce"] = __("Type annonce");
+    $columns['post_views']   = __('Views');
     return $columns;
 }
 add_action("manage_advert_posts_custom_column", "my_adverts_manage_post_columns", 10, 2);
@@ -185,6 +186,9 @@ function my_adverts_manage_post_columns( $column, $post_id ) {
             } 
             echo "<strong>". $type_annonces ."</strong>";
         }
+    }
+    if($column === 'post_views'){
+        echo getPostViews($post_id);
     }
 }
 

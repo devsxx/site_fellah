@@ -30,6 +30,7 @@
 		}
 
 		@include media("<md"){
+			@include flex(center, center, column);
 			padding: 4px;
 			.sprt{
 				display: none;

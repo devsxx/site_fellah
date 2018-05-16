@@ -14,7 +14,7 @@
             <div class="right_bloc">
                   <div class="info">
                   <div class="date">
-                        <i class="fa fa-calendar-plus"></i>
+                        <i class="far fa-calendar-plus"></i>
                         <?php echo get_the_date( ) ?>
                   </div>
                   <div class="titre">

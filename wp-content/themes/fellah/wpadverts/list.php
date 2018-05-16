@@ -14,8 +14,8 @@
 <div class="header_bandeau">
     <div class="container">
         <div class="row">
-            <div class="col-md-12"> 
-                <form action="<?php echo esc_attr( $action ) ?>" class="adverts-search-form" method="get">
+            <div class="col-md-12">
+                <form action="<?php echo esc_attr( get_permalink( $redirect_to ) ) ?>" class="adverts-search-form" method="get">
                     <div class="search_zone">
                         <?php foreach($form->get_fields( array( "type" => array( "adverts_field_hidden" ) ) ) as $field): ?>
                             <?php call_user_func( adverts_field_get_renderer($field), $field) ?>

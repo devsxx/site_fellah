@@ -52,11 +52,11 @@ function shortcode_adverts_list( $atts ) {
     
     extract( $params );
     
-    // if( !is_numeric( $redirect_to ) ) {
-        // $action = $redirect_to;
-    // } else {
+    if( is_numeric( $redirect_to ) ) {
         $action = get_permalink( $redirect_to );
-    // }
+    } else {
+        $action = $redirect_to;
+    }
     
     $taxonomy = null;
     $meta = array();
@@ -352,6 +352,8 @@ function shortcode_adverts_add( $atts ) {
         $bind["_adverts_action"] = "preview";
         
         $form->bind( $bind );
+        
+        $actions_class = "adverts-field-actions";
         
         // adverts/templates/add.php
         ob_start();
@@ -696,6 +698,7 @@ function _adverts_manage_edit( $atts ) {
     
     $adverts_flash = array( "error" => $error, "info" => $info );
     $baseurl = apply_filters( "adverts_manage_baseurl", get_the_permalink() );
+    $actions_class = "adverts-field-actions";
     
     // adverts/templates/manage-edit.php
     include apply_filters( "adverts_template_load", ADVERTS_PATH . 'templates/manage-edit.php' );

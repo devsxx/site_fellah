@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WP Adverts package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Adverts 1.2.2\n"
+"Project-Id-Version: WP Adverts 1.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
-"POT-Creation-Date: 2018-03-13 11:23:56+00:00\n"
+"POT-Creation-Date: 2018-05-10 10:41:35+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Payment Gateway / Bank Transfer"
 msgstr ""
 
-#: addons/bank-transfer/bank-transfer.php:42 includes/admin-pages.php:180
+#: addons/bank-transfer/bank-transfer.php:42 includes/admin-pages.php:187
 msgid "Bank Transfer"
 msgstr ""
 
@@ -48,15 +48,15 @@ msgstr ""
 #: addons/bank-transfer/includes/admin-pages.php:32
 #: addons/contact-form/includes/admin-pages.php:37
 #: addons/core/includes/admin-pages.php:42
-#: addons/core/includes/admin-pages.php:83
+#: addons/core/includes/admin-pages.php:87
 #: addons/payments/includes/admin-pages.php:35
 msgid "Update Options"
 msgstr ""
 
 #: addons/bank-transfer/includes/admin-pages.php:41
 #: addons/contact-form/includes/admin-pages.php:50
-#: addons/core/includes/admin-pages.php:62
-#: addons/core/includes/admin-pages.php:136
+#: addons/core/includes/admin-pages.php:66
+#: addons/core/includes/admin-pages.php:140
 #: addons/payments/includes/admin-pages.php:43
 msgid "Settings updated."
 msgstr ""
@@ -64,8 +64,8 @@ msgstr ""
 #: addons/bank-transfer/includes/admin-pages.php:43
 #: addons/contact-form/contact-form.php:108
 #: addons/contact-form/includes/admin-pages.php:52
-#: addons/core/includes/admin-pages.php:64
-#: addons/core/includes/admin-pages.php:138
+#: addons/core/includes/admin-pages.php:68
+#: addons/core/includes/admin-pages.php:142
 #: addons/payments/includes/admin-pages.php:45
 #: addons/payments/includes/admin-pages.php:158
 #: addons/payments/includes/admin-pages.php:201
@@ -95,7 +95,7 @@ msgid ""
 "default message remove whole text from editor and save the form."
 msgstr ""
 
-#: addons/contact-form/admin/options.php:15 includes/admin-pages.php:127
+#: addons/contact-form/admin/options.php:15 includes/admin-pages.php:134
 msgid "Contact Form"
 msgstr ""
 
@@ -149,201 +149,234 @@ msgstr ""
 msgid "Gallery"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:225
-#: addons/core/includes/admin-pages.php:226
+#: addons/core/includes/admin-pages.php:229
+#: addons/core/includes/admin-pages.php:230
 msgid "Common Settings"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:232
+#: addons/core/includes/admin-pages.php:236
 msgid "Default Ads List Page"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:233
+#: addons/core/includes/admin-pages.php:237
 msgid "Select page on which the main [adverts_list] shortcode is being used."
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:239
+#: addons/core/includes/admin-pages.php:243
 msgid "Default Visibility"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:240
+#: addons/core/includes/admin-pages.php:244
 msgid "Number of days Ad will be visible by default."
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:250
-#: addons/core/includes/admin-pages.php:251
+#: addons/core/includes/admin-pages.php:254
+#: addons/core/includes/admin-pages.php:255
 msgid "Defaults Values For [adverts_list]"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:256
+#: addons/core/includes/admin-pages.php:260
 msgid "Search Bar"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:259
+#: addons/core/includes/admin-pages.php:263
 msgid "Enabled"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:260
+#: addons/core/includes/admin-pages.php:264
 msgid "Disabled"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:266
+#: addons/core/includes/admin-pages.php:270
 msgid "Display Ads As"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:269
+#: addons/core/includes/admin-pages.php:273
 msgid "Grid (2 or more columns)"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:270
+#: addons/core/includes/admin-pages.php:274
 msgid "List (1 column)"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:277
+#: addons/core/includes/admin-pages.php:281
 msgid "Columns"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:288
+#: addons/core/includes/admin-pages.php:292
 msgid "Posts Per Page"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:297
+#: addons/core/includes/admin-pages.php:301
 msgid "Switch Views"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:300
+#: addons/core/includes/admin-pages.php:304
 msgid "Allow users to switch between grid and list view."
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:307
-#: addons/core/includes/admin-pages.php:308
+#: addons/core/includes/admin-pages.php:311
+#: addons/core/includes/admin-pages.php:312
 msgid "Currency Settings"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:314
+#: addons/core/includes/admin-pages.php:318
 msgid "Currency"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:321
+#: addons/core/includes/admin-pages.php:325
 msgid "Currency Position"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:323
+#: addons/core/includes/admin-pages.php:327
 msgid "Prefix - $10"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:324
+#: addons/core/includes/admin-pages.php:328
 msgid "Suffix - 10$"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:331
+#: addons/core/includes/admin-pages.php:335
 msgid "Decimal Places"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:341
+#: addons/core/includes/admin-pages.php:345
 msgid "Decimal Separator"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:347
+#: addons/core/includes/admin-pages.php:351
 msgid "Thousands Separator"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:361
-#: addons/core/includes/admin-pages.php:362
-msgid "Advert Details Pages"
+#: addons/core/includes/admin-pages.php:357
+#: addons/core/includes/admin-pages.php:358
+msgid "Expired Ads Handling"
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:364
+msgid "Expired Ad HTTP Status"
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:367
+msgid "<strong>404</strong> — Show 'Page Not Found' Error"
 msgstr ""
 
 #: addons/core/includes/admin-pages.php:368
-msgid "Gallery Pagination"
+msgid "<strong>301</strong> — Redirect to a different page ..."
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:370
-msgid "Next and Previous Buttons"
+#: addons/core/includes/admin-pages.php:369
+msgid "<strong>200</strong> — Show Ad details page with contact options disabled."
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:371
-msgid "Thumbnails Slider"
+#: addons/core/includes/admin-pages.php:376
+msgid "Redirect URL"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:379
-msgid "Visible Thumbnails"
-msgstr ""
-
-#: addons/core/includes/admin-pages.php:380
-msgid "Number of thumbnails to show below gallery."
-msgstr ""
-
-#: addons/core/includes/admin-pages.php:386
-msgid "Scrolling Thumbnails"
+#: addons/core/includes/admin-pages.php:383
+msgid "Always Visible For"
 msgstr ""
 
 #: addons/core/includes/admin-pages.php:387
-msgid "Number of thumbnails to scroll when clicking Previous or Next buttons."
+msgid "Cabability (or Role) required to always see expired Ads details pages."
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:393
-msgid "Lightbox"
-msgstr ""
-
-#: addons/core/includes/admin-pages.php:395
-msgid "Allow opening Gallery images in a Lightbox."
-msgstr ""
-
+#: addons/core/includes/admin-pages.php:401
 #: addons/core/includes/admin-pages.php:402
-#: addons/core/includes/admin-pages.php:403
-msgid "Gallery Upload"
+msgid "Advert Details Pages"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:409
-msgid "Image Editor Capability"
+#: addons/core/includes/admin-pages.php:408
+msgid "Gallery Pagination"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:413
-msgid "Cabability required to edit images in the Gallery."
+#: addons/core/includes/admin-pages.php:410
+msgid "Next and Previous Buttons"
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:411
+msgid "Thumbnails Slider"
 msgstr ""
 
 #: addons/core/includes/admin-pages.php:419
+msgid "Visible Thumbnails"
+msgstr ""
+
 #: addons/core/includes/admin-pages.php:420
-msgid "Image Sizes"
+msgid "Number of thumbnails to show below gallery."
 msgstr ""
 
 #: addons/core/includes/admin-pages.php:426
-msgid "Adverts Gallery"
+msgid "Scrolling Thumbnails"
 msgstr ""
 
 #: addons/core/includes/admin-pages.php:427
-msgid "This image size is being used in the image slider on Advert details pages."
+msgid "Number of thumbnails to scroll when clicking Previous or Next buttons."
 msgstr ""
 
 #: addons/core/includes/admin-pages.php:433
+msgid "Lightbox"
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:435
+msgid "Allow opening Gallery images in a Lightbox."
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:442
+#: addons/core/includes/admin-pages.php:443
+msgid "Gallery Upload"
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:449
+msgid "Image Editor Capability"
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:453
+msgid "Cabability required to edit images in the Gallery."
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:459
+#: addons/core/includes/admin-pages.php:460
+msgid "Image Sizes"
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:466
+msgid "Adverts Gallery"
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:467
+msgid "This image size is being used in the image slider on Advert details pages."
+msgstr ""
+
+#: addons/core/includes/admin-pages.php:473
 msgid "Adverts List"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:434
+#: addons/core/includes/admin-pages.php:474
 msgid "This image size is being used in the [adverts_list] shortcode."
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:440
+#: addons/core/includes/admin-pages.php:480
 msgid "Upload Thumbnail"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:441
+#: addons/core/includes/admin-pages.php:481
 msgid "This image size is being used in gallery thumbnails."
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:511
+#: addons/core/includes/admin-pages.php:551
 msgid "max. width"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:516
+#: addons/core/includes/admin-pages.php:556
 msgid "max. height"
 msgstr ""
 
-#: addons/core/includes/admin-pages.php:519
+#: addons/core/includes/admin-pages.php:559
 msgid "crop image"
 msgstr ""
 
-#: addons/featured/admin/options.php:15 includes/admin-pages.php:121
+#: addons/featured/admin/options.php:15 includes/admin-pages.php:128
 msgid "Featured Ads"
 msgstr ""
 
@@ -682,7 +715,7 @@ msgid "Pending Payment"
 msgstr ""
 
 #: addons/payments/includes/admin-pages.php:548
-#: includes/class-updates-manager.php:332 templates/manage-edit.php:47
+#: includes/class-updates-manager.php:332 templates/manage-edit.php:52
 msgid "Update"
 msgstr ""
 
@@ -757,7 +790,7 @@ msgid_plural "Visible %d days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: addons/payments/payments.php:439 includes/shortcodes.php:436
+#: addons/payments/payments.php:439 includes/shortcodes.php:438
 msgid "Thank you for submitting your ad!"
 msgstr ""
 
@@ -895,97 +928,107 @@ msgid ""
 "and drop editor."
 msgstr ""
 
-#: includes/admin-pages.php:118
+#: includes/admin-pages.php:116
+msgid "Authors"
+msgstr ""
+
+#: includes/admin-pages.php:117
+msgid ""
+"Using Authors module users can create their profiles with list of authors "
+"ads."
+msgstr ""
+
+#: includes/admin-pages.php:125
 msgid "Features"
 msgstr ""
 
-#: includes/admin-pages.php:122
+#: includes/admin-pages.php:129
 msgid "Allow users to post Ads displayed always at the top of the list."
 msgstr ""
 
-#: includes/admin-pages.php:128
+#: includes/admin-pages.php:135
 msgid ""
 "Display contact form on Ad details pages instead of just the contact "
 "information."
 msgstr ""
 
-#: includes/admin-pages.php:133
+#: includes/admin-pages.php:140
 msgid "Maps And Locations"
 msgstr ""
 
-#: includes/admin-pages.php:134
+#: includes/admin-pages.php:141
 msgid "Locations Taxonomy, Google Maps integration and more."
 msgstr ""
 
-#: includes/admin-pages.php:140
+#: includes/admin-pages.php:147
 msgid "Fee Per Category"
 msgstr ""
 
-#: includes/admin-pages.php:141
+#: includes/admin-pages.php:148
 msgid ""
 "Set fee for Ads posting per category or allow to post for free in some "
 "categories."
 msgstr ""
 
-#: includes/admin-pages.php:147
+#: includes/admin-pages.php:154
 msgid "reCAPTCHA"
 msgstr ""
 
-#: includes/admin-pages.php:148
+#: includes/admin-pages.php:155
 msgid ""
 "Protect your forms from SPAM using easy easy for humans and hard for bots "
 "captcha."
 msgstr ""
 
-#: includes/admin-pages.php:154
+#: includes/admin-pages.php:161
 msgid "Analytics"
 msgstr ""
 
-#: includes/admin-pages.php:155
+#: includes/admin-pages.php:162
 msgid ""
 "Google Analytics integration, allows users to view their Ads stats in past "
 "30 days."
 msgstr ""
 
-#: includes/admin-pages.php:161
+#: includes/admin-pages.php:168
 msgid "Category Icons"
 msgstr ""
 
-#: includes/admin-pages.php:162
+#: includes/admin-pages.php:169
 msgid "Set custom icons (small and big) for each category."
 msgstr ""
 
-#: includes/admin-pages.php:168
+#: includes/admin-pages.php:175
 msgid "Mark As Sold"
 msgstr ""
 
-#: includes/admin-pages.php:169
+#: includes/admin-pages.php:176
 msgid "Allow users and administrators to mark the Ads as sold."
 msgstr ""
 
-#: includes/admin-pages.php:177
+#: includes/admin-pages.php:184
 msgid "Payment Gateways"
 msgstr ""
 
-#: includes/admin-pages.php:181
+#: includes/admin-pages.php:188
 msgid ""
 "Allow users to pay for ad posting using direct bank transfer or cash "
 "payments."
 msgstr ""
 
-#: includes/admin-pages.php:186
+#: includes/admin-pages.php:193
 msgid "PayPal Standard"
 msgstr ""
 
-#: includes/admin-pages.php:187
+#: includes/admin-pages.php:194
 msgid "PayPal Payments Standard, allow users to pay for ads via PayPal."
 msgstr ""
 
-#: includes/admin-pages.php:329
+#: includes/admin-pages.php:336
 msgid "Category Icon"
 msgstr ""
 
-#: includes/admin-pages.php:332
+#: includes/admin-pages.php:339
 msgid "Filter Icons ..."
 msgstr ""
 
@@ -1010,7 +1053,7 @@ msgstr ""
 msgid "Never Expires"
 msgstr ""
 
-#: includes/admin-post-type.php:309 wpadverts.php:310
+#: includes/admin-post-type.php:309 wpadverts.php:338
 msgid "OK"
 msgstr ""
 
@@ -1091,55 +1134,55 @@ msgstr ""
 msgid "Start typing user name, email or login below, some suggestions will appear."
 msgstr ""
 
-#: includes/ajax.php:62 includes/ajax.php:165 includes/ajax.php:228
-#: includes/ajax.php:265 includes/ajax.php:302 includes/ajax.php:393
-#: includes/ajax.php:469 includes/ajax.php:689 includes/ajax.php:936
+#: includes/ajax.php:62 includes/ajax.php:168 includes/ajax.php:231
+#: includes/ajax.php:268 includes/ajax.php:305 includes/ajax.php:396
+#: includes/ajax.php:472 includes/ajax.php:692 includes/ajax.php:939
 msgid "Invalid Session. Please refresh the page and try again."
 msgstr ""
 
-#: includes/ajax.php:181 includes/ajax.php:325 includes/ajax.php:416
-#: includes/ajax.php:498 includes/ajax.php:710
+#: includes/ajax.php:184 includes/ajax.php:328 includes/ajax.php:419
+#: includes/ajax.php:501 includes/ajax.php:713
 msgid "Incorrect Post or Attachment ID."
 msgstr ""
 
-#: includes/ajax.php:275
+#: includes/ajax.php:278
 msgid "Attachment does not exist."
 msgstr ""
 
-#: includes/ajax.php:277
+#: includes/ajax.php:280
 msgid "Incorrect attachment ID."
 msgstr ""
 
-#: includes/ajax.php:281
+#: includes/ajax.php:284
 msgid "File could not be deleted."
 msgstr ""
 
-#: includes/ajax.php:310 includes/ajax.php:402 includes/ajax.php:478
-#: includes/ajax.php:698
+#: includes/ajax.php:313 includes/ajax.php:405 includes/ajax.php:481
+#: includes/ajax.php:701
 msgid "You cannot edit images."
 msgstr ""
 
-#: includes/ajax.php:740
+#: includes/ajax.php:743
 msgid "Could not write file %s"
 msgstr ""
 
-#: includes/ajax.php:855 includes/ajax.php:890
+#: includes/ajax.php:858 includes/ajax.php:893
 msgid "Post with given ID does not exist."
 msgstr ""
 
-#: includes/ajax.php:944
+#: includes/ajax.php:947
 msgid "Post you are trying to delete does not exist."
 msgstr ""
 
-#: includes/ajax.php:952
+#: includes/ajax.php:955
 msgid "Post you are trying to delete does not belong to you."
 msgstr ""
 
-#: includes/ajax.php:960
+#: includes/ajax.php:963
 msgid "This post is not an Advert."
 msgstr ""
 
-#: includes/ajax.php:990
+#: includes/ajax.php:993
 msgid "Advert <strong>%s</strong> deleted."
 msgstr ""
 
@@ -1639,6 +1682,18 @@ msgstr ""
 msgid "Pending Ads"
 msgstr ""
 
+#: includes/functions.php:2659
+msgid ""
+"<strong>Visible To Administrators Only</strong><br/>This Ad expired, but as "
+"a user with <em>%s</em> capability you can see this page."
+msgstr ""
+
+#: includes/functions.php:2664
+msgid ""
+"<strong>This Ad expired and is no longer available.</strong><br/>See our "
+"other active <a href=\"%s\">classified ads</a>."
+msgstr ""
+
 #: includes/gallery.php:51
 msgid "Allowed Files"
 msgstr ""
@@ -1695,7 +1750,7 @@ msgid ""
 "video cover."
 msgstr ""
 
-#: includes/gallery.php:347 wpadverts.php:235
+#: includes/gallery.php:347 wpadverts.php:263
 msgid "Edit Image"
 msgstr ""
 
@@ -1885,33 +1940,33 @@ msgstr ""
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: includes/shortcodes.php:273 includes/shortcodes.php:482
+#: includes/shortcodes.php:273 includes/shortcodes.php:484
 msgid ""
 "Only logged in users can access this page. <a href=\"%1$s\">Login</a> or <a "
 "href=\"%2$s\">Register</a>."
 msgstr ""
 
-#: includes/shortcodes.php:414
+#: includes/shortcodes.php:416
 msgid "There are errors in your form. Please correct them before proceeding."
 msgstr ""
 
-#: includes/shortcodes.php:605
+#: includes/shortcodes.php:607
 msgid "Ad does not exist."
 msgstr ""
 
-#: includes/shortcodes.php:615
+#: includes/shortcodes.php:617
 msgid "You do not own this Ad."
 msgstr ""
 
-#: includes/shortcodes.php:627
+#: includes/shortcodes.php:629
 msgid "Incorrect post status [%s]."
 msgstr ""
 
-#: includes/shortcodes.php:684
+#: includes/shortcodes.php:686
 msgid "Post has been updated."
 msgstr ""
 
-#: includes/shortcodes.php:691
+#: includes/shortcodes.php:693
 msgid "Cannot update. There are errors in your form."
 msgstr ""
 
@@ -2005,75 +2060,75 @@ msgstr ""
 msgid "Published: %1$s (%2$s ago)"
 msgstr ""
 
-#: wpadverts.php:112
+#: wpadverts.php:140
 msgid "Expired <span class=\"count\">(%s)</span>"
 msgid_plural "Expired <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: wpadverts.php:120
+#: wpadverts.php:148
 msgid "Temporary <span class=\"count\">(%s)</span>"
 msgid_plural "Temporary <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: wpadverts.php:127
+#: wpadverts.php:155
 msgid "Add New Classified"
 msgstr ""
 
-#: wpadverts.php:128
+#: wpadverts.php:156
 msgid "Edit Classified"
 msgstr ""
 
-#: wpadverts.php:129
+#: wpadverts.php:157
 msgid "New Classified"
 msgstr ""
 
-#: wpadverts.php:130
+#: wpadverts.php:158
 msgid "All Classifieds"
 msgstr ""
 
-#: wpadverts.php:131
+#: wpadverts.php:159
 msgid "View Classified"
 msgstr ""
 
-#: wpadverts.php:132
+#: wpadverts.php:160
 msgid "Search Classifieds"
 msgstr ""
 
-#: wpadverts.php:133
+#: wpadverts.php:161
 msgid "No Classifieds found"
 msgstr ""
 
-#: wpadverts.php:134
+#: wpadverts.php:162
 msgid "No Classifieds found in the Trash"
 msgstr ""
 
-#: wpadverts.php:136
+#: wpadverts.php:164
 msgid "Classifieds"
 msgstr ""
 
-#: wpadverts.php:225
+#: wpadverts.php:253
 msgid "Select options ..."
 msgstr ""
 
-#: wpadverts.php:230
+#: wpadverts.php:258
 msgid "No results found."
 msgstr ""
 
-#: wpadverts.php:236
+#: wpadverts.php:264
 msgid "Delete Image"
 msgstr ""
 
-#: wpadverts.php:237
+#: wpadverts.php:265
 msgid "View Full Image"
 msgstr ""
 
-#: wpadverts.php:238
+#: wpadverts.php:266
 msgid "Main"
 msgstr ""
 
-#: wpadverts.php:439
+#: wpadverts.php:468
 msgid "Module activated successfully."
 msgstr ""
 
@@ -2118,27 +2173,27 @@ msgctxt "post"
 msgid "Pending"
 msgstr ""
 
-#: wpadverts.php:109
+#: wpadverts.php:137
 msgctxt "post"
 msgid "Expired"
 msgstr ""
 
-#: wpadverts.php:116
+#: wpadverts.php:144
 msgctxt "post"
 msgid "Temporary"
 msgstr ""
 
-#: wpadverts.php:124
+#: wpadverts.php:152
 msgctxt "post type general name"
 msgid "Classifieds"
 msgstr ""
 
-#: wpadverts.php:125
+#: wpadverts.php:153
 msgctxt "post type singular name"
 msgid "Classified"
 msgstr ""
 
-#: wpadverts.php:126
+#: wpadverts.php:154
 msgctxt "classified"
 msgid "Add New"
 msgstr ""

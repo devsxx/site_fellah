@@ -32,6 +32,12 @@
 			}
 		}
 	}
+	@include media("<md"){
+		ul{
+			@include flex(stretch, flex-start, column);
+			background-color: $white;
+		}
+	}
 }
 
 

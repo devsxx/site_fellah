@@ -187,77 +187,95 @@ jQuery(document).ready(function(){
 
 	});
 
-jQuery('#showMore').click(function(){
-	jQuery(this).toggleClass('open');
-	jQuery('.suite').slideToggle();
-});
+	jQuery('#showMore').click(function(){
+		jQuery(this).toggleClass('open');
+		jQuery('.suite').slideToggle();
+	});
 
-
-jQuery('#annoces_slider').owlCarousel({
-	loop:true,
-	margin: 30,
-	slideBy: 3,
-	dots: false,
-	autoWidth: true,
-	nav:true,	 
-	navText: ['<img src="wp-content/themes/fellah/img/icons/arrow-left.png">','<img src="wp-content/themes/fellah/img/icons/arrow-right.png">'],
-});
-
-jQuery('#top_annoces_slider').owlCarousel({
-	loop:true,
-	margin: 30,
-	slideBy: 3,
-	dots: false,
-	autoWidth: true,
-	nav:true,	 
-	navText: ['<img src="wp-content/themes/fellah/img/icons/arrow-left.png">','<img src="wp-content/themes/fellah/img/icons/arrow-right.png">'],
-});
-
-jQuery('#activites_slide').owlCarousel({
-	loop:true,
-	items:1,
-	margin:0,
-	dots: true,
-	autoplay: true,
-	loop: true,
-	dots: false,
-	nav:true,	 
-	navText: ['<img src="wp-content/themes/tmz/images/prev.png">','<img src="wp-content/themes/tmz/images/next.png">'],
-	responsive:{
-		0:{
-			items:1
-		},
-		600:{
-			items:1
-		},
-		1000:{
-			items:1
+	jQuery('#annoces_slider').owlCarousel({
+		loop:true,
+		margin: 30,
+		slideBy: 1,
+		dots: false,
+		autoWidth: true,
+		nav:true,	 
+		navText: ['<img src="wp-content/themes/fellah/img/icons/arrow-left.png">','<img src="wp-content/themes/fellah/img/icons/arrow-right.png">'],
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			} ,
+			1000:{
+				items:1
+			} 
 		}
-	}
-});
+	});
 
-jQuery('#stories_slide').owlCarousel({
-	loop:true,
-	margin:0,
-	dots: false,
-	nav:true,	 
-	navText: ['<img src="wp-content/themes/tmz/images/prev.png">','<img src="wp-content/themes/tmz/images/next.png">'],
-	responsive:{
-		0:{
-			items:1
-		},
-		600:{
-			items:1
-		},
-		1000:{
-			items:1
+	jQuery('#top_annoces_slider').owlCarousel({
+		loop:true,
+		margin: 30,
+		slideBy: 1,
+		dots: false,
+		autoWidth: true,
+		nav:true,	
+		navText: ['<img src="wp-content/themes/fellah/img/icons/arrow-left.png">','<img src="wp-content/themes/fellah/img/icons/arrow-right.png">'],
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			} ,
+			1000:{
+				items:1
+			} 
 		}
-	}
-});
+	});
 
+	jQuery('#activites_slide').owlCarousel({
+		loop:true,
+		items:1,
+		margin:0,
+		dots: true,
+		autoplay: true,
+		loop: true,
+		dots: false,
+		nav:true,	 
+		navText: ['<img src="wp-content/themes/tmz/images/prev.png">','<img src="wp-content/themes/tmz/images/next.png">'],
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		}
+	});
 
+	jQuery('#stories_slide').owlCarousel({
+		loop:true,
+		margin:0,
+		dots: false,
+		nav:true,	 
+		navText: ['<img src="wp-content/themes/tmz/images/prev.png">','<img src="wp-content/themes/tmz/images/next.png">'],
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		}
+	});
 
-// if (window.matchMedia("(max-width: 992px)").matches) {
 	jQuery('#actualites_slider').owlCarousel({
 		loop:true,
 		margin:0,
@@ -276,38 +294,33 @@ jQuery('#stories_slide').owlCarousel({
 			}
 		}
 	});
-// }else{
-// 	jQuery('#actualites_slider').owlCarousel({
-// 		loop:true,
-// 		margin:0,
-// 		dots: false,
-// 		nav:true,	 
-// 		navText: ['<img src="wp-content/themes/tmz/images/prev_white.png">','<img src="wp-content/themes/tmz/images/next_white.png">'],
-// 		responsive:{
-// 			0:{
-// 				items:2
-// 			},
-// 			600:{
-// 				items:2
-// 			},
-// 			1000:{
-// 				items:2
-// 			}
-// 		}
-// 	});
-// }
 
-if (window.matchMedia("(max-width: 1200px)").matches) {
+	if (window.matchMedia("(max-width: 1200px)").matches) {
 
-	jQuery("#site-navigation #primary-menu .menu-item-has-children").each(function(evt){
-		$a = jQuery( this ).children("a");  
-		$a.click(function(evt){
-			evt.preventDefault(); 
+		jQuery("#site-navigation #primary-menu .menu-item-has-children").each(function(evt){
+			$a = jQuery( this ).children("a");  
+			$a.click(function(evt){
+				evt.preventDefault(); 
+			});
+
 		});
 
-	});
+	}
 
-}
 
+	// if (jQuery('#set_views_count').length) {
+	// 	var ID_count = jQuery('#set_views_count').attr('data-id');
+	// 	console.log(jQuery('#set_views_count').length);
+	// 	console.log(ID_count);
+	// 	jQuery.post( ajaxurl, {
+	// 		action: 'my_set_get_PostViews',
+	// 		'ID_count': ID_count
+	// 	},
+	// 	function(response) {
+	// 		jQuery('#set_views_count').html(response);
+	// 	});
+	// 	return false;
+	// 	alert(ID_count);
+	// }
 
 });

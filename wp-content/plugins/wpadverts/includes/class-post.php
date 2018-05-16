@@ -110,7 +110,6 @@ class Adverts_Post {
             }
         }
         
-
         if($post && $post->ID > 0) {
             // Post already exists, update only.
             $data["ID"] = $post->ID;
@@ -143,18 +142,8 @@ class Adverts_Post {
         // Save taxonomies
         foreach($taxo as $key => $tax) {
             wp_set_post_terms($post_id, $tax, $key);
-            
-            echo '<pre>';
-            echo ( $post_id ); 
-            echo '<br>';
-            var_dump ( $tax );
-            echo '<br>';
-            echo ( $key ); 
-            echo '<br>';
-            echo '<br>';
-            echo '</pre>';
         }
-        // die();
+        
         if( self::$_tmp_guid ) {
             // After save tmp_guid filter is no longer needed, remove it.
             self::$_tmp_guid = null;

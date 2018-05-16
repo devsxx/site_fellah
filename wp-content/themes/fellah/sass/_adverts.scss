@@ -55,16 +55,28 @@
          font-weight: 300;
          margin-left: oe_rem(10px);
       }
+      .advert_share{
+        margin-left: auto;
+        @include flex(center, flex-start, row);
+        a{
+          color: $main_text_color;
+          font-size: oe_rem(14px);
+          padding: oe_rem(6px);
+          &:hover{
+            color: $text_color;
+          }
+        }
+      }
    }
    .advert_title{
       font-size: oe_rem(29px);
       line-height: oe_rem(50px);
       font-weight: 500;
-      padding: oe_rem(10px) 0;
+      padding-bottom: oe_rem(6px);
    }
    .advert_category{
       font-size: oe_rem(14px);
-      font-weight: 300;
+      font-weight: 600;
       padding-bottom: oe_rem(10px);
    }
 }
@@ -72,9 +84,19 @@
 .annonce_detail_side{
    background-color: $lighter_color;
    padding: oe_rem(50px) oe_rem(30px);
+   margin-bottom: oe_rem(40px);
    .annonce-row{
       @include flex(center, space-between, row);
       padding: oe_rem(8px) 0;
+      font-size: oe_rem(23px); 
+      font-family: $second-font-family-sans-serif;
+      font-weight: 300;
+      .name{
+        font-family: $font-family-base;
+      }
+      .author{
+        text-transform: uppercase;
+      }
    }
 }
 

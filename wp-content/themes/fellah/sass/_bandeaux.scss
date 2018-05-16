@@ -27,6 +27,7 @@
 			height: oe_rem(50px);
 			border-radius: oe_rem(4px);
 			padding: 0 oe_rem(14px);
+			margin: oe_rem(10px) 0 !important;
 			border: none;
 			&[type="submit"]{
 				background-color: $text_color;
@@ -46,6 +47,33 @@
 			background-color: $text_color;
 			padding: 0 oe_rem(25px);
 			color: #fff;
+		}
+	}
+	@include media("<md"){
+		&.header_bandeau_home{
+			background: none;
+		}
+		.titre{ 
+			font-size: oe_rem(24px);
+			text-transform: uppercase;
+			margin-bottom: oe_rem(25px);
+		}
+		.search_zone{ 
+			padding: oe_rem(10px) oe_rem(20px);
+			height: auto;
+			@include flex(center, stretch, column);
+			.advert-input{
+				width: 100%;
+			}
+			input,
+			select,
+			.adverts-js{  
+				width: 100%;
+			}
+			.adverts-form-submit{ 
+				width: 100%;
+				margin: oe_rem(10px) 0;
+			}
 		}
 	}
 }

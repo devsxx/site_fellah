@@ -24,7 +24,7 @@ get_header();
 					<div class="row">
 						<div class="col-md-12">
 							<div class="section_title">
-								<div class="div"><?php _e('Catgories','fellah') ?></div>
+								<div class="div"><?php _e('Catégories','fellah') ?></div>
 								<a href="<?php the_permalink( 56 ) ?>" class="toutes_cats">
 									<?php _e('Parcourir toutes les catégories', 'fellah'); ?>
 								</a>
@@ -100,15 +100,17 @@ get_header();
 								<div class="info_container">
 										<div class="info">
 											<div class="date">
-												<i class="fa fa-calendar-plus"></i>
+												<i class="far fa-calendar-plus"></i>
 												<?php echo date_i18n( get_option( 'date_format' ), get_post_time( 'U', false, get_the_ID() ) ) ?>
 											</div>
 											<div class="lieu">
-												<?php $localisation = get_post_meta( get_the_ID(), "localisation", true ) ?>
-												<?php if( ! empty( $localisation ) ): ?>
-														<i class="fa fa-map-pin"></i>
-														<span><?php echo esc_html( $localisation ) ?></span>
-												<?php endif; ?>
+												 <?php 
+												if(!empty(get_the_terms( get_the_ID(), 'localisation' ))):
+                                    $advert_localisation = get_the_terms( get_the_ID(), 'localisation' );
+												?> 
+                                       <i class="fas fa-map-pin"></i>
+                                       <span><?php echo $advert_localisation[0]->name; ?> </span>
+                                    <?php endif; ?> 
 												<?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>
 											<?php if( $price ): ?>
 											<div class=""><?php // echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
@@ -146,16 +148,18 @@ get_header();
 					</div>
 				</div>
 				<div id="top_annoces_slider" class="annoces_slider owl-carousel owl-theme"> 
-					<?php 
+					<?php  
 					$args =  array( 
 						'post_type' => 'advert', 
 						'post_status' => 'publish',
 						'posts_per_page' => 16,  
-						'orderby' => 'date'
+						'order' => 'DESC',
+						'orderby' => 'meta_value_num',
+						'meta_key' => 'post_views_count'  
 				  ); 
 				  $loop = new WP_Query( $args );
 				  if( $loop->have_posts() ): ?>
-				  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				  <?php while ( $loop->have_posts() ) : $loop->the_post(); $i++; ?>
 						<div class="annoce_container items">
 							<a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ) ?>">
 								<?php $image = adverts_get_main_image( get_the_ID() ) ?>
@@ -170,15 +174,16 @@ get_header();
 								<div class="info_container">
 										<div class="info">
 											<div class="date">
-												<i class="fa fa-calendar-plus"></i>
+												<i class="far fa-calendar-plus"></i>
 												<?php echo date_i18n( get_option( 'date_format' ), get_post_time( 'U', false, get_the_ID() ) ) ?>
 											</div>
 											<div class="lieu">
-												<?php $localisation = get_post_meta( get_the_ID(), "localisation", true ) ?>
-												<?php if( ! empty( $localisation ) ): ?>
-														<i class="fa fa-map-pin"></i>
-														<span><?php echo esc_html( $localisation ) ?></span>
-												<?php endif; ?>
+												<?php 
+                                    $advert_localisation = get_the_terms( get_the_ID(), 'localisation' );
+                                    if(!empty($advert_localisation)): ?> 
+                                        <i class="fas fa-map-pin"></i>
+                                        <span><?php echo $advert_localisation[0]->name; ?> </span>
+                                    <?php endif; ?> 
 												<?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>
 											<?php if( $price ): ?>
 											<div class=""><?php // echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>

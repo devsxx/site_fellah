@@ -401,7 +401,34 @@ section{
 			}
 		}
 	}
+	@include media("<md"){
+		.section_title{
+			@include flex(flex-start, flex-start, column);
+		}
+		.section_sousTitle{ 
+			margin-bottom: oe_rem(20px); 
+		}
+	}
 }
 
 
 
+.breadcrumbs{
+	font-size: oe_rem(16px);
+	font-weight: 300;
+	color: $main_text_color;
+	padding: oe_rem(20px) 0;
+	.separator {	
+		padding: 0 oe_rem(6px);
+	}
+	a{
+		color: $main_text_color;
+		&:hover{
+			color: $text_color;
+		}
+	}
+}
+
+.owl-carousel {
+	padding: 0 oe_rem(15px);
+}
