@@ -323,4 +323,106 @@ jQuery(document).ready(function(){
 	// 	alert(ID_count);
 	// }
 
+
+jQuery(document).ready(function($) {
+
+    // Perform AJAX login on form submit
+    $('#connect').on('click', function(e){
+		//alert($('#username').val()+" "+$('#password').val() );
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: ajax_login_object.ajaxurl,
+            data: { 
+                'action': 'ajaxlogin', //calls wp_ajax_nopriv_ajaxlogin
+                'username': $('#username').val(), 
+				'password': $('#password').val() 
+			},
+			//'security': $('form#login #security').val() },
+            success: function(data){
+				if(data.etat){
+					$(".adverts-field-name-coordonnées,.adverts-field-name-connect").css("display", "none");
+				}
+            }
+        });
+        e.preventDefault();
+	});
+	
+	$("#creation_compte").click(function(){
+		var prenom = $("#prenom").val();
+		var email = $("#email").val();
+		var nom = $("#nom").val();
+		var telephone = $("#telephone").val();
+		var mot_passe = $("#mot_passe").val();
+		var confirm_mot_passe = $("#confirm_mot_passe").val();
+
+		var submit = true;
+
+		if(prenom == "" && nom == ""){
+			submit = false;
+		}
+
+		if(telephone == "" || mot_passe == "" || mot_passe == "" || confirm_mot_passe == "" )
+			submit = false;
+
+		if(confirm_mot_passe != mot_passe){
+			submit = false;
+		}
+
+		if(submit){
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				url: ajax_login_object.ajaxurl,
+				data: { 
+					'action': 'ajaxsignup',
+					'prenom' : prenom,
+					'nom' : nom,
+					'telephone' : telephone,
+					'email' : email,
+					'mot_passe' : mot_passe,
+					'confirm_mot_passe' : confirm_mot_passe,
+				},
+				success: function(data){
+				   if(data.etat){
+					   $(".adverts-field-name-coordonnées,.adverts-field-name-connect").css("display", "none");
+				   }
+				}
+			});
+		}
+	});
+
+
+	$("input[type='checkbox']").click(function(){
+		var checkbox = $(this);
+		var allVals = [];
+
+		$("input[name='advert_category[]']:checked").each( function () {
+			allVals.push($(this).val());
+		});
+		
+		var id = $(this).val();
+		$.ajax({
+			type: 'POST',
+			url: ajax_login_object.ajaxurl,
+			data: { 
+				'action': 'ajaxsouscat',
+				'ids' : allVals,
+			},
+			success: function(response){
+				console.log(response);
+				if($(".ajaxed").length > 0){
+					$(".ajaxed").remove();
+				}
+				checkbox.closest(".adverts-field-customadvertscategory")
+				.append('<div class="adverts-control-group adverts-field-customadvertscategory adverts-field-name-type_annonce ajaxed "><div><div class="container"><div class="row"><div class="col-md-12"><label for="type_annonce">Type d\'annonce </label><div class="adverts-form-input-group adverts-form-input-group-checkbox adverts-field-rows-0"><div>'+response+'</div></div></div></div></div></div></div>');
+			}
+		});
+		
+
+	});
+
+});
+
+
 });

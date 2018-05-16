@@ -332,7 +332,7 @@ function shortcode_adverts_add( $atts ) {
         $bind["advert_category"] = array();
         
         $terms = get_the_terms( $post_id, 'advert_category' );
-        
+       
         if(is_array($terms)) {
             foreach($terms as $term) {
                 $bind["advert_category"][] = $term->term_id;

@@ -101,6 +101,7 @@ class Adverts_Post {
         // Merge defaults with data from the Adverts_Form
         
         foreach($form->get_fields() as $field) {
+            //echo $field["name"]."<br/>";
             if(property_exists("WP_Post", $field["name"])) {
                 $data[$field["name"]] = $field["value"];
             } elseif(taxonomy_exists($field["name"])) {
@@ -109,6 +110,7 @@ class Adverts_Post {
                 $meta[$field["name"]] = array("field"=>$field, "value"=>$field["value"]);
             }
         }
+       
         
         if($post && $post->ID > 0) {
             // Post already exists, update only.
@@ -138,9 +140,13 @@ class Adverts_Post {
                 call_user_func( $callback_save, $post_id, $key, $value );
             }
         }
-        
+        // echo "<pre>";
+        // print_r($taxo);
+        // echo "</pre>";
+        // die();
         // Save taxonomies
         foreach($taxo as $key => $tax) {
+           
             wp_set_post_terms($post_id, $tax, $key);
         }
         

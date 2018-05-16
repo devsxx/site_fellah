@@ -1443,7 +1443,7 @@ function adverts_field_checkbox( $field ) {
             "value" => $v["value"],
             "checked" => in_array($v["value"], $value) ? "checked" : null
         ));
-
+        
         $label = new Adverts_Html("label", array(
             "for" => $field["name"].'_'.$i
         ), $checkbox->render() . ' ' . $v["text"]);
