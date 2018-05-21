@@ -101,7 +101,7 @@ get_header();
 										<div class="info">
 											<div class="date">
 												<i class="far fa-calendar-plus"></i>
-												<?php echo date_i18n( get_option( 'date_format' ), get_post_time( 'U', false, get_the_ID() ) ) ?>
+												<?php echo get_the_date('j.m.Y'); ?>
 											</div>
 											<div class="lieu">
 												 <?php 
@@ -174,12 +174,12 @@ get_header();
 								<div class="info_container">
 										<div class="info">
 											<div class="date">
-												<i class="far fa-calendar-plus"></i>
-												<?php echo date_i18n( get_option( 'date_format' ), get_post_time( 'U', false, get_the_ID() ) ) ?>
+												<i class="far fa-calendar-plus"></i> 
+												<?php echo get_the_date('j.m.Y'); ?>
 											</div>
 											<div class="lieu">
 												<?php 
-                                    $advert_localisation = get_the_terms( get_the_ID(), 'localisation' );
+												$advert_localisation = get_the_terms( get_the_ID(), 'localisation' );
                                     if(!empty($advert_localisation)): ?> 
                                         <i class="fas fa-map-pin"></i>
                                         <span><?php echo $advert_localisation[0]->name; ?> </span>

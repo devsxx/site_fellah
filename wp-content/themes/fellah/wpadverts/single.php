@@ -61,8 +61,7 @@
                     <?php 
                     $advert_category = get_the_terms( $post_id, 'advert_category' );
                     if($advert_category) {
-                        foreach( $advert_category as $term ) {
-                            $term = get_term_by("id", $term->parent, "advert_category");
+                        foreach( $advert_category as $term ) { 
                             if ( isset($term->parent) && $term->parent > 0) {
                                 $term = get_term_by("id", $term->parent, "advert_category");
                             }

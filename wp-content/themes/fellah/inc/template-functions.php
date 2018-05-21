@@ -31,7 +31,6 @@ function fellah_pingback_header() {
 }
 add_action( 'wp_head', 'fellah_pingback_header' );
 
-
 /**
  * Shows Term Title in [adverts_list] if not empty.
  * 
@@ -54,11 +53,6 @@ function adverts_list_show_term_title( $params ) {
 	$title = "<h3>" . $term->name . "</h3>";
 	echo $title;
 }
-
-
- 
-
-
 
 function crunchify_social_sharing_buttons($content) {
 	global $post;

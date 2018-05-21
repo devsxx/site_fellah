@@ -3,10 +3,7 @@
 	height: oe_rem(150px);
 	.site-branding{
 		height: oe_rem(150px);
-		@include flex(center, flex-end, row);
-		.logo{ 
-		}
-		
+		@include flex(center, flex-end, row);  
 	}
 	.header_picto_container{
 		height: oe_rem(150px);
@@ -36,21 +33,32 @@
 	}
 
 	@include media("<lg") { 
+		height: auto;
 		padding-top: oe_rem(0);
 		padding-bottom: oe_rem(0);
-		.top{
+		.site-branding{
+			height: oe_rem(70px);
+			@include flex(center, center, row); 
+		}
+		
+		.header_picto_container{
 			height: auto;
-			.logo_sides{
-				border: none;
-				display: none !important;
-			}
-			.logo{
-				width: oe_rem(200px);
-				height: oe_rem(80px);   
-				margin: 0 auto;
+			@include flex(center, center, row);
+			.header_picto{
 				@include flex(center, center, row);
+				.compte{ 
+					cursor: pointer;
+					span{
+						display: none;
+					}
+					&:hover{
+						color: $text_color;
+						span{
+							opacity: 0;
+						}
+					}
+				}	
 			}
-
 		}
 
 	}

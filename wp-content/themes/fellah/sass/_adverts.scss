@@ -1,27 +1,67 @@
 .adverts-form{ 
-   .adverts-control-group {
-      &.adverts-field-header{
-         height: oe_rem(95px);
-         background-color: $second_main_color;
-         border-top: 1px solid $text_color;
-         border-bottom: 1px solid $text_color;
-         @include flex(center, center, row);
-         margin: oe_rem(20px) 0 oe_rem(40px);
-         .adverts-field-header {
-            border: none;
-            padding: 0;
-            margin: 0;
-            .adverts-field-header-title { 
-               font-size: oe_rem(29px);
-               line-height: oe_rem(29px);
-               font-weight: 400;
-               text-transform: uppercase;
-            }
-         }
-         
+
+  fieldset {
+    margin: 0;
+    padding: 0 !important;
+    border: 0;
+  }
+  .adverts-control-group {
+
+    &.adverts-field-header{
+      height: oe_rem(95px);
+      margin-top: -1px !important;
+      background-color: $second_main_color;
+      border-top: 1px solid $text_color;
+      border-bottom: 1px solid $text_color;
+      @include flex(center, center, row);
+      margin: 0;
+      .adverts-field-header {
+        border: none;
+        padding: 0;
+        margin: 0;
+        .adverts-field-header-title { 
+          font-size: oe_rem(29px);
+          line-height: oe_rem(29px);
+          font-weight: 400;
+          text-transform: uppercase;
+        }
       }
-      
-   } 
+    }
+
+    &.adverts-field-text{
+      &.adverts-field-name-post_title{
+        label{
+          span{
+            display: none !important;            
+          }
+        }
+      }
+    }
+
+    &.adverts-field-textarea{ 
+      &.adverts-field-name-post_content{
+        label{
+          display: none !important;
+        }
+      }
+    }
+
+    &.adverts-field-text{ 
+      &.adverts-field-name-adverts_price{
+        label{
+          display: none !important;
+        }
+      }
+    }
+
+    &.adverts-field-name-prev_next{
+      label{
+        display: none !important;
+      }
+    }
+
+
+  } 
 
    &.adverts-form-aligned {
       .adverts-control-group {
@@ -32,10 +72,74 @@
          }
       }
    }
+ 
+	
+  .wp-editor-wrap{
+    padding: 0 !important;
+  }
+
+  input{
+
+    &[type="text"], 
+    &[type="password"], 
+    &[type="email"], 
+    &[type="url"], 
+    &[type="date"], 
+    &[type="month"], 
+    &[type="time"], 
+    &[type="datetime"], 
+    &[type="datetime-local"], 
+    &[type="week"], 
+    &[type="number"], 
+    &[type="search"], 
+    &[type="tel"], 
+    &[type="color"]{ 
+      font-size: oe_rem(14px);
+      height: oe_rem(50px);
+      line-height: oe_rem(50px);
+      border-radius: oe_rem(2px);
+      border: 1px solid $dark_color; 
+      margin: oe_rem(15px) 0;
+    }
+
+    &[type="submit"]{
+      cursor: pointer;
+      width: 100% !important;
+      font-size: oe_rem(19px) !important;
+      max-width: oe_rem(260px);
+      height: oe_rem(50px);
+      line-height: oe_rem(50px);
+      border-radius: oe_rem(2px); 
+      margin: oe_rem(15px) 0;
+      color: #fff; 
+      background-color: $main_color;
+      border: none;
+    }
+
+  }
+
+  select, 
+  textarea{ 
+    height: oe_rem(50px);
+    line-height: oe_rem(50px);
+    border-radius: oe_rem(2px);
+    border: 1px solid $dark_color;
+    padding: 0 oe_rem(15px) 0 oe_rem(46px) ;
+    margin: oe_rem(15px) 0;
+  }
+
+  textarea{ 
+    font-size: oe_rem(14px);
+    height: oe_rem(150px);
+    margin: oe_rem(15px) 0;
+  } 
+
+  .adverts-plupload-upload-ui {
+    width: 100%;
+    float: none;
+  }
 
 }
-
-
 
 .adverts-options-left, .adverts-options-right { 
    position: absolute;
@@ -167,5 +271,67 @@
       list-style-type: none !important;
       margin: 0 !important;
       padding: 0 !important; 
+  }
+}
+
+.hide_section{
+  display: none !important;
+}
+
+.prev_next_container{
+  padding: oe_rem(40px) 0;
+  @include flex(center, center, row);
+  a{
+    width: oe_rem(160px);
+		height: oe_rem(50px); 
+		line-height: oe_rem(50px); 
+		color: $main_color;
+    background-color: $lighter_color; 
+		margin: 0 oe_rem(15px); 
+    text-align: center;
+    font-weight: 500;
+    &:hover{
+      color: white;
+      background-color: $main_color; 
+    }
+  }
+}
+
+.header_bandeau{
+  .search_zone {
+    .adverts-multiselect-options {
+      & > label{
+        & > input {
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+  
+}
+
+
+
+div.adverts-flash-messages {
+  clear: both;
+  overflow: hidden;
+  padding: 5px;
+  margin: 0;
+  line-height: 14px;
+  color: white;
+  // position: absolute;
+  // right: 0;
+  // left: 0;
+  // bottom: -24px;
+}
+
+.advert_alert{
+  font-size: oe_rem(14px);
+  display: none;
+  &.advert_danger{
+    color: $brand-danger;
+  }
+  &.advert_success{
+    color: $brand-success;
   }
 }

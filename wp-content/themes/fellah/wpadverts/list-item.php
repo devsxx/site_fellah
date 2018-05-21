@@ -13,7 +13,7 @@
             <div class="info">
                 <div class="date">
                     <i class="far fa-calendar-plus"></i>
-                    <?php echo date_i18n( get_option( 'date_format' ), get_post_time( 'U', false, get_the_ID() ) ) ?>
+                    <?php echo get_the_date('j.m.Y'); ?>
                 </div>
                 <div class="lieu">
                     <?php $localisation = get_post_meta( get_the_ID(), "localisation", true ) ?>

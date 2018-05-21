@@ -3,6 +3,7 @@
 	@include flex(center, center, row);
 	background-color: $lighter_color;
 	margin-bottom: oe_rem(80px);
+	padding: oe_rem(25px) 0;
 	&.header_bandeau_home{
 		background: url(./img/bandeau.jpg) no-repeat 50%;
 		background-size: cover;
@@ -50,8 +51,9 @@
 		}
 	}
 	@include media("<md"){
-		&.header_bandeau_home{
-			background: none;
+		height: auto;
+		margin: oe_rem(20px) 0;
+		&.header_bandeau_home{ 
 		}
 		.titre{ 
 			font-size: oe_rem(24px);

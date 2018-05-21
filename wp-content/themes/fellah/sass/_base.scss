@@ -214,8 +214,7 @@ blockquote {
 	padding-bottom: oe_rem(40px);
 }
 
-.site-main{ 
-	padding-bottom: oe_rem(16px);
+.site-main{  
 	iframe{
 		display: block;
 		margin: oe_rem(20px) auto oe_rem(40px);   
@@ -229,9 +228,7 @@ blockquote {
 	}
 
 	@include media("<sm"){
-
-		padding-top: oe_rem(20px);
-		padding-bottom: oe_rem(10px);
+		padding-top: oe_rem(20px); 
 		iframe{
 			max-height: 290px;
 		}

@@ -27,15 +27,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	Site style
 --------------------------------------------------------------*/
 /*!
- * Font Awesome Free 5.0.12 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
-  src: url("./js/libs/font-awesome/fonts/fa-brands-400.eot");
-  src: url("./js/libs/font-awesome/fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./js/libs/font-awesome/fonts/fa-brands-400.woff2") format("woff2"), url("./js/libs/font-awesome/fonts/fa-brands-400.woff") format("woff"), url("./js/libs/font-awesome/fonts/fa-brands-400.ttf") format("truetype"), url("./js/libs/font-awesome/fonts/fa-brands-400.svg#fontawesome") format("svg");
+  src: url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-brands-400.eot");
+  src: url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-brands-400.woff2") format("woff2"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-brands-400.woff") format("woff"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-brands-400.ttf") format("truetype"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 
 .fab {
@@ -43,15 +43,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 }
 
 /*!
- * Font Awesome Free 5.0.12 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
-  src: url("./js/libs/font-awesome/fonts/fa-regular-400.eot");
-  src: url("./js/libs/font-awesome/fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./js/libs/font-awesome/fonts/fa-regular-400.woff2") format("woff2"), url("./js/libs/font-awesome/fonts/fa-regular-400.woff") format("woff"), url("./js/libs/font-awesome/fonts/fa-regular-400.ttf") format("truetype"), url("./js/libs/font-awesome/fonts/fa-regular-400.svg#fontawesome") format("svg");
+  src: url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-regular-400.eot");
+  src: url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-regular-400.woff2") format("woff2"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-regular-400.woff") format("woff"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-regular-400.ttf") format("truetype"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
 .far {
@@ -60,15 +60,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 }
 
 /*!
- * Font Awesome Free 5.0.12 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 900;
-  src: url("./js/libs/font-awesome/fonts/fa-solid-900.eot");
-  src: url("./js/libs/font-awesome/fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./js/libs/font-awesome/fonts/fa-solid-900.woff2") format("woff2"), url("./js/libs/font-awesome/fonts/fa-solid-900.woff") format("woff"), url("./js/libs/font-awesome/fonts/fa-solid-900.ttf") format("truetype"), url("./js/libs/font-awesome/fonts/fa-solid-900.svg#fontawesome") format("svg");
+  src: url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-solid-900.eot");
+  src: url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-solid-900.woff2") format("woff2"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-solid-900.woff") format("woff"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-solid-900.ttf") format("truetype"), url("./js/libs/font-awesome-5/web-fonts-with-css/webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 
 .fa,
@@ -78,7 +78,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 }
 
 /*!
- * Font Awesome Free 5.0.12 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
@@ -665,6 +665,10 @@ readers do not read off random characters that represent icons */
   content: "\f37b";
 }
 
+.fa-blender:before {
+  content: "\f517";
+}
+
 .fa-blind:before {
   content: "\f29d";
 }
@@ -701,6 +705,10 @@ readers do not read off random characters that represent icons */
   content: "\f02d";
 }
 
+.fa-book-open:before {
+  content: "\f518";
+}
+
 .fa-bookmark:before {
   content: "\f02e";
 }
@@ -731,6 +739,14 @@ readers do not read off random characters that represent icons */
 
 .fa-briefcase-medical:before {
   content: "\f469";
+}
+
+.fa-broadcast-tower:before {
+  content: "\f519";
+}
+
+.fa-broom:before {
+  content: "\f51a";
 }
 
 .fa-btc:before {
@@ -901,6 +917,14 @@ readers do not read off random characters that represent icons */
   content: "\f0a3";
 }
 
+.fa-chalkboard:before {
+  content: "\f51b";
+}
+
+.fa-chalkboard-teacher:before {
+  content: "\f51c";
+}
+
 .fa-chart-area:before {
   content: "\f1fe";
 }
@@ -1001,6 +1025,10 @@ readers do not read off random characters that represent icons */
   content: "\f268";
 }
 
+.fa-church:before {
+  content: "\f51d";
+}
+
 .fa-circle:before {
   content: "\f111";
 }
@@ -1085,6 +1113,10 @@ readers do not read off random characters that represent icons */
   content: "\f085";
 }
 
+.fa-coins:before {
+  content: "\f51e";
+}
+
 .fa-columns:before {
   content: "\f0db";
 }
@@ -1107,6 +1139,10 @@ readers do not read off random characters that represent icons */
 
 .fa-comments:before {
   content: "\f086";
+}
+
+.fa-compact-disc:before {
+  content: "\f51f";
 }
 
 .fa-compass:before {
@@ -1205,6 +1241,14 @@ readers do not read off random characters that represent icons */
   content: "\f05b";
 }
 
+.fa-crow:before {
+  content: "\f520";
+}
+
+.fa-crown:before {
+  content: "\f521";
+}
+
 .fa-css3:before {
   content: "\f13c";
 }
@@ -1269,6 +1313,34 @@ readers do not read off random characters that represent icons */
   content: "\f470";
 }
 
+.fa-dice:before {
+  content: "\f522";
+}
+
+.fa-dice-five:before {
+  content: "\f523";
+}
+
+.fa-dice-four:before {
+  content: "\f524";
+}
+
+.fa-dice-one:before {
+  content: "\f525";
+}
+
+.fa-dice-six:before {
+  content: "\f526";
+}
+
+.fa-dice-three:before {
+  content: "\f527";
+}
+
+.fa-dice-two:before {
+  content: "\f528";
+}
+
 .fa-digg:before {
   content: "\f1a6";
 }
@@ -1283,6 +1355,10 @@ readers do not read off random characters that represent icons */
 
 .fa-discourse:before {
   content: "\f393";
+}
+
+.fa-divide:before {
+  content: "\f529";
 }
 
 .fa-dna:before {
@@ -1311,6 +1387,14 @@ readers do not read off random characters that represent icons */
 
 .fa-donate:before {
   content: "\f4b9";
+}
+
+.fa-door-closed:before {
+  content: "\f52a";
+}
+
+.fa-door-open:before {
+  content: "\f52b";
 }
 
 .fa-dot-circle:before {
@@ -1343,6 +1427,10 @@ readers do not read off random characters that represent icons */
 
 .fa-drupal:before {
   content: "\f1a9";
+}
+
+.fa-dumbbell:before {
+  content: "\f44b";
 }
 
 .fa-dyalog:before {
@@ -1403,6 +1491,10 @@ readers do not read off random characters that represent icons */
 
 .fa-envira:before {
   content: "\f299";
+}
+
+.fa-equals:before {
+  content: "\f52c";
 }
 
 .fa-eraser:before {
@@ -1499,6 +1591,10 @@ readers do not read off random characters that represent icons */
 
 .fa-fax:before {
   content: "\f1ac";
+}
+
+.fa-feather:before {
+  content: "\f52d";
 }
 
 .fa-female:before {
@@ -1689,6 +1785,10 @@ readers do not read off random characters that represent icons */
   content: "\f3a4";
 }
 
+.fa-frog:before {
+  content: "\f52e";
+}
+
 .fa-frown:before {
   content: "\f119";
 }
@@ -1711,6 +1811,10 @@ readers do not read off random characters that represent icons */
 
 .fa-gamepad:before {
   content: "\f11b";
+}
+
+.fa-gas-pump:before {
+  content: "\f52f";
 }
 
 .fa-gavel:before {
@@ -1775,6 +1879,10 @@ readers do not read off random characters that represent icons */
 
 .fa-glass-martini:before {
   content: "\f000";
+}
+
+.fa-glasses:before {
+  content: "\f530";
 }
 
 .fa-glide:before {
@@ -1843,6 +1951,14 @@ readers do not read off random characters that represent icons */
 
 .fa-grav:before {
   content: "\f2d6";
+}
+
+.fa-greater-than:before {
+  content: "\f531";
+}
+
+.fa-greater-than-equal:before {
+  content: "\f532";
 }
 
 .fa-gripfire:before {
@@ -1961,6 +2077,10 @@ readers do not read off random characters that represent icons */
   content: "\f21e";
 }
 
+.fa-helicopter:before {
+  content: "\f533";
+}
+
 .fa-hips:before {
   content: "\f452";
 }
@@ -2069,6 +2189,10 @@ readers do not read off random characters that represent icons */
   content: "\f275";
 }
 
+.fa-infinity:before {
+  content: "\f534";
+}
+
 .fa-info:before {
   content: "\f129";
 }
@@ -2157,6 +2281,10 @@ readers do not read off random characters that represent icons */
   content: "\f3bc";
 }
 
+.fa-kiwi-bird:before {
+  content: "\f535";
+}
+
 .fa-korvue:before {
   content: "\f42f";
 }
@@ -2195,6 +2323,14 @@ readers do not read off random characters that represent icons */
 
 .fa-less:before {
   content: "\f41d";
+}
+
+.fa-less-than:before {
+  content: "\f536";
+}
+
+.fa-less-than-equal:before {
+  content: "\f537";
 }
 
 .fa-level-down-alt:before {
@@ -2389,6 +2525,10 @@ readers do not read off random characters that represent icons */
   content: "\f11a";
 }
 
+.fa-memory:before {
+  content: "\f538";
+}
+
 .fa-mercury:before {
   content: "\f223";
 }
@@ -2399,6 +2539,14 @@ readers do not read off random characters that represent icons */
 
 .fa-microphone:before {
   content: "\f130";
+}
+
+.fa-microphone-alt:before {
+  content: "\f3c9";
+}
+
+.fa-microphone-alt-slash:before {
+  content: "\f539";
 }
 
 .fa-microphone-slash:before {
@@ -2449,8 +2597,28 @@ readers do not read off random characters that represent icons */
   content: "\f3d0";
 }
 
+.fa-money-bill:before {
+  content: "\f0d6";
+}
+
 .fa-money-bill-alt:before {
   content: "\f3d1";
+}
+
+.fa-money-bill-wave:before {
+  content: "\f53a";
+}
+
+.fa-money-bill-wave-alt:before {
+  content: "\f53b";
+}
+
+.fa-money-check:before {
+  content: "\f53c";
+}
+
+.fa-money-check-alt:before {
+  content: "\f53d";
 }
 
 .fa-moon:before {
@@ -2491,6 +2659,10 @@ readers do not read off random characters that represent icons */
 
 .fa-node-js:before {
   content: "\f3d3";
+}
+
+.fa-not-equal:before {
+  content: "\f53e";
 }
 
 .fa-notes-medical:before {
@@ -2565,6 +2737,10 @@ readers do not read off random characters that represent icons */
   content: "\f1fc";
 }
 
+.fa-palette:before {
+  content: "\f53f";
+}
+
 .fa-palfed:before {
   content: "\f3d8";
 }
@@ -2587,6 +2763,10 @@ readers do not read off random characters that represent icons */
 
 .fa-paragraph:before {
   content: "\f1dd";
+}
+
+.fa-parking:before {
+  content: "\f540";
 }
 
 .fa-paste:before {
@@ -2627,6 +2807,10 @@ readers do not read off random characters that represent icons */
 
 .fa-percent:before {
   content: "\f295";
+}
+
+.fa-percentage:before {
+  content: "\f541";
 }
 
 .fa-periscope:before {
@@ -2773,6 +2957,10 @@ readers do not read off random characters that represent icons */
   content: "\f288";
 }
 
+.fa-project-diagram:before {
+  content: "\f542";
+}
+
 .fa-pushed:before {
   content: "\f3e1";
 }
@@ -2843,6 +3031,10 @@ readers do not read off random characters that represent icons */
 
 .fa-rebel:before {
   content: "\f1d0";
+}
+
+.fa-receipt:before {
+  content: "\f543";
 }
 
 .fa-recycle:before {
@@ -2917,6 +3109,10 @@ readers do not read off random characters that represent icons */
   content: "\f018";
 }
 
+.fa-robot:before {
+  content: "\f544";
+}
+
 .fa-rocket:before {
   content: "\f135";
 }
@@ -2941,6 +3137,22 @@ readers do not read off random characters that represent icons */
   content: "\f158";
 }
 
+.fa-ruler:before {
+  content: "\f545";
+}
+
+.fa-ruler-combined:before {
+  content: "\f546";
+}
+
+.fa-ruler-horizontal:before {
+  content: "\f547";
+}
+
+.fa-ruler-vertical:before {
+  content: "\f548";
+}
+
 .fa-rupee-sign:before {
   content: "\f156";
 }
@@ -2959,6 +3171,14 @@ readers do not read off random characters that represent icons */
 
 .fa-schlix:before {
   content: "\f3ea";
+}
+
+.fa-school:before {
+  content: "\f549";
+}
+
+.fa-screwdriver:before {
+  content: "\f54a";
 }
 
 .fa-scribd:before {
@@ -3037,6 +3257,10 @@ readers do not read off random characters that represent icons */
   content: "\f214";
 }
 
+.fa-shoe-prints:before {
+  content: "\f54b";
+}
+
 .fa-shopping-bag:before {
   content: "\f290";
 }
@@ -3089,6 +3313,10 @@ readers do not read off random characters that represent icons */
   content: "\f512";
 }
 
+.fa-skull:before {
+  content: "\f54c";
+}
+
 .fa-skyatlas:before {
   content: "\f216";
 }
@@ -3119,6 +3347,10 @@ readers do not read off random characters that represent icons */
 
 .fa-smoking:before {
   content: "\f48d";
+}
+
+.fa-smoking-ban:before {
+  content: "\f54d";
 }
 
 .fa-snapchat:before {
@@ -3265,8 +3497,20 @@ readers do not read off random characters that represent icons */
   content: "\f2f2";
 }
 
+.fa-store:before {
+  content: "\f54e";
+}
+
+.fa-store-alt:before {
+  content: "\f54f";
+}
+
 .fa-strava:before {
   content: "\f428";
+}
+
+.fa-stream:before {
+  content: "\f550";
 }
 
 .fa-street-view:before {
@@ -3283,6 +3527,10 @@ readers do not read off random characters that represent icons */
 
 .fa-stripe-s:before {
   content: "\f42a";
+}
+
+.fa-stroopwafel:before {
+  content: "\f551";
 }
 
 .fa-studiovinari:before {
@@ -3485,6 +3733,10 @@ readers do not read off random characters that represent icons */
   content: "\f205";
 }
 
+.fa-toolbox:before {
+  content: "\f552";
+}
+
 .fa-trade-federation:before {
   content: "\f513";
 }
@@ -3539,6 +3791,10 @@ readers do not read off random characters that represent icons */
 
 .fa-truck-moving:before {
   content: "\f4df";
+}
+
+.fa-tshirt:before {
+  content: "\f553";
 }
 
 .fa-tty:before {
@@ -3831,6 +4087,14 @@ readers do not read off random characters that represent icons */
 
 .fa-vuejs:before {
   content: "\f41f";
+}
+
+.fa-walking:before {
+  content: "\f554";
+}
+
+.fa-wallet:before {
+  content: "\f555";
 }
 
 .fa-warehouse:before {
@@ -12946,10 +13210,6 @@ blockquote.hide p {
   padding-bottom: 2.5rem;
 }
 
-.site-main {
-  padding-bottom: 1rem;
-}
-
 .site-main iframe {
   display: block;
   margin: 1.25rem auto 2.5rem;
@@ -12966,7 +13226,6 @@ blockquote.hide p {
 @media (max-width: 575px) {
   .site-main {
     padding-top: 1.25rem;
-    padding-bottom: 0.625rem;
   }
   .site-main iframe {
     max-height: 290px;
@@ -13245,9 +13504,8 @@ section .catgories .categorie:hover .img_zoom {
 
 form label {
   font-size: 1.125rem;
-  color: black;
+  color: #666666;
   margin-top: 1.25rem;
-  text-transform: uppercase;
   font-weight: 500;
 }
 
@@ -13376,6 +13634,7 @@ form .obligatoires {
   flex-direction: row;
   background-color: #ebebeb;
   margin-bottom: 5rem;
+  padding: 1.5625rem 0;
 }
 
 .header_bandeau.header_bandeau_home {
@@ -13446,8 +13705,9 @@ form .obligatoires {
 }
 
 @media (max-width: 767px) {
-  .header_bandeau.header_bandeau_home {
-    background: none;
+  .header_bandeau {
+    height: auto;
+    margin: 1.25rem 0;
   }
   .header_bandeau .titre {
     font-size: 1.5rem;
@@ -13680,20 +13940,12 @@ form .obligatoires {
 
 @media (max-width: 991px) {
   .site-header {
+    height: auto;
     padding-top: 0;
     padding-bottom: 0;
   }
-  .site-header .top {
-    height: auto;
-  }
-  .site-header .top .logo_sides {
-    border: none;
-    display: none !important;
-  }
-  .site-header .top .logo {
-    width: 12.5rem;
-    height: 5rem;
-    margin: 0 auto;
+  .site-header .site-branding {
+    height: 4.375rem;
     display: -ms-flexbox;
     display: flex;
     -moz-align-items: center;
@@ -13707,6 +13959,49 @@ form .obligatoires {
     -moz-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+  }
+  .site-header .header_picto_container {
+    height: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .site-header .header_picto_container .header_picto {
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .site-header .header_picto_container .header_picto .compte {
+    cursor: pointer;
+  }
+  .site-header .header_picto_container .header_picto .compte span {
+    display: none;
+  }
+  .site-header .header_picto_container .header_picto .compte:hover {
+    color: #007e1d;
+  }
+  .site-header .header_picto_container .header_picto .compte:hover span {
+    opacity: 0;
   }
 }
 
@@ -13810,7 +14105,24 @@ form .obligatoires {
 }
 
 @media (max-width: 767px) {
+  .main-navigation {
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: flex-end;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: auto;
+  }
   .main-navigation ul {
+    padding: 1.25rem 0;
     display: -ms-flexbox;
     display: flex;
     -moz-align-items: stretch;
@@ -13821,10 +14133,35 @@ form .obligatoires {
     -ms-justify-content: flex-start;
     justify-content: flex-start;
     -ms-flex-pack: flex-start;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     background-color: #fff;
+  }
+  .main-navigation ul li {
+    width: 50%;
+  }
+  .main-navigation ul li a {
+    text-align: center;
+    padding: 0.375rem 0;
+    height: 3.125rem;
+    font-size: 0.8125rem !important;
+    border: 1px solid #ebebeb;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
 }
 
@@ -14656,6 +14993,10 @@ form .obligatoires {
   transition: opacity .2s ease-in-out;
 }
 
+.annoce_container .annoce img {
+  min-height: 100%;
+}
+
 .annoce_container .info_container {
   padding: 1.5625rem 0.625rem;
 }
@@ -14723,6 +15064,283 @@ form .obligatoires {
   opacity: 1;
 }
 
+@media (max-width: 767px) {
+  .annoce_container {
+    margin: 0.625rem auto;
+  }
+}
+
+.pub_annonce .adverts-control-group label {
+  float: none !important;
+  display: block !important;
+  font-size: 1.1875rem;
+  font-weight: 300;
+  margin: 1.5625rem 0;
+}
+
+.pub_annonce .adverts-form-input-group-checkbox > div {
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.pub_annonce .adverts-form-input-group-checkbox > div .checkbox {
+  margin: 0 1.25rem 0.9375rem 0;
+  float: none;
+}
+
+@media (max-width: 767px) {
+  .pub_annonce .adverts-form-input-group-checkbox > div {
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .pub_annonce .adverts-form-input-group-checkbox > div .checkbox {
+    margin: 0.625rem 0;
+  }
+}
+
+.pub_annonce .checkbox {
+  width: 15.3125rem;
+  height: 3.125rem;
+  color: #007e1d;
+  float: left;
+  margin: 0 1.25rem 0.625rem 0;
+  text-align: center !important;
+}
+
+.pub_annonce .checkbox [type=checkbox],
+.pub_annonce .checkbox [type=radio] {
+  position: absolute;
+  left: -9999px;
+  visibility: visible;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.pub_annonce .checkbox [type=checkbox] + label,
+.pub_annonce .checkbox [type=radio] + label {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  width: 15.3125rem;
+  border-radius: 0.25rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1875rem;
+  font-weight: 500;
+  color: #007e1d;
+  background-color: #ebebeb;
+  text-align: center !important;
+}
+
+.pub_annonce .checkbox [type=checkbox][class*=filled-in]:checked + label,
+.pub_annonce .checkbox [type=radio][class*=filled-in]:checked + label {
+  color: white;
+  background-color: #007e1d;
+}
+
+.pub_annonce .checkbox [type=checkbox][class*=filled-in]:checked + label:before,
+.pub_annonce .checkbox [type=radio][class*=filled-in]:checked + label:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .pub_annonce .checkbox {
+    float: none;
+    margin: 0.9375rem auto;
+  }
+}
+
+.pub_annonce .checkbox_2 {
+  width: 10rem;
+  height: 3.125rem;
+  color: #007e1d;
+  float: left;
+  margin: 0 1.25rem 0.625rem 0;
+  text-align: center !important;
+}
+
+.pub_annonce .checkbox_2 [type=checkbox], .pub_annonce .checkbox_2 [type=radio] {
+  position: absolute;
+  left: -9999px;
+  visibility: visible;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.pub_annonce .checkbox_2 label {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  width: 15.3125rem;
+  border-radius: 0.25rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1875rem;
+  font-weight: 500;
+  color: #007e1d;
+  background-color: #ebebeb;
+  text-align: center !important;
+}
+
+.pub_annonce .checkbox_2 label.checked {
+  color: white;
+  background-color: #007e1d;
+}
+
+.pub_annonce .checkbox_2 label.checked:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .pub_annonce .checkbox_2 {
+    float: none;
+    margin: 0.9375rem auto !important;
+  }
+}
+
+.pub_annonce .adverts-field-name-localisation .checkbox_2 {
+  width: 15.3125rem;
+  margin: 0 1.25rem 0.9375rem 0;
+}
+
+.register_form {
+  margin: 0 -0.9375rem;
+}
+
+.register_form .nav-pills .nav-link {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 15.3125rem;
+  border-radius: 0.25rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1875rem;
+  font-weight: 500;
+  color: #007e1d;
+  background-color: #ebebeb;
+  margin-right: 1.875rem;
+  text-align: center !important;
+}
+
+.register_form .nav-pills .nav-link:focus, .register_form .nav-pills .nav-link:hover {
+  border-color: transparent;
+}
+
+.register_form .nav-pills .nav-link.disabled {
+  color: #636c72;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.register_form .nav-pills .nav-link.active {
+  color: #fff;
+  background-color: #007e1d;
+}
+
+@media (max-width: 767px) {
+  .register_form .nav-pills {
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .register_form .nav-pills .nav-link {
+    margin: 0.625rem 0;
+  }
+}
+
+.register_form .input_container {
+  margin: 0.9375rem 0;
+  position: relative;
+}
+
+.register_form .input_container i {
+  position: absolute;
+  top: 50%;
+  right: initial;
+  bottom: initial;
+  left: 1.25rem;
+  margin-top: -0.5rem;
+  font-size: 1rem;
+}
+
+.register_form .input_container input[type="text"], .register_form .input_container input[type="password"], .register_form .input_container input[type="email"], .register_form .input_container input[type="url"], .register_form .input_container input[type="date"], .register_form .input_container input[type="month"], .register_form .input_container input[type="time"], .register_form .input_container input[type="datetime"], .register_form .input_container input[type="datetime-local"], .register_form .input_container input[type="week"], .register_form .input_container input[type="number"], .register_form .input_container input[type="search"], .register_form .input_container input[type="tel"], .register_form .input_container input[type="color"] {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 0.9375rem 0 2.875rem !important;
+}
+
+.register_form .input_container input[type="submit"] {
+  cursor: pointer;
+  width: 100% !important;
+  font-size: 1.1875rem;
+  max-width: 16.25rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  border-radius: 0.125rem;
+  margin: 0.9375rem 0;
+  color: #fff;
+  background-color: #007e1d;
+}
+
 .owl-carousel .owl-nav {
   position: absolute;
   top: -6.25rem;
@@ -14740,6 +15358,16 @@ form .obligatoires {
 
 .owl-carousel .owl-nav [class*='owl-']:hover {
   background: transparent;
+}
+
+@media (max-width: 767px) {
+  .owl-carousel .owl-nav {
+    position: absolute;
+    top: -5rem;
+    right: 0.9375rem;
+    bottom: initial;
+    left: initial;
+  }
 }
 
 .page_blog .actu .bloc {
@@ -14835,6 +15463,19 @@ form .obligatoires {
   color: #000;
 }
 
+@media (max-width: 767px) {
+  .page_blog .actu .bloc .left_bloc {
+    grid-column: 1/9;
+  }
+  .page_blog .actu .bloc .right_bloc {
+    grid-column: 1/9;
+    padding-top: 0.9375rem;
+  }
+  .page_blog .actu .bloc .right_bloc .info .titre {
+    font-size: 1.25rem;
+  }
+}
+
 .sidebare_titre {
   font-size: 1.8125rem;
   font-weight: 400;
@@ -14847,6 +15488,7 @@ form .obligatoires {
 
 .categoris_container {
   padding: 0.9375rem 0;
+  margin-bottom: 0.9375rem;
   background-color: #e5e5e5;
 }
 
@@ -14864,8 +15506,15 @@ form .obligatoires {
   color: #007e1d;
 }
 
+.adverts-form fieldset {
+  margin: 0;
+  padding: 0 !important;
+  border: 0;
+}
+
 .adverts-form .adverts-control-group.adverts-field-header {
   height: 5.9375rem;
+  margin-top: -1px !important;
   background-color: #e5e5e5;
   border-top: 1px solid #007e1d;
   border-bottom: 1px solid #007e1d;
@@ -14882,7 +15531,7 @@ form .obligatoires {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  margin: 1.25rem 0 2.5rem;
+  margin: 0;
 }
 
 .adverts-form .adverts-control-group.adverts-field-header .adverts-field-header {
@@ -14898,10 +15547,74 @@ form .obligatoires {
   text-transform: uppercase;
 }
 
+.adverts-form .adverts-control-group.adverts-field-text.adverts-field-name-post_title label span {
+  display: none !important;
+}
+
+.adverts-form .adverts-control-group.adverts-field-textarea.adverts-field-name-post_content label {
+  display: none !important;
+}
+
+.adverts-form .adverts-control-group.adverts-field-text.adverts-field-name-adverts_price label {
+  display: none !important;
+}
+
+.adverts-form .adverts-control-group.adverts-field-name-prev_next label {
+  display: none !important;
+}
+
 .adverts-form.adverts-form-aligned .adverts-control-group > div {
   width: 100% !important;
   float: none !important;
   padding: initial !important;
+}
+
+.adverts-form .wp-editor-wrap {
+  padding: 0 !important;
+}
+
+.adverts-form input[type="text"], .adverts-form input[type="password"], .adverts-form input[type="email"], .adverts-form input[type="url"], .adverts-form input[type="date"], .adverts-form input[type="month"], .adverts-form input[type="time"], .adverts-form input[type="datetime"], .adverts-form input[type="datetime-local"], .adverts-form input[type="week"], .adverts-form input[type="number"], .adverts-form input[type="search"], .adverts-form input[type="tel"], .adverts-form input[type="color"] {
+  font-size: 0.875rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  border-radius: 0.125rem;
+  border: 1px solid #666666;
+  margin: 0.9375rem 0;
+}
+
+.adverts-form input[type="submit"] {
+  cursor: pointer;
+  width: 100% !important;
+  font-size: 1.1875rem !important;
+  max-width: 16.25rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  border-radius: 0.125rem;
+  margin: 0.9375rem 0;
+  color: #fff;
+  background-color: #007e1d;
+  border: none;
+}
+
+.adverts-form select,
+.adverts-form textarea {
+  height: 3.125rem;
+  line-height: 3.125rem;
+  border-radius: 0.125rem;
+  border: 1px solid #666666;
+  padding: 0 0.9375rem 0 2.875rem;
+  margin: 0.9375rem 0;
+}
+
+.adverts-form textarea {
+  font-size: 0.875rem;
+  height: 9.375rem;
+  margin: 0.9375rem 0;
+}
+
+.adverts-form .adverts-plupload-upload-ui {
+  width: 100%;
+  float: none;
 }
 
 .adverts-options-left, .adverts-options-right {
@@ -15084,6 +15797,69 @@ form .obligatoires {
   list-style-type: none !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+.hide_section {
+  display: none !important;
+}
+
+.prev_next_container {
+  padding: 2.5rem 0;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.prev_next_container a {
+  width: 10rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  color: #007e1d;
+  background-color: #ebebeb;
+  margin: 0 0.9375rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.prev_next_container a:hover {
+  color: white;
+  background-color: #007e1d;
+}
+
+.header_bandeau .search_zone .adverts-multiselect-options > label > input {
+  margin: 0 !important;
+}
+
+div.adverts-flash-messages {
+  clear: both;
+  overflow: hidden;
+  padding: 5px;
+  margin: 0;
+  line-height: 14px;
+  color: white;
+}
+
+.advert_alert {
+  font-size: 0.875rem;
+  display: none;
+}
+
+.advert_alert.advert_danger {
+  color: #d9534f;
+}
+
+.advert_alert.advert_success {
+  color: #5cb85c;
 }
 
 .site-footer {
