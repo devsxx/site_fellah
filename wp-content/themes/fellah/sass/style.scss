@@ -29,7 +29,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "variables";
 
-@import "../js/libs/font-awesome/scss/font-awesome";
+@import "../js/libs/font-awesome-5/web-fonts-with-css/scss/fa-brands";
+@import "../js/libs/font-awesome-5/web-fonts-with-css/scss/fa-regular";
+@import "../js/libs/font-awesome-5/web-fonts-with-css/scss/fa-solid";
+@import "../js/libs/font-awesome-5/web-fonts-with-css/scss/fontawesome";
 
 // Bootstrap
 @import "../js/libs/bootstrap/scss/bootstrap";

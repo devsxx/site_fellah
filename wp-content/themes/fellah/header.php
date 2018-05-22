@@ -48,16 +48,22 @@
 						<div class="header_picto_container">
 							<div class="header_picto">
 								<div class="compte">
-									<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" alt="Fellah">
-									<span><?php _e('My account','fellah'); ?></span>
+									<a href="<?php the_permalink( 2330 ) ?>">
+										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" alt="Fellah">
+										<span><?php _e('My account','fellah'); ?></span>
+									</a>
 								</div>
 								<div class="compte">
-									<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact.png" alt="Fellah">
-									<span><?php _e('Contact','fellah'); ?></span>
+									<a href="<?php the_permalink( 2330 ) ?>">
+										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact.png" alt="Fellah">
+										<span><?php _e('Contact','fellah'); ?></span>
+									</a>
 								</div>
 								<div class="compte">
-									<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us.png" alt="Fellah">
-									<span><?php _e('follow-us','fellah'); ?></span>
+									<a href="#">
+										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us.png" alt="Fellah">
+										<span><?php _e('follow-us','fellah'); ?></span>
+									</a>
 								</div> 
 							</div>
 						</div>

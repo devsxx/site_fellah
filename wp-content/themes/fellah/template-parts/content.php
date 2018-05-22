@@ -18,7 +18,7 @@
 						<?php the_title( '<h1 class="page_titre">', '</h1>' );  
 								if ( 'post' === get_post_type() ) : ?>
 							<div class="entry-meta">
-								<?php fellah_posted_on();  ?>
+								<?php //echo get_the_date('j.m.y'); ?>
 								<div class="cats">
 										<i class="fa fa-folder"></i>
 										<?php echo get_the_term_list( $post->ID, 'category', '', ', ' ); ?>

@@ -42,10 +42,13 @@
         </div>
         <?php endforeach; ?>
         
-        <div  style="border-top:2px solid silver; padding: 1em 0 1em 0">
-
-            <input type="submit" name="submit" value="<?php _e("Preview", "adverts") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
+        <div class="adverts-control-group <?php echo isset($actions_class) ? $actions_class : '' ?>">
+            <input type="submit" name="submit" value="<?php _e("Preview", "adverts") ?>" class="adverts-cancel-unload" />
         </div>
         
     </fieldset>
 </form>
+
+
+
+

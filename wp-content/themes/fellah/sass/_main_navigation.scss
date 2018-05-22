@@ -32,6 +32,27 @@
 			}
 		}
 	}
+	@include media("<md"){
+		@include flex(center, flex-end, row);
+		height: auto;
+		ul{
+			padding: oe_rem(20px) 0;
+			@include flex(stretch, flex-start, row);
+			flex-wrap: wrap;
+			background-color: $white;
+			li{
+				width: 50%;
+				a{
+					text-align: center;
+					padding: oe_rem(6px) 0;
+					height: oe_rem(50px);
+					font-size: oe_rem(13px) !important;
+					border: 1px solid $lighter_color;
+					@include flex(center, center, row);
+				}
+			}
+		}
+	}
 }
 
 

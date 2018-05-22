@@ -19,8 +19,7 @@ get_header();
 							<?php 
 							if ( have_posts() ) :   the_archive_title( '<h1 class="page_titre">', '</h1>' ); 
 								while ( have_posts() ) :
-									the_post();
-									$date = get_the_date(); 
+									the_post(); 
 									get_template_part('template-parts/actus');
 								endwhile;
 								the_posts_navigation();

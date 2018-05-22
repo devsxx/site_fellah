@@ -112,7 +112,6 @@ class Adverts_Post {
         }
        
         
-
         if($post && $post->ID > 0) {
             // Post already exists, update only.
             $data["ID"] = $post->ID;

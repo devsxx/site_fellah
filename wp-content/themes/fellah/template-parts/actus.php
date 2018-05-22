@@ -14,8 +14,8 @@
             <div class="right_bloc">
                   <div class="info">
                   <div class="date">
-                        <i class="fa fa-calendar-plus"></i>
-                        <?php echo get_the_date( ) ?>
+                        <i class="far fa-calendar-plus"></i>
+                        <?php echo get_the_date('j.m.Y'); ?>
                   </div>
                   <div class="titre">
                         <a href="<?php the_permalink(  ) ?>">
@@ -23,7 +23,7 @@
                         </a>
                   </div>
                   <div class="cats">
-                        <i class="fa fa-folder"></i>
+                        <i class="far fa-folder"></i>
                         <?php echo get_the_term_list( $post->ID, 'category', '', ', ' ); ?>
                   </div>
                   <div class="resume">

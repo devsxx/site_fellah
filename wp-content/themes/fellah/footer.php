@@ -27,7 +27,7 @@
 						<a href="<?php echo esc_url( __( 'https://fellah.ma/', 'fellah' ) ); ?>">Fellah.ma</a>
 						<span class="sprt"> | </span>
 						<?php $ID = 33;  ?>
-						<a href="<?php the_permalink( $ID  ); ?>"><?php echo get_the_title( $ID ); ?><a>
+						<a href="<?php the_permalink( $ID  ); ?>"><?php echo get_the_title( $ID ); ?></a>
 					</div>
 				</div>
 			</div>

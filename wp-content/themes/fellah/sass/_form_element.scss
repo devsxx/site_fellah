@@ -1,22 +1,62 @@
 form {
-	label{
-		font-size: oe_rem(18px);
-		color: $dark_color;
-		margin-top: oe_rem(20px);
-		text-transform: uppercase;
-		font-weight: 500;
-	}
-	.form-control {
-		color: $lighter_color;
-		font-size: oe_rem(20px);
+	input{
+
+		&[type="text"], 
+		&[type="password"], 
+		&[type="email"], 
+		&[type="url"], 
+		&[type="date"], 
+		&[type="month"], 
+		&[type="time"], 
+		&[type="datetime"], 
+		&[type="datetime-local"], 
+		&[type="week"], 
+		&[type="number"], 
+		&[type="search"], 
+		&[type="tel"], 
+		&[type="color"]{ 
+			width: 100%;
+			font-size: oe_rem(14px);
+			height: oe_rem(40px);
+			line-height: oe_rem(40px);
+			border-radius: oe_rem(2px);
+			border: 1px solid $dark_color; 
+			padding: oe_rem(15px);
+			margin: oe_rem(10px) 0;
+		}
+  
+		&[type="submit"]{
+			cursor: pointer;
+			width: 100%;
+			font-size: oe_rem(19px);
+			max-width: oe_rem(260px);
+			height: oe_rem(40px);
+			line-height: oe_rem(40px);
+			border-radius: oe_rem(2px); 
+			margin: oe_rem(15px) 0;
+			color: #fff; 
+			background-color: $main_color;
+			border: none;
+		}
+  
+	 }
+  
+	 select, 
+	 textarea{ 
+		width: 100%;
+		height: oe_rem(40px);
+		line-height: oe_rem(40px);
+		border-radius: oe_rem(2px);
+		border: 1px solid $dark_color;
 		padding: oe_rem(15px);
-	}
-	.obligatoires{
-		font-weight: 300;
-		font-size: oe_rem(20px);
-		margin-top: oe_rem(30px);
-		color: $second_main_color;
-	}
+		margin: oe_rem(10px) 0;
+	 }
+  
+	textarea{ 
+		font-size: oe_rem(14px);
+		height: oe_rem(150px);
+		margin: oe_rem(10px) 0;
+	} 
 }
 
 .btn{cursor:pointer;}

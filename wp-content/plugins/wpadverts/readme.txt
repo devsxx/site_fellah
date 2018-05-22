@@ -5,7 +5,7 @@ Tags: classifieds, classified, classified ads, classified script, classifieds sc
 Requires PHP: 5.3
 Requires at least: 4.0
 Tested up to: 4.9
-Stable tag: 1.2.2
+Stable tag: 1.2.4
 License: GNU Version 2 or Any Later Version
 
 Build classifieds section in seconds. Allow your visitors to browse and post (paid or free) classified ads on your site.
@@ -98,6 +98,23 @@ Most likely rewrite rules were not registered properly for some reason. Go to wp
 "Save Changes" button without actually changing anything, this should reset router and fix URLs.
 
 == Changelog ==
+
+= 1.2.4 - 2018-05-10 =
+
+* FIXED: Fatal Error After 1.2.3 update.
+
+= 1.2.3 - 2018-05-10 =
+
+* TRANSLATION: Improved Polish Translation.
+* FEATURE: Ability to handle Expired Adverts pages.
+* FEATURE: Added link to Authors extension in wp-admin / Classifieds / Options panel.
+* API: adverts_attachment_uploaded action allows modifying attachment after upload.
+* FIXED: Updated CSS for textarea, checkbox and radio inputs marings and paddings.
+* FIXED: Inline styling in add.php template replaced with actions_class.
+* FIXED: Inline styling in form.php template replaced with actions_class.
+* FIXED: Updated headers and removed inline styling in manage-edit.php template.
+
+Read release notes here https://wpadverts.com/blog/handling-expired-adverts-pages/
 
 = 1.2.2 - 2018-03-13 =
 

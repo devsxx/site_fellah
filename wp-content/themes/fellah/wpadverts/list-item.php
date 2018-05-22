@@ -12,13 +12,13 @@
         <div class="info_container">
             <div class="info">
                 <div class="date">
-                    <i class="fa fa-calendar-plus"></i>
-                    <?php echo date_i18n( get_option( 'date_format' ), get_post_time( 'U', false, get_the_ID() ) ) ?>
+                    <i class="far fa-calendar-plus"></i>
+                    <?php echo get_the_date('j.m.Y'); ?>
                 </div>
                 <div class="lieu">
                     <?php $localisation = get_post_meta( get_the_ID(), "localisation", true ) ?>
                     <?php if( ! empty( $localisation ) ): ?>
-                        <i class="fa fa-map-pin"></i>
+                        <i class="fas fa-map-pin"></i>
                         <span><?php echo esc_html( $localisation ) ?></span>
                     <?php endif; ?>
                     <?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>

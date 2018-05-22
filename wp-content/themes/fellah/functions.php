@@ -122,6 +122,7 @@ add_action( 'widgets_init', 'fellah_widgets_init' );
 function fellah_scripts() {
 	
 	wp_enqueue_style( 'fellah-fonts', 'https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,600,700' );
+	wp_enqueue_style( 'fellah-fonts-2', 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500' );
 	wp_enqueue_style( 'fellah-style', get_stylesheet_uri() );
 
 
@@ -231,7 +232,11 @@ require get_template_directory() . '/func/custom-fields-taxonomies.php';
 require get_template_directory() . '/func/override_templates.php';
 require get_template_directory() . '/func/search-by-category.php';
 // require get_template_directory() . '/func/search-by-price.php';
- 
+
+require get_template_directory() . '/func/compteur-vues.php';
+require get_template_directory() . '/func/breadcrumb.php';
+
+
 if( !defined("ADVERTS_FILE") ) {
 	define( "ADVERTS_FILE", __FILE__ );
 	define( "ADVERTS_PATH", plugin_dir_path( ADVERTS_FILE ) );
@@ -446,404 +451,430 @@ function shortcode_adverts_form_search( $atts ) {
 	return ob_get_clean();
 }
 
-	remove_action('adverts_tpl_single_bottom', 'adext_contact_form');
-	remove_action('adverts_tpl_single_bottom', 'adverts_single_contact_information');
- 
-	// add_action('adverts_tpl_single_bottom', 'adext_contact_form_custom');
- 
-	function adext_contact_form_custom( $post_id ) {
-   
-		include_once ADVERTS_PATH . 'includes/class-form.php';
-		include_once ADVERTS_PATH . 'includes/class-html.php';
-		
-		$show_form = false;
-		$flash = array( "error" => array(), "info" => array());;
-		$email = get_post_meta( $post_id, "adverts_email", true );
-		$phone = get_post_meta( $post_id, "adverts_phone", true );
-		$message = null;
-		$form = new Adverts_Form( Adverts::instance()->get( "form_contact_form" ) );
-		$buttons = array(
-			 array(
-				  "tag" => "input",
-				  "name" => "adverts_contact_form",
-				  "type" => "submit",
-				  "value" => __( "Send Message", "adverts" ),
-				  "style" => "font-size:1.2em; margin-top:1em",
-				  "html" => null
-			 ),
-		);
-		
-		if( adverts_request( "adverts_contact_form" ) ) {
-			 
-			 wp_enqueue_script( 'adverts-contact-form-scroll' );
-			 
-			 $form->bind( stripslashes_deep( $_POST ) );
-			 $valid = $form->validate();
-			 
-			 if( $valid ) {
-				  
-				  $reply_to = $form->get_value( "message_email" );
-				  
-				  if( $form->get_value( "message_name" ) ) {
-						$reply_to = $form->get_value( "message_name" ) . "<$reply_to>";
-				  }
-				  
-				  $mail = array(
-						"to" => get_post_meta( $post_id, "adverts_email", true ),
-						"subject" => $form->get_value( "message_subject" ),
-						"message" => $form->get_value( "message_body" ),
-						"headers" => array(
-							 "Reply-To: " . $reply_to
-						)
-				  );
-				  
-				  $mail = apply_filters( "adverts_contact_form_email", $mail, $post_id, $form );
-				 
-				  add_filter( 'wp_mail_from', 'adext_contact_form_mail_from' );
-				  add_filter( 'wp_mail_from_name', 'adext_contact_form_mail_from_name' );
-				  
-				  wp_mail( $mail["to"], $mail["subject"], $mail["message"], $mail["headers"] );
-				  
-				  remove_filter( 'wp_mail_from', 'adext_contact_form_mail_from' );
-				  remove_filter( 'wp_mail_from_name', 'adext_contact_form_mail_from_name' );
-				  
-				  $form->bind( array() );
-				  
-				  $flash["info"][] = array(
-						"message" => __( "Your message has been sent.", "adverts" ),
-						"icon" => "adverts-icon-ok"
-				  );
-			 } else {
-				  $flash["error"][] = array(
-						"message" => __( "There are errors in your form.", "adverts" ),
-						"icon" => "adverts-icon-attention-alt"
-				  );
-				  $show_form = true; 
-			 }
-		} else {
-			 
-			 if( get_current_user_id() > 0 ) {
-				  $user = wp_get_current_user();
-				  /* @var $user WP_User */
-				  
-				  $bind = array(
-						"message_name" => $user->display_name,
-						"message_email" => $user->user_email
-				  );
-				  
-				  $form->bind( $bind );
-				  
-			 }
-		}
-		
-		?>
-  
-		<div id="adverts-contact-form-scroll"></div>
-  
-		<?php adverts_flash( $flash ) ?>
-  
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="adverts-single-actions">
-						<?php if( ! empty( $email ) ): ?>
-						<a href="#" class="adverts-button adverts-show-contact-form">
-							<?php esc_html_e("Send Message", "adverts") ?>
-							<span class="adverts-icon-down-open"></span>
-						</a>
-						<?php endif; ?>
-						
-						<?php if( adverts_config( "contact_form.show_phone") == "1" && ! empty( $phone ) ): ?>
-						<span class="adverts-button" style="background-color: transparent; cursor: auto">
-							<?php esc_html_e( "Phone", "adverts" ) ?>
-							<a href="tel:<?php echo esc_html( $phone ) ?>"><?php echo esc_html( $phone ) ?></a>
-							<span class="adverts-icon-phone"></span>
-						</span>
-						<?php endif; ?>
-					</div>
+remove_action('adverts_tpl_single_bottom', 'adext_contact_form');
+remove_action('adverts_tpl_single_bottom', 'adverts_single_contact_information');
+
+// add_action('adverts_tpl_single_bottom', 'adext_contact_form_custom');
+function adext_contact_form_custom( $post_id ) {
+
+	include_once ADVERTS_PATH . 'includes/class-form.php';
+	include_once ADVERTS_PATH . 'includes/class-html.php';
+	
+	$show_form = false;
+	$flash = array( "error" => array(), "info" => array());;
+	$email = get_post_meta( $post_id, "adverts_email", true );
+	$phone = get_post_meta( $post_id, "adverts_phone", true );
+	$message = null;
+	$form = new Adverts_Form( Adverts::instance()->get( "form_contact_form" ) );
+	$buttons = array(
+			array(
+				"tag" => "input",
+				"name" => "adverts_contact_form",
+				"type" => "submit",
+				"value" => __( "Send Message", "adverts" ),
+				"style" => "font-size:1.2em; margin-top:1em",
+				"html" => null
+			),
+	);
+	
+	if( adverts_request( "adverts_contact_form" ) ) {
+			
+			wp_enqueue_script( 'adverts-contact-form-scroll' );
+			
+			$form->bind( stripslashes_deep( $_POST ) );
+			$valid = $form->validate();
+			
+			if( $valid ) {
+				
+				$reply_to = $form->get_value( "message_email" );
+				
+				if( $form->get_value( "message_name" ) ) {
+					$reply_to = $form->get_value( "message_name" ) . "<$reply_to>";
+				}
+				
+				$mail = array(
+					"to" => get_post_meta( $post_id, "adverts_email", true ),
+					"subject" => $form->get_value( "message_subject" ),
+					"message" => $form->get_value( "message_body" ),
+					"headers" => array(
+							"Reply-To: " . $reply_to
+					)
+				);
+				
+				$mail = apply_filters( "adverts_contact_form_email", $mail, $post_id, $form );
+				
+				add_filter( 'wp_mail_from', 'adext_contact_form_mail_from' );
+				add_filter( 'wp_mail_from_name', 'adext_contact_form_mail_from_name' );
+				
+				wp_mail( $mail["to"], $mail["subject"], $mail["message"], $mail["headers"] );
+				
+				remove_filter( 'wp_mail_from', 'adext_contact_form_mail_from' );
+				remove_filter( 'wp_mail_from_name', 'adext_contact_form_mail_from_name' );
+				
+				$form->bind( array() );
+				
+				$flash["info"][] = array(
+					"message" => __( "Your message has been sent.", "adverts" ),
+					"icon" => "adverts-icon-ok"
+				);
+			} else {
+				$flash["error"][] = array(
+					"message" => __( "There are errors in your form.", "adverts" ),
+					"icon" => "adverts-icon-attention-alt"
+				);
+				$show_form = true; 
+			}
+	} else {
+			
+			if( get_current_user_id() > 0 ) {
+				$user = wp_get_current_user();
+				/* @var $user WP_User */
+				
+				$bind = array(
+					"message_name" => $user->display_name,
+					"message_email" => $user->user_email
+				);
+				
+				$form->bind( $bind );
+				
+			}
+	}
+	
+	?>
+
+	<div id="adverts-contact-form-scroll"></div>
+
+	<?php adverts_flash( $flash ) ?>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="adverts-single-actions">
+					<?php if( ! empty( $email ) ): ?>
+					<a href="#" class="adverts-button adverts-show-contact-form">
+						<?php esc_html_e("Send Message", "adverts") ?>
+						<span class="adverts-icon-down-open"></span>
+					</a>
+					<?php endif; ?>
+					
+					<?php if( adverts_config( "contact_form.show_phone") == "1" && ! empty( $phone ) ): ?>
+					<span class="adverts-button" style="background-color: transparent; cursor: auto">
+						<?php esc_html_e( "Phone", "adverts" ) ?>
+						<a href="tel:<?php echo esc_html( $phone ) ?>"><?php echo esc_html( $phone ) ?></a>
+						<span class="adverts-icon-phone"></span>
+					</span>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
-  
-		<?php if( ! empty( $email ) ): ?>
-		<div class="adverts-contact-box" <?php if($show_form): ?>style="display: block"<?php endif ?>>
-			 <?php include apply_filters( "adverts_template_load", ADVERTS_PATH . 'templates/form.php' ) ?>
-		</div>
-		<?php endif; ?>
-  
-		<?php
-  }
+	</div>
 
+	<?php if( ! empty( $email ) ): ?>
+	<div class="adverts-contact-box" <?php if($show_form): ?>style="display: block"<?php endif ?>>
+			<?php include apply_filters( "adverts_template_load", ADVERTS_PATH . 'templates/form.php' ) ?>
+	</div>
+	<?php endif; ?>
+
+	<?php
+}
 
 add_filter( "adverts_form_load", "my_adverts_form_load" );
 function my_adverts_form_load( $form ) {
-    if( $form["name"] != "advert" ) {
+	
+	if( $form["name"] != "advert" ) {
         return $form;
 	}
 
-		$form["field"][] = array(
-            "type" => "adverts_field_hidden",
-            "name" => "_post_id",
-            "label" => "",
-            "meta" => array(
-                    "cf_saved" => 1,
-                    "cf_builtin" => 1,
-			),
-            "order" => 0,
-            "cf_saved" => 1
-        );
-    
-		$form["field"][] = array(
-					"type" => "adverts_field_hidden",
-					"name" => "_post_id",
-					"label" => "",
-					"meta" => array(
-						"cf_saved" => 1,
-						"cf_builtin" => 1,
-					),
-					"order" => 0,
+	$form["field"][] = array(
+		"type" => "adverts_field_hidden",
+		"name" => "_post_id",
+		"label" => "",
+		"meta" => array(
 					"cf_saved" => 1,
-		);
-
-		$form["field"][] = array(
-            "type" => "adverts_field_hidden",
-            "name" => "_adverts_action",
-            "label" => "",
-            "meta" => array(
-				"cf_saved" => 1,
-				"cf_builtin" => 1,
-			),
-            "order" => 1,
-            "cf_saved" => 1
-        );
-
-		$form["field"][] = array(
-            "type" => "adverts_field_header",
-            "name" => "_contact_information",
-            "label" => "2. Description",
-			"meta" => array(
-				"cf_saved" => 1,
-				"cf_builtin" => 1,
-			),
-            "order" => 5,
-            "cf_saved" => 1,
-            "validator" => array(
-			),
-
-            "description" => ""
-        );
-
-		$form["field"][] = array(
-            "type" => "adverts_field_header",
-            "name" => "_item_information",
-            "label" => "1. Votre annonce",
-            "meta" => array(
-                    "cf_saved" => 1,
-                    "cf_builtin" => 1,
-			),
-
-            "order" => 2,
-            "cf_saved" => 1,
-            "validator" => array(
-			),
-			"description" => ""
-        );
-
-		$form["field"][] = array(
-            "type" => "adverts_field_text",
-            "name" => "post_title",
-            "label" => "Titre",
-            "meta" => array(
-				"cf_saved" => 1,
-				"cf_builtin" => 1,
-			),
-            "order" => 6,
-            "validator" => array(
-				"0" => array(
-					"name" => "is_required",
-				)
-			),
-            "cf_saved" => 1,
-		);
-		if(is_admin()){
-			$form["field"][] =  array(
-				"type" => "adverts_field_select",
-				"name" => "advert_category",
-				"label" => "Catégorie",
+					"cf_builtin" => 1,
+		),
+		"order" => 0,
+		"cf_saved" => 1
+	);
+    
+	$form["field"][] = array(
+				"type" => "adverts_field_hidden",
+				"name" => "_post_id",
+				"label" => "",
 				"meta" => array(
-					"cf_options_fill_method" => "callback",
-					"cf_data_source" => "adverts-categories",
 					"cf_saved" => 1,
 					"cf_builtin" => 1,
 				),
-				"order" => 4,
-				"max_choices" => 10,
-				"options" => array(
-				),
-				"options_callback" => "adverts_taxonomies",
-				"validator" => array(
-				),
+				"order" => 0,
 				"cf_saved" => 1,
-				"empty_option" => 0,
-			);
-		}
-		
-		$form["field"][] =  array(
-			"name" => "advert_category",
-			"type" => "adverts_field_customadvertscategory",
-			"order" => 4,
+	);
+
+	$form["field"][] = array(
+			"type" => "adverts_field_hidden",
+			"name" => "_adverts_action",
 			"label" => "",
-		);
+			"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
+			"order" => 1,
+			"cf_saved" => 1
+	);
+
+	$form["field"][] = array(
+			"type" => "adverts_field_header",
+			"name" => "_item_information",
+			"label" => "1. Votre annonce",
+			"meta" => array(
+						"cf_saved" => 1,
+						"cf_builtin" => 1,
+		),
+
+			"order" => 2,
+			"cf_saved" => 1,
+			"validator" => array(
+		),
+		"description" => ""
+	);
+	
+	$form["field"][] =  array(
+		"type" => "adverts_field_checkbox",
+		"class" => "checkbox_2",
+		"name" => "type_annonce",
+		"label" => "Type d'annonce",
+		"meta" => array(
+			"cf_builtin" => "",
+			"cf_saved" => 1,
+			"cf_options_fill_method" => "callback",
+			"cf_data_source" => "type-annonce",
+			"cf_display" => "anywhere",
+			"cf_display_type" => "table-row",
+			"cf_display_as" => "text",
+			"cf_display_icon" => "",
+			"cf_display_style" => "inline-coma",
+		),
+
+		"validator" => array(
+			0 => array(
+				"name" => "is_required"
+			)
+		),
+		"rows" => "",
+			"max_choices" => "",
+			"options" => array(
+		),
+		"order" => 3,
+		"cf_saved" => 1,
+		"options_callback" => "custom_fields_taxonomies_data_source",
+	);
+
+	$form["field"][] =  array(
+		"name" => "advert_category",
+		"type" => "adverts_field_customadvertscategory",
+		"order" => 4,
+		"label" => "Catégorie d'annonce",
+	);
+	
+	if(!is_admin()){
 
 		$form["field"][] =  array(
-            "type" => "adverts_field_gallery",
-            "name" => "gallery",
-            "label" => "Galerie",
-            "meta" => array(
+			"name" => "prev_next",
+			"type" => "adverts_field_prev_next_1",
+			"order" => 5,
+			"label" => "",
+		);
+	}
+
+	$form["field"][] = array(
+		"type" => "adverts_field_header",
+		"name" => "_contact_information",
+		"label" => "2. Description",
+		"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
+			"order" => 5,
+			"cf_saved" => 1,
+			"validator" => array(
+		),
+
+		"description" => ""
+	);
+
+	$form["field"][] = array(
+			"type" => "adverts_field_text",
+			"placeholder" => __("Titre de l'annoce", "fellah"),
+			"name" => "post_title", 
+			"label" => "",
+			"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
+		"order" => 6,
+		"validator" => array(
+			"0" => array(
+				"name" => "is_required",
+			)
+		),
+		"cf_saved" => 1,
+	);
+
+	if(is_admin()){
+		$form["field"][] =  array(
+			"type" => "adverts_field_select",
+			"name" => "advert_category",
+			"label" => "Catégorie",
+			"meta" => array(
+				"cf_options_fill_method" => "callback",
+				"cf_data_source" => "adverts-categories",
 				"cf_saved" => 1,
 				"cf_builtin" => 1,
 			),
-            "order" => 9,
-            "validator" => array(
-				"0" => array(
-					"name" => "upload_type",
-					"params" => array(
-						"allowed" => array(
-								0 => "image",
-								1 => "video"
-						),
+			"order" => 4,
+			"max_choices" => 10,
+			"options" => array(
+			),
+			"options_callback" => "adverts_taxonomies",
+			"validator" => array(
+			),
+			"cf_saved" => 1,
+			"empty_option" => 0,
+		);
+	}
+	
 
+	
+	$form["field"][] =  array(
+		"type" => "adverts_field_textarea",
+		"name" => "post_content",
+		"placeholder" => __("Description", "fellah"),
+		"label" => "" ,
+		"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
+
+		"order" => 7,
+		"validator" => array(
+			"0" => array(
+				"name" => "is_required",
+			), 
+		), 
+		"cf_saved" => 1,
+		"mode" => "plain-text",
+	);
+
+	$form["field"][] = array(
+			"type" => "adverts_field_text",
+			"name" => "adverts_price",
+			"placeholder" => __("Price", "fellah"),
+			"label" => "",
+			"meta" => array(
+						"cf_saved" => 1,
+						"cf_builtin" => 1,
+		),
+			"order" => 8,
+			"class" => "adverts-filter-money",
+			"description" => "",
+			"attr" => array(
+		),
+			"filter" => array(
+			0 => array(
+				"name" => "money",
+			),
+		),
+
+			"cf_saved" => 1
+	);
+
+	$form["field"][] =  array(
+			"type" => "adverts_field_gallery",
+			"name" => "gallery",
+			"label" => "Image",
+			"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
+			"order" => 9,
+			"validator" => array(
+			"0" => array(
+				"name" => "upload_type",
+				"params" => array(
+					"allowed" => array(
+							0 => "image",
+							1 => "video"
 					),
 
 				),
 
 			),
 
-            "cf_saved" => 1,
-		);
+		),
+
+			"cf_saved" => 1,
+	);
+
+	$form["field"][] =  array(
+		"type" => "adverts_field_checkbox",
+		"class"  => "checkbox_2",
+		"name" => "localisation",
+		"label" => "Localisation",
+		"meta" => array(
+			"cf_builtin" => "",
+			"cf_saved" => 1,
+			"cf_options_fill_method" => "callback",
+			"cf_data_source" => "localisation",
+			"cf_display" => "anywhere",
+			"cf_display_type" => "table-row",
+			"cf_display_as" => "text",
+			"cf_display_icon" => "",
+			"cf_display_style" => "inline-coma",
+		),
+
+		"validator" => array(
+			0 => array(
+				"name" => "is_required"
+			)
+		),
+
+		"rows" => "",
+			"max_choices" => "",
+			"options" => array(
+		),
+		"order" => 10,
+		"cf_saved" => 1,
+		"options_callback" => "custom_fields_localisation_taxonomies_data_source",
+	);
+
+	$form["field"][] =  array(
+			"name" => "_form_scheme",
+			"type" => "adverts_field_hidden",
+			"order" => 0,
+			"label" => "",
+			"value" => 1,
+			"class" => "wpadverts-plupload-multipart-default",
+	);
+
+	$form["field"][] =  array(
+			"name" => "_form_scheme_id",
+			"type" => "adverts_field_hidden",
+			"order" => 0,
+			"label" => "",
+			"class" => "wpadverts-plupload-multipart-default",
+	);
+
+
+	if(!is_admin()){
+ 
 
 		$form["field"][] =  array(
-            "type" => "adverts_field_textarea",
-            "name" => "post_content",
-            "label" => "Description" ,
-            "meta" => array(
-                    "cf_saved" => 1,
-                    "cf_builtin" => 1,
-			),
-
-            "order" => 7,
-            "validator" => array(
-				"0" => array(
-					"name" => "is_required",
-				),
-
-			),
-
-            "mode" => "tinymce-mini",
-            "cf_saved" => 1,
+			"name" => "prev_next",
+			"type" => "adverts_field_prev_next_2",
+			"order" => 20,
+			"label" => "",
 		);
 
-		$form["field"][] = array(
-            "type" => "adverts_field_text",
-            "name" => "adverts_price",
-            "label" => "Prix",
-            "meta" => array(
-                    "cf_saved" => 1,
-                    "cf_builtin" => 1,
-			),
-            "order" => 8,
-            "class" => "adverts-filter-money",
-            "description" => "",
-            "attr" => array(
-			),
-            "filter" => array(
-				0 => array(
-					"name" => "money",
-				),
-			),
-
-            "cf_saved" => 1
-		);
-
-		$form["field"][] =  array(
-            "type" => "adverts_field_checkbox",
-            "name" => "type_annonce",
-            "label" => "Type d'annonce",
-            "meta" => array(
-				"cf_builtin" => "",
-				"cf_saved" => 1,
-				"cf_options_fill_method" => "callback",
-				"cf_data_source" => "type-annonce",
-				"cf_display" => "anywhere",
-				"cf_display_type" => "table-row",
-				"cf_display_as" => "text",
-				"cf_display_icon" => "",
-				"cf_display_style" => "inline-coma",
-			),
-
-            "validator" => array(
-				0 => array(
-					"name" => "is_required"
-				)
-			),
-            "rows" => "",
-            "max_choices" => "",
-            "options" => array(
-			),
-            "order" => 3,
-            "cf_saved" => 1,
-            "options_callback" => "custom_fields_taxonomies_data_source",
-		);
-
-		$form["field"][] =  array(
-            "type" => "adverts_field_checkbox",
-            "name" => "localisation",
-            "label" => "Localisation",
-            "meta" => array(
-				"cf_builtin" => "",
-				"cf_saved" => 1,
-				"cf_options_fill_method" => "callback",
-				"cf_data_source" => "localisation",
-				"cf_display" => "anywhere",
-				"cf_display_type" => "table-row",
-				"cf_display_as" => "text",
-				"cf_display_icon" => "",
-				"cf_display_style" => "inline-coma",
-			),
-
-            "validator" => array(
-				0 => array(
-					"name" => "is_required"
-				)
-			),
-
-            "rows" => "",
-            "max_choices" => "",
-            "options" => array(
-			),
-            "order" => 10,
-            "cf_saved" => 1,
-            "options_callback" => "custom_fields_localisation_taxonomies_data_source",
-        );
-
-		$form["field"][] =  array(
-            "name" => "_form_scheme",
-            "type" => "adverts_field_hidden",
-            "order" => 0,
-            "label" => "",
-            "value" => 1,
-            "class" => "wpadverts-plupload-multipart-default",
-        );
-
-		$form["field"][] =  array(
-            "name" => "_form_scheme_id",
-            "type" => "adverts_field_hidden",
-            "order" => 0,
-            "label" => "",
-            "class" => "wpadverts-plupload-multipart-default",
-		);
-		
-		if(!is_admin()){
+		if ( !is_user_logged_in() ) {
 			$form["field"][] =  array(
 				"name" => "coordonnées",
 				"type" => "adverts_field_header",
@@ -853,17 +884,23 @@ function my_adverts_form_load( $form ) {
 			$form["field"][] =  array(
 				"name" => "connect",
 				"type" => "adverts_field_login_or_subscribe",
-				"order" => 25,
+				"order" => 26,
 				"label" => "",
 			);
 		}
+
+		$form["field"][] =  array(
+			"name" => "prev_next",
+			"type" => "adverts_field_prev_next_3",
+			"order" => 27,
+			"label" => "",
+		);
+	}
+
 	
-    return $form;
+
+	return $form;
 }
-
-
-
-
 
 add_action( 'wp_ajax_nopriv_ajaxlogin', 'ajax_login' );
 add_action( 'wp_ajax_ajaxlogin', 'ajax_login' );
@@ -895,14 +932,12 @@ function ajax_login(){
     die();
 }
 
-
-
 add_action( 'wp_ajax_nopriv_ajaxsignup', 'ajax_signup' );
 add_action( 'wp_ajax_ajaxsignup', 'ajax_signup' );
 function ajax_signup(){
 
-    $prenom = $_POST['prenom'];
-    $nom = $_POST['nom'];
+	$prenom = $_POST['prenom'];
+	$nom = $_POST['nom'];
 	$telephone = $_POST['telephone'];
 	$email = $_POST['email'];
 	$mot_passe = $_POST['mot_passe'];
@@ -965,28 +1000,47 @@ function ajax_signup(){
     die();
 }
 
-
-
 add_action( 'wp_ajax_nopriv_ajaxsouscat', 'ajaxsouscat' );
 add_action( 'wp_ajax_ajaxsouscat', 'ajaxsouscat' );
 function ajaxsouscat(){
 	$htmls = "";
+
 	if(isset($_POST["ids"]) && !empty($_POST["ids"])){
 		
-		foreach($_POST["ids"] as $id){
-			$terms = get_terms( array(
-				'taxonomy' => 'advert_category',
-				'hide_empty' => false,
-				'parent'   => $id
-			) );
-			$i = 0;
-			foreach($terms as $term){
-				$i++;
-				$htmls .= '<label for="advert_sub_category_'.$i.'">
-					<input type="checkbox" name="advert_category[]" id="advert_sub_category_'.$i.'" value="'.$term->term_id.'"> '.$term->name.'
-				</label>';
-			}
-		}
+		$htmls.= '
+		<div class="adverts-control-group adverts-field-customadvertssouscategory adverts-field-name-sous_categorie ajaxed">
+			<div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<label for="sous_categorie">Sous catégorie </label>
+							<div class="adverts-form-input-group adverts-form-input-group-checkbox adverts-field-rows-0">
+								<div>'; 
+								
+								$i = 0;
+								foreach($_POST["ids"] as $id){
+									$terms = get_terms( array(
+										'taxonomy' => 'advert_category',
+										'hide_empty' => false,
+										'parent'   => $id
+										) );
+									foreach($terms as $term){
+										$i++;
+											
+										$htmls .= '<div class="checkbox">
+										<input type="checkbox" class="filled-in" name="advert_category[]" id="advert_sub_category_'.$i.'" value="'.$term->term_id.'"> 
+										<label for="advert_sub_category_'.$i.'">'.$term->name.'</label>
+										</div>';
+									}
+								}
+
+			$htmls.=' </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div></div>';
 	}
 	echo $htmls;
 	die();
@@ -1008,72 +1062,179 @@ function ajaxsouscat(){
  */
 function adverts_field_login_or_subscribe( $field ) {
     
-    $htmls = 
-    '
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Me connecter</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Créer mon compte</a>
-        </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
+	$htmls = '
+	<div class="register_form">
+		 
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12"> 
+					<label>Est ce que vous avez un compte?</label>
+				</div>
+
+				<div class="col-md-4"> 
+					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item">
+								<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Me connecter</a>
+						</li>
+						<li class="nav-item">
+								<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Créer mon compte</a>
+						</li>
+					</ul>
+				</div>
+
+				
+				
+			</div>
+		</div>
+
+		<div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <label for="username">username</label>
-                        <input type="input" name="username" id="username">                                
-                    </div>
-                </div>
+					<div class="row">
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password">                                
-                    </div>
-                </div>
-            </div>
-            <input type="button" name="connect" value="Sign in" id="connect">
+						<div class="col-md-12"> 
+							<label>Connectez-vous</label>
+						</div>
+					
+						<div class="col-md-4"> 
+							<div class="input_container">
+								<i class="far fa-envelope"></i>
+								<input type="text" name="username" placeholder="Identifiant ou Email" id="username">                                
+							</div> 
+						</div> 
+						<div class="col-md-4"> 
+							<div class="input_container">
+								<i class="far fa-edit"></i>
+								<input type="password" name="password" placeholder="Mot de passe" id="password">                                
+							</div>
+						</div>
+						<div class="col-md-1"> 
+							<input type="submit" name="connect" value="Ok" id="connect">
+						</div>
+
+						<div class="col-md-12"> 
+							<div class="advert_alert advert_danger">'. __("wrong acces","fellah") . '</div>
+							<div class="advert_alert advert_success">'. __("You are connected","fellah") . '</div>
+						</div>
+
+					</div>
+				</div>
+				
         </div>
 		<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 			<div class="container">
 
 				<div class="row">
-					<div class="col-md-4">
-						<input type="input" placeholder="Prénom" name="prenom" id="prenom">                                
+				<div class="col-md-12"> 
+					<label>Créer un compte</label>
+				</div>
+					<div class="col-md-3">
+						<div class="input_container">
+							<i class="far fa-user"></i>
+							<input type="text" placeholder="Prénom" name="prenom" id="prenom">                                
+						</div>
 					</div>
-					<div class="col-md-4">
-						<input type="input" placeholder="Nom" name="nom" id="nom">                                
+					<div class="col-md-3">
+						<div class="input_container">
+							<i class="far fa-user"></i>
+							<input type="text" placeholder="Nom" name="nom" id="nom">                                
+						</div>
 					</div>
-					<div class="col-md-4">
-						<input type="input" placeholder="Téléphone" name="telephone" id="telephone">                                
+					<div class="col-md-3">
+						<div class="input_container">
+							<i class="fas fa-mobile-alt"></i>
+							<input type="text" placeholder="Téléphone" name="telephone" id="telephone">                                
+						</div>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="col-md-4">
-						<input type="email" placeholder="Email" name="email" id="email">                                
+					<div class="col-md-3">
+						<div class="input_container">
+							<i class="far fa-envelope"></i>
+							<input type="email" placeholder="Email" name="email" id="email">                                
+						</div>
 					</div>
-					<div class="col-md-4">
-						<input type="input" placeholder="Mot de passe" name="mot_passe" id="mot_passe">                                
+					<div class="col-md-3">
+						<div class="input_container">
+							<i class="far fa-edit"></i>
+							<input type="password" placeholder="Mot de passe" name="mot_passe" id="mot_passe">                                
+						</div>
 					</div>
-					<div class="col-md-4">
-						<input type="input" placeholder="Confirmer le mot de passe" name="confirm_mot_passe" id="confirm_mot_passe">                                
+					<div class="col-md-3">
+						<div class="input_container">
+							<i class="far fa-edit"></i>
+							<input type="password" placeholder="Confirmer le mot de passe" name="confirm_mot_passe" id="confirm_mot_passe">                                
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3">
+						<input type="submit" name="creation_compte" value="Créer mon compte" id="creation_compte">
 					</div>
 				</div>
 
 			</div>
-			<input type="button" name="creation_compte" value="Créer mon compte" id="creation_compte">
 		</div>
-      </div>
-    
+		</div>
+		</div>    
     ';
     
-echo $htmls;
+	echo $htmls;
 }
+
+
+function adverts_field_prev_next_1( $field ) {
+    
+	$htmls = '
+	<div class="prev_next_container"> 
+		<a href="#" id="next_step_2" class="next">
+			Continuer
+			<i class="fas fa-angle-right"></i>
+		</a>
+	</div>  
+    ';
+    
+	echo $htmls;
+}
+
+
+function adverts_field_prev_next_2( $field ) {
+    
+	$htmls = '
+	<div class="prev_next_container">
+		<a href="#" id="prev_step_1" class="prev">
+			<i class="fas fa-angle-left"></i>
+			Retour
+		</a>
+		<a href="#" id="next_step_3" class="next">
+			Continuer
+			<i class="fas fa-angle-right"></i>
+		</a>
+	</div>  
+    ';
+    
+	echo $htmls;
+}
+
+
+function adverts_field_prev_next_3( $field ) {
+    
+	$htmls = '
+	<div class="prev_next_container"> 
+		<a href="#" id="prev_step_2" class="next">
+		<i class="fas fa-angle-left"></i>
+		Retour
+		</a>
+	</div>  
+    ';
+    
+	echo $htmls;
+}
+
 
 function adverts_field_customadvertscategory( $field ) {
     
@@ -1087,22 +1248,17 @@ function adverts_field_customadvertscategory( $field ) {
 		$i = 0;
 	foreach($terms as $term){
 		$i++;
-		$htmls .= '<label for="advert_category_'.$i.'">
-			<input type="checkbox" name="advert_category[]" id="advert_category_'.$i.'" value="'.$term->term_id.'"> '.$term->name.'
-		</label>';
+		$htmls .= '<div class="checkbox">
+		<input type="checkbox" class="filled-in" name="advert_category[]" id="advert_category_'.$i.'" value="'.$term->term_id.'"> 
+		<label for="advert_category_'.$i.'">'.$term->name.'</label>
+		</div>';
 	}
 		
 	
 	echo $htmls;
 }
 
-
-
 include_once ADVERTS_PATH . 'includes/class-adverts.php';
-
-
-
-
 
 add_action("admin_head", function(){
 	echo "<style>
@@ -1132,10 +1288,31 @@ function adverts_form_add_fieldr( $name, $params ) {
 }
 
 adverts_form_add_fieldr("adverts_field_login_or_subscribe", array(
-    "renderer" => "adverts_field_login_or_subscribe",
-    "callback_save" => "adverts_save_single",
-    "callback_bind" => "adverts_bind_single",
+	"renderer" => "adverts_field_login_or_subscribe",
+	"callback_save" => "adverts_save_single",
+	"callback_bind" => "adverts_bind_single",
 ));
+
+
+adverts_form_add_fieldr("adverts_field_prev_next_1", array(
+	"renderer" => "adverts_field_prev_next_1",
+	"callback_save" => "adverts_save_single",
+	"callback_bind" => "adverts_bind_single",
+));
+
+
+adverts_form_add_fieldr("adverts_field_prev_next_2", array(
+	"renderer" => "adverts_field_prev_next_2",
+	"callback_save" => "adverts_save_single",
+	"callback_bind" => "adverts_bind_single",
+));
+
+adverts_form_add_fieldr("adverts_field_prev_next_3", array(
+	"renderer" => "adverts_field_prev_next_3",
+	"callback_save" => "adverts_save_single",
+	"callback_bind" => "adverts_bind_single",
+));
+
 
 
 adverts_form_add_fieldr("adverts_field_customadvertscategory", array(
@@ -1153,16 +1330,17 @@ add_action('edit_user_profile', 'telephone_field');
 function telephone_field($user) {
 	
 	?>
-	<table class="form-table">
-		<tr class="form-field">
-			<label for="telephone"><?php _e("Télephone"); ?></label></th>
-			<td>
-				<input type="text" name="telephone" id="telephone" value="<?php echo @get_user_meta( $user->ID , 'telephone', true ) ; ?>" class="regular-text" /><br />
-				<span class="description"><?php _e("S'il vous plait, entrez votre numéro de téléphone."); ?></span>
-			</td>
-		</tr>
-	</table>
-<?php }
+		<table class="form-table">
+			<tr class="form-field">
+				<label for="telephone"><?php _e("Télephone"); ?></label></th>
+				<td>
+					<input type="text" name="telephone" id="telephone" value="<?php echo @get_user_meta( $user->ID , 'telephone', true ) ; ?>" class="regular-text" /><br />
+					<span class="description"><?php _e("S'il vous plait, entrez votre numéro de téléphone."); ?></span>
+				</td>
+			</tr>
+		</table>
+	<?php 
+}
 
 //Save new field for user in users_meta table
 add_action('user_register', 'save_telephone_field');

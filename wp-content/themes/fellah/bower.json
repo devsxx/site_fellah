@@ -16,12 +16,13 @@
   ],
   "dependencies": {
     "bootstrap": "v4.0.0-alpha.6",
-    "font-awesome": "fontawesome#^4.7.0",
     "owl.carousel": "owl2#^0.1.0",
     "include-media": "^1.4.9",
-    "tether": "^1.4.0"
+    "tether": "^1.4.0",
+    "fontawesome": "font-awesome-5#^5.0.12"
   },
   "devDependencies": {
-    "tether": "^1.4.0"
+    "tether": "^1.4.0",
+    "font-awesome-5": "^5.0.13"
   }
 }

@@ -22,7 +22,7 @@
 
 <div class="categoris">
       <div class="sidebare_titre">
-            <i class="fa fa-folder"></i>
+            <i class="far fa-folder"></i>
             <?php _e('Catégories','fellah'); ?>
       </div>
       <div class="categoris_container">

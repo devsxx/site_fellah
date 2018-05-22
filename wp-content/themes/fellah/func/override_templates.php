@@ -33,3 +33,11 @@ function override_templates( $tpl ) {
         }
     }
 }
+
+
+// List functions attached to adverts_tpl_single_posted_by.
+add_action( 'wp_head', 'wp_filter_for_one_action' );
+function wp_filter_for_one_action() {
+  global $wp_filter;
+  echo '<!-- ', var_export( $wp_filter[ 'adverts_tpl_single_posted_by' ], true ), ' -->';
+}

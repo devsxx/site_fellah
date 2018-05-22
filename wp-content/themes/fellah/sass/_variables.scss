@@ -7,10 +7,10 @@ $text_color           : #007e1d !default;
 $main_color           : #007e1d !default;
 $second_main_color    : #e5e5e5 !default;
 
-$lighter_color        : lighten($main_text_color,90%);
+$lighter_color        : lighten($main_text_color,92%);
 $light_color          : lighten($main_text_color,86%);
-$dark_color           : darken($main_text_color,15%);
-$darker_color         : darken($main_text_color,40%);
+$dark_color           : lighten($main_text_color,40%);
+$darker_color         : lighten($main_text_color,15%);
  
 $btn-custom-color     : $second_main_color;
 $btn-custom-bg        : $text_color;
@@ -266,6 +266,7 @@ $grid-gutter-widths: (
 // Font, line-height, and color for body text, headings, and more.
 
 $font-family-sans-serif: 'Raleway', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+$second-font-family-sans-serif: 'Quicksand', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
@@ -984,7 +985,7 @@ $pre-scrollable-max-height:   340px !default;
 
 // Font awesome Variables
 
-$fa-font-path:        "./js/libs/font-awesome/fonts" !default;
+$fa-font-path:        "./js/libs/font-awesome-5/web-fonts-with-css/webfonts" !default;
 // $fa-font-size-base:   14px !default;
 // $fa-line-height-base: 1 !default;
 // $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default; // for referencing Bootstrap CDN font files directly

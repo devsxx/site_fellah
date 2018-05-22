@@ -71,6 +71,27 @@
          }
       }
    }
+   @include media("<md"){
+
+      .actu{
+         .bloc{ 
+          
+            .left_bloc{
+               grid-column: 1/9; 
+            }
+            .right_bloc{
+               grid-column: 1/9;
+               padding-top: oe_rem(15px);
+               .info{ 
+                  .titre{
+                     font-size: oe_rem(20px);  
+                  } 
+               } 
+            }
+         } 
+      } 
+   }
+
 }
 
 .sidebare_titre{
@@ -84,6 +105,7 @@
 
 .categoris_container{
    padding: oe_rem(15px) 0;
+   margin-bottom: oe_rem(15px);
    background-color: $second_main_color;
    ul{
       font-size: oe_rem(20px);
