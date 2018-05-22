@@ -23,13 +23,20 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			if (get_the_ID() == 2330) {
+				get_template_part( 'template-parts/content', 'contact' );
+			}else{
+				get_template_part( 'template-parts/content', 'page' );
+			}
 
 		endwhile; // End of the loop.
 		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+<br>
+<br>
 
 <?php
 get_sidebar();

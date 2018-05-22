@@ -1,0 +1,570 @@
+# Copyright (C) 2017 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2018-05-22 12:03+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-05-22 12:12+0100\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_html_x\n"
+"X-Poedit-Basepath: ..\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr ""
+
+#: 404.php:47
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: buddypress/members/register.php:46
+msgid "User registration is currently not allowed."
+msgstr "Les nouvelles inscriptions ne sont pas autorisées pour l’instant."
+
+#: buddypress/members/register.php:68
+msgid ""
+"Registering for this site is easy. Just fill in the fields below, and we'll "
+"get a new account set up for you in no time."
+msgstr ""
+
+#: buddypress/members/register.php:83
+msgid "Account Details"
+msgstr ""
+
+#: buddypress/members/register.php:85
+msgid "Username"
+msgstr "Nom d&rsquo;utilisateur"
+
+#: buddypress/members/register.php:85 buddypress/members/register.php:96
+#: buddypress/members/register.php:107 buddypress/members/register.php:119
+#: buddypress/members/register.php:280 buddypress/members/register.php:296
+msgid "(required)"
+msgstr ""
+
+#: buddypress/members/register.php:96
+msgid "Email Address"
+msgstr "Adresse e-mail"
+
+#: buddypress/members/register.php:107
+msgid "Choose a Password"
+msgstr ""
+
+#: buddypress/members/register.php:119
+msgid "Confirm Password"
+msgstr ""
+
+#: buddypress/members/register.php:165
+msgid "Profile Details"
+msgstr ""
+
+#: buddypress/members/register.php:190 buddypress/members/register.php:212
+#, php-format
+msgid "This field can be seen by: %s"
+msgstr ""
+
+#: buddypress/members/register.php:200
+msgid "Who can see this field?"
+msgstr ""
+
+#: buddypress/members/register.php:205
+msgid "Close"
+msgstr "Fermer"
+
+#: buddypress/members/register.php:274
+msgid "Blog Details"
+msgstr ""
+
+#: buddypress/members/register.php:276
+msgid "Yes, I'd like to create a new site"
+msgstr ""
+
+#: buddypress/members/register.php:280
+msgid "Blog URL"
+msgstr ""
+
+#: buddypress/members/register.php:296
+msgid "Site Title"
+msgstr "Titre du site"
+
+#: buddypress/members/register.php:308
+msgid ""
+"Privacy: I would like my site to appear in search engines, and in public "
+"listings around this network."
+msgstr ""
+
+#: buddypress/members/register.php:318 wpadverts/manage.php:68
+msgid "Yes"
+msgstr "Oui"
+
+#: buddypress/members/register.php:319
+msgid "No"
+msgstr ""
+
+#: buddypress/members/register.php:393
+msgid ""
+"You have successfully created your account! To begin using this site you "
+"will need to activate your account via the email we have just sent to your "
+"address."
+msgstr ""
+
+#: buddypress/members/register.php:395
+msgid ""
+"You have successfully created your account! Please log in using the username "
+"and password you have just created."
+msgstr ""
+
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: footer.php:23
+msgid "https://wordpress.org/"
+msgstr "https://wpfr.net"
+
+#: footer.php:24
+#, php-format
+msgid "All rights reserved %d"
+msgstr ""
+
+#: footer.php:27
+msgid "https://fellah.ma/"
+msgstr ""
+
+#: func/breadcrumb.php:223
+msgid "Page"
+msgstr "Page"
+
+#: func/compteur-vues.php:34
+#, php-format
+msgid ""
+"<div class=\"annonce-row\"><span class=\"name\">Vue </span><span>%1$s</"
+"span></div>"
+msgstr ""
+
+#: func/compteur-vues.php:36
+#, php-format
+msgid ""
+"<div class=\"annonce-row\"><span class=\"name\">Vues </span><span>%1$s</"
+"span></div>"
+msgstr ""
+
+#: func/custom-fields-taxonomies.php:22
+msgid "Type annonces"
+msgstr ""
+
+#: func/custom-fields-taxonomies.php:51
+msgid "localisation"
+msgstr ""
+
+#: func/search-by-category.php:156
+msgid "Localisation"
+msgstr ""
+
+#: func/search-by-category.php:157
+msgid "Type annonce"
+msgstr ""
+
+#: func/search-by-category.php:158
+msgid "Views"
+msgstr "Vues"
+
+#: functions.php:47
+msgid "Primary"
+msgstr ""
+
+#: functions.php:108
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: functions.php:110
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:142
+msgid "Sending user info, please wait..."
+msgstr ""
+
+#: functions.php:307 functions.php:330 functions.php:331
+msgid "Publish Date"
+msgstr ""
+
+#: functions.php:309 functions.php:331
+msgid "Newest First"
+msgstr ""
+
+#: functions.php:310
+msgid "Oldest First"
+msgstr ""
+
+#: functions.php:314 functions.php:770 wpadverts/single.php:92
+msgid "Price"
+msgstr "Prix"
+
+#: functions.php:316
+msgid "Cheapest First"
+msgstr ""
+
+#: functions.php:317
+msgid "Most Expensive First"
+msgstr ""
+
+#: functions.php:321
+msgid "Title"
+msgstr "Titre"
+
+#: functions.php:323
+msgid "From A to Z"
+msgstr ""
+
+#: functions.php:324
+msgid "From Z to A"
+msgstr ""
+
+#: functions.php:331 functions.php:361
+#, php-format
+msgid "Sort By: %s - %s"
+msgstr ""
+
+#: functions.php:474 functions.php:555
+msgid "Send Message"
+msgstr ""
+
+#: functions.php:517
+msgid "Your message has been sent."
+msgstr ""
+
+#: functions.php:522
+msgid "There are errors in your form."
+msgstr ""
+
+#: functions.php:562 wpadverts/single.php:98
+msgid "Phone"
+msgstr "Téléphone"
+
+#: functions.php:706
+msgid "Titre de l'annoce"
+msgstr ""
+
+#: functions.php:750
+msgid "Description"
+msgstr "La description"
+
+#: functions.php:921 functions.php:974
+msgid "Wrong username or password."
+msgstr ""
+
+#: functions.php:924 functions.php:979
+msgid "Login successful"
+msgstr ""
+
+#: functions.php:966
+msgid "Can't login."
+msgstr ""
+
+#: functions.php:983
+msgid "User already exists.  Password inherited."
+msgstr ""
+
+#: functions.php:1118
+msgid "wrong acces"
+msgstr ""
+
+#: functions.php:1119
+msgid "You are connected"
+msgstr ""
+
+#: functions.php:1335
+msgid "Télephone"
+msgstr ""
+
+#: functions.php:1338
+msgid "S'il vous plait, entrez votre numéro de téléphone."
+msgstr ""
+
+#: header.php:24
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:38
+msgid "Primary Menu"
+msgstr ""
+
+#: header.php:53
+msgid "My account"
+msgstr "Mon compte"
+
+#: header.php:59
+msgid "Contact"
+msgstr "Contact"
+
+#: header.php:65
+msgid "follow-us"
+msgstr "Suivez nous"
+
+#: inc/template-functions.php:61
+msgid "Partager"
+msgstr "Partager"
+
+#: inc/template-functions.php:63
+msgid "Partager l'événement"
+msgstr "Partager l'événement"
+
+#: inc/template-tags.php:29 inc/template-tags.php:45
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: inc/template-tags.php:62 inc/template-tags.php:69
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:65
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:72
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-tags.php:82
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:99
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: index.php:27 template-parts/single-side.php:26
+msgid "Catégories"
+msgstr "Catégories"
+
+#: index.php:29
+msgid "Parcourir toutes les catégories"
+msgstr "Parcourir toutes les catégories"
+
+#: index.php:33 index.php:72
+msgid "Lorem ipsum dolor sit."
+msgstr ""
+
+#: index.php:69
+msgid "Nouveautés"
+msgstr "Nouveautés"
+
+#: index.php:142
+msgid "Top annonces"
+msgstr "Top annonces"
+
+#: index.php:145 wpadverts/single.php:154
+msgid "Lorem ipsum dolor sit amet consecteteur."
+msgstr ""
+
+#: index.php:215
+msgid "Actualités de FALLAH"
+msgstr "Actualités de FALLAH"
+
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-advert.php:19 template-parts/content-contact.php:27
+#: template-parts/content-page.php:24 template-parts/content.php:48
+msgid "Pages:"
+msgstr "Pages:"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "rien n'a été trouvé"
+
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier poste? <a href=\"%1$s\"> Commencer ici </a>"
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, mais rien ne correspond à vos termes de recherche. Veuillez "
+"réessayer avec d'autres mots-clés."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Il semble que nous ne puissions pas trouver ce que vous cherchez. Peut-être "
+"que la recherche peut aider."
+
+#: template-parts/content.php:37
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: templates/news_agricoles.php:15
+msgid "Actualites"
+msgstr "Actualites"
+
+#: templates/news_agricoles.php:44
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: wpadverts/add-preview.php:8
+msgid "Edit Listing"
+msgstr "Modifier la liste"
+
+#: wpadverts/add-preview.php:14
+msgid "Publish Listing"
+msgstr ""
+
+#: wpadverts/add-save.php:5
+msgid ""
+"Your ad has been put into moderation, please wait for admin to approve it."
+msgstr ""
+
+#: wpadverts/add-save.php:7
+#, php-format
+msgid ""
+"Your ad has been published. You can view it here \"<a href=\"%1$s\">%2$s</a>"
+"\"."
+msgstr ""
+
+#: wpadverts/add.php:81
+msgid "Send my ad"
+msgstr "Envoyer mon annonce"
+
+#: wpadverts/categories-all.php:41
+msgid "<em>View All &raquo;</em>"
+msgstr ""
+
+#: wpadverts/categories-all.php:53 wpadverts/categories-top.php:25
+msgid "No categories found."
+msgstr "Aucune catégorie trouvée."
+
+#: wpadverts/form_search.php:82 wpadverts/list.php:92
+msgid "Advanced Search"
+msgstr ""
+
+#: wpadverts/form_search.php:84 wpadverts/list.php:94
+msgid "SEARCH"
+msgstr ""
+
+#: wpadverts/form_search.php:88 wpadverts/list.php:98
+msgid "Filter Results"
+msgstr ""
+
+#: wpadverts/list.php:118
+#, php-format
+msgid " in %s"
+msgstr ""
+
+#: wpadverts/list.php:144
+msgid "There are no ads matching your search criteria."
+msgstr ""
+
+#: wpadverts/manage-edit.php:5
+msgid "Go Back"
+msgstr ""
+
+#: wpadverts/manage-edit.php:6
+msgid "View Ad"
+msgstr "Voir l'annonce"
+
+#: wpadverts/manage-edit.php:85
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: wpadverts/manage.php:26
+msgid "Inactive — This Ad is in moderation."
+msgstr ""
+
+#: wpadverts/manage.php:30
+msgid "Inactive — This Ad expired."
+msgstr ""
+
+#: wpadverts/manage.php:43
+#, php-format
+msgid "Expires %s"
+msgstr ""
+
+#: wpadverts/manage.php:43
+msgid "Y/m/d"
+msgstr "d/m/Y"
+
+#: wpadverts/manage.php:58
+msgid "View"
+msgstr "Voir"
+
+#: wpadverts/manage.php:59
+msgid "Edit"
+msgstr "modifier"
+
+#: wpadverts/manage.php:60 wpadverts/manage.php:61
+msgid "Delete"
+msgstr "Supprimer"
+
+#: wpadverts/manage.php:66
+msgid "Are you sure?"
+msgstr "Êtes-vous sûr?"
+
+#: wpadverts/manage.php:69
+msgid "Cancel"
+msgstr "Annuler"
+
+#: wpadverts/manage.php:77
+msgid "More"
+msgstr "Plus"
+
+#: wpadverts/manage.php:93
+msgid "You do not have any Ads posted yet."
+msgstr "Vous n'avez pas encore publié d'annonces."
+
+#: wpadverts/single.php:32
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: wpadverts/single.php:106
+msgid "Region"
+msgstr "Région"
+
+#: wpadverts/single.php:116
+msgid "Name"
+msgstr "prénom"
+
+#: wpadverts/single.php:151
+msgid "Annonces similaires"
+msgstr "Annonces similaires"

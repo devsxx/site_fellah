@@ -82,7 +82,7 @@
                         </div> 
                         <div class="col-md-12">
                             <p>
-                                Merci pour votre annonce. Vous serez informé dès sa publication sur notre site.
+                                <!-- Merci pour votre annonce. Vous serez informé dès sa publication sur notre site. -->
                             </p>
                         </div>                   
                     </div>
