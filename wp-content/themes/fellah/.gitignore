@@ -4,7 +4,7 @@
 ### Bower ###
 js/libs
 bower_components
-.bowerrc
+
 .bower-cache
 .bower-registry
 .bower-tmp
