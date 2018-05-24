@@ -1,20 +1,16 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <p>
-                <a href="<?php echo esc_attr($baseurl) ?>" class="adverts-button"><?php _e("Go Back", "adverts") ?></a>
-                <a href="<?php echo esc_attr(get_post_permalink( $post_id )) ?>" class="adverts-button"><?php _e("View Ad", "adverts") ?></a>
-            </p> 
-        </div>
-    </div>
-</div>
+ 
+<!-- <p>
+    <a href="<?php echo esc_attr($baseurl) ?>" class="adverts-button"><?php _e("Go Back", "adverts") ?></a>
+    <a href="<?php echo esc_attr(get_post_permalink( $post_id )) ?>" class="adverts-button"><?php _e("View Ad", "adverts") ?></a>
+</p>  -->
+       
 <?php adverts_flash( $adverts_flash ) ?>
 <div class="pub_annonce">
-    <form action="" method="post" class="adverts-form">
+    <form action="" method="post" class="adverts-form adverts-form-update">
         <fieldset>
             
             <?php foreach($form->get_fields( array( "type" => array( "adverts_field_hidden" ) ) ) as $field): ?>
-            <?php call_user_func( adverts_field_get_renderer($field), $field) ?>
+                <?php call_user_func( adverts_field_get_renderer($field), $field) ?>
             <?php endforeach; ?>
             
             <?php foreach($form->get_fields( array( "exclude" => array( "account" ) ) ) as $field): ?>
@@ -22,14 +18,8 @@
             <div class="adverts-control-group <?php echo esc_attr( str_replace("_", "-", $field["type"] ) . " adverts-field-name-" . $field["name"] ) ?> <?php if(adverts_field_has_errors($field)): ?>adverts-field-error<?php endif; ?>">
                 
                 <?php if($field["type"] == "adverts_field_header"): ?> 
-                    <div class="adverts-field-header">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <span class="adverts-field-header-title"><?php echo esc_html($field["label"]) ?></span> 
-                                </div>
-                            </div>
-                        </div>
+                    <div class=""> 
+                        <span class="adverts-field-header-title"><?php echo esc_html($field["label"]) ?></span> 
                     </div>
                 <?php elseif($field["type"] == "adverts_field_checkbox"): ?>
                     <div class="container">
@@ -78,6 +68,7 @@
                 <?php endif; ?>
                 
             </div>
+
             <?php endforeach; ?>
             
             <div  style="border-top:2px solid silver; padding: 1em 0 1em 0">

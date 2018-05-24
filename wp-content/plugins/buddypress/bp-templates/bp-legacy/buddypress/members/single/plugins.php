@@ -10,6 +10,8 @@
  * @version 3.0.0
  */
 
+echo "jhjh";
+die();
 		/**
 		 * Fires at the start of the member plugin template.
 		 *

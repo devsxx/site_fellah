@@ -1,5 +1,32 @@
+.adverts{
+  display: block !important;  
+}
 .adverts-form{ 
+  &.adverts-form-update{
+    .adverts-control-group {
 
+      &.adverts-field-header{
+        height: oe_rem(45px);
+        margin-top: -1px !important;
+        background-color: $second_main_color;
+        border-top: 1px solid $text_color;
+        border-bottom: 1px solid $text_color;
+        @include flex(center, center, row);
+        margin: 0;
+        .adverts-field-header {
+          border: none;
+          padding: 0;
+          margin: 0;
+          .adverts-field-header-title { 
+            font-size: oe_rem(18px);
+            line-height: oe_rem(18px);
+            font-weight: 400;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
   fieldset {
     margin: 0;
     padding: 0 !important;

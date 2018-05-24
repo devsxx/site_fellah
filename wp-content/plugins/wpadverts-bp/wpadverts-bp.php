@@ -199,20 +199,20 @@ function adext_bp_tabs() {
     bp_core_new_nav_item( apply_filters( "adext_bp_core_nav_item", array(
         'name'                  => adverts_config("bp.nav_title_listings") . $published,
         'slug'                  => $main_slug,
-        'screen_function'       => 'adext_bp_screen_listings',			
+        'screen_function'       => 'adext_bp_screen_manage',			
         'position'              => 200,
-        'default_subnav_slug'   => "browse"
+        'default_subnav_slug'   => adverts_config("bp.nav_slug_manage"),
     ) ) );
 
-    bp_core_new_subnav_item( apply_filters( "adext_bp_core_subnav_item_browse", array(
-        'name'                  => adverts_config("bp.nav_title_browse"),
-        'slug'                  => "browse",
-        'parent_url'            => trailingslashit( bp_displayed_user_domain() . $main_slug ),
-        'parent_slug'           => $main_slug,
-        'screen_function'       => 'adext_bp_screen_listings',
-        'position'              => 100,
-        'user_has_access'       => true
-    ) ) );
+    // bp_core_new_subnav_item( apply_filters( "adext_bp_core_subnav_item_browse", array(
+    //     'name'                  => adverts_config("bp.nav_title_browse"),
+    //     'slug'                  => "browse",
+    //     'parent_url'            => trailingslashit( bp_displayed_user_domain() . $main_slug ),
+    //     'parent_slug'           => $main_slug,
+    //     'screen_function'       => 'adext_bp_screen_listings',
+    //     'position'              => 100,
+    //     'user_has_access'       => true
+    // ) ) );
     
     bp_core_new_subnav_item( apply_filters( "adext_bp_core_subnav_item_manage", array(
         'name'                  => adverts_config("bp.nav_title_manage"),
