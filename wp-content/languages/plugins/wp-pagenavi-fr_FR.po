@@ -2,14 +2,17 @@
 # This file is distributed under the same license as the Plugins - WP-PageNavi - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-05-21 08:40:57+0000\n"
+"PO-Revision-Date: 2018-05-24 13:02+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"X-Generator: Poedit 2.0.7\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - WP-PageNavi - Stable (latest release)\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: core.php:128 core.php:147 core.php:159
 msgid "Page %d"

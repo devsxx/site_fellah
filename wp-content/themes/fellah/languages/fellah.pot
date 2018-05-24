@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-22 12:03+0100\n"
+"POT-Creation-Date: 2018-05-24 13:08+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,99 +37,192 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: buddypress/members/register.php:46
+#: buddypress/members/register.php:53
 msgid "User registration is currently not allowed."
 msgstr ""
 
-#: buddypress/members/register.php:68
+#: buddypress/members/register.php:75
 msgid ""
 "Registering for this site is easy. Just fill in the fields below, and we'll "
 "get a new account set up for you in no time."
 msgstr ""
 
-#: buddypress/members/register.php:83
+#: buddypress/members/register.php:90
 msgid "Account Details"
 msgstr ""
 
-#: buddypress/members/register.php:85
+#: buddypress/members/register.php:92
 msgid "Username"
 msgstr ""
 
-#: buddypress/members/register.php:85 buddypress/members/register.php:96
-#: buddypress/members/register.php:107 buddypress/members/register.php:119
-#: buddypress/members/register.php:280 buddypress/members/register.php:296
+#: buddypress/members/register.php:92 buddypress/members/register.php:103
+#: buddypress/members/register.php:114 buddypress/members/register.php:126
+#: buddypress/members/register.php:285 buddypress/members/register.php:301
 msgid "(required)"
 msgstr ""
 
-#: buddypress/members/register.php:96
+#: buddypress/members/register.php:103
 msgid "Email Address"
 msgstr ""
 
-#: buddypress/members/register.php:107
+#: buddypress/members/register.php:114
 msgid "Choose a Password"
 msgstr ""
 
-#: buddypress/members/register.php:119
+#: buddypress/members/register.php:126
 msgid "Confirm Password"
 msgstr ""
 
-#: buddypress/members/register.php:165
+#: buddypress/members/register.php:172
 msgid "Profile Details"
 msgstr ""
 
-#: buddypress/members/register.php:190 buddypress/members/register.php:212
+#: buddypress/members/register.php:196 buddypress/members/register.php:218
+#: buddypress/members/single/profile/edit.php:59
+#: buddypress/members/single/profile/edit.php:78
 #, php-format
 msgid "This field can be seen by: %s"
 msgstr ""
 
-#: buddypress/members/register.php:200
+#: buddypress/members/register.php:206
+#: buddypress/members/single/profile/edit.php:68
 msgid "Who can see this field?"
 msgstr ""
 
-#: buddypress/members/register.php:205
+#: buddypress/members/register.php:211
+#: buddypress/members/single/profile/edit.php:72
 msgid "Close"
 msgstr ""
 
-#: buddypress/members/register.php:274
+#: buddypress/members/register.php:279
 msgid "Blog Details"
 msgstr ""
 
-#: buddypress/members/register.php:276
+#: buddypress/members/register.php:281
 msgid "Yes, I'd like to create a new site"
 msgstr ""
 
-#: buddypress/members/register.php:280
+#: buddypress/members/register.php:285
 msgid "Blog URL"
 msgstr ""
 
-#: buddypress/members/register.php:296
+#: buddypress/members/register.php:301
 msgid "Site Title"
 msgstr ""
 
-#: buddypress/members/register.php:308
+#: buddypress/members/register.php:312
 msgid ""
 "Privacy: I would like my site to appear in search engines, and in public "
 "listings around this network."
 msgstr ""
 
-#: buddypress/members/register.php:318 wpadverts/manage.php:68
+#: buddypress/members/register.php:322 wpadverts/manage.php:68
 msgid "Yes"
 msgstr ""
 
-#: buddypress/members/register.php:319
+#: buddypress/members/register.php:323
 msgid "No"
 msgstr ""
 
-#: buddypress/members/register.php:393
+#: buddypress/members/register.php:396
 msgid ""
 "You have successfully created your account! To begin using this site you will "
 "need to activate your account via the email we have just sent to your address."
 msgstr ""
 
-#: buddypress/members/register.php:395
+#: buddypress/members/register.php:398
 msgid ""
 "You have successfully created your account! Please log in using the username "
 "and password you have just created."
+msgstr ""
+
+#: buddypress/members/single/profile/change-avatar.php:12
+msgid "Change Profile Photo"
+msgstr ""
+
+#: buddypress/members/single/profile/change-avatar.php:25
+msgid ""
+"Your profile photo will be used on your profile and throughout the site. If "
+"there is a <a href=\"http://gravatar.com\">Gravatar</a> associated with your "
+"account email we will use that, or you can upload an image from your computer."
+msgstr ""
+
+#: buddypress/members/single/profile/change-avatar.php:32
+msgid ""
+"Click below to select a JPG, GIF or PNG format photo from your computer and "
+"then click 'Upload Image' to proceed."
+msgstr ""
+
+#: buddypress/members/single/profile/change-avatar.php:37
+msgid "Select an image"
+msgstr ""
+
+#: buddypress/members/single/profile/change-avatar.php:45
+msgid ""
+"If you'd like to delete your current profile photo but not upload a new one, "
+"please use the delete profile photo button."
+msgstr ""
+
+#: buddypress/members/single/profile/change-avatar.php:46
+msgid "Delete My Profile Photo"
+msgstr ""
+
+#: buddypress/members/single/profile/change-avatar.php:53
+msgid "Crop Your New Profile Photo"
+msgstr ""
+
+#: buddypress/members/single/profile/change-avatar.php:85
+msgid ""
+"Your profile photo will be used on your profile and throughout the site. To "
+"change your profile photo, please create an account with <a href=\"https://"
+"gravatar.com\">Gravatar</a> using the same email address as you used to "
+"register with this site."
+msgstr ""
+
+#: buddypress/members/single/profile/change-cover-image.php:12
+msgid "Change Cover Image"
+msgstr ""
+
+#: buddypress/members/single/profile/change-cover-image.php:23
+msgid "Your Cover Image will be used to customize the header of your profile."
+msgstr ""
+
+#: buddypress/members/single/profile/edit.php:27
+#, php-format
+msgid "Editing '%s' Profile Group"
+msgstr ""
+
+#: buddypress/members/single/profile/profile-wp.php:29
+msgid "My Profile"
+msgstr ""
+
+#: buddypress/members/single/profile/profile-wp.php:29
+#, php-format
+msgid "%s's Profile"
+msgstr ""
+
+#: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:116
+msgid "Name"
+msgstr ""
+
+#: buddypress/members/single/profile/profile-wp.php:45
+msgid "About Me"
+msgstr ""
+
+#: buddypress/members/single/profile/profile-wp.php:54
+msgid "Website"
+msgstr ""
+
+#: buddypress/members/single/profile/profile-wp.php:63
+msgid "Jabber"
+msgstr ""
+
+#: buddypress/members/single/profile/profile-wp.php:72
+msgid "AOL Messenger"
+msgstr ""
+
+#: buddypress/members/single/profile/profile-wp.php:81
+msgid "Yahoo Messenger"
 msgstr ""
 
 #: comments.php:35
@@ -208,43 +301,43 @@ msgstr ""
 msgid "Sending user info, please wait..."
 msgstr ""
 
-#: functions.php:307 functions.php:330 functions.php:331
+#: functions.php:305 functions.php:328 functions.php:329
 msgid "Publish Date"
 msgstr ""
 
-#: functions.php:309 functions.php:331
+#: functions.php:307 functions.php:329
 msgid "Newest First"
 msgstr ""
 
-#: functions.php:310
+#: functions.php:308
 msgid "Oldest First"
 msgstr ""
 
-#: functions.php:314 functions.php:770 wpadverts/single.php:92
+#: functions.php:312 functions.php:808 wpadverts/single.php:92
 msgid "Price"
 msgstr ""
 
-#: functions.php:316
+#: functions.php:314
 msgid "Cheapest First"
 msgstr ""
 
-#: functions.php:317
+#: functions.php:315
 msgid "Most Expensive First"
 msgstr ""
 
-#: functions.php:321
+#: functions.php:319
 msgid "Title"
 msgstr ""
 
-#: functions.php:323
+#: functions.php:321
 msgid "From A to Z"
 msgstr ""
 
-#: functions.php:324
+#: functions.php:322
 msgid "From Z to A"
 msgstr ""
 
-#: functions.php:331 functions.php:361
+#: functions.php:329 functions.php:359
 #, php-format
 msgid "Sort By: %s - %s"
 msgstr ""
@@ -265,43 +358,51 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: functions.php:706
+#: functions.php:731
 msgid "Titre de l'annoce"
 msgstr ""
 
 #: functions.php:750
+msgid "Phone *"
+msgstr ""
+
+#: functions.php:769
+msgid "E mail *"
+msgstr ""
+
+#: functions.php:788
 msgid "Description"
 msgstr ""
 
-#: functions.php:921 functions.php:974
+#: functions.php:960 functions.php:1013
 msgid "Wrong username or password."
 msgstr ""
 
-#: functions.php:924 functions.php:979
+#: functions.php:963 functions.php:1018
 msgid "Login successful"
 msgstr ""
 
-#: functions.php:966
+#: functions.php:1005
 msgid "Can't login."
 msgstr ""
 
-#: functions.php:983
+#: functions.php:1022
 msgid "User already exists.  Password inherited."
 msgstr ""
 
-#: functions.php:1118
+#: functions.php:1221
 msgid "wrong acces"
 msgstr ""
 
-#: functions.php:1119
+#: functions.php:1222
 msgid "You are connected"
 msgstr ""
 
-#: functions.php:1335
+#: functions.php:1374
 msgid "Télephone"
 msgstr ""
 
-#: functions.php:1338
+#: functions.php:1377
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
@@ -313,15 +414,15 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:53
+#: header.php:54 header.php:59
 msgid "My account"
 msgstr ""
 
-#: header.php:59
+#: header.php:66
 msgid "Contact"
 msgstr ""
 
-#: header.php:65
+#: header.php:72
 msgid "follow-us"
 msgstr ""
 
@@ -487,15 +588,15 @@ msgstr ""
 msgid "There are no ads matching your search criteria."
 msgstr ""
 
-#: wpadverts/manage-edit.php:5
+#: wpadverts/manage-edit.php:3
 msgid "Go Back"
 msgstr ""
 
-#: wpadverts/manage-edit.php:6
+#: wpadverts/manage-edit.php:4
 msgid "View Ad"
 msgstr ""
 
-#: wpadverts/manage-edit.php:85
+#: wpadverts/manage-edit.php:76
 msgid "Update"
 msgstr ""
 
@@ -551,10 +652,6 @@ msgstr ""
 
 #: wpadverts/single.php:106
 msgid "Region"
-msgstr ""
-
-#: wpadverts/single.php:116
-msgid "Name"
 msgstr ""
 
 #: wpadverts/single.php:151

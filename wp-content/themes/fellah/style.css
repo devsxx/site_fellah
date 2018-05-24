@@ -15627,6 +15627,14 @@ form textarea {
   display: none !important;
 }
 
+.adverts-form .adverts-control-group.adverts-field-text.adverts-field-name-adverts_phone label span {
+  display: none !important;
+}
+
+.adverts-form .adverts-control-group.adverts-field-text.adverts-field-name-adverts_email label span {
+  display: none !important;
+}
+
 .adverts-form .adverts-control-group.adverts-field-textarea.adverts-field-name-post_content label {
   display: none !important;
 }
@@ -15936,6 +15944,19 @@ div.adverts-flash-messages {
 
 .advert_alert.advert_success {
   color: #5cb85c;
+}
+
+.adverts-form-required {
+  display: none;
+}
+
+.message_contact_form .adverts-form input[type="text"], .message_contact_form .adverts-form input[type="password"], .message_contact_form .adverts-form input[type="email"], .message_contact_form .adverts-form input[type="url"], .message_contact_form .adverts-form input[type="date"], .message_contact_form .adverts-form input[type="month"], .message_contact_form .adverts-form input[type="time"], .message_contact_form .adverts-form input[type="datetime"], .message_contact_form .adverts-form input[type="datetime-local"], .message_contact_form .adverts-form input[type="week"], .message_contact_form .adverts-form input[type="number"], .message_contact_form .adverts-form input[type="search"], .message_contact_form .adverts-form input[type="tel"], .message_contact_form .adverts-form input[type="color"] {
+  margin: 0 0.9375rem 0 0;
+}
+
+.message_contact_form .adverts-form textarea {
+  margin: 0 !important;
+  border: 1px solid #666666;
 }
 
 #buddypress div.item-list-tabs ul li.current a,
