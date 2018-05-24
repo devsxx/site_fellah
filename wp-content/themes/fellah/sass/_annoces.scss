@@ -329,5 +329,20 @@
 
 		}
 	}
+
+	button{
+		color: #fff; 
+		border: none;
+		cursor: pointer;
+		height: oe_rem(50px);
+		margin: oe_rem(15px) 0;
+		width: 100% !important;
+		font-size: oe_rem(19px);
+		max-width: oe_rem(260px);
+		line-height: oe_rem(50px);
+		border-radius: oe_rem(2px); 
+		background-color: $main_color;
+	}
+
 }
 

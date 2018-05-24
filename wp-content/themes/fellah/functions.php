@@ -906,30 +906,30 @@ add_action( 'wp_ajax_nopriv_ajaxlogin', 'ajax_login' );
 add_action( 'wp_ajax_ajaxlogin', 'ajax_login' );
 function ajax_login(){
 
-    // First check the nonce, if it fails the function will break
-    //check_ajax_referer( 'ajax-login-nonce', 'security' );
+	// First check the nonce, if it fails the function will break
+   //check_ajax_referer( 'ajax-login-nonce', 'security' );
 	
-    // Nonce is checked, get the POST data and sign user on
-    $info = array();
-    $info['user_login'] = $_POST['username'];
-    $info['user_password'] = $_POST['password'];
+	// Nonce is checked, get the POST data and sign user on
+	$info = array();
+	$info['user_login'] = $_POST['username'];
+	$info['user_password'] = $_POST['password'];
 	$info['remember'] = true;
 	$error_code = 0;
 
-    $user_signon = wp_signon( $info, false );
-    if ( is_wp_error($user_signon) ){
+	$user_signon = wp_signon( $info, false );
+	if ( is_wp_error($user_signon) ){
 		$message = __('Wrong username or password.');
 		$etat = false;
-    } else {
+	} else {
 		$message = __('Login successful');
 		$etat = true;
-    }
+	}
 	$result =	array(
 		'etat' => $etat,
 		'message' => $message
 	);
 	echo json_encode($result);
-    die();
+	die();
 }
 
 add_action( 'wp_ajax_nopriv_ajaxsignup', 'ajax_signup' );
@@ -995,9 +995,10 @@ function ajax_signup(){
 		'message' => $message,
 		'error_code' => $error_code
 	);
-	echo json_encode($result);
 
-    die();
+	echo json_encode($result);
+	die();
+	
 }
 
 add_action( 'wp_ajax_nopriv_ajaxsouscat', 'ajaxsouscat' );
@@ -1075,20 +1076,19 @@ function adverts_field_login_or_subscribe( $field ) {
 				<div class="col-md-4"> 
 					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 						<li class="nav-item">
-								<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Me connecter</a>
+							<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Me connecter</a>
 						</li>
 						<li class="nav-item">
-								<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Créer mon compte</a>
+							<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Créer mon compte</a>
 						</li>
 					</ul>
 				</div>
-
-				
 				
 			</div>
 		</div>
 
 		<div class="tab-content" id="pills-tabContent">
+
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             
             <div class="container">
@@ -1110,78 +1110,79 @@ function adverts_field_login_or_subscribe( $field ) {
 								<input type="password" name="password" placeholder="Mot de passe" id="password">                                
 							</div>
 						</div>
-						<div class="col-md-1"> 
-							<input type="submit" name="connect" value="Ok" id="connect">
-						</div>
-
-						<div class="col-md-12"> 
-							<div class="advert_alert advert_danger">'. __("wrong acces","fellah") . '</div>
-							<div class="advert_alert advert_success">'. __("You are connected","fellah") . '</div>
-						</div>
-
+						<div class="col-md-1">  
+							<button name="connect" id="connect">Ok</button>
+						</div> 
 					</div>
 				</div>
 				
-        </div>
-		<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-			<div class="container">
+		  </div>
+		  
+			<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+				<div class="container">
 
-				<div class="row">
-				<div class="col-md-12"> 
-					<label>Créer un compte</label>
-				</div>
-					<div class="col-md-3">
-						<div class="input_container">
-							<i class="far fa-user"></i>
-							<input type="text" placeholder="Prénom" name="prenom" id="prenom">                                
+					<div class="row">
+						<div class="col-md-12"> 
+							<label>Créer un compte</label>
+						</div>
+						<div class="col-md-3">
+							<div class="input_container">
+								<i class="far fa-user"></i>
+								<input type="text" placeholder="Prénom" name="prenom" id="prenom">                                
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="input_container">
+								<i class="far fa-user"></i>
+								<input type="text" placeholder="Nom" name="nom" id="nom">                                
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="input_container">
+								<i class="fas fa-mobile-alt"></i>
+								<input type="text" placeholder="Téléphone" name="telephone" id="telephone">                                
+							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
-						<div class="input_container">
-							<i class="far fa-user"></i>
-							<input type="text" placeholder="Nom" name="nom" id="nom">                                
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="input_container">
-							<i class="fas fa-mobile-alt"></i>
-							<input type="text" placeholder="Téléphone" name="telephone" id="telephone">                                
-						</div>
-					</div>
-				</div>
 
-				<div class="row">
-					<div class="col-md-3">
-						<div class="input_container">
-							<i class="far fa-envelope"></i>
-							<input type="email" placeholder="Email" name="email" id="email">                                
+					<div class="row">
+						<div class="col-md-3">
+							<div class="input_container">
+								<i class="far fa-envelope"></i>
+								<input type="email" placeholder="Email" name="email" id="email">                                
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="input_container">
+								<i class="far fa-edit"></i>
+								<input type="password" placeholder="Mot de passe" name="mot_passe" id="mot_passe">                                
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="input_container">
+								<i class="far fa-edit"></i>
+								<input type="password" placeholder="Confirmer le mot de passe" name="confirm_mot_passe" id="confirm_mot_passe">                                
+							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
-						<div class="input_container">
-							<i class="far fa-edit"></i>
-							<input type="password" placeholder="Mot de passe" name="mot_passe" id="mot_passe">                                
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="input_container">
-							<i class="far fa-edit"></i>
-							<input type="password" placeholder="Confirmer le mot de passe" name="confirm_mot_passe" id="confirm_mot_passe">                                
-						</div>
-					</div>
-				</div>
 
-				<div class="row">
-					<div class="col-md-3">
-						<input type="submit" name="creation_compte" value="Créer mon compte" id="creation_compte">
+					<div class="row">
+						<div class="col-md-3">
+							<button name="creation_compte" id="creation_compte">Créer mon compte</button>
+						</div>
 					</div>
-				</div>
 
+				</div>
 			</div>
+
 		</div>
-		</div>
-		</div>    
-    ';
+
+	</div>
+ 
+	<div class="advert_alert advert_danger">'. __("wrong acces","fellah") . '</div>
+	<div class="advert_alert advert_success">'. __("You are connected","fellah") . '</div>
+		 
+	';
     
 	echo $htmls;
 }
@@ -1234,7 +1235,6 @@ function adverts_field_prev_next_3( $field ) {
     
 	echo $htmls;
 }
-
 
 function adverts_field_customadvertscategory( $field ) {
     

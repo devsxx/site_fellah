@@ -195,10 +195,12 @@ jQuery(document).ready(function($) {
 			//'security': $('form#login #security').val() },
             success: function(data){ 
 					if(data.etat){
-						$(".adverts-field-name-coordonnées,.adverts-field-name-connect").css("display", "none"); 
+						$(".adverts-field-name-connect .register_form").css("display", "none"); 
+						$(".advert_success").css("display", "block"); 
 					}else{
 						$(".advert_danger").css("display", "block"); 
 					}
+					console.log(data.etat);
             }
         });
         e.preventDefault();
@@ -239,10 +241,14 @@ jQuery(document).ready(function($) {
 					'mot_passe' : mot_passe,
 					'confirm_mot_passe' : confirm_mot_passe,
 				},
-				success: function(data){
-				   if(data.etat){
-					   $(".adverts-field-name-coordonnées,.adverts-field-name-connect").css("display", "none");
-				   }
+				success: function(data){ 
+					if(data.etat){
+						$(".adverts-field-name-connect .register_form").css("display", "none"); 
+						$(".advert_success").css("display", "block"); 
+					}else{
+						$(".advert_danger").css("display", "block"); 
+					}
+					console.log(data.etat);
 				}
 			});
 		}

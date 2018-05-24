@@ -5,7 +5,7 @@
  * @package BuddyPress
  * @subpackage bp-legacy
  */
-
+ 
 ?>
 
 <div id="buddypress">
@@ -26,9 +26,9 @@
 		 * If the cover image feature is enabled, use a specific header
 		 */
 		if ( bp_displayed_user_use_cover_image_header() ) :
-			bp_get_template_part( 'members/single/cover-image-header' );
+			// bp_get_template_part( 'members/single/cover-image-header' );
 		else :
-			bp_get_template_part( 'members/single/member-header' );
+			// bp_get_template_part( 'members/single/member-header' );
 		endif;
 		?>
 
@@ -36,7 +36,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-3">
 				<div id="item-nav">
 					<div class="item-list-tabs no-ajax" id="object-nav" aria-label="<?php esc_attr_e( 'Member primary navigation', 'buddypress' ); ?>" role="navigation">
 						<ul>
@@ -56,12 +56,8 @@
 					</div>
 				</div><!-- #item-nav -->
 			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
+ 
+			<div class="col-md-9">
 				
 				<div id="item-body">
 
@@ -95,8 +91,8 @@
 					elseif ( bp_is_user_profile() ) :
 						bp_get_template_part( 'members/single/profile'  );
 
-					elseif ( bp_is_user_forums() ) :
-						bp_get_template_part( 'members/single/forums'   );
+					// elseif ( bp_is_user_forums() ) :
+					// 	bp_get_template_part( 'members/single/forums'   );
 
 					elseif ( bp_is_user_notifications() ) :
 						bp_get_template_part( 'members/single/notifications' );
@@ -120,6 +116,7 @@
 				</div><!-- #item-body -->
 
 			</div>
+	 
 		</div>
 	</div>
 	

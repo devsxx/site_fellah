@@ -29,7 +29,7 @@ form {
 			cursor: pointer;
 			width: 100%;
 			font-size: oe_rem(19px);
-			max-width: oe_rem(260px);
+			max-width: oe_rem(300px);
 			height: oe_rem(40px);
 			line-height: oe_rem(40px);
 			border-radius: oe_rem(2px); 
@@ -37,6 +37,7 @@ form {
 			color: #fff; 
 			background-color: $main_color;
 			border: none;
+			padding: 0px 10px !important;
 		}
   
 	 }

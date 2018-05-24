@@ -12,7 +12,7 @@
 			@include flex(center, flex-end, row);
 			.compte{
 				@include transition(all, .25s, ease-in-out);
-				padding: oe_rem(10px);
+				padding: oe_rem(10px) 0;
 				text-align: center;
 				cursor: pointer;
 				span{

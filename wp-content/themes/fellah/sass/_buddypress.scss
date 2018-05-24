@@ -1,0 +1,61 @@
+#buddypress div.item-list-tabs ul li.current a, 
+#buddypress div.item-list-tabs ul li.selected a {
+    background-color: #eee;
+    color: #555;
+    opacity: .9;
+    font-weight: 700;
+    background: transparent;
+    color: #007e1d;
+}
+
+
+.buddypress_form{
+    form{
+        p{
+            margin: 0;
+        }
+    }
+    label{
+        margin: 0;
+    }
+}
+
+#buddypress{
+
+    #item-nav{
+        ul{
+            @include flex(stretch, stretch, column);
+            li{
+                a{
+                    @include flex(center, flex-start, row);
+                    background-color: $main_color;
+                    margin-top: oe_rem(5px);
+                    padding: oe_rem(10px) oe_rem(8px);
+                    border: oe_rem(1px) solid $main_color; 
+                    color: white;
+                    opacity: 1;
+                    span{
+                        margin-left: auto;
+                    }
+                }
+                &.current,
+                &.selected,
+                &:hover{
+                    a{
+                        background-color: transparent; 
+                        color: $main_color;
+                    }
+                }
+            }
+        }
+    }
+    #item-body{
+        ul{
+            li{
+                a{
+                    padding: oe_rem(5px) oe_rem(20px) oe_rem(5px) 0;
+                }
+            }
+        }
+    }
+}

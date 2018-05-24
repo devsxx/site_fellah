@@ -19,7 +19,7 @@
 
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php // body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'fellah' ); ?></a>
 
@@ -48,10 +48,17 @@
 						<div class="header_picto_container">
 							<div class="header_picto">
 								<div class="compte">
-									<a href="<?php the_permalink( 2330 ) ?>">
-										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" alt="Fellah">
-										<span><?php _e('My account','fellah'); ?></span>
-									</a>
+									<?php if(is_user_logged_in()){ ?>
+										<a href="<?php echo bp_loggedin_user_domain(); ?>">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" alt="Fellah">
+											<span><?php _e('My account','fellah'); ?></span>
+										</a>
+									<?php }else{ ?> 
+										<a href="<?php the_permalink( 2285 ) ?>">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" alt="Fellah">
+											<span><?php _e('My account','fellah'); ?></span>
+										</a>
+									<?php } ?>
 								</div>
 								<div class="compte">
 									<a href="<?php the_permalink( 2330 ) ?>">
