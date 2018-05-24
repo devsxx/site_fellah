@@ -237,13 +237,11 @@ require get_template_directory() . '/func/compteur-vues.php';
 require get_template_directory() . '/func/breadcrumb.php';
 
 
-if( !defined("ADVERTS_FILE") ) {
-	define( "ADVERTS_FILE", __FILE__ );
-	define( "ADVERTS_PATH", plugin_dir_path( ADVERTS_FILE ) );
-	define( "ADVERTS_URL", plugins_url() . "/" . basename(ADVERTS_PATH) );
-} 
-
-
+// if( !defined("ADVERTS_FILE") ) {
+// 	define( "ADVERTS_FILE", __FILE__ );
+// 	define( "ADVERTS_PATH", plugin_dir_path( ADVERTS_FILE ) );
+// 	define( "ADVERTS_URL", plugins_url() . "/" . basename(ADVERTS_PATH) );
+// } 
 add_shortcode('form_search', 'shortcode_adverts_form_search');
 function shortcode_adverts_form_search( $atts ) {
  
@@ -454,8 +452,8 @@ function shortcode_adverts_form_search( $atts ) {
 remove_action('adverts_tpl_single_bottom', 'adext_contact_form');
 remove_action('adverts_tpl_single_bottom', 'adverts_single_contact_information');
 
-// add_action('adverts_tpl_single_bottom', 'adext_contact_form_custom');
-function adext_contact_form_custom( $post_id ) {
+//add_action('adverts_tpl_single_bottom', '_adext_contact_form_custom');
+function _adext_contact_form_custom( $post_id ) {
 
 	include_once ADVERTS_PATH . 'includes/class-form.php';
 	include_once ADVERTS_PATH . 'includes/class-html.php';
@@ -464,6 +462,8 @@ function adext_contact_form_custom( $post_id ) {
 	$flash = array( "error" => array(), "info" => array());;
 	$email = get_post_meta( $post_id, "adverts_email", true );
 	$phone = get_post_meta( $post_id, "adverts_phone", true );
+	
+	
 	$message = null;
 	$form = new Adverts_Form( Adverts::instance()->get( "form_contact_form" ) );
 	$buttons = array(
@@ -701,23 +701,6 @@ function my_adverts_form_load( $form ) {
 		"description" => ""
 	);
 
-	$form["field"][] = array(
-			"type" => "adverts_field_text",
-			"placeholder" => __("Titre de l'annoce", "fellah"),
-			"name" => "post_title", 
-			"label" => "",
-			"meta" => array(
-			"cf_saved" => 1,
-			"cf_builtin" => 1,
-		),
-		"order" => 6,
-		"validator" => array(
-			"0" => array(
-				"name" => "is_required",
-			)
-		),
-		"cf_saved" => 1,
-	);
 
 	if(is_admin()){
 		$form["field"][] =  array(
@@ -743,6 +726,61 @@ function my_adverts_form_load( $form ) {
 	}
 	
 
+	$form["field"][] = array(
+		"type" => "adverts_field_text",
+		"placeholder" => __("Titre de l'annoce", "fellah"),
+		"name" => "post_title", 
+		"label" => "",
+		"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
+		"order" => 6,
+		"validator" => array(
+			"0" => array(
+				"name" => "is_required",
+			)
+		),
+		"cf_saved" => 1,
+	);
+
+
+	$form["field"][] = array(
+		"type" => "adverts_field_text",
+		"placeholder" => __("Phone *", "fellah"),
+		"name" => "adverts_phone", 
+		"label" => "",
+		"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
+		"order" => 7,
+		"validator" => array(
+			"0" => array(
+				"name" => "is_required",
+			)
+		),
+		"cf_saved" => 1,
+	);
+
+
+	$form["field"][] = array(
+		"type" => "adverts_field_text",
+		"placeholder" => __("E mail *", "fellah"),
+		"name" => "adverts_email", 
+		"label" => "",
+		"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
+		"order" => 8,
+		"validator" => array(
+			"0" => array(
+				"name" => "is_required",
+			)
+		),
+		"cf_saved" => 1,
+	);
 	
 	$form["field"][] =  array(
 		"type" => "adverts_field_textarea",
@@ -754,7 +792,7 @@ function my_adverts_form_load( $form ) {
 			"cf_builtin" => 1,
 		),
 
-		"order" => 7,
+		"order" => 9,
 		"validator" => array(
 			"0" => array(
 				"name" => "is_required",
@@ -773,7 +811,7 @@ function my_adverts_form_load( $form ) {
 						"cf_saved" => 1,
 						"cf_builtin" => 1,
 		),
-			"order" => 8,
+			"order" => 10,
 			"class" => "adverts-filter-money",
 			"description" => "",
 			"attr" => array(
@@ -795,7 +833,7 @@ function my_adverts_form_load( $form ) {
 			"cf_saved" => 1,
 			"cf_builtin" => 1,
 		),
-			"order" => 9,
+			"order" => 11,
 			"validator" => array(
 			"0" => array(
 				"name" => "upload_type",
@@ -841,7 +879,7 @@ function my_adverts_form_load( $form ) {
 			"max_choices" => "",
 			"options" => array(
 		),
-		"order" => 10,
+		"order" => 12,
 		"cf_saved" => 1,
 		"options_callback" => "custom_fields_localisation_taxonomies_data_source",
 	);
@@ -918,6 +956,7 @@ function ajax_login(){
 
 	$user_signon = wp_signon( $info, false );
 	if ( is_wp_error($user_signon) ){
+
 		$message = __('Wrong username or password.');
 		$etat = false;
 	} else {
@@ -1181,7 +1220,6 @@ function adverts_field_login_or_subscribe( $field ) {
  
 	<div class="advert_alert advert_danger">'. __("wrong acces","fellah") . '</div>
 	<div class="advert_alert advert_success">'. __("You are connected","fellah") . '</div>
-		 
 	';
     
 	echo $htmls;
@@ -1292,6 +1330,7 @@ adverts_form_add_fieldr("adverts_field_login_or_subscribe", array(
 	"callback_save" => "adverts_save_single",
 	"callback_bind" => "adverts_bind_single",
 ));
+
 
 
 adverts_form_add_fieldr("adverts_field_prev_next_1", array(

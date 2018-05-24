@@ -258,6 +258,8 @@ jQuery(document).ready(function($) {
 	$('.adverts-field-prev-next-3').addClass("hide_section");
  
 	$('.adverts-field-name-post_title').addClass("hide_section");
+	$('.adverts-field-name-adverts_phone ').addClass("hide_section");
+	$('.adverts-field-name-adverts_email ').addClass("hide_section");
 	$('.adverts-field-name-post_content').addClass("hide_section");
 	$('.adverts-field-name-adverts_price').addClass("hide_section");
 	$('.adverts-field-name-gallery').addClass("hide_section");
@@ -275,6 +277,8 @@ jQuery(document).ready(function($) {
 		
 		$('.adverts-field-prev-next-2').addClass("hide_section");
 		$('.adverts-field-name-post_title').addClass("hide_section");
+		$('.adverts-field-name-adverts_phone ').addClass("hide_section");
+		$('.adverts-field-name-adverts_email ').addClass("hide_section");
 		$('.adverts-field-name-post_content').addClass("hide_section");
 		$('.adverts-field-name-adverts_price').addClass("hide_section");
 		$('.adverts-field-name-gallery').addClass("hide_section");
@@ -289,6 +293,8 @@ jQuery(document).ready(function($) {
 		
 		$('.adverts-field-prev-next-2').removeClass("hide_section"); 
 		$('.adverts-field-name-post_title').removeClass("hide_section");
+		$('.adverts-field-name-adverts_phone ').removeClass("hide_section");
+		$('.adverts-field-name-adverts_email ').removeClass("hide_section");
 		$('.adverts-field-name-post_content').removeClass("hide_section");
 		$('.adverts-field-name-adverts_price').removeClass("hide_section");
 		$('.adverts-field-name-gallery').removeClass("hide_section");
@@ -303,6 +309,8 @@ jQuery(document).ready(function($) {
 		
 		$('.adverts-field-prev-next-2').removeClass("hide_section"); 
 		$('.adverts-field-name-post_title').removeClass("hide_section");
+		$('.adverts-field-name-adverts_phone ').removeClass("hide_section");
+		$('.adverts-field-name-adverts_email ').removeClass("hide_section");
 		$('.adverts-field-name-post_content').removeClass("hide_section");
 		$('.adverts-field-name-adverts_price').removeClass("hide_section");
 		$('.adverts-field-name-gallery').removeClass("hide_section");
@@ -314,6 +322,8 @@ jQuery(document).ready(function($) {
 		
 		$('.adverts-field-prev-next-2').addClass("hide_section"); 
 		$('.adverts-field-name-post_title').addClass("hide_section");
+		$('.adverts-field-name-adverts_phone ').addClass("hide_section");
+		$('.adverts-field-name-adverts_email ').addClass("hide_section");
 		$('.adverts-field-name-post_content').addClass("hide_section");
 		$('.adverts-field-name-adverts_price').addClass("hide_section");
 		$('.adverts-field-name-gallery').addClass("hide_section");

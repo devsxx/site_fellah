@@ -1,7 +1,8 @@
 .adverts{
   display: block !important;  
 }
-.adverts-form{ 
+.adverts-form{
+
   &.adverts-form-update{
     .adverts-control-group {
 
@@ -27,11 +28,13 @@
       }
     }
   }
+
   fieldset {
     margin: 0;
     padding: 0 !important;
     border: 0;
   }
+
   .adverts-control-group {
 
     &.adverts-field-header{
@@ -57,6 +60,20 @@
 
     &.adverts-field-text{
       &.adverts-field-name-post_title{
+        label{
+          span{
+            display: none !important;            
+          }
+        }
+      }
+      &.adverts-field-name-adverts_phone {
+        label{
+          span{
+            display: none !important;            
+          }
+        }
+      }
+      &.adverts-field-name-adverts_email {
         label{
           span{
             display: none !important;            
@@ -90,17 +107,16 @@
 
   } 
 
-   &.adverts-form-aligned {
-      .adverts-control-group {
-         & > div {
-            width: 100% !important; 
-            float: none !important;
-            padding: initial !important;
-         }
-      }
-   }
- 
-	
+  &.adverts-form-aligned {
+    .adverts-control-group {
+        & > div {
+          width: 100% !important; 
+          float: none !important;
+          padding: initial !important;
+        }
+    }
+  }
+ 	
   .wp-editor-wrap{
     padding: 0 !important;
   }
@@ -337,8 +353,6 @@
   
 }
 
-
-
 div.adverts-flash-messages {
   clear: both;
   overflow: hidden;
@@ -360,5 +374,39 @@ div.adverts-flash-messages {
   }
   &.advert_success{
     color: $brand-success;
+  }
+}
+
+.adverts-form-required{
+  display: none;
+}
+
+.message_contact_form{
+  .adverts-form{
+    input{
+
+      &[type="text"], 
+      &[type="password"], 
+      &[type="email"], 
+      &[type="url"], 
+      &[type="date"], 
+      &[type="month"], 
+      &[type="time"], 
+      &[type="datetime"], 
+      &[type="datetime-local"], 
+      &[type="week"], 
+      &[type="number"], 
+      &[type="search"], 
+      &[type="tel"], 
+      &[type="color"]{  
+        margin: 0 oe_rem(15px) 0 0;
+      }
+   
+    }
+    
+    textarea{ 
+      margin: 0 !important;
+      border: 1px solid $dark_color;
+    }
   }
 }
