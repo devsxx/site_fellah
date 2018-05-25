@@ -4,6 +4,10 @@
 ### Bower ###
 js/libs
 bower_components
+<<<<<<< HEAD
+
+=======
+>>>>>>> 00e61ada8ef52672ec774307671f572fd99c0187
 .bower-cache
 .bower-registry
 .bower-tmp
