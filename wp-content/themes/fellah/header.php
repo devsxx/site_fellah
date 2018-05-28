@@ -61,7 +61,7 @@
 									<?php } ?>
 								</div>
 								<div class="compte">
-									<a href="<?php the_permalink( 2330 ) ?>">
+									<a href="<?php the_permalink( 2362 ) ?>">
 										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact.png" alt="Fellah">
 										<span><?php _e('Contact','fellah'); ?></span>
 									</a>

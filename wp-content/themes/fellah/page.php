@@ -23,7 +23,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			if (get_the_ID() == 2330) {
+			if (get_the_ID() == 2362) {
 				get_template_part( 'template-parts/content', 'contact' );
 			}else{
 				get_template_part( 'template-parts/content', 'page' );
