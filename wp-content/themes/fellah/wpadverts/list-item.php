@@ -14,18 +14,20 @@
                 <div class="date">
                     <i class="far fa-calendar-plus"></i>
                     <?php echo get_the_date('j.m.Y'); ?>
-                </div>
+                </div> 
+
                 <div class="lieu">
-                    <?php $localisation = get_post_meta( get_the_ID(), "localisation", true ) ?>
-                    <?php if( ! empty( $localisation ) ): ?>
+                    <?php if(!empty(get_the_terms( get_the_ID(), 'localisation' ))):
+                    $advert_localisation = get_the_terms( get_the_ID(), 'localisation' ); ?> 
                         <i class="fas fa-map-pin"></i>
-                        <span><?php echo esc_html( $localisation ) ?></span>
-                    <?php endif; ?>
+                        <span><?php echo $advert_localisation[0]->name; ?> </span>
+                    <?php endif; ?> 
                     <?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>
-                <?php if( $price ): ?>
-                <div class=""><?php // echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
-                <?php endif; ?>
+                    <?php if( $price ): ?>
+                        <div class=""><?php // echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
+                    <?php endif; ?>
                 </div>
+                                            
             </div>
             <div class="titre"> 
                 <?php the_title() ?> 

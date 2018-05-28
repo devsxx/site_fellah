@@ -348,13 +348,17 @@ blockquote {
 }
 
 section{
-	padding: oe_rem(45px) 0;
+	padding: oe_rem(30px) 0;
 	.section_title{
 		@include flex(center, space-between, row);
 		font-size: oe_rem(29px);
 		font-weight: 500;
 		.toutes_cats{
 			font-size: oe_rem(20px);
+			color: $main_text_color;
+			&:hover{
+				color: $main_color;
+			}
 		}
 	}
 	.section_sousTitle{
@@ -414,7 +418,7 @@ section{
 	font-size: oe_rem(16px);
 	font-weight: 300;
 	color: $main_text_color;
-	padding: oe_rem(20px) 0;
+	padding: oe_rem(30px) 0;
 	.separator {	
 		padding: 0 oe_rem(6px);
 	}
@@ -428,4 +432,27 @@ section{
 
 .owl-carousel {
 	padding: 0 oe_rem(15px);
+}
+
+
+
+.GoToHeader{
+	height: oe_rem(43px);
+	width: oe_rem(43px); 
+	background-image: url('./img/icons/GoToHeader.png');
+	background-size: contain;
+	@include position(fixed, initial, oe_rem(100px), oe_rem(100px), initial); 
+	opacity: 0;
+	visibility: hidden; 
+	z-index: 99999999;
+	transition: all 0.5s ease-in-out;
+	&.show {
+		visibility:visible;
+		cursor:pointer;
+		opacity: 1.0;
+	} 
+	@include media("<xl"){
+		display: none;
+	} 
+    
 }

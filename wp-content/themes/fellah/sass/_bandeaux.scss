@@ -1,16 +1,17 @@
 .header_bandeau{
 	height: oe_rem(275px);
 	@include flex(center, center, row);
-	background-color: $lighter_color;
-	margin-bottom: oe_rem(80px);
+	background-color: $lighter_color; 
+	margin-bottom: oe_rem(40px);
 	padding: oe_rem(25px) 0;
 	&.header_bandeau_home{
 		background: url(./img/bandeau.jpg) no-repeat 50%;
 		background-size: cover;
+		margin-bottom: oe_rem(0px);
 	}
 	.titre{
 		color: #fff;
-		font-weight: 600;
+		font-weight: 500;
 		font-size: oe_rem(38px);
 		text-transform: uppercase;
 		margin-bottom: oe_rem(65px);

@@ -50,25 +50,29 @@
 								<div class="compte">
 									<?php if(is_user_logged_in()){ ?>
 										<a href="<?php echo bp_loggedin_user_domain(); ?>">
-											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" alt="Fellah">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" class="first" alt="Fellah">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte_hover.png" class="second" alt="Fellah">
 											<span><?php _e('My account','fellah'); ?></span>
 										</a>
 									<?php }else{ ?> 
 										<a href="<?php the_permalink( 2285 ) ?>">
-											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" alt="Fellah">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" class="first" alt="Fellah">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte_hover.png" class="second" alt="Fellah">
 											<span><?php _e('My account','fellah'); ?></span>
 										</a>
 									<?php } ?>
 								</div>
 								<div class="compte">
-									<a href="<?php the_permalink( 2330 ) ?>">
-										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact.png" alt="Fellah">
+									<a href="<?php the_permalink( 2362 ) ?>">
+										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact.png" class="first" alt="Fellah">
+										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact_hover.png" class="second" alt="Fellah">
 										<span><?php _e('Contact','fellah'); ?></span>
 									</a>
 								</div>
 								<div class="compte">
-									<a href="#">
-										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us.png" alt="Fellah">
+									<a href="https://www.facebook.com/FellahAnnonces/" target="_blank">
+										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us.png" class="first" alt="Fellah">
+										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us_hover.png" class="second" alt="Fellah">
 										<span><?php _e('follow-us','fellah'); ?></span>
 									</a>
 								</div> 
@@ -78,7 +82,7 @@
 				</div>
 			</div>
 		</header><!-- #masthead -->
-		<?php if (is_home()) : ?> 
+		<?php if (is_home() || is_page( 2264 ) || is_404()) : ?> 
 			<?php echo do_shortcode( "[form_search redirect_to='4']" );  ?> 
 		<?php endif; ?>
 

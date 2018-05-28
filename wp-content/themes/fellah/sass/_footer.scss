@@ -21,6 +21,10 @@
 				color: $text_color;
 				text-decoration: none; 
 			}
+			&.uppercase{
+				text-transform: uppercase;
+				font-weight: 400;
+			}
 		}
 		
 		span{
@@ -28,7 +32,6 @@
 			margin: 0 oe_rem(4px);
 			font-size: oe_rem(14px);
 		}
-
 		@include media("<md"){
 			@include flex(center, center, column);
 			padding: 4px;
@@ -51,4 +54,9 @@
 
 	}
 
+	.facebook{
+		display: block;
+		float: right;
+		line-height: oe_rem(65px);
+	}
 }

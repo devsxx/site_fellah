@@ -13357,7 +13357,7 @@ blockquote.hide p {
 }
 
 section {
-  padding: 2.8125rem 0;
+  padding: 1.875rem 0;
 }
 
 section .section_title {
@@ -13380,6 +13380,11 @@ section .section_title {
 
 section .section_title .toutes_cats {
   font-size: 1.25rem;
+  color: #000;
+}
+
+section .section_title .toutes_cats:hover {
+  color: #007e1d;
 }
 
 section .section_sousTitle {
@@ -13483,7 +13488,7 @@ section .catgories .categorie:hover .img_zoom {
   font-size: 1rem;
   font-weight: 300;
   color: #000;
-  padding: 1.25rem 0;
+  padding: 1.875rem 0;
 }
 
 .breadcrumbs .separator {
@@ -13500,6 +13505,34 @@ section .catgories .categorie:hover .img_zoom {
 
 .owl-carousel {
   padding: 0 0.9375rem;
+}
+
+.GoToHeader {
+  height: 2.6875rem;
+  width: 2.6875rem;
+  background-image: url("./img/icons/GoToHeader.png");
+  background-size: contain;
+  position: fixed;
+  top: initial;
+  right: 6.25rem;
+  bottom: 6.25rem;
+  left: initial;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99999999;
+  transition: all 0.5s ease-in-out;
+}
+
+.GoToHeader.show {
+  visibility: visible;
+  cursor: pointer;
+  opacity: 1.0;
+}
+
+@media (max-width: 1199px) {
+  .GoToHeader {
+    display: none;
+  }
 }
 
 form input[type="text"], form input[type="password"], form input[type="email"], form input[type="url"], form input[type="date"], form input[type="month"], form input[type="time"], form input[type="datetime"], form input[type="datetime-local"], form input[type="week"], form input[type="number"], form input[type="search"], form input[type="tel"], form input[type="color"] {
@@ -13656,18 +13689,19 @@ form textarea {
   -ms-flex-direction: row;
   flex-direction: row;
   background-color: #ebebeb;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
   padding: 1.5625rem 0;
 }
 
 .header_bandeau.header_bandeau_home {
   background: url(./img/bandeau.jpg) no-repeat 50%;
   background-size: cover;
+  margin-bottom: 0;
 }
 
 .header_bandeau .titre {
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 2.375rem;
   text-transform: uppercase;
   margin-bottom: 4.0625rem;
@@ -13940,24 +13974,60 @@ form textarea {
 
 .site-header .header_picto_container .header_picto .compte {
   transition: all 0.25s ease-in-out;
+  position: relative;
   padding: 0.625rem 0;
   text-align: center;
   cursor: pointer;
+  height: 2.875rem;
+  width: 5.3125rem;
 }
 
-.site-header .header_picto_container .header_picto .compte span {
+.site-header .header_picto_container .header_picto .compte a img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.site-header .header_picto_container .header_picto .compte a img.first {
+  opacity: 1;
+}
+
+.site-header .header_picto_container .header_picto .compte a img.second {
+  opacity: 0;
+}
+
+.site-header .header_picto_container .header_picto .compte a span {
   opacity: 0;
   font-size: 0.875rem;
   font-weight: 400;
   display: block;
-  padding-top: 0.625rem;
+  padding-top: 1.25rem;
 }
 
-.site-header .header_picto_container .header_picto .compte:hover {
+.site-header .header_picto_container .header_picto .compte a:hover {
   color: #007e1d;
 }
 
-.site-header .header_picto_container .header_picto .compte:hover span {
+.site-header .header_picto_container .header_picto .compte a:hover img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.site-header .header_picto_container .header_picto .compte a:hover img.first {
+  opacity: 0;
+}
+
+.site-header .header_picto_container .header_picto .compte a:hover img.second {
+  opacity: 1;
+}
+
+.site-header .header_picto_container .header_picto .compte a:hover span {
   opacity: 1;
 }
 
@@ -14112,6 +14182,23 @@ form textarea {
   flex-direction: row;
   padding: 0 0.9375rem;
   margin: 0;
+}
+
+.main-navigation ul li {
+  position: relative;
+}
+
+.main-navigation ul li.free:after {
+  content: "";
+  width: 2.1875rem;
+  height: 0.75rem;
+  background-size: contain;
+  background-image: url(./img/icons/free.png);
+  position: absolute;
+  top: -0.9375rem;
+  right: 0;
+  bottom: 0;
+  left: initial;
 }
 
 .main-navigation ul li a {
@@ -16066,6 +16153,11 @@ div.adverts-flash-messages {
   text-decoration: none;
 }
 
+.site-footer .site-info a.uppercase {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 .site-footer .site-info span {
   color: #000;
   margin: 0 0.25rem;
@@ -16101,4 +16193,10 @@ div.adverts-flash-messages {
     border: none;
     margin: auto;
   }
+}
+
+.site-footer .facebook {
+  display: block;
+  float: right;
+  line-height: 4.0625rem;
 }

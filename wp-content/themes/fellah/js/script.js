@@ -60,6 +60,22 @@ jQuery(document).ready(function($) {
 		$('.suite').slideToggle();
 	});
 
+
+
+	$(document).on( 'scroll', function(){
+		if ($(window).scrollTop() > 100) {
+			 $('.GoToHeader').addClass('show');
+		} else {
+			 $('.GoToHeader').removeClass('show');
+		}
+  });
+	 
+  $('.GoToHeader').click(function(){
+		$('html').animate({scrollTop:0}, 'slow');
+		return false;
+  }); 
+	 
+
 	$('#annoces_slider').owlCarousel({
 		loop:true,
 		margin: 30,

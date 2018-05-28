@@ -81,7 +81,7 @@
                             <?php if( !empty( $fields_hidden ) ): ?>
                             <a href="#" class="adverts-form-filters adverts-button-small"><span><?php _e("Advanced Search", "adverts") ?> <span class="adverts-advanced-search-icon adverts-icon-down-open"></a>
                             <?php endif; ?>
-                            <a href="#" class="adverts-form-submit adverts-button-small"><?php _e("SEARCH", "adverts") ?> <span class="adverts-icon-search"><span></a>
+                            <a href="#" class="adverts-form-submit adverts-button-small"><?php _e("Search", "adverts") ?> <span class="adverts-icon-search"><span></a>
                         </div>
 
                         <div class="adverts-options-fallback adverts-no-js">

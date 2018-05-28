@@ -10,9 +10,14 @@ get_header();
             <div class="container">
                   <div class="row">
                   
+                        <div class="col-md-12">
+                              <!-- start breadcrumbs -->
+                              <?php the_breadcrumb(); ?>
+                              <!-- end breadcrumbs -->
+                        </div>
                         <div class="col-md-8">
                               <div class="page_blog">
-                                    <div class="page_titre"><?php _e('Actualites', 'fellah'); ?></div>
+                                    <div class="page_titre"><?php _e('Actualités', 'fellah'); ?></div>
                                     <?php
                                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; 
                                     $args = array( 
