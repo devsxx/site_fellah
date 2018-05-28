@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-24 13:08+0100\n"
+"POT-Creation-Date: 2018-05-28 14:13+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,28 +13,14 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: Poedit 2.0.7\n"
-"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_html_x\n"
+"X-Poedit-KeywordsList: __;_e;_n;_ex;_x;esc_html;esc_html__;esc_html_e;"
+"esc_html_x\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#: 404.php:18
+#: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-
-#: 404.php:22
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-
-#: 404.php:31
-msgid "Most Used Categories"
-msgstr ""
-
-#: 404.php:47
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #: buddypress/members/register.php:53
@@ -82,6 +68,11 @@ msgstr ""
 #: buddypress/members/single/profile/edit.php:78
 #, php-format
 msgid "This field can be seen by: %s"
+msgstr ""
+
+#: buddypress/members/register.php:201
+#: buddypress/members/single/profile/edit.php:64
+msgid "Change"
 msgstr ""
 
 #: buddypress/members/register.php:206
@@ -414,15 +405,15 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:54 header.php:59
+#: header.php:55 header.php:61
 msgid "My account"
 msgstr ""
 
-#: header.php:66
+#: header.php:69
 msgid "Contact"
 msgstr ""
 
-#: header.php:72
+#: header.php:76
 msgid "follow-us"
 msgstr ""
 
@@ -471,24 +462,24 @@ msgstr ""
 msgid "Parcourir toutes les catégories"
 msgstr ""
 
-#: index.php:33 index.php:72
+#: index.php:34 index.php:73
 msgid "Lorem ipsum dolor sit."
 msgstr ""
 
-#: index.php:69
+#: index.php:70
 msgid "Nouveautés"
 msgstr ""
 
-#: index.php:142
+#: index.php:143
 msgid "Top annonces"
 msgstr ""
 
-#: index.php:145 wpadverts/single.php:154
+#: index.php:146 wpadverts/single.php:154
 msgid "Lorem ipsum dolor sit amet consecteteur."
 msgstr ""
 
-#: index.php:215
-msgid "Actualités de FALLAH"
+#: index.php:216
+msgid "Actualités de FELLAH"
 msgstr ""
 
 #: search.php:22
@@ -527,19 +518,19 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: templates/news_agricoles.php:15
-msgid "Actualites"
+#: templates/news_agricoles.php:20
+msgid "Actualités"
 msgstr ""
 
-#: templates/news_agricoles.php:44
+#: templates/news_agricoles.php:49
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: wpadverts/add-preview.php:8
+#: wpadverts/add-preview.php:11
 msgid "Edit Listing"
 msgstr ""
 
-#: wpadverts/add-preview.php:14
+#: wpadverts/add-preview.php:17
 msgid "Publish Listing"
 msgstr ""
 
@@ -571,12 +562,16 @@ msgstr ""
 msgid "Advanced Search"
 msgstr ""
 
-#: wpadverts/form_search.php:84 wpadverts/list.php:94
-msgid "SEARCH"
+#: wpadverts/form_search.php:84
+msgid "Search"
 msgstr ""
 
 #: wpadverts/form_search.php:88 wpadverts/list.php:98
 msgid "Filter Results"
+msgstr ""
+
+#: wpadverts/list.php:94
+msgid "SEARCH"
 msgstr ""
 
 #: wpadverts/list.php:118

@@ -27,6 +27,7 @@ get_header();
 								<div class="div"><?php _e('Catégories','fellah') ?></div>
 								<a href="<?php the_permalink( 56 ) ?>" class="toutes_cats">
 									<?php _e('Parcourir toutes les catégories', 'fellah'); ?>
+									<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/arrow-right.png" alt="">
 								</a>
 							</div>
 							<div class="section_sousTitle">
@@ -112,9 +113,9 @@ get_header();
                                        <span><?php echo $advert_localisation[0]->name; ?> </span>
                                     <?php endif; ?> 
 												<?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>
-											<?php if( $price ): ?>
-											<div class=""><?php // echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
-											<?php endif; ?>
+												<?php if( $price ): ?>
+													<div class=""><?php // echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
+												<?php endif; ?>
 											</div>
 										</div>
 										<div class="titre"> 
@@ -212,7 +213,7 @@ get_header();
 					<div class="row">
 						<div class="col-md-12">
 							<div class="section_title">
-								<?php _e('Actualités de FALLAH', 'fellah'); ?>
+								<?php _e('Actualités de FELLAH', 'fellah'); ?>
 								<div class="toutes_cats"></div>
 							</div>
 							<div class="section_sousTitle"></div>
@@ -237,7 +238,8 @@ get_header();
 														<?php the_title( ); ?>
 													</div>
 													<div class="date">
-														<?php echo get_the_date( ); ?>
+														<i class="far fa-calendar-plus"></i>
+														<?php echo get_the_date('j.m.Y'); ?>
 													</div>
 												</div>
 											</div>
