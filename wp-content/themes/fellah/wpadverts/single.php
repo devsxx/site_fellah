@@ -45,10 +45,10 @@
                             $shareURL = urlencode(get_permalink()); 
                             $shareTitle = str_replace( ' ', '%20', get_the_title());
                         ?>
-                        <a class="btn btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u='.$shareURL" target="_blank" data-network="facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a class="btn btn-twitter" href="https://twitter.com/intent/tweet?text='.$shareTitle.'&amp;url='.$shareURL.'&amp;via=share" target="_blank" data-network="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        <a class="btn btn-googleplus" href="https://plus.google.com/share?url='.$shareURL" target="_blank" data-network="google"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a>
-                        <a class="btn btn-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url='.$shareURL.'&amp;title='.$shareTitle" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a> 
+                        <a class="btn btn-facebook"   href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $shareURL ?>" target="_blank" data-network="facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a class="btn btn-twitter"    href="https://twitter.com/intent/tweet?text=<?php echo $shareTitle?>&amp;url=<?php echo $shareURL ?>&amp;via=share" target="_blank" data-network="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a class="btn btn-googleplus" href="https://plus.google.com/share?url=<?php echo $shareURL ?>" target="_blank" data-network="google"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a>
+                        <a class="btn btn-linkedin"   href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $shareURL ?>&amp;title=<?php echo $shareTitle?>" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a> 
                     </div>
 
                 </div>

@@ -1,5 +1,6 @@
 .header_bandeau_content{ 
 	height: oe_rem(275px); 
+	margin-bottom: oe_rem(30px);
 	&.fixed{    
 		height: oe_rem(375px);
 		.header_bandeau{
@@ -17,7 +18,6 @@
 		height: oe_rem(275px);
 		@include flex(center, center, row);
 		background-color: $lighter_color; 
-		margin-bottom: oe_rem(40px);
 		padding: oe_rem(25px) 0;
 		
 		&.header_bandeau_home{

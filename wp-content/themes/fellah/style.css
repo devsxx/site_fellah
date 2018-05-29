@@ -13205,7 +13205,7 @@ blockquote.hide p {
 }
 
 .page_titre {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.8125rem;
   padding-bottom: 2.5rem;
 }
@@ -13288,7 +13288,9 @@ blockquote.hide p {
 }
 
 .wp-pagenavi {
-  font-size: 1.375rem;
+  font-family: 'Roboto';
+  font-size: 1.625rem;
+  font-weight: 300;
   margin: 1.25rem 0;
   height: 2.5rem;
 }
@@ -13312,9 +13314,14 @@ blockquote.hide p {
   border: none;
 }
 
+.wp-pagenavi span.current {
+  font-weight: 300;
+}
+
 .wp-pagenavi .current {
   border: none;
   color: #007e1d;
+  font-weight: 300;
 }
 
 .wp-pagenavi .previouspostslink,
@@ -13679,6 +13686,7 @@ form textarea {
 
 .header_bandeau_content {
   height: 17.1875rem;
+  margin-bottom: 1.875rem;
 }
 
 .header_bandeau_content.fixed {
@@ -13717,7 +13725,6 @@ form textarea {
   -ms-flex-direction: row;
   flex-direction: row;
   background-color: #ebebeb;
-  margin-bottom: 2.5rem;
   padding: 1.5625rem 0;
 }
 
@@ -15650,7 +15657,6 @@ form textarea {
 
 .page_blog .actu .bloc .right_bloc .info .titre {
   font-size: 1.4375rem;
-  font-weight: 100;
 }
 
 .page_blog .actu .bloc .right_bloc .info .titre a {
@@ -15664,7 +15670,7 @@ form textarea {
 
 .page_blog .actu .bloc .right_bloc .info .cats {
   font-size: 0.875rem;
-  font-weight: 300;
+  font-weight: 500;
   padding: 0.375rem 0;
 }
 
@@ -15729,7 +15735,7 @@ form textarea {
 
 .sidebare_titre {
   font-size: 1.8125rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 3.75rem 0 2.5rem;
 }
 

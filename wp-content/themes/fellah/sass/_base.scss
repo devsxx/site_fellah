@@ -209,7 +209,7 @@ blockquote {
 }
 
 .page_titre{
-	font-weight: 400;
+	font-weight: 500;
 	font-size: oe_rem(29px);
 	padding-bottom: oe_rem(40px);
 }
@@ -298,7 +298,9 @@ blockquote {
 }
 
 .wp-pagenavi{
-	font-size: oe_rem(22px);
+	font-family: 'Roboto';
+	font-size: oe_rem(26px);
+	font-weight: 300;
 	margin: oe_rem(20px) 0; 
 	height: oe_rem(40px);
 	.first,
@@ -306,7 +308,7 @@ blockquote {
 	.pages{
 		display: none;
 	}
-	a{
+	a{ 
 		color: $main_text_color; 
 		border: none;
 		&:hover{
@@ -315,10 +317,14 @@ blockquote {
 	}
 	span{
 		border: none;
+		&.current {
+			font-weight: 300;
+	  }
 	}
 	.current{
 		border: none;
 		color: $main_color; 
+		font-weight: 300;
 	}
 	.previouspostslink,
 	.nextpostslink{
