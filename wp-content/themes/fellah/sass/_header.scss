@@ -62,6 +62,7 @@
 		z-index: 999;
 		height: oe_rem(80px);
 		background-color: #fff;
+		@include oe_box-shadow-dark;
 		@include position(fixed, 0, 0, initial, 0);
 		.site-branding{
 			height: oe_rem(80px); 
