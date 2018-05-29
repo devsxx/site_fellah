@@ -12992,6 +12992,12 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 /* =WordPress Core
 -------------------------------------------------------------- */
+h1.entry-title {
+  text-align: center;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
 ul {
   text-align: initial;
 }
