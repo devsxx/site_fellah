@@ -5,12 +5,12 @@
 		height: oe_rem(375px);
 		.header_bandeau{
 			z-index: 999;
-			height: oe_rem(190px);
+			height: oe_rem(150px);
 			@include oe_box-shadow-dark;
 			@include position(fixed, oe_rem(80px), 0, initial, 0);
 			.titre{ 
-				font-size: oe_rem(18px); 
-				margin-bottom: oe_rem(10px);
+				font-size: oe_rem(0px); 
+				margin-bottom: oe_rem(0);
 			} 
 		}
 	}
@@ -19,6 +19,7 @@
 		@include flex(center, center, row);
 		background-color: $lighter_color; 
 		padding: oe_rem(25px) 0;
+		@include transition(height , .2s, ease-in-out);
 		
 		&.header_bandeau_home{
 			background: url(./img/bandeau.jpg) no-repeat 50%;
@@ -26,6 +27,7 @@
 			margin-bottom: oe_rem(0px);
 		}
 		.titre{
+			@include transition(all , .15s, ease-in-out);
 			color: #fff;
 			font-weight: 500;
 			font-size: oe_rem(38px);
