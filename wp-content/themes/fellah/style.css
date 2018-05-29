@@ -13416,6 +13416,8 @@ blockquote.hide p {
   color: #fff;
   font-weight: 500;
   z-index: 1;
+  text-align: center;
+  padding: 0.9375rem;
 }
 
 .catgories .categorie .hover {

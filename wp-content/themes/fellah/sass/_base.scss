@@ -375,6 +375,8 @@ blockquote {
 			color: #fff;
 			font-weight: 500;
 			z-index: 1;
+			text-align: center;
+    padding: oe_rem(15px);
 		}
 		.hover{
 			@include position(absolute, 0, 0, 0, 0);
