@@ -351,11 +351,12 @@ blockquote {
 }
 
 .posts-navigation{
+	padding-top: oe_rem(40px);
 	.nav-links{	
 		font-size: oe_rem(18px);
-		@include flex(center,space-between,row-reverse);
+		@include flex(center, space-between, row);
 		.nav-next {
-			margin-right: auto;
+			margin-left: auto;
 		}
 	}
 }

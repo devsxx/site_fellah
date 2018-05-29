@@ -136,6 +136,52 @@
     </div>
 </div>
 
+
+
+
+
+<?php
+$next_post = get_next_post();
+$prev_post = get_previous_post();
+
+if (empty($next_post)) {
+	$args = array( 'posts_per_page' => 1, 'post_type' => 'post', 'order' => 'ASC');
+	$first = new WP_Query($args);
+	if($first->have_posts()) $next_post = $first->post;
+}
+
+if (empty($prev_post)) {
+	$args_2 = array( 'posts_per_page' => 1, 'post_type' => 'post', 'order' => 'DESC');
+    $last = new WP_Query($args_2);
+    if($last->have_posts())  $prev_post = $last->post;
+}
+    
+if (!empty( $next_post ) || !empty( $prev_post )): ?>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+           <div class="posts-navigation">
+               <div class="nav-links">
+                    <a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>" class="nav-prev">
+                        <i class="fas fa-angle-left"></i>
+                        <?php echo esc_attr( $prev_post->post_title ); ?>
+                    </a> 
+                    <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" class="nav-next">
+                        <?php echo esc_attr( $next_post->post_title ); ?>
+                        <i class="fas fa-angle-right"></i>
+                    </a> 
+                </div>
+           </div>
+
+        </div>
+    </div>
+</div>
+
+ 
+<?php endif; ?>
+
 <?php 
     wp_reset_query();
     next_posts_link( 'Older Entries' );

@@ -13348,6 +13348,10 @@ blockquote.hide p {
   background-image: url("./img/icons/arrow-right.png");
 }
 
+.posts-navigation {
+  padding-top: 2.5rem;
+}
+
 .posts-navigation .nav-links {
   font-size: 1.125rem;
   display: -ms-flexbox;
@@ -13360,13 +13364,13 @@ blockquote.hide p {
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
-  -moz-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .posts-navigation .nav-links .nav-next {
-  margin-right: auto;
+  margin-left: auto;
 }
 
 .catgories .categorie {
