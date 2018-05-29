@@ -4,7 +4,7 @@
 	.site-branding{
 		height: oe_rem(150px);
 		@include flex(center, flex-end, row);  
-	}
+	} 
 	.header_picto_container{
 		height: oe_rem(150px);
 		@include flex(center, flex-end, row);
@@ -58,6 +58,69 @@
 			}	
 		}
 	}
+   &.fixed{
+		z-index: 999;
+		height: oe_rem(80px);
+		background-color: #fff;
+		@include position(fixed, 0, 0, initial, 0);
+		.site-branding{
+			height: oe_rem(80px); 
+		}
+		.main-navigation{
+			height: oe_rem(80px); 
+		}
+		.header_picto_container{
+			height: oe_rem(80px); 
+			.header_picto{ 
+				.compte{
+					@include transition(all, .25s, ease-in-out);
+					position: relative;
+					padding: oe_rem(10px) 0;
+					text-align: center;
+					cursor: pointer;
+					height: oe_rem(46px);
+					width: oe_rem(85px);
+					a{
+						img{
+							@include position(absolute, 0, 0, 0, 0);
+							margin: 0 auto;
+							&.first{
+								opacity: 1;
+							}
+							
+							&.second{
+								opacity: 0;
+							}
+						}
+						span{
+							opacity: 0;
+							font-size: oe_rem(14px);
+							font-weight: 400;
+							display: block;
+							padding-top: oe_rem(20px);
+						}
+						&:hover{
+							color: $text_color;
+							img{
+								@include position(absolute, 0, 0, 0, 0);
+								&.first{
+									opacity: 0;
+								}
+								
+								&.second{
+									opacity: 1
+								}
+							}
+							span{
+								opacity: 1;
+							}
+						}
+					}
+				}	
+			}
+		}
+	}
+
 
 	@include media("<lg") { 
 		height: auto;

@@ -22,8 +22,7 @@
                   // padding-bottom: oe_rem(6px);
                }
                .titre{
-                  font-size: oe_rem(23px);
-                  font-weight: 100;
+                  font-size: oe_rem(23px); 
                   a{
                      color: $main_text_color;
                      &:hover{
@@ -34,7 +33,7 @@
                }
                .cats{
                   font-size: oe_rem(14px);
-                  font-weight: 300;
+                  font-weight: 500;
                   padding: oe_rem(6px) 0;
                   a{
                      color: $main_text_color;
@@ -96,7 +95,7 @@
 
 .sidebare_titre{
    font-size: oe_rem(29px);
-   font-weight: 400;
+   font-weight: 500;
    padding: oe_rem(60px) 0 oe_rem(40px);
    i{
       color: $main_color;

@@ -15,6 +15,8 @@
 		<div class="row">
 			
 			<div class="offset-md-1 col-md-4">
+				<h5><?php _e('Already have an account ?', 'fellah'); ?></h5>
+						<br>
 				<?php wp_login_form(); ?>
 			</div>
 
@@ -72,88 +74,10 @@
 
 						</div>
 
-						<p><?php _e( 'Registering for this site is easy. Just fill in the fields below, and we\'ll get a new account set up for you in no time.', 'buddypress' ); ?></p>
+						<h5><?php _e( 'Create an account. Simple and free !', 'fellah' ); ?></h5>
 						<br>
-						<?php
 
-						/**
-						 * Fires before the display of member registration account details fields.
-						 *
-						 * @since 1.1.0
-						 */
-						do_action( 'bp_before_account_details_fields' ); ?>
-
-						<div class="register-section" id="basic-details-section">
-
-							<?php /***** Basic Account Details ******/ ?>
-
-							<strong><?php _e( 'Account Details', 'buddypress' ); ?></strong>
-
-							<label for="signup_username"><?php _e( 'Username', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
-							<?php
-
-							/**
-							 * Fires and displays any member registration username errors.
-							 *
-							 * @since 1.1.0
-							 */
-							do_action( 'bp_signup_username_errors' ); ?>
-							<input type="text" name="signup_username" id="signup_username" value="<?php bp_signup_username_value(); ?>" <?php bp_form_field_attributes( 'username' ); ?>/>
-
-							<label for="signup_email"><?php _e( 'Email Address', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
-							<?php
-
-							/**
-							 * Fires and displays any member registration email errors.
-							 *
-							 * @since 1.1.0
-							 */
-							do_action( 'bp_signup_email_errors' ); ?>
-							<input type="email" name="signup_email" id="signup_email" value="<?php bp_signup_email_value(); ?>" <?php bp_form_field_attributes( 'email' ); ?>/>
-
-							<label for="signup_password"><?php _e( 'Choose a Password', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
-							<?php
-
-							/**
-							 * Fires and displays any member registration password errors.
-							 *
-							 * @since 1.1.0
-							 */
-							do_action( 'bp_signup_password_errors' ); ?>
-							<input type="password" name="signup_password" id="signup_password" value="" class="password-entry" <?php bp_form_field_attributes( 'password' ); ?>/>
-							<div id="pass-strength-result"></div>
-
-							<label for="signup_password_confirm"><?php _e( 'Confirm Password', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
-							<?php
-
-							/**
-							 * Fires and displays any member registration password confirmation errors.
-							 *
-							 * @since 1.1.0
-							 */
-							do_action( 'bp_signup_password_confirm_errors' ); ?>
-							<input type="password" name="signup_password_confirm" id="signup_password_confirm" value="" class="password-entry-confirm" <?php bp_form_field_attributes( 'password' ); ?>/>
-
-							<?php
-
-							/**
-							 * Fires and displays any extra member registration details fields.
-							 *
-							 * @since 1.9.0
-							 */
-							do_action( 'bp_account_details_fields' ); ?>
-
-						</div><!-- #basic-details-section -->
-
-						<?php
-
-						/**
-						 * Fires after the display of member registration account details fields.
-						 *
-						 * @since 1.1.0
-						 */
-						do_action( 'bp_after_account_details_fields' ); ?>
-
+						
 						<?php /***** Extra Profile Details ******/ ?>
 
 						<?php if ( bp_is_active( 'xprofile' ) ) : ?>
@@ -276,7 +200,7 @@
 
 							<div class="register-section" id="blog-details-section">
 
-								<strong><?php _e( 'Blog Details', 'buddypress' ); ?></strong>
+								<strong><?php _e( 'Blog Details', 'buddypress' ); ?></strong> <br>
 
 								<p><label for="signup_with_blog"><input type="checkbox" name="signup_with_blog" id="signup_with_blog" value="1"<?php if ( (int) bp_get_signup_with_blog_value() ) : ?> checked="checked"<?php endif; ?> /> <?php _e( 'Yes, I\'d like to create a new site', 'buddypress' ); ?></label></p>
 
@@ -345,6 +269,86 @@
 							do_action( 'bp_after_blog_details_fields' ); ?>
 
 						<?php endif; ?>
+						<?php
+
+						/**
+						 * Fires before the display of member registration account details fields.
+						 *
+						 * @since 1.1.0
+						 */
+						do_action( 'bp_before_account_details_fields' ); ?>
+
+						<div class="register-section" id="basic-details-section">
+
+							<?php /***** Basic Account Details ******/ ?>
+
+							<strong><?php _e( 'Account Details', 'buddypress' ); ?></strong><br>
+
+							<label for="signup_username"><?php _e( 'Username', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
+							<?php
+
+							/**
+							 * Fires and displays any member registration username errors.
+							 *
+							 * @since 1.1.0
+							 */
+							do_action( 'bp_signup_username_errors' ); ?>
+							<input type="text" name="signup_username" id="signup_username" value="<?php bp_signup_username_value(); ?>" <?php bp_form_field_attributes( 'username' ); ?>/>
+
+							<label for="signup_email"><?php _e( 'Email Address', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
+							<?php
+
+							/**
+							 * Fires and displays any member registration email errors.
+							 *
+							 * @since 1.1.0
+							 */
+							do_action( 'bp_signup_email_errors' ); ?>
+							<input type="email" name="signup_email" id="signup_email" value="<?php bp_signup_email_value(); ?>" <?php bp_form_field_attributes( 'email' ); ?>/>
+
+							<label for="signup_password"><?php _e( 'Choose a Password', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
+							<?php
+
+							/**
+							 * Fires and displays any member registration password errors.
+							 *
+							 * @since 1.1.0
+							 */
+							do_action( 'bp_signup_password_errors' ); ?>
+							<input type="password" name="signup_password" id="signup_password" value="" class="password-entry" <?php bp_form_field_attributes( 'password' ); ?>/>
+							<div id="pass-strength-result"></div>
+
+							<label for="signup_password_confirm"><?php _e( 'Confirm Password', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
+							<?php
+
+							/**
+							 * Fires and displays any member registration password confirmation errors.
+							 *
+							 * @since 1.1.0
+							 */
+							do_action( 'bp_signup_password_confirm_errors' ); ?>
+							<input type="password" name="signup_password_confirm" id="signup_password_confirm" value="" class="password-entry-confirm" <?php bp_form_field_attributes( 'password' ); ?>/>
+
+							<?php
+
+							/**
+							 * Fires and displays any extra member registration details fields.
+							 *
+							 * @since 1.9.0
+							 */
+							do_action( 'bp_account_details_fields' ); ?>
+
+						</div><!-- #basic-details-section -->
+
+						<?php
+
+						/**
+						 * Fires after the display of member registration account details fields.
+						 *
+						 * @since 1.1.0
+						 */
+						do_action( 'bp_after_account_details_fields' ); ?>
+
 
 						<?php
 
@@ -356,7 +360,7 @@
 						do_action( 'bp_before_registration_submit_buttons' ); ?>
 
 						<div class="submit">
-							<input type="submit" name="signup_submit" id="signup_submit" value="<?php esc_attr_e( 'Complete Sign Up', 'buddypress' ); ?>" />
+							<input type="submit" name="signup_submit" id="signup_submit" value="<?php esc_attr_e( 'Create my account', 'fellah' ); ?>" />
 						</div>
 
 						<?php
@@ -431,6 +435,9 @@
 				 * @since 1.1.0
 				 */
 				do_action( 'bp_after_register_page' ); ?>
+
+
+				<a class="forgotPassword" href="<?php bloginfo( 'url' )?>/wp-login.php?action=lostpassword"><?php _e('Forgot your password ?','fellah'); ?></a>
 			</div>
 			
 		</div>

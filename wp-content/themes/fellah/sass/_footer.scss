@@ -1,6 +1,7 @@
 
 .site-footer { 
 	background-color: $second_main_color;
+	padding: oe_rem(10px) 0;
 	.site-info{
 		min-height: oe_rem(70px);
 		@include flex(center, flex-start, row);
@@ -13,7 +14,7 @@
 			color: $main_text_color;
 			margin: 0 oe_rem(4px);
 			font-size: oe_rem(14px);
-			font-weight: 400;
+			font-weight: 500;
 			@include transition();
 			&:hover,
 			&:active,
@@ -23,7 +24,7 @@
 			}
 			&.uppercase{
 				text-transform: uppercase;
-				font-weight: 400;
+				font-weight: 500;
 			}
 		}
 		
@@ -58,5 +59,9 @@
 		display: block;
 		float: right;
 		line-height: oe_rem(65px);
+		@include media("<md"){
+			float: none;
+    		text-align: center;
+		}
 	}
 }

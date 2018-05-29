@@ -123,6 +123,7 @@ function fellah_scripts() {
 	
 	wp_enqueue_style( 'fellah-fonts', 'https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,600,700' );
 	wp_enqueue_style( 'fellah-fonts-2', 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500' );
+	wp_enqueue_style( 'fellah-fonts-3', 'https://fonts.googleapis.com/css?family=Roboto:300,400' );
 	wp_enqueue_style( 'fellah-style', get_stylesheet_uri() );
 
 

@@ -35,13 +35,14 @@
 		padding: oe_rem(25px) oe_rem(10px);
 		.info{
 			@include flex(center, flex-start, row);
+			flex-wrap: wrap;
 			color: $main_text_color;
 			.date{
 				font-size: oe_rem(14px);
 				font-weight: 300;
+				padding-right: oe_rem(14px);
 			}
 			.lieu{
-				padding-left: oe_rem(14px);
 				font-size: oe_rem(14px);
 				font-weight: 300;
 			}
@@ -81,6 +82,11 @@
 
 	@include media("<md"){
 		margin: oe_rem(10px) auto; 
+		border-radius: oe_rem(6px);
+		@include oe_box-shadow-light;
+		.annoce{ 
+			border-radius: oe_rem(6px) oe_rem(6px) 0 0; 
+		} 
 	}
 }
 

@@ -69,12 +69,23 @@ jQuery(document).ready(function($) {
 			 $('.GoToHeader').removeClass('show');
 		}
   });
+
+  $(document).on( 'scroll', function(){
+  		if (window.matchMedia("(min-width: 992px)").matches) { 
+			if ($(window).scrollTop() > 100) {
+				$('#masthead').addClass('fixed');
+				$('#header_fix').addClass('fixed');
+			} else { 
+					$('#masthead').removeClass('fixed');
+					$('#header_fix').removeClass('fixed');
+			}
+		}
+	});
 	 
-  $('.GoToHeader').click(function(){
+	$('.GoToHeader').click(function(){
 		$('html').animate({scrollTop:0}, 'slow');
 		return false;
-  }); 
-	 
+	}); 
 
 	$('#annoces_slider').owlCarousel({
 		loop:true,
@@ -82,7 +93,7 @@ jQuery(document).ready(function($) {
 		dots: false,
 		autoWidth: true,
 		nav:true,	 
-		navText: ['<img src="http://127.0.0.1/fellah/wp-content/themes/fellah/img/icons/arrow-left.png">','<img src="http://127.0.0.1/fellah/wp-content/themes/fellah/img/icons/arrow-right.png">'],
+		navText: ['<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/fellah/img/icons/arrow-left.png">','<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/fellah/img/icons/arrow-right.png">'],
 		responsive:{
 			0:{
 				items:1
@@ -102,7 +113,7 @@ jQuery(document).ready(function($) {
 		dots: false,
 		autoWidth: true,
 		nav:true,	
-		navText: ['<img src="http://127.0.0.1/fellah/wp-content/themes/fellah/img/icons/arrow-left.png">','<img src="http://127.0.0.1/fellah/wp-content/themes/fellah/img/icons/arrow-right.png">'],
+		navText: ['<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/fellah/img/icons/arrow-left.png">','<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/fellah/img/icons/arrow-right.png">'],
 		responsive:{
 			0:{
 				items:1
@@ -125,7 +136,7 @@ jQuery(document).ready(function($) {
 		loop: true,
 		dots: false,
 		nav:true,	 
-		navText: ['<img src="http://127.0.0.1/fellah/wp-content/themes/tmz/images/prev.png">','<img src="http://127.0.0.1/fellah/wp-content/themes/tmz/images/next.png">'],
+		navText: ['<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/tmz/images/prev.png">','<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/tmz/images/next.png">'],
 		responsive:{
 			0:{
 				items:1
@@ -144,7 +155,7 @@ jQuery(document).ready(function($) {
 		margin:0,
 		dots: false,
 		nav:true,	 
-		navText: ['<img src="http://127.0.0.1/fellah/wp-content/themes/tmz/images/prev.png">','<img src="http://127.0.0.1/fellah/wp-content/themes/tmz/images/next.png">'],
+		navText: ['<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/tmz/images/prev.png">','<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/tmz/images/next.png">'],
 		responsive:{
 			0:{
 				items:1
@@ -163,7 +174,7 @@ jQuery(document).ready(function($) {
 		margin:0,
 		dots: false,
 		nav:true,	 
-		navText: ['<img src="http://127.0.0.1/fellah/wp-content/themes/tmz/images/prev_white.png">','<img src="http://127.0.0.1/fellah/wp-content/themes/tmz/images/next_white.png">'],
+		navText: ['<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/tmz/images/prev_white.png">','<img src="http://cloudces.myds.me/oe/fellah/wp-content/themes/tmz/images/next_white.png">'],
 		responsive:{
 			0:{
 				items:1

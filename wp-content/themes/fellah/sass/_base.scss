@@ -209,7 +209,7 @@ blockquote {
 }
 
 .page_titre{
-	font-weight: 400;
+	font-weight: 500;
 	font-size: oe_rem(29px);
 	padding-bottom: oe_rem(40px);
 }
@@ -298,7 +298,9 @@ blockquote {
 }
 
 .wp-pagenavi{
-	font-size: oe_rem(22px);
+	font-family: 'Roboto';
+	font-size: oe_rem(26px);
+	font-weight: 300;
 	margin: oe_rem(20px) 0; 
 	height: oe_rem(40px);
 	.first,
@@ -306,7 +308,7 @@ blockquote {
 	.pages{
 		display: none;
 	}
-	a{
+	a{ 
 		color: $main_text_color; 
 		border: none;
 		&:hover{
@@ -315,10 +317,14 @@ blockquote {
 	}
 	span{
 		border: none;
+		&.current {
+			font-weight: 300;
+	  }
 	}
 	.current{
 		border: none;
 		color: $main_color; 
+		font-weight: 300;
 	}
 	.previouspostslink,
 	.nextpostslink{
@@ -347,6 +353,46 @@ blockquote {
 	}
 }
 
+.catgories{
+	.categorie{
+		&.first_cat{
+			height: oe_rem(140px);
+		}
+		height: oe_rem(115px);
+		position: relative;
+		border-radius: oe_rem(6px);
+		margin: oe_rem(10px) 0;
+		overflow: hidden;
+		@include flex(center, center, row);
+		.img_zoom{
+			@include transition();
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		} 
+		.cat_titre{
+			@include flex(center, center, row);
+			@include position(absolute, 0, 0, 0, 0);
+			font-size: oe_rem(19px);
+			color: #fff;
+			font-weight: 500;
+			z-index: 1;
+		}
+		.hover{
+			@include position(absolute, 0, 0, 0, 0);
+			@include transition(all, .25s, ease-in-out);
+			opacity: .75;
+			z-index: 0;
+		}
+		&:hover{
+			.hover{ 
+				opacity: .85; 
+			}
+			.img_zoom {
+				transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+			}
+		}
+	}
+}
+
 section{
 	padding: oe_rem(30px) 0;
 	.section_title{
@@ -366,42 +412,7 @@ section{
 		margin-bottom: oe_rem(40px);
 		font-weight: 300;
 	}
-	.catgories{
-		.categorie{
-			height: oe_rem(115px);
-			position: relative;
-			border-radius: oe_rem(6px);
-			margin: oe_rem(10px) 0;
-			overflow: hidden;
-			@include flex(center, center, row);
-			.img_zoom{
-				@include transition();
-				transform: matrix(1, 0, 0, 1, 0, 0);
-			} 
-			.cat_titre{
-				@include flex(center, center, row);
-				@include position(absolute, 0, 0, 0, 0);
-				font-size: oe_rem(19px);
-				color: #fff;
-				font-weight: 500;
-				z-index: 1;
-			}
-			.hover{
-				@include position(absolute, 0, 0, 0, 0);
-				@include transition(all, .25s, ease-in-out);
-				opacity: .75;
-				z-index: 0;
-			}
-			&:hover{
-				.hover{ 
-					opacity: .85; 
-				}
-				.img_zoom {
-					transform: matrix(1.2, 0, 0, 1.2, 0, 0);
-				}
-			}
-		}
-	}
+	
 	@include media("<md"){
 		.section_title{
 			@include flex(flex-start, flex-start, column);

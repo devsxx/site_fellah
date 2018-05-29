@@ -1,81 +1,104 @@
-.header_bandeau{
-	height: oe_rem(275px);
-	@include flex(center, center, row);
-	background-color: $lighter_color; 
-	margin-bottom: oe_rem(40px);
-	padding: oe_rem(25px) 0;
-	&.header_bandeau_home{
-		background: url(./img/bandeau.jpg) no-repeat 50%;
-		background-size: cover;
-		margin-bottom: oe_rem(0px);
+.header_bandeau_content{ 
+	height: oe_rem(275px); 
+	margin-bottom: oe_rem(30px);
+	&.fixed{    
+		height: oe_rem(375px);
+		.header_bandeau{
+			z-index: 999;
+			height: oe_rem(190px);
+			@include oe_box-shadow-dark;
+			@include position(fixed, oe_rem(80px), 0, initial, 0);
+			.titre{ 
+				font-size: oe_rem(18px); 
+				margin-bottom: oe_rem(10px);
+			} 
+		}
 	}
-	.titre{
-		color: #fff;
-		font-weight: 500;
-		font-size: oe_rem(38px);
-		text-transform: uppercase;
-		margin-bottom: oe_rem(65px);
-	}
-	.search_zone{
-		background-color: $light_color;
-		height: oe_rem(90px);
-		border-radius: oe_rem(4px);
-		padding: 0 oe_rem(25px);
-		@include flex(center, space-between, row);
-		input,
-		select{ 
-			color: $text_color;
-			font-size: oe_rem(19px); 
-			height: oe_rem(50px);
+	.header_bandeau{
+		height: oe_rem(275px);
+		@include flex(center, center, row);
+		background-color: $lighter_color; 
+		padding: oe_rem(25px) 0;
+		
+		&.header_bandeau_home{
+			background: url(./img/bandeau.jpg) no-repeat 50%;
+			background-size: cover;
+			margin-bottom: oe_rem(0px);
+		}
+		.titre{
+			color: #fff;
+			font-weight: 500;
+			font-size: oe_rem(38px);
+			text-transform: uppercase;
+			margin-bottom: oe_rem(65px);
+		}
+		.search_zone{
+			background-color: $light_color;
+			height: oe_rem(90px);
 			border-radius: oe_rem(4px);
-			padding: 0 oe_rem(14px);
-			margin: oe_rem(10px) 0 !important;
-			border: none;
-			&[type="submit"]{
+			padding: 0 oe_rem(25px);
+			@include flex(center, space-between, row);
+			input,
+			select{ 
+				color: $text_color;
+				font-size: oe_rem(19px); 
+				height: oe_rem(50px);
+				border-radius: oe_rem(4px);
+				padding: 0 oe_rem(14px);
+				margin: oe_rem(10px) 0 !important;
+				border: none;
+				&[type="submit"]{
+					background-color: $text_color;
+					padding: 0 oe_rem(25px);
+					color: #fff;
+				}
+				&[type="checkbox"]{
+					height: auto;
+				}
+			}
+			.adverts-form-submit{
+				font-size: oe_rem(19px); 
+				height: oe_rem(50px);
+				line-height: oe_rem(50px);
+				border-radius: oe_rem(4px); 
+				border: none;
 				background-color: $text_color;
 				padding: 0 oe_rem(25px);
 				color: #fff;
 			}
-			&[type="checkbox"]{
-				height: auto;
-			}
 		}
-		.adverts-form-submit{
-			font-size: oe_rem(19px); 
-			height: oe_rem(50px);
-			line-height: oe_rem(50px);
-			border-radius: oe_rem(4px); 
-			border: none;
-			background-color: $text_color;
-			padding: 0 oe_rem(25px);
-			color: #fff;
-		}
+		
 	}
+
 	@include media("<md"){
 		height: auto;
-		margin: oe_rem(20px) 0;
-		&.header_bandeau_home{ 
-		}
-		.titre{ 
-			font-size: oe_rem(24px);
-			text-transform: uppercase;
-			margin-bottom: oe_rem(25px);
-		}
-		.search_zone{ 
-			padding: oe_rem(10px) oe_rem(20px);
+		
+		.header_bandeau{
 			height: auto;
-			@include flex(center, stretch, column);
-			.advert-input{
-				width: 100%;
+			margin: oe_rem(20px) 0;
+			&.header_bandeau_home{ 
 			}
-			input,
-			select,
-			.adverts-js{  
-				width: 100%;
+			.titre{ 
+				font-size: oe_rem(24px);
+				text-transform: uppercase;
+				margin-bottom: oe_rem(25px);
 			}
-			.adverts-form-submit{ 
-				width: 100%;
-				margin: oe_rem(10px) 0;
+			.search_zone{ 
+				padding: oe_rem(10px) oe_rem(20px);
+				height: auto;
+				@include flex(center, stretch, column);
+				.advert-input{
+					width: 100%;
+				}
+				input,
+				select,
+				.adverts-js{  
+					width: 100%;
+				}
+				.adverts-form-submit{ 
+					width: 100%;
+					margin: oe_rem(10px) 0;
+				}
 			}
 		}
 	}
@@ -97,6 +120,7 @@
 		right: 0;
 		z-index: 3; 
 		text-align: center;
+		padding: oe_rem(20px) 0;
 		@include flex(center,center,column);
 		.titre{
 			color: $main_text_color;
@@ -120,11 +144,12 @@
 	} 
 
 	@include media("<md"){
-		height: oe_rem(260px);
+		height: auto;
 		img{
 			height: 100%;
 		}
 		.info{
+			position: relative;
 			.titre{
 				font-size: oe_rem(40px); 
 			}
@@ -139,11 +164,12 @@
 	} 
 
 	@include media("<sm"){
-		height: oe_rem(260px);
+		height: auto;
 		img{
 			height: 100%;
 		}
 		.info{
+			position: relative;
 			.titre{
 				font-size: oe_rem(25px); 
 			}
