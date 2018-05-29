@@ -97,6 +97,7 @@
 		right: 0;
 		z-index: 3; 
 		text-align: center;
+		padding: oe_rem(20px) 0;
 		@include flex(center,center,column);
 		.titre{
 			color: $main_text_color;
@@ -120,11 +121,12 @@
 	} 
 
 	@include media("<md"){
-		height: oe_rem(260px);
+		height: auto;
 		img{
 			height: 100%;
 		}
 		.info{
+			position: relative;
 			.titre{
 				font-size: oe_rem(40px); 
 			}
@@ -139,11 +141,12 @@
 	} 
 
 	@include media("<sm"){
-		height: oe_rem(260px);
+		height: auto;
 		img{
 			height: 100%;
 		}
 		.info{
+			position: relative;
 			.titre{
 				font-size: oe_rem(25px); 
 			}

@@ -1,6 +1,7 @@
 
 .site-footer { 
 	background-color: $second_main_color;
+	padding: oe_rem(10px) 0;
 	.site-info{
 		min-height: oe_rem(70px);
 		@include flex(center, flex-start, row);
@@ -58,5 +59,9 @@
 		display: block;
 		float: right;
 		line-height: oe_rem(65px);
+		@include media("<md"){
+			float: none;
+    		text-align: center;
+		}
 	}
 }

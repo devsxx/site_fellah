@@ -47,7 +47,7 @@ get_header();
 								<div class="col-md-3">
 									<a href="<?php echo get_term_link($advert_category); ?>">
 									<div class="categorie">
-									<img class="img_zoom" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
+										<img class="img_zoom" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
 										<div class="cat_titre">
 											<?php echo $advert_category->name; ?>
 										</div>

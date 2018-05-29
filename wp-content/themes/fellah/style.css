@@ -13356,6 +13356,80 @@ blockquote.hide p {
   margin-right: auto;
 }
 
+.catgories .categorie {
+  height: 7.1875rem;
+  position: relative;
+  border-radius: 0.375rem;
+  margin: 0.625rem 0;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.catgories .categorie.first_cat {
+  height: 8.75rem;
+}
+
+.catgories .categorie .img_zoom {
+  transition: all 0.2s ease-in-out;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.catgories .categorie .cat_titre {
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 1.1875rem;
+  color: #fff;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.catgories .categorie .hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.25s ease-in-out;
+  opacity: .75;
+  z-index: 0;
+}
+
+.catgories .categorie:hover .hover {
+  opacity: .85;
+}
+
+.catgories .categorie:hover .img_zoom {
+  transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+}
+
 section {
   padding: 1.875rem 0;
 }
@@ -13391,76 +13465,6 @@ section .section_sousTitle {
   font-size: 1.1875rem;
   margin-bottom: 2.5rem;
   font-weight: 300;
-}
-
-section .catgories .categorie {
-  height: 7.1875rem;
-  position: relative;
-  border-radius: 0.375rem;
-  margin: 0.625rem 0;
-  overflow: hidden;
-  display: -ms-flexbox;
-  display: flex;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-section .catgories .categorie .img_zoom {
-  transition: all 0.2s ease-in-out;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-}
-
-section .catgories .categorie .cat_titre {
-  display: -ms-flexbox;
-  display: flex;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  font-size: 1.1875rem;
-  color: #fff;
-  font-weight: 500;
-  z-index: 1;
-}
-
-section .catgories .categorie .hover {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transition: all 0.25s ease-in-out;
-  opacity: .75;
-  z-index: 0;
-}
-
-section .catgories .categorie:hover .hover {
-  opacity: .85;
-}
-
-section .catgories .categorie:hover .img_zoom {
-  transform: matrix(1.2, 0, 0, 1.2, 0, 0);
 }
 
 @media (max-width: 767px) {
@@ -13820,6 +13824,7 @@ form textarea {
   right: 0;
   z-index: 3;
   text-align: center;
+  padding: 1.25rem 0;
   display: -ms-flexbox;
   display: flex;
   -moz-align-items: center;
@@ -13884,10 +13889,13 @@ form textarea {
 
 @media (max-width: 767px) {
   .bandeau {
-    height: 16.25rem;
+    height: auto;
   }
   .bandeau img {
     height: 100%;
+  }
+  .bandeau .info {
+    position: relative;
   }
   .bandeau .info .titre {
     font-size: 2.5rem;
@@ -13902,10 +13910,13 @@ form textarea {
 
 @media (max-width: 575px) {
   .bandeau {
-    height: 16.25rem;
+    height: auto;
   }
   .bandeau img {
     height: 100%;
+  }
+  .bandeau .info {
+    position: relative;
   }
   .bandeau .info .titre {
     font-size: 1.5625rem;
@@ -15177,6 +15188,11 @@ form textarea {
 @media (max-width: 767px) {
   .annoce_container {
     margin: 0.625rem auto;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .annoce_container .annoce {
+    border-radius: 0.375rem 0.375rem 0 0;
   }
 }
 
@@ -15788,6 +15804,16 @@ form textarea {
   float: none;
 }
 
+@media (max-width: 575px) {
+  .adverts-form .adverts-control-group.adverts-field-header {
+    height: 2.8125rem;
+  }
+  .adverts-form .adverts-control-group.adverts-field-header .adverts-field-header .adverts-field-header-title {
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+  }
+}
+
 .adverts-options-left, .adverts-options-right {
   position: absolute;
   bottom: -80px;
@@ -16046,6 +16072,11 @@ div.adverts-flash-messages {
   border: 1px solid #666666;
 }
 
+.adverts-category-all-main {
+  display: block !important;
+  margin-bottom: 0.625rem;
+}
+
 #buddypress div.item-list-tabs ul li.current a,
 #buddypress div.item-list-tabs ul li.selected a {
   background-color: #eee;
@@ -16117,6 +16148,7 @@ div.adverts-flash-messages {
 
 .site-footer {
   background-color: #e5e5e5;
+  padding: 0.625rem 0;
 }
 
 .site-footer .site-info {
@@ -16199,4 +16231,11 @@ div.adverts-flash-messages {
   display: block;
   float: right;
   line-height: 4.0625rem;
+}
+
+@media (max-width: 767px) {
+  .site-footer .facebook {
+    float: none;
+    text-align: center;
+  }
 }

@@ -81,6 +81,11 @@
 
 	@include media("<md"){
 		margin: oe_rem(10px) auto; 
+		border-radius: oe_rem(6px);
+		@include oe_box-shadow-light;
+		.annoce{ 
+			border-radius: oe_rem(6px) oe_rem(6px) 0 0; 
+		} 
 	}
 }
 

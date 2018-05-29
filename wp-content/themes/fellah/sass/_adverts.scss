@@ -27,6 +27,7 @@
         }
       }
     }
+    
   }
 
   fieldset {
@@ -182,6 +183,22 @@
     float: none;
   }
 
+
+  @include media("<sm"){
+    .adverts-control-group {
+
+      &.adverts-field-header{
+        height: oe_rem(45px); 
+        .adverts-field-header { 
+          .adverts-field-header-title { 
+            font-size: oe_rem(18px);
+            line-height: oe_rem(18px); 
+          }
+        }
+      }   
+  
+    } 
+  }
 }
 
 .adverts-options-left, .adverts-options-right { 
@@ -409,4 +426,9 @@ div.adverts-flash-messages {
       border: 1px solid $dark_color;
     }
   }
+}
+
+.adverts-category-all-main{
+  display: block !important;
+  margin-bottom: oe_rem(10px);
 }
