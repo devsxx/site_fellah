@@ -16176,7 +16176,7 @@ div.adverts-flash-messages {
   color: #000;
   margin: 0 0.25rem;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   transition: all 0.2s ease-in-out;
 }
 
@@ -16187,7 +16187,7 @@ div.adverts-flash-messages {
 
 .site-footer .site-info a.uppercase {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .site-footer .site-info span {
