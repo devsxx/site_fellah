@@ -13677,7 +13677,31 @@ form textarea {
   border-color: #c6c6c6;
 }
 
-.header_bandeau {
+.header_bandeau_content {
+  height: 17.1875rem;
+}
+
+.header_bandeau_content.fixed {
+  height: 23.4375rem;
+}
+
+.header_bandeau_content.fixed .header_bandeau {
+  z-index: 999;
+  height: 11.875rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 2px rgba(0, 0, 0, 0.48);
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  bottom: initial;
+  left: 0;
+}
+
+.header_bandeau_content.fixed .header_bandeau .titre {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+
+.header_bandeau_content .header_bandeau {
   height: 17.1875rem;
   display: -ms-flexbox;
   display: flex;
@@ -13697,13 +13721,13 @@ form textarea {
   padding: 1.5625rem 0;
 }
 
-.header_bandeau.header_bandeau_home {
+.header_bandeau_content .header_bandeau.header_bandeau_home {
   background: url(./img/bandeau.jpg) no-repeat 50%;
   background-size: cover;
   margin-bottom: 0;
 }
 
-.header_bandeau .titre {
+.header_bandeau_content .header_bandeau .titre {
   color: #fff;
   font-weight: 500;
   font-size: 2.375rem;
@@ -13711,7 +13735,7 @@ form textarea {
   margin-bottom: 4.0625rem;
 }
 
-.header_bandeau .search_zone {
+.header_bandeau_content .header_bandeau .search_zone {
   background-color: #dbdbdb;
   height: 5.625rem;
   border-radius: 0.25rem;
@@ -13731,8 +13755,8 @@ form textarea {
   flex-direction: row;
 }
 
-.header_bandeau .search_zone input,
-.header_bandeau .search_zone select {
+.header_bandeau_content .header_bandeau .search_zone input,
+.header_bandeau_content .header_bandeau .search_zone select {
   color: #007e1d;
   font-size: 1.1875rem;
   height: 3.125rem;
@@ -13742,19 +13766,19 @@ form textarea {
   border: none;
 }
 
-.header_bandeau .search_zone input[type="submit"],
-.header_bandeau .search_zone select[type="submit"] {
+.header_bandeau_content .header_bandeau .search_zone input[type="submit"],
+.header_bandeau_content .header_bandeau .search_zone select[type="submit"] {
   background-color: #007e1d;
   padding: 0 1.5625rem;
   color: #fff;
 }
 
-.header_bandeau .search_zone input[type="checkbox"],
-.header_bandeau .search_zone select[type="checkbox"] {
+.header_bandeau_content .header_bandeau .search_zone input[type="checkbox"],
+.header_bandeau_content .header_bandeau .search_zone select[type="checkbox"] {
   height: auto;
 }
 
-.header_bandeau .search_zone .adverts-form-submit {
+.header_bandeau_content .header_bandeau .search_zone .adverts-form-submit {
   font-size: 1.1875rem;
   height: 3.125rem;
   line-height: 3.125rem;
@@ -13766,16 +13790,19 @@ form textarea {
 }
 
 @media (max-width: 767px) {
-  .header_bandeau {
+  .header_bandeau_content {
+    height: auto;
+  }
+  .header_bandeau_content .header_bandeau {
     height: auto;
     margin: 1.25rem 0;
   }
-  .header_bandeau .titre {
+  .header_bandeau_content .header_bandeau .titre {
     font-size: 1.5rem;
     text-transform: uppercase;
     margin-bottom: 1.5625rem;
   }
-  .header_bandeau .search_zone {
+  .header_bandeau_content .header_bandeau .search_zone {
     padding: 0.625rem 1.25rem;
     height: auto;
     display: -ms-flexbox;
@@ -13792,15 +13819,15 @@ form textarea {
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .header_bandeau .search_zone .advert-input {
+  .header_bandeau_content .header_bandeau .search_zone .advert-input {
     width: 100%;
   }
-  .header_bandeau .search_zone input,
-  .header_bandeau .search_zone select,
-  .header_bandeau .search_zone .adverts-js {
+  .header_bandeau_content .header_bandeau .search_zone input,
+  .header_bandeau_content .header_bandeau .search_zone select,
+  .header_bandeau_content .header_bandeau .search_zone .adverts-js {
     width: 100%;
   }
-  .header_bandeau .search_zone .adverts-form-submit {
+  .header_bandeau_content .header_bandeau .search_zone .adverts-form-submit {
     width: 100%;
     margin: 0.625rem 0;
   }
@@ -14039,6 +14066,88 @@ form textarea {
 }
 
 .site-header .header_picto_container .header_picto .compte a:hover span {
+  opacity: 1;
+}
+
+.site-header.fixed {
+  z-index: 999;
+  height: 5rem;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: 0;
+}
+
+.site-header.fixed .site-branding {
+  height: 5rem;
+}
+
+.site-header.fixed .main-navigation {
+  height: 5rem;
+}
+
+.site-header.fixed .header_picto_container {
+  height: 5rem;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte {
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  padding: 0.625rem 0;
+  text-align: center;
+  cursor: pointer;
+  height: 2.875rem;
+  width: 5.3125rem;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte a img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte a img.first {
+  opacity: 1;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte a img.second {
+  opacity: 0;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte a span {
+  opacity: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  display: block;
+  padding-top: 1.25rem;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte a:hover {
+  color: #007e1d;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte a:hover img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte a:hover img.first {
+  opacity: 0;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte a:hover img.second {
+  opacity: 1;
+}
+
+.site-header.fixed .header_picto_container .header_picto .compte a:hover span {
   opacity: 1;
 }
 
@@ -15136,16 +15245,18 @@ form textarea {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   color: #000;
 }
 
 .annoce_container .info_container .info .date {
   font-size: 0.875rem;
   font-weight: 300;
+  padding-right: 0.875rem;
 }
 
 .annoce_container .info_container .info .lieu {
-  padding-left: 0.875rem;
   font-size: 0.875rem;
   font-weight: 300;
 }

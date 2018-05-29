@@ -69,6 +69,18 @@ jQuery(document).ready(function($) {
 			 $('.GoToHeader').removeClass('show');
 		}
   });
+
+  $(document).on( 'scroll', function(){
+  		if (window.matchMedia("(min-width: 992px)").matches) { 
+			if ($(window).scrollTop() > 100) {
+				$('#masthead').addClass('fixed');
+				$('#header_fix').addClass('fixed');
+			} else { 
+					$('#masthead').removeClass('fixed');
+					$('#header_fix').removeClass('fixed');
+			}
+		}
+	});
 	 
   $('.GoToHeader').click(function(){
 		$('html').animate({scrollTop:0}, 'slow');

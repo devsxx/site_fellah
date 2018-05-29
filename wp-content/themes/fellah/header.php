@@ -82,6 +82,7 @@
 				</div>
 			</div>
 		</header><!-- #masthead -->
+		
 		<?php if (is_home() || is_page( 2264 ) || is_404()) : ?> 
 			<?php echo do_shortcode( "[form_search redirect_to='4']" );  ?> 
 		<?php endif; ?>
