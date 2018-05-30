@@ -1,4 +1,10 @@
 .page_blog{
+   .image_article{
+      margin-bottom: oe_rem(30px); 
+      img{
+         width: 100%;
+      }
+   }
    .blog_titre{
       font-size: oe_rem(29px);
       font-weight: 500; 
@@ -59,7 +65,7 @@
    .post-header{
       .entry-meta{
          font-size: oe_rem(14px);
-         padding: oe_rem(30px) 0 oe_rem(10px);
+         padding: oe_rem(16px) 0 oe_rem(10px);
          @include flex(center, flex-start, row);
          .posted-on{
             font-size: oe_rem(18px);
@@ -101,7 +107,7 @@
 .sidebare_titre{
    font-size: oe_rem(29px);
    font-weight: 500;
-   padding: oe_rem(60px) 0 oe_rem(40px);
+   padding: oe_rem(30px) 0;
    i{
       font-size: oe_rem(20px);
       color: $main_color;
@@ -109,7 +115,7 @@
 }
 
 .categoris_container{
-   padding: oe_rem(15px) 0; 
+   padding: oe_rem(15px) 0;  
    background-color: $second_main_color;
    ul{
       font-size: oe_rem(20px);
@@ -130,7 +136,7 @@
 
 .search_container{
    .sidebare_titre{ 
-      padding: oe_rem(40px) 0; 
+      padding: oe_rem(30px) 0; 
    }
    form{
       position: relative;

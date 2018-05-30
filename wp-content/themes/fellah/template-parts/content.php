@@ -15,8 +15,11 @@
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
-					<?php if ( 'post' === get_post_type() ) : ?>
-						<?php fellah_post_thumbnail(); ?>
+					<?php if ( get_field("image_darticle") ) : ?>
+						<?php $image = get_field("image_darticle"); ?>
+						<div class="image_article">
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+						</div>
 					<?php endif; ?>
 
 					<header class="post-header">

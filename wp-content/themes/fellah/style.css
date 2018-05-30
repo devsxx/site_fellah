@@ -13222,7 +13222,7 @@ blockquote.hide p {
 
 .site-main iframe {
   display: block;
-  margin: 1.25rem auto 2.5rem;
+  margin: 0 auto 2.5rem;
   max-width: 100%;
   width: 100%;
 }
@@ -15654,6 +15654,14 @@ form textarea {
   }
 }
 
+.page_blog .image_article {
+  margin-bottom: 1.875rem;
+}
+
+.page_blog .image_article img {
+  width: 100%;
+}
+
 .page_blog .blog_titre {
   font-size: 1.8125rem;
   font-weight: 500;
@@ -15721,7 +15729,7 @@ form textarea {
 
 .page_blog .post-header .entry-meta {
   font-size: 0.875rem;
-  padding: 1.875rem 0 0.625rem;
+  padding: 1rem 0 0.625rem;
   display: -ms-flexbox;
   display: flex;
   -moz-align-items: center;
@@ -15768,7 +15776,7 @@ form textarea {
 .sidebare_titre {
   font-size: 1.8125rem;
   font-weight: 500;
-  padding: 3.75rem 0 2.5rem;
+  padding: 1.875rem 0;
 }
 
 .sidebare_titre i {
@@ -15800,7 +15808,7 @@ form textarea {
 }
 
 .search_container .sidebare_titre {
-  padding: 2.5rem 0;
+  padding: 1.875rem 0;
 }
 
 .search_container form {
