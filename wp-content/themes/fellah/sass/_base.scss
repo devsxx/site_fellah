@@ -365,6 +365,7 @@ blockquote {
 
 .catgories{
 	.categorie{
+		@include oe_box-shadow;
 		&.first_cat{
 			height: oe_rem(140px);
 		}

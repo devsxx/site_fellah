@@ -13378,6 +13378,7 @@ blockquote.hide p {
 }
 
 .catgories .categorie {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   height: 7.1875rem;
   position: relative;
   border-radius: 0.375rem;
@@ -15105,6 +15106,7 @@ form textarea {
 }
 
 .home_actualites .actu {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   position: relative;
   margin: 1.25rem 0;
 }
@@ -15160,6 +15162,10 @@ form textarea {
 
 .home_actualites .actu a:hover .bloc .info {
   opacity: 1;
+}
+
+.home_actualites .facebook_box {
+  margin-top: 1.25rem;
 }
 
 .entry-header {
@@ -15656,6 +15662,7 @@ form textarea {
 
 .page_blog .image_article {
   margin-bottom: 1.875rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .page_blog .image_article img {
@@ -15681,8 +15688,9 @@ form textarea {
 }
 
 .page_blog .actu .bloc .left_bloc .image {
-  border-radius: 0.25rem;
   overflow: hidden;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .page_blog .actu .bloc .right_bloc {
@@ -15786,6 +15794,7 @@ form textarea {
 
 .categoris_container {
   padding: 0.9375rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: #e5e5e5;
 }
 

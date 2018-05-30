@@ -1,5 +1,6 @@
 .home_actualites{
 	.actu{
+		@include oe_box-shadow-light;
 		position: relative;
 		margin: oe_rem(20px) 0;
 		a{
@@ -40,5 +41,8 @@
 				}
 			}
 		}
+	}
+	.facebook_box{
+		margin-top: oe_rem(20px) ;
 	}
 }

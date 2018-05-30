@@ -1,6 +1,7 @@
 .page_blog{
    .image_article{
-      margin-bottom: oe_rem(30px); 
+      margin-bottom: oe_rem(30px);
+      @include oe_box-shadow-light;
       img{
          width: 100%;
       }
@@ -19,8 +20,9 @@
          .left_bloc{
             grid-column: 1/4;
             .image{
-               border-radius: oe_rem(4px);
                overflow: hidden;
+               border-radius: oe_rem(4px);
+               @include oe_box-shadow-light;
             }
          }
          .right_bloc{
@@ -115,7 +117,8 @@
 }
 
 .categoris_container{
-   padding: oe_rem(15px) 0;  
+   padding: oe_rem(15px) 0; 
+   @include oe_box-shadow-light;
    background-color: $second_main_color;
    ul{
       font-size: oe_rem(20px);
