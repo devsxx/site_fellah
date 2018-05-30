@@ -347,7 +347,7 @@ blockquote {
 }
 
 .posts-navigation{
-	padding-top: oe_rem(40px);
+	padding: oe_rem(40px) 0;
 	.nav-links{	
 		font-size: oe_rem(18px);
 		@include flex(center, space-between, row);

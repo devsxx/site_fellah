@@ -1,7 +1,8 @@
 
 .site-footer { 
-	background-color: $second_main_color;
+	@include oe_box-shadow;
 	padding: oe_rem(10px) 0;
+	background-color: $second_main_color;
 	.site-info{
 		min-height: oe_rem(70px);
 		@include flex(center, flex-start, row);
