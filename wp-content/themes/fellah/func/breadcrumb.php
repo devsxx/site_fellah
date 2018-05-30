@@ -225,7 +225,7 @@ function the_breadcrumb() {
           } else if ( is_search() ) {
              
               // Search results page
-              echo '<span class="item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">Search results for: ' . get_search_query() . '</strong></span>';
+              echo '<span class="item-current item-current-' . get_search_query() . '"><strong class="bread-current bread-current-' . get_search_query() . '" title="Search results for: ' . get_search_query() . '">' . __('Search results for: ','fellah') . get_search_query() . '</strong></span>';
              
           } elseif ( is_404() ) {
                  
