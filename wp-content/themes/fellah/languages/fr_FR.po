@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2018-05-30 14:48+0000\n"
-"PO-Revision-Date: 2018-05-30 14:49+0000\n"
+"PO-Revision-Date: 2018-05-30 16:43+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -522,7 +522,7 @@ msgstr "Actualités de FELLAH"
 #: search.php:28
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Résultats de recherche pour: %s"
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
 #: template-parts/content-page.php:24 template-parts/content.php:55
