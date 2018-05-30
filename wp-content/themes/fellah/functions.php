@@ -199,7 +199,7 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 });
 
-function custom_excerpt_length( $length ) { return 33; }
+function custom_excerpt_length( $length ) { return 30; }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 

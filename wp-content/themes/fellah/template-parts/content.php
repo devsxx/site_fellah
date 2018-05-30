@@ -14,11 +14,19 @@
 			<div class="col-md-8">
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				
+					<?php if ( 'post' === get_post_type() ) : ?>
+						<?php fellah_post_thumbnail(); ?>
+					<?php endif; ?>
+
 					<header class="post-header">
-						<?php the_title( '<h1 class="page_titre">', '</h1>' );  
-								if ( 'post' === get_post_type() ) : ?>
+						<?php the_title( '<h1 class="blog_titre">', '</h1>' );  
+							if ( 'post' === get_post_type() ) : ?>
 							<div class="entry-meta">
-								<?php //echo get_the_date('j.m.y'); ?>
+                        <div class="date">
+                              <i class="far fa-calendar-plus"></i>
+                              <?php echo get_the_date('j.m.Y'); ?>
+                        </div>
 								<div class="cats">
 										<i class="fa fa-folder"></i>
 										<?php echo get_the_term_list( $post->ID, 'category', '', ', ' ); ?>
@@ -27,7 +35,6 @@
 						<?php endif; ?>
 					</header><!-- .entry-header -->
 
-					<?php // 	fellah_post_thumbnail(); ?>
 
 					<div class="entry-content">
 						<?php

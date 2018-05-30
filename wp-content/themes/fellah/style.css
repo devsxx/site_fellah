@@ -12992,6 +12992,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 /* =WordPress Core
 -------------------------------------------------------------- */
+*:focus {
+  outline: none;
+}
+
 h1.entry-title {
   text-align: center;
   margin-bottom: 25px;
@@ -15650,6 +15654,11 @@ form textarea {
   }
 }
 
+.page_blog .blog_titre {
+  font-size: 1.8125rem;
+  font-weight: 500;
+}
+
 .page_blog .actu .bloc {
   display: -ms-grid;
   display: grid;
@@ -15711,6 +15720,7 @@ form textarea {
 }
 
 .page_blog .post-header .entry-meta {
+  font-size: 0.875rem;
   padding: 1.875rem 0 0.625rem;
   display: -ms-flexbox;
   display: flex;
@@ -15762,12 +15772,12 @@ form textarea {
 }
 
 .sidebare_titre i {
+  font-size: 1.25rem;
   color: #007e1d;
 }
 
 .categoris_container {
   padding: 0.9375rem 0;
-  margin-bottom: 0.9375rem;
   background-color: #e5e5e5;
 }
 
@@ -15783,6 +15793,50 @@ form textarea {
 
 .categoris_container ul li a:hover {
   color: #007e1d;
+}
+
+.search_container .sidebare_titre {
+  padding: 2.5rem 0;
+}
+
+.search_container form {
+  position: relative;
+}
+
+.search_container form label {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.search_container form input {
+  width: 100%;
+  font-size: 0.875rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  border-radius: 0.25rem;
+  border: 1px solid #dbdbdb;
+  margin: 0;
+}
+
+.search_container form input[type='submit'] {
+  cursor: pointer;
+  font-size: 0;
+  max-width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  margin: 0;
+  color: #000;
+  background-color: white;
+  border: none;
+  padding: 0px !important;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  bottom: initial;
+  left: initial;
+  background: url("./img/icons/loop.png") 50% no-repeat transparent;
 }
 
 .adverts {

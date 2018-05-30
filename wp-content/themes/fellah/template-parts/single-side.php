@@ -23,11 +23,19 @@
 <div class="categoris">
       <div class="sidebare_titre">
             <i class="far fa-folder"></i>
-            <?php _e('Catégories','fellah'); ?>
+            <?php _e('Categories','fellah'); ?>
       </div>
       <div class="categoris_container">
             <ul>
             <?php wp_list_categories( array( 'depth' => 0 ) ); ?>
             </ul>
+      </div>
+ 
+      <div class="search_container"> 
+            <div class="sidebare_titre">
+                  <i class="fas fa-search"></i>
+                  <?php _e('Search an article','fellah'); ?>
+            </div>
+            <?php  get_search_form( true ) ?>
       </div>
 </div>

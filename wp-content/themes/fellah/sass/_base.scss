@@ -1,6 +1,8 @@
 /* =WordPress Core
 -------------------------------------------------------------- */
-
+*:focus {
+	outline: none;
+}
 
 h1.entry-title {
 	text-align: center;
