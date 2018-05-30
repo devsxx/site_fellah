@@ -31,7 +31,7 @@
                               <?php echo get_the_date('j.m.Y'); ?>
                         </div>
 								<div class="cats">
-										<i class="fa fa-folder"></i>
+										<i class="far fa-folder"></i>
 										<?php echo get_the_term_list( $post->ID, 'category', '', ', ' ); ?>
 								</div>
 							</div><!-- .entry-meta -->
@@ -52,19 +52,19 @@
 								)
 							),
 							get_the_title()
-						) );
-
-						wp_link_pages( array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fellah' ),
-							'after'  => '</div>',
-						) );
+						) ); 
 						?>
 					</div><!-- .entry-content -->
 	
 				</article><!-- #post-<?php the_ID(); ?> -->
 
 				<div class="posts-navigation">
-					<?php the_post_navigation(); ?> 
+					<?php 
+						the_post_navigation( array(
+							'prev_text'                  => __( '&laquo Previous', 'fellah' ),
+							'next_text'                  => __( 'Next &raquo', 'fellah' )
+						) ); 
+					?> 
 				</div>
 
 			</div>

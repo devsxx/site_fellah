@@ -13114,15 +13114,6 @@ a img.aligncenter {
   /* Above WP toolbar. */
 }
 
-body {
-  font-family: "Raleway", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.55;
-  color: #000;
-  background-color: #fff;
-}
-
 @media (max-width: 767px) {
   body {
     font-size: 1.25rem;
