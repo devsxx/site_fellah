@@ -57,7 +57,7 @@ function adext_contact_form( $post_id ) {
             "tag" => "input",
             "name" => "adverts_contact_form",
             "type" => "submit",
-            "value" => __( "Send Message", "adverts" ),
+            "value" => __( "Send", "fellah" ),
             "style" => "font-size:1.2em; margin-top:1em",
             "html" => null
         ),

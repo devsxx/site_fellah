@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-30 10:22+0000\n"
-"PO-Revision-Date: 2018-05-30 10:23+0000\n"
+"POT-Creation-Date: 2018-05-30 12:15+0000\n"
+"PO-Revision-Date: 2018-05-30 12:15+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -342,10 +342,10 @@ msgstr ""
 #: functions.php:144
 msgid ""
 "Add your photos to make your ad even more visible. You can download up to 3 "
-"images"
+"images."
 msgstr ""
 "Ajoutez vos photos pour rendre votre annonce encore plus visible. Vous "
-"pouvez télécharger 3 images maximum"
+"pouvez télécharger 3 images maximum."
 
 #: functions.php:307 functions.php:330 functions.php:331
 msgid "Publish Date"
@@ -359,7 +359,7 @@ msgstr "Le plus récent d'abord"
 msgid "Oldest First"
 msgstr "Le plus ancien en premier"
 
-#: functions.php:314 functions.php:810 wpadverts/single.php:92
+#: functions.php:314 functions.php:812 wpadverts/single.php:92
 msgid "Price"
 msgstr "Prix"
 
@@ -388,71 +388,75 @@ msgstr "De Z à A"
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: functions.php:476 functions.php:557
-msgid "Send Message"
-msgstr "Envoyer le message"
+#: functions.php:478
+msgid "Send"
+msgstr "Envoyer"
 
-#: functions.php:519
+#: functions.php:520
 msgid "Your message has been sent."
 msgstr "Votre message a été envoyé."
 
-#: functions.php:524
+#: functions.php:525
 msgid "There are errors in your form."
 msgstr "Il y a des erreurs dans votre formulaire."
 
-#: functions.php:564 wpadverts/single.php:98
+#: functions.php:558
+msgid "Send Message"
+msgstr "Envoyer le message"
+
+#: functions.php:565 wpadverts/single.php:98
 msgid "Phone"
 msgstr "Téléphone"
 
-#: functions.php:733
+#: functions.php:735
 msgid "Titre de l'annoce"
 msgstr "Titre de l'annoce"
 
-#: functions.php:752
+#: functions.php:754
 msgid "Phone *"
 msgstr "Téléphone *"
 
-#: functions.php:771
+#: functions.php:773
 msgid "E mail *"
 msgstr "E mail *"
 
-#: functions.php:790
+#: functions.php:792
 msgid "Description"
 msgstr "Description"
 
-#: functions.php:861
+#: functions.php:863
 msgid "Région et ville"
 msgstr ""
 
-#: functions.php:962 functions.php:1015
+#: functions.php:964 functions.php:1017
 msgid "Wrong username or password."
 msgstr ""
 
-#: functions.php:965 functions.php:1020
+#: functions.php:967 functions.php:1022
 msgid "Login successful"
 msgstr "Login successful"
 
-#: functions.php:1007
+#: functions.php:1009
 msgid "Can't login."
 msgstr ""
 
-#: functions.php:1024
+#: functions.php:1026
 msgid "User already exists.  Password inherited."
 msgstr "L'utilisateur existe déjà. Mot de passe hérité."
 
-#: functions.php:1223
+#: functions.php:1225
 msgid "wrong acces"
 msgstr ""
 
-#: functions.php:1224
+#: functions.php:1226
 msgid "You are connected"
 msgstr "Tu es connecté"
 
-#: functions.php:1376
+#: functions.php:1378
 msgid "Télephone"
 msgstr "Télephone"
 
-#: functions.php:1379
+#: functions.php:1381
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
@@ -460,19 +464,19 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:38
+#: header.php:39
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:55 header.php:61
+#: header.php:56 header.php:62
 msgid "My account"
 msgstr "Mon compte"
 
-#: header.php:69
+#: header.php:70
 msgid "Contact"
 msgstr "Contact"
 
-#: header.php:76
+#: header.php:77
 msgid "follow-us"
 msgstr "Suivez-nous"
 
@@ -615,7 +619,7 @@ msgstr ""
 msgid "Send my ad"
 msgstr "Envoyer mon annonce"
 
-#: wpadverts/categories-all.php:58 wpadverts/categories-top.php:25
+#: wpadverts/categories-all.php:57 wpadverts/categories-top.php:25
 msgid "No categories found."
 msgstr "Aucune catégorie trouvée."
 

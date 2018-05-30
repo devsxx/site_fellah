@@ -41,22 +41,26 @@
 			border-radius: oe_rem(4px);
 			padding: 0 oe_rem(25px);
 			@include flex(center, space-between, row);
-			input,
-			select{ 
-				color: $text_color;
-				font-size: oe_rem(19px); 
-				height: oe_rem(50px);
-				border-radius: oe_rem(4px);
-				padding: 0 oe_rem(14px);
-				margin: oe_rem(10px) 0 !important;
-				border: none;
-				&[type="submit"]{
-					background-color: $text_color;
-					padding: 0 oe_rem(25px);
-					color: #fff;
-				}
-				&[type="checkbox"]{
-					height: auto;
+			.advert-input{
+				width: 25%;
+				input,
+				select{ 
+					color: $text_color;
+					font-size: oe_rem(19px); 
+					height: oe_rem(50px);
+					border-radius: oe_rem(4px);
+					padding: 0 oe_rem(14px);
+					margin: oe_rem(10px) 0 !important;
+					border: none;
+					&[type="submit"]{
+						background-color: $text_color;
+						padding: 0 oe_rem(25px);
+						color: #fff;
+					}
+					&[type="checkbox"]{
+						height: auto;
+						margin: oe_rem(3px) oe_rem(5px) auto !important;
+					}
 				}
 			}
 			.adverts-form-submit{
@@ -65,9 +69,10 @@
 				line-height: oe_rem(50px);
 				border-radius: oe_rem(4px); 
 				border: none;
-				background-color: $text_color;
+				background: $text_color;
 				padding: 0 oe_rem(25px);
 				color: #fff;
+				text-transform: uppercase;
 			}
 		}
 		

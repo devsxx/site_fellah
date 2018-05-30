@@ -44,8 +44,8 @@
                             <?php if($switch_views || $allow_sorting): ?>
                                 <div class="adverts-options-left adverts-js">
                                     <?php if($switch_views): ?>
-                                    <a href="<?php echo esc_html( add_query_arg( "display", "grid" ) ) ?>" class="adverts-button-small adverts-switch-view" title="<?php esc_attr_e("Grid", "adverts") ?>"><span class="adverts-square-icon adverts-icon-th-large"></span></a>
-                                    <a href="<?php echo esc_html( add_query_arg( "display", "list" ) ) ?>" class="adverts-button-small adverts-switch-view" title="<?php esc_attr_e("List", "adverts") ?>"><span class="adverts-square-icon adverts-icon-th-list"></span></a>
+                                    <a href="<?php echo esc_html( add_query_arg( "display", "grid" ) ) ?>" class="adverts-button-small adverts-switch-view" title="<?php esc_attr_e("Grid", "fellah") ?>"><span class="adverts-square-icon adverts-icon-th-large"></span></a>
+                                    <a href="<?php echo esc_html( add_query_arg( "display", "list" ) ) ?>" class="adverts-button-small adverts-switch-view" title="<?php esc_attr_e("List", "fellah") ?>"><span class="adverts-square-icon adverts-icon-th-list"></span></a>
                                     <?php endif; ?>
                                     
                                     <?php if($allow_sorting): ?>
@@ -80,13 +80,13 @@
 
                             <div class="adverts-js">
                                 <?php if( !empty( $fields_hidden ) ): ?>
-                                <a href="#" class="adverts-form-filters adverts-button-small"><span><?php _e("Advanced Search", "adverts") ?> <span class="adverts-advanced-search-icon adverts-icon-down-open"></a>
+                                <a href="#" class="adverts-form-filters adverts-button-small"><span><?php _e("Advanced Search", "fellah") ?> <span class="adverts-advanced-search-icon adverts-icon-down-open"></a>
                                 <?php endif; ?>
-                                <a href="#" class="adverts-form-submit adverts-button-small"><?php _e("Search", "adverts") ?> <span class="adverts-icon-search"><span></a>
+                                <a href="#" class="adverts-form-submit adverts-button-small"><?php _e("Search", "fellah") ?> <span class="adverts-icon-search"><span></a>
                             </div>
 
                             <div class="adverts-options-fallback adverts-no-js">
-                                <input type="submit" value="<?php _e("Filter Results", "adverts") ?>" />
+                                <input type="submit" value="<?php _e("Filter Results", "fellah") ?>" />
                             </div>
                         </div>
                     </form>

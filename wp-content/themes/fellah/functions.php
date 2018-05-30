@@ -141,7 +141,7 @@ function fellah_scripts() {
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'redirecturl' => home_url(),
         'loadingmessage' => __('Sending user info, please wait...', 'fellah'),
-        'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 3 images', 'fellah')
+        'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 3 images.', 'fellah')
     ));
  
  
@@ -304,31 +304,31 @@ function shortcode_adverts_form_search( $atts ) {
 	// options: title, post_date, adverts_price
 	$sort_options = apply_filters( "adverts_list_sort_options", array(
 		 "date" => array(
-			  "label" => __("Publish Date", "adverts"),
+			  "label" => __("Publish Date", "fellah"),
 			  "items" => array(
-					"date-desc" => __("Newest First", "adverts"),
-					"date-asc" => __("Oldest First", "adverts")
+					"date-desc" => __("Newest First", "fellah"),
+					"date-asc" => __("Oldest First", "fellah")
 			  )
 		 ),
 		 "price" => array(
-			  "label" => __("Price", "adverts"),
+			  "label" => __("Price", "fellah"),
 			  "items" => array(
-					"price-asc" => __("Cheapest First", "adverts"),
-					"price-desc" => __("Most Expensive First", "adverts")
+					"price-asc" => __("Cheapest First", "fellah"),
+					"price-desc" => __("Most Expensive First", "fellah")
 			  )
 		 ),
 		 "title" => array(
-			  "label" => __("Title", "adverts"),
+			  "label" => __("Title", "fellah"),
 			  "items" => array(
-					"title-asc" => __("From A to Z", "adverts"),
-					"title-desc" => __("From Z to A", "adverts")
+					"title-asc" => __("From A to Z", "fellah"),
+					"title-desc" => __("From Z to A", "fellah")
 			  )
 		 )
 	) );
 	
 	$sarr = explode("-", $adverts_sort);
-	$sort_current_text = __("Publish Date", "adverts");
-	$sort_current_title = sprintf( __( "Sort By: %s - %s", "adverts"), __("Publish Date", "adverts"), __("Newest First", "adverts") );
+	$sort_current_text = __("Publish Date", "fellah");
+	$sort_current_title = sprintf( __( "Sort By: %s - %s", "fellah"), __("Publish Date", "fellah"), __("Newest First", "fellah") );
 	
 	if( isset( $sarr[1] ) && isset( $sort_options[$sarr[0]]["items"][$adverts_sort] ) ) {
 
@@ -358,7 +358,7 @@ function shortcode_adverts_form_search( $atts ) {
 
 		 $sort_current_text = $sort_options[$sort_key]["label"] ;
 		 $s_descr = $sort_options[$sort_key]["items"][$adverts_sort];
-		 $sort_current_title = sprintf( __( "Sort By: %s - %s", "adverts"), $sort_current_text, $s_descr );
+		 $sort_current_title = sprintf( __( "Sort By: %s - %s", "fellah"), $sort_current_text, $s_descr );
 	} else {
 		 $adverts_sort = $order_by;
 		 $orderby["date"] = "desc"; 
@@ -451,10 +451,12 @@ function shortcode_adverts_form_search( $atts ) {
 	return ob_get_clean();
 }
 
-remove_action('adverts_tpl_single_bottom', 'adext_contact_form');
-remove_action('adverts_tpl_single_bottom', 'adverts_single_contact_information');
+// remove_action( 'adverts_tpl_single_bottom', 'adverts_single_contact_information' );
+// remove_action( 'adverts_tpl_single_bottom', 'adext_contact_form' );
+// remove_action( 'adverts_tpl_single_bottom', 'adext_bp_send_private_message_button', 50 );
+ 
 
-//add_action('adverts_tpl_single_bottom', '_adext_contact_form_custom');
+// add_action('adverts_tpl_single_bottom', '_adext_contact_form_custom');
 function _adext_contact_form_custom( $post_id ) {
 
 	include_once ADVERTS_PATH . 'includes/class-form.php';
@@ -473,7 +475,7 @@ function _adext_contact_form_custom( $post_id ) {
 				"tag" => "input",
 				"name" => "adverts_contact_form",
 				"type" => "submit",
-				"value" => __( "Send Message", "adverts" ),
+				"value" => __( "Send", "fellah" ),
 				"style" => "font-size:1.2em; margin-top:1em",
 				"html" => null
 			),
@@ -493,7 +495,6 @@ function _adext_contact_form_custom( $post_id ) {
 				if( $form->get_value( "message_name" ) ) {
 					$reply_to = $form->get_value( "message_name" ) . "<$reply_to>";
 				}
-				
 				$mail = array(
 					"to" => get_post_meta( $post_id, "adverts_email", true ),
 					"subject" => $form->get_value( "message_subject" ),
@@ -516,12 +517,12 @@ function _adext_contact_form_custom( $post_id ) {
 				$form->bind( array() );
 				
 				$flash["info"][] = array(
-					"message" => __( "Your message has been sent.", "adverts" ),
+					"message" => __( "Your message has been sent.", "fellah" ),
 					"icon" => "adverts-icon-ok"
 				);
 			} else {
 				$flash["error"][] = array(
-					"message" => __( "There are errors in your form.", "adverts" ),
+					"message" => __( "There are errors in your form.", "fellah" ),
 					"icon" => "adverts-icon-attention-alt"
 				);
 				$show_form = true; 
@@ -554,14 +555,14 @@ function _adext_contact_form_custom( $post_id ) {
 				<div class="adverts-single-actions">
 					<?php if( ! empty( $email ) ): ?>
 					<a href="#" class="adverts-button adverts-show-contact-form">
-						<?php esc_html_e("Send Message", "adverts") ?>
+						<?php esc_html_e("Send Message", "fellah") ?>
 						<span class="adverts-icon-down-open"></span>
 					</a>
 					<?php endif; ?>
 					
 					<?php if( adverts_config( "contact_form.show_phone") == "1" && ! empty( $phone ) ): ?>
 					<span class="adverts-button" style="background-color: transparent; cursor: auto">
-						<?php esc_html_e( "Phone", "adverts" ) ?>
+						<?php esc_html_e( "Phone", "fellah" ) ?>
 						<a href="tel:<?php echo esc_html( $phone ) ?>"><?php echo esc_html( $phone ) ?></a>
 						<span class="adverts-icon-phone"></span>
 					</span>
@@ -572,10 +573,11 @@ function _adext_contact_form_custom( $post_id ) {
 	</div>
 
 	<?php if( ! empty( $email ) ): ?>
-	<div class="adverts-contact-box" <?php if($show_form): ?>style="display: block"<?php endif ?>>
+	<div class="adverts-contact-box <?php echo $email; ?>" <?php  if($show_form): ?>style="display: block"<?php endif ?>>
 			<?php include apply_filters( "adverts_template_load", ADVERTS_PATH . 'templates/form.php' ) ?>
 	</div>
-	<?php endif; ?>
+	<?php endif;
+	?>
 
 	<?php
 }

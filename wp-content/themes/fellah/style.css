@@ -13777,8 +13777,12 @@ form textarea {
   flex-direction: row;
 }
 
-.header_bandeau_content .header_bandeau .search_zone input,
-.header_bandeau_content .header_bandeau .search_zone select {
+.header_bandeau_content .header_bandeau .search_zone .advert-input {
+  width: 25%;
+}
+
+.header_bandeau_content .header_bandeau .search_zone .advert-input input,
+.header_bandeau_content .header_bandeau .search_zone .advert-input select {
   color: #007e1d;
   font-size: 1.1875rem;
   height: 3.125rem;
@@ -13788,16 +13792,17 @@ form textarea {
   border: none;
 }
 
-.header_bandeau_content .header_bandeau .search_zone input[type="submit"],
-.header_bandeau_content .header_bandeau .search_zone select[type="submit"] {
+.header_bandeau_content .header_bandeau .search_zone .advert-input input[type="submit"],
+.header_bandeau_content .header_bandeau .search_zone .advert-input select[type="submit"] {
   background-color: #007e1d;
   padding: 0 1.5625rem;
   color: #fff;
 }
 
-.header_bandeau_content .header_bandeau .search_zone input[type="checkbox"],
-.header_bandeau_content .header_bandeau .search_zone select[type="checkbox"] {
+.header_bandeau_content .header_bandeau .search_zone .advert-input input[type="checkbox"],
+.header_bandeau_content .header_bandeau .search_zone .advert-input select[type="checkbox"] {
   height: auto;
+  margin: 0.1875rem 0.3125rem auto !important;
 }
 
 .header_bandeau_content .header_bandeau .search_zone .adverts-form-submit {
@@ -13806,9 +13811,10 @@ form textarea {
   line-height: 3.125rem;
   border-radius: 0.25rem;
   border: none;
-  background-color: #007e1d;
+  background: #007e1d;
   padding: 0 1.5625rem;
   color: #fff;
+  text-transform: uppercase;
 }
 
 @media (max-width: 767px) {
@@ -16214,7 +16220,6 @@ div.adverts-flash-messages {
 
 .message_contact_form .adverts-form textarea {
   margin: 0 !important;
-  border: 1px solid #666666;
 }
 
 .adverts-category-all-main {
