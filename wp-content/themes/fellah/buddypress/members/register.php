@@ -18,6 +18,8 @@
 				<h5><?php _e('Already have an account ?', 'fellah'); ?></h5>
 						<br>
 				<?php wp_login_form(); ?>
+				
+				<a class="forgotPassword" href="<?php bloginfo( 'url' )?>/wp-login.php?action=lostpassword"><?php _e('Forgot your password ?','fellah'); ?></a>
 			</div>
 
 			<div class="offset-md-1 col-md-5">
@@ -437,7 +439,6 @@
 				do_action( 'bp_after_register_page' ); ?>
 
 
-				<a class="forgotPassword" href="<?php bloginfo( 'url' )?>/wp-login.php?action=lostpassword"><?php _e('Forgot your password ?','fellah'); ?></a>
 			</div>
 			
 		</div>

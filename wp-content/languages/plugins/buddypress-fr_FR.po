@@ -2,14 +2,17 @@
 # This file is distributed under the same license as the Plugins - BuddyPress - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-05-03 11:12:30+0000\n"
+"PO-Revision-Date: 2018-05-30 13:28+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"X-Generator: Poedit 2.0.7\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - BuddyPress - Stable (latest release)\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #. Description of the plugin/theme
 msgid "BuddyPress adds community features to WordPress. Member Profiles, Activity Streams, Direct Messaging, Notifications, and more!"
@@ -2647,9 +2650,7 @@ msgstr "Une erreur s&#39;est produite pendant l&#39;envoi de la réponse. Veuill
 msgid "The BuddyPress Community"
 msgstr "La communauté BuddyPress"
 
-#. #-#-#-#-#  buddypress-code.pot (BuddyPress 2.9.4)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-#. #-#-#-#-#  buddypress-code.pot (BuddyPress 2.9.4)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "https://buddypress.org/"
 msgstr "https://buddypress.org/"
@@ -3483,7 +3484,7 @@ msgstr "Ce champ peut être vu par : <span class=\"current-visibility-level\">%s
 #: bp-templates/bp-legacy/buddypress/members/register.php:164
 #: bp-themes/bp-default/registration/register.php:67
 msgid "Profile Details"
-msgstr "Informations sur le Profil"
+msgstr "Informations sur le profil"
 
 #: bp-templates/bp-legacy/buddypress/members/register.php:118
 #: bp-themes/bp-default/registration/register.php:49
@@ -8802,7 +8803,6 @@ msgstr "D&eacute;connect&eacute;"
 msgid "Logged-In"
 msgstr "Connect&eacute;"
 
-#. #-#-#-#-#  buddypress-code.pot (BuddyPress 2.9.4)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: bp-core/admin/bp-core-admin-functions.php:758
 #: bp-core/classes/class-bp-admin.php:222
