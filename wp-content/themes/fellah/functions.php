@@ -860,7 +860,7 @@ function my_adverts_form_load( $form ) {
 		"type" => "adverts_field_checkbox",
 		"class"  => "checkbox_2",
 		"name" => "localisation",
-		"label" => __('Région et ville', 'fellah'),
+		"label" => __('Region and city', 'fellah'),
 		"meta" => array(
 			"cf_builtin" => "",
 			"cf_saved" => 1,

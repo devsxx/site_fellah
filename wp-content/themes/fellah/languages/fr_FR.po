@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-30 12:15+0000\n"
-"PO-Revision-Date: 2018-05-30 12:15+0000\n"
+"POT-Creation-Date: 2018-05-30 14:48+0000\n"
+"PO-Revision-Date: 2018-05-30 14:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -27,129 +27,117 @@ msgstr ""
 msgid "Already have an account ?"
 msgstr "Vous avez déjà un compte ?"
 
-#: buddypress/members/register.php:55
+#: buddypress/members/register.php:22
+msgid "Forgot your password ?"
+msgstr "Mot de passe oublié ?"
+
+#: buddypress/members/register.php:57
 msgid "User registration is currently not allowed."
 msgstr "Les nouvelles inscriptions ne sont pas autorisées pour l’instant."
 
-#: buddypress/members/register.php:77
+#: buddypress/members/register.php:79
 msgid "Create an account. Simple and free !"
 msgstr "Créer un compte. Simple et gratuit !"
 
-#: buddypress/members/register.php:96
+#: buddypress/members/register.php:98
 msgid "Profile Details"
 msgstr "Détails du profil"
 
-#: buddypress/members/register.php:120 buddypress/members/register.php:142
+#: buddypress/members/register.php:122 buddypress/members/register.php:144
 #: buddypress/members/single/profile/edit.php:59
 #: buddypress/members/single/profile/edit.php:78
 #, php-format
 msgid "This field can be seen by: %s"
-msgstr ""
+msgstr "Ce champ peut être vu par: %s"
 
-#: buddypress/members/register.php:125
-#: buddypress/members/single/profile/edit.php:64
-msgid "Change"
-msgstr "Changer"
-
-#: buddypress/members/register.php:130
+#: buddypress/members/register.php:132
 #: buddypress/members/single/profile/edit.php:68
 msgid "Who can see this field?"
 msgstr "Qui peut voir ce champ?"
 
-#: buddypress/members/register.php:135
+#: buddypress/members/register.php:137
 #: buddypress/members/single/profile/edit.php:72
 msgid "Close"
 msgstr "Fermer"
 
-#: buddypress/members/register.php:203
+#: buddypress/members/register.php:205
 msgid "Blog Details"
 msgstr "Détails du blog"
 
-#: buddypress/members/register.php:205
+#: buddypress/members/register.php:207
 msgid "Yes, I'd like to create a new site"
-msgstr ""
+msgstr "Oui, je veux créer un nouveau blog"
 
-#: buddypress/members/register.php:209
+#: buddypress/members/register.php:211
 msgid "Blog URL"
-msgstr ""
+msgstr "Blog URL"
 
-#: buddypress/members/register.php:209 buddypress/members/register.php:225
-#: buddypress/members/register.php:287 buddypress/members/register.php:298
-#: buddypress/members/register.php:309 buddypress/members/register.php:321
+#: buddypress/members/register.php:211 buddypress/members/register.php:227
+#: buddypress/members/register.php:289 buddypress/members/register.php:300
+#: buddypress/members/register.php:311 buddypress/members/register.php:323
 msgid "(required)"
-msgstr ""
+msgstr "(obligatoire)"
 
-#: buddypress/members/register.php:225
+#: buddypress/members/register.php:227
 msgid "Site Title"
 msgstr "Titre du site"
 
-#: buddypress/members/register.php:236
+#: buddypress/members/register.php:238
 msgid ""
 "Privacy: I would like my site to appear in search engines, and in public "
 "listings around this network."
 msgstr ""
+"Vie privée&nbsp;:&nbsp;Je souhaite que mon blog apparaisse dans les moteurs "
+"de recherche et sur les listes publiques de ce réseau."
 
-#: buddypress/members/register.php:246 wpadverts/manage.php:68
+#: buddypress/members/register.php:248 wpadverts/manage.php:68
 msgid "Yes"
 msgstr "Oui"
 
-#: buddypress/members/register.php:247
+#: buddypress/members/register.php:249
 msgid "No"
 msgstr ""
 
-#: buddypress/members/register.php:285
+#: buddypress/members/register.php:287
 msgid "Account Details"
 msgstr "Details du compte"
 
-#: buddypress/members/register.php:287
+#: buddypress/members/register.php:289
 msgid "Username"
 msgstr "Nom d&rsquo;utilisateur"
 
-#: buddypress/members/register.php:298
+#: buddypress/members/register.php:300
 msgid "Email Address"
 msgstr "Adresse e-mail"
 
-#: buddypress/members/register.php:309
+#: buddypress/members/register.php:311
 msgid "Choose a Password"
 msgstr "Choisissez un mot de passe"
 
-#: buddypress/members/register.php:321
+#: buddypress/members/register.php:323
 msgid "Confirm Password"
 msgstr "Confirmez le mot de passe"
 
-#: buddypress/members/register.php:363
-msgid "Create my account"
-msgstr "Créer mon compte"
-
-#: buddypress/members/register.php:400
+#: buddypress/members/register.php:402
 msgid ""
 "You have successfully created your account! To begin using this site you "
 "will need to activate your account via the email we have just sent to your "
 "address."
 msgstr ""
+"Vous venez de créer votre compte. Vous devez maintenant l'activer en "
+"utilisant le lien qui se trouve dans le mail que nous venons de vous envoyer."
 
-#: buddypress/members/register.php:402
+#: buddypress/members/register.php:404
 msgid ""
 "You have successfully created your account! Please log in using the username "
 "and password you have just created."
 msgstr ""
-
-#: buddypress/members/register.php:440
-msgid "Forgot your password ?"
-msgstr "Mot de passe oublié ?"
-
-#: buddypress/members/single/home.php:41
-msgid "Member primary navigation"
-msgstr ""
-
-#: buddypress/members/single/plugins.php:22
-#: buddypress/members/single/profile.php:12
-msgid "Member secondary navigation"
-msgstr ""
+"Votre compte est activ&eacute;. Vous pouvez vous connecter en utilisant les "
+"identifiants que vous avez indiqué lors de votre inscription."
 
 #: buddypress/members/single/profile/change-avatar.php:12
 msgid "Change Profile Photo"
-msgstr ""
+msgstr "Ma photo"
 
 #: buddypress/members/single/profile/change-avatar.php:25
 msgid ""
@@ -158,26 +146,30 @@ msgid ""
 "account email we will use that, or you can upload an image from your "
 "computer."
 msgstr ""
+"La photo est affichée sur votre profil et l'ensemble le site. Si vous "
+"utilisez <a href=\"http://gravatar.com\">Gravatar</a> avec le mail que vous "
+"avez indiqué lors de votre inscription, il sera affich&eacute;. Sinon vous "
+"pouvez télécharger une image de votre choix depuis votre ordinateur."
 
 #: buddypress/members/single/profile/change-avatar.php:32
 msgid ""
 "Click below to select a JPG, GIF or PNG format photo from your computer and "
 "then click 'Upload Image' to proceed."
 msgstr ""
+"Sélectionnez une photo au format JPG, GIF ou PNG sur votre ordinateur puis "
+"cliquez sur \"Télécharger\"."
 
 #: buddypress/members/single/profile/change-avatar.php:37
 msgid "Select an image"
-msgstr ""
-
-#: buddypress/members/single/profile/change-avatar.php:40
-msgid "Upload Image"
-msgstr ""
+msgstr "Sélectionner une image"
 
 #: buddypress/members/single/profile/change-avatar.php:45
 msgid ""
 "If you'd like to delete your current profile photo but not upload a new one, "
 "please use the delete profile photo button."
 msgstr ""
+"Pour définitivement supprimer une photo existante, mais ne pas en "
+"télécharger une nouvelle, cliquez sur Supprimer."
 
 #: buddypress/members/single/profile/change-avatar.php:46
 msgid "Delete My Profile Photo"
@@ -185,19 +177,7 @@ msgstr "Supprimer mon profil Photo"
 
 #: buddypress/members/single/profile/change-avatar.php:53
 msgid "Crop Your New Profile Photo"
-msgstr ""
-
-#: buddypress/members/single/profile/change-avatar.php:55
-msgid "Profile photo to crop"
-msgstr ""
-
-#: buddypress/members/single/profile/change-avatar.php:58
-msgid "Profile photo preview"
-msgstr ""
-
-#: buddypress/members/single/profile/change-avatar.php:61
-msgid "Crop Image"
-msgstr ""
+msgstr "Retailler la nouvelle photo du profil"
 
 #: buddypress/members/single/profile/change-avatar.php:85
 msgid ""
@@ -206,29 +186,23 @@ msgid ""
 "gravatar.com\">Gravatar</a> using the same email address as you used to "
 "register with this site."
 msgstr ""
+"Votre photo de profil sera utilisée sur votre profil et l'ensemble du site.  "
+"Pour modifier votre photo, veuillez créer un compte chez <a href=\"https://"
+"gravatar.com\">Gravatar</a> en indiquant la même adresse e-mail que celle "
+"utilisée lors de votre inscription sur ce site."
 
 #: buddypress/members/single/profile/change-cover-image.php:12
 msgid "Change Cover Image"
-msgstr ""
+msgstr "Modifier l'en-tête"
 
 #: buddypress/members/single/profile/change-cover-image.php:23
 msgid "Your Cover Image will be used to customize the header of your profile."
-msgstr ""
+msgstr "L'image personnalisera l'en-tête de votre profil."
 
 #: buddypress/members/single/profile/edit.php:27
 #, php-format
 msgid "Editing '%s' Profile Group"
-msgstr ""
-
-#: buddypress/members/single/profile/edit.php:30
-msgid "Profile field groups"
-msgstr "Détails du profil"
-
-#: buddypress/members/single/profile/edit.php:104
-#, fuzzy
-#| msgid "Change"
-msgid "Save Changes"
-msgstr "Changer"
+msgstr "Modification des champs du groupe : %s"
 
 #: buddypress/members/single/profile/profile-wp.php:29
 msgid "My Profile"
@@ -237,7 +211,7 @@ msgstr "Mon profil"
 #: buddypress/members/single/profile/profile-wp.php:29
 #, php-format
 msgid "%s's Profile"
-msgstr ""
+msgstr "Profil de %s"
 
 #: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:116
 msgid "Name"
@@ -245,7 +219,7 @@ msgstr "Nom"
 
 #: buddypress/members/single/profile/profile-wp.php:45
 msgid "About Me"
-msgstr ""
+msgstr "Qui suis-je ?"
 
 #: buddypress/members/single/profile/profile-wp.php:54
 msgid "Website"
@@ -253,15 +227,15 @@ msgstr "Site web"
 
 #: buddypress/members/single/profile/profile-wp.php:63
 msgid "Jabber"
-msgstr ""
+msgstr "Jabber"
 
 #: buddypress/members/single/profile/profile-wp.php:72
 msgid "AOL Messenger"
-msgstr ""
+msgstr "AOL Messenger"
 
 #: buddypress/members/single/profile/profile-wp.php:81
 msgid "Yahoo Messenger"
-msgstr ""
+msgstr "Yahoo Messenger"
 
 #: comments.php:35
 #, php-format
@@ -349,7 +323,7 @@ msgstr ""
 
 #: functions.php:307 functions.php:330 functions.php:331
 msgid "Publish Date"
-msgstr ""
+msgstr "Date de publication"
 
 #: functions.php:309 functions.php:331
 msgid "Newest First"
@@ -425,8 +399,8 @@ msgid "Description"
 msgstr "Description"
 
 #: functions.php:863
-msgid "Région et ville"
-msgstr ""
+msgid "Region and city"
+msgstr "Région et ville"
 
 #: functions.php:964 functions.php:1017
 msgid "Wrong username or password."
@@ -460,23 +434,23 @@ msgstr "Télephone"
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
-#: header.php:24
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:39
+#: header.php:40
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:56 header.php:62
+#: header.php:57 header.php:63
 msgid "My account"
 msgstr "Mon compte"
 
-#: header.php:70
+#: header.php:71
 msgid "Contact"
 msgstr "Contact"
 
-#: header.php:77
+#: header.php:78
 msgid "follow-us"
 msgstr "Suivez-nous"
 
@@ -517,7 +491,7 @@ msgstr ""
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: index.php:27 template-parts/single-side.php:26
+#: index.php:27
 msgid "Catégories"
 msgstr "Catégories"
 
@@ -545,13 +519,13 @@ msgstr ""
 msgid "Actualités de FELLAH"
 msgstr "Actualités de FELLAH"
 
-#: search.php:22
+#: search.php:28
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
-#: template-parts/content-page.php:24 template-parts/content.php:48
+#: template-parts/content-page.php:24 template-parts/content.php:55
 msgid "Pages:"
 msgstr "Pages:"
 
@@ -582,10 +556,18 @@ msgstr ""
 "Il semble que nous ne puissions pas trouver ce que vous cherchez. Peut-être "
 "que la recherche peut aider."
 
-#: template-parts/content.php:37
+#: template-parts/content.php:44
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
+
+#: template-parts/single-side.php:26
+msgid "Categories"
+msgstr "Catégories"
+
+#: template-parts/single-side.php:37
+msgid "Search an article"
+msgstr "Rechercher un article"
 
 #: templates/news_agricoles.php:20
 msgid "Actualités"
@@ -593,7 +575,7 @@ msgstr "Actualités"
 
 #: templates/news_agricoles.php:49
 msgid "Sorry, no posts matched your criteria."
-msgstr ""
+msgstr "Aucun message ne correspond à vos critères de recherche. "
 
 #: wpadverts/add-preview.php:11
 msgid "Edit Listing"
@@ -601,12 +583,14 @@ msgstr "Modifier la liste"
 
 #: wpadverts/add-preview.php:17
 msgid "Publish Listing"
-msgstr ""
+msgstr "Publier une liste"
 
 #: wpadverts/add-save.php:5
 msgid ""
 "Your ad has been put into moderation, please wait for admin to approve it."
 msgstr ""
+"Votre petite annonce a été mis en modération, veuillez attendre que "
+"l'administrateur l'ait approuvé."
 
 #: wpadverts/add-save.php:7
 #, php-format
@@ -614,6 +598,8 @@ msgid ""
 "Your ad has been published. You can view it here \"<a href=\"%1$s\">%2$s</a>"
 "\"."
 msgstr ""
+"Votre annonce a été publiée. Vous pouvez la visionner ici \"<a href=\"%1$s\">"
+"%2$s</a>\"."
 
 #: wpadverts/add.php:81
 msgid "Send my ad"
@@ -622,14 +608,6 @@ msgstr "Envoyer mon annonce"
 #: wpadverts/categories-all.php:57 wpadverts/categories-top.php:25
 msgid "No categories found."
 msgstr "Aucune catégorie trouvée."
-
-#: wpadverts/form_search.php:47 wpadverts/list.php:58
-msgid "Grid"
-msgstr ""
-
-#: wpadverts/form_search.php:48 wpadverts/list.php:59
-msgid "List"
-msgstr ""
 
 #: wpadverts/form_search.php:83 wpadverts/list.php:94
 msgid "Advanced Search"
@@ -641,7 +619,7 @@ msgstr "Chercher"
 
 #: wpadverts/form_search.php:89 wpadverts/list.php:100
 msgid "Filter Results"
-msgstr ""
+msgstr "Filtrer les résultats"
 
 #: wpadverts/list.php:121
 #, php-format
@@ -650,11 +628,11 @@ msgstr ""
 
 #: wpadverts/list.php:147
 msgid "There are no ads matching your search criteria."
-msgstr ""
+msgstr "Il n'y a pas d'annonce correspondant à vos critères de recherche."
 
 #: wpadverts/manage-edit.php:3
 msgid "Go Back"
-msgstr ""
+msgstr "Retour"
 
 #: wpadverts/manage-edit.php:4
 msgid "View Ad"
@@ -721,6 +699,42 @@ msgstr "Région"
 #: wpadverts/single.php:197
 msgid "Annonces similaires"
 msgstr "Annonces similaires"
+
+#~ msgid "Change"
+#~ msgstr "Changer"
+
+#~ msgid "Create my account"
+#~ msgstr "Créer mon compte"
+
+#~ msgid "Member primary navigation"
+#~ msgstr "Navigation principale du membre"
+
+#~ msgid "Member secondary navigation"
+#~ msgstr "Navigation secondaire de membre"
+
+#~ msgid "Upload Image"
+#~ msgstr "Télécharger l'image"
+
+#~ msgid "Profile photo to crop"
+#~ msgstr "Logo à retailler"
+
+#~ msgid "Profile photo preview"
+#~ msgstr "Prévisualisation du logo du groupe"
+
+#~ msgid "Crop Image"
+#~ msgstr "Retailler l&#39;avatar"
+
+#~ msgid "Profile field groups"
+#~ msgstr "Détails du profil"
+
+#~ msgid "Save Changes"
+#~ msgstr "Enregistrer les modifications"
+
+#~ msgid "Grid"
+#~ msgstr "la grille"
+
+#~ msgid "List"
+#~ msgstr "liste"
 
 #~ msgid "SEARCH"
 #~ msgstr "CHERCHER"

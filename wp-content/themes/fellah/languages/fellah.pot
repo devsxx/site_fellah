@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-30 12:15+0000\n"
+"POT-Creation-Date: 2018-05-30 14:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,114 +27,114 @@ msgstr ""
 msgid "Already have an account ?"
 msgstr ""
 
-#: buddypress/members/register.php:55
+#: buddypress/members/register.php:22
+msgid "Forgot your password ?"
+msgstr ""
+
+#: buddypress/members/register.php:57
 msgid "User registration is currently not allowed."
 msgstr ""
 
-#: buddypress/members/register.php:77
+#: buddypress/members/register.php:79
 msgid "Create an account. Simple and free !"
 msgstr ""
 
-#: buddypress/members/register.php:96
+#: buddypress/members/register.php:98
 msgid "Profile Details"
 msgstr ""
 
-#: buddypress/members/register.php:120 buddypress/members/register.php:142
+#: buddypress/members/register.php:122 buddypress/members/register.php:144
 #: buddypress/members/single/profile/edit.php:59
 #: buddypress/members/single/profile/edit.php:78
 #, php-format
 msgid "This field can be seen by: %s"
 msgstr ""
 
-#: buddypress/members/register.php:125
+#: buddypress/members/register.php:127
 #: buddypress/members/single/profile/edit.php:64
 msgid "Change"
 msgstr ""
 
-#: buddypress/members/register.php:130
+#: buddypress/members/register.php:132
 #: buddypress/members/single/profile/edit.php:68
 msgid "Who can see this field?"
 msgstr ""
 
-#: buddypress/members/register.php:135
+#: buddypress/members/register.php:137
 #: buddypress/members/single/profile/edit.php:72
 msgid "Close"
 msgstr ""
 
-#: buddypress/members/register.php:203
+#: buddypress/members/register.php:205
 msgid "Blog Details"
 msgstr ""
 
-#: buddypress/members/register.php:205
+#: buddypress/members/register.php:207
 msgid "Yes, I'd like to create a new site"
 msgstr ""
 
-#: buddypress/members/register.php:209
+#: buddypress/members/register.php:211
 msgid "Blog URL"
 msgstr ""
 
-#: buddypress/members/register.php:209 buddypress/members/register.php:225
-#: buddypress/members/register.php:287 buddypress/members/register.php:298
-#: buddypress/members/register.php:309 buddypress/members/register.php:321
+#: buddypress/members/register.php:211 buddypress/members/register.php:227
+#: buddypress/members/register.php:289 buddypress/members/register.php:300
+#: buddypress/members/register.php:311 buddypress/members/register.php:323
 msgid "(required)"
 msgstr ""
 
-#: buddypress/members/register.php:225
+#: buddypress/members/register.php:227
 msgid "Site Title"
 msgstr ""
 
-#: buddypress/members/register.php:236
+#: buddypress/members/register.php:238
 msgid ""
 "Privacy: I would like my site to appear in search engines, and in public "
 "listings around this network."
 msgstr ""
 
-#: buddypress/members/register.php:246 wpadverts/manage.php:68
+#: buddypress/members/register.php:248 wpadverts/manage.php:68
 msgid "Yes"
 msgstr ""
 
-#: buddypress/members/register.php:247
+#: buddypress/members/register.php:249
 msgid "No"
 msgstr ""
 
-#: buddypress/members/register.php:285
+#: buddypress/members/register.php:287
 msgid "Account Details"
 msgstr ""
 
-#: buddypress/members/register.php:287
+#: buddypress/members/register.php:289
 msgid "Username"
 msgstr ""
 
-#: buddypress/members/register.php:298
+#: buddypress/members/register.php:300
 msgid "Email Address"
 msgstr ""
 
-#: buddypress/members/register.php:309
+#: buddypress/members/register.php:311
 msgid "Choose a Password"
 msgstr ""
 
-#: buddypress/members/register.php:321
+#: buddypress/members/register.php:323
 msgid "Confirm Password"
 msgstr ""
 
-#: buddypress/members/register.php:363
+#: buddypress/members/register.php:365
 msgid "Create my account"
 msgstr ""
 
-#: buddypress/members/register.php:400
+#: buddypress/members/register.php:402
 msgid ""
 "You have successfully created your account! To begin using this site you will "
 "need to activate your account via the email we have just sent to your address."
 msgstr ""
 
-#: buddypress/members/register.php:402
+#: buddypress/members/register.php:404
 msgid ""
 "You have successfully created your account! Please log in using the username "
 "and password you have just created."
-msgstr ""
-
-#: buddypress/members/register.php:440
-msgid "Forgot your password ?"
 msgstr ""
 
 #: buddypress/members/single/home.php:41
@@ -419,7 +419,7 @@ msgid "Description"
 msgstr ""
 
 #: functions.php:863
-msgid "Région et ville"
+msgid "Region and city"
 msgstr ""
 
 #: functions.php:964 functions.php:1017
@@ -454,23 +454,23 @@ msgstr ""
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
-#: header.php:24
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:39
+#: header.php:40
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:56 header.php:62
+#: header.php:57 header.php:63
 msgid "My account"
 msgstr ""
 
-#: header.php:70
+#: header.php:71
 msgid "Contact"
 msgstr ""
 
-#: header.php:77
+#: header.php:78
 msgid "follow-us"
 msgstr ""
 
@@ -511,7 +511,7 @@ msgstr ""
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: index.php:27 template-parts/single-side.php:26
+#: index.php:27
 msgid "Catégories"
 msgstr ""
 
@@ -539,13 +539,13 @@ msgstr ""
 msgid "Actualités de FELLAH"
 msgstr ""
 
-#: search.php:22
+#: search.php:28
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
-#: template-parts/content-page.php:24 template-parts/content.php:48
+#: template-parts/content-page.php:24 template-parts/content.php:55
 msgid "Pages:"
 msgstr ""
 
@@ -570,9 +570,17 @@ msgid ""
 "can help."
 msgstr ""
 
-#: template-parts/content.php:37
+#: template-parts/content.php:44
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/single-side.php:26
+msgid "Categories"
+msgstr ""
+
+#: template-parts/single-side.php:37
+msgid "Search an article"
 msgstr ""
 
 #: templates/news_agricoles.php:20
