@@ -26,8 +26,7 @@
                             <?php
                                 $subs = get_terms( 'advert_category', array( 
                                     'hide_empty' => 0, 
-                                    'parent' => $term->term_id ,
-                                    'number' => $sub_count
+                                    'parent' => $term->term_id 
                                 ) );
                             ?>
                         

@@ -140,7 +140,8 @@ function fellah_scripts() {
 	wp_localize_script( 'script', 'ajax_login_object', array( 
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'redirecturl' => home_url(),
-        'loadingmessage' => __('Sending user info, please wait...')
+        'loadingmessage' => __('Sending user info, please wait...', 'fellah'),
+        'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 3 images', 'fellah')
     ));
  
  
@@ -857,7 +858,7 @@ function my_adverts_form_load( $form ) {
 		"type" => "adverts_field_checkbox",
 		"class"  => "checkbox_2",
 		"name" => "localisation",
-		"label" => "Localisation",
+		"label" => __('Région et ville', 'fellah'),
 		"meta" => array(
 			"cf_builtin" => "",
 			"cf_saved" => 1,
@@ -1110,7 +1111,7 @@ function adverts_field_login_or_subscribe( $field ) {
 			<div class="row">
 
 				<div class="col-md-12"> 
-					<label>Est ce que vous avez un compte?</label>
+					<label>Est-ce que vous avez un compte?</label>
 				</div>
 
 				<div class="col-md-4"> 

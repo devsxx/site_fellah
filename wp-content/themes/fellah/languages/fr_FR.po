@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-29 15:51+0000\n"
-"PO-Revision-Date: 2018-05-29 15:52+0000\n"
+"POT-Creation-Date: 2018-05-30 10:22+0000\n"
+"PO-Revision-Date: 2018-05-30 10:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -339,108 +339,120 @@ msgstr "Ajouter des widgets ici."
 msgid "Sending user info, please wait..."
 msgstr ""
 
-#: functions.php:306 functions.php:329 functions.php:330
+#: functions.php:144
+msgid ""
+"Add your photos to make your ad even more visible. You can download up to 3 "
+"images"
+msgstr ""
+"Ajoutez vos photos pour rendre votre annonce encore plus visible. Vous "
+"pouvez télécharger 3 images maximum"
+
+#: functions.php:307 functions.php:330 functions.php:331
 msgid "Publish Date"
 msgstr ""
 
-#: functions.php:308 functions.php:330
+#: functions.php:309 functions.php:331
 msgid "Newest First"
 msgstr "Le plus récent d'abord"
 
-#: functions.php:309
+#: functions.php:310
 msgid "Oldest First"
 msgstr "Le plus ancien en premier"
 
-#: functions.php:313 functions.php:809 wpadverts/single.php:92
+#: functions.php:314 functions.php:810 wpadverts/single.php:92
 msgid "Price"
 msgstr "Prix"
 
-#: functions.php:315
+#: functions.php:316
 msgid "Cheapest First"
 msgstr "Moins cher en premier"
 
-#: functions.php:316
+#: functions.php:317
 msgid "Most Expensive First"
 msgstr "Le plus cher en premier"
 
-#: functions.php:320
+#: functions.php:321
 msgid "Title"
 msgstr "Titre"
 
-#: functions.php:322
+#: functions.php:323
 msgid "From A to Z"
 msgstr "De A à Z"
 
-#: functions.php:323
+#: functions.php:324
 msgid "From Z to A"
 msgstr "De Z à A"
 
-#: functions.php:330 functions.php:360
+#: functions.php:331 functions.php:361
 #, php-format
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: functions.php:475 functions.php:556
+#: functions.php:476 functions.php:557
 msgid "Send Message"
 msgstr "Envoyer le message"
 
-#: functions.php:518
+#: functions.php:519
 msgid "Your message has been sent."
 msgstr "Votre message a été envoyé."
 
-#: functions.php:523
+#: functions.php:524
 msgid "There are errors in your form."
 msgstr "Il y a des erreurs dans votre formulaire."
 
-#: functions.php:563 wpadverts/single.php:98
+#: functions.php:564 wpadverts/single.php:98
 msgid "Phone"
 msgstr "Téléphone"
 
-#: functions.php:732
+#: functions.php:733
 msgid "Titre de l'annoce"
 msgstr "Titre de l'annoce"
 
-#: functions.php:751
+#: functions.php:752
 msgid "Phone *"
 msgstr "Téléphone *"
 
-#: functions.php:770
+#: functions.php:771
 msgid "E mail *"
 msgstr "E mail *"
 
-#: functions.php:789
+#: functions.php:790
 msgid "Description"
-msgstr "La description"
+msgstr "Description"
 
-#: functions.php:961 functions.php:1014
+#: functions.php:861
+msgid "Région et ville"
+msgstr ""
+
+#: functions.php:962 functions.php:1015
 msgid "Wrong username or password."
 msgstr ""
 
-#: functions.php:964 functions.php:1019
+#: functions.php:965 functions.php:1020
 msgid "Login successful"
 msgstr "Login successful"
 
-#: functions.php:1006
+#: functions.php:1007
 msgid "Can't login."
 msgstr ""
 
-#: functions.php:1023
+#: functions.php:1024
 msgid "User already exists.  Password inherited."
 msgstr "L'utilisateur existe déjà. Mot de passe hérité."
 
-#: functions.php:1222
+#: functions.php:1223
 msgid "wrong acces"
 msgstr ""
 
-#: functions.php:1223
+#: functions.php:1224
 msgid "You are connected"
 msgstr "Tu es connecté"
 
-#: functions.php:1375
+#: functions.php:1376
 msgid "Télephone"
 msgstr "Télephone"
 
-#: functions.php:1378
+#: functions.php:1379
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
@@ -521,7 +533,7 @@ msgstr "Nouveautés"
 msgid "Top annonces"
 msgstr "Top annonces"
 
-#: index.php:146 wpadverts/single.php:154
+#: index.php:146 wpadverts/single.php:200
 msgid "Lorem ipsum dolor sit amet consecteteur."
 msgstr ""
 
@@ -535,7 +547,7 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
-#: template-parts/content-page.php:28 template-parts/content.php:48
+#: template-parts/content-page.php:24 template-parts/content.php:48
 msgid "Pages:"
 msgstr "Pages:"
 
@@ -702,7 +714,7 @@ msgstr ""
 msgid "Region"
 msgstr "Région"
 
-#: wpadverts/single.php:151
+#: wpadverts/single.php:197
 msgid "Annonces similaires"
 msgstr "Annonces similaires"
 

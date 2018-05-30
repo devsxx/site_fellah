@@ -21,7 +21,7 @@
           .adverts-field-header-title { 
             font-size: oe_rem(18px);
             line-height: oe_rem(18px);
-            font-weight: 400;
+            font-weight: 500;
             text-transform: uppercase;
           }
         }
@@ -53,7 +53,7 @@
         .adverts-field-header-title { 
           font-size: oe_rem(29px);
           line-height: oe_rem(29px);
-          font-weight: 400;
+          font-weight: 500;
           text-transform: uppercase;
         }
       }
@@ -92,12 +92,28 @@
     }
 
     &.adverts-field-text{ 
+      &.adverts-field-name-adverts_phone{
+        label{
+          display: none !important;
+        }
+      }
+      &.adverts-field-name-adverts_email{
+        label{
+          display: none !important;
+        }
+      }
+      &.adverts-field-name-post_content{
+        label{
+          display: none !important;
+        }
+      }
       &.adverts-field-name-adverts_price{
         label{
           display: none !important;
         }
       }
     }
+ 
 
     &.adverts-field-name-prev_next{
       label{
@@ -431,4 +447,8 @@ div.adverts-flash-messages {
 .adverts-category-all-main{
   display: block !important;
   margin-bottom: oe_rem(10px);
+}
+
+.gallerymessage{
+  padding: oe_rem(15px) 0;
 }

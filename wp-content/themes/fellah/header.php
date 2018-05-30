@@ -24,58 +24,60 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'fellah' ); ?></a>
 
 		<header id="masthead" class="site-header">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2">
-						<div class="site-branding">
-							<a href="<?php bloginfo( 'url' ) ?>">
-								<img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png" alt="Fellah">
-							</a>
-						</div><!-- .site-branding -->
-					</div>
-					<div class="col-md-7">
-						<nav id="site-navigation" class="main-navigation">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fellah' ); ?></button>
-							<?php
-							wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							) );
-							?>
-						</nav><!-- #site-navigation -->
-					</div>
-					<div class="col-md-3"> 
-						<div class="header_picto_container">
-							<div class="header_picto">
-								<div class="compte">
-									<?php if(is_user_logged_in()){ ?>
-										<a href="<?php echo bp_loggedin_user_domain(); ?>">
-											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" class="first" alt="Fellah">
-											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte_hover.png" class="second" alt="Fellah">
-											<span><?php _e('My account','fellah'); ?></span>
+			<div class="site-header-container">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="site-branding">
+								<a href="<?php bloginfo( 'url' ) ?>">
+									<img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png" alt="Fellah">
+								</a>
+							</div><!-- .site-branding -->
+						</div>
+						<div class="col-md-7">
+							<nav id="site-navigation" class="main-navigation">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fellah' ); ?></button>
+								<?php
+								wp_nav_menu( array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								) );
+								?>
+							</nav><!-- #site-navigation -->
+						</div>
+						<div class="col-md-3"> 
+							<div class="header_picto_container">
+								<div class="header_picto">
+									<div class="compte">
+										<?php if(is_user_logged_in()){ ?>
+											<a href="<?php echo bp_loggedin_user_domain(); ?>">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" class="first" alt="Fellah">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte_hover.png" class="second" alt="Fellah">
+												<span><?php _e('My account','fellah'); ?></span>
+											</a>
+										<?php }else{ ?> 
+											<a href="<?php the_permalink( 2285 ) ?>">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" class="first" alt="Fellah">
+												<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte_hover.png" class="second" alt="Fellah">
+												<span><?php _e('My account','fellah'); ?></span>
+											</a>
+										<?php } ?>
+									</div>
+									<div class="compte">
+										<a href="<?php the_permalink( 2362 ) ?>">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact.png" class="first" alt="Fellah">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact_hover.png" class="second" alt="Fellah">
+											<span><?php _e('Contact','fellah'); ?></span>
 										</a>
-									<?php }else{ ?> 
-										<a href="<?php the_permalink( 2285 ) ?>">
-											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" class="first" alt="Fellah">
-											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte_hover.png" class="second" alt="Fellah">
-											<span><?php _e('My account','fellah'); ?></span>
+									</div>
+									<div class="compte">
+										<a href="https://www.facebook.com/FellahAnnonces/" target="_blank">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us.png" class="first" alt="Fellah">
+											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us_hover.png" class="second" alt="Fellah">
+											<span><?php _e('follow-us','fellah'); ?></span>
 										</a>
-									<?php } ?>
+									</div> 
 								</div>
-								<div class="compte">
-									<a href="<?php the_permalink( 2362 ) ?>">
-										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact.png" class="first" alt="Fellah">
-										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact_hover.png" class="second" alt="Fellah">
-										<span><?php _e('Contact','fellah'); ?></span>
-									</a>
-								</div>
-								<div class="compte">
-									<a href="https://www.facebook.com/FellahAnnonces/" target="_blank">
-										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us.png" class="first" alt="Fellah">
-										<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us_hover.png" class="second" alt="Fellah">
-										<span><?php _e('follow-us','fellah'); ?></span>
-									</a>
-								</div> 
 							</div>
 						</div>
 					</div>

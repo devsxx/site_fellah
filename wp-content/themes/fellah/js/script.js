@@ -60,8 +60,6 @@ jQuery(document).ready(function($) {
 		$('.suite').slideToggle();
 	});
 
-
-
 	$(document).on( 'scroll', function(){
 		if ($(window).scrollTop() > 100) {
 			 $('.GoToHeader').addClass('show');
@@ -70,7 +68,7 @@ jQuery(document).ready(function($) {
 		}
   });
 
-  $(document).on( 'scroll', function(){
+   $(document).on( 'scroll', function(){
   		if (window.matchMedia("(min-width: 992px)").matches) { 
 			if ($(window).scrollTop() > 100) {
 				$('#masthead').addClass('fixed');
@@ -388,6 +386,8 @@ jQuery(document).ready(function($) {
 		
 
 	});
+
+	$('.adverts-field-name-gallery').find('.row').append("<div class='col-md-6'><div class='gallerymessage'>" + ajax_login_object.GALLERYMESSAGE + "</div></div>");
 
 });
 
