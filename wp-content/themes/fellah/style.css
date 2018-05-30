@@ -15795,6 +15795,10 @@ form textarea {
   color: #007e1d;
 }
 
+.search_container {
+  margin-bottom: 1.25rem;
+}
+
 .search_container .sidebare_titre {
   padding: 2.5rem 0;
 }
