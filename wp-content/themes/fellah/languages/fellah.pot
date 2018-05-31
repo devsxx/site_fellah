@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-30 16:49+0000\n"
+"POT-Creation-Date: 2018-05-31 11:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -281,11 +281,11 @@ msgstr ""
 msgid "https://fellah.ma/"
 msgstr ""
 
-#: func/breadcrumb.php:223
+#: func/breadcrumb.php:211
 msgid "Page"
 msgstr ""
 
-#: func/breadcrumb.php:228
+#: func/breadcrumb.php:216
 msgid "Search results for: "
 msgstr ""
 
@@ -466,15 +466,15 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:57 header.php:63
+#: header.php:64 header.php:70
 msgid "My account"
 msgstr ""
 
-#: header.php:71
+#: header.php:78
 msgid "Contact"
 msgstr ""
 
-#: header.php:78
+#: header.php:85
 msgid "follow-us"
 msgstr ""
 
@@ -535,7 +535,7 @@ msgstr ""
 msgid "Top annonces"
 msgstr ""
 
-#: index.php:146 wpadverts/single.php:200
+#: index.php:146 wpadverts/single.php:196
 msgid "Lorem ipsum dolor sit amet consecteteur."
 msgstr ""
 
@@ -591,7 +591,7 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: template-parts/single-side.php:37
+#: template-parts/single-side.php:44
 msgid "Search an article"
 msgstr ""
 
@@ -651,12 +651,12 @@ msgstr ""
 msgid "Filter Results"
 msgstr ""
 
-#: wpadverts/list.php:121
+#: wpadverts/list.php:124
 #, php-format
 msgid " in %s"
 msgstr ""
 
-#: wpadverts/list.php:147
+#: wpadverts/list.php:150
 msgid "There are no ads matching your search criteria."
 msgstr ""
 
@@ -726,6 +726,6 @@ msgstr ""
 msgid "Region"
 msgstr ""
 
-#: wpadverts/single.php:197
+#: wpadverts/single.php:193
 msgid "Annonces similaires"
 msgstr ""

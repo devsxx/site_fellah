@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-30 16:50+0000\n"
-"PO-Revision-Date: 2018-05-30 16:50+0000\n"
+"POT-Creation-Date: 2018-05-31 11:48+0000\n"
+"PO-Revision-Date: 2018-05-31 11:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -49,6 +49,11 @@ msgstr "Détails du profil"
 #, php-format
 msgid "This field can be seen by: %s"
 msgstr "Ce champ peut être vu par: %s"
+
+#: buddypress/members/register.php:127
+#: buddypress/members/single/profile/edit.php:64
+msgid "Change"
+msgstr "Changer"
 
 #: buddypress/members/register.php:132
 #: buddypress/members/single/profile/edit.php:68
@@ -118,6 +123,10 @@ msgstr "Choisissez un mot de passe"
 msgid "Confirm Password"
 msgstr "Confirmez le mot de passe"
 
+#: buddypress/members/register.php:365
+msgid "Create my account"
+msgstr "Créer mon compte"
+
 #: buddypress/members/register.php:402
 msgid ""
 "You have successfully created your account! To begin using this site you "
@@ -134,6 +143,15 @@ msgid ""
 msgstr ""
 "Votre compte est activ&eacute;. Vous pouvez vous connecter en utilisant les "
 "identifiants que vous avez indiqué lors de votre inscription."
+
+#: buddypress/members/single/home.php:41
+msgid "Member primary navigation"
+msgstr "Navigation principale du membre"
+
+#: buddypress/members/single/plugins.php:22
+#: buddypress/members/single/profile.php:12
+msgid "Member secondary navigation"
+msgstr "Navigation secondaire de membre"
 
 #: buddypress/members/single/profile/change-avatar.php:12
 msgid "Change Profile Photo"
@@ -163,6 +181,10 @@ msgstr ""
 msgid "Select an image"
 msgstr "Sélectionner une image"
 
+#: buddypress/members/single/profile/change-avatar.php:40
+msgid "Upload Image"
+msgstr "Télécharger l'image"
+
 #: buddypress/members/single/profile/change-avatar.php:45
 msgid ""
 "If you'd like to delete your current profile photo but not upload a new one, "
@@ -178,6 +200,18 @@ msgstr "Supprimer mon profil Photo"
 #: buddypress/members/single/profile/change-avatar.php:53
 msgid "Crop Your New Profile Photo"
 msgstr "Retailler la nouvelle photo du profil"
+
+#: buddypress/members/single/profile/change-avatar.php:55
+msgid "Profile photo to crop"
+msgstr "Logo à retailler"
+
+#: buddypress/members/single/profile/change-avatar.php:58
+msgid "Profile photo preview"
+msgstr "Prévisualisation du logo du groupe"
+
+#: buddypress/members/single/profile/change-avatar.php:61
+msgid "Crop Image"
+msgstr "Retailler l&#39;avatar"
 
 #: buddypress/members/single/profile/change-avatar.php:85
 msgid ""
@@ -203,6 +237,14 @@ msgstr "L'image personnalisera l'en-tête de votre profil."
 #, php-format
 msgid "Editing '%s' Profile Group"
 msgstr "Modification des champs du groupe : %s"
+
+#: buddypress/members/single/profile/edit.php:30
+msgid "Profile field groups"
+msgstr "Détails du profil"
+
+#: buddypress/members/single/profile/edit.php:104
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
 
 #: buddypress/members/single/profile/profile-wp.php:29
 msgid "My Profile"
@@ -259,11 +301,11 @@ msgstr "Tous droits réservés %d"
 msgid "https://fellah.ma/"
 msgstr ""
 
-#: func/breadcrumb.php:223
+#: func/breadcrumb.php:211
 msgid "Page"
 msgstr "Page"
 
-#: func/breadcrumb.php:228
+#: func/breadcrumb.php:216
 msgid "Search results for: "
 msgstr "Résultats de recherche pour: "
 
@@ -446,15 +488,15 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:57 header.php:63
+#: header.php:64 header.php:70
 msgid "My account"
 msgstr "Mon compte"
 
-#: header.php:71
+#: header.php:78
 msgid "Contact"
 msgstr "Contact"
 
-#: header.php:78
+#: header.php:85
 msgid "follow-us"
 msgstr "Suivez-nous"
 
@@ -515,7 +557,7 @@ msgstr "Nouveautés"
 msgid "Top annonces"
 msgstr "Top annonces"
 
-#: index.php:146 wpadverts/single.php:200
+#: index.php:146 wpadverts/single.php:196
 msgid "Lorem ipsum dolor sit amet consecteteur."
 msgstr ""
 
@@ -577,7 +619,7 @@ msgstr ""
 msgid "Categories"
 msgstr "Catégories"
 
-#: template-parts/single-side.php:37
+#: template-parts/single-side.php:44
 msgid "Search an article"
 msgstr "Rechercher un article"
 
@@ -621,6 +663,14 @@ msgstr "Envoyer mon annonce"
 msgid "No categories found."
 msgstr "Aucune catégorie trouvée."
 
+#: wpadverts/form_search.php:47 wpadverts/list.php:58
+msgid "Grid"
+msgstr "la grille"
+
+#: wpadverts/form_search.php:48 wpadverts/list.php:59
+msgid "List"
+msgstr "liste"
+
 #: wpadverts/form_search.php:83 wpadverts/list.php:94
 msgid "Advanced Search"
 msgstr "Chercher"
@@ -633,12 +683,12 @@ msgstr "Chercher"
 msgid "Filter Results"
 msgstr "Filtrer les résultats"
 
-#: wpadverts/list.php:121
+#: wpadverts/list.php:124
 #, php-format
 msgid " in %s"
 msgstr ""
 
-#: wpadverts/list.php:147
+#: wpadverts/list.php:150
 msgid "There are no ads matching your search criteria."
 msgstr "Il n'y a pas d'annonce correspondant à vos critères de recherche."
 
@@ -708,45 +758,9 @@ msgstr ""
 msgid "Region"
 msgstr "Région"
 
-#: wpadverts/single.php:197
+#: wpadverts/single.php:193
 msgid "Annonces similaires"
 msgstr "Annonces similaires"
-
-#~ msgid "Change"
-#~ msgstr "Changer"
-
-#~ msgid "Create my account"
-#~ msgstr "Créer mon compte"
-
-#~ msgid "Member primary navigation"
-#~ msgstr "Navigation principale du membre"
-
-#~ msgid "Member secondary navigation"
-#~ msgstr "Navigation secondaire de membre"
-
-#~ msgid "Upload Image"
-#~ msgstr "Télécharger l'image"
-
-#~ msgid "Profile photo to crop"
-#~ msgstr "Logo à retailler"
-
-#~ msgid "Profile photo preview"
-#~ msgstr "Prévisualisation du logo du groupe"
-
-#~ msgid "Crop Image"
-#~ msgstr "Retailler l&#39;avatar"
-
-#~ msgid "Profile field groups"
-#~ msgstr "Détails du profil"
-
-#~ msgid "Save Changes"
-#~ msgstr "Enregistrer les modifications"
-
-#~ msgid "Grid"
-#~ msgstr "la grille"
-
-#~ msgid "List"
-#~ msgstr "liste"
 
 #~ msgid "SEARCH"
 #~ msgstr "CHERCHER"
