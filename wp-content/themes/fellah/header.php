@@ -53,7 +53,8 @@
 										$host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 										$userID = bp_displayed_user_id();
 										$userURL = bp_core_get_username($userID);
-										$profilPageURL = $_SERVER['SERVER_NAME'].'/members/'. $userURL . '/'; 
+										$profilPageURL = $_SERVER['SERVER_NAME'].'/oe/fellah/members/'. $userURL . '/'; 
+										echo $profilPageURL;
 									?>
 								<div class="compte<?php if ( is_page(2285) || $profilPageURL == $host) { ?> active <?php } ?>">
 										<?php if(is_user_logged_in()){ ?>
