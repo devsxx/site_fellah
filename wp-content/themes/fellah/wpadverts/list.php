@@ -109,9 +109,12 @@
 </div>
 <?php endif; ?>
 
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+        
+            <?php the_breadcrumb(); ?>
             <?php  
             if(isset($_GET['advert_category'])){
                 $term = get_term($_GET['advert_category'][0] , 'advert_category' ); ?>
