@@ -54,7 +54,24 @@
 						}
 					}
 				}
-				
+				&.active{
+					a{  
+						color: $text_color;
+						img{
+							@include position(absolute, 0, 0, 0, 0);
+							&.first{
+								opacity: 0;
+							}
+							
+							&.second{
+								opacity: 1
+							}
+						}
+						span{
+							opacity: 1;
+						} 
+					}
+				}
 			}	
 		}
 	}

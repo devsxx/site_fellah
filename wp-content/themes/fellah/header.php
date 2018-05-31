@@ -49,7 +49,13 @@
 						<div class="col-md-3"> 
 							<div class="header_picto_container">
 								<div class="header_picto">
-									<div class="compte">
+									<?php 
+										$host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+										$userID = bp_displayed_user_id();
+										$userURL = bp_core_get_username($userID);
+										$profilPageURL = $_SERVER['SERVER_NAME'].'/members/'. $userURL . '/'; 
+									?>
+								<div class="compte<?php if ( is_page(2285) || $profilPageURL == $host) { ?> active <?php } ?>">
 										<?php if(is_user_logged_in()){ ?>
 											<a href="<?php echo bp_loggedin_user_domain(); ?>">
 												<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" class="first" alt="Fellah">

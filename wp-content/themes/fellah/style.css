@@ -14093,6 +14093,30 @@ form textarea {
   opacity: 1;
 }
 
+.site-header .header_picto_container .header_picto .compte.active a {
+  color: #007e1d;
+}
+
+.site-header .header_picto_container .header_picto .compte.active a img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.site-header .header_picto_container .header_picto .compte.active a img.first {
+  opacity: 0;
+}
+
+.site-header .header_picto_container .header_picto .compte.active a img.second {
+  opacity: 1;
+}
+
+.site-header .header_picto_container .header_picto .compte.active a span {
+  opacity: 1;
+}
+
 .site-header.fixed .site-header-container {
   z-index: 999;
   height: 5rem;
