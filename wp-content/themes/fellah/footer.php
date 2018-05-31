@@ -41,6 +41,11 @@
 </div><!-- #page -->
 
 <a href="#GoToHeader" class="GoToHeader"></a>
+
+<div id="ajaxShadow">
+	<div id="ajaxloader"></div>
+</div>
+
 <?php  
 wp_footer(); ?>
 

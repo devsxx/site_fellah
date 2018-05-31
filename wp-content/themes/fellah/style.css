@@ -13554,6 +13554,51 @@ section .section_sousTitle {
   }
 }
 
+#ajaxShadow {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 8;
+  background: rgba(31, 31, 44, 0.6);
+}
+
+#ajaxloader {
+  display: none;
+  z-index: 9;
+  height: 3.125rem;
+  width: 3.125rem;
+  border: 8px solid #fff;
+  margin-top: -1.5625rem;
+  margin-left: -1.5625rem;
+  position: fixed;
+  top: 50%;
+  right: initial;
+  bottom: initial;
+  left: 50%;
+  border-right-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #eee;
+  animation: spin .45s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+    opacity: .2;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: .2;
+  }
+}
+
 form input[type="text"], form input[type="password"], form input[type="email"], form input[type="url"], form input[type="date"], form input[type="month"], form input[type="time"], form input[type="datetime"], form input[type="datetime-local"], form input[type="week"], form input[type="number"], form input[type="search"], form input[type="tel"], form input[type="color"] {
   width: 100%;
   font-size: 0.875rem;
@@ -16289,14 +16334,21 @@ div.adverts-flash-messages {
 .advert_alert {
   font-size: 0.875rem;
   display: none;
+  padding: 0.875rem 0.625rem;
+  margin: 1rem 0;
+  border-radius: 0.125rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
 }
 
 .advert_alert.advert_danger {
-  color: #d9534f;
+  color: #fff;
+  background-color: #d9534f;
 }
 
 .advert_alert.advert_success {
-  color: #5cb85c;
+  color: #fff;
+  background-color: #5cb85c;
 }
 
 .adverts-form-required {

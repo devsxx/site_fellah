@@ -207,6 +207,7 @@ jQuery(document).ready(function($) {
 
    // Perform AJAX login on form submit
    $('#connect').on('click', function(e){
+		e.preventDefault();
 		//alert($('#username').val()+" "+$('#password').val() );
         $.ajax({
             type: 'POST',
@@ -217,25 +218,30 @@ jQuery(document).ready(function($) {
 					'username': $('#username').val(), 
 					'password': $('#password').val() 
 				},
+				beforeSend: function() {
+					jQuery("#ajaxloader").show();
+					jQuery("#ajaxShadow").show();
+				},
 			//'security': $('form#login #security').val() },
-            success: function(data){ 
+            success: function(data){  
 					if(data.etat){
 						$(".adverts-field-name-connect .register_form").css("display", "none"); 
-						$(".advert_success").css("display", "block"); 
+						$(".advert_success").css("display", "block").delay(3000).slideUp(100);
 					}else{
-						$(".advert_danger").css("display", "block"); 
+						$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
 					}
-					console.log(data.etat);
+					jQuery("#ajaxloader").hide();
+					jQuery("#ajaxShadow").hide();
             }
         });
-        e.preventDefault();
 	});
 	
-	$("#creation_compte").click(function(){
+	$("#creation_compte").on('click', function(e){
+		e.preventDefault();
 		var prenom = $("#prenom").val();
 		var email = $("#email").val();
 		var nom = $("#nom").val();
-		var telephone = $("#telephone").val();
+		// var telephone = $("#telephone").val();
 		var mot_passe = $("#mot_passe").val();
 		var confirm_mot_passe = $("#confirm_mot_passe").val();
 
@@ -245,7 +251,7 @@ jQuery(document).ready(function($) {
 			submit = false;
 		}
 
-		if(telephone == "" || mot_passe == "" || mot_passe == "" || confirm_mot_passe == "" )
+		if( mot_passe == "" || mot_passe == "" || confirm_mot_passe == "" )
 			submit = false;
 
 		if(confirm_mot_passe != mot_passe){
@@ -261,22 +267,36 @@ jQuery(document).ready(function($) {
 					'action': 'ajaxsignup',
 					'prenom' : prenom,
 					'nom' : nom,
-					'telephone' : telephone,
+					// 'telephone' : telephone,
 					'email' : email,
 					'mot_passe' : mot_passe,
 					'confirm_mot_passe' : confirm_mot_passe,
 				},
+				beforeSend: function() {
+					jQuery("#ajaxloader").show();
+					jQuery("#ajaxShadow").show();
+				},
 				success: function(data){ 
 					if(data.etat){
 						$(".adverts-field-name-connect .register_form").css("display", "none"); 
-						$(".advert_success").css("display", "block"); 
+						$(".advert_success").css("display", "block").delay(3000).slideUp(100);
 					}else{
-						$(".advert_danger").css("display", "block"); 
-					}
-					console.log(data.etat);
+						$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
+					} 
+					jQuery("#ajaxloader").hide();
+					jQuery("#ajaxShadow").hide();
 				}
 			});
 		}
+	});
+
+
+	$('.advert_success').click(function () {
+		$(this).slideUp();
+  	});
+
+	$('.advert_danger').click(function () {
+		$(this).slideUp();
 	});
 
 	$('.adverts-field-prev-next-2').addClass("hide_section"); 
@@ -375,12 +395,18 @@ jQuery(document).ready(function($) {
 				'action': 'ajaxsouscat',
 				'ids' : allVals,
 			},
+			beforeSend: function() {
+				jQuery("#ajaxloader").show();
+				jQuery("#ajaxShadow").show();
+			},
 			success: function(response){
 				if($(".ajaxed").length > 0){
 					$(".ajaxed").remove();
 				}
 				checkbox.closest(".adverts-field-customadvertscategory")
 				.append( response );
+				jQuery("#ajaxloader").hide();
+				jQuery("#ajaxShadow").hide();
 			}
 		});
 		

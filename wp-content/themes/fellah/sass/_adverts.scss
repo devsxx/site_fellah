@@ -402,11 +402,18 @@ div.adverts-flash-messages {
 .advert_alert{
   font-size: oe_rem(14px);
   display: none;
+  padding: oe_rem(14px) oe_rem(10px);
+  margin: oe_rem(16px) 0;
+  border-radius: oe_rem(2px);
+  @include oe_box-shadow-light;
+  cursor: pointer;
   &.advert_danger{
-    color: $brand-danger;
+    color: #fff;
+    background-color: $brand-danger;
   }
   &.advert_success{
-    color: $brand-success;
+    color: #fff;
+    background-color: $brand-success;
   }
 }
 

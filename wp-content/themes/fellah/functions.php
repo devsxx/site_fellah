@@ -961,10 +961,10 @@ function ajax_login(){
 	$user_signon = wp_signon( $info, false );
 	if ( is_wp_error($user_signon) ){
 
-		$message = __('Wrong username or password.');
+		$message = __('Wrong username or password.', 'fellah');
 		$etat = false;
 	} else {
-		$message = __('Login successful');
+		$message = __('Login successful', 'fellah');
 		$etat = true;
 	}
 	$result =	array(
@@ -981,7 +981,7 @@ function ajax_signup(){
 
 	$prenom = $_POST['prenom'];
 	$nom = $_POST['nom'];
-	$telephone = $_POST['telephone'];
+	// $telephone = $_POST['telephone'];
 	$email = $_POST['email'];
 	$mot_passe = $_POST['mot_passe'];
 	$confirm_mot_passe = $_POST['confirm_mot_passe'];
@@ -996,7 +996,7 @@ function ajax_signup(){
 		$user_id = username_exists( $email );
 		if ( !$user_id and email_exists($email) == false ) {
 			$user_id = wp_create_user( $email, $mot_passe, $email );
-			update_user_meta($user_id, 'telephone', $telephone);
+			// update_user_meta($user_id, 'telephone', $telephone);
 			$user_id = wp_update_user( array( 
 				'ID' => $user_id, 
 				'first_name' => $prenom,
@@ -1006,7 +1006,7 @@ function ajax_signup(){
 			if ( is_wp_error( $user_id ) ) {
 				$error_code = 1;
 				$etat = false;
-				$message = __("Can't login.");
+				$message = __("Can't login.","fellah");
 			} else {
 				$info = array();
 				$info['user_login'] = $email;
@@ -1014,16 +1014,16 @@ function ajax_signup(){
 				$info['remember'] = true;
 				$user_signon = wp_signon( $info, false );
 				if ( is_wp_error($user_signon) ){
-					$message = __('Wrong username or password.');
+					$message = __('Wrong username or password.', 'fellah');
 					$error_code = 4; 
 					$etat = false;
 				} else {
 					$etat = true;
-					$message = __('Login successful');
+					$message = __('Login successful', 'fellah');
 				}
 			}
 		} else {
-			$message = __('User already exists.  Password inherited.');
+			$message = __('User already exists.  Password inherited.', 'fellah');
 			$error_code = 3;
 			$etat = false;
 		}
@@ -1182,26 +1182,21 @@ function adverts_field_login_or_subscribe( $field ) {
 						</div>
 						<div class="col-md-3">
 							<div class="input_container">
-								<i class="fas fa-mobile-alt"></i>
-								<input type="text" placeholder="Téléphone" name="telephone" id="telephone">                                
+								<i class="far fa-envelope"></i>
+								<input type="email" placeholder="Email" name="email" id="email">                                
 							</div>
 						</div>
 					</div>
 
 					<div class="row">
-						<div class="col-md-3">
-							<div class="input_container">
-								<i class="far fa-envelope"></i>
-								<input type="email" placeholder="Email" name="email" id="email">                                
-							</div>
-						</div>
-						<div class="col-md-3">
+						
+						<div class="col-md-5">
 							<div class="input_container">
 								<i class="far fa-edit"></i>
 								<input type="password" placeholder="Mot de passe" name="mot_passe" id="mot_passe">                                
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-4">
 							<div class="input_container">
 								<i class="far fa-edit"></i>
 								<input type="password" placeholder="Confirmer le mot de passe" name="confirm_mot_passe" id="confirm_mot_passe">                                
@@ -1375,10 +1370,10 @@ function telephone_field($user) {
 	?>
 		<table class="form-table">
 			<tr class="form-field">
-				<label for="telephone"><?php _e("Télephone"); ?></label></th>
+				<label for="telephone"><?php _e("Télephone","fellah"); ?></label></th>
 				<td>
 					<input type="text" name="telephone" id="telephone" value="<?php echo @get_user_meta( $user->ID , 'telephone', true ) ; ?>" class="regular-text" /><br />
-					<span class="description"><?php _e("S'il vous plait, entrez votre numéro de téléphone."); ?></span>
+					<span class="description"><?php _e("S'il vous plait, entrez votre numéro de téléphone.","fellah"); ?></span>
 				</td>
 			</tr>
 		</table>
