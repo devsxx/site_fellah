@@ -27,7 +27,14 @@
       </div>
       <div class="categoris_container">
             <ul>
-            <?php wp_list_categories( array( 'depth' => 0 ) ); ?>
+            <?php
+            wp_list_categories(
+                  array( 
+                        'title_li' => '',
+                        'hide_empty' => 1,
+                        'depth' => 2 
+                  )
+            ); ?>
             </ul>
       </div>
  
