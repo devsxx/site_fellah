@@ -272,6 +272,7 @@
    background-color: $lighter_color;
    padding: oe_rem(50px) oe_rem(30px);
    margin-bottom: oe_rem(40px);
+   @include oe_box-shadow-light;
    .annonce-row{
       @include flex(center, space-between, row);
       padding: oe_rem(8px) 0;
@@ -494,4 +495,16 @@ div.adverts-flash-messages {
   .wpadverts-slide-nav-counter{
   }
 
+}
+
+
+
+
+#swipebox-slider .slide {
+  height: 100%;
+  width: 68% !important;
+  line-height: 1px;
+  text-align: center;
+  display: block !important;
+  margin: 0 auto;
 }

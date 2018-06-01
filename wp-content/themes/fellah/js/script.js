@@ -415,5 +415,14 @@ jQuery(document).ready(function($) {
 
 	$('.adverts-field-name-gallery').find('.row').append("<div class='col-md-6'><div class='gallerymessage'>" + ajax_login_object.GALLERYMESSAGE + "</div></div>");
 
+
+
+	$('.slide.current').click(function () {
+		$("#swipebox-close").trigger();
+	  });
+	  
+	  $('.slide.current').click(function () {
+		alert('erere');
+	  });
 });
 
