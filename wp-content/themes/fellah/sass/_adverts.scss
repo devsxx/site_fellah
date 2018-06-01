@@ -458,3 +458,33 @@ div.adverts-flash-messages {
 .gallerymessage{
   padding: oe_rem(15px) 0;
 }
+
+.wpadverts-slide-nav-interface{
+  @include position(absolute, initial !important, initial !important, 0, 40px);
+  padding: 0 !important;
+
+  .wpadverts-slide-nav-thumbnails{
+    background-color: #fff;
+    color: $main_color !important;
+    padding: 10px;
+    height: 50px;
+    width: 160px;
+    border-radius: 4px;
+    @include flex(center, center, row);
+
+    &:before{
+      // content: "Voir les photos";
+      width: 100%;
+    }
+
+  }
+
+  .wpadverts-slide-nav-counter, 
+  .adverts-icon-camera{
+    display: none !important;
+  }
+
+  .wpadverts-slide-nav-counter{
+  }
+
+}

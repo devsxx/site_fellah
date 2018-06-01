@@ -16372,6 +16372,46 @@ div.adverts-flash-messages {
   padding: 0.9375rem 0;
 }
 
+.wpadverts-slide-nav-interface {
+  position: absolute;
+  top: initial !important;
+  right: initial !important;
+  bottom: 0;
+  left: 40px;
+  padding: 0 !important;
+}
+
+.wpadverts-slide-nav-interface .wpadverts-slide-nav-thumbnails {
+  background-color: #fff;
+  color: #007e1d !important;
+  padding: 10px;
+  height: 50px;
+  width: 160px;
+  border-radius: 4px;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.wpadverts-slide-nav-interface .wpadverts-slide-nav-thumbnails:before {
+  width: 100%;
+}
+
+.wpadverts-slide-nav-interface .wpadverts-slide-nav-counter,
+.wpadverts-slide-nav-interface .adverts-icon-camera {
+  display: none !important;
+}
+
 #buddypress div.item-list-tabs ul li.current a,
 #buddypress div.item-list-tabs ul li.selected a {
   background-color: #eee;

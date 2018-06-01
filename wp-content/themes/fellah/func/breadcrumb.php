@@ -98,15 +98,17 @@ function the_breadcrumb() {
                 $cat_nicename   = $taxonomy_terms[0]->slug;
                 $cat_link       = get_term_link($taxonomy_terms[0]->term_id, $custom_taxonomy);
                 $cat_name       = $taxonomy_terms[0]->name;
+                
+                if( isset($taxonomy_terms) && $taxonomy_terms ){
+                    foreach ($taxonomy_terms as $taxonomy_term) {
+                        $cat_id         = $taxonomy_term->term_id;
+                        $cat_nicename   = $taxonomy_term->slug;
+                        $cat_link       = get_term_link($taxonomy_term->term_id, $custom_taxonomy);
+                        $cat_name       = $taxonomy_term->name;
 
-                foreach ($taxonomy_terms as $taxonomy_term) {
-                    $cat_id         = $taxonomy_term->term_id;
-                    $cat_nicename   = $taxonomy_term->slug;
-                    $cat_link       = get_term_link($taxonomy_term->term_id, $custom_taxonomy);
-                    $cat_name       = $taxonomy_term->name;
-
-                    echo '<span class="item-cat item-cat-' . $cat_id . ' item-cat-' . $cat_nicename . '"><a class="bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></span>';
-                    echo '<span class="separator"> ' . $separator . ' </span>';
+                        echo '<span class="item-cat item-cat-' . $cat_id . ' item-cat-' . $cat_nicename . '"><a class="bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></span>';
+                        echo '<span class="separator"> ' . $separator . ' </span>';
+                    }
                 }
                     
             }

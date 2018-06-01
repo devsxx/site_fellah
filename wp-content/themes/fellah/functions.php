@@ -454,9 +454,8 @@ function shortcode_adverts_form_search( $atts ) {
 // remove_action( 'adverts_tpl_single_bottom', 'adverts_single_contact_information' );
 // remove_action( 'adverts_tpl_single_bottom', 'adext_contact_form' );
 // remove_action( 'adverts_tpl_single_bottom', 'adext_bp_send_private_message_button', 50 );
- 
-
 // add_action('adverts_tpl_single_bottom', '_adext_contact_form_custom');
+
 function _adext_contact_form_custom( $post_id ) {
 
 	include_once ADVERTS_PATH . 'includes/class-form.php';
@@ -829,31 +828,44 @@ function my_adverts_form_load( $form ) {
 			"cf_saved" => 1
 	);
 
-	$form["field"][] =  array(
-			"type" => "adverts_field_gallery",
-			"name" => "gallery",
-			"label" => "Image",
-			"meta" => array(
-			"cf_saved" => 1,
-			"cf_builtin" => 1,
-		),
-			"order" => 11,
-			"validator" => array(
-			"0" => array(
+	// $form["field"][] =  array(
+	// 	"type" => "adverts_field_gallery",
+	// 	"name" => "gallery",
+	// 	"label" => "Image",
+	// 	"meta" => array(
+	// 		"cf_saved" => 1,
+	// 		"cf_builtin" => 1,
+	// 	),
+	// 	"order" => 11,
+	// 	"validator" => array(
+	// 		"0" => array(
+	// 			"name" => "upload_type",
+	// 			"params" => array(
+	// 				"allowed" => array(
+	// 						0 => "image",
+	// 						1 => "video"
+	// 				),
+
+	// 			),
+
+	// 		),
+
+	// 	),
+
+	// 	"cf_saved" => 1,
+	// );
+	
+	$form["field"][] = array(
+		"name" => "gallery",
+		"type" => "adverts_field_gallery",
+		"order" => 11,
+		"label" => __( "Image", "adverts" ),
+		"validator" => array(
+			array(
 				"name" => "upload_type",
-				"params" => array(
-					"allowed" => array(
-							0 => "image",
-							1 => "video"
-					),
-
-				),
-
-			),
-
-		),
-
-			"cf_saved" => 1,
+				"params" => array( "allowed" => array( "image", "video" ) )
+			)
+		)
 	);
 
 	$form["field"][] =  array(
@@ -907,8 +919,6 @@ function my_adverts_form_load( $form ) {
 
 
 	if(!is_admin()){
- 
-
 		$form["field"][] =  array(
 			"name" => "prev_next",
 			"type" => "adverts_field_prev_next_2",
@@ -938,8 +948,6 @@ function my_adverts_form_load( $form ) {
 			"label" => "",
 		);
 	}
-
-	
 
 	return $form;
 }
@@ -1224,7 +1232,6 @@ function adverts_field_login_or_subscribe( $field ) {
 	echo $htmls;
 }
 
-
 function adverts_field_prev_next_1( $field ) {
     
 	$htmls = '
@@ -1238,7 +1245,6 @@ function adverts_field_prev_next_1( $field ) {
     
 	echo $htmls;
 }
-
 
 function adverts_field_prev_next_2( $field ) {
     
@@ -1257,7 +1263,6 @@ function adverts_field_prev_next_2( $field ) {
     
 	echo $htmls;
 }
-
 
 function adverts_field_prev_next_3( $field ) {
     
@@ -1330,14 +1335,11 @@ adverts_form_add_fieldr("adverts_field_login_or_subscribe", array(
 	"callback_bind" => "adverts_bind_single",
 ));
 
-
-
 adverts_form_add_fieldr("adverts_field_prev_next_1", array(
 	"renderer" => "adverts_field_prev_next_1",
 	"callback_save" => "adverts_save_single",
 	"callback_bind" => "adverts_bind_single",
 ));
-
 
 adverts_form_add_fieldr("adverts_field_prev_next_2", array(
 	"renderer" => "adverts_field_prev_next_2",
@@ -1351,14 +1353,11 @@ adverts_form_add_fieldr("adverts_field_prev_next_3", array(
 	"callback_bind" => "adverts_bind_single",
 ));
 
-
-
 adverts_form_add_fieldr("adverts_field_customadvertscategory", array(
     "renderer" => "adverts_field_customadvertscategory",
     "callback_save" => "adverts_save_single",	
     "callback_bind" => "adverts_bind_single",
 ));
-
 
 //Add a mailchimp permission field, on user creation, user profile update
 add_action('user_new_form', 'telephone_field');
