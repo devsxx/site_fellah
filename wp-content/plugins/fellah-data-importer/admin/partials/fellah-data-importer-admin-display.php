@@ -65,11 +65,12 @@ if(isset($_POST["submit"])) {
             $content = $item->children('content', TRUE);
             $user = get_user_by('login',$creator);
             
+            
             $userid = 28;
             if($user)
                 $userid = $user->ID;
-                
-            
+             
+
             if(empty($item->title))
                 continue;
 
@@ -85,7 +86,8 @@ if(isset($_POST["submit"])) {
                 'post_title'    => strip_tags($item->title),
                 'post_content'  => $content,
                 'post_status'   => $children->status,
-                'post_author'   => $userid
+                'post_author'   => $userid,
+                'post_date'     => (string)$children->post_date,
             );
             
             // Insert the post into the database.
@@ -154,9 +156,8 @@ if(isset($_POST["submit"])) {
                 }
                 
             }
-
-            update_post_meta( $post_id, 'adverts_email', $user->user_email ); 
-           
+            if($user && strip_tags($children->post_type) == "post")
+                update_post_meta( $post_id, 'adverts_email', $user->user_email ); 
         } 
         echo "<h2>L'import est fini</h2>";             
     }
