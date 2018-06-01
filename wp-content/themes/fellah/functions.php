@@ -601,27 +601,27 @@ function my_adverts_form_load( $form ) {
 	);
     
 	$form["field"][] = array(
-				"type" => "adverts_field_hidden",
-				"name" => "_post_id",
-				"label" => "",
-				"meta" => array(
-					"cf_saved" => 1,
-					"cf_builtin" => 1,
-				),
-				"order" => 0,
-				"cf_saved" => 1,
-	);
-
-	$form["field"][] = array(
-			"type" => "adverts_field_hidden",
-			"name" => "_adverts_action",
-			"label" => "",
-			"meta" => array(
+		"type" => "adverts_field_hidden",
+		"name" => "_post_id",
+		"label" => "",
+		"meta" => array(
 			"cf_saved" => 1,
 			"cf_builtin" => 1,
 		),
-			"order" => 1,
-			"cf_saved" => 1
+		"order" => 0,
+		"cf_saved" => 1,
+	);
+
+	$form["field"][] = array(
+		"type" => "adverts_field_hidden",
+		"name" => "_adverts_action",
+		"label" => "",
+		"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
+		"order" => 1,
+		"cf_saved" => 1
 	);
 
 	$form["field"][] = array(
@@ -704,7 +704,6 @@ function my_adverts_form_load( $form ) {
 		"description" => ""
 	);
 
-
 	if(is_admin()){
 		$form["field"][] =  array(
 			"type" => "adverts_field_select",
@@ -728,7 +727,6 @@ function my_adverts_form_load( $form ) {
 		);
 	}
 	
-
 	$form["field"][] = array(
 		"type" => "adverts_field_text",
 		"placeholder" => __("Titre de l'annoce", "fellah"),
@@ -747,7 +745,6 @@ function my_adverts_form_load( $form ) {
 		"cf_saved" => 1,
 	);
 
-
 	$form["field"][] = array(
 		"type" => "adverts_field_text",
 		"placeholder" => __("Phone *", "fellah"),
@@ -765,7 +762,6 @@ function my_adverts_form_load( $form ) {
 		),
 		"cf_saved" => 1,
 	);
-
 
 	$form["field"][] = array(
 		"type" => "adverts_field_text",
@@ -854,7 +850,6 @@ function my_adverts_form_load( $form ) {
 
 		"cf_saved" => 1,
 	);
-	
 
 	$form["field"][] =  array(
 		"type" => "adverts_field_checkbox",
@@ -904,7 +899,6 @@ function my_adverts_form_load( $form ) {
 			"label" => "",
 			"class" => "wpadverts-plupload-multipart-default",
 	);
-
 
 	if(!is_admin()){
 		$form["field"][] =  array(

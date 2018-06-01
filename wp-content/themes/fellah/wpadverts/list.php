@@ -157,15 +157,21 @@
 
 
     <?php if( $show_pagination ): ?>
-    <div class="adverts-pagination">
-        <?php echo paginate_links( array(
-            'base' => $paginate_base,
-        'format' => $paginate_format,
-        'current' => max( 1, $paged ),
-        'total' => $loop->max_num_pages,
-            'prev_next' => false
-        ) ); ?>
-    </div>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+            <div class="adverts-pagination">
+                    <?php echo paginate_links( array(
+                        'base' => $paginate_base,
+                    'format' => $paginate_format,
+                    'current' => max( 1, $paged ),
+                    'total' => $loop->max_num_pages,
+                        'prev_next' => false
+                    ) ); ?>
+                </div>
+            </div>
+       </div>
+   </div>
     <?php endif; ?>
 
 <?php endif; ?>
