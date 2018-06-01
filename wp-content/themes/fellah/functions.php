@@ -828,45 +828,33 @@ function my_adverts_form_load( $form ) {
 			"cf_saved" => 1
 	);
 
-	// $form["field"][] =  array(
-	// 	"type" => "adverts_field_gallery",
-	// 	"name" => "gallery",
-	// 	"label" => "Image",
-	// 	"meta" => array(
-	// 		"cf_saved" => 1,
-	// 		"cf_builtin" => 1,
-	// 	),
-	// 	"order" => 11,
-	// 	"validator" => array(
-	// 		"0" => array(
-	// 			"name" => "upload_type",
-	// 			"params" => array(
-	// 				"allowed" => array(
-	// 						0 => "image",
-	// 						1 => "video"
-	// 				),
-
-	// 			),
-
-	// 		),
-
-	// 	),
-
-	// 	"cf_saved" => 1,
-	// );
-	
-	$form["field"][] = array(
-		"name" => "gallery",
+	$form["field"][] =  array(
 		"type" => "adverts_field_gallery",
+		"name" => "gallery",
+		"label" => "Image",
+		"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
+		),
 		"order" => 11,
-		"label" => __( "Image", "adverts" ),
 		"validator" => array(
-			array(
+			"0" => array(
 				"name" => "upload_type",
-				"params" => array( "allowed" => array( "image", "video" ) )
-			)
-		)
+				"params" => array(
+					"allowed" => array(
+							0 => "image",
+							1 => "video"
+					),
+
+				),
+
+			),
+
+		),
+
+		"cf_saved" => 1,
 	);
+	
 
 	$form["field"][] =  array(
 		"type" => "adverts_field_checkbox",

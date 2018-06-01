@@ -2,7 +2,7 @@
   display: block !important;  
 }
 .adverts-form{
-
+  
   &.adverts-form-update{
     .adverts-control-group {
 
@@ -136,6 +136,13 @@
  	
   .wp-editor-wrap{
     padding: 0 !important;
+  }
+  .adverts-field-error-list {
+    list-style-type: circle !important;
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+    clear: both;
+    overflow: hidden;
   }
 
   input{

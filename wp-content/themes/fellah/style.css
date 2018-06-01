@@ -16045,6 +16045,14 @@ form textarea {
   padding: 0 !important;
 }
 
+.adverts-form .adverts-field-error-list {
+  list-style-type: circle !important;
+  margin: 0 0 15px 0 !important;
+  padding: 0 !important;
+  clear: both;
+  overflow: hidden;
+}
+
 .adverts-form input[type="text"], .adverts-form input[type="password"], .adverts-form input[type="email"], .adverts-form input[type="url"], .adverts-form input[type="date"], .adverts-form input[type="month"], .adverts-form input[type="time"], .adverts-form input[type="datetime"], .adverts-form input[type="datetime-local"], .adverts-form input[type="week"], .adverts-form input[type="number"], .adverts-form input[type="search"], .adverts-form input[type="tel"], .adverts-form input[type="color"] {
   font-size: 0.875rem;
   height: 3.125rem;
