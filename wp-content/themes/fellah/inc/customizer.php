@@ -53,3 +53,19 @@ function fellah_customize_preview_js() {
 	wp_enqueue_script( 'fellah-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'fellah_customize_preview_js' );
+
+
+
+
+add_action( 'widgets_init', 'theme_slug_widgets_init' );
+function theme_slug_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'qTranslateXWidget', 'theme-slug' ),
+		'id' => 'qTranslateXWidget',
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'theme-slug' ),
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+	) );
+}

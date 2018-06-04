@@ -14085,7 +14085,7 @@ form textarea {
   text-align: center;
   cursor: pointer;
   height: 2.875rem;
-  width: 5.3125rem;
+  width: 4.5rem;
 }
 
 .site-header .header_picto_container .header_picto .compte a img {
@@ -14107,7 +14107,7 @@ form textarea {
 
 .site-header .header_picto_container .header_picto .compte a span {
   opacity: 0;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 400;
   display: block;
   padding-top: 1.25rem;
@@ -14351,6 +14351,94 @@ form textarea {
   }
 }
 
+/*qtranxs_widget*/
+#selecteur_lang {
+  margin-top: -10px;
+}
+
+#selecteur_lang #lang_animate .container_lang {
+  width: 40px;
+  height: 30px;
+  margin: 0px auto 10px;
+  perspective: 110px;
+  perspective-origin: -0% -0%;
+}
+
+#selecteur_lang #lang_animate .container_lang .cube_lang {
+  animation: langRotate 3.5s ease-in-out infinite;
+  transform-style: preserve-3d;
+  transform: translateZ(-15px);
+  left: 15%;
+  position: relative;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  transition: 1s;
+}
+
+#selecteur_lang #lang_animate .container_lang .cube_lang div {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-size: contain;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+#selecteur_lang #lang_animate .container_lang .cube_lang .ar {
+  transform: rotateY(0deg) translateZ(0);
+  background-image: url(img/lang/ar.png);
+}
+
+#selecteur_lang #lang_animate .container_lang .cube_lang .fr {
+  transform: rotateY(180deg) translateZ(0);
+  background-image: url(img/lang/fr.png);
+}
+
+#selecteur_lang #lang_animate .container_lang .cube_lang.active_ar {
+  transform: translateZ(-15px) rotateY(0deg);
+}
+
+#selecteur_lang #lang_animate .container_lang .cube_lang.active_fr {
+  transform: translateZ(-15px) rotateY(180deg);
+}
+
+#selecteur_lang #lang_animate .qtranxs_widget {
+  clear: both;
+  position: relative;
+  top: -11px;
+}
+
+#selecteur_lang #lang_animate .qtranxs_widget ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#selecteur_lang #lang_animate .qtranxs_widget select {
+  border: none;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0 16px 0 6px;
+  height: 30px;
+  color: #113b74;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+
+@keyframes langRotate {
+  from {
+    transform: translateZ(-15px) rotateY(0deg);
+  }
+  50% {
+    transform: translateZ(-15px) rotateY(180deg);
+  }
+  to {
+    transform: translateZ(-15px) rotateY(360deg);
+  }
+}
+
 .main-navigation {
   display: -ms-flexbox;
   display: flex;
@@ -14393,7 +14481,7 @@ form textarea {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding: 0 0.9375rem;
+  padding: 0;
   margin: 0;
 }
 
@@ -14768,135 +14856,6 @@ form textarea {
     -moz-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
-  }
-}
-
-/*qtranxs_widget*/
-#selecteur_lang {
-  height: 80px;
-  padding: 10px 0;
-}
-
-#selecteur_lang #lang_animate .container_lang {
-  width: 40px;
-  height: 30px;
-  margin: 0px auto 10px;
-  perspective: 110px;
-  perspective-origin: -0% -0%;
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang {
-  animation: langRotate 3.5s ease-in-out infinite;
-  transform-style: preserve-3d;
-  transform: translateZ(-15px);
-  left: 15%;
-  position: relative;
-  margin: 0;
-  width: 30px;
-  height: 30px;
-  transition: 1s;
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang div {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  background-size: contain;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang .fr {
-  transform: rotateY(0deg) translateZ(28px);
-  background-image: url(images/lang/en.png);
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang .en {
-  transform: rotateY(60deg) translateZ(28px);
-  background-image: url(images/lang/de.png);
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang .de {
-  transform: rotateY(120deg) translateZ(28px);
-  background-image: url(images/lang/es.png);
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang .es {
-  transform: rotateY(180deg) translateZ(28px);
-  background-image: url(images/lang/fr.png);
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang .ja {
-  transform: rotateY(240deg) translateZ(28px);
-  background-image: url(images/lang/ja.png);
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang .zh {
-  transform: rotateY(300deg) translateZ(28px);
-  background-image: url(images/lang/zh.png);
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang.active_en {
-  transform: translateZ(-15px) rotateY(0deg);
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang.active_de {
-  transform: translateZ(-15px) rotateY(90deg);
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang.active_fr {
-  transform: translateZ(-15px) rotateY(180deg);
-}
-
-#selecteur_lang #lang_animate .container_lang .cube_lang.active_es {
-  transform: translateZ(-15px) rotateY(270deg);
-}
-
-#selecteur_lang #lang_animate .qtranxs_widget {
-  clear: both;
-  position: relative;
-  top: -11px;
-}
-
-#selecteur_lang #lang_animate .qtranxs_widget ul li {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-#selecteur_lang #lang_animate .qtranxs_widget select {
-  border: none;
-  font-size: 12px;
-  font-weight: 400;
-  padding: 0 16px 0 6px;
-  height: 30px;
-  color: #113b74;
-  background-color: transparent;
-  cursor: pointer;
-  margin: 0;
-}
-
-@keyframes langRotate {
-  from {
-    transform: translateZ(-15px) rotateY(0deg);
-  }
-  15% {
-    transform: translateZ(-15px) rotateY(60deg);
-  }
-  30% {
-    transform: translateZ(-15px) rotateY(120deg);
-  }
-  50% {
-    transform: translateZ(-15px) rotateY(180deg);
-  }
-  70% {
-    transform: translateZ(-15px) rotateY(240deg);
-  }
-  85% {
-    transform: translateZ(-15px) rotateY(300deg);
-  }
-  to {
-    transform: translateZ(-15px) rotateY(360deg);
   }
 }
 
@@ -16428,6 +16387,11 @@ div.adverts-flash-messages {
   text-align: center;
   display: block !important;
   margin: 0 auto;
+}
+
+.adverts-pagination {
+  margin: 2.5rem 0;
+  text-align: left !important;
 }
 
 #buddypress div.item-list-tabs ul li.current a,

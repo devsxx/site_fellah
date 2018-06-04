@@ -85,6 +85,26 @@
 											<span><?php _e('follow-us','fellah'); ?></span>
 										</a>
 									</div> 
+									<div class="compte">
+										<div id="selecteur_lang">
+											<div id="lang_animate" class="picto langues" >
+												<?php if (qtrans_getLanguage()=="ar"): ?>
+													<?php $active = 'active_ar'; ?> 
+												<?php else: ?>
+													<?php $active = 'active_fr'; ?>
+												<?php endif; ?> 
+
+												<div class="container_lang">
+													<figure class="cube_lang <?php echo $active; ?>">
+														<div class="fr"></div>
+														<div class="ar"></div> 
+													</figure> 
+												</div> 
+
+												<?php the_widget('qTranslateXWidget', array('type' => 'dropdown', 'format' => '%n', 'hide-title' => true) ); ?>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
