@@ -14515,6 +14515,94 @@ form textarea {
   color: #007e1d;
 }
 
+.main-navigation ul li .sub-menu {
+  padding: 1.25rem 0;
+  background-color: #dbdbdb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: fixed;
+  top: 182px;
+  right: 0;
+  bottom: initial;
+  left: 0;
+  display: none;
+  z-index: 999;
+}
+
+.main-navigation ul li .sub-menu.showAll {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-navigation ul li .sub-menu li {
+  padding: 0 0.9375rem;
+}
+
+.main-navigation ul li .sub-menu li a {
+  border: none;
+  color: #007e1d;
+  font-size: 1.375rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0.375rem 0;
+  margin-bottom: 1.5625rem;
+  text-align: center;
+  display: block;
+}
+
+.main-navigation ul li .sub-menu li a:hover {
+  color: #000;
+}
+
+.main-navigation ul li .sub-menu ul {
+  padding: 0;
+  box-shadow: none;
+  background-color: #dbdbdb;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  -moz-justify-content: stretch;
+  -ms-justify-content: stretch;
+  justify-content: stretch;
+  -ms-flex-pack: stretch;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: initial;
+  right: initial;
+  bottom: initial;
+  left: initial;
+}
+
+.main-navigation ul li .sub-menu ul li {
+  padding: 0;
+}
+
+.main-navigation ul li .sub-menu ul li a {
+  color: #262626;
+  font-size: 1.1875rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  text-align: left;
+  text-transform: initial;
+}
+
 @media (max-width: 767px) {
   .main-navigation {
     display: -ms-flexbox;
@@ -14574,6 +14662,54 @@ form textarea {
     -ms-flex-direction: row;
     flex-direction: row;
   }
+  .main-navigation ul li .sub-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: none;
+  }
+  .main-navigation ul li .sub-menu.showAll {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-navigation ul li .sub-menu li a {
+    border: none;
+    margin-bottom: 0.9375rem;
+  }
+  .main-navigation ul li .sub-menu ul li {
+    width: 100%;
+  }
+  .main-navigation ul li .sub-menu ul li a {
+    margin-bottom: 0;
+    height: 40px;
+  }
+  .main-navigation ul li .showAll .close {
+    color: #fff;
+    position: absolute;
+    top: 0.9375rem;
+    right: 0.9375rem;
+    bottom: initial;
+    left: initial;
+  }
+}
+
+#wpadminbar {
+  display: none;
 }
 
 #side_menu_container #side-menu {

@@ -3,7 +3,7 @@
 	height: oe_rem(150px);
 	&>div{
 		width: 100%;
-	}
+	} 
 	.menu-toggle{
 		display: none;
 	}
@@ -40,6 +40,54 @@
 					color: $text_color;
 				}
 			}
+  
+			.sub-menu{
+				&.showAll{
+					display: flex;
+				}
+				padding: oe_rem(20px) 0;
+				background-color: $light_color;
+				@include oe_box-shadow;
+				@include flex(stretch, center, row);
+				@include position(fixed, 182px, 0, initial, 0);
+				display: none;
+				z-index: 999;
+				li{
+					padding: 0 oe_rem(15px); 
+					a{
+						border: none;
+						color: $text_color;
+						font-size: oe_rem(22px);
+						font-weight: 300;
+						text-transform: uppercase;    
+						padding: oe_rem(6px) 0;
+						margin-bottom: oe_rem(25px);
+						text-align: center;
+						display: block;
+						&:hover{
+							color: $main_text_color;
+						}
+					}
+				}
+				ul{ 
+					padding: 0;
+					box-shadow: none;
+					background-color: $light_color;
+					@include flex(stretch, stretch, column);
+					@include position(relative, initial, initial, initial, initial);
+					li{
+						padding: 0;
+						a{
+							color: $darker_color;
+							font-size: oe_rem(19px);
+							font-weight: 300; 
+							margin-bottom: 0;
+							text-align: left;
+							text-transform: initial;    
+						}
+					}
+				}
+			} 
 		}
 	}
 	@include media("<md"){
@@ -60,6 +108,37 @@
 					border: 1px solid $lighter_color;
 					@include flex(center, center, row);
 				}
+
+				.sub-menu{ 
+					
+					&.showAll{
+						display: flex;
+					}
+					@include position(fixed, 0, 0, 0, 0);
+					@include flex(center, center, row);
+					display: none;
+					li{ 
+						a{
+							border: none; 
+							margin-bottom: oe_rem(15px);
+						}
+					}
+					ul{  
+						li{
+							width: 100%;
+							a{     
+								margin-bottom: 0;    
+								height: 40px;
+							}
+						}
+					}
+				} 
+				.showAll{
+					.close{ 
+						color: #fff; 
+						@include position(absolute, oe_rem(15px), oe_rem(15px), initial, initial); 	
+					}
+				}
 			}
 		}
 	}
@@ -69,3 +148,6 @@
 
 
 
+#wpadminbar{
+	display: none;
+}

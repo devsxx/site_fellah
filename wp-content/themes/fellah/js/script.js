@@ -20,30 +20,7 @@
 // 		jQuery("#lang ul").toggleClass("show-lang");
 // 	});
 
-// 	jQuery("#side-menu ul li").each(function() {
 
-// 		$li = jQuery( this );
-// 		$ulNiv1 = $li.children("ul");
-
-// 		if ($ulNiv1.length) {
-// 			$a = $li.children('a');
-// 			$a.addClass('bullet');
-
-
-// 			$a.click(function(evt){
-// 				evt.preventDefault();
-
-// 				$currentUl = jQuery(this).next('ul');
-// 				jQuery("#side-menu ul li ul").not($currentUl).removeClass('showAll');
-// 				jQuery("#side-menu ul li a").not(jQuery(this)).removeClass('up');
-
-// 				$currentUl.toggleClass('showAll');
-// 				jQuery(this).toggleClass('up');
-// 			});
-
-// 		}else 
-// 		jQuery( this ).children("ul").removeClass('showAll')
-// 	});
 
 // 	jQuery('.checkbox_2 input:checkbox').change(function(){
 // 		if(jQuery(this).is(':checked')) 
@@ -68,17 +45,41 @@ jQuery(document).ready(function($) {
 		}
   });
 
+	// if (window.matchMedia("(min-width: 992px)").matches) {  
+		$a = $( "#site-navigation .show-sub-menu > a" ); 
+		$a.click(function(evt){
+			evt.preventDefault(); 
+			$ul = $(this).next('ul');  
+			$ul.toggleClass('showAll'); 
+			$( ".showAll" ).append("<div class='close'><i class='fas fa-times'></i></div>");
+		}); 
+		
+		$( ".showAll .close" ).live('click',function( ){ 
+			$( "#site-navigation .show-sub-menu > a" ).next('ul').removeClass('showAll'); 
+		});  
+
+	// }
+
    $(document).on( 'scroll', function(){
-  		if (window.matchMedia("(min-width: 992px)").matches) { 
+		if (window.matchMedia("(min-width: 992px)").matches) { 
+
 			if ($(window).scrollTop() > 100) {
 				$('#masthead').addClass('fixed');
-				$('#header_fix').addClass('fixed');
+				$('#header_fix').addClass('fixed'); 
 			} else { 
-					$('#masthead').removeClass('fixed');
-					$('#header_fix').removeClass('fixed');
+				$('#masthead').removeClass('fixed');
+				$('#header_fix').removeClass('fixed'); 
 			}
+
+			if ($(window).scrollTop() > 50) { 
+				$('.main-navigation .sub-menu').removeClass('showAll');
+			} else {  
+				// $('.main-navigation .sub-menu').addClass('showAll');
+			}
+
 		}
 	});
+ 
 	 
 	$('.GoToHeader').click(function(){
 		$('html').animate({scrollTop:0}, 'slow');
