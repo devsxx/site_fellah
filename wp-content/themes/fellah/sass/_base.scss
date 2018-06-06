@@ -381,17 +381,17 @@ blockquote {
 			font-weight: 500;
 			z-index: 1;
 			text-align: center;
-    padding: oe_rem(15px);
+    		padding: oe_rem(15px);
 		}
 		.hover{
 			@include position(absolute, 0, 0, 0, 0);
 			@include transition(all, .25s, ease-in-out);
-			opacity: .75;
+			opacity: .65;
 			z-index: 0;
 		}
 		&:hover{
 			.hover{ 
-				opacity: .85; 
+				opacity: .75; 
 			}
 			.img_zoom {
 				transform: matrix(1.2, 0, 0, 1.2, 0, 0);

@@ -101,8 +101,12 @@ get_header();
 								<div class="info_container">
 										<div class="info">
 											<div class="date">
-												<i class="far fa-calendar-plus"></i>
-												<?php echo get_the_date('j.m.Y'); ?>
+												<!-- <i class="far fa-calendar-plus"></i> -->
+												<?php // echo get_the_date('j.m.Y'); ?>
+												<?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>
+												<?php if( $price ): ?>
+													<div class=""><?php echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
+												<?php endif; ?>
 											</div>
 											<div class="lieu">
 												 <?php 
@@ -112,10 +116,6 @@ get_header();
                                        <i class="fas fa-map-pin"></i>
                                        <span><?php echo $advert_localisation[0]->name; ?> </span>
                                     <?php endif; ?> 
-												<?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>
-												<?php if( $price ): ?>
-													<div class=""><?php // echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
-												<?php endif; ?>
 											</div>
 										</div>
 										<div class="titre"> 
@@ -175,8 +175,12 @@ get_header();
 								<div class="info_container">
 										<div class="info">
 											<div class="date">
-												<i class="far fa-calendar-plus"></i> 
-												<?php echo get_the_date('j.m.Y'); ?>
+												<!-- <i class="far fa-calendar-plus"></i>  -->
+												<?php // echo get_the_date('j.m.Y'); ?>
+												<?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>
+												<?php if( $price ): ?>
+													<div class=""><?php echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
+												<?php endif; ?>
 											</div>
 											<div class="lieu">
 												<?php 
@@ -185,10 +189,7 @@ get_header();
                                         <i class="fas fa-map-pin"></i>
                                         <span><?php echo $advert_localisation[0]->name; ?> </span>
                                     <?php endif; ?> 
-												<?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>
-											<?php if( $price ): ?>
-											<div class=""><?php // echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
-											<?php endif; ?>
+											
 											</div>
 										</div>
 										<div class="titre"> 
@@ -213,7 +214,7 @@ get_header();
 					<div class="row">
 						<div class="col-md-12">
 							<div class="section_title">
-								<?php _e('Actualités de FELLAH', 'fellah'); ?>
+								<?php _e('Actualités', 'fellah'); ?>
 								<div class="toutes_cats"></div>
 							</div>
 							<div class="section_sousTitle"></div>

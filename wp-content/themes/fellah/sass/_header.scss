@@ -91,14 +91,7 @@
 			.header_picto_container{
 				height: oe_rem(80px); 
 				.header_picto{ 
-					.compte{
-						@include transition(all, .25s, ease-in-out);
-						position: relative;
-						padding: oe_rem(10px) 0;
-						text-align: center;
-						cursor: pointer;
-						height: oe_rem(46px);
-						width: oe_rem(85px);
+					.compte{ 
 						a{
 							img{
 								@include position(absolute, 0, 0, 0, 0);

@@ -11,7 +11,6 @@
 				.info{
 					color: white;
 					height: oe_rem(85px);  
-					opacity: 0; 
 					@include transition(opacity, .3s, ease-in-out);
 					padding: oe_rem(10px) oe_rem(15px);
 					@include flex(flex-start, center, column);
@@ -32,14 +31,7 @@
 						font-weight: 200; 
 					}
 				}
-			}
-			&:hover{
-				.bloc{ 
-					.info{ 
-						opacity: 1;
-					}
-				}
-			}
+			} 
 		}
 	}
 	.facebook_box{

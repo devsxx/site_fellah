@@ -57,7 +57,7 @@ function adverts_gallery_content( $post = null, $conf = array() ) {
             '_ajax_nonce' => wp_create_nonce('adverts-gallery'),
             'action'      => 'adverts_gallery_upload',            // the ajax action name
             'form'        => 'adverts_add',
-            'field_name'       => $field_name
+            'field_name'  => $field_name
           
         ),
     );
@@ -595,7 +595,7 @@ function adverts_upload_item_data( $attach_id, $is_new = false ) {
     if( isset( $meta["length_formatted"] ) ) {
         $data["readable"]["length"] = $meta["length_formatted"];
     }
-    
+
     return $data;
 }
 

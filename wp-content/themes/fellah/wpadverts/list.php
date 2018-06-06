@@ -14,6 +14,7 @@
 
 <div id="header_fix" class="header_bandeau_content">
     <div class="header_bandeau">
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -51,43 +52,34 @@
                                 <?php endforeach; ?>
                             </div>
                             <?php endif; ?>
+ 
+                            <?php if($allow_sorting): ?>
+                                <span class="adverts-list-sort-wrap">
+                                    <a href="#" class="adverts-button-small adverts-list-sort-button" title="<?php echo esc_attr( $sort_current_title ) ?>">
+                                        <span class="adverts-list-sort-label"><?php echo esc_html( $sort_current_text ) ?></span> 
+                                        <span class="adverts-icon-sort"></span>
+                                    </a>
 
-                            <?php if($switch_views || $allow_sorting): ?>
-                                <div class="adverts-options-left adverts-js">
-                                    <?php if($switch_views): ?>
-                                    <a href="<?php echo esc_html( add_query_arg( "display", "grid" ) ) ?>" class="adverts-button-small adverts-switch-view" title="<?php esc_attr_e("Grid", "adverts") ?>"><span class="adverts-square-icon adverts-icon-th-large"></span></a>
-                                    <a href="<?php echo esc_html( add_query_arg( "display", "list" ) ) ?>" class="adverts-button-small adverts-switch-view" title="<?php esc_attr_e("List", "adverts") ?>"><span class="adverts-square-icon adverts-icon-th-list"></span></a>
-                                    <?php endif; ?>
-                                    
-                                    <?php if($allow_sorting): ?>
-                                    <span class="adverts-list-sort-wrap">
-                                        <a href="#" class="adverts-button-small adverts-list-sort-button" title="<?php echo esc_attr( $sort_current_title ) ?>">
-                                            <span class="adverts-list-sort-label"><?php echo esc_html( $sort_current_text ) ?></span> 
-                                            <span class="adverts-icon-sort"></span>
-                                        </a>
+                                    <div id="adverts-list-sort-options-wrap" class="adverts-multiselect-holder">
+                                        <div class="adverts-multiselect-options adverts-list-sort-options">
 
-                                        <div id="adverts-list-sort-options-wrap" class="adverts-multiselect-holder">
-                                            <div class="adverts-multiselect-options adverts-list-sort-options">
-
-                                                <?php foreach( $sort_options as $sort_group): ?>
-                                                    <span class="adverts-list-sort-option-header">
-                                                        <strong><?php echo esc_html( $sort_group["label"] ) ?></strong>
-                                                    </span>
-                                                    <?php foreach( $sort_group["items"] as $sort_item_key => $sort_item): ?>
-                                                        <a href="<?php echo esc_html( add_query_arg( "adverts_sort", $sort_item_key ) ) ?>" class="adverts-list-sort-option">
-                                                            <?php echo esc_html( $sort_item ) ?>
-                                                            <?php if($adverts_sort==$sort_item_key): ?><span class="adverts-icon-asterisk" style="opacity:0.5"></span><?php endif; ?>
-                                                        </a>
-                                                    <?php endforeach; ?>
+                                            <?php foreach( $sort_options as $sort_group): ?>
+                                                <span class="adverts-list-sort-option-header">
+                                                    <strong><?php echo esc_html( $sort_group["label"] ) ?></strong>
+                                                </span>
+                                                <?php foreach( $sort_group["items"] as $sort_item_key => $sort_item): ?>
+                                                    <a href="<?php echo esc_html( add_query_arg( "adverts_sort", $sort_item_key ) ) ?>" class="adverts-list-sort-option">
+                                                        <?php echo esc_html( $sort_item ) ?>
+                                                        <?php if($adverts_sort==$sort_item_key): ?><span class="adverts-icon-asterisk" style="opacity:0.5"></span><?php endif; ?>
+                                                    </a>
                                                 <?php endforeach; ?>
-                        
+                                            <?php endforeach; ?>
+                    
 
-                                            </div>
                                         </div>
-                                    </span>
-                                    <?php endif; ?>
-                                </div>
-                            <?php endif; ?>
+                                    </div>
+                                </span> 
+                            <?php endif; ?> 
 
                             <div class="adverts-js">
                                 <?php if( !empty( $fields_hidden ) ): ?>
@@ -99,12 +91,41 @@
                             <div class="adverts-options-fallback adverts-no-js">
                                 <input type="submit" value="<?php _e("Filter Results", "adverts") ?>" />
                             </div>
+
+                            <div class="custom_sorting">
+
+                                <div class="custom_sorting_titre">
+                                    <?php _e('Sort by: ','fellah'); ?>
+                                </div>
+
+                                <div class="budget-range-container">
+                                    <div class="budget-range-button"> <?php _e('Price','fellah'); ?></div>
+                                    <div class="budget-range">
+                                        <p id="amount-LCD"></p>
+                                        <input type="hidden" id="input-amount-LCD" name="price" readonly>
+                                        <div id="slider-range-LCD"></div>
+                                    </div>
+                                </div>
+
+
+                                <div class="pics-container"> 
+                                    <div class="checkbox_pics">
+                                        <label for="pics" <?php echo (adverts_request('pics') == 'on') ? 'class="checked"' : "" ; ?>>
+                                            <input type="checkbox" name="pics" id="pics" >
+                                            <?php _e('Pics','fellah'); ?>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
                         </div>
                     </form>
-                </div>
+                </div> 
             </div>
         </div>
         
+
     </div>
 </div>
 <?php endif; ?>
@@ -137,10 +158,8 @@
         <div class="container">
             <div class="row">
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <div class="col-md-3">
                     <?php include apply_filters( "adverts_template_load", ADVERTS_PATH . 'templates/list-item.php' ) ?>
-                </div>
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             </div>
         </div>
         <?php else: ?>
@@ -163,9 +182,9 @@
             <div class="adverts-pagination">
                     <?php echo paginate_links( array(
                         'base' => $paginate_base,
-                    'format' => $paginate_format,
-                    'current' => max( 1, $paged ),
-                    'total' => $loop->max_num_pages,
+                        'format' => $paginate_format,
+                        'current' => max( 1, $paged ),
+                        'total' => $loop->max_num_pages,
                         'prev_next' => false
                     ) ); ?>
                 </div>

@@ -126,13 +126,15 @@ function fellah_scripts() {
 	wp_enqueue_style( 'fellah-fonts-3', 'https://fonts.googleapis.com/css?family=Roboto:300,400' );
 	wp_enqueue_style( 'fellah-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'jquery-ui', 		 	 get_template_directory_uri() . '/js/libs/jquery-ui.css');
 
-	wp_enqueue_script( 'tether', 			get_template_directory_uri() . '/js/libs/tether/dist/js/tether.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'bootstrap', 		get_template_directory_uri() . '/js/libs/bootstrap/dist/js/bootstrap.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'owl.carousel', 		get_template_directory_uri() . '/js/libs/owl.carousel/src/js/owl.carousel.js', array(), '20151215', true );
-	wp_enqueue_script( 'owl.navigation',	get_template_directory_uri() . '/js/libs/owl.carousel/src/js/owl.navigation.js', array(), '20151 ', true );
+	wp_enqueue_script( 'jquery-ui', 		 	 get_template_directory_uri() . '/js/libs/jquery-ui.js', array(), '', true );
+	wp_enqueue_script( 'tether', 			 	 get_template_directory_uri() . '/js/libs/tether/dist/js/tether.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'bootstrap', 		 	 get_template_directory_uri() . '/js/libs/bootstrap/dist/js/bootstrap.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'owl.carousel', 	 	 get_template_directory_uri() . '/js/libs/owl.carousel/src/js/owl.carousel.js', array(), '20151215', true );
+	wp_enqueue_script( 'owl.navigation', 	 get_template_directory_uri() . '/js/libs/owl.carousel/src/js/owl.navigation.js', array(), '20151 ', true );
 
-	wp_enqueue_script( 'script',   			get_template_directory_uri() . '/js/script.js', array(), '20151215', true ); 
+	wp_enqueue_script( 'script',   			 get_template_directory_uri() . '/js/script.js', array(), '20151215', true ); 
 	wp_enqueue_script( 'fellah-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'fellah-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -269,8 +271,8 @@ function shortcode_adverts_form_search( $atts ) {
 		 'paged' => adverts_request("pg", 1),
 		 'posts_per_page' => adverts_config( 'config.ads_list_default__posts_per_page' ),
 		 'show_pagination' => true
-	), $atts, 'adverts_list' );
-	
+	), $atts, 'adverts_list' ); 
+
 	extract( $params );
 	$action = get_permalink( $redirect_to );
  

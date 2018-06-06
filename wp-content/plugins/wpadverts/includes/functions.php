@@ -365,10 +365,11 @@ function adverts_get_main_image( $id ) {
         $image = wp_get_attachment_image_src( $tmp_post->ID , 'adverts-list' ); 
         
         if(isset( $image[0] ) ) {
+            // var_dump($image); 
             return $image[0];
         }
-        
     }
+    
     
     return null;
 }
@@ -2338,7 +2339,6 @@ function adverts_get_post_img( $post_id, $sizes ) {
             } else {
                 $img["orient"] = "portrait";
             }
-            
             return $img;
         }
     }

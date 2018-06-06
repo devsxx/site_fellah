@@ -62,13 +62,14 @@ function shortcode_adverts_list( $atts ) {
     $meta = array();
     $orderby = array();
     
-    $query = adverts_request("query");
-    $location = adverts_request("location");
+    $query      = adverts_request("query");
+    $location   = adverts_request("location");
+    $prices     = adverts_request("price");
     
     if($location) {
         $meta[] = array('key'=>'adverts_location', 'value'=>$location, 'compare'=>'LIKE');
     }
-    
+
     if($category) {
         $taxonomy =  array(
             array(
@@ -76,7 +77,7 @@ function shortcode_adverts_list( $atts ) {
                 'field'    => 'term_id',
                 'terms'    => $category,
             ),
-	);
+	    );
     }
 
     if($allow_sorting && adverts_request("adverts_sort")) {
@@ -84,7 +85,7 @@ function shortcode_adverts_list( $atts ) {
     } else {
         $adverts_sort = $order_by;
     }
-    
+
     // options: title, post_date, adverts_price
     $sort_options = apply_filters( "adverts_list_sort_options", array(
         "date" => array(
@@ -108,7 +109,7 @@ function shortcode_adverts_list( $atts ) {
                 "title-desc" => __("From Z to A", "adverts")
             )
         )
-    ) );
+    ));
     
     $sarr = explode("-", $adverts_sort);
     $sort_current_text = __("Publish Date", "adverts");
@@ -148,7 +149,20 @@ function shortcode_adverts_list( $atts ) {
         $orderby["date"] = "desc"; 
     }
 
+    $price = explode("-", $prices);
     
+    if ($prices) {
+        
+        // $meta['relation'] = 'AND';
+        $meta["adverts_price__orderby_2"] = array(
+            'key' => 'adverts_price',
+            'value' => array( $price[0], $price[1] ),
+            'type' => 'NUMERIC',
+            'compare' => 'BETWEEN',
+        );
+    }
+    
+    // $meta[] =  array( 'key' => '_thumbnail_id', 'value' => null, 'compare' => '!=' );
     $args = apply_filters( "adverts_list_query", array( 
         'author' => $author,
         'post_type' => 'advert', 
@@ -158,12 +172,16 @@ function shortcode_adverts_list( $atts ) {
         's' => $query,
         'meta_query' => $meta,
         'tax_query' => $taxonomy,
-        'orderby' => $orderby
+        'orderby' => $orderby,         
     ), $params);
-
+    
+    // echo '<pre>';
+    // var_dump($args);
+    // die();
+    
     if( $category && is_tax( 'advert_category' ) ) {
         $pbase = get_term_link( get_queried_object()->term_id, 'advert_category' );
-    } else {
+    }else {
         $pbase = get_the_permalink();
     }
     
