@@ -13748,7 +13748,7 @@ form textarea {
 .header_bandeau_content.fixed .header_bandeau {
   z-index: 999;
   height: 6.875rem;
-  padding: 0.625rem 0;
+  padding: 0.625rem 0 !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 2px rgba(0, 0, 0, 0.48);
   position: fixed;
   top: 5rem;
@@ -13770,10 +13770,10 @@ form textarea {
   height: 17.1875rem;
   display: -ms-flexbox;
   display: flex;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
@@ -13782,7 +13782,7 @@ form textarea {
   -ms-flex-direction: row;
   flex-direction: row;
   background-color: #ebebeb;
-  padding: 1.5625rem 0;
+  padding: 3.75rem 0;
   transition: height 0.2s ease-in-out;
 }
 
@@ -13790,6 +13790,7 @@ form textarea {
   background: url(./img/bandeau.jpg) no-repeat 50%;
   background-size: cover;
   margin-bottom: 0;
+  padding: 1.5625rem 0;
 }
 
 .header_bandeau_content .header_bandeau .titre {
@@ -14050,7 +14051,7 @@ form textarea {
 }
 
 .custom_sorting .custom_sorting_titre {
-  padding-right: 20px;
+  padding: 0 1.25rem;
   font-size: 1.1875rem;
   font-weight: 500;
   color: #007e1d;
@@ -14136,7 +14137,7 @@ form textarea {
   position: relative;
   display: inline-block;
   height: 3.125rem;
-  line-height: 2.8125rem;
+  line-height: 3.125rem;
   width: 100%;
   border-radius: 0.25rem;
   margin: 0;
@@ -14742,6 +14743,10 @@ form textarea {
   margin-bottom: 0;
   text-align: left;
   text-transform: initial;
+}
+
+.main-navigation ul li .showAll .close {
+  display: none;
 }
 
 @media (max-width: 767px) {

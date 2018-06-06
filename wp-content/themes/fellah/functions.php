@@ -146,7 +146,11 @@ function fellah_scripts() {
         'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 3 images.', 'fellah')
     ));
  
- 
+	 wp_localize_script( 'adverts-multiselect', 'adverts_multiselect_lang', array(
+		"hint"              => __("Select options ...", "adverts"),
+		"advert_category"   => __("All categories", "adverts"),
+		"localisation"      => __("All regions", "adverts"),
+  ));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

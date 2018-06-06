@@ -26,6 +26,7 @@
 					@include position(absolute, oe_rem(-15px), 0, 0, initial);
 				}
 			}
+			
 			a{
 				text-transform: uppercase;
 				color: $main_text_color;
@@ -33,6 +34,7 @@
 					color: $text_color;
 				}
 			}
+
 			&.current-menu-item > ,
 			&.current-menu-parent > ,
 			&.current-menu-ancestor > {
@@ -88,6 +90,12 @@
 					}
 				}
 			} 
+
+			.showAll{
+				.close{ 
+					display: none;
+				}
+			}
 		}
 	}
 	@include media("<md"){
