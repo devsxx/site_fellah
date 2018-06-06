@@ -64,6 +64,11 @@
 						height: auto;
 						margin: oe_rem(3px) oe_rem(5px) auto !important;
 					}
+					&::placeholder,
+					&:-ms-input-placeholder,
+					&::-ms-input-placeholder{
+						color: $text_color !important;
+					}
 				}
 			}
 			.adverts-form-submit{

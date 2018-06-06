@@ -147,9 +147,9 @@ function fellah_scripts() {
     ));
  
 	 wp_localize_script( 'adverts-multiselect', 'adverts_multiselect_lang', array(
-		"hint"              => __("Select options ...", "adverts"),
-		"advert_category"   => __("All categories", "adverts"),
-		"localisation"      => __("All regions", "adverts"),
+		"hint"              => __("Select options ...", "fellah"),
+		"advert_category"   => __("All categories", "fellah"),
+		"localisation"      => __("All regions", "fellah"),
   ));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

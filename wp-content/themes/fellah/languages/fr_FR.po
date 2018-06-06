@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-31 11:48+0000\n"
-"PO-Revision-Date: 2018-05-31 11:49+0000\n"
+"POT-Creation-Date: 2018-06-06 15:55+0000\n"
+"PO-Revision-Date: 2018-06-06 16:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.0.8\n"
 "X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_html_x\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Oops! Cette page ne peut pas être trouvée."
 
 #: buddypress/members/register.php:18
 msgid "Already have an account ?"
@@ -49,11 +49,6 @@ msgstr "Détails du profil"
 #, php-format
 msgid "This field can be seen by: %s"
 msgstr "Ce champ peut être vu par: %s"
-
-#: buddypress/members/register.php:127
-#: buddypress/members/single/profile/edit.php:64
-msgid "Change"
-msgstr "Changer"
 
 #: buddypress/members/register.php:132
 #: buddypress/members/single/profile/edit.php:68
@@ -101,7 +96,7 @@ msgstr "Oui"
 
 #: buddypress/members/register.php:249
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: buddypress/members/register.php:287
 msgid "Account Details"
@@ -123,10 +118,6 @@ msgstr "Choisissez un mot de passe"
 msgid "Confirm Password"
 msgstr "Confirmez le mot de passe"
 
-#: buddypress/members/register.php:365
-msgid "Create my account"
-msgstr "Créer mon compte"
-
 #: buddypress/members/register.php:402
 msgid ""
 "You have successfully created your account! To begin using this site you "
@@ -143,15 +134,6 @@ msgid ""
 msgstr ""
 "Votre compte est activ&eacute;. Vous pouvez vous connecter en utilisant les "
 "identifiants que vous avez indiqué lors de votre inscription."
-
-#: buddypress/members/single/home.php:41
-msgid "Member primary navigation"
-msgstr "Navigation principale du membre"
-
-#: buddypress/members/single/plugins.php:22
-#: buddypress/members/single/profile.php:12
-msgid "Member secondary navigation"
-msgstr "Navigation secondaire de membre"
 
 #: buddypress/members/single/profile/change-avatar.php:12
 msgid "Change Profile Photo"
@@ -181,10 +163,6 @@ msgstr ""
 msgid "Select an image"
 msgstr "Sélectionner une image"
 
-#: buddypress/members/single/profile/change-avatar.php:40
-msgid "Upload Image"
-msgstr "Télécharger l'image"
-
 #: buddypress/members/single/profile/change-avatar.php:45
 msgid ""
 "If you'd like to delete your current profile photo but not upload a new one, "
@@ -200,18 +178,6 @@ msgstr "Supprimer mon profil Photo"
 #: buddypress/members/single/profile/change-avatar.php:53
 msgid "Crop Your New Profile Photo"
 msgstr "Retailler la nouvelle photo du profil"
-
-#: buddypress/members/single/profile/change-avatar.php:55
-msgid "Profile photo to crop"
-msgstr "Logo à retailler"
-
-#: buddypress/members/single/profile/change-avatar.php:58
-msgid "Profile photo preview"
-msgstr "Prévisualisation du logo du groupe"
-
-#: buddypress/members/single/profile/change-avatar.php:61
-msgid "Crop Image"
-msgstr "Retailler l&#39;avatar"
 
 #: buddypress/members/single/profile/change-avatar.php:85
 msgid ""
@@ -238,14 +204,6 @@ msgstr "L'image personnalisera l'en-tête de votre profil."
 msgid "Editing '%s' Profile Group"
 msgstr "Modification des champs du groupe : %s"
 
-#: buddypress/members/single/profile/edit.php:30
-msgid "Profile field groups"
-msgstr "Détails du profil"
-
-#: buddypress/members/single/profile/edit.php:104
-msgid "Save Changes"
-msgstr "Enregistrer les modifications"
-
 #: buddypress/members/single/profile/profile-wp.php:29
 msgid "My Profile"
 msgstr "Mon profil"
@@ -261,7 +219,7 @@ msgstr "Nom"
 
 #: buddypress/members/single/profile/profile-wp.php:45
 msgid "About Me"
-msgstr "Qui suis-je ?"
+msgstr "À propos de moi"
 
 #: buddypress/members/single/profile/profile-wp.php:54
 msgid "Website"
@@ -290,7 +248,7 @@ msgstr "Les commentaires sont fermés."
 
 #: footer.php:23
 msgid "https://wordpress.org/"
-msgstr "https://wpfr.net"
+msgstr "https://wpfr.net/"
 
 #: footer.php:24
 #, php-format
@@ -299,13 +257,13 @@ msgstr "Tous droits réservés %d"
 
 #: footer.php:27
 msgid "https://fellah.ma/"
-msgstr ""
+msgstr "https://fellah.ma/"
 
-#: func/breadcrumb.php:211
+#: func/breadcrumb.php:213
 msgid "Page"
 msgstr "Page"
 
-#: func/breadcrumb.php:216
+#: func/breadcrumb.php:218
 msgid "Search results for: "
 msgstr "Résultats de recherche pour: "
 
@@ -355,11 +313,11 @@ msgstr "Barre latérale"
 msgid "Add widgets here."
 msgstr "Ajouter des widgets ici."
 
-#: functions.php:143
+#: functions.php:145
 msgid "Sending user info, please wait..."
-msgstr ""
+msgstr "Envoi d'informations utilisateur, veuillez patienter ..."
 
-#: functions.php:144
+#: functions.php:146
 msgid ""
 "Add your photos to make your ad even more visible. You can download up to 3 "
 "images."
@@ -367,122 +325,135 @@ msgstr ""
 "Ajoutez vos photos pour rendre votre annonce encore plus visible. Vous "
 "pouvez télécharger 3 images maximum."
 
-#: functions.php:307 functions.php:330 functions.php:331
+#: functions.php:150
+msgid "Select options ..."
+msgstr "Choisir l'option ..."
+
+#: functions.php:151
+msgid "All categories"
+msgstr "Toutes les catégories"
+
+#: functions.php:152
+msgid "All regions"
+msgstr "Toutes les régions"
+
+#: functions.php:313 functions.php:336 functions.php:337
 msgid "Publish Date"
 msgstr "Date de publication"
 
-#: functions.php:309 functions.php:331
+#: functions.php:315 functions.php:337
 msgid "Newest First"
 msgstr "Le plus récent d'abord"
 
-#: functions.php:310
+#: functions.php:316
 msgid "Oldest First"
 msgstr "Le plus ancien en premier"
 
-#: functions.php:314 functions.php:812 wpadverts/single.php:92
+#: functions.php:320 functions.php:813 wpadverts/list.php:102
+#: wpadverts/single.php:92
 msgid "Price"
 msgstr "Prix"
 
-#: functions.php:316
+#: functions.php:322
 msgid "Cheapest First"
 msgstr "Moins cher en premier"
 
-#: functions.php:317
+#: functions.php:323
 msgid "Most Expensive First"
 msgstr "Le plus cher en premier"
 
-#: functions.php:321
+#: functions.php:327
 msgid "Title"
 msgstr "Titre"
 
-#: functions.php:323
+#: functions.php:329
 msgid "From A to Z"
 msgstr "De A à Z"
 
-#: functions.php:324
+#: functions.php:330
 msgid "From Z to A"
 msgstr "De Z à A"
 
-#: functions.php:331 functions.php:361
+#: functions.php:337 functions.php:367
 #, php-format
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: functions.php:478
+#: functions.php:483
 msgid "Send"
 msgstr "Envoyer"
 
-#: functions.php:520
+#: functions.php:525
 msgid "Your message has been sent."
 msgstr "Votre message a été envoyé."
 
-#: functions.php:525
+#: functions.php:530
 msgid "There are errors in your form."
 msgstr "Il y a des erreurs dans votre formulaire."
 
-#: functions.php:558
+#: functions.php:563
 msgid "Send Message"
 msgstr "Envoyer le message"
 
-#: functions.php:565 wpadverts/single.php:98
+#: functions.php:570 wpadverts/single.php:98
 msgid "Phone"
 msgstr "Téléphone"
 
-#: functions.php:735
+#: functions.php:738
 msgid "Titre de l'annoce"
 msgstr "Titre de l'annoce"
 
-#: functions.php:754
+#: functions.php:756
 msgid "Phone *"
 msgstr "Téléphone *"
 
-#: functions.php:773
+#: functions.php:774
 msgid "E mail *"
 msgstr "E mail *"
 
-#: functions.php:792
+#: functions.php:793
 msgid "Description"
 msgstr "Description"
 
-#: functions.php:863
+#: functions.php:864
 msgid "Region and city"
 msgstr "Région et ville"
 
-#: functions.php:964 functions.php:1017
+#: functions.php:960 functions.php:1013
 msgid "Wrong username or password."
-msgstr ""
+msgstr "Mauvais nom d'utilisateur ou mot de passe."
 
-#: functions.php:967 functions.php:1022
+#: functions.php:963 functions.php:1018
 msgid "Login successful"
 msgstr "Login successful"
 
-#: functions.php:1009
+#: functions.php:1005
 msgid "Can't login."
-msgstr ""
+msgstr "Impossible de se connecter."
 
-#: functions.php:1026
+#: functions.php:1022
 msgid "User already exists.  Password inherited."
 msgstr "L'utilisateur existe déjà. Mot de passe hérité."
 
-#: functions.php:1225
+#: functions.php:1216
 msgid "wrong acces"
 msgstr ""
 
-#: functions.php:1226
+#: functions.php:1217
 msgid "You are connected"
 msgstr "Tu es connecté"
 
-#: functions.php:1378
+#: functions.php:1360
 msgid "Télephone"
 msgstr "Télephone"
 
-#: functions.php:1381
+#: functions.php:1363
 msgid "S'il vous plait, entrez votre numéro de téléphone."
-msgstr ""
+msgstr "S'il vous plait, entrez votre numéro de téléphone."
 
 #: header.php:25
 msgid "Skip to content"
-msgstr ""
+msgstr "Aller au contenu"
 
 #: header.php:40
 msgid "Primary Menu"
@@ -497,8 +468,16 @@ msgid "Contact"
 msgstr "Contact"
 
 #: header.php:85
-msgid "follow-us"
+msgid "Follow-us"
 msgstr "Suivez-nous"
+
+#: inc/customizer.php:63
+msgid "qTranslateXWidget"
+msgstr ""
+
+#: inc/customizer.php:65
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
 
 #: inc/template-functions.php:61
 msgid "Partager"
@@ -520,17 +499,17 @@ msgstr ""
 #: inc/template-tags.php:65
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Publié le %1$s"
 
 #: inc/template-tags.php:72
 #, php-format
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "Marqué %1$s"
 
 #: inc/template-tags.php:82
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
+msgstr "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 
 #: inc/template-tags.php:99
 #, php-format
@@ -561,9 +540,9 @@ msgstr "Top annonces"
 msgid "Lorem ipsum dolor sit amet consecteteur."
 msgstr ""
 
-#: index.php:216
-msgid "Actualités de FELLAH"
-msgstr "Actualités de FELLAH"
+#: index.php:217 templates/news_agricoles.php:20
+msgid "Actualités"
+msgstr "Actualités"
 
 #: search.php:28
 #, php-format
@@ -623,13 +602,9 @@ msgstr "Catégories"
 msgid "Search an article"
 msgstr "Rechercher un article"
 
-#: templates/news_agricoles.php:20
-msgid "Actualités"
-msgstr "Actualités"
-
 #: templates/news_agricoles.php:49
 msgid "Sorry, no posts matched your criteria."
-msgstr "Aucun message ne correspond à vos critères de recherche. "
+msgstr "Aucun message ne correspond à vos critères de recherche."
 
 #: wpadverts/add-preview.php:11
 msgid "Edit Listing"
@@ -663,32 +638,32 @@ msgstr "Envoyer mon annonce"
 msgid "No categories found."
 msgstr "Aucune catégorie trouvée."
 
-#: wpadverts/form_search.php:47 wpadverts/list.php:58
-msgid "Grid"
-msgstr "la grille"
-
-#: wpadverts/form_search.php:48 wpadverts/list.php:59
-msgid "List"
-msgstr "liste"
-
-#: wpadverts/form_search.php:83 wpadverts/list.php:94
+#: wpadverts/form_search.php:82 wpadverts/list.php:86
 msgid "Advanced Search"
 msgstr "Chercher"
 
-#: wpadverts/form_search.php:85 wpadverts/list.php:96
+#: wpadverts/form_search.php:84 wpadverts/list.php:88
 msgid "Search"
 msgstr "Chercher"
 
-#: wpadverts/form_search.php:89 wpadverts/list.php:100
+#: wpadverts/form_search.php:88 wpadverts/list.php:92
 msgid "Filter Results"
 msgstr "Filtrer les résultats"
 
-#: wpadverts/list.php:124
+#: wpadverts/list.php:98
+msgid "Sort by: "
+msgstr ""
+
+#: wpadverts/list.php:115
+msgid "Pics"
+msgstr ""
+
+#: wpadverts/list.php:145
 #, php-format
 msgid " in %s"
 msgstr ""
 
-#: wpadverts/list.php:150
+#: wpadverts/list.php:169
 msgid "There are no ads matching your search criteria."
 msgstr "Il n'y a pas d'annonce correspondant à vos critères de recherche."
 
@@ -700,7 +675,7 @@ msgstr "Retour"
 msgid "View Ad"
 msgstr "Voir l'annonce"
 
-#: wpadverts/manage-edit.php:76
+#: wpadverts/manage-edit.php:75
 msgid "Update"
 msgstr "Mettre à jour"
 
@@ -719,7 +694,7 @@ msgstr ""
 
 #: wpadverts/manage.php:43
 msgid "Y/m/d"
-msgstr "d/m/Y"
+msgstr "Y/m/d"
 
 #: wpadverts/manage.php:58
 msgid "View"
@@ -761,6 +736,45 @@ msgstr "Région"
 #: wpadverts/single.php:193
 msgid "Annonces similaires"
 msgstr "Annonces similaires"
+
+#~ msgid "Change"
+#~ msgstr "Changer"
+
+#~ msgid "Create my account"
+#~ msgstr "Créer mon compte"
+
+#~ msgid "Member primary navigation"
+#~ msgstr "Navigation principale du membre"
+
+#~ msgid "Member secondary navigation"
+#~ msgstr "Navigation secondaire de membre"
+
+#~ msgid "Upload Image"
+#~ msgstr "Télécharger l'image"
+
+#~ msgid "Profile photo to crop"
+#~ msgstr "Logo à retailler"
+
+#~ msgid "Profile photo preview"
+#~ msgstr "Prévisualisation du logo du groupe"
+
+#~ msgid "Crop Image"
+#~ msgstr "Retailler l&#39;avatar"
+
+#~ msgid "Profile field groups"
+#~ msgstr "Détails du profil"
+
+#~ msgid "Save Changes"
+#~ msgstr "Enregistrer les modifications"
+
+#~ msgid "Actualités de FELLAH"
+#~ msgstr "Actualités de FELLAH"
+
+#~ msgid "Grid"
+#~ msgstr "la grille"
+
+#~ msgid "List"
+#~ msgstr "liste"
 
 #~ msgid "SEARCH"
 #~ msgstr "CHERCHER"

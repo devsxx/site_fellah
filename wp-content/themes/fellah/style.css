@@ -13850,6 +13850,20 @@ form textarea {
   margin: 0.1875rem 0.3125rem auto !important;
 }
 
+.header_bandeau_content .header_bandeau .search_zone .advert-input input:-ms-input-placeholder, .header_bandeau_content .header_bandeau .search_zone .advert-input input:-ms-input-placeholder, .header_bandeau_content .header_bandeau .search_zone .advert-input input::-ms-input-placeholder,
+.header_bandeau_content .header_bandeau .search_zone .advert-input select:-ms-input-placeholder,
+.header_bandeau_content .header_bandeau .search_zone .advert-input select:-ms-input-placeholder,
+.header_bandeau_content .header_bandeau .search_zone .advert-input select::-ms-input-placeholder {
+  color: #007e1d !important;
+}
+
+.header_bandeau_content .header_bandeau .search_zone .advert-input input::placeholder, .header_bandeau_content .header_bandeau .search_zone .advert-input input:-ms-input-placeholder, .header_bandeau_content .header_bandeau .search_zone .advert-input input::-ms-input-placeholder,
+.header_bandeau_content .header_bandeau .search_zone .advert-input select::placeholder,
+.header_bandeau_content .header_bandeau .search_zone .advert-input select:-ms-input-placeholder,
+.header_bandeau_content .header_bandeau .search_zone .advert-input select::-ms-input-placeholder {
+  color: #007e1d !important;
+}
+
 .header_bandeau_content .header_bandeau .search_zone .adverts-form-submit {
   font-size: 1.1875rem;
   height: 3.125rem;

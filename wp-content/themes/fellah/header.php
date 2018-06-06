@@ -82,7 +82,7 @@
 										<a href="https://www.facebook.com/FellahAnnonces/" target="_blank">
 											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us.png" class="first" alt="Fellah">
 											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/follow-us_hover.png" class="second" alt="Fellah">
-											<span><?php _e('follow-us','fellah'); ?></span>
+											<span><?php _e('Follow-us','fellah'); ?></span>
 										</a>
 									</div> 
 									<div class="compte">

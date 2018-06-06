@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-05-31 11:48+0000\n"
+"POT-Creation-Date: 2018-06-06 15:53+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -281,11 +281,11 @@ msgstr ""
 msgid "https://fellah.ma/"
 msgstr ""
 
-#: func/breadcrumb.php:211
+#: func/breadcrumb.php:213
 msgid "Page"
 msgstr ""
 
-#: func/breadcrumb.php:216
+#: func/breadcrumb.php:218
 msgid "Search results for: "
 msgstr ""
 
@@ -335,126 +335,139 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:143
+#: functions.php:145
 msgid "Sending user info, please wait..."
 msgstr ""
 
-#: functions.php:144
+#: functions.php:146
 msgid ""
 "Add your photos to make your ad even more visible. You can download up to 3 "
 "images."
 msgstr ""
 
-#: functions.php:307 functions.php:330 functions.php:331
+#: functions.php:150
+msgid "Select options ..."
+msgstr ""
+
+#: functions.php:151
+msgid "All categories"
+msgstr ""
+
+#: functions.php:152
+msgid "All regions"
+msgstr ""
+
+#: functions.php:313 functions.php:336 functions.php:337
 msgid "Publish Date"
 msgstr ""
 
-#: functions.php:309 functions.php:331
+#: functions.php:315 functions.php:337
 msgid "Newest First"
 msgstr ""
 
-#: functions.php:310
+#: functions.php:316
 msgid "Oldest First"
 msgstr ""
 
-#: functions.php:314 functions.php:812 wpadverts/single.php:92
+#: functions.php:320 functions.php:813 wpadverts/list.php:102
+#: wpadverts/single.php:92
 msgid "Price"
 msgstr ""
 
-#: functions.php:316
+#: functions.php:322
 msgid "Cheapest First"
 msgstr ""
 
-#: functions.php:317
+#: functions.php:323
 msgid "Most Expensive First"
 msgstr ""
 
-#: functions.php:321
+#: functions.php:327
 msgid "Title"
 msgstr ""
 
-#: functions.php:323
+#: functions.php:329
 msgid "From A to Z"
 msgstr ""
 
-#: functions.php:324
+#: functions.php:330
 msgid "From Z to A"
 msgstr ""
 
-#: functions.php:331 functions.php:361
+#: functions.php:337 functions.php:367
 #, php-format
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: functions.php:478
+#: functions.php:483
 msgid "Send"
 msgstr ""
 
-#: functions.php:520
+#: functions.php:525
 msgid "Your message has been sent."
 msgstr ""
 
-#: functions.php:525
+#: functions.php:530
 msgid "There are errors in your form."
 msgstr ""
 
-#: functions.php:558
+#: functions.php:563
 msgid "Send Message"
 msgstr ""
 
-#: functions.php:565 wpadverts/single.php:98
+#: functions.php:570 wpadverts/single.php:98
 msgid "Phone"
 msgstr ""
 
-#: functions.php:735
+#: functions.php:738
 msgid "Titre de l'annoce"
 msgstr ""
 
-#: functions.php:754
+#: functions.php:756
 msgid "Phone *"
 msgstr ""
 
-#: functions.php:773
+#: functions.php:774
 msgid "E mail *"
 msgstr ""
 
-#: functions.php:792
+#: functions.php:793
 msgid "Description"
 msgstr ""
 
-#: functions.php:863
+#: functions.php:864
 msgid "Region and city"
 msgstr ""
 
-#: functions.php:964 functions.php:1017
+#: functions.php:960 functions.php:1013
 msgid "Wrong username or password."
 msgstr ""
 
-#: functions.php:967 functions.php:1022
+#: functions.php:963 functions.php:1018
 msgid "Login successful"
 msgstr ""
 
-#: functions.php:1009
+#: functions.php:1005
 msgid "Can't login."
 msgstr ""
 
-#: functions.php:1026
+#: functions.php:1022
 msgid "User already exists.  Password inherited."
 msgstr ""
 
-#: functions.php:1225
+#: functions.php:1216
 msgid "wrong acces"
 msgstr ""
 
-#: functions.php:1226
+#: functions.php:1217
 msgid "You are connected"
 msgstr ""
 
-#: functions.php:1378
+#: functions.php:1360
 msgid "Télephone"
 msgstr ""
 
-#: functions.php:1381
+#: functions.php:1363
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
@@ -476,6 +489,14 @@ msgstr ""
 
 #: header.php:85
 msgid "follow-us"
+msgstr ""
+
+#: inc/customizer.php:63
+msgid "qTranslateXWidget"
+msgstr ""
+
+#: inc/customizer.php:65
+msgid "Widgets in this area will be shown on all posts and pages."
 msgstr ""
 
 #: inc/template-functions.php:61
@@ -539,8 +560,8 @@ msgstr ""
 msgid "Lorem ipsum dolor sit amet consecteteur."
 msgstr ""
 
-#: index.php:216
-msgid "Actualités de FELLAH"
+#: index.php:217 templates/news_agricoles.php:20
+msgid "Actualités"
 msgstr ""
 
 #: search.php:28
@@ -595,10 +616,6 @@ msgstr ""
 msgid "Search an article"
 msgstr ""
 
-#: templates/news_agricoles.php:20
-msgid "Actualités"
-msgstr ""
-
 #: templates/news_agricoles.php:49
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
@@ -631,32 +648,40 @@ msgstr ""
 msgid "No categories found."
 msgstr ""
 
-#: wpadverts/form_search.php:47 wpadverts/list.php:58
+#: wpadverts/form_search.php:47
 msgid "Grid"
 msgstr ""
 
-#: wpadverts/form_search.php:48 wpadverts/list.php:59
+#: wpadverts/form_search.php:48
 msgid "List"
 msgstr ""
 
-#: wpadverts/form_search.php:83 wpadverts/list.php:94
+#: wpadverts/form_search.php:82 wpadverts/list.php:86
 msgid "Advanced Search"
 msgstr ""
 
-#: wpadverts/form_search.php:85 wpadverts/list.php:96
+#: wpadverts/form_search.php:84 wpadverts/list.php:88
 msgid "Search"
 msgstr ""
 
-#: wpadverts/form_search.php:89 wpadverts/list.php:100
+#: wpadverts/form_search.php:88 wpadverts/list.php:92
 msgid "Filter Results"
 msgstr ""
 
-#: wpadverts/list.php:124
+#: wpadverts/list.php:98
+msgid "Sort by: "
+msgstr ""
+
+#: wpadverts/list.php:115
+msgid "Pics"
+msgstr ""
+
+#: wpadverts/list.php:145
 #, php-format
 msgid " in %s"
 msgstr ""
 
-#: wpadverts/list.php:150
+#: wpadverts/list.php:169
 msgid "There are no ads matching your search criteria."
 msgstr ""
 
@@ -668,7 +693,7 @@ msgstr ""
 msgid "View Ad"
 msgstr ""
 
-#: wpadverts/manage-edit.php:76
+#: wpadverts/manage-edit.php:75
 msgid "Update"
 msgstr ""
 
