@@ -21,8 +21,10 @@
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 						</div>
 					<?php endif; ?>
-
-					<?php fellah_post_thumbnail(); ?>
+					
+					<div class="image_article">
+						<?php fellah_post_thumbnail(); ?>
+					</div>
 
 					<header class="post-header">
 						<?php the_title( '<h1 class="blog_titre">', '</h1>' );  
