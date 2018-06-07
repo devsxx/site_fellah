@@ -1,3 +1,27 @@
+
+
+
+
+.advert_bandeau{  
+	.header_bandeau_content{  
+		height: oe_rem(110px) !important;
+		.header_bandeau{ 
+			height: oe_rem(110px);
+			&.header_bandeau_home{
+				background: none; 
+				background-color: $lighter_color; 
+			}
+			.titre{ 
+				font-size: oe_rem(0px); 
+				margin-bottom: oe_rem(0);
+			} 
+			.custom_sorting{
+				display: none;
+			}
+		}
+	}
+}
+
 .header_bandeau_content{ 
 	height: oe_rem(275px); 
 	&.fixed{    

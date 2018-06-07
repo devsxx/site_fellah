@@ -9,7 +9,9 @@
     wp_enqueue_script( 'adverts-frontend' );
 
 ?>
-
+<div class="advert_bandeau">
+    <?php echo do_shortcode( "[form_search redirect_to='4']" );  ?> 
+</div>
 <?php do_action( "adverts_tpl_single_top", $post_id ) ?>
 
 <div class="container">
@@ -226,8 +228,12 @@ if (!empty( $next_post ) || !empty( $prev_post )): ?>
                         <div class="info_container">
                                 <div class="info">
                                     <div class="date">
-                                        <i class="far fa-calendar-plus"></i>
-                                        <?php echo date_i18n( get_option( 'date_format' ), get_post_time( 'U', false, get_the_ID() ) ) ?>
+                                        <!-- <i class="far fa-calendar-plus"></i>  -->
+                                        <?php // echo get_the_date('j.m.Y'); ?>
+                                        <?php $price = get_post_meta( get_the_ID(), "adverts_price", true ) ?>
+                                        <?php if( $price ): ?>
+                                            <div class=""><?php echo esc_html( adverts_get_the_price( get_the_ID(), $price ) ) ?></div>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="lieu">
                                         <?php 

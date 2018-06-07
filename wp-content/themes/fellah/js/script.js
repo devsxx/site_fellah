@@ -500,7 +500,9 @@ jQuery(document).ready(function($) {
    });
 
 
-
+	$(".wpadverts-slide-nav-thumbnails-list").click(function(){
+		$( this ).toggle();
+	});
 
    $( "#slider-range-LCD" ).slider({
    	range: true,

@@ -13737,6 +13737,28 @@ form textarea {
   border-color: #c6c6c6;
 }
 
+.advert_bandeau .header_bandeau_content {
+  height: 6.875rem !important;
+}
+
+.advert_bandeau .header_bandeau_content .header_bandeau {
+  height: 6.875rem;
+}
+
+.advert_bandeau .header_bandeau_content .header_bandeau.header_bandeau_home {
+  background: none;
+  background-color: #ebebeb;
+}
+
+.advert_bandeau .header_bandeau_content .header_bandeau .titre {
+  font-size: 0;
+  margin-bottom: 0;
+}
+
+.advert_bandeau .header_bandeau_content .header_bandeau .custom_sorting {
+  display: none;
+}
+
 .header_bandeau_content {
   height: 17.1875rem;
 }
