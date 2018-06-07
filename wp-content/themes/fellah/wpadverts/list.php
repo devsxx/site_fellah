@@ -98,8 +98,7 @@
                                     <?php _e('Sort by: ','fellah'); ?>
                                 </div>
 
-                                <div class="budget-range-container">
-                                    <div class="budget-range-button"> <?php _e('Price','fellah'); ?></div>
+                                <div class="budget-range-container"> 
                                     <div class="budget-range">
                                         <p id="amount-LCD"></p>
                                         <input type="hidden" id="input-amount-LCD" name="price" readonly>

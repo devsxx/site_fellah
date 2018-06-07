@@ -509,11 +509,11 @@ jQuery(document).ready(function($) {
    	values: [ 10, 100000 ],
    	slide: function( event, ui ) {
    		$( "#input-amount-LCD" ).val( ui.values[ 0 ] + "-" + ui.values[ 1 ] );
-   		$( "#amount-LCD" ).html( "<strong>&nbsp;&nbsp; Price</strong> " + number_format(ui.values[ 0 ], 0, ',', ' ') + " DH - " + number_format(ui.values[ 1 ], 0, ',', ' ') + " DH &nbsp;&nbsp;" );
+   		$( "#amount-LCD" ).html( SEARCH_VARS.price + number_format(ui.values[ 0 ], 0, ',', ' ') + " DH - " + number_format(ui.values[ 1 ], 0, ',', ' ') + " DH &nbsp;&nbsp;" );
    	}
    });
    $( "#input-amount-LCD" ).val( $( "#slider-range-LCD" ).slider( "values", 0 ) + "-" + $( "#slider-range-LCD" ).slider( "values", 1 ) );
-   $( "#amount-LCD" ).html( "<strong>&nbsp;&nbsp; Price</strong> " + number_format($( "#slider-range-LCD" ).slider( "values", 0 ), 0, ',', ' ')  + " DH - " + number_format($( "#slider-range-LCD" ).slider( "values", 1 ), 0, ',', ' ') + " DH &nbsp;&nbsp;"  );
+   $( "#amount-LCD" ).html( SEARCH_VARS.price + number_format($( "#slider-range-LCD" ).slider( "values", 0 ), 0, ',', ' ')  + " DH - " + number_format($( "#slider-range-LCD" ).slider( "values", 1 ), 0, ',', ' ') + " DH &nbsp;&nbsp;"  );
 
 
 

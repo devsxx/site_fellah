@@ -13770,10 +13770,10 @@ form textarea {
   height: 17.1875rem;
   display: -ms-flexbox;
   display: flex;
-  -moz-align-items: flex-start;
-  -ms-align-items: flex-start;
-  -ms-flex-align: start;
-      align-items: flex-start;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
@@ -14046,10 +14046,10 @@ form textarea {
 .custom_sorting {
   display: -ms-flexbox;
   display: flex;
-  -moz-align-items: flex-start;
-  -ms-align-items: flex-start;
-  -ms-flex-align: start;
-      align-items: flex-start;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
@@ -14060,12 +14060,12 @@ form textarea {
   position: absolute;
   top: initial;
   right: initial;
-  bottom: -80px;
+  bottom: -75px;
   left: 15px;
 }
 
 .custom_sorting .custom_sorting_titre {
-  padding: 0 1.25rem;
+  padding-left: 1.25rem;
   font-size: 1.1875rem;
   font-weight: 500;
   color: #007e1d;
@@ -14091,6 +14091,7 @@ form textarea {
 .custom_sorting .budget-range-container .budget-range {
   float: left;
   margin-left: 10px;
+  width: 15.625rem;
 }
 
 .custom_sorting .budget-range-container .budget-range p {
@@ -14098,6 +14099,8 @@ form textarea {
   font-size: 14px;
   margin: 0 !important;
   text-align: center;
+  font-weight: 500;
+  font-family: "Quicksand", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 .custom_sorting .budget-range-container .budget-range .ui-slider .ui-slider-handle {
@@ -14109,7 +14112,7 @@ form textarea {
 }
 
 .custom_sorting .budget-range-container .budget-range .ui-slider .ui-slider-range {
-  background-color: #902628;
+  background-color: #007e1d;
   background-position: 0 0;
   border: 0 none;
   display: block;
@@ -14130,7 +14133,7 @@ form textarea {
 }
 
 .custom_sorting .checkbox_pics {
-  width: 5rem;
+  width: 5.9375rem;
   height: 3.125rem;
   color: #007e1d;
   float: left;
@@ -14868,10 +14871,6 @@ form textarea {
   }
 }
 
-#wpadminbar {
-  display: none;
-}
-
 #side_menu_container #side-menu {
   /* display: none; */
   position: fixed;
@@ -15602,6 +15601,7 @@ form textarea {
   font-size: 0.875rem;
   font-weight: 300;
   padding-right: 0.875rem;
+  font-family: "Quicksand", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 .annoce_container .info_container .info .lieu {

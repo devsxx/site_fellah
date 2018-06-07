@@ -22,6 +22,8 @@
 						</div>
 					<?php endif; ?>
 
+					<?php fellah_post_thumbnail(); ?>
+
 					<header class="post-header">
 						<?php the_title( '<h1 class="blog_titre">', '</h1>' );  
 							if ( 'post' === get_post_type() ) : ?>

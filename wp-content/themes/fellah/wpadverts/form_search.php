@@ -77,6 +77,7 @@
                                     <?php endif; ?>
                                 </div>
                             <?php endif; ?>
+                            
                             <div class="adverts-js">
                                 <?php if( !empty( $fields_hidden ) ): ?>
                                 <a href="#" class="adverts-form-filters adverts-button-small"><span><?php _e("Advanced Search", "fellah") ?> <span class="adverts-advanced-search-icon adverts-icon-down-open"></a>

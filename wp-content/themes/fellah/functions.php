@@ -140,12 +140,16 @@ function fellah_scripts() {
 	wp_enqueue_script( 'fellah-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_localize_script( 'script', 'ajax_login_object', array( 
-        'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'redirecturl' => home_url(),
-        'loadingmessage' => __('Sending user info, please wait...', 'fellah'),
-        'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 3 images.', 'fellah')
-    ));
- 
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'redirecturl' => home_url(),
+		'loadingmessage' => __('Sending user info, please wait...', 'fellah'),
+		'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 3 images.', 'fellah')
+  ));
+
+	wp_localize_script( 'script', 'SEARCH_VARS', array(  
+		'price' => __('Price: ', 'fellah')
+	));
+
 	 wp_localize_script( 'adverts-multiselect', 'adverts_multiselect_lang', array(
 		"hint"              => __("Select options ...", "fellah"),
 		"advert_category"   => __("All categories", "fellah"),

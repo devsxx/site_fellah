@@ -19,7 +19,7 @@
 	}
 	.header_bandeau{
 		height: oe_rem(275px);
-		@include flex(flex-start, center, row);
+		@include flex(center, center, row);
 		background-color: $lighter_color; 
 		padding: oe_rem(60px) 0;
 		@include transition(height , .2s, ease-in-out);
@@ -204,30 +204,29 @@
 
 
 .custom_sorting{
-	@include flex(flex-start, center, row);
-	@include position(absolute, initial, initial, -80px, 15px);
+	@include flex(center, center, row);
+	@include position(absolute, initial, initial, -75px, 15px);
 	.custom_sorting_titre{
-		padding: 0 oe_rem(20px);
+		padding-left: oe_rem(20px);
 		font-size: oe_rem(19px);
 		font-weight: 500;
 		color: $main-color;
 	}
 	.budget-range-container{
 		padding: 0 20px;
-		@include flex(flex-start, center, row);
-		.budget-range-button{
-
-		}
+		@include flex(flex-start, center, row); 
 		
 		.budget-range {
 			float: left;
 			margin-left: 10px;
-		
+			width: oe_rem(250px);
 			p {
 				color: #000;
 				font-size: 14px;
 				margin: 0 !important;
 				text-align: center;
+				font-weight: 500;
+				font-family: $second-font-family-sans-serif;
 			}
 			
 			.ui-slider {
@@ -241,7 +240,7 @@
 				}
 			
 				.ui-slider-range {
-					background-color: #902628;
+					background-color: $main-color;
 					background-position: 0 0;
 					border: 0 none;
 					display: block;
@@ -271,7 +270,7 @@
 	}
 
 	.checkbox_pics{
-		width: oe_rem(80px);
+		width: oe_rem(95px);
 		height: oe_rem(50px); 
 		color: $main_color;
 		float: left; 
