@@ -217,11 +217,15 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 });
 
-function custom_excerpt_length( $length ) { return 30; }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function ou_custom_excerpt_length( $length ) { return 30; }
+function ou_trim_words( $title ){  return wp_trim_words( $title, 6, '' ); }
+add_filter( 'excerpt_length', 'ou_custom_excerpt_length', 999 );
+add_filter( 'the_title', 'ou_trim_words' );
 
 add_filter( 'manage_advert_posts_columns', array( 'WPPostRatingsAdmin', 'postrating_admin_column_title' ) );
 add_action( 'manage_advert_posts_custom_column', array( 'WPPostRatingsAdmin', 'postrating_admin_column_content' ) ); 
+
+
 
 
 // $adverts_namespace['gallery'] = array(

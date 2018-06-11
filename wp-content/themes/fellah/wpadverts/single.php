@@ -116,7 +116,7 @@
                 
                 <div class="annonce-row">
                     <span class="name"><?php _e('Name', 'fellah'); ?></span> 
-                    <span class="author"><?php the_author(); ?></span>
+                    <span class="author"><?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?> </span>
                 </div>
                  
                 <?php set_get_PostViews($post_id); ?>
