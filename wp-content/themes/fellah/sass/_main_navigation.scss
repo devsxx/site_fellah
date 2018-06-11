@@ -51,7 +51,7 @@
 				background-color: $light_color;
 				@include oe_box-shadow;
 				@include flex(stretch, center, row);
-				@include position(fixed, 182px, 0, initial, 0);
+				@include position(fixed, 150px, 0, initial, 0);
 				display: none;
 				z-index: 999;
 				li{
@@ -98,7 +98,7 @@
 			}
 		}
 	}
-	@include media("<md"){
+	@include media("<lg"){
 		@include flex(center, flex-end, row);
 		height: auto;
 		ul{
@@ -124,6 +124,7 @@
 					}
 					@include position(fixed, 0, 0, 0, 0);
 					@include flex(center, center, row);
+					z-index: 999;
 					display: none;
 					li{ 
 						a{
@@ -144,6 +145,7 @@
 				.showAll{
 					.close{ 
 						color: #fff; 
+						display: block;
 						@include position(absolute, oe_rem(15px), oe_rem(15px), initial, initial); 	
 					}
 				}

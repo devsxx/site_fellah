@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <form action="<?php echo esc_attr( get_permalink( $redirect_to ) ) ?>" class="adverts-search-form" method="get">
+                    <form action="<?php echo esc_attr( get_permalink( $redirect_to ) ) ?>" class="adverts-search-form" id="adverts-search-form" method="get">
                         <div class="search_zone">
                             <?php foreach($form->get_fields( array( "type" => array( "adverts_field_hidden" ) ) ) as $field): ?>
                                 <?php call_user_func( adverts_field_get_renderer($field), $field) ?>
@@ -85,7 +85,7 @@
                                 <?php if( !empty( $fields_hidden ) ): ?>
                                 <a href="#" class="adverts-form-filters adverts-button-small"><span><?php _e("Advanced Search", "adverts") ?> <span class="adverts-advanced-search-icon adverts-icon-down-open"></a>
                                 <?php endif; ?>
-                                <a href="#" class="adverts-form-submit adverts-button-small"><?php _e("Search", "adverts") ?> <span class="adverts-icon-search"><span></a>
+                                <a href="#" class="adverts-form-submit adverts-button-small"><?php _e("Search", "fellah") ?> <span class="adverts-icon-search"><span></a>
                             </div>
 
                             <div class="adverts-options-fallback adverts-no-js">
@@ -109,8 +109,8 @@
 
                                 <div class="pics-container"> 
                                     <div class="checkbox_pics">
-                                        <label for="pics" <?php echo (adverts_request('pics') == 'on') ? 'class="checked"' : "" ; ?>>
-                                            <input type="checkbox" name="pics" id="pics" >
+                                        <label for="pics" <?php echo ( adverts_request('pics') != null && adverts_request('pics') == 'on') ? 'class="checked"' : '' ; ?>>
+                                            <input type="checkbox" name="pics" id="pics" <?php echo ( adverts_request('pics') != null && adverts_request('pics') == 'on') ? 'checked' : '' ; ?> >
                                             <?php _e('Pics','fellah'); ?>
                                         </label>
                                     </div>

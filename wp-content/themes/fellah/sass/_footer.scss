@@ -1,7 +1,9 @@
 
 .site-footer { 
+	z-index: 9;
 	@include oe_box-shadow;
 	padding: oe_rem(10px) 0;
+	@include position(fixed, initial, 0, 0, 0);
 	background-color: $second_main_color;
 	.site-info{
 		min-height: oe_rem(70px);

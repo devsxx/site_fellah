@@ -146,8 +146,16 @@ function fellah_scripts() {
 		'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 3 images.', 'fellah')
   ));
 
+  	$prices     = adverts_request("price");
+	$price = explode("-", $prices); 
+
+	$slider_min_value = (isset($price[0])) ? $price[0] : 10 ;
+	$slider_max_value = (isset($price[1])) ? $price[1] : 10000000 ;
+
 	wp_localize_script( 'script', 'SEARCH_VARS', array(  
-		'price' => __('Price: ', 'fellah')
+		'price' => __('Price: ', 'fellah'),
+		'slider_min_value' => $slider_min_value,
+		'slider_max_value' => $slider_max_value,
 	));
 
 	 wp_localize_script( 'adverts-multiselect', 'adverts_multiselect_lang', array(
@@ -212,31 +220,27 @@ add_filter( 'get_the_archive_title', function ($title) {
 function custom_excerpt_length( $length ) { return 30; }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-
 add_filter( 'manage_advert_posts_columns', array( 'WPPostRatingsAdmin', 'postrating_admin_column_title' ) );
 add_action( 'manage_advert_posts_custom_column', array( 'WPPostRatingsAdmin', 'postrating_admin_column_content' ) ); 
 
 
-
-
-$adverts_namespace['gallery'] = array(
-	'option_name' => 'adverts_gallery',
-	'default' => array(
-		 'ui' => 'pagination', // either paginator or thumbnails
-		 'visible_items' => 5,
-		 'scrolling_items' => 1,
-		 'lightbox' => 1,
-		 'image_edit_cap' => 'read',
-		 'image_sizes' => array(
-			  // supported sizes: adverts-upload-thumbnail, adverts-list, adverts-gallery
-			  "adverts-gallery" => array( 'enabled' => 1, 'width' => 650, 'height' => 300, 'crop' => true ),
-			  "adverts-list" => array( 'enabled' => 1, 'width' => 255, 'height' => 255, 'crop' => true ),
-			  "adverts-upload-thumbnail" => array( 'enabled' => 1, 'width' => 150, 'height' => 150, 'crop' => true ),
-			  //"adverts-gallery-thumbnail"
-		 ),
-	)
-);
-
+// $adverts_namespace['gallery'] = array(
+// 	'option_name' => 'adverts_gallery',
+// 	'default' => array(
+// 		 'ui' => 'pagination', // either paginator or thumbnails
+// 		 'visible_items' => 5,
+// 		 'scrolling_items' => 1,
+// 		 'lightbox' => 1,
+// 		 'image_edit_cap' => 'read',
+// 		 'image_sizes' => array(
+// 			  // supported sizes: adverts-upload-thumbnail, adverts-list, adverts-gallery
+// 			  "adverts-gallery" => array( 'enabled' => 1, 'width' => 650, 'height' => 300, 'crop' => true ),
+// 			  "adverts-list" => array( 'enabled' => 1, 'width' => 255, 'height' => 255, 'crop' => true ),
+// 			  "adverts-upload-thumbnail" => array( 'enabled' => 1, 'width' => 150, 'height' => 150, 'crop' => true ),
+// 			  //"adverts-gallery-thumbnail"
+// 		 ),
+// 	)
+// );
 
 
 require get_template_directory() . '/func/add-currency.php';
@@ -635,17 +639,17 @@ function my_adverts_form_load( $form ) {
 	);
 
 	$form["field"][] = array(
-			"type" => "adverts_field_header",
-			"name" => "_item_information",
-			"label" => "1. Votre annonce",
-			"meta" => array(
-						"cf_saved" => 1,
-						"cf_builtin" => 1,
+		"type" => "adverts_field_header",
+		"name" => "_item_information",
+		"label" => "1. Votre annonce",
+		"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
 		),
 
-			"order" => 2,
-			"cf_saved" => 1,
-			"validator" => array(
+		"order" => 2,
+		"cf_saved" => 1,
+		"validator" => array(
 		),
 		"description" => ""
 	);
@@ -773,23 +777,23 @@ function my_adverts_form_load( $form ) {
 		"cf_saved" => 1,
 	);
 
-	$form["field"][] = array(
-		"type" => "adverts_field_text",
-		"placeholder" => __("E mail *", "fellah"),
-		"name" => "adverts_email", 
-		"label" => "",
-		"meta" => array(
-			"cf_saved" => 1,
-			"cf_builtin" => 1,
-		),
-		"order" => 8,
-		"validator" => array(
-			"0" => array(
-				"name" => "is_required",
-			)
-		),
-		"cf_saved" => 1,
-	);
+	// $form["field"][] = array(
+	// 	"type" => "adverts_field_text",
+	// 	"placeholder" => __("E mail *", "fellah"),
+	// 	"name" => "adverts_email", 
+	// 	"label" => "",
+	// 	"meta" => array(
+	// 		"cf_saved" => 1,
+	// 		"cf_builtin" => 1,
+	// 	),
+	// 	"order" => 8,
+	// 	"validator" => array(
+	// 		"0" => array(
+	// 			"name" => "is_required",
+	// 		)
+	// 	),
+	// 	"cf_saved" => 1,
+	// );
 	
 	$form["field"][] =  array(
 		"type" => "adverts_field_textarea",
@@ -812,26 +816,25 @@ function my_adverts_form_load( $form ) {
 	);
 
 	$form["field"][] = array(
-			"type" => "adverts_field_text",
-			"name" => "adverts_price",
-			"placeholder" => __("Price", "fellah"),
-			"label" => "",
-			"meta" => array(
-						"cf_saved" => 1,
-						"cf_builtin" => 1,
+		"type" => "adverts_field_text",
+		"name" => "adverts_price",
+		"placeholder" => __("Price", "fellah"),
+		"label" => "",
+		"meta" => array(
+			"cf_saved" => 1,
+			"cf_builtin" => 1,
 		),
-			"order" => 10,
-			"class" => "adverts-filter-money",
-			"description" => "",
-			"attr" => array(
+		"order" => 10, 
+		"class" => "adverts-filter-money&",
+		"description" => "",
+		"attr" => array(
 		),
-			"filter" => array(
+		"filter" => array(
 			0 => array(
 				"name" => "money",
 			),
 		),
-
-			"cf_saved" => 1
+		"cf_saved" => 1
 	);
 
 	$form["field"][] =  array(
@@ -861,36 +864,43 @@ function my_adverts_form_load( $form ) {
 		"cf_saved" => 1,
 	);
 
+	// $form["field"][] =  array(
+	// 	"type" => "adverts_field_checkbox",
+	// 	"class"  => "checkbox_2",
+	// 	"name" => "localisation",
+	// 	"label" => __('Region and city', 'fellah'),
+	// 	"meta" => array(
+	// 		"cf_builtin" => "",
+	// 		"cf_saved" => 1,
+	// 		"cf_options_fill_method" => "callback",
+	// 		"cf_data_source" => "localisation",
+	// 		"cf_display" => "anywhere",
+	// 		"cf_display_type" => "table-row",
+	// 		"cf_display_as" => "text",
+	// 		"cf_display_icon" => "",
+	// 		"cf_display_style" => "inline-coma",
+	// 	),
+
+	// 	"validator" => array(
+	// 		0 => array(
+	// 			"name" => "is_required"
+	// 		)
+	// 	),
+
+	// 	"rows" => "",
+	// 		"max_choices" => "",
+	// 		"options" => array(
+	// 	),
+	// 	"order" => 12,
+	// 	"cf_saved" => 1,
+	// 	"options_callback" => "custom_fields_localisation_taxonomies_data_source",
+	// );
+
 	$form["field"][] =  array(
-		"type" => "adverts_field_checkbox",
-		"class"  => "checkbox_2",
 		"name" => "localisation",
+		"type" => "adverts_field_custom_localisation",
+		"order" => 13,
 		"label" => __('Region and city', 'fellah'),
-		"meta" => array(
-			"cf_builtin" => "",
-			"cf_saved" => 1,
-			"cf_options_fill_method" => "callback",
-			"cf_data_source" => "localisation",
-			"cf_display" => "anywhere",
-			"cf_display_type" => "table-row",
-			"cf_display_as" => "text",
-			"cf_display_icon" => "",
-			"cf_display_style" => "inline-coma",
-		),
-
-		"validator" => array(
-			0 => array(
-				"name" => "is_required"
-			)
-		),
-
-		"rows" => "",
-			"max_choices" => "",
-			"options" => array(
-		),
-		"order" => 12,
-		"cf_saved" => 1,
-		"options_callback" => "custom_fields_localisation_taxonomies_data_source",
 	);
 
 	$form["field"][] =  array(
@@ -1074,6 +1084,53 @@ function ajaxsouscat(){
 										$htmls .= '<div class="checkbox">
 										<input type="checkbox" class="filled-in" name="advert_category[]" id="advert_sub_category_'.$i.'" value="'.$term->term_id.'"> 
 										<label for="advert_sub_category_'.$i.'">'.$term->name.'</label>
+										</div>';
+									}
+								}
+
+			$htmls.=' </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div></div>';
+	}
+	echo $htmls;
+	die();
+}
+
+add_action( 'wp_ajax_nopriv_ajaxSousLocalisation', 'ajaxSousLocalisation' );
+add_action( 'wp_ajax_ajaxSousLocalisation', 'ajaxSousLocalisation' );
+function ajaxSousLocalisation(){
+	$htmls = "";
+
+	if(isset($_POST["ids"]) && !empty($_POST["ids"])){
+		
+		$htmls.= '
+		<div class="adverts-control-group adverts-field-custom-sub-localisation adverts-field-name-sub-localisation ajaxed">
+			<div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<label for="sub-localisation"> </label>
+							<div id="show_localisation"><i class="fas fa-map-pin"></i> Toutes les villes </div>
+							<div class="adverts-form-input-group adverts-form-input-group-checkbox-localisation adverts-field-rows-0">
+								<div>'; 
+								
+								$i = 0;
+								foreach($_POST["ids"] as $id){
+									$terms = get_terms( array(
+										'taxonomy' => 'localisation',
+										'hide_empty' => false,
+										'parent'   => $id
+										) );
+									foreach($terms as $term){
+										$i++;
+											
+										$htmls .= '<div class="checkbox">
+										<input type="checkbox" class="filled-in" name="localisation[]" id="sub_localisation_'.$i.'" value="'.$term->term_id.'"> 
+										<label for="sub_localisation_'.$i.'">'.$term->name.'</label>
 										</div>';
 									}
 								}
@@ -1292,8 +1349,30 @@ function adverts_field_customadvertscategory( $field ) {
 	echo $htmls;
 }
 
-include_once ADVERTS_PATH . 'includes/class-adverts.php';
+function adverts_field_custom_localisation( $field ) {
+    
+	$htmls = '';
+	
+	$terms = get_terms( array(
+		'taxonomy' => 'localisation',
+		'hide_empty' => false,
+		'parent'   => 0
+	) );
+		$i = 0;
+	foreach($terms as $term){
+		$i++;
+		$htmls .= '
+		<div class="checkbox">
+			<input type="checkbox" class="filled-in" name="localisation[]" id="localisation_'.$i.'" value="'.$term->term_id.'"> 
+			<label for="localisation_'.$i.'">'.$term->name.'</label>
+		</div>';
+	}
+		
+	
+	echo $htmls;
+}
 
+include_once ADVERTS_PATH . 'includes/class-adverts.php';
 add_action("admin_head", function(){
 	echo "<style>
 	#adverts_data_box > div > table > tbody > tr:nth-child(1),
@@ -1346,9 +1425,15 @@ adverts_form_add_fieldr("adverts_field_prev_next_3", array(
 ));
 
 adverts_form_add_fieldr("adverts_field_customadvertscategory", array(
-    "renderer" => "adverts_field_customadvertscategory",
-    "callback_save" => "adverts_save_single",	
-    "callback_bind" => "adverts_bind_single",
+	"renderer" => "adverts_field_customadvertscategory",
+	"callback_save" => "adverts_save_single",	
+	"callback_bind" => "adverts_bind_single",
+));
+
+adverts_form_add_fieldr("adverts_field_custom_localisation", array(
+	"renderer" => "adverts_field_custom_localisation",
+	"callback_save" => "adverts_save_single",	
+	"callback_bind" => "adverts_bind_single",
 ));
 
 //Add a mailchimp permission field, on user creation, user profile update

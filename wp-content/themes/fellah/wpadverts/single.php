@@ -23,7 +23,7 @@
             <!-- end breadcrumbs -->
         </div>
 
-		<div class="col-md-7"> 
+		<div class="col-md-12 col-lg-7"> 
  
             <div class="advert_single_container">
                
@@ -31,7 +31,7 @@
 
                     <div class="advert_date">
                         <i class="far fa-calendar-plus"></i>
-                        <?php printf( __('%1$s', "adverts"), date_i18n( get_option( 'date_format' )  )) ?>
+                        <?php echo get_the_date('j.m.Y'); ?> 
                     </div>
 
                     <div class="advert_lieu"> 
@@ -86,7 +86,7 @@
             </div> 
 		</div>
         
-		<div class="col-md-5">  
+		<div class="col-md-12 col-lg-5">  
             <div class="annonce_detail_side">
 
                 <?php if( get_post_meta( $post_id, "adverts_price", true) ): ?>
@@ -131,7 +131,7 @@
 <div class="contacter_annonceur">
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12 col-lg-7">
                 <?php do_action( "adverts_tpl_single_bottom", $post_id ) ?>
             </div>
         </div>
@@ -143,13 +143,13 @@ $next_post = get_next_post();
 $prev_post = get_previous_post();
 
 if (empty($next_post)) {
-	$args = array( 'posts_per_page' => 1, 'post_type' => 'post', 'order' => 'ASC');
+	$args = array( 'post_type' => 'advert', 'posts_per_page' => 1, 'order' => 'ASC');
 	$first = new WP_Query($args);
 	if($first->have_posts()) $next_post = $first->post;
 }
 
 if (empty($prev_post)) {
-	$args_2 = array( 'posts_per_page' => 1, 'post_type' => 'post', 'order' => 'DESC');
+	$args_2 = array( 'post_type' => 'advert', 'posts_per_page' => 1, 'order' => 'DESC');
     $last = new WP_Query($args_2);
     if($last->have_posts())  $prev_post = $last->post;
 }

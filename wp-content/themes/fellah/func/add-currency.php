@@ -21,7 +21,7 @@ function add_adverts_currency($list) {
     
     $list[] = array(
         "code"=>"MAD", // ISO 4217 currency code, see http://en.wikipedia.org/wiki/ISO_4217
-        "sign"=>"MAD", // currency prefix or postfix
+        "sign"=>" DH", // currency prefix or postfix
         "label"=>"Moroccan dirham" // currency long name
     );
     

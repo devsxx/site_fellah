@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2018-06-07 15:29+0000\n"
-"PO-Revision-Date: 2018-06-07 15:31+0000\n"
+"PO-Revision-Date: 2018-06-11 10:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -243,7 +243,7 @@ msgstr "Capacités des membres"
 
 #: buddypress/members/single/settings/capabilities.php:19
 msgid "This user is a spammer."
-msgstr ""
+msgstr "Cet utilisateur est un spammeur."
 
 #: buddypress/members/single/settings/delete-account.php:12
 msgid "Delete Account"
@@ -251,7 +251,7 @@ msgstr "Supprimer mon compte"
 
 #: buddypress/members/single/settings/delete-account.php:21
 msgid "I understand the consequences."
-msgstr ""
+msgstr "Je confirme la suppression de mon compte."
 
 #: buddypress/members/single/settings/general.php:12
 msgid "Email & Password"
@@ -266,6 +266,8 @@ msgid ""
 "Current Password <span>(required to update email or change current "
 "password)</span>"
 msgstr ""
+"Mot de passe actuel <span>(obligatoire pour changer d&#39;adresse mail ou "
+"modifier votre mot de passe)</span>"
 
 #: buddypress/members/single/settings/general.php:24
 msgid "Lost your password?"
@@ -289,7 +291,7 @@ msgstr ""
 
 #: buddypress/members/single/settings/group-invites.php:11
 msgid "Group Invites"
-msgstr ""
+msgstr "Invitations"
 
 #: buddypress/members/single/settings/group-invites.php:27
 msgid "I want to restrict Group invites to my friends only."
@@ -313,7 +315,7 @@ msgstr ""
 
 #: buddypress/members/single/settings/profile.php:34
 msgid "Visibility"
-msgstr ""
+msgstr "Visibilité"
 
 #: comments.php:35
 #, php-format
@@ -405,7 +407,7 @@ msgstr ""
 
 #: functions.php:150
 msgid "Price: "
-msgstr "Prix: "
+msgstr "Prix : "
 
 #: functions.php:154
 msgid "Select options ..."
@@ -628,7 +630,7 @@ msgstr "Actualités"
 #: search.php:28
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Résultats de recherche pour: %s"
+msgstr "Résultats de recherche pour : %s"
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
 #: template-parts/content-page.php:24
@@ -733,7 +735,7 @@ msgstr "Filtrer les résultats"
 
 #: wpadverts/list.php:98
 msgid "Sort by: "
-msgstr "Trier par: "
+msgstr "Trier par : "
 
 #: wpadverts/list.php:114
 msgid "Pics"

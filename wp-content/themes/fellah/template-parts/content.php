@@ -11,7 +11,7 @@
 <div class="page_blog">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-12 col-lg-8">
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
@@ -73,7 +73,7 @@
 
 			</div>
 
-			<div class="col-md-4">
+			<div class="col-md-12 col-lg-4">
 				<?php get_template_part( 'template-parts/single','side' ) ?>
 			</div>
 

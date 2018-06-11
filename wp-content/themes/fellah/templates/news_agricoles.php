@@ -15,7 +15,8 @@ get_header();
                               <?php the_breadcrumb(); ?>
                               <!-- end breadcrumbs -->
                         </div>
-                        <div class="offset-1 offset-md-0 col-10 col-md-8">
+
+                        <div class="offset-1 offset-md-0 col-10 col-md-12 col-lg-8">
                               <div class="page_blog">
                                     <div class="page_titre"><?php _e('Actualités', 'fellah'); ?></div>
                                     <?php
@@ -51,7 +52,7 @@ get_header();
                               </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-12 col-lg-4">
 				      <?php get_template_part( 'template-parts/single','side' ) ?>
                         </div>
 

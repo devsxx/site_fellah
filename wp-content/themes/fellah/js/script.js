@@ -30,7 +30,6 @@ jQuery(document).ready(function($) {
 		// $( "#swipebox-slider" ).live('click',function( ){ 
 		// 	$( "#swipebox-close" ).trigger(); 
 		// });  
-		
 
 	// }
 
@@ -181,12 +180,7 @@ jQuery(document).ready(function($) {
 			$(this).parent().removeClass('checked')
 	});
 
-	$('.checkbox_pics input:checkbox').change(function(){
-		if($(this).is(':checked')) 
-			$(this).parent().addClass('checked'); 
-		else 
-			$(this).parent().removeClass('checked')
-	});
+
 
    // Perform AJAX login on form submit
    $('#connect').on('click', function(e){
@@ -250,26 +244,25 @@ jQuery(document).ready(function($) {
 	   				'action': 'ajaxsignup',
 	   				'prenom' : prenom,
 	   				'nom' : nom,
-	// 'telephone' : telephone,
-	'email' : email,
-	'mot_passe' : mot_passe,
-	'confirm_mot_passe' : confirm_mot_passe,
-	},
-	beforeSend: function() {
-		jQuery("#ajaxloader").show();
-		jQuery("#ajaxShadow").show();
-	},
-	success: function(data){ 
-		if(data.etat){
-			$(".adverts-field-name-connect .register_form").css("display", "none"); 
-			$(".advert_success").css("display", "block").delay(3000).slideUp(100);
-		}else{
-			$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
-		} 
-		jQuery("#ajaxloader").hide();
-		jQuery("#ajaxShadow").hide();
-	}
-	});
+						'email' : email,
+						'mot_passe' : mot_passe,
+						'confirm_mot_passe' : confirm_mot_passe,
+					},
+					beforeSend: function() {
+						jQuery("#ajaxloader").show();
+						jQuery("#ajaxShadow").show();
+					},
+					success: function(data){ 
+						if(data.etat){
+							$(".adverts-field-name-connect .register_form").css("display", "none"); 
+							$(".advert_success").css("display", "block").delay(3000).slideUp(100);
+						}else{
+							$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
+						} 
+						jQuery("#ajaxloader").hide();
+						jQuery("#ajaxShadow").hide();
+					}
+				});
 	   	}
     });
 
@@ -394,7 +387,52 @@ jQuery(document).ready(function($) {
    	});
 
 
-   });
+	});
+
+	$(".adverts-field-custom-localisation input[type='checkbox']").click(function(){
+   	var checkbox = $(this);
+   	var allVals = [];
+
+   	$("input[name='localisation[]']:checked").each( function () {
+   		allVals.push($(this).val());
+   	});
+
+   	var id = $(this).val();
+   	$.ajax({
+   		type: 'POST',
+   		url: ajax_login_object.ajaxurl,
+   		data: { 
+   			'action': 'ajaxSousLocalisation',
+   			'ids' : allVals,
+   		},
+   		beforeSend: function() {
+   			jQuery("#ajaxloader").show();
+   			jQuery("#ajaxShadow").show();
+   		},
+   		success: function(response){
+   			if($(".ajaxed").length > 0){
+   				$(".ajaxed").remove();
+   			}
+   			checkbox.closest(".adverts-field-custom-localisation")
+   			.append( response );
+   			jQuery("#ajaxloader").hide();
+   			jQuery("#ajaxShadow").hide();
+   		}
+   	});
+
+
+	});
+
+	$("#show_localisation").live('click', function(){
+		$(".adverts-form-input-group-checkbox-localisation > div").addClass('show');
+	});
+	
+	$(".adverts-form-input-group-checkbox-localisation > div").live('click', function(){
+		$(this).removeClass('show');
+	}); 
+	$(".adverts-form-input-group-checkbox-localisation > div .checkbox").live('click', function(){
+		
+	}); 
 
    $('.adverts-field-name-gallery').find('.row').append("<div class='col-md-6'><div class='gallerymessage'>" + ajax_login_object.GALLERYMESSAGE + "</div></div>");
    $("select.adverts-multiselect").each(function(index, item) {
@@ -490,7 +528,6 @@ jQuery(document).ready(function($) {
    	input.attr("value", checked.join(", "));
    });
 
-
    $('.slide.current').click(function () {
    	$("#swipebox-close").trigger();
    });
@@ -499,7 +536,6 @@ jQuery(document).ready(function($) {
    	alert('erere');
    });
 
-
 	$(".wpadverts-slide-nav-thumbnails-list").click(function(){
 		$( this ).toggle();
 	});
@@ -507,17 +543,34 @@ jQuery(document).ready(function($) {
    $( "#slider-range-LCD" ).slider({
    	range: true,
    	min: 10,
-   	max: 100000,
-   	values: [ 10, 100000 ],
+   	max: 10000000,
+   	values: [ SEARCH_VARS.slider_min_value , SEARCH_VARS.slider_max_value ],
    	slide: function( event, ui ) {
    		$( "#input-amount-LCD" ).val( ui.values[ 0 ] + "-" + ui.values[ 1 ] );
    		$( "#amount-LCD" ).html( SEARCH_VARS.price + number_format(ui.values[ 0 ], 0, ',', ' ') + " DH - " + number_format(ui.values[ 1 ], 0, ',', ' ') + " DH &nbsp;&nbsp;" );
-   	}
-   });
+		},
+		stop: function () {
+			$("#adverts-search-form").submit(); 
+		}
+	});
+	
    $( "#input-amount-LCD" ).val( $( "#slider-range-LCD" ).slider( "values", 0 ) + "-" + $( "#slider-range-LCD" ).slider( "values", 1 ) );
    $( "#amount-LCD" ).html( SEARCH_VARS.price + number_format($( "#slider-range-LCD" ).slider( "values", 0 ), 0, ',', ' ')  + " DH - " + number_format($( "#slider-range-LCD" ).slider( "values", 1 ), 0, ',', ' ') + " DH &nbsp;&nbsp;"  );
 
 
+	
+
+	$('.checkbox_pics input:checkbox').change(function(){
+		if($(this).is(':checked')) 
+			$(this).parent().addClass('checked'); 
+		else 
+			$(this).parent().removeClass('checked')
+	});
+	
+	$("#pics").change(function(){ 
+		$("#adverts-search-form").submit(); 
+	});
+	 
 
 });
 

@@ -498,7 +498,14 @@ div.adverts-flash-messages {
 }
 
 
-
+.adverts-categories-all{  
+  .adverts-flexbox-columns-4 {
+    @include media("<lg"){
+      width: 48%;
+      margin: 0% 1% 2% 1%;
+    }
+  }
+}
 
 #swipebox-slider .slide {
   height: 100%;

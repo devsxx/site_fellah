@@ -3,7 +3,7 @@
 <?php if( $has_image == 'on' ){ ?>
     <?php $image = adverts_get_main_image( get_the_ID() ) ?>
     <?php if($image): ?>
-        <div class="col-md-3">
+        <div class="col-md-6 col-lg-3">
             <div class="annoce_container">
                 <a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ) ?>">
                     
@@ -48,7 +48,7 @@
         </div>
     <?php endif; ?>
 <?php }else{ ?>
-        <div class="col-md-3">
+        <div class="col-md-6 col-lg-3">
             <div class="annoce_container">
                 <a href="<?php the_permalink() ?>" title="<?php echo esc_attr( get_the_title() ) ?>">
                     

@@ -28,14 +28,14 @@
 			<div class="site-header-container">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-2">
+						<div class="col-md-12 col-lg-2">
 							<div class="site-branding">
 								<a href="<?php bloginfo( 'url' ) ?>">
 									<img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png" alt="Fellah">
 								</a>
 							</div><!-- .site-branding -->
 						</div>
-						<div class="col-md-7">
+						<div class="col-md-12 col-lg-7">
 							<nav id="site-navigation" class="main-navigation">
 								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fellah' ); ?></button>
 								<?php
@@ -46,7 +46,7 @@
 								?>  
 							</nav><!-- #site-navigation -->
 						</div>
-						<div class="col-md-3"> 
+						<div class="col-md-12 col-lg-3"> 
 							<div class="header_picto_container">
 								<div class="header_picto">
 									<?php 
