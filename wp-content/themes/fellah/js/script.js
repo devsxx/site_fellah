@@ -558,7 +558,18 @@ jQuery(document).ready(function($) {
    $( "#amount-LCD" ).html( SEARCH_VARS.price + number_format($( "#slider-range-LCD" ).slider( "values", 0 ), 0, ',', ' ')  + " DH - " + number_format($( "#slider-range-LCD" ).slider( "values", 1 ), 0, ',', ' ') + " DH &nbsp;&nbsp;"  );
 
 
+	$('#post_title').keyup(function(e){
+		updateOutput();
+	});
 	
+	function updateOutput(){
+		var sampleInput = $('#post_title').val(),
+			sampleInputLength = sampleInput.length;
+	
+		if(sampleInputLength >= 25) {    
+			$('#post_title').val( sampleInput.substr(0,25) );    
+		} 
+	}
 
 	$('.checkbox_pics input:checkbox').change(function(){
 		if($(this).is(':checked')) 
