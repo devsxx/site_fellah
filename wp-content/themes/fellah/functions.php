@@ -256,12 +256,12 @@ require get_template_directory() . '/func/search-by-category.php';
 require get_template_directory() . '/func/compteur-vues.php';
 require get_template_directory() . '/func/breadcrumb.php';
 
-
 // if( !defined("ADVERTS_FILE") ) {
 // 	define( "ADVERTS_FILE", __FILE__ );
 // 	define( "ADVERTS_PATH", plugin_dir_path( ADVERTS_FILE ) );
 // 	define( "ADVERTS_URL", plugins_url() . "/" . basename(ADVERTS_PATH) );
 // } 
+
 add_shortcode('form_search', 'shortcode_adverts_form_search');
 function shortcode_adverts_form_search( $atts ) {
  
