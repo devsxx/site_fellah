@@ -14111,6 +14111,27 @@ form textarea {
 .custom_sorting {
   display: -ms-flexbox;
   display: flex;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  top: initial;
+  right: 0.9375rem;
+  bottom: -75px;
+  left: 0.9375rem;
+}
+
+.custom_sorting .custom_sorting_container {
+  display: -ms-flexbox;
+  display: flex;
   -moz-align-items: center;
   -ms-align-items: center;
   -ms-flex-align: center;
@@ -14122,21 +14143,16 @@ form textarea {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  position: absolute;
-  top: initial;
-  right: initial;
-  bottom: -75px;
-  left: 15px;
 }
 
-.custom_sorting .custom_sorting_titre {
+.custom_sorting .custom_sorting_container .custom_sorting_titre {
   padding-left: 1.25rem;
   font-size: 1.1875rem;
   font-weight: 500;
   color: #007e1d;
 }
 
-.custom_sorting .budget-range-container {
+.custom_sorting .custom_sorting_container .budget-range-container {
   padding: 0 20px;
   display: -ms-flexbox;
   display: flex;
@@ -14153,13 +14169,13 @@ form textarea {
   flex-direction: row;
 }
 
-.custom_sorting .budget-range-container .budget-range {
+.custom_sorting .custom_sorting_container .budget-range-container .budget-range {
   float: left;
   margin-left: 10px;
   width: 15.625rem;
 }
 
-.custom_sorting .budget-range-container .budget-range p {
+.custom_sorting .custom_sorting_container .budget-range-container .budget-range p {
   color: #000;
   font-size: 14px;
   margin: 0 !important;
@@ -14168,7 +14184,7 @@ form textarea {
   font-family: "Quicksand", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
-.custom_sorting .budget-range-container .budget-range .ui-slider .ui-slider-handle {
+.custom_sorting .custom_sorting_container .budget-range-container .budget-range .ui-slider .ui-slider-handle {
   cursor: default;
   height: 1em;
   position: absolute;
@@ -14176,7 +14192,7 @@ form textarea {
   z-index: 2;
 }
 
-.custom_sorting .budget-range-container .budget-range .ui-slider .ui-slider-range {
+.custom_sorting .custom_sorting_container .budget-range-container .budget-range .ui-slider .ui-slider-range {
   background-color: #007e1d;
   background-position: 0 0;
   border: 0 none;
@@ -14186,18 +14202,18 @@ form textarea {
   z-index: 1;
 }
 
-.custom_sorting .budget-range-container .budget-range .ui-slider.ui-slider-horizontal {
+.custom_sorting .custom_sorting_container .budget-range-container .budget-range .ui-slider.ui-slider-horizontal {
   height: 0.5em;
   top: 2px;
 }
 
-.custom_sorting .budget-range-container .budget-range .ui-slider.ui-slider-horizontal .ui-slider-handle {
+.custom_sorting .custom_sorting_container .budget-range-container .budget-range .ui-slider.ui-slider-horizontal .ui-slider-handle {
   border-radius: 50%;
   margin-left: -0.6em;
   top: -0.35em;
 }
 
-.custom_sorting .checkbox_pics {
+.custom_sorting .custom_sorting_container .checkbox_pics {
   width: 5.9375rem;
   height: 3.125rem;
   color: #007e1d;
@@ -14206,7 +14222,7 @@ form textarea {
   text-align: center !important;
 }
 
-.custom_sorting .checkbox_pics [type=checkbox], .custom_sorting .checkbox_pics [type=radio] {
+.custom_sorting .custom_sorting_container .checkbox_pics [type=checkbox], .custom_sorting .custom_sorting_container .checkbox_pics [type=radio] {
   position: absolute;
   left: -9999px;
   visibility: visible;
@@ -14214,7 +14230,7 @@ form textarea {
   padding: 0;
 }
 
-.custom_sorting .checkbox_pics label {
+.custom_sorting .custom_sorting_container .checkbox_pics label {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -14231,12 +14247,12 @@ form textarea {
   text-align: center !important;
 }
 
-.custom_sorting .checkbox_pics label.checked {
+.custom_sorting .custom_sorting_container .checkbox_pics label.checked {
   color: white;
   background-color: #007e1d;
 }
 
-.custom_sorting .checkbox_pics label.checked:after {
+.custom_sorting .custom_sorting_container .checkbox_pics label.checked:after {
   content: '\f00c';
   font-size: 12px;
   font-family: 'Font Awesome 5 Free';
@@ -14252,10 +14268,14 @@ form textarea {
 }
 
 @media (max-width: 767px) {
-  .custom_sorting .checkbox_pics {
+  .custom_sorting .custom_sorting_container .checkbox_pics {
     float: none;
     margin: 0.9375rem auto !important;
   }
+}
+
+.custom_sorting .decocher_filtres {
+  margin-left: auto;
 }
 
 @media (max-width: 991px) {
@@ -16966,7 +16986,7 @@ div.adverts-flash-messages {
 .site-footer {
   z-index: 9;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 0.625rem 0;
+  padding: 0.3125rem 0;
   position: fixed;
   top: initial;
   right: 0;
@@ -16976,7 +16996,7 @@ div.adverts-flash-messages {
 }
 
 .site-footer .site-info {
-  min-height: 4.375rem;
+  min-height: 3.125rem;
   display: -ms-flexbox;
   display: flex;
   -moz-align-items: center;
@@ -17054,7 +17074,7 @@ div.adverts-flash-messages {
 .site-footer .facebook {
   display: block;
   float: right;
-  line-height: 4.0625rem;
+  line-height: 2.8125rem;
 }
 
 @media (max-width: 767px) {

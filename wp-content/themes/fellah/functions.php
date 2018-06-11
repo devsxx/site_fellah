@@ -143,7 +143,7 @@ function fellah_scripts() {
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		'redirecturl' => home_url(),
 		'loadingmessage' => __('Sending user info, please wait...', 'fellah'),
-		'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 3 images.', 'fellah')
+		'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 5 images.', 'fellah')
   ));
 
   	$prices     = adverts_request("price");

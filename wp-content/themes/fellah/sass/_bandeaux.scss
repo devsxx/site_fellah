@@ -252,129 +252,134 @@
 
 
 .custom_sorting{
-	@include flex(center, center, row);
-	@include position(absolute, initial, initial, -75px, 15px);
-	.custom_sorting_titre{
-		padding-left: oe_rem(20px);
-		font-size: oe_rem(19px);
-		font-weight: 500;
-		color: $main-color;
-	}
-	.budget-range-container{
-		padding: 0 20px;
-		@include flex(flex-start, center, row); 
-		
-		.budget-range {
-			float: left;
-			margin-left: 10px;
-			width: oe_rem(250px);
-			p {
-				color: #000;
-				font-size: 14px;
-				margin: 0 !important;
-				text-align: center;
-				font-weight: 500;
-				font-family: $second-font-family-sans-serif;
-			}
+	@include flex(flex-start, flex-start, row);
+	@include position(absolute, initial, oe_rem(15px), -75px, oe_rem(15px));
+	.custom_sorting_container{
+		@include flex(center, center, row);
+		.custom_sorting_titre{
+			padding-left: oe_rem(20px);
+			font-size: oe_rem(19px);
+			font-weight: 500;
+			color: $main-color;
+		}
+		.budget-range-container{
+			padding: 0 20px;
+			@include flex(flex-start, center, row); 
 			
-			.ui-slider {
-			
-				.ui-slider-handle { 
-					cursor: default;
-					height: 1em;
-					position: absolute;
-					width: 1em;
-					z-index: 2;
+			.budget-range {
+				float: left;
+				margin-left: 10px;
+				width: oe_rem(250px);
+				p {
+					color: #000;
+					font-size: 14px;
+					margin: 0 !important;
+					text-align: center;
+					font-weight: 500;
+					font-family: $second-font-family-sans-serif;
 				}
-			
-				.ui-slider-range {
-					background-color: $main-color;
-					background-position: 0 0;
-					border: 0 none;
-					display: block;
-					font-size: 0.7em;
-					position: absolute;
-					z-index: 1;
-				}
-
-				&.ui-slider-horizontal {
-		
-					height: 0.5em;
-					top: 2px;
 				
-					.ui-slider-handle {
-						border-radius: 50%;
-						margin-left: -0.6em;
-						top: -0.35em;
+				.ui-slider {
+				
+					.ui-slider-handle { 
+						cursor: default;
+						height: 1em;
+						position: absolute;
+						width: 1em;
+						z-index: 2;
+					}
+				
+					.ui-slider-range {
+						background-color: $main-color;
+						background-position: 0 0;
+						border: 0 none;
+						display: block;
+						font-size: 0.7em;
+						position: absolute;
+						z-index: 1;
+					}
+
+					&.ui-slider-horizontal {
+			
+						height: 0.5em;
+						top: 2px;
+					
+						.ui-slider-handle {
+							border-radius: 50%;
+							margin-left: -0.6em;
+							top: -0.35em;
+						}
+					
 					}
 				
 				}
 			
+			} 
+			
+			
+		}
+
+		.checkbox_pics{
+			width: oe_rem(95px);
+			height: oe_rem(50px); 
+			color: $main_color;
+			float: left; 
+			margin: 0;
+			text-align: center !important;
+		
+			[type=checkbox], [type=radio] {
+				position: absolute;
+				left: -9999px;
+				visibility: visible;
+				box-sizing: border-box;
+				padding: 0;
 			}
 		
-		} 
+			label {
+				cursor: pointer;
+				position: relative; 
+				display: inline-block;
+				height: oe_rem(50px);
+				line-height: oe_rem(50px);
+				width: 100%;  
+				border-radius: oe_rem(4px);
+				margin: 0;
+				padding: 0;
+				font-size: oe_rem(19px);
+				font-weight: 500;
+				color: $main_color;
+				background-color: white;
+				text-align: center !important;
+			}
 		
+			label.checked {
+				color: white;
+				background-color: $main_color;
+			}
 		
-	}
-
-	.checkbox_pics{
-		width: oe_rem(95px);
-		height: oe_rem(50px); 
-		color: $main_color;
-		float: left; 
-		margin: 0;
-		text-align: center !important;
-	
-		[type=checkbox], [type=radio] {
-			position: absolute;
-			left: -9999px;
-			visibility: visible;
-			box-sizing: border-box;
-			padding: 0;
-		}
-	
-		label {
-			cursor: pointer;
-			position: relative; 
-			display: inline-block;
-			height: oe_rem(50px);
-			line-height: oe_rem(50px);
-			width: 100%;  
-			border-radius: oe_rem(4px);
-			margin: 0;
-			padding: 0;
-			font-size: oe_rem(19px);
-			font-weight: 500;
-			color: $main_color;
-			background-color: white;
-			text-align: center !important;
-		}
-	
-		label.checked {
-			color: white;
-			background-color: $main_color;
-		}
-	
-		label.checked:after { 
-			content: '\f00c';
-			font-size: 12px;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 900;
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			margin-left: 5px;
-		}
-		@include media("<md"){
-			float: none;
-			margin: oe_rem(15px) auto !important;
+			label.checked:after { 
+				content: '\f00c';
+				font-size: 12px;
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				line-height: 1;
+				margin-left: 5px;
+			}
+			@include media("<md"){
+				float: none;
+				margin: oe_rem(15px) auto !important;
+			}
 		}
 	}
-
+	.decocher_filtres{
+		margin-left: auto;
+	}
 	@include media("<lg"){
 		padding: oe_rem(10px) 0;
 		@include position(relative, initial, initial, initial, initial);

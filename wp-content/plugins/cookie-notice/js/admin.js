@@ -22,7 +22,7 @@
 			}
 		} );
 
-		// read more option
+		// privacy policy option
 		$( '#cn_see_more' ).change( function () {
 			if ( $( this ).is( ':checked' ) ) {
 				$( '#cn_see_more_opt' ).slideDown( 'fast' );
@@ -31,7 +31,7 @@
 			}
 		} );
 
-		// read more option
+		// privacy policy option
 		$( '#cn_on_scroll' ).change( function () {
 			if ( $( this ).is( ':checked' ) ) {
 				$( '#cn_on_scroll_offset' ).slideDown( 'fast' );
@@ -40,7 +40,7 @@
 			}
 		} );
 
-		// read more link
+		// privacy policy link
 		$( '#cn_see_more_link-custom, #cn_see_more_link-page' ).change( function () {
 			if ( $( '#cn_see_more_link-custom:checked' ).val() === 'custom' ) {
 				$( '#cn_see_more_opt_page' ).slideUp( 'fast', function () {

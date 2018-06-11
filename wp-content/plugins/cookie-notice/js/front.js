@@ -167,78 +167,70 @@
 			data: cnArgs
 		} );
 
+		var notice = this;
+
 		switch ( type ) {
 			case 0:
 				if ( cnArgs.hideEffect === 'fade' ) {
 					// show cookie notice
-					this.fadeIn( 300 );
+					notice.css( { 'visibility': 'visible', 'display': 'none' } ).fadeIn( 400 );
 				} else if ( cnArgs.hideEffect === 'slide' ) {
 					// show cookie notice
-					this.slideDown( 300 );
+					notice.css( { 'visibility': 'visible', 'display': 'none' } ).slideDown( 400 );
 				} else {
 					// show cookie notice
-					this.show();
+					notice.css( { 'visibility': 'visible' } ).show();
 				}
 				break;
 
 			case 1:
-				var notice = this;
-
 				if ( cnArgs.hideEffect === 'fade' ) {
 					// hide revoke button
-					this.find( '.cookie-notice-revoke-container' ).fadeOut( 300, function () {
+					notice.find( '.cookie-notice-revoke-container' ).fadeOut( 400, function () {
 						// show cookie notice
-						notice.css( { 'visibility': 'visible', 'display': 'none' } ).fadeIn( 300 );
+						notice.css( { 'visibility': 'visible', 'display': 'none' } ).fadeIn( 400 );
 					} );
 				} else if ( cnArgs.hideEffect === 'slide' ) {
 					// hide revoke button
-					this.find( '.cookie-notice-revoke-container' ).slideUp( 300, function () {
+					notice.find( '.cookie-notice-revoke-container' ).slideUp( 400, function () {
 						// show cookie notice
-						notice.css( { 'visibility': 'visible', 'display': 'none' } ).slideDown( 300 );
+						notice.css( { 'visibility': 'visible', 'display': 'none' } ).slideDown( 400 );
 					} );
 				} else {
 					// hide revoke button
-					this.find( '.cookie-notice-revoke-container' ).hide();
-
-					// show cookie notice
-					notice.css( { 'visibility': 'visible', 'display': 'block' } );
+					notice.css( { 'visibility': 'visible' } ).find( '.cookie-notice-revoke-container' ).hide();
 				}
 				break;
 
 			case 2:
 				if ( cnArgs.hideEffect === 'fade' ) {
 					// show cookie notice
-					this.css( { 'visibility': 'visible', 'display': 'none' } ).fadeIn( 300 );
+					notice.css( { 'visibility': 'visible', 'display': 'none' } ).fadeIn( 400 );
 				} else if ( cnArgs.hideEffect === 'slide' ) {
 					// show cookie notice
-					this.css( { 'visibility': 'visible', 'display': 'none' } ).slideDown( 300 );
+					notice.css( { 'visibility': 'visible', 'display': 'none' } ).slideDown( 400 );
 				} else {
 					// show cookie notice
-					this.css( { 'visibility': 'visible', 'display': 'block' } );
+					notice.css( { 'visibility': 'visible' } );
 				}
 				break;
 
 			case 3:
-				var notice = this;
-
 				if ( cnArgs.hideEffect === 'fade' ) {
 					// hide revoke button
-					this.find( '.cookie-notice-revoke-container' ).fadeOut( 300, function () {
+					notice.find( '.cookie-notice-revoke-container' ).fadeOut( 400, function () {
 						// show cookie notice
-						notice.css( { 'visibility': 'visible', 'display': 'none' } ).fadeIn( 300 );
+						notice.css( { 'visibility': 'visible', 'display': 'none' } ).fadeIn( 400 );
 					} );
 				} else if ( cnArgs.hideEffect === 'slide' ) {
 					// hide revoke button
-					this.find( '.cookie-notice-revoke-container' ).slideUp( 300, function () {
+					notice.find( '.cookie-notice-revoke-container' ).slideUp( 400, function () {
 						// show cookie notice
-						notice.css( { 'visibility': 'visible', 'display': 'none' } ).slideDown( 300 );
+						notice.css( { 'visibility': 'visible', 'display': 'none' } ).slideDown( 400 );
 					} );
 				} else {
 					// hide revoke button
-					this.find( '.cookie-notice-revoke-container' ).hide();
-
-					// show cookie notice
-					notice.css( { 'visibility': 'visible', 'display': 'block' } );
+					notice.css( { 'visibility': 'visible' } ).find( '.cookie-notice-revoke-container' ).hide();
 				}
 				break;
 		}
@@ -252,55 +244,45 @@
 			value: type,
 			data: cnArgs
 		} );
+		
+		var notice = this,
+			display = this.css( 'display' );
 
 		switch ( type ) {
 			case 0:
 				if ( cnArgs.hideEffect === 'fade' ) {
-					this.fadeOut( 300 );
+					notice.fadeOut( 400 );
 				} else if ( cnArgs.hideEffect === 'slide' ) {
-					this.slideUp( 300 );
+					notice.slideUp( 400 );
 				} else {
-					this.hide();
+					notice.css( { 'visibility': 'hidden' } );
 				}
 				break;
 
 			case 1:
-				this.css( { 'visibility': 'hidden', 'display': 'block' } );
-
 				if ( cnArgs.hideEffect === 'fade' ) {
-					this.find( '.cookie-notice-revoke-container' ).fadeIn( 300 ).css( { 'visibility': 'visible', 'display': 'block' } );
+					notice.find( '.cookie-notice-revoke-container' ).hide().fadeIn( 400 ).css( { 'visibility': 'visible', 'display': 'block' } );
 				} else if ( cnArgs.hideEffect === 'slide' ) {
-					this.find( '.cookie-notice-revoke-container' ).slideDown( 300 ).css( { 'visibility': 'visible', 'display': 'block' } );
+					notice.find( '.cookie-notice-revoke-container' ).hide().slideDown( 400 ).css( { 'visibility': 'visible', 'display': 'block' } );
 				} else {
-					this.find( '.cookie-notice-revoke-container' ).css( { 'visibility': 'visible', 'display': 'block' } );
+					notice.find( '.cookie-notice-revoke-container' ).css( { 'visibility': 'visible', 'display': 'block' } );
 				}
 				break;
 
 			case 2:
-				var notice = this;
-
 				if ( cnArgs.hideEffect === 'fade' ) {
-					this.fadeOut( 300, function () {
-						// hide cookie notice
-						notice.css( { 'visibility': 'hidden', 'display': 'block' } );
-
+					notice.fadeOut( 400, function () {
 						// show revoke button
-						notice.find( '.cookie-notice-revoke-container' ).fadeIn( 300 ).css( { 'visibility': 'visible', 'display': 'block' } );
+						notice.css( { 'visibility': 'hidden', 'display': display } ).find( '.cookie-notice-revoke-container' ).hide().fadeIn( 400 ).css( { 'visibility': 'visible', 'display': 'block' } );
 					} );
 				} else if ( cnArgs.hideEffect === 'slide' ) {
-					this.slideUp( 300, function () {
-						// hide cookie notice
-						notice.css( { 'visibility': 'hidden', 'display': 'block' } );
-
+					notice.slideUp( 400, function () {
 						// show revoke button
-						notice.find( '.cookie-notice-revoke-container' ).slideDown( 300 ).css( { 'visibility': 'visible', 'display': 'block' } );
+						notice.css( { 'visibility': 'hidden', 'display': display } ).find( '.cookie-notice-revoke-container' ).hide().slideDown( 400 ).css( { 'visibility': 'visible', 'display': 'block' } );
 					} );
 				} else {
-					// hide cookie notice
-					this.css( { 'visibility': 'hidden', 'display': 'block' } );
-
 					// show revoke button
-					notice.find( '.cookie-notice-revoke-container' ).css( { 'visibility': 'visible', 'display': 'block' } );
+					notice.css( { 'visibility': 'hidden' } ).find( '.cookie-notice-revoke-container' ).css( { 'visibility': 'visible', 'display': 'block' } );
 				}
 				break;
 		}

@@ -93,28 +93,36 @@
                             </div>
 
                             <div class="custom_sorting">
+                                <div class="custom_sorting_container">
+                                    <div class="custom_sorting_titre">
+                                        <?php _e('Sort by: ','fellah'); ?>
+                                    </div>
 
-                                <div class="custom_sorting_titre">
-                                    <?php _e('Sort by: ','fellah'); ?>
-                                </div>
+                                    <div class="budget-range-container"> 
+                                        <div class="budget-range">
+                                            <p id="amount-LCD"></p>
+                                            <input type="hidden" id="input-amount-LCD" name="price" readonly>
+                                            <div id="slider-range-LCD"></div>
+                                        </div>
+                                    </div>
 
-                                <div class="budget-range-container"> 
-                                    <div class="budget-range">
-                                        <p id="amount-LCD"></p>
-                                        <input type="hidden" id="input-amount-LCD" name="price" readonly>
-                                        <div id="slider-range-LCD"></div>
+
+                                    <div class="pics-container"> 
+                                        <div class="checkbox_pics">
+                                            <label for="pics" <?php echo ( adverts_request('pics') != null && adverts_request('pics') == 'on') ? 'class="checked"' : '' ; ?>>
+                                                <input type="checkbox" name="pics" id="pics" <?php echo ( adverts_request('pics') != null && adverts_request('pics') == 'on') ? 'checked' : '' ; ?> >
+                                                <?php _e('Pics','fellah'); ?>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-
-
-                                <div class="pics-container"> 
-                                    <div class="checkbox_pics">
-                                        <label for="pics" <?php echo ( adverts_request('pics') != null && adverts_request('pics') == 'on') ? 'class="checked"' : '' ; ?>>
-                                            <input type="checkbox" name="pics" id="pics" <?php echo ( adverts_request('pics') != null && adverts_request('pics') == 'on') ? 'checked' : '' ; ?> >
-                                            <?php _e('Pics','fellah'); ?>
-                                        </label>
+                                
+                                <?php  
+                                if( adverts_request('pics') != null || adverts_request('price') != null ){ ?>
+                                    <div class="decocher_filtres">
+                                        <a href="<?php the_permalink( 4 ); ?>"> <?php _e('Décocher les filtres', 'fellah'); ?></a>
                                     </div>
-                                </div>
+                                <?php }?>
 
                             </div>
 

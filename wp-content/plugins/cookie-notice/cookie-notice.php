@@ -2,7 +2,7 @@
 /*
 Plugin Name: Cookie Notice
 Description: Cookie Notice allows you to elegantly inform users that your site uses cookies and to comply with the EU cookie law GDPR regulations.
-Version: 1.2.43
+Version: 1.2.44
 Author: dFactory
 Author URI: http://www.dfactory.eu/
 Plugin URI: http://www.dfactory.eu/plugins/cookie-notice/
@@ -34,7 +34,7 @@ include_once( plugin_dir_path( __FILE__ ) . 'includes/upgrade.php' );
  * Cookie Notice class.
  *
  * @class Cookie_Notice
- * @version	1.2.43
+ * @version	1.2.44
  */
 class Cookie_Notice {
 
@@ -77,7 +77,7 @@ class Cookie_Notice {
 			'translate'						=> true,
 			'deactivation_delete'			=> 'no'
 		),
-		'version'							=> '1.2.43'
+		'version'							=> '1.2.44'
 	);
 	private $positions 			= array();
 	private $styles 			= array();
@@ -121,6 +121,9 @@ class Cookie_Notice {
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 2 );
 		add_filter( 'plugin_action_links', array( $this, 'plugin_action_links' ), 10, 2 );
 		add_filter( 'body_class', array( $this, 'change_body_class' ) );
+
+		// load other files
+		include_once( plugin_dir_path( __FILE__ ) . 'includes/functions.php' );
 	}
 
 	/**
@@ -186,8 +189,8 @@ class Cookie_Notice {
 			$this->options['general']['message_text'] = __( 'We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.', 'cookie-notice' );
 			$this->options['general']['accept_text'] = __( 'Ok', 'cookie-notice' );
 			$this->options['general']['refuse_text'] = __( 'No', 'cookie-notice' );
-			$this->options['general']['revoke_text'] = __( 'Revoke Cookies', 'cookie-notice' );
-			$this->options['general']['see_more_opt']['text'] = __( 'Read more', 'cookie-notice' );
+			$this->options['general']['revoke_text'] = __( 'Revoke cookies', 'cookie-notice' );
+			$this->options['general']['see_more_opt']['text'] = __( 'Privacy policy', 'cookie-notice' );
 
 			update_option( 'cookie_notice_options', $this->options['general'] );
 		}
@@ -201,7 +204,7 @@ class Cookie_Notice {
 			icl_register_string( 'Cookie Notice', 'Button text', $this->options['general']['accept_text'] );
 			icl_register_string( 'Cookie Notice', 'Refuse button text', $this->options['general']['refuse_text'] );
 			icl_register_string( 'Cookie Notice', 'Revoke button text', $this->options['general']['revoke_text'] );
-			icl_register_string( 'Cookie Notice', 'Read more text', $this->options['general']['see_more_opt']['text'] );
+			icl_register_string( 'Cookie Notice', 'Privacy policy text', $this->options['general']['see_more_opt']['text'] );
 			icl_register_string( 'Cookie Notice', 'Custom link', $this->options['general']['see_more_opt']['link'] );
 		}
 	}
@@ -250,8 +253,12 @@ class Cookie_Notice {
 		if ( $this->cookies_accepted() ) {
 			$scripts = html_entity_decode( trim( wp_kses( $content, $this->get_allowed_html() ) ) );
 
-			if ( ! empty( $scripts ) )
+			if ( ! empty( $scripts ) ) {
+				if ( preg_match_all( '/' . get_shortcode_regex() . '/', $content ) ) {
+					$scripts = do_shortcode( $scripts );
+				}
 				return $scripts;
+			}
 		}
 
 		return '';
@@ -270,7 +277,7 @@ class Cookie_Notice {
 
 		// defaults
 		$defaults = array(
-			'title'	=> __( 'Revoke Cookies', 'cookie-notice' ),
+			'title'	=> $options['revoke_text'],
 			'class'	=> $options['css_class']
 		);
 
@@ -280,7 +287,7 @@ class Cookie_Notice {
 		// escape class(es)
 		$args['class'] = esc_attr( $args['class'] );
 
-		return '<a href="#" class="cn-revoke-cookie cn-button cn-revoke-inline' . ( $options['css_style'] !== 'none' ? ' ' . $options['css_style'] : '' ) . ( $args['class'] !== '' ? ' ' . $args['class'] : '' ) . '">' . esc_html( $args['title'] ) . '</a>';
+		return '<a href="#" class="cn-revoke-cookie cn-button cn-revoke-inline' . ( $options['css_style'] !== 'none' ? ' ' . $options['css_style'] : '' ) . ( $args['class'] !== '' ? ' ' . $args['class'] : '' ) . '" title="' . esc_html( $args['title'] ) . '">' . esc_html( $args['title'] ) . '</a>';
 	}
 
 	/**
@@ -297,7 +304,7 @@ class Cookie_Notice {
 			'Button text'			=> $this->options['general']['accept_text'],
 			'Refuse button text'	=> $this->options['general']['refuse_text'],
 			'Revoke button text'	=> $this->options['general']['revoke_text'],
-			'Read more text'		=> $this->options['general']['see_more_opt']['text'],
+			'Privacy policy text'		=> $this->options['general']['see_more_opt']['text'],
 			'Custom link'			=> $this->options['general']['see_more_opt']['link']
 		);
 
@@ -521,7 +528,7 @@ class Cookie_Notice {
 	}
 
 	/**
-	 * Read more link option.
+	 * Privacy policy link option.
 	 */
 	public function cn_see_more() {
 		$pages = get_pages(
@@ -543,7 +550,7 @@ class Cookie_Notice {
 			<p class="description">' . sprintf( __( 'Need a Cookie Policy? Generate one with <a href="%s" target="_blank" title="iubenda">iubenda</a>.', 'cookie-notice' ), 'http://iubenda.refr.cc/MXRWXMP' ) . '</p>
 			<div id="cn_see_more_opt"' . ($this->options['general']['see_more'] === 'no' ? ' style="display: none;"' : '') . '>
 				<input type="text" class="regular-text" name="cookie_notice_options[see_more_opt][text]" value="' . esc_attr( $this->options['general']['see_more_opt']['text'] ) . '" />
-				<p class="description">' . __( 'The text of the more info button.', 'cookie-notice' ) . '</p>
+				<p class="description">' . __( 'The text of the privacy policy button.', 'cookie-notice' ) . '</p>
 				<div id="cn_see_more_opt_custom_link">';
 
 		foreach ( $this->links as $value => $label ) {
@@ -828,7 +835,7 @@ class Cookie_Notice {
 			// deactivation
 			$input['deactivation_delete'] = (bool) isset( $input['deactivation_delete'] ) ? 'yes' : 'no';
 
-			// read more
+			// privacy policy
 			$input['see_more'] = (bool) isset( $input['see_more'] ) ? 'yes' : 'no';
 			$input['see_more_opt']['text'] = sanitize_text_field( isset( $input['see_more_opt']['text'] ) && $input['see_more_opt']['text'] !== '' ? $input['see_more_opt']['text'] : $this->defaults['general']['see_more_opt']['text'] );
 			$input['see_more_opt']['link_type'] = sanitize_text_field( isset( $input['see_more_opt']['link_type'] ) && in_array( $input['see_more_opt']['link_type'], array_keys( $this->links ) ) ? $input['see_more_opt']['link_type'] : $this->defaults['general']['see_more_opt']['link_type'] );
@@ -851,7 +858,7 @@ class Cookie_Notice {
 				do_action( 'wpml_register_single_string', 'Cookie Notice', 'Button text', $input['accept_text'] );
 				do_action( 'wpml_register_single_string', 'Cookie Notice', 'Refuse button text', $input['refuse_text'] );
 				do_action( 'wpml_register_single_string', 'Cookie Notice', 'Revoke button text', $input['revoke_text'] );
-				do_action( 'wpml_register_single_string', 'Cookie Notice', 'Read more text', $input['see_more_opt']['text'] );
+				do_action( 'wpml_register_single_string', 'Cookie Notice', 'Privacy policy text', $input['see_more_opt']['text'] );
 
 				if ( $input['see_more_opt']['link_type'] === 'custom' )
 					do_action( 'wpml_register_single_string', 'Cookie Notice', 'Custom link', $input['see_more_opt']['link'] );
@@ -880,7 +887,7 @@ class Cookie_Notice {
 				$this->options['general']['accept_text'] = apply_filters( 'wpml_translate_single_string', $this->options['general']['accept_text'], 'Cookie Notice', 'Button text' );
 				$this->options['general']['refuse_text'] = apply_filters( 'wpml_translate_single_string', $this->options['general']['refuse_text'], 'Cookie Notice', 'Refuse button text' );
 				$this->options['general']['revoke_text'] = apply_filters( 'wpml_translate_single_string', $this->options['general']['revoke_text'], 'Cookie Notice', 'Revoke button text' );
-				$this->options['general']['see_more_opt']['text'] = apply_filters( 'wpml_translate_single_string', $this->options['general']['see_more_opt']['text'], 'Cookie Notice', 'Read more text' );
+				$this->options['general']['see_more_opt']['text'] = apply_filters( 'wpml_translate_single_string', $this->options['general']['see_more_opt']['text'], 'Cookie Notice', 'Privacy policy text' );
 				$this->options['general']['see_more_opt']['link'] = apply_filters( 'wpml_translate_single_string', $this->options['general']['see_more_opt']['link'], 'Cookie Notice', 'Custom link' );
 			// WPML and Polylang compatibility
 			} elseif ( function_exists( 'icl_t' ) ) {
@@ -888,7 +895,7 @@ class Cookie_Notice {
 				$this->options['general']['accept_text'] = icl_t( 'Cookie Notice', 'Button text', $this->options['general']['accept_text'] );
 				$this->options['general']['refuse_text'] = icl_t( 'Cookie Notice', 'Refuse button text', $this->options['general']['refuse_text'] );
 				$this->options['general']['revoke_text'] = icl_t( 'Cookie Notice', 'Revoke button text', $this->options['general']['revoke_text'] );
-				$this->options['general']['see_more_opt']['text'] = icl_t( 'Cookie Notice', 'Read more text', $this->options['general']['see_more_opt']['text'] );
+				$this->options['general']['see_more_opt']['text'] = icl_t( 'Cookie Notice', 'Privacy policy text', $this->options['general']['see_more_opt']['text'] );
 				$this->options['general']['see_more_opt']['link'] = icl_t( 'Cookie Notice', 'Custom link', $this->options['general']['see_more_opt']['link'] );
 			}
 
@@ -1023,7 +1030,7 @@ class Cookie_Notice {
 					),
 					'noscript' => array(),
 					'style' => array(
-						'types' => array()
+						'type' => array()
 					),
 					'iframe' => array(
 						'src' => array(),
@@ -1118,22 +1125,4 @@ class Cookie_Notice {
 				echo $scripts;
 		}
 	}
-}
-
-/**
- * Check if cookies are accepted.
- *
- * @return boolean Whether cookies are accepted
- */
-function cn_cookies_accepted() {
-	return (bool) Cookie_Notice::cookies_accepted();
-}
-
-/**
- * Check if cookies are set.
- *
- * @return boolean Whether cookies are set
- */
-function cn_cookies_set() {
-	return (bool) Cookie_Notice::cookies_set();
 }

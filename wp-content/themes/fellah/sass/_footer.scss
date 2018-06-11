@@ -2,11 +2,11 @@
 .site-footer { 
 	z-index: 9;
 	@include oe_box-shadow;
-	padding: oe_rem(10px) 0;
+	padding: oe_rem(5px) 0;
 	@include position(fixed, initial, 0, 0, 0);
 	background-color: $second_main_color;
 	.site-info{
-		min-height: oe_rem(70px);
+		min-height: oe_rem(50px);
 		@include flex(center, flex-start, row);
 
 		.sprt{
@@ -61,7 +61,7 @@
 	.facebook{
 		display: block;
 		float: right;
-		line-height: oe_rem(65px);
+		line-height: oe_rem(45px);
 		@include media("<md"){
 			float: none;
     		text-align: center;

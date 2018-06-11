@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-07 15:29+0000\n"
-"PO-Revision-Date: 2018-06-11 10:03+0000\n"
+"POT-Creation-Date: 2018-06-11 12:28+0000\n"
+"PO-Revision-Date: 2018-06-11 12:29+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -213,7 +213,7 @@ msgstr "Mon profil"
 msgid "%s's Profile"
 msgstr "Profil de %s"
 
-#: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:116
+#: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:118
 msgid "Name"
 msgstr "Nom"
 
@@ -236,86 +236,6 @@ msgstr "AOL Messenger"
 #: buddypress/members/single/profile/profile-wp.php:81
 msgid "Yahoo Messenger"
 msgstr "Yahoo Messenger"
-
-#: buddypress/members/single/settings/capabilities.php:12
-msgid "Members Capabilities"
-msgstr "Capacités des membres"
-
-#: buddypress/members/single/settings/capabilities.php:19
-msgid "This user is a spammer."
-msgstr "Cet utilisateur est un spammeur."
-
-#: buddypress/members/single/settings/delete-account.php:12
-msgid "Delete Account"
-msgstr "Supprimer mon compte"
-
-#: buddypress/members/single/settings/delete-account.php:21
-msgid "I understand the consequences."
-msgstr "Je confirme la suppression de mon compte."
-
-#: buddypress/members/single/settings/general.php:12
-msgid "Email & Password"
-msgstr "Email et mot de passe"
-
-#: buddypress/members/single/settings/general.php:16
-msgid "Update your email and or password."
-msgstr ""
-
-#: buddypress/members/single/settings/general.php:23
-msgid ""
-"Current Password <span>(required to update email or change current "
-"password)</span>"
-msgstr ""
-"Mot de passe actuel <span>(obligatoire pour changer d&#39;adresse mail ou "
-"modifier votre mot de passe)</span>"
-
-#: buddypress/members/single/settings/general.php:24
-msgid "Lost your password?"
-msgstr "Mot de passe oublié?"
-
-#: buddypress/members/single/settings/general.php:28
-msgid "Account Email"
-msgstr "Details du compte"
-
-#: buddypress/members/single/settings/general.php:33
-msgid "Leave password fields blank for no change"
-msgstr ""
-
-#: buddypress/members/single/settings/general.php:36
-msgid "Add Your New Password"
-msgstr ""
-
-#: buddypress/members/single/settings/general.php:39
-msgid "Repeat Your New Password"
-msgstr ""
-
-#: buddypress/members/single/settings/group-invites.php:11
-msgid "Group Invites"
-msgstr "Invitations"
-
-#: buddypress/members/single/settings/group-invites.php:27
-msgid "I want to restrict Group invites to my friends only."
-msgstr ""
-
-#: buddypress/members/single/settings/notifications.php:12
-msgid "Email Notifications"
-msgstr ""
-
-#: buddypress/members/single/settings/notifications.php:16
-msgid "Set your email notification preferences."
-msgstr ""
-
-#: buddypress/members/single/settings/profile.php:12
-msgid "Profile Visibility Settings"
-msgstr ""
-
-#: buddypress/members/single/settings/profile.php:16
-msgid "Select who may see your profile details."
-msgstr ""
-
-#: buddypress/members/single/settings/profile.php:34
-msgid "Visibility"
-msgstr "Visibilité"
 
 #: comments.php:35
 #, php-format
@@ -399,138 +319,134 @@ msgstr "Envoi d'informations utilisateur, veuillez patienter ..."
 
 #: functions.php:146
 msgid ""
-"Add your photos to make your ad even more visible. You can download up to 3 "
+"Add your photos to make your ad even more visible. You can download up to 5 "
 "images."
 msgstr ""
 "Ajoutez vos photos pour rendre votre annonce encore plus visible. Vous "
-"pouvez télécharger 3 images maximum."
+"pouvez télécharger 5 images maximum."
 
-#: functions.php:150
+#: functions.php:156
 msgid "Price: "
 msgstr "Prix : "
 
-#: functions.php:154
+#: functions.php:162
 msgid "Select options ..."
 msgstr "Choisir l'option ..."
 
-#: functions.php:155
+#: functions.php:163
 msgid "All categories"
 msgstr "Toutes les catégories"
 
-#: functions.php:156
+#: functions.php:164
 msgid "All regions"
 msgstr "Toutes les régions"
 
-#: functions.php:317 functions.php:340 functions.php:341
+#: functions.php:321 functions.php:344 functions.php:345
 msgid "Publish Date"
 msgstr "Date de publication"
 
-#: functions.php:319 functions.php:341
+#: functions.php:323 functions.php:345
 msgid "Newest First"
 msgstr "Le plus récent d'abord"
 
-#: functions.php:320
+#: functions.php:324
 msgid "Oldest First"
 msgstr "Le plus ancien en premier"
 
-#: functions.php:324 functions.php:817 wpadverts/single.php:92
+#: functions.php:328 functions.php:821 wpadverts/single.php:94
 msgid "Price"
 msgstr "Prix"
 
-#: functions.php:326
+#: functions.php:330
 msgid "Cheapest First"
 msgstr "Moins cher en premier"
 
-#: functions.php:327
+#: functions.php:331
 msgid "Most Expensive First"
 msgstr "Le plus cher en premier"
 
-#: functions.php:331
+#: functions.php:335
 msgid "Title"
 msgstr "Titre"
 
-#: functions.php:333
+#: functions.php:337
 msgid "From A to Z"
 msgstr "De A à Z"
 
-#: functions.php:334
+#: functions.php:338
 msgid "From Z to A"
 msgstr "De Z à A"
 
-#: functions.php:341 functions.php:371
+#: functions.php:345 functions.php:375
 #, php-format
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: functions.php:487
+#: functions.php:491
 msgid "Send"
 msgstr "Envoyer"
 
-#: functions.php:529
+#: functions.php:533
 msgid "Your message has been sent."
 msgstr "Votre message a été envoyé."
 
-#: functions.php:534
+#: functions.php:538
 msgid "There are errors in your form."
 msgstr "Il y a des erreurs dans votre formulaire."
 
-#: functions.php:567
+#: functions.php:571
 msgid "Send Message"
 msgstr "Envoyer le message"
 
-#: functions.php:574 wpadverts/single.php:98
+#: functions.php:578 wpadverts/single.php:100
 msgid "Phone"
 msgstr "Téléphone"
 
-#: functions.php:742
+#: functions.php:746
 msgid "Titre de l'annoce"
 msgstr "Titre de l'annoce"
 
-#: functions.php:760
+#: functions.php:764
 msgid "Phone *"
 msgstr "Téléphone *"
 
-#: functions.php:778
-msgid "E mail *"
-msgstr "E mail *"
-
-#: functions.php:797
+#: functions.php:801
 msgid "Description"
 msgstr "Description"
 
-#: functions.php:868
+#: functions.php:903
 msgid "Region and city"
 msgstr "Région et ville"
 
-#: functions.php:964 functions.php:1017
+#: functions.php:974 functions.php:1027
 msgid "Wrong username or password."
 msgstr "Mauvais nom d'utilisateur ou mot de passe."
 
-#: functions.php:967 functions.php:1022
+#: functions.php:977 functions.php:1032
 msgid "Login successful"
 msgstr "Login successful"
 
-#: functions.php:1009
+#: functions.php:1019
 msgid "Can't login."
 msgstr "Impossible de se connecter."
 
-#: functions.php:1026
+#: functions.php:1036
 msgid "User already exists.  Password inherited."
 msgstr "L'utilisateur existe déjà. Mot de passe hérité."
 
-#: functions.php:1220
+#: functions.php:1277
 msgid "wrong acces"
 msgstr ""
 
-#: functions.php:1221
+#: functions.php:1278
 msgid "You are connected"
 msgstr "Tu es connecté"
 
-#: functions.php:1364
+#: functions.php:1449
 msgid "Télephone"
 msgstr "Télephone"
 
-#: functions.php:1367
+#: functions.php:1452
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "S'il vous plait, entrez votre numéro de téléphone."
 
@@ -599,38 +515,26 @@ msgstr "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: index.php:27
-msgid "Catégories"
-msgstr "Catégories"
-
-#: index.php:29
-msgid "Parcourir toutes les catégories"
-msgstr "Parcourir toutes les catégories"
-
-#: index.php:34 index.php:73
-msgid "Lorem ipsum dolor sit."
-msgstr ""
-
-#: index.php:70
-msgid "Nouveautés"
-msgstr "Nouveautés"
-
-#: index.php:143
-msgid "Top annonces"
-msgstr "Top annonces"
-
-#: index.php:146 wpadverts/single.php:196
-msgid "Lorem ipsum dolor sit amet consecteteur."
-msgstr ""
-
-#: index.php:217 templates/news_agricoles.php:20
-msgid "Actualités"
-msgstr "Actualités"
-
 #: search.php:28
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de recherche pour : %s"
+
+#: template-parts/actus_header.php:7 templates/news_agricoles.php:21
+msgid "Actualités"
+msgstr "Actualités"
+
+#: template-parts/categories.php:7
+msgid "Catégories"
+msgstr "Catégories"
+
+#: template-parts/categories.php:9
+msgid "Parcourir toutes les catégories"
+msgstr "Parcourir toutes les catégories"
+
+#: template-parts/categories.php:14 template-parts/nouveautes.php:9
+msgid "Lorem ipsum dolor sit."
+msgstr ""
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
 #: template-parts/content-page.php:24
@@ -664,18 +568,22 @@ msgstr ""
 "Il semble que nous ne puissions pas trouver ce que vous cherchez. Peut-être "
 "que la recherche peut aider."
 
-#: template-parts/content.php:49
+#: template-parts/content.php:51
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content.php:66
+#: template-parts/content.php:68
 msgid "&laquo Previous"
 msgstr ""
 
-#: template-parts/content.php:67
+#: template-parts/content.php:69
 msgid "Next &raquo"
 msgstr ""
+
+#: template-parts/nouveautes.php:6
+msgid "Nouveautés"
+msgstr "Nouveautés"
 
 #: template-parts/single-side.php:26
 msgid "Categories"
@@ -685,7 +593,15 @@ msgstr "Catégories"
 msgid "Search an article"
 msgstr "Rechercher un article"
 
-#: templates/news_agricoles.php:49
+#: template-parts/top_annonces.php:7
+msgid "Top annonces"
+msgstr "Top annonces"
+
+#: template-parts/top_annonces.php:10 wpadverts/single.php:198
+msgid "Lorem ipsum dolor sit amet consecteteur."
+msgstr ""
+
+#: templates/news_agricoles.php:50
 msgid "Sorry, no posts matched your criteria."
 msgstr "Aucun message ne correspond à vos critères de recherche."
 
@@ -807,18 +723,50 @@ msgstr "Plus"
 msgid "You do not have any Ads posted yet."
 msgstr "Vous n'avez pas encore publié d'annonces."
 
-#: wpadverts/single.php:32
-#, php-format
-msgid "%1$s"
-msgstr ""
-
-#: wpadverts/single.php:106
+#: wpadverts/single.php:108
 msgid "Region"
 msgstr "Région"
 
-#: wpadverts/single.php:193
+#: wpadverts/single.php:195
 msgid "Annonces similaires"
 msgstr "Annonces similaires"
+
+#~ msgid "Members Capabilities"
+#~ msgstr "Capacités des membres"
+
+#~ msgid "This user is a spammer."
+#~ msgstr "Cet utilisateur est un spammeur."
+
+#~ msgid "Delete Account"
+#~ msgstr "Supprimer mon compte"
+
+#~ msgid "I understand the consequences."
+#~ msgstr "Je confirme la suppression de mon compte."
+
+#~ msgid "Email & Password"
+#~ msgstr "Email et mot de passe"
+
+#~ msgid ""
+#~ "Current Password <span>(required to update email or change current "
+#~ "password)</span>"
+#~ msgstr ""
+#~ "Mot de passe actuel <span>(obligatoire pour changer d&#39;adresse mail ou "
+#~ "modifier votre mot de passe)</span>"
+
+#~ msgid "Lost your password?"
+#~ msgstr "Mot de passe oublié?"
+
+#~ msgid "Account Email"
+#~ msgstr "Details du compte"
+
+#~ msgid "Group Invites"
+#~ msgstr "Invitations"
+
+#~ msgid "Visibility"
+#~ msgstr "Visibilité"
+
+#~ msgid "E mail *"
+#~ msgstr "E mail *"
 
 #~ msgid "Change"
 #~ msgstr "Changer"

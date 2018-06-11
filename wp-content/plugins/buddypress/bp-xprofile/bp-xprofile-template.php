@@ -774,17 +774,15 @@ function bp_the_profile_field_options( $args = array() ) {
 					$field_obj->{$field_prop} = $field_prop_value;
 				}
 			}
-			
+
 			$field = $field_obj;
 		}
-		
+
 		ob_start();
 		$field->type_obj->edit_field_options_html( $args );
 		$html = ob_get_contents();
 		ob_end_clean();
-		
-		var_dump($field);
-		die();
+
 		return $html;
 	}
 
