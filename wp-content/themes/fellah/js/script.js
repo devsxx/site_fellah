@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 	// }
 
 	$(document).on( 'scroll', function(){
-		if (window.matchMedia("(min-width: 992px)").matches) { 
+		if (window.matchMedia("(min-width: 1200px)").matches) { 
 
 			if ($(window).scrollTop() > 100) {
 				$('#masthead').addClass('fixed');
@@ -217,6 +217,7 @@ jQuery(document).ready(function($) {
 	   	e.preventDefault();
 	   	var prenom = $("#prenom").val();
 	   	var email = $("#email").val();
+	   	var telephone = $("#telephone").val();
 	   	var nom = $("#nom").val();
 
 	   	var mot_passe = $("#mot_passe").val();
@@ -245,6 +246,7 @@ jQuery(document).ready(function($) {
 	   				'prenom' : prenom,
 	   				'nom' : nom,
 						'email' : email,
+						'telephone' : telephone,
 						'mot_passe' : mot_passe,
 						'confirm_mot_passe' : confirm_mot_passe,
 					},

@@ -1,14 +1,14 @@
 .main-navigation{
 	@include flex(center, flex-end, row);
 	height: oe_rem(150px);
+	font-size: oe_rem(15px);
+	font-weight: 600;
 	&>div{
 		width: 100%;
 	} 
 	.menu-toggle{
 		display: none;
 	}
-	font-size: oe_rem(15px);
-	font-weight: 600;
 	ul{
 		list-style: none;
 		@include flex(center, space-around, row);
@@ -98,9 +98,15 @@
 			}
 		}
 	}
+	@include media("<xl"){  
+		font-size: oe_rem(13px);
+		font-weight: 500;
+	}
 	@include media("<lg"){
 		@include flex(center, flex-end, row);
 		height: auto;
+		font-size: oe_rem(15px);
+		font-weight: 500;
 		ul{
 			padding: oe_rem(20px) 0;
 			@include flex(stretch, flex-start, row);

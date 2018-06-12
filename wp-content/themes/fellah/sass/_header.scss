@@ -146,6 +146,7 @@
 		
 		.header_picto_container{
 			height: auto;
+			padding: oe_rem(10px) 0;
 			@include flex(center, center, row);
 			.header_picto{
 				@include flex(center, center, row);

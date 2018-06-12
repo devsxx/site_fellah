@@ -995,7 +995,7 @@ function ajax_signup(){
 
 	$prenom = $_POST['prenom'];
 	$nom = $_POST['nom'];
-	// $telephone = $_POST['telephone'];
+	$telephone = $_POST['telephone'];
 	$email = $_POST['email'];
 	$mot_passe = $_POST['mot_passe'];
 	$confirm_mot_passe = $_POST['confirm_mot_passe'];
@@ -1010,7 +1010,7 @@ function ajax_signup(){
 		$user_id = username_exists( $email );
 		if ( !$user_id and email_exists($email) == false ) {
 			$user_id = wp_create_user( $email, $mot_passe, $email );
-			// update_user_meta($user_id, 'telephone', $telephone);
+			update_user_meta($user_id, 'telephone', $telephone);
 			$user_id = wp_update_user( array( 
 				'ID' => $user_id, 
 				'first_name' => $prenom,
@@ -1250,17 +1250,22 @@ function adverts_field_login_or_subscribe( $field ) {
 					</div>
 
 					<div class="row">
-						
-						<div class="col-md-5">
+						<div class="col-md-3">
 							<div class="input_container">
 								<i class="far fa-edit"></i>
 								<input type="password" placeholder="Mot de passe" name="mot_passe" id="mot_passe">                                
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<div class="input_container">
 								<i class="far fa-edit"></i>
 								<input type="password" placeholder="Confirmer le mot de passe" name="confirm_mot_passe" id="confirm_mot_passe">                                
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="input_container">
+								<i class="far fa-envelope"></i>
+								<input type="email" placeholder="telephone" name="telephone" id="telephone">                                
 							</div>
 						</div>
 					</div>
@@ -1459,7 +1464,21 @@ function telephone_field($user) {
 		</table>
 	<?php 
 }
+add_action( 'bp_profile_header_meta', 'display_user_color_pref' );
+function display_user_color_pref() {
+	 
+	$current_user = wp_get_current_user(); 
 
+	echo '<div><strong>' . __('Username: ', 'fellah') . '</strong>' . $current_user->user_login . '</div>';
+	echo '<div><strong>' . __('User email: ', 'fellah') . '</strong>' . $current_user->user_email . '</div>';
+	echo '<div><strong>' . __('User first name: ', 'fellah') . '</strong>' . $current_user->user_firstname . '</div>';
+	echo '<div><strong>' . __('User last name: ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>';
+	echo '<div><strong>' . __('User display name: ', 'fellah') . '</strong>' . $current_user->display_name . '</div>'; 
+	 
+	// echo '<pre>';
+	// var_dump($current_user);
+	// die();
+}
 //Save new field for user in users_meta table
 add_action('user_register', 'save_telephone_field');
 add_action('edit_user_profile_update', 'save_telephone_field');
@@ -1474,3 +1493,4 @@ function save_telephone_field($user_id) {
 		update_user_meta($user_id, 'telephone', $_POST['telephone']);
 	}
 }
+ 

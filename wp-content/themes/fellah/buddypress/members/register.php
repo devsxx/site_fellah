@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="row">
 			
-			<div class="offset-md-1 col-md-4">
+			<div class="offset-lg-1 col-lg-4 col-md-6">
 				<h5><?php _e('Already have an account ?', 'fellah'); ?></h5>
 						<br>
 				<?php wp_login_form(); ?>
@@ -22,7 +22,7 @@
 				<a class="forgotPassword" href="<?php bloginfo( 'url' )?>/wp-login.php?action=lostpassword"><?php _e('Forgot your password ?','fellah'); ?></a>
 			</div>
 
-			<div class="offset-md-1 col-md-5">
+			<div class="offset-lg-1 col-lg-5 col-md-6">
 				<?php
 				/**
 				* Fires at the top of the BuddyPress member registration page template.

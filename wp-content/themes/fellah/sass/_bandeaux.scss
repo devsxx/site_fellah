@@ -131,6 +131,9 @@
 				padding: 0 oe_rem(25px);
 				color: #fff;
 				text-transform: uppercase;
+				.adverts-icon-search{
+					float: right;
+				}
 			}
 		}
 		
@@ -150,14 +153,48 @@
 			.search_zone{ 
 				padding: oe_rem(10px) oe_rem(20px);
 				height: auto;
+				@include flex(center, stretch, row);
+				flex-wrap: wrap;
+				.advert-input{
+					width: 50%;
+					float: left;
+					padding: 0 2px;
+				} 
+				.adverts-js{
+					width: 50%; 
+					padding: 0 2px;
+				}
+
+				.adverts-form-submit{ 
+					width: 100%;
+					margin: oe_rem(10px) 0;
+				}
+			}
+		}
+	}
+
+	@include media("<md"){
+		height: auto;
+		
+		.header_bandeau{
+			height: auto;
+			margin: oe_rem(20px) 0; 
+			.titre{ 
+				font-size: oe_rem(24px);
+				text-transform: uppercase;
+				margin-bottom: oe_rem(25px);
+			}
+			.search_zone{ 
+				padding: oe_rem(10px) oe_rem(20px);
+				height: auto;
 				@include flex(center, stretch, column);
 				.advert-input{
 					width: 100%;
-				}
-				input,
-				select,
+					padding: 0;
+				} 
 				.adverts-js{  
 					width: 100%;
+					padding: 0;
 				}
 				.adverts-form-submit{ 
 					width: 100%;
@@ -379,16 +416,31 @@
 	}
 	.decocher_filtres{
 		margin-left: auto;
-	}
+		font-weight: 500;
+		font-size: oe_rem(14px);
+	} 
+
 	@include media("<lg"){
 		padding: oe_rem(10px) 0;
+		width: 100%;
 		@include position(relative, initial, initial, initial, initial);
 		@include flex(flex-start, flex-start, column);
-		.custom_sorting_titre{
-			padding-left: oe_rem(0);
+		.custom_sorting_container{
+			width: 100%;
+			padding: oe_rem(10px) 0;
+			@include flex(center, space-between, row);
+			.custom_sorting_titre{
+				padding-left: oe_rem(0);
+			}
+			.budget-range-container{
+				padding: oe_rem(15px) 0 oe_rem(10px);
+			}
 		}
-		.budget-range-container{
-			padding: oe_rem(15px) 0 oe_rem(10px);
+	}
+
+	@include media("<md"){ 
+		.custom_sorting_container{ 
+			@include flex(center, center, column); 
 		}
 	}
 }

@@ -13563,14 +13563,14 @@ section .section_sousTitle {
 }
 
 #ajaxShadow {
+  z-index: 99;
   display: none;
+  background: rgba(31, 31, 44, 0.6);
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 8;
-  background: rgba(31, 31, 44, 0.6);
 }
 
 #ajaxloader {
@@ -13941,7 +13941,58 @@ form textarea {
   text-transform: uppercase;
 }
 
+.header_bandeau_content .header_bandeau .search_zone .adverts-form-submit .adverts-icon-search {
+  float: right;
+}
+
 @media (max-width: 991px) {
+  .header_bandeau_content {
+    height: auto;
+  }
+  .header_bandeau_content .header_bandeau {
+    height: auto;
+    margin: 1.25rem 0;
+  }
+  .header_bandeau_content .header_bandeau .titre {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5625rem;
+  }
+  .header_bandeau_content .header_bandeau .search_zone {
+    padding: 0.625rem 1.25rem;
+    height: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: stretch;
+    -ms-justify-content: stretch;
+    justify-content: stretch;
+    -ms-flex-pack: stretch;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .header_bandeau_content .header_bandeau .search_zone .advert-input {
+    width: 50%;
+    float: left;
+    padding: 0 2px;
+  }
+  .header_bandeau_content .header_bandeau .search_zone .adverts-js {
+    width: 50%;
+    padding: 0 2px;
+  }
+  .header_bandeau_content .header_bandeau .search_zone .adverts-form-submit {
+    width: 100%;
+    margin: 0.625rem 0;
+  }
+}
+
+@media (max-width: 767px) {
   .header_bandeau_content {
     height: auto;
   }
@@ -13973,11 +14024,11 @@ form textarea {
   }
   .header_bandeau_content .header_bandeau .search_zone .advert-input {
     width: 100%;
+    padding: 0;
   }
-  .header_bandeau_content .header_bandeau .search_zone input,
-  .header_bandeau_content .header_bandeau .search_zone select,
   .header_bandeau_content .header_bandeau .search_zone .adverts-js {
     width: 100%;
+    padding: 0;
   }
   .header_bandeau_content .header_bandeau .search_zone .adverts-form-submit {
     width: 100%;
@@ -14276,11 +14327,14 @@ form textarea {
 
 .custom_sorting .decocher_filtres {
   margin-left: auto;
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
 @media (max-width: 991px) {
   .custom_sorting {
     padding: 0.625rem 0;
+    width: 100%;
     position: relative;
     top: initial;
     right: initial;
@@ -14300,11 +14354,46 @@ form textarea {
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .custom_sorting .custom_sorting_titre {
+  .custom_sorting .custom_sorting_container {
+    width: 100%;
+    padding: 0.625rem 0;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .custom_sorting .custom_sorting_container .custom_sorting_titre {
     padding-left: 0;
   }
-  .custom_sorting .budget-range-container {
+  .custom_sorting .custom_sorting_container .budget-range-container {
     padding: 0.9375rem 0 0.625rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom_sorting .custom_sorting_container {
+    display: -ms-flexbox;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -14541,6 +14630,7 @@ form textarea {
   }
   .site-header .header_picto_container {
     height: auto;
+    padding: 0.625rem 0;
     display: -ms-flexbox;
     display: flex;
     -moz-align-items: center;
@@ -14880,6 +14970,13 @@ form textarea {
   display: none;
 }
 
+@media (max-width: 1199px) {
+  .main-navigation {
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+}
+
 @media (max-width: 991px) {
   .main-navigation {
     display: -ms-flexbox;
@@ -14896,6 +14993,8 @@ form textarea {
     -ms-flex-direction: row;
     flex-direction: row;
     height: auto;
+    font-size: 0.9375rem;
+    font-weight: 500;
   }
   .main-navigation ul {
     padding: 1.25rem 0;
@@ -16981,6 +17080,11 @@ div.adverts-flash-messages {
 
 .forgotPassword {
   font-size: 0.875rem;
+}
+
+#buddypress div#item-header div#item-meta {
+  font-size: 90% !important;
+  color: #000000 !important;
 }
 
 .site-footer {

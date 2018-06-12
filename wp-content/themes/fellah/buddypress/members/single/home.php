@@ -28,7 +28,7 @@
 		if ( bp_displayed_user_use_cover_image_header() ) :
 			// bp_get_template_part( 'members/single/cover-image-header' );
 		else :
-			// bp_get_template_part( 'members/single/member-header' );
+			bp_get_template_part( 'members/single/member-header' );
 		endif;
 		?>
 

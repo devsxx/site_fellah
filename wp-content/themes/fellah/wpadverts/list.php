@@ -120,7 +120,7 @@
                                 <?php  
                                 if( adverts_request('pics') != null || adverts_request('price') != null ){ ?>
                                     <div class="decocher_filtres">
-                                        <a href="<?php the_permalink( 4 ); ?>"> <?php _e('Décocher les filtres', 'fellah'); ?></a>
+                                        <a href="<?php the_permalink( 4 ); ?>"> <?php _e('Décocher les filtres', 'fellah'); ?> <i class="fas fa-times"></i></a>
                                     </div>
                                 <?php }?>
 
