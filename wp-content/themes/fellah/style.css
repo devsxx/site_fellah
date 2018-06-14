@@ -13625,7 +13625,7 @@ form input[type="submit"] {
   max-width: 18.75rem;
   height: 2.5rem;
   line-height: 2.5rem;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
   margin: 0.9375rem 0;
   color: #fff;
   background-color: #007e1d;
@@ -13638,8 +13638,8 @@ form textarea {
   width: 100%;
   height: 2.5rem;
   line-height: 2.5rem;
-  border-radius: 0.125rem;
-  border: 1px solid #666666;
+  border-radius: 0.25rem;
+  border: 1px solid #dbdbdb;
   padding: 0.9375rem;
   margin: 0.625rem 0;
 }

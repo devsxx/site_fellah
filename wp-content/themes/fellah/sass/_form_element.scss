@@ -32,7 +32,7 @@ form {
 			max-width: oe_rem(300px);
 			height: oe_rem(40px);
 			line-height: oe_rem(40px);
-			border-radius: oe_rem(2px); 
+			border-radius: oe_rem(4px); 
 			margin: oe_rem(15px) 0;
 			color: #fff; 
 			background-color: $main_color;
@@ -47,8 +47,8 @@ form {
 		width: 100%;
 		height: oe_rem(40px);
 		line-height: oe_rem(40px);
-		border-radius: oe_rem(2px);
-		border: 1px solid $dark_color;
+		border-radius: oe_rem(4px);
+		border: 1px solid $light_color; 
 		padding: oe_rem(15px);
 		margin: oe_rem(10px) 0;
 	 }
