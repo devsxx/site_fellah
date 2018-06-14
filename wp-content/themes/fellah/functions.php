@@ -1112,7 +1112,7 @@ function ajaxSousLocalisation(){
 					<div class="row">
 						<div class="col-md-12">
 							<label for="sub-localisation"> </label>
-							<div id="show_localisation"><i class="fas fa-map-pin"></i> Toutes les villes </div>
+							<div id="show_localisation" class="show_localisation"><i class="fas fa-map-pin"></i> Toutes les villes </div>
 							<div class="adverts-form-input-group adverts-form-input-group-checkbox-localisation adverts-field-rows-0">
 							<div class="adverts-control-container">'; 
 								
@@ -1354,8 +1354,9 @@ function adverts_field_customadvertscategory( $field ) {
 
 function adverts_field_custom_localisation( $field ) {
     
-	$htmls = '';
+	$htmls = '<div id="show_localisation_region" class="show_localisation"><i class="fas fa-map-pin"></i> Toutes les Région </div>';
 	
+	$htmls .= '<div class="adverts-control-container-region">';
 	$terms = get_terms( array(
 		'taxonomy' => 'localisation',
 		'hide_empty' => false,
@@ -1370,6 +1371,7 @@ function adverts_field_custom_localisation( $field ) {
 			<label for="localisation_'.$i.'">'.$term->name.'</label>
 		</div>';
 	}
+	$htmls .= '</div>';
 		
 	
 	echo $htmls;

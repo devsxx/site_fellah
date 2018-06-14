@@ -483,7 +483,7 @@ section{
 
 
 #ajaxShadow {
-	z-index: 99;
+	z-index: 9999;
 	display: none;
 	background: rgba(31,31,44,.6);
 	@include position(fixed, 0, 0, 0, 0);

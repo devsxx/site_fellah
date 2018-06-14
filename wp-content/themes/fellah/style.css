@@ -13563,7 +13563,7 @@ section .section_sousTitle {
 }
 
 #ajaxShadow {
-  z-index: 99;
+  z-index: 9999;
   display: none;
   background: rgba(31, 31, 44, 0.6);
   position: fixed;
@@ -15937,16 +15937,16 @@ form textarea {
   }
 }
 
-.pub_annonce #show_localisation {
+.pub_annonce .show_localisation {
   cursor: pointer;
   position: relative;
   display: inline-block;
   height: 3.125rem;
   line-height: 3.125rem;
-  width: 15.3125rem;
+  min-width: 15.3125rem;
   border-radius: 0.25rem;
   margin: 0;
-  padding: 0;
+  padding: 0 0.9375rem 0 2.1875rem;
   font-size: 1.1875rem;
   font-weight: 500;
   color: #007e1d;
@@ -15954,12 +15954,19 @@ form textarea {
   text-align: center !important;
 }
 
-.pub_annonce #show_localisation:after {
+.pub_annonce .show_localisation:after {
   content: '';
 }
 
+.pub_annonce .show_localisation i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -10px;
+}
+
 @media (max-width: 767px) {
-  .pub_annonce #show_localisation {
+  .pub_annonce .show_localisation {
     display: block;
     margin: 0 auto;
   }
@@ -16013,6 +16020,58 @@ form textarea {
 
 @media (max-width: 767px) {
   .pub_annonce .adverts-form-input-group-checkbox-localisation .adverts-control-container .checkbox {
+    margin: 0.0625rem 0;
+  }
+}
+
+.pub_annonce .adverts-control-container-region {
+  display: none;
+}
+
+.pub_annonce .adverts-control-container-region.show {
+  z-index: 999999999;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.pub_annonce .adverts-control-container-region.show:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.pub_annonce .adverts-control-container-region .checkbox {
+  margin: 0.0625rem 0;
+  float: none;
+}
+
+.pub_annonce .adverts-control-container-region .checkbox [type=checkbox] + label,
+.pub_annonce .adverts-control-container-region .checkbox [type=radio] + label {
+  border-radius: 0;
+}
+
+@media (max-width: 767px) {
+  .pub_annonce .adverts-control-container-region .checkbox {
     margin: 0.0625rem 0;
   }
 }

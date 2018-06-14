@@ -434,12 +434,35 @@ jQuery(document).ready(function($) {
 	});
 
 	$("#show_localisation").live('click', function(){
-		$(".adverts-form-input-group-checkbox-localisation > div").addClass('show');
+		$(".adverts-form-input-group-checkbox-localisation .adverts-control-container").addClass('show');
+	});
+
+	$("#show_localisation_region").live('click', function(){
+		$(".adverts-control-container-region").addClass('show');
 	});
 	
 	$(".adverts-form-input-group-checkbox-localisation .adverts-control-container").live('click', function(){
+		var checked = [];
+		$( this ).find("input[type=checkbox]").each(function(j, c) {
+			 if($(c).is(":checked")) {
+				 checked.push($(c).parent().text().trim());
+			 }
+		});
+		$("#show_localisation").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked.join(", ") + "</div>");
 		$(this).removeClass('show');
 	}); 
+	$(".adverts-control-container-region").live('click', function(){
+		var checked = [];
+		$( this ).find("input[type=checkbox]").each(function(j, c) {
+			 if($(c).is(":checked")) {
+				 checked.push($(c).parent().text().trim());
+			 }
+		});
+		$("#show_localisation_region").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked.join(", ") + "</div>");
+		$(this).removeClass('show');
+	}); 
+
+
 	$(".adverts-form-input-group-checkbox-localisation .adverts-control-container .checkbox").live('click', function(){
 		
 	}); 

@@ -129,16 +129,16 @@
 	}
 
 
-	#show_localisation{
+	.show_localisation{
 		cursor: pointer;
 		position: relative; 
 		display: inline-block;
 		height: oe_rem(50px);
 		line-height: oe_rem(50px);
-		width: oe_rem(245px);  
+		min-width: oe_rem(245px);  
 		border-radius: oe_rem(4px);
 		margin: 0;
-		padding: 0;
+		padding: 0 oe_rem(15px) 0 oe_rem(35px);
 		font-size: oe_rem(19px);
 		font-weight: 500;
 		color: $main_color;
@@ -146,6 +146,12 @@
 		text-align: center !important;
 		&:after{
 			content: '';
+		}
+		i{
+			position: absolute;
+			left: 15px;
+			top: 50%;
+			margin-top: -10px;
 		}
 		@include media("<md"){
 			display: block;
@@ -179,8 +185,35 @@
 				}
 			}
 		}
-		}
 
+		
+	}
+	.adverts-control-container-region{
+		display: none;
+		&.show{
+			z-index: 999999999;
+			@include flex(center, center, column); 
+			@include position(fixed, 0, 0, 0, 0);
+			&:before{
+				content: "";
+				background: rgba(0, 0, 0, 0.6);
+				@include position(fixed, 0, 0, 0, 0);
+			}
+		}
+		.checkbox{
+			margin: oe_rem(1px) 0;
+			float: none;
+			[type=checkbox]+label, 
+			[type=radio]+label {   
+				border-radius: oe_rem(0); 
+			}
+		}
+		@include media("<md"){ 
+			.checkbox{
+				margin: oe_rem(1px) 0;
+			}
+		}
+	}
 	.checkbox{
 		width: oe_rem(245px);
 		height: oe_rem(50px); 
