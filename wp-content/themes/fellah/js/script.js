@@ -463,6 +463,7 @@ jQuery(document).ready(function($) {
 	}); 
 
 
+	
 	$(".adverts-form-input-group-checkbox-localisation .adverts-control-container .checkbox").live('click', function(){
 		
 	}); 
@@ -530,8 +531,11 @@ jQuery(document).ready(function($) {
    		checkbox.change(function() {
    			var owner = $("#"+$(this).data("wpjb-owner"));
    			var all = $(this).closest(".adverts-multiselect-options").find("input");
-   			var checked = [];
+				var checked = [];
 
+				input.removeClass("adverts-multiselect-open");
+				input.parent().find(".adverts-multiselect-options").hide();
+				
    			all.each(function(j, c) {
    				if($(c).is(":checked")) {
    					checked.push($(c).parent().text().trim());

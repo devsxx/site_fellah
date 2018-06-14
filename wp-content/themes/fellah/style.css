@@ -13503,6 +13503,7 @@ section .section_sousTitle {
     flex-direction: column;
   }
   section .section_sousTitle {
+    width: 70%;
     margin-bottom: 1.25rem;
   }
 }

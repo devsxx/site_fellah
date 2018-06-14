@@ -430,6 +430,7 @@ section{
 			@include flex(flex-start, flex-start, column);
 		}
 		.section_sousTitle{ 
+			width: 70%;
 			margin-bottom: oe_rem(20px); 
 		}
 	}
