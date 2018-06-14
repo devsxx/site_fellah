@@ -16058,6 +16058,9 @@ form textarea {
   right: 0;
   bottom: 0;
   left: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 25px;
 }
 
 .pub_annonce .adverts-control-container-region .checkbox {

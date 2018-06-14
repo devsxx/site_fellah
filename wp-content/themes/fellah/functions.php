@@ -134,7 +134,13 @@ function fellah_scripts() {
 	wp_enqueue_script( 'owl.carousel', 	 	 get_template_directory_uri() . '/js/libs/owl.carousel/src/js/owl.carousel.js', array(), '20151215', true );
 	wp_enqueue_script( 'owl.navigation', 	 get_template_directory_uri() . '/js/libs/owl.carousel/src/js/owl.navigation.js', array(), '20151 ', true );
 
-	wp_enqueue_script( 'script',   			 get_template_directory_uri() . '/js/script.js', array(), '20151215', true ); 
+
+	if ( is_rtl() ) {
+		wp_enqueue_script( 'script',   			get_template_directory_uri() . '/js/script-rtl.js', array(), '20151215', true );
+	}else{
+		wp_enqueue_script( 'script',   			get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
+	}
+
 	wp_enqueue_script( 'fellah-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'fellah-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -1451,15 +1457,15 @@ function display_user_color_pref() {
 	 
 	$current_user = wp_get_current_user(); 
 
-	// echo '<div><strong>' . __('Username: ', 'fellah') . '</strong>' . $current_user->user_login . '</div>';
-	echo '<div><strong>' . __('User email: ', 'fellah') . '</strong>' . $current_user->user_email . '</div>';
-	echo '<div><strong>' . __('User first name: ', 'fellah') . '</strong>' . $current_user->user_firstname . '</div>';
-	echo '<div><strong>' . __('User last name: ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>';
-	// echo '<div><strong>' . __('User display name: ', 'fellah') . '</strong>' . $current_user->display_name . '</div>'; 
+	// echo '<div><strong>' . __('Username : ', 'fellah') . '</strong>' . $current_user->user_login . '</div>';
+	echo '<div><strong>' . __('User email : ', 'fellah') . '</strong>' . $current_user->user_email . '</div>';
+	echo '<div><strong>' . __('User first name : ', 'fellah') . '</strong>' . $current_user->user_firstname . '</div>';
+	echo '<div><strong>' . __('User last name : ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>';
+	// echo '<div><strong>' . __('User display name : ', 'fellah') . '</strong>' . $current_user->display_name . '</div>'; 
 	echo '<div><strong>' . __('Phone : ', 'fellah') . '</strong>' . @get_user_meta( $current_user->ID , 'telephone', true ) . '</div>'; 
 
-	// echo '<div><strong>' . __('Username: ', 'fellah') . '</strong>' . bp_get_profile_field_data( array('field'   => '1') ) . '</div>';
-	// echo '<div><strong>' . __('User email: ', 'fellah') . '</strong>' . $current_user->user_email . '</div>'; 
+	// echo '<div><strong>' . __('Username : ', 'fellah') . '</strong>' . bp_get_profile_field_data( array('field'   => '1') ) . '</div>';
+	// echo '<div><strong>' . __('User email : ', 'fellah') . '</strong>' . $current_user->user_email . '</div>'; 
 	// echo '<div><strong>' . __('Phone : ', 'fellah') . '</strong>' . bp_get_profile_field_data( array('field'   => '2') ) . '</div>'; 
  
 	// echo '<pre>';

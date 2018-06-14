@@ -198,6 +198,8 @@
 				content: "";
 				background: rgba(0, 0, 0, 0.6);
 				@include position(fixed, 0, 0, 0, 0);
+				flex-wrap: wrap;
+				padding: 25px;
 			}
 		}
 		.checkbox{

@@ -1,6 +1,5 @@
 # Copyright (C) 2017 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
@@ -9,13 +8,16 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: \n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-06-14 12:47+0000\n"
+"Language-Team: \n"
 "X-Generator: Poedit 2.0.8\n"
 "X-Poedit-KeywordsList: __;_e;_n;_ex;_x;esc_html;esc_html__;esc_html_e;"
 "esc_html_x;esc_attr_e;esc_attr__\n"
 "X-Poedit-Basepath: ..\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Language: ar\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
@@ -25,15 +27,15 @@ msgstr ""
 
 #: buddypress/members/register.php:18
 msgid "Already have an account ?"
-msgstr ""
+msgstr "هل لديك حساب ؟"
 
 #: buddypress/members/register.php:22
 msgid "Forgot your password ?"
-msgstr ""
+msgstr "نسيت رقمك السري ؟"
 
 #: buddypress/members/register.php:28 buddypress/members/register.php:122
 msgid "Create an account. Simple and free !"
-msgstr ""
+msgstr "انشئ حساب. بسيطة ومجان!"
 
 #: buddypress/members/register.php:62 functions.php:1286
 msgid "wrong acces"
@@ -41,15 +43,15 @@ msgstr ""
 
 #: buddypress/members/register.php:63 functions.php:1287
 msgid "You are connected"
-msgstr ""
+msgstr "انت متصل"
 
 #: buddypress/members/register.php:100
 msgid "User registration is currently not allowed."
-msgstr ""
+msgstr "حاليا لا يسمح تسجيل المستخدم."
 
 #: buddypress/members/register.php:141
 msgid "Profile Details"
-msgstr ""
+msgstr "تفاصيل الملف الشخصي"
 
 #: buddypress/members/register.php:165 buddypress/members/register.php:187
 #: buddypress/members/single/profile/edit.php:59
@@ -61,25 +63,25 @@ msgstr ""
 #: buddypress/members/register.php:170
 #: buddypress/members/single/profile/edit.php:64
 msgid "Change"
-msgstr ""
+msgstr "تغيير"
 
 #: buddypress/members/register.php:175
 #: buddypress/members/single/profile/edit.php:68
 msgid "Who can see this field?"
-msgstr ""
+msgstr "من يستطيع رؤية هذا المجال؟"
 
 #: buddypress/members/register.php:180
 #: buddypress/members/single/profile/edit.php:72
 msgid "Close"
-msgstr ""
+msgstr "أغلق"
 
 #: buddypress/members/register.php:248
 msgid "Blog Details"
-msgstr ""
+msgstr "تفاصيل المدونة"
 
 #: buddypress/members/register.php:250
 msgid "Yes, I'd like to create a new site"
-msgstr ""
+msgstr "نعم ، أرغب في إنشاء موقع جديد"
 
 #: buddypress/members/register.php:254
 msgid "Blog URL"
@@ -93,7 +95,7 @@ msgstr ""
 
 #: buddypress/members/register.php:270
 msgid "Site Title"
-msgstr ""
+msgstr "عنوان الموقع"
 
 #: buddypress/members/register.php:281
 msgid ""
@@ -103,47 +105,52 @@ msgstr ""
 
 #: buddypress/members/register.php:291 wpadverts/manage.php:68
 msgid "Yes"
-msgstr ""
+msgstr "نعم"
 
 #: buddypress/members/register.php:292
 msgid "No"
-msgstr ""
+msgstr "لا"
 
 #: buddypress/members/register.php:330
 msgid "Account Details"
-msgstr ""
+msgstr "تفاصيل الحساب"
 
 #: buddypress/members/register.php:332
 msgid "Username"
-msgstr ""
+msgstr "اسم المستخدم"
 
 #: buddypress/members/register.php:343
 msgid "Email Address"
-msgstr ""
+msgstr "عنوان البريد الإلكتروني"
 
 #: buddypress/members/register.php:354
 msgid "Choose a Password"
-msgstr ""
+msgstr "اختر كلمة مرور"
 
 #: buddypress/members/register.php:366
 msgid "Confirm Password"
-msgstr ""
+msgstr "تأكيد كلمة المرور"
 
 #: buddypress/members/register.php:408
 msgid "Create my account"
-msgstr ""
+msgstr "إنشيء حسابي"
 
 #: buddypress/members/register.php:445
 msgid ""
-"You have successfully created your account! To begin using this site you will "
-"need to activate your account via the email we have just sent to your address."
+"You have successfully created your account! To begin using this site you "
+"will need to activate your account via the email we have just sent to your "
+"address."
 msgstr ""
+"لقد نجحت في إنشاء حسابك! للبدء في استخدام هذا الموقع ، ستحتاج إلى تفعيل "
+"حسابك عبر البريد الإلكتروني الذي أرسلناه للتو إلى عنوانك."
 
 #: buddypress/members/register.php:447
 msgid ""
 "You have successfully created your account! Please log in using the username "
 "and password you have just created."
 msgstr ""
+"لقد أنشأت حسابك بنجاح! يرجى تسجيل الدخول باستخدام اسم المستخدم وكلمة المرور "
+"التي قمت بإنشائها للتو."
 
 #: buddypress/members/single/home.php:41
 msgid "Member primary navigation"
@@ -162,7 +169,8 @@ msgstr ""
 msgid ""
 "Your profile photo will be used on your profile and throughout the site. If "
 "there is a <a href=\"http://gravatar.com\">Gravatar</a> associated with your "
-"account email we will use that, or you can upload an image from your computer."
+"account email we will use that, or you can upload an image from your "
+"computer."
 msgstr ""
 
 #: buddypress/members/single/profile/change-avatar.php:32
@@ -173,37 +181,39 @@ msgstr ""
 
 #: buddypress/members/single/profile/change-avatar.php:37
 msgid "Select an image"
-msgstr ""
+msgstr "اختر صورة"
 
 #: buddypress/members/single/profile/change-avatar.php:40
 msgid "Upload Image"
-msgstr ""
+msgstr "تحميل الصور"
 
 #: buddypress/members/single/profile/change-avatar.php:45
 msgid ""
 "If you'd like to delete your current profile photo but not upload a new one, "
 "please use the delete profile photo button."
 msgstr ""
+"إذا كنت تريد حذف صورة ملفك الشخصي الحالية ولكن لا ترغب في تحميل صورة جديدة ، "
+"فالرجاء استخدام الزر حذف صورة الملف الشخصي."
 
 #: buddypress/members/single/profile/change-avatar.php:46
 msgid "Delete My Profile Photo"
-msgstr ""
+msgstr "حذف صورة ملفي الشخصي"
 
 #: buddypress/members/single/profile/change-avatar.php:53
 msgid "Crop Your New Profile Photo"
-msgstr ""
+msgstr "اقتصاص صورة ملفك الشخصي الجديد"
 
 #: buddypress/members/single/profile/change-avatar.php:55
 msgid "Profile photo to crop"
-msgstr ""
+msgstr "صورة الملف الشخصي للمحاصيل"
 
 #: buddypress/members/single/profile/change-avatar.php:58
 msgid "Profile photo preview"
-msgstr ""
+msgstr "معاينة الصورة الشخصية"
 
 #: buddypress/members/single/profile/change-avatar.php:61
 msgid "Crop Image"
-msgstr ""
+msgstr "قص الصوره"
 
 #: buddypress/members/single/profile/change-avatar.php:85
 msgid ""
@@ -215,7 +225,7 @@ msgstr ""
 
 #: buddypress/members/single/profile/change-cover-image.php:12
 msgid "Change Cover Image"
-msgstr ""
+msgstr "تغيير صورة الغلاف"
 
 #: buddypress/members/single/profile/change-cover-image.php:23
 msgid "Your Cover Image will be used to customize the header of your profile."
@@ -232,11 +242,11 @@ msgstr ""
 
 #: buddypress/members/single/profile/edit.php:104
 msgid "Save Changes"
-msgstr ""
+msgstr "حفظ التغييرات"
 
 #: buddypress/members/single/profile/profile-wp.php:29
 msgid "My Profile"
-msgstr ""
+msgstr "ملفي"
 
 #: buddypress/members/single/profile/profile-wp.php:29
 #, php-format
@@ -245,11 +255,11 @@ msgstr ""
 
 #: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:127
 msgid "Name"
-msgstr ""
+msgstr "اسم"
 
 #: buddypress/members/single/profile/profile-wp.php:45
 msgid "About Me"
-msgstr ""
+msgstr "عني"
 
 #: buddypress/members/single/profile/profile-wp.php:54
 msgid "Website"
@@ -300,8 +310,8 @@ msgstr ""
 #: func/compteur-vues.php:34
 #, php-format
 msgid ""
-"<div class=\"annonce-row\"><span class=\"name\">Vue </span><span>%1$s</span></"
-"div>"
+"<div class=\"annonce-row\"><span class=\"name\">Vue </span><span>%1$s</"
+"span></div>"
 msgstr ""
 
 #: func/compteur-vues.php:36
@@ -313,19 +323,19 @@ msgstr ""
 
 #: func/custom-fields-taxonomies.php:22
 msgid "Type annonces"
-msgstr ""
+msgstr "اكتب الإعلانات"
 
 #: func/custom-fields-taxonomies.php:51
 msgid "localisation"
-msgstr ""
+msgstr "الموقع"
 
 #: func/search-by-category.php:156
 msgid "Localisation"
-msgstr ""
+msgstr "الموقع"
 
 #: func/search-by-category.php:157
 msgid "Type annonce"
-msgstr ""
+msgstr "نوع الاعلان"
 
 #: func/search-by-category.php:158
 msgid "Views"
@@ -355,19 +365,19 @@ msgstr ""
 
 #: functions.php:162
 msgid "Price: "
-msgstr ""
+msgstr "السعر:"
 
 #: functions.php:168
 msgid "Select options ..."
-msgstr ""
+msgstr "حدد الخيارات ..."
 
 #: functions.php:169
 msgid "All categories"
-msgstr ""
+msgstr "جميع الفئات"
 
 #: functions.php:170
 msgid "All regions"
-msgstr ""
+msgstr "جميع المناطق"
 
 #: functions.php:327 functions.php:350 functions.php:351
 msgid "Publish Date"
@@ -383,7 +393,7 @@ msgstr ""
 
 #: functions.php:334 functions.php:825 wpadverts/single.php:103
 msgid "Price"
-msgstr ""
+msgstr "السعر"
 
 #: functions.php:336
 msgid "Cheapest First"
@@ -395,7 +405,7 @@ msgstr ""
 
 #: functions.php:341
 msgid "Title"
-msgstr ""
+msgstr "لقب"
 
 #: functions.php:343
 msgid "From A to Z"
@@ -412,11 +422,11 @@ msgstr ""
 
 #: functions.php:495
 msgid "Send"
-msgstr ""
+msgstr "إرسال"
 
 #: functions.php:537
 msgid "Your message has been sent."
-msgstr ""
+msgstr "لقد تم إرسال رسالتك."
 
 #: functions.php:542
 msgid "There are errors in your form."
@@ -424,23 +434,23 @@ msgstr ""
 
 #: functions.php:575
 msgid "Send Message"
-msgstr ""
+msgstr "ارسل رسالة"
 
 #: functions.php:582 wpadverts/single.php:109
 msgid "Phone"
-msgstr ""
+msgstr "هاتف"
 
 #: functions.php:750
 msgid "Titre de l'annoce"
-msgstr ""
+msgstr "عنوان الاعلان"
 
 #: functions.php:805
 msgid "Description"
-msgstr ""
+msgstr "وصف"
 
 #: functions.php:907
 msgid "Region and city"
-msgstr ""
+msgstr "المنطقة والمدينة"
 
 #: functions.php:978 functions.php:1031
 msgid "Wrong username or password."
@@ -460,23 +470,23 @@ msgstr ""
 
 #: functions.php:1461
 msgid "User email: "
-msgstr ""
+msgstr "البريد الإلكتروني للمستخدم:"
 
 #: functions.php:1462
 msgid "User first name: "
-msgstr ""
+msgstr "اسم المستخدم الأول:"
 
 #: functions.php:1463
 msgid "User last name: "
-msgstr ""
+msgstr "اسم المستخدم الأخير: "
 
 #: functions.php:1465
 msgid "Phone : "
-msgstr ""
+msgstr "الهاتف: "
 
 #: functions.php:1485
 msgid "Télephone"
-msgstr ""
+msgstr "هاتف"
 
 #: functions.php:1488
 msgid "S'il vous plait, entrez votre numéro de téléphone."
@@ -492,15 +502,15 @@ msgstr ""
 
 #: header.php:64 header.php:70
 msgid "My account"
-msgstr ""
+msgstr "حسابي"
 
 #: header.php:78
 msgid "Contact"
-msgstr ""
+msgstr "اتصال"
 
 #: header.php:85
 msgid "Follow-us"
-msgstr ""
+msgstr "تابعنا"
 
 #: inc/customizer.php:63
 msgid "qTranslateXWidget"
@@ -512,11 +522,11 @@ msgstr ""
 
 #: inc/template-functions.php:61
 msgid "Partager"
-msgstr ""
+msgstr "مشاركة"
 
 #: inc/template-functions.php:63
 msgid "Partager l'événement"
-msgstr ""
+msgstr "شارك هذا الحدث"
 
 #: inc/template-tags.php:29 inc/template-tags.php:45
 #, php-format
@@ -554,24 +564,24 @@ msgstr ""
 
 #: template-parts/actus_header.php:7 templates/news_agricoles.php:21
 msgid "Actualités"
-msgstr ""
+msgstr "أخبار"
 
 #: template-parts/categories.php:7
 msgid "Catégories"
-msgstr ""
+msgstr "الفئات"
 
 #: template-parts/categories.php:9
 msgid "Parcourir toutes les catégories"
-msgstr ""
+msgstr "تصفح جميع الفئات"
 
 #: template-parts/categories.php:14
 msgid "Choisissez la catégorie correspondant à vos besoins."
-msgstr ""
+msgstr "اختر الفئة التي تناسب احتياجاتك."
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
 #: template-parts/content-page.php:24
 msgid "Pages:"
-msgstr ""
+msgstr "الصفحات:"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
@@ -579,7 +589,8 @@ msgstr ""
 
 #: template-parts/content-none.php:24
 #, php-format
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:37
@@ -590,8 +601,8 @@ msgstr ""
 
 #: template-parts/content-none.php:44
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
-"can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
 #: template-parts/content.php:51
@@ -609,27 +620,27 @@ msgstr ""
 
 #: template-parts/nouveautes.php:6
 msgid "Nouveautés"
-msgstr ""
+msgstr "جديد"
 
 #: template-parts/nouveautes.php:9
 msgid "Découvrez toutes les dernières annonces"
-msgstr ""
+msgstr "اكتشاف جميع أحدث الإعلانات"
 
 #: template-parts/single-side.php:26
 msgid "Categories"
-msgstr ""
+msgstr "الاقسام"
 
 #: template-parts/single-side.php:44
 msgid "Search an article"
-msgstr ""
+msgstr "بحث مقال"
 
 #: template-parts/top_annonces.php:7
 msgid "Top annonces"
-msgstr ""
+msgstr "أعلى الإعلانات"
 
 #: template-parts/top_annonces.php:10
 msgid "Sélection des meilleures annonces du moment"
-msgstr ""
+msgstr "اختيار أفضل الإعلانات في الوقت الحالي"
 
 #: templates/news_agricoles.php:50
 msgid "Sorry, no posts matched your criteria."
@@ -641,12 +652,12 @@ msgstr ""
 
 #: wpadverts/add-preview.php:17
 msgid "Publish Listing"
-msgstr ""
+msgstr "أنشر الإعلان"
 
 #: wpadverts/add-save.php:5
 msgid ""
 "Your ad has been put into moderation, please wait for admin to approve it."
-msgstr ""
+msgstr "إعلانك في إنتظار المعاينة. الرجاء الإنتظار حتى يتم إعتماده."
 
 #: wpadverts/add-save.php:7
 #, php-format
@@ -654,46 +665,47 @@ msgid ""
 "Your ad has been published. You can view it here \"<a href=\"%1$s\">%2$s</a>"
 "\"."
 msgstr ""
+"لقد تم نشر اعلانك ويمكنك الإطلاع عليه هنا \"<a href=\"%1$s\">%2$s</a>\"."
 
 #: wpadverts/add.php:81
 msgid "Send my ad"
-msgstr ""
+msgstr "أرسل اعلاني"
 
 #: wpadverts/categories-all.php:57 wpadverts/categories-top.php:25
 msgid "No categories found."
-msgstr ""
+msgstr "لم يتم العثور على أي قسم."
 
 #: wpadverts/form_search.php:47
 msgid "Grid"
-msgstr ""
+msgstr "شبكة"
 
 #: wpadverts/form_search.php:48
 msgid "List"
-msgstr ""
+msgstr "قائمة"
 
 #: wpadverts/form_search.php:83 wpadverts/list.php:86
 msgid "Advanced Search"
-msgstr ""
+msgstr "بحث متقدم"
 
 #: wpadverts/form_search.php:85 wpadverts/list.php:88
 msgid "Search"
-msgstr ""
+msgstr "بحث"
 
 #: wpadverts/form_search.php:89 wpadverts/list.php:92
 msgid "Filter Results"
-msgstr ""
+msgstr "تصفية النتائج"
 
 #: wpadverts/list.php:98
 msgid "Sort by: "
-msgstr ""
+msgstr "ترتيب حسب: "
 
 #: wpadverts/list.php:114
 msgid "Pics"
-msgstr ""
+msgstr "صور"
 
 #: wpadverts/list.php:123
 msgid "Décocher les filtres"
-msgstr ""
+msgstr "قم بإلغاء تحديد الفلاتر"
 
 #: wpadverts/list.php:152
 #, php-format
@@ -702,19 +714,19 @@ msgstr ""
 
 #: wpadverts/list.php:176
 msgid "There are no ads matching your search criteria."
-msgstr ""
+msgstr "لا يوجد اعلانات تطابق بحثك."
 
 #: wpadverts/manage-edit.php:3
 msgid "Go Back"
-msgstr ""
+msgstr "رجوع"
 
 #: wpadverts/manage-edit.php:4
 msgid "View Ad"
-msgstr ""
+msgstr "عرض الإعلان"
 
 #: wpadverts/manage-edit.php:75
 msgid "Update"
-msgstr ""
+msgstr "تحديث"
 
 #: wpadverts/manage.php:26
 msgid "Inactive — This Ad is in moderation."
@@ -735,7 +747,7 @@ msgstr ""
 
 #: wpadverts/manage.php:58
 msgid "View"
-msgstr ""
+msgstr "عرض"
 
 #: wpadverts/manage.php:59
 msgid "Edit"
@@ -743,32 +755,32 @@ msgstr ""
 
 #: wpadverts/manage.php:60 wpadverts/manage.php:61
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: wpadverts/manage.php:66
 msgid "Are you sure?"
-msgstr ""
+msgstr "هل أنت واثق؟"
 
 #: wpadverts/manage.php:69
 msgid "Cancel"
-msgstr ""
+msgstr "إلغاء"
 
 #: wpadverts/manage.php:77
 msgid "More"
-msgstr ""
+msgstr "المزيد"
 
 #: wpadverts/manage.php:93
 msgid "You do not have any Ads posted yet."
-msgstr ""
+msgstr "ليس لديك اعلانات بعد."
 
 #: wpadverts/single.php:117
 msgid "Region"
-msgstr ""
+msgstr "المنطقة"
 
 #: wpadverts/single.php:204
 msgid "Annonces similaires"
-msgstr ""
+msgstr "إعلانات مماثلة"
 
 #: wpadverts/single.php:207
 msgid "Ces annonces pourraient aussi vous intéresser"
-msgstr ""
+msgstr "قد تهمك هذه الإعلانات أيضًا"
