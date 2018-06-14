@@ -29,35 +29,35 @@
 
 					<div class="input_container">
 						<i class="far fa-user"></i>
-						<input type="text" placeholder="Prénom" name="prenom" id="prenom">                                
+						<input type="text" placeholder="<?php _e("Prénom","fellah") ?>" name="prenom" id="prenom">                                
 					</div>
 
 					<div class="input_container">
 						<i class="far fa-user"></i>
-						<input type="text" placeholder="Nom" name="nom" id="nom">                                
+						<input type="text" placeholder="<?php _e("Nom","fellah") ?>" name="nom" id="nom">                                
 					</div>
 
 					<div class="input_container">
 						<i class="far fa-envelope"></i>
-						<input type="email" placeholder="Email" name="email" id="email">                                
+						<input type="email" placeholder="<?php _e("Email","fellah") ?>" name="email" id="email">                                
 					</div>
 
 					<div class="input_container">
 						<i class="far fa-edit"></i>
-						<input type="password" placeholder="Mot de passe" name="mot_passe" id="mot_passe">                                
+						<input type="password" placeholder="<?php _e("Mot de passe","fellah") ?>" name="mot_passe" id="mot_passe">                                
 					</div>
 
 					<div class="input_container">
 						<i class="far fa-edit"></i>
-						<input type="password" placeholder="Confirmer le mot de passe" name="confirm_mot_passe" id="confirm_mot_passe">                                
+						<input type="password" placeholder="<?php _e("Confirmer le mot de passe","fellah") ?>" name="confirm_mot_passe" id="confirm_mot_passe">                                
 					</div>
 
 					<div class="input_container">
 						<i class="fas fa-phone"></i>
-						<input type="text" placeholder="telephone" name="telephone" id="telephone">                                
+						<input type="text" placeholder="<?php _e("Phone","fellah") ?>" name="telephone" id="telephone">                                
 					</div>
 
-					<button name="creation_compte" id="creation_compte">Créer mon compte</button>
+					<button name="creation_compte" id="creation_compte"><?php _e("Create my account", "fellah") ?></button>
 
 					<div class="advert_alert advert_danger"><?php  echo __("wrong acces","fellah") ?></div>
 					<div class="advert_alert advert_success"><?php  echo __("You are connected","fellah") ?></div>

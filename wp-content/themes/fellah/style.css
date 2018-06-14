@@ -13620,8 +13620,8 @@ form input[type="submit"] {
   width: 100%;
   font-size: 1.1875rem;
   max-width: 18.75rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
   border-radius: 0.25rem;
   margin: 0.9375rem 0;
   color: #fff;
@@ -13645,6 +13645,12 @@ form textarea {
   font-size: 0.875rem;
   height: 9.375rem;
   margin: 0.625rem 0;
+}
+
+@media (max-width: 767px) {
+  form input[type="submit"] {
+    max-width: 100%;
+  }
 }
 
 .btn {
@@ -14088,7 +14094,7 @@ form textarea {
   line-height: 3.125rem;
   padding: 0 1.25rem;
   min-width: 10.9375rem;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
 }
 
 .bandeau .info a:hover {
@@ -15114,7 +15120,7 @@ form textarea {
   margin-top: -1px;
   position: absolute;
   display: inline-block;
-  height: 0.125rem;
+  height: 0.25rem;
   width: 1.875rem;
 }
 
@@ -15122,7 +15128,7 @@ form textarea {
   content: " ";
   position: absolute;
   display: inline-block;
-  height: 0.125rem;
+  height: 0.25rem;
   width: 1.875rem;
   background: #fff;
 }
@@ -16222,10 +16228,6 @@ form textarea {
   margin: 0 1.25rem 0.9375rem 0;
 }
 
-.register_form {
-  margin: 0 -0.9375rem;
-}
-
 .register_form .nav-pills .nav-link {
   cursor: pointer;
   position: relative;
@@ -16310,7 +16312,7 @@ form textarea {
   max-width: 16.25rem;
   height: 3.125rem;
   line-height: 3.125rem;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
   margin: 0.9375rem 0;
   color: #fff;
   background-color: #007e1d;
@@ -16326,7 +16328,7 @@ form textarea {
   font-size: 1.1875rem;
   max-width: 16.25rem;
   line-height: 3.125rem;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
   background-color: #007e1d;
 }
 
@@ -16338,6 +16340,17 @@ form textarea {
   border-radius: 0.25rem;
   border: 1px solid #dbdbdb;
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .register_form {
+    margin: 1.875rem 0;
+    padding-top: 1.875rem;
+    border-top: 1px solid #dbdbdb;
+  }
+  .register_form button {
+    max-width: 100%;
+  }
 }
 
 .owl-carousel .owl-nav {
@@ -16744,8 +16757,8 @@ form textarea {
 }
 
 .adverts-form .adverts-plupload-upload-ui {
-  width: 100%;
-  float: none;
+  width: 100% !important;
+  float: none !important;
 }
 
 @media (max-width: 575px) {
@@ -17039,6 +17052,7 @@ div.adverts-flash-messages {
   bottom: 0;
   left: 40px;
   padding: 0 !important;
+  z-index: 99;
 }
 
 .wpadverts-slide-nav-interface .wpadverts-slide-nav-thumbnails {

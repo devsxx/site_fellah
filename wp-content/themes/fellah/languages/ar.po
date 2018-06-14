@@ -4,20 +4,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-14 11:52+0000\n"
+"POT-Creation-Date: 2018-06-14 14:47+0000\n"
+"PO-Revision-Date: 2018-06-14 14:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-14 12:47+0000\n"
-"Language-Team: \n"
 "X-Generator: Poedit 2.0.8\n"
 "X-Poedit-KeywordsList: __;_e;_n;_ex;_x;esc_html;esc_html__;esc_html_e;"
 "esc_html_x;esc_attr_e;esc_attr__\n"
 "X-Poedit-Basepath: ..\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"Language: ar\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
@@ -36,6 +36,35 @@ msgstr "نسيت رقمك السري ؟"
 #: buddypress/members/register.php:28 buddypress/members/register.php:122
 msgid "Create an account. Simple and free !"
 msgstr "انشئ حساب. بسيطة ومجان!"
+
+#: buddypress/members/register.php:32
+msgid "Prénom"
+msgstr "الأسم"
+
+#: buddypress/members/register.php:37
+msgid "Nom"
+msgstr "اسم"
+
+#: buddypress/members/register.php:42
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: buddypress/members/register.php:47
+msgid "Mot de passe"
+msgstr "كلمة السر"
+
+#: buddypress/members/register.php:52
+msgid "Confirmer le mot de passe"
+msgstr "أكد كلمة المرور"
+
+#: buddypress/members/register.php:57 functions.php:582
+#: wpadverts/single.php:109
+msgid "Phone"
+msgstr "هاتف"
+
+#: buddypress/members/register.php:60 buddypress/members/register.php:408
+msgid "Create my account"
+msgstr "إنشيء حسابي"
 
 #: buddypress/members/register.php:62 functions.php:1286
 msgid "wrong acces"
@@ -131,10 +160,6 @@ msgstr "اختر كلمة مرور"
 msgid "Confirm Password"
 msgstr "تأكيد كلمة المرور"
 
-#: buddypress/members/register.php:408
-msgid "Create my account"
-msgstr "إنشيء حسابي"
-
 #: buddypress/members/register.php:445
 msgid ""
 "You have successfully created your account! To begin using this site you "
@@ -163,7 +188,7 @@ msgstr ""
 
 #: buddypress/members/single/profile/change-avatar.php:12
 msgid "Change Profile Photo"
-msgstr ""
+msgstr "تغيير صورة الملف الشخصي"
 
 #: buddypress/members/single/profile/change-avatar.php:25
 msgid ""
@@ -238,7 +263,7 @@ msgstr ""
 
 #: buddypress/members/single/profile/edit.php:30
 msgid "Profile field groups"
-msgstr ""
+msgstr "مجموعات حقول الملف الشخصي"
 
 #: buddypress/members/single/profile/edit.php:104
 msgid "Save Changes"
@@ -293,7 +318,7 @@ msgstr ""
 #: footer.php:24
 #, php-format
 msgid "All rights reserved %d"
-msgstr ""
+msgstr "جميع الحقوق محفوظة %d"
 
 #: footer.php:27
 msgid "https://fellah.ma/"
@@ -301,11 +326,11 @@ msgstr ""
 
 #: func/breadcrumb.php:213
 msgid "Page"
-msgstr ""
+msgstr "صفحة"
 
 #: func/breadcrumb.php:218
 msgid "Search results for: "
-msgstr ""
+msgstr "نتائج البحث عن : "
 
 #: func/compteur-vues.php:34
 #, php-format
@@ -365,7 +390,7 @@ msgstr ""
 
 #: functions.php:162
 msgid "Price: "
-msgstr "السعر:"
+msgstr "السعر : "
 
 #: functions.php:168
 msgid "Select options ..."
@@ -430,15 +455,37 @@ msgstr "لقد تم إرسال رسالتك."
 
 #: functions.php:542
 msgid "There are errors in your form."
-msgstr ""
+msgstr "هناك أخطاء في النموذج الخاص بك."
 
 #: functions.php:575
 msgid "Send Message"
 msgstr "ارسل رسالة"
 
-#: functions.php:582 wpadverts/single.php:109
-msgid "Phone"
-msgstr "هاتف"
+#: functions.php:648
+msgid "1. Votre annonce"
+msgstr "1 . إعلانكم"
+
+#: functions.php:665
+#, fuzzy
+#| msgid "Type annonce"
+msgid "Type d'annonce"
+msgstr "نوع الاعلان"
+
+#: functions.php:696
+#, fuzzy
+#| msgid "Titre de l'annoce"
+msgid "Catégorie d'annonce"
+msgstr "عنوان الاعلان"
+
+#: functions.php:712
+msgid "2. Description"
+msgstr "2 . وصف"
+
+#: functions.php:729
+#, fuzzy
+#| msgid "Catégories"
+msgid "Catégorie"
+msgstr "الفئات"
 
 #: functions.php:750
 msgid "Titre de l'annoce"
@@ -448,37 +495,45 @@ msgstr "عنوان الاعلان"
 msgid "Description"
 msgstr "وصف"
 
+#: functions.php:847
+msgid "Image"
+msgstr "صوره"
+
 #: functions.php:907
 msgid "Region and city"
 msgstr "المنطقة والمدينة"
 
+#: functions.php:940
+msgid "3. Vos coordonnées"
+msgstr ""
+
 #: functions.php:978 functions.php:1031
 msgid "Wrong username or password."
-msgstr ""
+msgstr "اسم مستخدم أو كلمة مرور خاطئة."
 
 #: functions.php:981 functions.php:1036
 msgid "Login successful"
-msgstr ""
+msgstr "تسجيل الدخول ناجح"
 
 #: functions.php:1023
 msgid "Can't login."
-msgstr ""
+msgstr "لا يمكن تسجيل الدخول."
 
 #: functions.php:1040
 msgid "User already exists.  Password inherited."
-msgstr ""
+msgstr "المستخدم موجود بالفعل. كلمة المرور الموروثة."
 
 #: functions.php:1461
-msgid "User email: "
-msgstr "البريد الإلكتروني للمستخدم:"
+msgid "User email : "
+msgstr "البريد الإلكتروني للمستخدم : "
 
 #: functions.php:1462
-msgid "User first name: "
-msgstr "اسم المستخدم الأول:"
+msgid "User first name : "
+msgstr "اسم المستخدم الأول : "
 
 #: functions.php:1463
-msgid "User last name: "
-msgstr "اسم المستخدم الأخير: "
+msgid "User last name : "
+msgstr "اسم المستخدم الأخير : "
 
 #: functions.php:1465
 msgid "Phone : "
@@ -490,11 +545,11 @@ msgstr "هاتف"
 
 #: functions.php:1488
 msgid "S'il vous plait, entrez votre numéro de téléphone."
-msgstr ""
+msgstr "يرجى إدخال رقم هاتفك."
 
 #: header.php:25
 msgid "Skip to content"
-msgstr ""
+msgstr "تخطي إلى المحتوى"
 
 #: header.php:40
 msgid "Primary Menu"
@@ -585,7 +640,7 @@ msgstr "الصفحات:"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "لم يتم العثور على شيء"
 
 #: template-parts/content-none.php:24
 #, php-format
@@ -612,11 +667,11 @@ msgstr ""
 
 #: template-parts/content.php:68
 msgid "&laquo Previous"
-msgstr ""
+msgstr "السابق &laquo"
 
 #: template-parts/content.php:69
 msgid "Next &raquo"
-msgstr ""
+msgstr "&raquo التالي"
 
 #: template-parts/nouveautes.php:6
 msgid "Nouveautés"
@@ -751,7 +806,7 @@ msgstr "عرض"
 
 #: wpadverts/manage.php:59
 msgid "Edit"
-msgstr ""
+msgstr "تحرير"
 
 #: wpadverts/manage.php:60 wpadverts/manage.php:61
 msgid "Delete"

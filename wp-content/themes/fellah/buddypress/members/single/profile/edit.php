@@ -80,7 +80,7 @@ if ( bp_has_profile( 'profile_group_id=' . bp_get_current_profile_group_id() ) )
 						);
 						?>
 					</div>
-				<?php endif ?>
+				<?php endif ?>  
 
 				<?php
 

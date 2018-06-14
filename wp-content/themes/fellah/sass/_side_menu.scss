@@ -27,7 +27,7 @@
 				margin-top: -1px;
 				position: absolute;
 				display: inline-block;
-				height: oe_rem(2px);
+				height: oe_rem(4px);
 				width: oe_rem(30px);
 
 				&::before, 
@@ -35,7 +35,7 @@
 					content: " ";
 					position: absolute;
 					display: inline-block;
-					height: oe_rem(2px);
+					height: oe_rem(4px);
 					width: oe_rem(30px);
 					background: $white;
 				}

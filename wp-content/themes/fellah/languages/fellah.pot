@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-14 11:52+0000\n"
+"POT-Creation-Date: 2018-06-14 14:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,6 +33,34 @@ msgstr ""
 
 #: buddypress/members/register.php:28 buddypress/members/register.php:122
 msgid "Create an account. Simple and free !"
+msgstr ""
+
+#: buddypress/members/register.php:32
+msgid "Prénom"
+msgstr ""
+
+#: buddypress/members/register.php:37
+msgid "Nom"
+msgstr ""
+
+#: buddypress/members/register.php:42
+msgid "Email"
+msgstr ""
+
+#: buddypress/members/register.php:47
+msgid "Mot de passe"
+msgstr ""
+
+#: buddypress/members/register.php:52
+msgid "Confirmer le mot de passe"
+msgstr ""
+
+#: buddypress/members/register.php:57 functions.php:582 wpadverts/single.php:109
+msgid "Phone"
+msgstr ""
+
+#: buddypress/members/register.php:60 buddypress/members/register.php:408
+msgid "Create my account"
 msgstr ""
 
 #: buddypress/members/register.php:62 functions.php:1286
@@ -127,10 +155,6 @@ msgstr ""
 
 #: buddypress/members/register.php:366
 msgid "Confirm Password"
-msgstr ""
-
-#: buddypress/members/register.php:408
-msgid "Create my account"
 msgstr ""
 
 #: buddypress/members/register.php:445
@@ -426,8 +450,24 @@ msgstr ""
 msgid "Send Message"
 msgstr ""
 
-#: functions.php:582 wpadverts/single.php:109
-msgid "Phone"
+#: functions.php:648
+msgid "1. Votre annonce"
+msgstr ""
+
+#: functions.php:665
+msgid "Type d'annonce"
+msgstr ""
+
+#: functions.php:696
+msgid "Catégorie d'annonce"
+msgstr ""
+
+#: functions.php:712
+msgid "2. Description"
+msgstr ""
+
+#: functions.php:729
+msgid "Catégorie"
 msgstr ""
 
 #: functions.php:750
@@ -438,8 +478,16 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: functions.php:847
+msgid "Image"
+msgstr ""
+
 #: functions.php:907
 msgid "Region and city"
+msgstr ""
+
+#: functions.php:940
+msgid "3. Vos coordonnées"
 msgstr ""
 
 #: functions.php:978 functions.php:1031
@@ -459,15 +507,15 @@ msgid "User already exists.  Password inherited."
 msgstr ""
 
 #: functions.php:1461
-msgid "User email: "
+msgid "User email : "
 msgstr ""
 
 #: functions.php:1462
-msgid "User first name: "
+msgid "User first name : "
 msgstr ""
 
 #: functions.php:1463
-msgid "User last name: "
+msgid "User last name : "
 msgstr ""
 
 #: functions.php:1465

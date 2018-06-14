@@ -645,7 +645,7 @@ function my_adverts_form_load( $form ) {
 	$form["field"][] = array(
 		"type" => "adverts_field_header",
 		"name" => "_item_information",
-		"label" => "1. Votre annonce",
+		"label" => __("1. Votre annonce", "fellah"),
 		"meta" => array(
 			"cf_saved" => 1,
 			"cf_builtin" => 1,
@@ -661,8 +661,8 @@ function my_adverts_form_load( $form ) {
 	$form["field"][] =  array(
 		"type" => "adverts_field_checkbox",
 		"class" => "checkbox_2",
-		"name" => "type_annonce",
-		"label" => "Type d'annonce",
+		"name" => "type_annonce", 
+		"label" => __("Type d'annonce", "fellah"),
 		"meta" => array(
 			"cf_builtin" => "",
 			"cf_saved" => 1,
@@ -692,8 +692,8 @@ function my_adverts_form_load( $form ) {
 	$form["field"][] =  array(
 		"name" => "advert_category",
 		"type" => "adverts_field_customadvertscategory",
-		"order" => 4,
-		"label" => "Catégorie d'annonce",
+		"order" => 4, 
+		"label" => __("Catégorie d'annonce", "fellah"),
 	);
 	
 	if(!is_admin()){
@@ -708,8 +708,8 @@ function my_adverts_form_load( $form ) {
 
 	$form["field"][] = array(
 		"type" => "adverts_field_header",
-		"name" => "_contact_information",
-		"label" => "2. Description",
+		"name" => "_contact_information", 
+		"label" => __("2. Description", "fellah"),
 		"meta" => array(
 			"cf_saved" => 1,
 			"cf_builtin" => 1,
@@ -725,8 +725,8 @@ function my_adverts_form_load( $form ) {
 	if(is_admin()){
 		$form["field"][] =  array(
 			"type" => "adverts_field_select",
-			"name" => "advert_category",
-			"label" => "Catégorie",
+			"name" => "advert_category", 
+			"label" => __("Catégorie", "fellah"),
 			"meta" => array(
 				"cf_options_fill_method" => "callback",
 				"cf_data_source" => "adverts-categories",
@@ -843,8 +843,8 @@ function my_adverts_form_load( $form ) {
 
 	$form["field"][] =  array(
 		"type" => "adverts_field_gallery",
-		"name" => "gallery",
-		"label" => "Image",
+		"name" => "gallery", 
+		"label" => __("Image", "fellah"),
 		"meta" => array(
 			"cf_saved" => 1,
 			"cf_builtin" => 1,
@@ -936,8 +936,8 @@ function my_adverts_form_load( $form ) {
 			$form["field"][] =  array(
 				"name" => "coordonnées",
 				"type" => "adverts_field_header",
-				"order" => 25,
-				"label" => "3. VOS COORDONNÉES",
+				"order" => 25, 
+				"label" => __("3. Vos coordonnées", "fellah"),
 			);
 			$form["field"][] =  array(
 				"name" => "connect",

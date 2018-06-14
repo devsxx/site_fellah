@@ -203,8 +203,8 @@
   } 
 
   .adverts-plupload-upload-ui {
-    width: 100%;
-    float: none;
+    width: 100% !important;
+    float: none !important;
   }
 
 
@@ -471,6 +471,7 @@ div.adverts-flash-messages {
 .wpadverts-slide-nav-interface{
   @include position(absolute, initial !important, initial !important, 0, 40px);
   padding: 0 !important;
+  z-index: 99;
 
   .wpadverts-slide-nav-thumbnails{
     background-color: #fff;

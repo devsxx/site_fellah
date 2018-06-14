@@ -1,4 +1,4 @@
-form {
+form{
 	input{
 
 		&[type="text"], 
@@ -30,8 +30,8 @@ form {
 			width: 100%;
 			font-size: oe_rem(19px);
 			max-width: oe_rem(300px);
-			height: oe_rem(40px);
-			line-height: oe_rem(40px);
+			height: oe_rem(50px);
+			line-height: oe_rem(50px);
 			border-radius: oe_rem(4px); 
 			margin: oe_rem(15px) 0;
 			color: #fff; 
@@ -58,6 +58,14 @@ form {
 		height: oe_rem(150px);
 		margin: oe_rem(10px) 0;
 	} 
+	
+	@include media("<md"){
+		input{ 
+			&[type="submit"]{ 
+				max-width: 100%;  
+			}
+		}
+	}
 }
 
 .btn{cursor:pointer;}
