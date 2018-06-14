@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-13 11:08+0000\n"
-"PO-Revision-Date: 2018-06-13 11:30+0000\n"
+"POT-Creation-Date: 2018-06-14 15:34+0000\n"
+"PO-Revision-Date: 2018-06-14 15:36+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -31,58 +31,95 @@ msgstr "Vous avez déjà un compte ?"
 msgid "Forgot your password ?"
 msgstr "Mot de passe oublié ?"
 
-#: buddypress/members/register.php:57
-msgid "User registration is currently not allowed."
-msgstr "Les nouvelles inscriptions ne sont pas autorisées pour l’instant."
-
-#: buddypress/members/register.php:79
+#: buddypress/members/register.php:28 buddypress/members/register.php:122
 msgid "Create an account. Simple and free !"
 msgstr "Créer un compte. Simple et gratuit !"
 
-#: buddypress/members/register.php:98
+#: buddypress/members/register.php:32
+msgid "Prénom"
+msgstr "Prénom"
+
+#: buddypress/members/register.php:37
+msgid "Nom"
+msgstr "Nom"
+
+#: buddypress/members/register.php:42
+msgid "Email"
+msgstr "E mail"
+
+#: buddypress/members/register.php:47
+msgid "Mot de passe"
+msgstr ""
+
+#: buddypress/members/register.php:52
+msgid "Confirmer le mot de passe"
+msgstr ""
+
+#: buddypress/members/register.php:57 functions.php:582
+#: wpadverts/single.php:109
+msgid "Phone"
+msgstr "Téléphone"
+
+#: buddypress/members/register.php:60
+msgid "Create my account"
+msgstr "Créer mon compte"
+
+#: buddypress/members/register.php:62 functions.php:1286
+msgid "wrong acces"
+msgstr ""
+
+#: buddypress/members/register.php:63 functions.php:1287
+msgid "You are connected"
+msgstr "Tu es connecté"
+
+#: buddypress/members/register.php:100
+msgid "User registration is currently not allowed."
+msgstr "Les nouvelles inscriptions ne sont pas autorisées pour l’instant."
+
+#: buddypress/members/register.php:141
 msgid "Profile Details"
 msgstr "Détails du profil"
 
-#: buddypress/members/register.php:122 buddypress/members/register.php:144
+#: buddypress/members/register.php:165 buddypress/members/register.php:187
 #: buddypress/members/single/profile/edit.php:59
 #: buddypress/members/single/profile/edit.php:78
 #, php-format
 msgid "This field can be seen by: %s"
 msgstr "Ce champ peut être vu par: %s"
 
-#: buddypress/members/register.php:132
+#: buddypress/members/register.php:175
 #: buddypress/members/single/profile/edit.php:68
 msgid "Who can see this field?"
 msgstr "Qui peut voir ce champ?"
 
-#: buddypress/members/register.php:137
+#: buddypress/members/register.php:180
 #: buddypress/members/single/profile/edit.php:72
 msgid "Close"
 msgstr "Fermer"
 
-#: buddypress/members/register.php:205
+#: buddypress/members/register.php:248
 msgid "Blog Details"
 msgstr "Détails du blog"
 
-#: buddypress/members/register.php:207
+#: buddypress/members/register.php:250
 msgid "Yes, I'd like to create a new site"
 msgstr "Oui, je veux créer un nouveau blog"
 
-#: buddypress/members/register.php:211
+#: buddypress/members/register.php:254
 msgid "Blog URL"
 msgstr "Blog URL"
 
-#: buddypress/members/register.php:211 buddypress/members/register.php:227
-#: buddypress/members/register.php:289 buddypress/members/register.php:300
-#: buddypress/members/register.php:311 buddypress/members/register.php:323
+#: buddypress/members/register.php:254 buddypress/members/register.php:270
+#: buddypress/members/register.php:332 buddypress/members/register.php:343
+#: buddypress/members/register.php:354 buddypress/members/register.php:366
 msgid "(required)"
 msgstr "(obligatoire)"
 
-#: buddypress/members/register.php:227
+#: buddypress/members/register.php:270
 msgid "Site Title"
 msgstr "Titre du site"
 
-#: buddypress/members/register.php:238
+#: buddypress/members/register.php:281
 msgid ""
 "Privacy: I would like my site to appear in search engines, and in public "
 "listings around this network."
@@ -90,35 +127,35 @@ msgstr ""
 "Vie privée&nbsp;:&nbsp;Je souhaite que mon blog apparaisse dans les moteurs "
 "de recherche et sur les listes publiques de ce réseau."
 
-#: buddypress/members/register.php:248 wpadverts/manage.php:68
+#: buddypress/members/register.php:291 wpadverts/manage.php:68
 msgid "Yes"
 msgstr "Oui"
 
-#: buddypress/members/register.php:249
+#: buddypress/members/register.php:292
 msgid "No"
 msgstr "Non"
 
-#: buddypress/members/register.php:287
+#: buddypress/members/register.php:330
 msgid "Account Details"
 msgstr "Details du compte"
 
-#: buddypress/members/register.php:289
+#: buddypress/members/register.php:332
 msgid "Username"
 msgstr "Nom d&rsquo;utilisateur"
 
-#: buddypress/members/register.php:300
+#: buddypress/members/register.php:343
 msgid "Email Address"
 msgstr "Adresse e-mail"
 
-#: buddypress/members/register.php:311
+#: buddypress/members/register.php:354
 msgid "Choose a Password"
 msgstr "Choisissez un mot de passe"
 
-#: buddypress/members/register.php:323
+#: buddypress/members/register.php:366
 msgid "Confirm Password"
 msgstr "Confirmez le mot de passe"
 
-#: buddypress/members/register.php:402
+#: buddypress/members/register.php:445
 msgid ""
 "You have successfully created your account! To begin using this site you "
 "will need to activate your account via the email we have just sent to your "
@@ -127,7 +164,7 @@ msgstr ""
 "Vous venez de créer votre compte. Vous devez maintenant l'activer en "
 "utilisant le lien qui se trouve dans le mail que nous venons de vous envoyer."
 
-#: buddypress/members/register.php:404
+#: buddypress/members/register.php:447
 msgid ""
 "You have successfully created your account! Please log in using the username "
 "and password you have just created."
@@ -313,11 +350,11 @@ msgstr "Barre latérale"
 msgid "Add widgets here."
 msgstr "Ajouter des widgets ici."
 
-#: functions.php:145
+#: functions.php:151
 msgid "Sending user info, please wait..."
 msgstr "Envoi d'informations utilisateur, veuillez patienter ..."
 
-#: functions.php:146
+#: functions.php:152
 msgid ""
 "Add your photos to make your ad even more visible. You can download up to 5 "
 "images."
@@ -325,148 +362,168 @@ msgstr ""
 "Ajoutez vos photos pour rendre votre annonce encore plus visible. Vous "
 "pouvez télécharger 5 images maximum."
 
-#: functions.php:156
+#: functions.php:162
 msgid "Price: "
 msgstr "Prix : "
 
-#: functions.php:162
+#: functions.php:168
 msgid "Select options ..."
 msgstr "Choisir l'option ..."
 
-#: functions.php:163
+#: functions.php:169
 msgid "All categories"
 msgstr "Toutes les catégories"
 
-#: functions.php:164
+#: functions.php:170
 msgid "All regions"
 msgstr "Toutes les régions"
 
-#: functions.php:321 functions.php:344 functions.php:345
+#: functions.php:327 functions.php:350 functions.php:351
 msgid "Publish Date"
 msgstr "Date de publication"
 
-#: functions.php:323 functions.php:345
+#: functions.php:329 functions.php:351
 msgid "Newest First"
 msgstr "Le plus récent d'abord"
 
-#: functions.php:324
+#: functions.php:330
 msgid "Oldest First"
 msgstr "Le plus ancien en premier"
 
-#: functions.php:328 functions.php:821 wpadverts/single.php:103
+#: functions.php:334 wpadverts/single.php:103
 msgid "Price"
 msgstr "Prix"
 
-#: functions.php:330
+#: functions.php:336
 msgid "Cheapest First"
 msgstr "Moins cher en premier"
 
-#: functions.php:331
+#: functions.php:337
 msgid "Most Expensive First"
 msgstr "Le plus cher en premier"
 
-#: functions.php:335
+#: functions.php:341
 msgid "Title"
 msgstr "Titre"
 
-#: functions.php:337
+#: functions.php:343
 msgid "From A to Z"
 msgstr "De A à Z"
 
-#: functions.php:338
+#: functions.php:344
 msgid "From Z to A"
 msgstr "De Z à A"
 
-#: functions.php:345 functions.php:375
+#: functions.php:351 functions.php:381
 #, php-format
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: functions.php:491
+#: functions.php:495
 msgid "Send"
 msgstr "Envoyer"
 
-#: functions.php:533
+#: functions.php:537
 msgid "Your message has been sent."
 msgstr "Votre message a été envoyé."
 
-#: functions.php:538
+#: functions.php:542
 msgid "There are errors in your form."
 msgstr "Il y a des erreurs dans votre formulaire."
 
-#: functions.php:571
+#: functions.php:575
 msgid "Send Message"
 msgstr "Envoyer le message"
 
-#: functions.php:578 wpadverts/single.php:109
-msgid "Phone"
-msgstr "Téléphone"
+#: functions.php:648
+msgid "1. Votre annonce"
+msgstr "1. Votre annonce"
 
-#: functions.php:746
+#: functions.php:665
+#, fuzzy
+#| msgid "Type annonce"
+msgid "Type d'annonce"
+msgstr "Type annonce"
+
+#: functions.php:696
+msgid "Catégorie d'annonce"
+msgstr "Catégorie d'annonce"
+
+#: functions.php:712
+msgid "2. Description"
+msgstr "2. Description"
+
+#: functions.php:729
+msgid "Catégorie"
+msgstr "Catégorie"
+
+#: functions.php:750
 msgid "Titre de l'annoce"
 msgstr "Titre de l'annoce"
 
-#: functions.php:764
-msgid "Phone *"
-msgstr "Téléphone *"
-
-#: functions.php:801
+#: functions.php:805
 msgid "Description"
 msgstr "Description"
 
-#: functions.php:903
+#: functions.php:825
+msgid "DH - devise du site Fellah.ma"
+msgstr "DH - devise du site Fellah.ma"
+
+#: functions.php:847
+msgid "Image"
+msgstr "Image"
+
+#: functions.php:907
 msgid "Region and city"
 msgstr "Région et ville"
 
-#: functions.php:974 functions.php:1027
+#: functions.php:940
+msgid "3. Vos coordonnées"
+msgstr "3. Vos coordonnées"
+
+#: functions.php:978 functions.php:1031
 msgid "Wrong username or password."
 msgstr "Mauvais nom d'utilisateur ou mot de passe."
 
-#: functions.php:977 functions.php:1032
+#: functions.php:981 functions.php:1036
 msgid "Login successful"
 msgstr "Login successful"
 
-#: functions.php:1019
+#: functions.php:1023
 msgid "Can't login."
 msgstr "Impossible de se connecter."
 
-#: functions.php:1036
+#: functions.php:1040
 msgid "User already exists.  Password inherited."
 msgstr "L'utilisateur existe déjà. Mot de passe hérité."
 
-#: functions.php:1282
-msgid "wrong acces"
-msgstr ""
+#: functions.php:1461
+#, fuzzy
+#| msgid "Email"
+msgid "Email : "
+msgstr "E mail"
 
-#: functions.php:1283
-msgid "You are connected"
-msgstr "Tu es connecté"
-
-#: functions.php:1454
-msgid "Username: "
-msgstr "Nom d&rsquo;utilisateur : "
-
-#: functions.php:1455
-msgid "User email: "
-msgstr "E mail : "
-
-#: functions.php:1456
-msgid "User first name: "
+#: functions.php:1462
+#, fuzzy
+#| msgid "User first name: "
+msgid "First name : "
 msgstr "Prénom : "
 
-#: functions.php:1457
-msgid "User last name: "
+#: functions.php:1463
+#, fuzzy
+#| msgid "User last name: "
+msgid "Last name : "
 msgstr "Nom : "
 
-#: functions.php:1459
+#: functions.php:1465
 msgid "Phone : "
 msgstr "Téléphone : "
 
-#: functions.php:1475
+#: functions.php:1485
 msgid "Télephone"
 msgstr "Télephone"
 
-#: functions.php:1478
+#: functions.php:1488
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "S'il vous plait, entrez votre numéro de téléphone."
 
@@ -607,7 +664,7 @@ msgstr "Nouveautés"
 
 #: template-parts/nouveautes.php:9
 msgid "Découvrez toutes les dernières annonces"
-msgstr ""
+msgstr "Découvrez toutes les dernières annonces"
 
 #: template-parts/single-side.php:26
 msgid "Categories"
@@ -623,7 +680,7 @@ msgstr "Top annonces"
 
 #: template-parts/top_annonces.php:10
 msgid "Sélection des meilleures annonces du moment"
-msgstr ""
+msgstr "Sélection des meilleures annonces du moment"
 
 #: templates/news_agricoles.php:50
 msgid "Sorry, no posts matched your criteria."
@@ -683,7 +740,7 @@ msgstr "Photos"
 
 #: wpadverts/list.php:123
 msgid "Décocher les filtres"
-msgstr ""
+msgstr "Décocher les filtres"
 
 #: wpadverts/list.php:152
 #, php-format
@@ -761,7 +818,18 @@ msgstr "Annonces similaires"
 
 #: wpadverts/single.php:207
 msgid "Ces annonces pourraient aussi vous intéresser"
-msgstr ""
+msgstr "Ces annonces pourraient aussi vous intéresser"
+
+#, fuzzy
+#~| msgid "User email: "
+#~ msgid "User email : "
+#~ msgstr "E mail : "
+
+#~ msgid "Phone *"
+#~ msgstr "Téléphone *"
+
+#~ msgid "Username: "
+#~ msgstr "Nom d&rsquo;utilisateur : "
 
 #~ msgid "Members Capabilities"
 #~ msgstr "Capacités des membres"
@@ -814,9 +882,6 @@ msgstr ""
 
 #~ msgid "Profile photo preview"
 #~ msgstr "Prévisualisation du logo du groupe"
-
-#~ msgid "Crop Image"
-#~ msgstr "Retailler l&#39;avatar"
 
 #~ msgid "Profile field groups"
 #~ msgstr "Détails du profil"

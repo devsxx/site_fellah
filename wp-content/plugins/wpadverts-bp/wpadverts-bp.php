@@ -477,9 +477,10 @@ function adext_bp_send_private_message_button( $post_id ) {
     if( $user === false ) {
         // Only registered users can receive messages
         return;
-    }
+    } 
     
-    $url =  bp_loggedin_user_domain() . bp_get_messages_slug() . '/compose/?r=' . $user->user_login;
+    $url =  bp_loggedin_user_domain() . '/compose/?r=' . $user->user_login;
+    // $url =  bp_loggedin_user_domain() . bp_get_messages_slug() . '/compose/?r=' . $user->user_login;
     $nonce_url = apply_filters( 'bp_get_send_private_message_link', wp_nonce_url( $url ) );
 
     include_once ADVERTS_PATH . '/includes/class-html.php';

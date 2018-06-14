@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-14 14:46+0000\n"
+"POT-Creation-Date: 2018-06-14 15:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -405,7 +405,7 @@ msgstr ""
 msgid "Oldest First"
 msgstr ""
 
-#: functions.php:334 functions.php:825 wpadverts/single.php:103
+#: functions.php:334 wpadverts/single.php:103
 msgid "Price"
 msgstr ""
 
@@ -478,6 +478,10 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: functions.php:825
+msgid "DH - devise du site Fellah.ma"
+msgstr ""
+
 #: functions.php:847
 msgid "Image"
 msgstr ""
@@ -507,15 +511,15 @@ msgid "User already exists.  Password inherited."
 msgstr ""
 
 #: functions.php:1461
-msgid "User email : "
+msgid "Email : "
 msgstr ""
 
 #: functions.php:1462
-msgid "User first name : "
+msgid "First name : "
 msgstr ""
 
 #: functions.php:1463
-msgid "User last name : "
+msgid "Last name : "
 msgstr ""
 
 #: functions.php:1465

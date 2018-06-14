@@ -822,7 +822,7 @@ function my_adverts_form_load( $form ) {
 	$form["field"][] = array(
 		"type" => "adverts_field_text",
 		"name" => "adverts_price",
-		"placeholder" => __("Price", "fellah"),
+		"placeholder" => __("DH - devise du site Fellah.ma", "fellah"),
 		"label" => "",
 		"meta" => array(
 			"cf_saved" => 1,
@@ -1458,9 +1458,9 @@ function display_user_color_pref() {
 	$current_user = wp_get_current_user(); 
 
 	// echo '<div><strong>' . __('Username : ', 'fellah') . '</strong>' . $current_user->user_login . '</div>';
-	echo '<div><strong>' . __('User email : ', 'fellah') . '</strong>' . $current_user->user_email . '</div>';
-	echo '<div><strong>' . __('User first name : ', 'fellah') . '</strong>' . $current_user->user_firstname . '</div>';
-	echo '<div><strong>' . __('User last name : ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>';
+	echo '<div><strong>' . __('Email : ', 'fellah') . '</strong>' . $current_user->user_email . '</div>';
+	echo '<div><strong>' . __('First name : ', 'fellah') . '</strong>' . $current_user->user_firstname . '</div>';
+	echo '<div><strong>' . __('Last name : ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>';
 	// echo '<div><strong>' . __('User display name : ', 'fellah') . '</strong>' . $current_user->display_name . '</div>'; 
 	echo '<div><strong>' . __('Phone : ', 'fellah') . '</strong>' . @get_user_meta( $current_user->ID , 'telephone', true ) . '</div>'; 
 
