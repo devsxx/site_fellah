@@ -48,8 +48,8 @@ function adext_contact_form( $post_id ) {
     
     $show_form = false;
     $flash = array( "error" => array(), "info" => array());;
-    $email = get_post_meta( $post_id, "adverts_email", true );
-    $phone = get_post_meta( $post_id, "adverts_phone", true );
+    $email = get_the_author_email(); // get_post_meta( $post_id, "adverts_email", true );
+    $phone = get_user_meta( get_the_author_ID() , 'telephone', true ); // get_post_meta( $post_id, "adverts_phone", true );
     $message = null;
     $form = new Adverts_Form( Adverts::instance()->get( "form_contact_form" ) );
     $buttons = array(

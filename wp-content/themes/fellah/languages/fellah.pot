@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-11 12:28+0000\n"
+"POT-Creation-Date: 2018-06-13 11:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -235,7 +235,7 @@ msgstr ""
 msgid "%s's Profile"
 msgstr ""
 
-#: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:118
+#: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:127
 msgid "Name"
 msgstr ""
 
@@ -373,7 +373,7 @@ msgstr ""
 msgid "Oldest First"
 msgstr ""
 
-#: functions.php:328 functions.php:821 wpadverts/single.php:94
+#: functions.php:328 functions.php:821 wpadverts/single.php:103
 msgid "Price"
 msgstr ""
 
@@ -418,7 +418,7 @@ msgstr ""
 msgid "Send Message"
 msgstr ""
 
-#: functions.php:578 wpadverts/single.php:100
+#: functions.php:578 wpadverts/single.php:109
 msgid "Phone"
 msgstr ""
 
@@ -454,19 +454,39 @@ msgstr ""
 msgid "User already exists.  Password inherited."
 msgstr ""
 
-#: functions.php:1277
+#: functions.php:1282
 msgid "wrong acces"
 msgstr ""
 
-#: functions.php:1278
+#: functions.php:1283
 msgid "You are connected"
 msgstr ""
 
-#: functions.php:1449
+#: functions.php:1454
+msgid "Username: "
+msgstr ""
+
+#: functions.php:1455
+msgid "User email: "
+msgstr ""
+
+#: functions.php:1456
+msgid "User first name: "
+msgstr ""
+
+#: functions.php:1457
+msgid "User last name: "
+msgstr ""
+
+#: functions.php:1459
+msgid "Phone : "
+msgstr ""
+
+#: functions.php:1475
 msgid "Télephone"
 msgstr ""
 
-#: functions.php:1452
+#: functions.php:1478
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
@@ -552,8 +572,8 @@ msgstr ""
 msgid "Parcourir toutes les catégories"
 msgstr ""
 
-#: template-parts/categories.php:14 template-parts/nouveautes.php:9
-msgid "Lorem ipsum dolor sit."
+#: template-parts/categories.php:14
+msgid "Choisissez la catégorie correspondant à vos besoins."
 msgstr ""
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
@@ -599,6 +619,10 @@ msgstr ""
 msgid "Nouveautés"
 msgstr ""
 
+#: template-parts/nouveautes.php:9
+msgid "Découvrez toutes les dernières annonces"
+msgstr ""
+
 #: template-parts/single-side.php:26
 msgid "Categories"
 msgstr ""
@@ -611,8 +635,8 @@ msgstr ""
 msgid "Top annonces"
 msgstr ""
 
-#: template-parts/top_annonces.php:10 wpadverts/single.php:198
-msgid "Lorem ipsum dolor sit amet consecteteur."
+#: template-parts/top_annonces.php:10
+msgid "Sélection des meilleures annonces du moment"
 msgstr ""
 
 #: templates/news_agricoles.php:50
@@ -675,12 +699,16 @@ msgstr ""
 msgid "Pics"
 msgstr ""
 
-#: wpadverts/list.php:144
+#: wpadverts/list.php:123
+msgid "Décocher les filtres"
+msgstr ""
+
+#: wpadverts/list.php:152
 #, php-format
 msgid " in %s"
 msgstr ""
 
-#: wpadverts/list.php:168
+#: wpadverts/list.php:176
 msgid "There are no ads matching your search criteria."
 msgstr ""
 
@@ -741,10 +769,14 @@ msgstr ""
 msgid "You do not have any Ads posted yet."
 msgstr ""
 
-#: wpadverts/single.php:108
+#: wpadverts/single.php:117
 msgid "Region"
 msgstr ""
 
-#: wpadverts/single.php:195
+#: wpadverts/single.php:204
 msgid "Annonces similaires"
+msgstr ""
+
+#: wpadverts/single.php:207
+msgid "Ces annonces pourraient aussi vous intéresser"
 msgstr ""

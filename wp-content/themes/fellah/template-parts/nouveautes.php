@@ -6,7 +6,7 @@
 								<div class="div"><?php _e('Nouveautés','fellah') ?></div> 
 							</div>
 							<div class="section_sousTitle">
-								<?php _e('Lorem ipsum dolor sit.','fellah') ?>
+								<?php _e('Découvrez toutes les dernières annonces','fellah') ?>
 							</div>
 						</div>
 					</div>
@@ -28,8 +28,24 @@
 								<?php $image = adverts_get_main_image( get_the_ID() ) ?>
 								
 								<div class="annoce">
-										<?php if($image): ?>
+										<?php 
+										if($image): ?>
 											<img src="<?php echo esc_attr($image) ?>" alt="" class="advert-item-grow" />
+										<?php else: 
+										
+											$terms = get_the_terms( get_the_ID(), 'advert_category' );
+											if ($terms ){
+												foreach ( $terms as $term ) { 
+													$color = get_field('bg_color', $term);
+													$image = get_field('image', $term);
+													if($term->parent == 0) ?>
+														<img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
+														<div class="hover_2" style="background-color: <?php echo $color; ?>;"></div>
+													<?php 
+													break; 
+												} 
+											} ?>
+
 										<?php endif; ?>
 									<div class="hover"></div>
 								</div>

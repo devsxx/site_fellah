@@ -14,13 +14,13 @@ form {
 		&[type="number"], 
 		&[type="search"], 
 		&[type="tel"], 
-		&[type="color"]{ 
+		&[type="color"]{  
 			width: 100%;
 			font-size: oe_rem(14px);
-			height: oe_rem(40px);
-			line-height: oe_rem(40px);
-			border-radius: oe_rem(2px);
-			border: 1px solid $dark_color; 
+			height: oe_rem(50px);
+			line-height: oe_rem(50px);
+			border-radius: oe_rem(4px);
+			border: 1px solid $light_color; 
 			padding: oe_rem(15px);
 			margin: oe_rem(10px) 0;
 		}

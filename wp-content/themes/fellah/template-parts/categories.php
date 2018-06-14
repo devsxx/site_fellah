@@ -11,7 +11,7 @@
 					</a>
 				</div>
 				<div class="section_sousTitle">
-					<?php _e('Lorem ipsum dolor sit.','fellah') ?>
+					<?php _e('Choisissez la catégorie correspondant à vos besoins.','fellah') ?>
 				</div>
 			</div>
 		</div>

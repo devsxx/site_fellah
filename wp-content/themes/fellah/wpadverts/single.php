@@ -12,7 +12,16 @@
 <div class="advert_bandeau">
     <?php echo do_shortcode( "[form_search redirect_to='4']" );  ?> 
 </div>
-<?php do_action( "adverts_tpl_single_top", $post_id ) ?>
+
+<div class="single_advert_slider">
+    <div class="container">
+        <div class="row"> 
+            <div class="col-md-12">
+                <?php do_action( "adverts_tpl_single_top", $post_id ) ?>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container">
     <div class="row"> 
@@ -95,10 +104,10 @@
                     </div>
                 <?php endif; ?> 
 
-                <?php if( get_post_meta( $post_id, "adverts_phone", true) ): ?>
+                <?php if( @get_user_meta( get_the_author_ID() , 'telephone', true ) ): ?>
                     <div class="annonce-row">
                         <span class="name"><?php _e('Phone', 'fellah'); ?></span>
-                        <span><?php echo get_post_meta( $post_id, "adverts_phone", true ) ?></span>
+                        <span><?php echo @get_user_meta( get_the_author_ID() , 'telephone', true ) ?></span>
                     </div>
                 <?php endif; ?> 
 
@@ -195,7 +204,7 @@ if (!empty( $next_post ) || !empty( $prev_post )): ?>
                     <div class="div"><?php _e('Annonces similaires','fellah') ?></div> 
                 </div>
                 <div class="section_sousTitle">
-                    <?php _e('Lorem ipsum dolor sit amet consecteteur.','fellah') ?>
+                    <?php _e('Ces annonces pourraient aussi vous intéresser','fellah') ?>
                 </div>
             </div>
         </div>

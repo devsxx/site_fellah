@@ -160,12 +160,13 @@
     &[type="number"], 
     &[type="search"], 
     &[type="tel"], 
-    &[type="color"]{ 
+    &[type="color"]{   
+      width: 100%;
       font-size: oe_rem(14px);
       height: oe_rem(50px);
       line-height: oe_rem(50px);
-      border-radius: oe_rem(2px);
-      border: 1px solid $dark_color; 
+      border-radius: oe_rem(4px);
+      border: 1px solid $light_color;  
       margin: oe_rem(15px) 0;
     }
 
@@ -176,7 +177,7 @@
       max-width: oe_rem(260px);
       height: oe_rem(50px);
       line-height: oe_rem(50px);
-      border-radius: oe_rem(2px); 
+      border-radius: oe_rem(4px); 
       margin: oe_rem(15px) 0;
       color: #fff; 
       background-color: $main_color;
@@ -189,8 +190,8 @@
   textarea{ 
     height: oe_rem(50px);
     line-height: oe_rem(50px);
-    border-radius: oe_rem(2px);
-    border: 1px solid $dark_color;
+    border-radius: oe_rem(4px);
+    border: 1px solid $light_color;  
     padding: 0 oe_rem(15px) 0 oe_rem(46px) ;
     margin: oe_rem(15px) 0;
   }
@@ -412,7 +413,7 @@ div.adverts-flash-messages {
   display: none;
   padding: oe_rem(14px) oe_rem(10px);
   margin: oe_rem(16px) 0;
-  border-radius: oe_rem(2px);
+  border-radius: oe_rem(4px);
   @include oe_box-shadow-light;
   cursor: pointer;
   &.advert_danger{
@@ -490,10 +491,7 @@ div.adverts-flash-messages {
   .wpadverts-slide-nav-counter, 
   .adverts-icon-camera{
     display: none !important;
-  }
-
-  .wpadverts-slide-nav-counter{
-  }
+  } 
 
 }
 
@@ -507,6 +505,12 @@ div.adverts-flash-messages {
   }
 }
 
+.single_advert_slider{
+  background-color: $lighter_color;
+  .wpadverts-slides{
+    margin: 0;
+  }
+}
 #swipebox-slider .slide {
   height: 100%;
   width: 68% !important;

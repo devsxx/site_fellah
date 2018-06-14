@@ -785,7 +785,7 @@ function bp_nav_item_has_subnav( $nav_item = '', $component = 'members' ) {
  * @return bool Returns false on failure, True on success.
  */
 function bp_core_remove_nav_item( $slug, $component = null ) {
-	$bp = buddypress();
+	$bp = buddypress(); 
 
 	// Backward compatibility for removing group nav items using the group slug as `$parent_slug`.
 	if ( ! $component && bp_is_active( 'groups' ) && isset( $bp->groups->nav ) ) {
@@ -853,9 +853,14 @@ function bp_core_remove_subnav_item( $parent_slug, $slug, $component = null ) {
 
 	$screen_functions = $bp->{$component}->nav->delete_nav( $slug, $parent_slug );
 
+	// echo '<pre>';
+	// var_dump($component);
+	// die();
+	
 	// Reset backcompat nav items so that subsequent references will be correct.
 	$bp->bp_nav->reset();
 	$bp->bp_options_nav->reset();
+
 
 	if ( ! is_array( $screen_functions ) ) {
 		return false;

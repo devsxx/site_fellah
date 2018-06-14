@@ -225,9 +225,6 @@ add_filter( 'the_title', 'ou_trim_words' );
 add_filter( 'manage_advert_posts_columns', array( 'WPPostRatingsAdmin', 'postrating_admin_column_title' ) );
 add_action( 'manage_advert_posts_custom_column', array( 'WPPostRatingsAdmin', 'postrating_admin_column_content' ) ); 
 
-
-
-
 // $adverts_namespace['gallery'] = array(
 // 	'option_name' => 'adverts_gallery',
 // 	'default' => array(
@@ -245,7 +242,6 @@ add_action( 'manage_advert_posts_custom_column', array( 'WPPostRatingsAdmin', 'p
 // 		 ),
 // 	)
 // );
-
 
 require get_template_directory() . '/func/add-currency.php';
 require get_template_directory() . '/func/custom-fields-taxonomies.php';
@@ -480,10 +476,8 @@ function _adext_contact_form_custom( $post_id ) {
 	include_once ADVERTS_PATH . 'includes/class-html.php';
 	
 	$show_form = false;
-	$flash = array( "error" => array(), "info" => array());;
-	$email = get_post_meta( $post_id, "adverts_email", true );
-	$phone = get_post_meta( $post_id, "adverts_phone", true );
-	
+	$email = get_the_author_email(); // get_post_meta( $post_id, "adverts_email", true );
+	$phone = get_user_meta( get_the_author_ID() , 'telephone', true ); // get_post_meta( $post_id, "adverts_phone", true );
 	
 	$message = null;
 	$form = new Adverts_Form( Adverts::instance()->get( "form_contact_form" ) );
@@ -763,23 +757,23 @@ function my_adverts_form_load( $form ) {
 		"cf_saved" => 1,
 	);
 
-	$form["field"][] = array(
-		"type" => "adverts_field_text",
-		"placeholder" => __("Phone *", "fellah"),
-		"name" => "adverts_phone", 
-		"label" => "",
-		"meta" => array(
-			"cf_saved" => 1,
-			"cf_builtin" => 1,
-		),
-		"order" => 7,
-		"validator" => array(
-			"0" => array(
-				"name" => "is_required",
-			)
-		),
-		"cf_saved" => 1,
-	);
+	// $form["field"][] = array(
+	// 	"type" => "adverts_field_text",
+	// 	"placeholder" => __("Phone *", "fellah"),
+	// 	"name" => "adverts_phone", 
+	// 	"label" => "",
+	// 	"meta" => array(
+	// 		"cf_saved" => 1,
+	// 		"cf_builtin" => 1,
+	// 	),
+	// 	"order" => 7,
+	// 	"validator" => array(
+	// 		"0" => array(
+	// 			"name" => "is_required",
+	// 		)
+	// 	),
+	// 	"cf_saved" => 1,
+	// );
 
 	// $form["field"][] = array(
 	// 	"type" => "adverts_field_text",
@@ -1113,14 +1107,14 @@ function ajaxSousLocalisation(){
 		
 		$htmls.= '
 		<div class="adverts-control-group adverts-field-custom-sub-localisation adverts-field-name-sub-localisation ajaxed">
-			<div>
+			<div >
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
 							<label for="sub-localisation"> </label>
 							<div id="show_localisation"><i class="fas fa-map-pin"></i> Toutes les villes </div>
 							<div class="adverts-form-input-group adverts-form-input-group-checkbox-localisation adverts-field-rows-0">
-								<div>'; 
+							<div class="adverts-control-container">'; 
 								
 								$i = 0;
 								foreach($_POST["ids"] as $id){
@@ -1264,8 +1258,8 @@ function adverts_field_login_or_subscribe( $field ) {
 						</div>
 						<div class="col-md-3">
 							<div class="input_container">
-								<i class="far fa-envelope"></i>
-								<input type="email" placeholder="telephone" name="telephone" id="telephone">                                
+							<i class="fas fa-phone"></i>
+								<input type="text" placeholder="telephone" name="telephone" id="telephone">                                
 							</div>
 						</div>
 					</div>
@@ -1445,17 +1439,42 @@ adverts_form_add_fieldr("adverts_field_custom_localisation", array(
 	"callback_bind" => "adverts_bind_single",
 ));
 
+
+
+bp_core_remove_nav_item( 'profile' );
+bp_core_remove_subnav_item( 'profile', 'change-avatar' );
+
+add_action( 'bp_profile_header_meta', 'display_user_color_pref' );
+function display_user_color_pref() {
+	 
+	$current_user = wp_get_current_user(); 
+
+	// echo '<div><strong>' . __('Username: ', 'fellah') . '</strong>' . $current_user->user_login . '</div>';
+	echo '<div><strong>' . __('User email: ', 'fellah') . '</strong>' . $current_user->user_email . '</div>';
+	echo '<div><strong>' . __('User first name: ', 'fellah') . '</strong>' . $current_user->user_firstname . '</div>';
+	echo '<div><strong>' . __('User last name: ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>';
+	// echo '<div><strong>' . __('User display name: ', 'fellah') . '</strong>' . $current_user->display_name . '</div>'; 
+	echo '<div><strong>' . __('Phone : ', 'fellah') . '</strong>' . @get_user_meta( $current_user->ID , 'telephone', true ) . '</div>'; 
+
+	// echo '<div><strong>' . __('Username: ', 'fellah') . '</strong>' . bp_get_profile_field_data( array('field'   => '1') ) . '</div>';
+	// echo '<div><strong>' . __('User email: ', 'fellah') . '</strong>' . $current_user->user_email . '</div>'; 
+	// echo '<div><strong>' . __('Phone : ', 'fellah') . '</strong>' . bp_get_profile_field_data( array('field'   => '2') ) . '</div>'; 
+ 
+	// echo '<pre>';
+	// var_dump($current_user);
+	// die();
+}
+
 //Add a mailchimp permission field, on user creation, user profile update
 add_action('user_new_form', 'telephone_field');
 add_action('show_user_profile', 'telephone_field');
 add_action('edit_user_profile', 'telephone_field');
-
 function telephone_field($user) {
 	
 	?>
 		<table class="form-table">
-			<tr class="form-field">
-				<label for="telephone"><?php _e("Télephone","fellah"); ?></label></th>
+			<tr class="user-phone-wrap">
+				<th><label for="telephone"><?php _e("Télephone","fellah"); ?></label></th>
 				<td>
 					<input type="text" name="telephone" id="telephone" value="<?php echo @get_user_meta( $user->ID , 'telephone', true ) ; ?>" class="regular-text" /><br />
 					<span class="description"><?php _e("S'il vous plait, entrez votre numéro de téléphone.","fellah"); ?></span>
@@ -1464,33 +1483,19 @@ function telephone_field($user) {
 		</table>
 	<?php 
 }
-add_action( 'bp_profile_header_meta', 'display_user_color_pref' );
-function display_user_color_pref() {
-	 
-	$current_user = wp_get_current_user(); 
 
-	echo '<div><strong>' . __('Username: ', 'fellah') . '</strong>' . $current_user->user_login . '</div>';
-	echo '<div><strong>' . __('User email: ', 'fellah') . '</strong>' . $current_user->user_email . '</div>';
-	echo '<div><strong>' . __('User first name: ', 'fellah') . '</strong>' . $current_user->user_firstname . '</div>';
-	echo '<div><strong>' . __('User last name: ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>';
-	echo '<div><strong>' . __('User display name: ', 'fellah') . '</strong>' . $current_user->display_name . '</div>'; 
-	 
-	// echo '<pre>';
-	// var_dump($current_user);
-	// die();
-}
 //Save new field for user in users_meta table
 add_action('user_register', 'save_telephone_field');
 add_action('edit_user_profile_update', 'save_telephone_field');
 
 function save_telephone_field($user_id) {
-	
-	if (!current_user_can('edit_user', $user_id)) {
-		return false;
-	}
+	 
 
-	if (isset($_POST['telephone']) ) {
-		update_user_meta($user_id, 'telephone', $_POST['telephone']);
+	if (current_user_can("edit_user", $user_id)) {
+		if (isset($_POST["telephone"]) ) {
+			update_user_meta( $user_id, "telephone", $_POST["telephone"] );
+		}
 	}
+	 
 }
  

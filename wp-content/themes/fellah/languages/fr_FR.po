@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-11 12:28+0000\n"
-"PO-Revision-Date: 2018-06-11 12:29+0000\n"
+"POT-Creation-Date: 2018-06-13 11:08+0000\n"
+"PO-Revision-Date: 2018-06-13 11:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -213,7 +213,7 @@ msgstr "Mon profil"
 msgid "%s's Profile"
 msgstr "Profil de %s"
 
-#: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:118
+#: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:127
 msgid "Name"
 msgstr "Nom"
 
@@ -353,7 +353,7 @@ msgstr "Le plus récent d'abord"
 msgid "Oldest First"
 msgstr "Le plus ancien en premier"
 
-#: functions.php:328 functions.php:821 wpadverts/single.php:94
+#: functions.php:328 functions.php:821 wpadverts/single.php:103
 msgid "Price"
 msgstr "Prix"
 
@@ -398,7 +398,7 @@ msgstr "Il y a des erreurs dans votre formulaire."
 msgid "Send Message"
 msgstr "Envoyer le message"
 
-#: functions.php:578 wpadverts/single.php:100
+#: functions.php:578 wpadverts/single.php:109
 msgid "Phone"
 msgstr "Téléphone"
 
@@ -434,19 +434,39 @@ msgstr "Impossible de se connecter."
 msgid "User already exists.  Password inherited."
 msgstr "L'utilisateur existe déjà. Mot de passe hérité."
 
-#: functions.php:1277
+#: functions.php:1282
 msgid "wrong acces"
 msgstr ""
 
-#: functions.php:1278
+#: functions.php:1283
 msgid "You are connected"
 msgstr "Tu es connecté"
 
-#: functions.php:1449
+#: functions.php:1454
+msgid "Username: "
+msgstr "Nom d&rsquo;utilisateur : "
+
+#: functions.php:1455
+msgid "User email: "
+msgstr "E mail : "
+
+#: functions.php:1456
+msgid "User first name: "
+msgstr "Prénom : "
+
+#: functions.php:1457
+msgid "User last name: "
+msgstr "Nom : "
+
+#: functions.php:1459
+msgid "Phone : "
+msgstr "Téléphone : "
+
+#: functions.php:1475
 msgid "Télephone"
 msgstr "Télephone"
 
-#: functions.php:1452
+#: functions.php:1478
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "S'il vous plait, entrez votre numéro de téléphone."
 
@@ -532,8 +552,8 @@ msgstr "Catégories"
 msgid "Parcourir toutes les catégories"
 msgstr "Parcourir toutes les catégories"
 
-#: template-parts/categories.php:14 template-parts/nouveautes.php:9
-msgid "Lorem ipsum dolor sit."
+#: template-parts/categories.php:14
+msgid "Choisissez la catégorie correspondant à vos besoins."
 msgstr ""
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
@@ -585,6 +605,10 @@ msgstr ""
 msgid "Nouveautés"
 msgstr "Nouveautés"
 
+#: template-parts/nouveautes.php:9
+msgid "Découvrez toutes les dernières annonces"
+msgstr ""
+
 #: template-parts/single-side.php:26
 msgid "Categories"
 msgstr "Catégories"
@@ -597,8 +621,8 @@ msgstr "Rechercher un article"
 msgid "Top annonces"
 msgstr "Top annonces"
 
-#: template-parts/top_annonces.php:10 wpadverts/single.php:198
-msgid "Lorem ipsum dolor sit amet consecteteur."
+#: template-parts/top_annonces.php:10
+msgid "Sélection des meilleures annonces du moment"
 msgstr ""
 
 #: templates/news_agricoles.php:50
@@ -657,12 +681,16 @@ msgstr "Trier par : "
 msgid "Pics"
 msgstr "Photos"
 
-#: wpadverts/list.php:144
+#: wpadverts/list.php:123
+msgid "Décocher les filtres"
+msgstr ""
+
+#: wpadverts/list.php:152
 #, php-format
 msgid " in %s"
 msgstr ""
 
-#: wpadverts/list.php:168
+#: wpadverts/list.php:176
 msgid "There are no ads matching your search criteria."
 msgstr "Il n'y a pas d'annonce correspondant à vos critères de recherche."
 
@@ -723,13 +751,17 @@ msgstr "Plus"
 msgid "You do not have any Ads posted yet."
 msgstr "Vous n'avez pas encore publié d'annonces."
 
-#: wpadverts/single.php:108
+#: wpadverts/single.php:117
 msgid "Region"
 msgstr "Région"
 
-#: wpadverts/single.php:195
+#: wpadverts/single.php:204
 msgid "Annonces similaires"
 msgstr "Annonces similaires"
+
+#: wpadverts/single.php:207
+msgid "Ces annonces pourraient aussi vous intéresser"
+msgstr ""
 
 #~ msgid "Members Capabilities"
 #~ msgstr "Capacités des membres"
@@ -764,9 +796,6 @@ msgstr "Annonces similaires"
 
 #~ msgid "Visibility"
 #~ msgstr "Visibilité"
-
-#~ msgid "E mail *"
-#~ msgstr "E mail *"
 
 #~ msgid "Change"
 #~ msgstr "Changer"

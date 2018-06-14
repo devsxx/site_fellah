@@ -21,8 +21,51 @@
 				
 				<a class="forgotPassword" href="<?php bloginfo( 'url' )?>/wp-login.php?action=lostpassword"><?php _e('Forgot your password ?','fellah'); ?></a>
 			</div>
-
+			
 			<div class="offset-lg-1 col-lg-5 col-md-6">
+				<div class="register_form register_page">
+
+					<h5><?php _e( 'Create an account. Simple and free !', 'fellah' ); ?></h5>
+
+					<div class="input_container">
+						<i class="far fa-user"></i>
+						<input type="text" placeholder="Prénom" name="prenom" id="prenom">                                
+					</div>
+
+					<div class="input_container">
+						<i class="far fa-user"></i>
+						<input type="text" placeholder="Nom" name="nom" id="nom">                                
+					</div>
+
+					<div class="input_container">
+						<i class="far fa-envelope"></i>
+						<input type="email" placeholder="Email" name="email" id="email">                                
+					</div>
+
+					<div class="input_container">
+						<i class="far fa-edit"></i>
+						<input type="password" placeholder="Mot de passe" name="mot_passe" id="mot_passe">                                
+					</div>
+
+					<div class="input_container">
+						<i class="far fa-edit"></i>
+						<input type="password" placeholder="Confirmer le mot de passe" name="confirm_mot_passe" id="confirm_mot_passe">                                
+					</div>
+
+					<div class="input_container">
+						<i class="fas fa-phone"></i>
+						<input type="text" placeholder="telephone" name="telephone" id="telephone">                                
+					</div>
+
+					<button name="creation_compte" id="creation_compte">Créer mon compte</button>
+
+					<div class="advert_alert advert_danger"><?php  echo __("wrong acces","fellah") ?></div>
+					<div class="advert_alert advert_success"><?php  echo __("You are connected","fellah") ?></div>
+
+				</div>
+			</div>
+
+			<div class="offset-lg-1 col-lg-5 col-md-6" style="display: none;">
 				<?php
 				/**
 				* Fires at the top of the BuddyPress member registration page template.
