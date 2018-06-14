@@ -162,6 +162,9 @@
 		.adverts-control-container{
 			display: none;
 			&.show{
+				flex-wrap: wrap;
+				padding: oe_rem(25px);
+				overflow: scroll;
 				z-index: 999999999;
 				@include flex(center, center, column); 
 				@include position(fixed, 0, 0, 0, 0);
@@ -180,6 +183,9 @@
 				}
 			}
 			@include media("<md"){ 
+				&.show{
+					flex-wrap: initial;
+				}
 				.checkbox{
 					margin: oe_rem(1px) 0;
 				}
@@ -191,6 +197,9 @@
 	.adverts-control-container-region{
 		display: none;
 		&.show{
+			flex-wrap: wrap;
+			padding: oe_rem(25px);
+			overflow: scroll;
 			z-index: 999999999;
 			@include flex(center, center, column); 
 			@include position(fixed, 0, 0, 0, 0);
@@ -198,8 +207,6 @@
 				content: "";
 				background: rgba(0, 0, 0, 0.6);
 				@include position(fixed, 0, 0, 0, 0);
-				flex-wrap: wrap;
-				padding: 25px;
 			}
 		}
 		.checkbox{
@@ -211,6 +218,9 @@
 			}
 		}
 		@include media("<md"){ 
+			&.show{
+				flex-wrap: initial;
+			}
 			.checkbox{
 				margin: oe_rem(1px) 0;
 			}

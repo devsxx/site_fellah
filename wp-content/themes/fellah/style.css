@@ -15974,6 +15974,10 @@ form textarea {
 }
 
 .pub_annonce .adverts-form-input-group-checkbox-localisation .adverts-control-container.show {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1.5625rem;
+  overflow: scroll;
   z-index: 999999999;
   display: -ms-flexbox;
   display: flex;
@@ -16016,6 +16020,10 @@ form textarea {
 }
 
 @media (max-width: 767px) {
+  .pub_annonce .adverts-form-input-group-checkbox-localisation .adverts-control-container.show {
+    -ms-flex-wrap: initial;
+        flex-wrap: initial;
+  }
   .pub_annonce .adverts-form-input-group-checkbox-localisation .adverts-control-container .checkbox {
     margin: 0.0625rem 0;
   }
@@ -16026,6 +16034,10 @@ form textarea {
 }
 
 .pub_annonce .adverts-control-container-region.show {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1.5625rem;
+  overflow: scroll;
   z-index: 999999999;
   display: -ms-flexbox;
   display: flex;
@@ -16055,9 +16067,6 @@ form textarea {
   right: 0;
   bottom: 0;
   left: 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 25px;
 }
 
 .pub_annonce .adverts-control-container-region .checkbox {
@@ -16071,6 +16080,10 @@ form textarea {
 }
 
 @media (max-width: 767px) {
+  .pub_annonce .adverts-control-container-region.show {
+    -ms-flex-wrap: initial;
+        flex-wrap: initial;
+  }
   .pub_annonce .adverts-control-container-region .checkbox {
     margin: 0.0625rem 0;
   }
