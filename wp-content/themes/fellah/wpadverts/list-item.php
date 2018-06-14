@@ -63,11 +63,14 @@
                                 foreach ( $terms as $term ) { 
                                     $color = get_field('bg_color', $term);
                                     $image = get_field('image', $term);
-                                    if($term->parent == 0) ?>
+                                    if($term->parent == 0){
+                                        echo $term->parent;
+                                        ?>
                                         <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
                                         <div class="hover_2" style="background-color: <?php echo $color; ?>;"></div>
-                                    <?php 
-                                    break; 
+                                        <?php 
+                                        break; 
+                                    }
                                 } 
                             } ?>
 
