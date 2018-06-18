@@ -17184,6 +17184,39 @@ div.adverts-flash-messages {
   padding: 0.3125rem 1.25rem 0.3125rem 0;
 }
 
+#buddypress .standard-form input {
+  font-size: 0.875rem !important;
+  height: 3.125rem !important;
+  line-height: 3.125rem !important;
+  border-radius: 0.25rem !important;
+  border: 1px solid #dbdbdb !important;
+  margin: 0 !important;
+  background: #fff !important;
+}
+
+#buddypress .standard-form input[type='submit'] {
+  color: #fff !important;
+  border: none !important;
+  cursor: pointer !important;
+  height: 3.125rem !important;
+  margin: 0.9375rem 0 !important;
+  width: 100% !important !important;
+  font-size: 1.1875rem !important;
+  max-width: 16.25rem !important;
+  line-height: 3.125rem !important;
+  border-radius: 0.25rem !important;
+  background-color: #007e1d !important;
+}
+
+#buddypress .standard-form label,
+#buddypress .standard-form legend,
+#buddypress .standard-form span.label {
+  display: block;
+  font-weight: 400 !important;
+  margin: 15px 0 5px;
+  width: auto;
+}
+
 .register-section legend {
   font-size: 1rem;
   font-weight: 300;
@@ -17192,6 +17225,10 @@ div.adverts-flash-messages {
 
 .forgotPassword {
   font-size: 0.875rem;
+}
+
+.profil_info {
+  line-height: 1.875rem;
 }
 
 #buddypress div#item-header div#item-meta {
@@ -17321,5 +17358,15 @@ div.adverts-flash-messages {
     float: none;
     text-align: center;
     line-height: initial;
+  }
+}
+
+@media (min-width: 993px) {
+  .site-footer {
+    position: fixed;
+    top: initial;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }

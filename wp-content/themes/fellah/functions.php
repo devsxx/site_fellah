@@ -1058,6 +1058,48 @@ function ajax_signup(){
 	
 }
 
+
+add_action( 'wp_ajax_nopriv_updateAccount', 'ajax_update_account' );
+add_action( 'wp_ajax_updateAccount', 'ajax_update_account' );
+function ajax_update_account(){
+
+	$prenom = $_POST['prenom'];
+	$nom = $_POST['nom'];
+	$telephone = $_POST['telephone'];
+	$email = $_POST['email']; 
+
+	$error_code = 0;
+
+	$result = array();
+	$etat = true;
+ 
+		$user_id = bp_loggedin_user_id();
+		if ( $user_id ) { 
+			update_user_meta($user_id, 'telephone', $telephone);
+			$user_id = wp_update_user( array( 
+				'ID' => $user_id, 
+				'first_name' => $prenom,
+				'last_name' => $nom
+			) );
+			$message = __('Update successful', 'fellah');
+		} else {
+			$message = __('User don\'t exists.', 'fellah');
+			$error_code = 3;
+			$etat = false;
+		}
+ 
+
+	$result =	array(
+		'etat' => $etat,
+		'message' => $message,
+		'error_code' => $error_code
+	);
+
+	echo json_encode($result);
+	die();
+	
+}
+
 add_action( 'wp_ajax_nopriv_ajaxsouscat', 'ajaxsouscat' );
 add_action( 'wp_ajax_ajaxsouscat', 'ajaxsouscat' );
 function ajaxsouscat(){
@@ -1452,22 +1494,17 @@ adverts_form_add_fieldr("adverts_field_custom_localisation", array(
 bp_core_remove_nav_item( 'profile' );
 bp_core_remove_subnav_item( 'profile', 'change-avatar' );
 
-add_action( 'bp_profile_header_meta', 'display_user_color_pref' );
+add_action( 'bp_before_profile_loop_content', 'display_user_color_pref' );
 function display_user_color_pref() {
 	 
 	$current_user = wp_get_current_user(); 
-
-	// echo '<div><strong>' . __('Username : ', 'fellah') . '</strong>' . $current_user->user_login . '</div>';
+	
+	echo '<div class="profil_info">';
 	echo '<div><strong>' . __('Email : ', 'fellah') . '</strong>' . $current_user->user_email . '</div>';
 	echo '<div><strong>' . __('First name : ', 'fellah') . '</strong>' . $current_user->user_firstname . '</div>';
-	echo '<div><strong>' . __('Last name : ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>';
-	// echo '<div><strong>' . __('User display name : ', 'fellah') . '</strong>' . $current_user->display_name . '</div>'; 
-	echo '<div><strong>' . __('Phone : ', 'fellah') . '</strong>' . @get_user_meta( $current_user->ID , 'telephone', true ) . '</div>'; 
-
-	// echo '<div><strong>' . __('Username : ', 'fellah') . '</strong>' . bp_get_profile_field_data( array('field'   => '1') ) . '</div>';
-	// echo '<div><strong>' . __('User email : ', 'fellah') . '</strong>' . $current_user->user_email . '</div>'; 
-	// echo '<div><strong>' . __('Phone : ', 'fellah') . '</strong>' . bp_get_profile_field_data( array('field'   => '2') ) . '</div>'; 
- 
+	echo '<div><strong>' . __('Last name : ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>'; 
+	echo '<div><strong>' . __('Phone : ', 'fellah') . '</strong>' . @get_user_meta( $current_user->ID , 'telephone', true ) . '</div>';  
+	echo '</div>';
 	// echo '<pre>';
 	// var_dump($current_user);
 	// die();

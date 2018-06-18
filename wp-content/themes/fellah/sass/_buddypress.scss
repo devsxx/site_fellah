@@ -58,6 +58,42 @@
             }
         }
     }
+
+    .standard-form{
+        input{ 
+            font-size: oe_rem(14px) !important;
+            height: oe_rem(50px) !important;
+            line-height: oe_rem(50px) !important;
+            border-radius: oe_rem(4px) !important;
+            border: 1px solid #dbdbdb !important;
+            margin: 0 !important;
+            background: #fff !important;
+            &[type='submit']{ 
+                color: #fff !important; 
+                border: none !important;
+                cursor: pointer !important;
+                height: oe_rem(50px) !important;
+                margin: oe_rem(15px) 0 !important;
+                width: 100% !important !important;
+                font-size: oe_rem(19px) !important;
+                max-width: oe_rem(260px) !important;
+                line-height: oe_rem(50px) !important;
+                border-radius: oe_rem(4px) !important; 
+                background-color: $main_color !important;
+            }
+        }
+
+        label, 
+        legend, 
+        span.label {
+            display: block;
+            font-weight: 400 !important;
+            margin: 15px 0 5px;
+            width: auto;
+        }
+    }
+
+
 }
 
 
@@ -74,6 +110,9 @@
     font-size: oe_rem(14px);
 }
 
+.profil_info{
+    line-height: oe_rem(30px);
+}
 
 
 #buddypress div#item-header div#item-meta {
@@ -109,3 +148,4 @@
 .strong{
     color: $brand-success;
 }
+

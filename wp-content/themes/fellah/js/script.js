@@ -221,60 +221,103 @@ jQuery(document).ready(function($) {
 		});
 	});
 
-   	$("#creation_compte").on('click', function(e){
-	   	e.preventDefault();
-	   	var prenom = $("#prenom").val();
-	   	var email = $("#email").val();
-	   	var telephone = $("#telephone").val();
-	   	var nom = $("#nom").val();
+	$("#creation_compte").on('click', function(e){
+		e.preventDefault();
+		var prenom = $("#prenom").val();
+		var email = $("#email").val();
+		var telephone = $("#telephone").val();
+		var nom = $("#nom").val();
 
-	   	var mot_passe = $("#mot_passe").val();
-	   	var confirm_mot_passe = $("#confirm_mot_passe").val();
+		var mot_passe = $("#mot_passe").val();
+		var confirm_mot_passe = $("#confirm_mot_passe").val();
 
-	   	var submit = true;
+		var submit = true;
 
-	   	if(prenom == "" && nom == ""){
-	   		submit = false;
-	   	}
+		if(prenom == "" && nom == ""){
+			submit = false;
+		}
 
-	   	if( mot_passe == "" || mot_passe == "" || confirm_mot_passe == "" )
-	   		submit = false;
+		if( mot_passe == "" || mot_passe == "" || confirm_mot_passe == "" )
+			submit = false;
 
-	   	if(confirm_mot_passe != mot_passe){
-	   		submit = false;
-	   	}
+		if(confirm_mot_passe != mot_passe){
+			submit = false;
+		}
 
-	   	if(submit){
-	   		$.ajax({
-	   			type: 'POST',
-	   			dataType: 'json',
-	   			url: ajax_login_object.ajaxurl,
-	   			data: { 
-	   				'action': 'ajaxsignup',
-	   				'prenom' : prenom,
-	   				'nom' : nom,
-						'email' : email,
-						'telephone' : telephone,
-						'mot_passe' : mot_passe,
-						'confirm_mot_passe' : confirm_mot_passe,
-					},
-					beforeSend: function() {
-						jQuery("#ajaxloader").show();
-						jQuery("#ajaxShadow").show();
-					},
-					success: function(data){ 
-						if(data.etat){
-							$(".adverts-field-name-connect .register_form").css("display", "none"); 
-							$(".advert_success").css("display", "block").delay(3000).slideUp(100);
-						}else{
-							$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
-						} 
-						jQuery("#ajaxloader").hide();
-						jQuery("#ajaxShadow").hide();
-					}
-				});
-	   	}
-    });
+		if(submit){
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				url: ajax_login_object.ajaxurl,
+				data: { 
+					'action': 'ajaxsignup',
+					'prenom' : prenom,
+					'nom' : nom,
+					'email' : email,
+					'telephone' : telephone,
+					'mot_passe' : mot_passe,
+					'confirm_mot_passe' : confirm_mot_passe,
+				},
+				beforeSend: function() {
+					jQuery("#ajaxloader").show();
+					jQuery("#ajaxShadow").show();
+				},
+				success: function(data){ 
+					if(data.etat){
+						$(".adverts-field-name-connect .register_form").css("display", "none"); 
+						$(".advert_success").css("display", "block").delay(3000).slideUp(100);
+					}else{
+						$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
+					} 
+					jQuery("#ajaxloader").hide();
+					jQuery("#ajaxShadow").hide();
+				}
+			});
+		}
+});
+
+
+
+$("#update_compte").on('click', function(e){
+	e.preventDefault();
+	var prenom = $("#prenom").val(); 
+	var telephone = $("#telephone").val();
+	var nom = $("#nom").val(); 
+
+	var submit = true;
+
+	if(prenom == "" && nom == ""){
+		submit = false;
+	}  
+
+	if(submit){
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			url: ajax_login_object.ajaxurl,
+			data: { 
+				'action': 'updateAccount',
+				'prenom' : prenom,
+				'nom' : nom, 
+				'telephone' : telephone, 
+			},
+			beforeSend: function() {
+				jQuery("#ajaxloader").show();
+				jQuery("#ajaxShadow").show();
+			},
+			success: function(data){ 
+				if(data.etat){
+					$(".adverts-field-name-connect .register_form").css("display", "none"); 
+					$(".advert_success").css("display", "block").delay(3000).slideUp(100);
+				}else{
+					$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
+				} 
+				jQuery("#ajaxloader").hide();
+				jQuery("#ajaxShadow").hide();
+			}
+		});
+	}
+});
 
 
     $('.advert_success').click(function () {

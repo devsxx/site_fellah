@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP Adverts\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
 "POT-Creation-Date: 2018-05-30 11:28+0000\n"
-"PO-Revision-Date: 2018-05-30 12:00+0000\n"
+"PO-Revision-Date: 2018-06-18 09:35+0100\n"
 "Last-Translator: admin <daniel@pomzed.ch>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Loco-Target-Locale: fr_FR\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.0.8\n"
 "X-Poedit-SearchPath-0: ../../plugins/wpadverts\n"
 
 #: addons/bank-transfer/admin/options.php:15
@@ -774,7 +774,7 @@ msgstr "Paiement en suspens"
 #: addons/payments/includes/admin-pages.php:548
 #: includes/class-updates-manager.php:332 templates/manage-edit.php:52
 msgid "Update"
-msgstr "Mis à jour"
+msgstr "Mettre à jour"
 
 #: addons/payments/includes/admin-pages.php:567
 msgid "User ID"
@@ -2289,7 +2289,7 @@ msgstr "Plus"
 
 #: templates/manage.php:89
 msgid "You do not have any Ads posted yet."
-msgstr "Vous n'avez aucune annonce publié actuellement."
+msgstr "Vous n'avez aucune annonce publiée actuellement."
 
 #: templates/single.php:21
 #, php-format
