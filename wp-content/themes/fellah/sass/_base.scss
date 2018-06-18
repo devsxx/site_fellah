@@ -214,7 +214,9 @@ blockquote {
 	}
 }
 #page{
-	// padding-bottom: oe_rem(90px);
+	@include media(">lg"){
+		padding-bottom: oe_rem(90px);
+	}
 }
 .page_titre{
 	font-weight: 500;
@@ -436,8 +438,6 @@ section{
 	}
 }
 
-
-
 .breadcrumbs{
 	font-size: oe_rem(16px);
 	font-weight: 300;
@@ -457,8 +457,6 @@ section{
 .owl-carousel {
 	padding: 0 oe_rem(15px);
 }
-
-
 
 .GoToHeader{
 	height: oe_rem(43px);
@@ -481,15 +479,12 @@ section{
     
 }
 
-
-
 #ajaxShadow {
 	z-index: 9999;
 	display: none;
 	background: rgba(31,31,44,.6);
 	@include position(fixed, 0, 0, 0, 0);
  }
- 
  
  #ajaxloader {
 	display: none;
@@ -506,7 +501,6 @@ section{
 	-webkit-animation: spin .45s linear infinite;
 	animation: spin .45s linear infinite
  }
-
  
 @-webkit-keyframes spin {
 	from {
