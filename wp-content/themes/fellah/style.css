@@ -16062,9 +16062,9 @@ form textarea {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   position: fixed;
   top: 0;
   right: 0;
@@ -16083,23 +16083,13 @@ form textarea {
 }
 
 .pub_annonce .adverts-control-container-region .checkbox {
-  margin: 0.0625rem 0;
+  margin: 0.125rem;
   float: none;
 }
 
 .pub_annonce .adverts-control-container-region .checkbox [type=checkbox] + label,
 .pub_annonce .adverts-control-container-region .checkbox [type=radio] + label {
   border-radius: 0;
-}
-
-@media (max-width: 767px) {
-  .pub_annonce .adverts-control-container-region.show {
-    -ms-flex-wrap: initial;
-        flex-wrap: initial;
-  }
-  .pub_annonce .adverts-control-container-region .checkbox {
-    margin: 0.0625rem 0;
-  }
 }
 
 .pub_annonce .checkbox {

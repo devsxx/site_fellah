@@ -121,7 +121,7 @@ function search_by_category_query( $args ) {
  * @return array
  */
 function adverts_localisation_taxonomies( $taxonomy = 'localisation' ) {
-    
+     
     $args = array(
         'taxonomy'     => $taxonomy,
         'hierarchical' => true,
@@ -131,6 +131,7 @@ function adverts_localisation_taxonomies( $taxonomy = 'localisation' ) {
         'depth'         => 0,
         'selected' => 0,
         'show_count' => 0,
+		'parent'   => 0
         
     );
    
