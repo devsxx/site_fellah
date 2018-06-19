@@ -56,15 +56,16 @@
 										$profilPageURL = $_SERVER['SERVER_NAME'].'/oe/fellah/members/'. $userURL . '/'; 
 										// echo $profilPageURL;
 									?>
-								<div class="compte<?php if ( is_page(2285) || $profilPageURL == $host) { ?> active <?php } ?>">
-										<?php if(is_user_logged_in()){ ?>
-											<a href="<?php echo bp_loggedin_user_domain(); ?>">
+									<div class="compte">
+										<?php if(is_user_logged_in()){ 
+											$current_user = wp_get_current_user(); ?>
+											<a href="<?php echo bp_loggedin_user_domain(); ?>" class="active">
 												<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" class="first" alt="Fellah">
 												<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte_hover.png" class="second" alt="Fellah">
-												<span><?php _e('My account','fellah'); ?></span>
+												<span><?php echo $current_user->user_lastname; ?></span>
 											</a>
 										<?php }else{ ?> 
-											<a href="<?php the_permalink( 2285 ) ?>">
+											<a href="<?php the_permalink( 2285 ) ?>" class="<?php if ( $profilPageURL == $host ) { ?> active <?php } ?>">
 												<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte.png" class="first" alt="Fellah">
 												<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/compte_hover.png" class="second" alt="Fellah">
 												<span><?php _e('My account','fellah'); ?></span>
@@ -72,7 +73,7 @@
 										<?php } ?>
 									</div>
 									<div class="compte">
-										<a href="<?php the_permalink( 2362 ) ?>">
+										<a href="<?php the_permalink( 2362 ) ?>" class="<?php if ( is_page(2362) ) { ?> active <?php } ?>">
 											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact.png" class="first" alt="Fellah">
 											<img src="<?php bloginfo( 'template_url' ) ?>/img/icons/contact_hover.png" class="second" alt="Fellah">
 											<span><?php _e('Contact','fellah'); ?></span>

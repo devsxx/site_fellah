@@ -1113,7 +1113,7 @@ function ajaxsouscat(){
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<label for="sous_categorie">Sous catégorie </label>
+							<label for="sous_categorie"> ' . __('Sous catégorie', 'fellah') . '  </label>
 							<div class="adverts-form-input-group adverts-form-input-group-checkbox adverts-field-rows-0">
 								<div>'; 
 								
@@ -1160,7 +1160,7 @@ function ajaxSousLocalisation(){
 					<div class="row">
 						<div class="col-md-12">
 							<label for="sub-localisation"> </label>
-							<div id="show_localisation" class="show_localisation"><i class="fas fa-map-pin"></i> Toutes les villes </div>
+							<div id="show_localisation" class="show_localisation"><i class="fas fa-map-pin"></i> ' . __('Toutes les villes', 'fellah') . ' </div>
 							<div class="adverts-form-input-group adverts-form-input-group-checkbox-localisation adverts-field-rows-0">
 							<div class="adverts-control-container">'; 
 								
@@ -1216,16 +1216,16 @@ function adverts_field_login_or_subscribe( $field ) {
 			<div class="row">
 
 				<div class="col-md-12"> 
-					<label>Est-ce que vous avez un compte?</label>
+					<label>' . __('Est-ce que vous avez un compte?','fellah') . '</label>
 				</div>
 
 				<div class="col-md-4"> 
 					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Me connecter</a>
+							<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">' . __('Me connecter', 'fellah') . '</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Créer mon compte</a>
+							<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">' . __('Créer mon compte', 'fellah') . '</a>
 						</li>
 					</ul>
 				</div>
@@ -1241,19 +1241,19 @@ function adverts_field_login_or_subscribe( $field ) {
 					<div class="row">
 
 						<div class="col-md-12"> 
-							<label>Connectez-vous</label>
+							<label>' . __('Connectez-vous', 'fellah') . '</label>
 						</div>
 					
 						<div class="col-md-4"> 
 							<div class="input_container">
 								<i class="far fa-envelope"></i>
-								<input type="text" name="username" placeholder="Identifiant ou Email" id="username">                                
+								<input type="text" name="username" placeholder="' . __('Identifiant ou Email', 'fellah') . '" id="username">                                
 							</div> 
 						</div> 
 						<div class="col-md-4"> 
 							<div class="input_container">
 								<i class="far fa-edit"></i>
-								<input type="password" name="password" placeholder="Mot de passe" id="password">                                
+								<input type="password" name="password" placeholder="' . __('Mot de passe', 'fellah') . '" id="password">                                
 							</div>
 						</div>
 						<div class="col-md-1">  
@@ -1274,19 +1274,19 @@ function adverts_field_login_or_subscribe( $field ) {
 						<div class="col-md-3">
 							<div class="input_container">
 								<i class="far fa-user"></i>
-								<input type="text" placeholder="Prénom" name="prenom" id="prenom">                                
+								<input type="text" placeholder="' . __('Prénom', 'fellah') . '" name="prenom" id="prenom">                                
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="input_container">
 								<i class="far fa-user"></i>
-								<input type="text" placeholder="Nom" name="nom" id="nom">                                
+								<input type="text" placeholder="' . __('Nom', 'fellah') . '" name="nom" id="nom">                                
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="input_container">
 								<i class="far fa-envelope"></i>
-								<input type="email" placeholder="Email" name="email" id="email">                                
+								<input type="email" placeholder="' . __('Email', 'fellah') . '" name="email" id="email">                                
 							</div>
 						</div>
 					</div>
@@ -1295,26 +1295,26 @@ function adverts_field_login_or_subscribe( $field ) {
 						<div class="col-md-3">
 							<div class="input_container">
 								<i class="far fa-edit"></i>
-								<input type="password" placeholder="Mot de passe" name="mot_passe" id="mot_passe">                                
+								<input type="password" placeholder="' . __('Mot de passe', 'fellah') . '" name="mot_passe" id="mot_passe">                                
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="input_container">
 								<i class="far fa-edit"></i>
-								<input type="password" placeholder="Confirmer le mot de passe" name="confirm_mot_passe" id="confirm_mot_passe">                                
+								<input type="password" placeholder="' . __('Confirmer le mot de passe', 'fellah') . '" name="confirm_mot_passe" id="confirm_mot_passe">                                
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="input_container">
 							<i class="fas fa-phone"></i>
-								<input type="text" placeholder="telephone" name="telephone" id="telephone">                                
+								<input type="text" placeholder="' . __('Telephone', 'fellah') . '" name="telephone" id="telephone">                                
 							</div>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="col-md-3">
-							<button name="creation_compte" id="creation_compte">Créer mon compte</button>
+							<button name="creation_compte" id="creation_compte">' . __('Créer mon compte', 'fellah') . '</button>
 						</div>
 					</div>
 
@@ -1337,7 +1337,7 @@ function adverts_field_prev_next_1( $field ) {
 	$htmls = '
 	<div class="prev_next_container"> 
 		<a href="#" id="next_step_2" class="next">
-			Continuer
+		' . __('Continuer', 'fellah') . ' 
 			<i class="fas fa-angle-right"></i>
 		</a>
 	</div>  
@@ -1352,10 +1352,10 @@ function adverts_field_prev_next_2( $field ) {
 	<div class="prev_next_container">
 		<a href="#" id="prev_step_1" class="prev">
 			<i class="fas fa-angle-left"></i>
-			Retour
+			' . __('Retour', 'fellah') . '
 		</a>
 		<a href="#" id="next_step_3" class="next">
-			Continuer
+		' . __('Continuer', 'fellah') . ' 
 			<i class="fas fa-angle-right"></i>
 		</a>
 	</div>  
@@ -1370,7 +1370,7 @@ function adverts_field_prev_next_3( $field ) {
 	<div class="prev_next_container"> 
 		<a href="#" id="prev_step_2" class="next">
 		<i class="fas fa-angle-left"></i>
-		Retour
+		' . __('Retour', 'fellah') . '
 		</a>
 	</div>  
     ';
@@ -1379,8 +1379,10 @@ function adverts_field_prev_next_3( $field ) {
 }
 
 function adverts_field_customadvertscategory( $field ) {
-    
-	$htmls = '';
+	
+	 $checked= '';  
+	 $value = $field['value'];
+		$htmls = '';
 	
 	$terms = get_terms( array(
 		'taxonomy' => 'advert_category',
@@ -1389,9 +1391,22 @@ function adverts_field_customadvertscategory( $field ) {
 	) );
 		$i = 0;
 	foreach($terms as $term){
+
 		$i++;
+		if (isset($value) && $value != NULL) {
+			if (is_array($value)) {
+				if ( in_array( $term->term_id, $value ) ) {
+					$checked = 'checked'; 
+				} 
+			}else{
+				if (  $term->term_id == $value  ) {
+					$checked = 'checked'; 
+				} 
+			}
+		}
+		
 		$htmls .= '<div class="checkbox">
-		<input type="checkbox" class="filled-in" name="advert_category[]" id="advert_category_'.$i.'" value="'.$term->term_id.'"> 
+		<input type="checkbox" class="filled-in" name="advert_category[]" id="advert_category_'.$i.'" value="'.$term->term_id.'" ' . $checked . ' > 
 		<label for="advert_category_'.$i.'">'.$term->name.'</label>
 		</div>';
 	}
@@ -1402,7 +1417,9 @@ function adverts_field_customadvertscategory( $field ) {
 
 function adverts_field_custom_localisation( $field ) {
     
-	$htmls = '<div id="show_localisation_region" class="show_localisation"><i class="fas fa-map-pin"></i> Toutes les Région </div>';
+	 $checked= '';  
+	 $value = $field['value'];
+	$htmls = '<div id="show_localisation_region" class="show_localisation"><i class="fas fa-map-pin"></i> ' . __('Toutes les Région', 'fellah') . ' </div>';
 	
 	$htmls .= '<div class="adverts-control-container-region">';
 	$terms = get_terms( array(
@@ -1413,6 +1430,20 @@ function adverts_field_custom_localisation( $field ) {
 		$i = 0;
 	foreach($terms as $term){
 		$i++;
+		
+		if (isset($value) && $value != NULL) {
+			if (is_array($value)) {
+				if ( in_array( $term->term_id, $value ) ) {
+					$checked = 'checked'; 
+				} 
+			}else{
+				if (  $term->term_id == $value  ) {
+					$checked = 'checked'; 
+				} 
+			}
+		}
+		
+
 		$htmls .= '
 		<div class="checkbox">
 			<input type="checkbox" class="filled-in" name="localisation[]" id="localisation_'.$i.'" value="'.$term->term_id.'"> 

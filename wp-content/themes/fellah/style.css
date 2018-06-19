@@ -13906,7 +13906,7 @@ form textarea {
   font-size: 1.1875rem;
   height: 3.125rem;
   border-radius: 0.25rem;
-  padding: 0 0.875rem;
+  padding: 0 1.875rem;
   margin: 0.625rem 0 !important;
   border: none;
 }
@@ -14458,6 +14458,7 @@ form textarea {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 100%;
 }
 
 .site-header .header_picto_container .header_picto .compte {
@@ -14518,11 +14519,11 @@ form textarea {
   opacity: 1;
 }
 
-.site-header .header_picto_container .header_picto .compte.active a {
+.site-header .header_picto_container .header_picto .compte a.active {
   color: #007e1d;
 }
 
-.site-header .header_picto_container .header_picto .compte.active a img {
+.site-header .header_picto_container .header_picto .compte a.active img {
   position: absolute;
   top: 0;
   right: 0;
@@ -14530,15 +14531,15 @@ form textarea {
   left: 0;
 }
 
-.site-header .header_picto_container .header_picto .compte.active a img.first {
+.site-header .header_picto_container .header_picto .compte a.active img.first {
   opacity: 0;
 }
 
-.site-header .header_picto_container .header_picto .compte.active a img.second {
+.site-header .header_picto_container .header_picto .compte a.active img.second {
   opacity: 1;
 }
 
-.site-header .header_picto_container .header_picto .compte.active a span {
+.site-header .header_picto_container .header_picto .compte a.active span {
   opacity: 1;
 }
 
@@ -16108,6 +16109,7 @@ form textarea {
   float: left;
   margin: 0 1.25rem 0.625rem 0;
   text-align: center !important;
+  overflow: hidden;
 }
 
 .pub_annonce .checkbox [type=checkbox],
@@ -16176,6 +16178,7 @@ form textarea {
   float: left;
   margin: 0 1.25rem 0.625rem 0;
   text-align: center !important;
+  overflow: hidden;
 }
 
 .pub_annonce .checkbox_2 [type=checkbox], .pub_annonce .checkbox_2 [type=radio] {
@@ -16733,7 +16736,7 @@ form textarea {
 }
 
 .adverts-form input[type="submit"] {
-  cursor: pointer;
+  cursor: pointer !important;
   width: 100% !important;
   font-size: 1.1875rem !important;
   max-width: 16.25rem;
@@ -16741,9 +16744,9 @@ form textarea {
   line-height: 3.125rem;
   border-radius: 0.25rem;
   margin: 0.9375rem 0;
-  color: #fff;
-  background-color: #007e1d;
-  border: none;
+  color: #fff !important;
+  background-color: #007e1d !important;
+  border: none !important;
 }
 
 .adverts-form select,
@@ -16762,9 +16765,11 @@ form textarea {
   margin: 0.9375rem 0;
 }
 
-.adverts-form .adverts-plupload-upload-ui {
-  width: 100% !important;
-  float: none !important;
+@media (max-width: 767px) {
+  .adverts-form .adverts-plupload-upload-ui {
+    width: 100% !important;
+    float: none !important;
+  }
 }
 
 @media (max-width: 575px) {

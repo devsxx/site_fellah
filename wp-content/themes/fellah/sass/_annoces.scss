@@ -233,7 +233,7 @@
 		float: left; 
 		margin: 0 oe_rem(20px) oe_rem(10px) 0;
 		text-align: center !important;
-
+		overflow: hidden;
 		[type=checkbox], 
 		[type=radio] {
 			position: absolute;
@@ -302,7 +302,7 @@
 		float: left; 
 		margin: 0 oe_rem(20px) oe_rem(10px) 0;
 		text-align: center !important;
-
+		overflow: hidden;
 		[type=checkbox], [type=radio] {
 			position: absolute;
 			left: -9999px;

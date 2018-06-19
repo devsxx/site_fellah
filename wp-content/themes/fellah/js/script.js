@@ -188,6 +188,13 @@ jQuery(document).ready(function($) {
 			$(this).parent().removeClass('checked')
 	});
 
+	$('.checkbox_2 input:checkbox').each(function(){
+		if($(this).is(':checked')) 
+			$(this).parent().addClass('checked'); 
+		else 
+			$(this).parent().removeClass('checked')
+	});
+
 
 
    // Perform AJAX login on form submit

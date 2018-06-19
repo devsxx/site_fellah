@@ -171,7 +171,7 @@
     }
 
     &[type="submit"]{
-      cursor: pointer;
+      cursor: pointer !important;
       width: 100% !important;
       font-size: oe_rem(19px) !important;
       max-width: oe_rem(260px);
@@ -179,9 +179,9 @@
       line-height: oe_rem(50px);
       border-radius: oe_rem(4px); 
       margin: oe_rem(15px) 0;
-      color: #fff; 
-      background-color: $main_color;
-      border: none;
+      color: #fff !important; 
+      background-color: $main_color !important;
+      border: none !important;
     }
     
   }
@@ -202,9 +202,11 @@
     margin: oe_rem(15px) 0;
   } 
 
-  .adverts-plupload-upload-ui {
-    width: 100% !important;
-    float: none !important;
+  @include media("<md"){
+    .adverts-plupload-upload-ui {
+      width: 100% !important;
+      float: none !important;
+    }
   }
 
 

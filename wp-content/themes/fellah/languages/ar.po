@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-14 14:47+0000\n"
-"PO-Revision-Date: 2018-06-14 15:27+0000\n"
+"POT-Creation-Date: 2018-06-19 09:47+0100\n"
+"PO-Revision-Date: 2018-06-19 10:24+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -38,26 +38,29 @@ msgid "Create an account. Simple and free !"
 msgstr "انشئ حساب. بسيطة ومجان!"
 
 #: buddypress/members/register.php:32
+#: buddypress/members/single/profile/edit.php:27 functions.php:1277
 msgid "Prénom"
 msgstr "الأسم"
 
 #: buddypress/members/register.php:37
+#: buddypress/members/single/profile/edit.php:32 functions.php:1283
 msgid "Nom"
 msgstr "اسم"
 
-#: buddypress/members/register.php:42
+#: buddypress/members/register.php:42 functions.php:1289
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
-#: buddypress/members/register.php:47
+#: buddypress/members/register.php:47 functions.php:1256 functions.php:1298
 msgid "Mot de passe"
 msgstr "كلمة السر"
 
-#: buddypress/members/register.php:52
+#: buddypress/members/register.php:52 functions.php:1304
 msgid "Confirmer le mot de passe"
 msgstr "أكد كلمة المرور"
 
-#: buddypress/members/register.php:57 functions.php:582
+#: buddypress/members/register.php:57
+#: buddypress/members/single/profile/edit.php:37 functions.php:582
 #: wpadverts/single.php:109
 msgid "Phone"
 msgstr "هاتف"
@@ -66,11 +69,11 @@ msgstr "هاتف"
 msgid "Create my account"
 msgstr "إنشيء حسابي"
 
-#: buddypress/members/register.php:62 functions.php:1286
+#: buddypress/members/register.php:62 functions.php:1328
 msgid "wrong acces"
 msgstr ""
 
-#: buddypress/members/register.php:63 functions.php:1287
+#: buddypress/members/register.php:63 functions.php:1329
 msgid "You are connected"
 msgstr "انت متصل"
 
@@ -83,24 +86,19 @@ msgid "Profile Details"
 msgstr "تفاصيل الملف الشخصي"
 
 #: buddypress/members/register.php:165 buddypress/members/register.php:187
-#: buddypress/members/single/profile/edit.php:59
-#: buddypress/members/single/profile/edit.php:78
 #, php-format
 msgid "This field can be seen by: %s"
 msgstr ""
 
 #: buddypress/members/register.php:170
-#: buddypress/members/single/profile/edit.php:64
 msgid "Change"
 msgstr "تغيير"
 
 #: buddypress/members/register.php:175
-#: buddypress/members/single/profile/edit.php:68
 msgid "Who can see this field?"
 msgstr "من يستطيع رؤية هذا المجال؟"
 
 #: buddypress/members/register.php:180
-#: buddypress/members/single/profile/edit.php:72
 msgid "Close"
 msgstr "أغلق"
 
@@ -256,49 +254,48 @@ msgstr "تغيير صورة الغلاف"
 msgid "Your Cover Image will be used to customize the header of your profile."
 msgstr ""
 
-#: buddypress/members/single/profile/edit.php:27
-#, php-format
-msgid "Editing '%s' Profile Group"
-msgstr ""
-
-#: buddypress/members/single/profile/edit.php:30
-msgid "Profile field groups"
-msgstr "مجموعات حقول الملف الشخصي"
-
-#: buddypress/members/single/profile/edit.php:104
+#: buddypress/members/single/profile/edit.php:40
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
 
-#: buddypress/members/single/profile/profile-wp.php:29
+#: buddypress/members/single/profile/edit.php:42
+msgid "Update denied"
+msgstr "التحديث مرفوض"
+
+#: buddypress/members/single/profile/edit.php:43 functions.php:1084
+msgid "Update successful"
+msgstr "تحديث ناجح"
+
+#: buddypress/members/single/profile/profile-wp.php:28
 msgid "My Profile"
 msgstr "ملفي"
 
-#: buddypress/members/single/profile/profile-wp.php:29
+#: buddypress/members/single/profile/profile-wp.php:28
 #, php-format
 msgid "%s's Profile"
 msgstr ""
 
-#: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:127
+#: buddypress/members/single/profile/profile-wp.php:35 wpadverts/single.php:127
 msgid "Name"
 msgstr "اسم"
 
-#: buddypress/members/single/profile/profile-wp.php:45
+#: buddypress/members/single/profile/profile-wp.php:44
 msgid "About Me"
 msgstr "عني"
 
-#: buddypress/members/single/profile/profile-wp.php:54
+#: buddypress/members/single/profile/profile-wp.php:53
 msgid "Website"
 msgstr ""
 
-#: buddypress/members/single/profile/profile-wp.php:63
+#: buddypress/members/single/profile/profile-wp.php:62
 msgid "Jabber"
 msgstr ""
 
-#: buddypress/members/single/profile/profile-wp.php:72
+#: buddypress/members/single/profile/profile-wp.php:71
 msgid "AOL Messenger"
 msgstr ""
 
-#: buddypress/members/single/profile/profile-wp.php:81
+#: buddypress/members/single/profile/profile-wp.php:80
 msgid "Yahoo Messenger"
 msgstr ""
 
@@ -386,7 +383,7 @@ msgstr ""
 msgid ""
 "Add your photos to make your ad even more visible. You can download up to 5 "
 "images."
-msgstr ""
+msgstr "أضف صورك لجعل إعلانك أكثر وضوحًا. يمكنك تنزيل ما يصل إلى 5 صور."
 
 #: functions.php:162
 msgid "Price: "
@@ -416,7 +413,7 @@ msgstr ""
 msgid "Oldest First"
 msgstr ""
 
-#: functions.php:334 functions.php:825 wpadverts/single.php:103
+#: functions.php:334 wpadverts/single.php:103
 msgid "Price"
 msgstr "السعر"
 
@@ -463,29 +460,23 @@ msgstr "ارسل رسالة"
 
 #: functions.php:648
 msgid "1. Votre annonce"
-msgstr "1 . إعلانكم"
+msgstr "1. إعلانكم"
 
 #: functions.php:665
-#, fuzzy
-#| msgid "Type annonce"
 msgid "Type d'annonce"
 msgstr "نوع الاعلان"
 
 #: functions.php:696
-#, fuzzy
-#| msgid "Titre de l'annoce"
 msgid "Catégorie d'annonce"
 msgstr "عنوان الاعلان"
 
 #: functions.php:712
 msgid "2. Description"
-msgstr "2 . وصف"
+msgstr "2. وصف"
 
 #: functions.php:729
-#, fuzzy
-#| msgid "Catégories"
 msgid "Catégorie"
-msgstr "الفئات"
+msgstr "فئة"
 
 #: functions.php:750
 msgid "Titre de l'annoce"
@@ -494,6 +485,10 @@ msgstr "عنوان الاعلان"
 #: functions.php:805
 msgid "Description"
 msgstr "وصف"
+
+#: functions.php:825
+msgid "DH - devise du site Fellah.ma"
+msgstr "درهم - عملة الموقع Fellah.ma"
 
 #: functions.php:847
 msgid "Image"
@@ -505,7 +500,7 @@ msgstr "المنطقة والمدينة"
 
 #: functions.php:940
 msgid "3. Vos coordonnées"
-msgstr ""
+msgstr "3. التفاصيل الخاصة بك"
 
 #: functions.php:978 functions.php:1031
 msgid "Wrong username or password."
@@ -523,27 +518,75 @@ msgstr "لا يمكن تسجيل الدخول."
 msgid "User already exists.  Password inherited."
 msgstr "المستخدم موجود بالفعل. كلمة المرور الموروثة."
 
-#: functions.php:1461
-msgid "User email : "
-msgstr "البريد الإلكتروني للمستخدم : "
+#: functions.php:1086
+msgid "User don't exists."
+msgstr ""
 
-#: functions.php:1462
-msgid "User first name : "
+#: functions.php:1116
+msgid "Sous catégorie"
+msgstr "فئة فرعية"
+
+#: functions.php:1163
+msgid "Toutes les villes"
+msgstr "جميع المدن"
+
+#: functions.php:1219
+msgid "Est-ce que vous avez un compte?"
+msgstr "هل لديك حساب؟"
+
+#: functions.php:1225
+msgid "Me connecter"
+msgstr "تسجيل الدخول"
+
+#: functions.php:1228 functions.php:1317
+msgid "Créer mon compte"
+msgstr "قم بإنشاء حسابي"
+
+#: functions.php:1244
+msgid "Connectez-vous"
+msgstr "دخول"
+
+#: functions.php:1250
+msgid "Identifiant ou Email"
+msgstr "تسجيل الدخول أو البريد الإلكتروني"
+
+#: functions.php:1310
+msgid "Telephone"
+msgstr "هاتف"
+
+#: functions.php:1340 functions.php:1358
+msgid "Continuer"
+msgstr "استمر"
+
+#: functions.php:1355 functions.php:1373
+msgid "Retour"
+msgstr "عودة"
+
+#: functions.php:1414
+msgid "Toutes les Région"
+msgstr "كل المنطقة"
+
+#: functions.php:1516
+msgid "Email : "
+msgstr "البريد الإلكتروني : "
+
+#: functions.php:1517
+msgid "First name : "
 msgstr "اسم المستخدم الأول : "
 
-#: functions.php:1463
-msgid "User last name : "
+#: functions.php:1518
+msgid "Last name : "
 msgstr "اسم المستخدم الأخير : "
 
-#: functions.php:1465
+#: functions.php:1519
 msgid "Phone : "
 msgstr "الهاتف: "
 
-#: functions.php:1485
+#: functions.php:1535
 msgid "Télephone"
 msgstr "هاتف"
 
-#: functions.php:1488
+#: functions.php:1538
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "يرجى إدخال رقم هاتفك."
 
@@ -703,7 +746,7 @@ msgstr ""
 
 #: wpadverts/add-preview.php:11
 msgid "Edit Listing"
-msgstr ""
+msgstr "تحرير قائمة"
 
 #: wpadverts/add-preview.php:17
 msgid "Publish Listing"
@@ -839,3 +882,9 @@ msgstr "إعلانات مماثلة"
 #: wpadverts/single.php:207
 msgid "Ces annonces pourraient aussi vous intéresser"
 msgstr "قد تهمك هذه الإعلانات أيضًا"
+
+#~ msgid "Profile field groups"
+#~ msgstr "مجموعات حقول الملف الشخصي"
+
+#~ msgid "User email : "
+#~ msgstr "البريد الإلكتروني للمستخدم : "

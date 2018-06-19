@@ -10,6 +10,7 @@
 		@include flex(center, flex-end, row);
 		.header_picto{
 			@include flex(center, flex-end, row);
+			width: 100%;
 			.compte{
 				@include transition(all, .25s, ease-in-out);
 				position: relative;
@@ -53,9 +54,7 @@
 							opacity: 1;
 						}
 					}
-				}
-				&.active{
-					a{  
+					&.active{
 						color: $text_color;
 						img{
 							@include position(absolute, 0, 0, 0, 0);
