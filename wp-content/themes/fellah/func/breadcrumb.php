@@ -48,8 +48,23 @@ function the_breadcrumb() {
             //     echo '<span class="separator"> ' . $separator . ' </span>';
             
             // }
+
+            // If it's a custom post type within a custom taxonomy
             
-            $custom_tax_name = get_queried_object()->name;
+
+            $custom_tax_name        = get_queried_object()->name; 
+            $cat_id                 = get_queried_object()->parent;
+
+            $custom_tax_parent_name  = $custom_tax_parent->name ;
+            if( isset($cat_id) && $cat_id != 0 ) {
+                $custom_tax_parent      = get_term_by( 'id', $cat_id, $custom_taxonomy ) ;
+                $cat_nicename           = $custom_tax_parent->slug;
+                $cat_link               = get_term_link($custom_tax_parent->term_id, $custom_taxonomy);
+                $cat_name               = $custom_tax_parent->name;
+                echo '<span class="item-cat item-cat-' . $cat_id . ' item-cat-' . $cat_nicename . '"><a class="bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></span>';
+                echo '<span class="separator"> ' . $separator . ' </span>';
+            }
+            
             echo '<span class="item-current item-archive"><strong class="bread-current bread-archive">' . $custom_tax_name . '</strong></span>';
             
         } else if ( is_single() ) {

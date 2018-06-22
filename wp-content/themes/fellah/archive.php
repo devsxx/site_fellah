@@ -8,12 +8,18 @@
  */
 
 get_header();
-?>
+?> 
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container">
 			<div class="container">
 				<div class="row">
+				
+				<div class="col-md-12">
+					<!-- start breadcrumbs -->
+					<?php the_breadcrumb(); ?>
+					<!-- end breadcrumbs -->
+				</div>
 					<div class="col-md-8">
 						<div class="page_blog">
 							<?php 

@@ -15990,7 +15990,7 @@ form textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1.5625rem;
-  overflow: scroll;
+  overflow-y: scroll;
   z-index: 999999999;
   display: -ms-flexbox;
   display: flex;
