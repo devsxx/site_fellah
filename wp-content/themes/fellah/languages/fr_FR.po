@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-14 15:34+0000\n"
-"PO-Revision-Date: 2018-06-14 15:36+0000\n"
+"POT-Creation-Date: 2018-06-20 09:43+0100\n"
+"PO-Revision-Date: 2018-06-21 16:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -36,26 +36,29 @@ msgid "Create an account. Simple and free !"
 msgstr "Créer un compte. Simple et gratuit !"
 
 #: buddypress/members/register.php:32
+#: buddypress/members/single/profile/edit.php:27 functions.php:1277
 msgid "Prénom"
 msgstr "Prénom"
 
 #: buddypress/members/register.php:37
+#: buddypress/members/single/profile/edit.php:32 functions.php:1283
 msgid "Nom"
 msgstr "Nom"
 
-#: buddypress/members/register.php:42
+#: buddypress/members/register.php:42 functions.php:1289
 msgid "Email"
 msgstr "E mail"
 
-#: buddypress/members/register.php:47
+#: buddypress/members/register.php:47 functions.php:1256 functions.php:1298
 msgid "Mot de passe"
 msgstr ""
 
-#: buddypress/members/register.php:52
+#: buddypress/members/register.php:52 functions.php:1304
 msgid "Confirmer le mot de passe"
 msgstr ""
 
-#: buddypress/members/register.php:57 functions.php:582
+#: buddypress/members/register.php:57
+#: buddypress/members/single/profile/edit.php:37 functions.php:582
 #: wpadverts/single.php:109
 msgid "Phone"
 msgstr "Téléphone"
@@ -64,11 +67,11 @@ msgstr "Téléphone"
 msgid "Create my account"
 msgstr "Créer mon compte"
 
-#: buddypress/members/register.php:62 functions.php:1286
+#: buddypress/members/register.php:62 functions.php:1328
 msgid "wrong acces"
 msgstr ""
 
-#: buddypress/members/register.php:63 functions.php:1287
+#: buddypress/members/register.php:63 functions.php:1329
 msgid "You are connected"
 msgstr "Tu es connecté"
 
@@ -81,19 +84,15 @@ msgid "Profile Details"
 msgstr "Détails du profil"
 
 #: buddypress/members/register.php:165 buddypress/members/register.php:187
-#: buddypress/members/single/profile/edit.php:59
-#: buddypress/members/single/profile/edit.php:78
 #, php-format
 msgid "This field can be seen by: %s"
 msgstr "Ce champ peut être vu par: %s"
 
 #: buddypress/members/register.php:175
-#: buddypress/members/single/profile/edit.php:68
 msgid "Who can see this field?"
 msgstr "Qui peut voir ce champ?"
 
 #: buddypress/members/register.php:180
-#: buddypress/members/single/profile/edit.php:72
 msgid "Close"
 msgstr "Fermer"
 
@@ -236,41 +235,48 @@ msgstr "Modifier l'en-tête"
 msgid "Your Cover Image will be used to customize the header of your profile."
 msgstr "L'image personnalisera l'en-tête de votre profil."
 
-#: buddypress/members/single/profile/edit.php:27
-#, php-format
-msgid "Editing '%s' Profile Group"
-msgstr "Modification des champs du groupe : %s"
+#: buddypress/members/single/profile/edit.php:40
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
 
-#: buddypress/members/single/profile/profile-wp.php:29
+#: buddypress/members/single/profile/edit.php:42
+msgid "Update denied"
+msgstr "Mise à jour refusé"
+
+#: buddypress/members/single/profile/edit.php:43 functions.php:1084
+msgid "Update successful"
+msgstr "Mise à jour réussie"
+
+#: buddypress/members/single/profile/profile-wp.php:28
 msgid "My Profile"
 msgstr "Mon profil"
 
-#: buddypress/members/single/profile/profile-wp.php:29
+#: buddypress/members/single/profile/profile-wp.php:28
 #, php-format
 msgid "%s's Profile"
 msgstr "Profil de %s"
 
-#: buddypress/members/single/profile/profile-wp.php:36 wpadverts/single.php:127
+#: buddypress/members/single/profile/profile-wp.php:35 wpadverts/single.php:127
 msgid "Name"
 msgstr "Nom"
 
-#: buddypress/members/single/profile/profile-wp.php:45
+#: buddypress/members/single/profile/profile-wp.php:44
 msgid "About Me"
 msgstr "À propos de moi"
 
-#: buddypress/members/single/profile/profile-wp.php:54
+#: buddypress/members/single/profile/profile-wp.php:53
 msgid "Website"
 msgstr "Site web"
 
-#: buddypress/members/single/profile/profile-wp.php:63
+#: buddypress/members/single/profile/profile-wp.php:62
 msgid "Jabber"
 msgstr "Jabber"
 
-#: buddypress/members/single/profile/profile-wp.php:72
+#: buddypress/members/single/profile/profile-wp.php:71
 msgid "AOL Messenger"
 msgstr "AOL Messenger"
 
-#: buddypress/members/single/profile/profile-wp.php:81
+#: buddypress/members/single/profile/profile-wp.php:80
 msgid "Yahoo Messenger"
 msgstr "Yahoo Messenger"
 
@@ -326,15 +332,15 @@ msgstr "Type d'annonces"
 msgid "localisation"
 msgstr "localisation"
 
-#: func/search-by-category.php:156
+#: func/search-by-category.php:157
 msgid "Localisation"
 msgstr "Localisation"
 
-#: func/search-by-category.php:157
+#: func/search-by-category.php:158
 msgid "Type annonce"
 msgstr "Type annonce"
 
-#: func/search-by-category.php:158
+#: func/search-by-category.php:159
 msgid "Views"
 msgstr "Vues"
 
@@ -440,10 +446,8 @@ msgid "1. Votre annonce"
 msgstr "1. Votre annonce"
 
 #: functions.php:665
-#, fuzzy
-#| msgid "Type annonce"
 msgid "Type d'annonce"
-msgstr "Type annonce"
+msgstr "Type d'annonce"
 
 #: functions.php:696
 msgid "Catégorie d'annonce"
@@ -497,33 +501,75 @@ msgstr "Impossible de se connecter."
 msgid "User already exists.  Password inherited."
 msgstr "L'utilisateur existe déjà. Mot de passe hérité."
 
-#: functions.php:1461
-#, fuzzy
-#| msgid "Email"
-msgid "Email : "
-msgstr "E mail"
+#: functions.php:1086
+msgid "User don't exists."
+msgstr ""
 
-#: functions.php:1462
-#, fuzzy
-#| msgid "User first name: "
+#: functions.php:1116
+msgid "Sous catégorie"
+msgstr "Sous catégorie"
+
+#: functions.php:1163
+msgid "Toutes les villes"
+msgstr ""
+
+#: functions.php:1219
+msgid "Est-ce que vous avez un compte?"
+msgstr ""
+
+#: functions.php:1225
+msgid "Me connecter"
+msgstr "Tu es connecté"
+
+#: functions.php:1228 functions.php:1317
+msgid "Créer mon compte"
+msgstr ""
+
+#: functions.php:1244
+msgid "Connectez-vous"
+msgstr ""
+
+#: functions.php:1250
+msgid "Identifiant ou Email"
+msgstr ""
+
+#: functions.php:1310
+msgid "Telephone"
+msgstr "Télephone"
+
+#: functions.php:1340 functions.php:1358
+msgid "Continuer"
+msgstr ""
+
+#: functions.php:1355 functions.php:1373
+msgid "Retour"
+msgstr ""
+
+#: functions.php:1422
+msgid "Toutes les Région"
+msgstr ""
+
+#: functions.php:1534
+msgid "Email : "
+msgstr "Email: "
+
+#: functions.php:1535
 msgid "First name : "
 msgstr "Prénom : "
 
-#: functions.php:1463
-#, fuzzy
-#| msgid "User last name: "
+#: functions.php:1536
 msgid "Last name : "
 msgstr "Nom : "
 
-#: functions.php:1465
+#: functions.php:1537
 msgid "Phone : "
 msgstr "Téléphone : "
 
-#: functions.php:1485
+#: functions.php:1553
 msgid "Télephone"
 msgstr "Télephone"
 
-#: functions.php:1488
+#: functions.php:1556
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "S'il vous plait, entrez votre numéro de téléphone."
 
@@ -535,15 +581,15 @@ msgstr "Aller au contenu"
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:64 header.php:70
+#: header.php:71
 msgid "My account"
 msgstr "Mon compte"
 
-#: header.php:78
+#: header.php:79
 msgid "Contact"
 msgstr "Contact"
 
-#: header.php:85
+#: header.php:86
 msgid "Follow-us"
 msgstr "Suivez-nous"
 
@@ -610,7 +656,7 @@ msgid "Parcourir toutes les catégories"
 msgstr "Parcourir toutes les catégories"
 
 #: template-parts/categories.php:14
-msgid "Choisissez la catégorie correspondant à vos besoins."
+msgid "Choisissez la catégorie correspondant à vos besoins"
 msgstr ""
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
@@ -820,6 +866,9 @@ msgstr "Annonces similaires"
 msgid "Ces annonces pourraient aussi vous intéresser"
 msgstr "Ces annonces pourraient aussi vous intéresser"
 
+#~ msgid "Editing '%s' Profile Group"
+#~ msgstr "Modification des champs du groupe : %s"
+
 #, fuzzy
 #~| msgid "User email: "
 #~ msgid "User email : "
@@ -885,9 +934,6 @@ msgstr "Ces annonces pourraient aussi vous intéresser"
 
 #~ msgid "Profile field groups"
 #~ msgstr "Détails du profil"
-
-#~ msgid "Save Changes"
-#~ msgstr "Enregistrer les modifications"
 
 #~ msgid "Actualités de FELLAH"
 #~ msgstr "Actualités de FELLAH"

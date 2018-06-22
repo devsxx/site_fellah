@@ -173,10 +173,10 @@ if (!empty( $next_post ) || !empty( $prev_post )): ?>
                <div class="nav-links">
                     <a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>" class="nav-prev">
                         <i class="fas fa-angle-left"></i>
-                        <?php echo $prev_post->post_title; ?>
+                        <?php echo apply_filters('the_title',$prev_post->post_title); ?>
                     </a> 
                     <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" class="nav-next">
-                        <?php echo $next_post->post_title; ?>
+                        <?php echo apply_filters('the_title',$next_post->post_title); ?>
                         <i class="fas fa-angle-right"></i>
                     </a> 
                 </div>

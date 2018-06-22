@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-19 09:47+0100\n"
+"POT-Creation-Date: 2018-06-20 09:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -341,15 +341,15 @@ msgstr ""
 msgid "localisation"
 msgstr ""
 
-#: func/search-by-category.php:156
+#: func/search-by-category.php:157
 msgid "Localisation"
 msgstr ""
 
-#: func/search-by-category.php:157
+#: func/search-by-category.php:158
 msgid "Type annonce"
 msgstr ""
 
-#: func/search-by-category.php:158
+#: func/search-by-category.php:159
 msgid "Views"
 msgstr ""
 
@@ -552,31 +552,31 @@ msgstr ""
 msgid "Retour"
 msgstr ""
 
-#: functions.php:1414
+#: functions.php:1422
 msgid "Toutes les Région"
 msgstr ""
 
-#: functions.php:1516
+#: functions.php:1534
 msgid "Email : "
 msgstr ""
 
-#: functions.php:1517
+#: functions.php:1535
 msgid "First name : "
 msgstr ""
 
-#: functions.php:1518
+#: functions.php:1536
 msgid "Last name : "
 msgstr ""
 
-#: functions.php:1519
+#: functions.php:1537
 msgid "Phone : "
 msgstr ""
 
-#: functions.php:1535
+#: functions.php:1553
 msgid "Télephone"
 msgstr ""
 
-#: functions.php:1538
+#: functions.php:1556
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
@@ -588,15 +588,15 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:64 header.php:70
+#: header.php:71
 msgid "My account"
 msgstr ""
 
-#: header.php:78
+#: header.php:79
 msgid "Contact"
 msgstr ""
 
-#: header.php:85
+#: header.php:86
 msgid "Follow-us"
 msgstr ""
 
@@ -663,7 +663,7 @@ msgid "Parcourir toutes les catégories"
 msgstr ""
 
 #: template-parts/categories.php:14
-msgid "Choisissez la catégorie correspondant à vos besoins."
+msgid "Choisissez la catégorie correspondant à vos besoins"
 msgstr ""
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27

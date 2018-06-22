@@ -169,5 +169,3 @@ class Custom_Fields_Taxonomies_Handler
     }
 }
 
-
-

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-19 09:47+0100\n"
-"PO-Revision-Date: 2018-06-19 10:24+0100\n"
+"POT-Creation-Date: 2018-06-20 09:43+0100\n"
+"PO-Revision-Date: 2018-06-20 15:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -351,15 +351,15 @@ msgstr "اكتب الإعلانات"
 msgid "localisation"
 msgstr "الموقع"
 
-#: func/search-by-category.php:156
+#: func/search-by-category.php:157
 msgid "Localisation"
 msgstr "الموقع"
 
-#: func/search-by-category.php:157
+#: func/search-by-category.php:158
 msgid "Type annonce"
 msgstr "نوع الاعلان"
 
-#: func/search-by-category.php:158
+#: func/search-by-category.php:159
 msgid "Views"
 msgstr ""
 
@@ -562,31 +562,31 @@ msgstr "استمر"
 msgid "Retour"
 msgstr "عودة"
 
-#: functions.php:1414
+#: functions.php:1422
 msgid "Toutes les Région"
 msgstr "كل المنطقة"
 
-#: functions.php:1516
+#: functions.php:1534
 msgid "Email : "
 msgstr "البريد الإلكتروني : "
 
-#: functions.php:1517
+#: functions.php:1535
 msgid "First name : "
 msgstr "اسم المستخدم الأول : "
 
-#: functions.php:1518
+#: functions.php:1536
 msgid "Last name : "
 msgstr "اسم المستخدم الأخير : "
 
-#: functions.php:1519
+#: functions.php:1537
 msgid "Phone : "
 msgstr "الهاتف: "
 
-#: functions.php:1535
+#: functions.php:1553
 msgid "Télephone"
 msgstr "هاتف"
 
-#: functions.php:1538
+#: functions.php:1556
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "يرجى إدخال رقم هاتفك."
 
@@ -598,15 +598,15 @@ msgstr "تخطي إلى المحتوى"
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:64 header.php:70
+#: header.php:71
 msgid "My account"
 msgstr "حسابي"
 
-#: header.php:78
+#: header.php:79
 msgid "Contact"
 msgstr "اتصال"
 
-#: header.php:85
+#: header.php:86
 msgid "Follow-us"
 msgstr "تابعنا"
 
@@ -673,8 +673,8 @@ msgid "Parcourir toutes les catégories"
 msgstr "تصفح جميع الفئات"
 
 #: template-parts/categories.php:14
-msgid "Choisissez la catégorie correspondant à vos besoins."
-msgstr "اختر الفئة التي تناسب احتياجاتك."
+msgid "Choisissez la catégorie correspondant à vos besoins"
+msgstr "اختر الفئة التي تناسب احتياجاتك"
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
 #: template-parts/content-page.php:24

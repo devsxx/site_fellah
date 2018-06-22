@@ -1575,3 +1575,65 @@ function save_telephone_field($user_id) {
 	 
 }
  
+add_action( 'init', 'oe_modify_taxonomy', 11 );   
+function oe_modify_taxonomy() { 
+	$advert_category_args = get_taxonomy( 'advert_category' ); 
+	$advert_category_args->show_admin_column = true;
+	$advert_category_args->rewrite['slug'] = 'categories';
+	$advert_category_args->rewrite['hierarchical'] = true;
+
+	// re-register the taxonomy
+	register_taxonomy( 'advert_category', 'advert', (array) $advert_category_args );
+}
+// hook it up to 11 so that it overrides the original register_taxonomy function
+ 
+add_filter('generate_rewrite_rules', 'resources_cpt_generating_rule');
+function resources_cpt_generating_rule($wp_rewrite) {
+
+	$rules = array();
+	$terms = get_terms( array(
+		 'taxonomy' => 'advert_category',
+		 'hide_empty' => false,
+	) );
+  
+	$post_type = 'advert';
+	// foreach ($terms as $term) {    
+					
+		$new_rules = array( 
+			'categorie/([^/]+)/?$' 									=> 'index.php?advert=' . $wp_rewrite->preg_index( 1 ),
+			'categorie/([^/]+)/([^/]+)/?$' 						=> 'index.php?advert=' . $wp_rewrite->preg_index( 2 ),
+			'categories/([^/]+)/?$' 								=> 'index.php?advert_category=' . $wp_rewrite->preg_index( 1 ),
+			'categories/([^/]+)/([^/]+)/?$' 						=> 'index.php?advert_category=' . $wp_rewrite->preg_index( 2 ),
+			'categories/([^/]+)/([^/]+)/page/(\d{1,})/?$' 	=> 'index.php?post_type=advert&advert_category=' . $wp_rewrite->preg_index( 1 ) . '&paged=' . $wp_rewrite->preg_index( 3 ),
+			'categories/([^/]+)/([^/]+)/([^/]+)/?$' 			=> 'index.php?post_type=advert&advert_category=' . $wp_rewrite->preg_index( 2 ) . '&faq=' . $wp_rewrite->preg_index( 3 ),
+		);
+		// }
+		// merge with global rules
+	$wp_rewrite->rules = $new_rules + $wp_rewrite->rules; 
+	
+}
+  
+add_filter('post_type_link', "change_link", 10, 2);
+function change_link( $permalink, $post ) {
+    
+    if( $post->post_type == 'advert' ) {
+        $resource_terms = get_the_terms( $post, 'advert_category' );
+        $term_slug = '';
+        if( ! empty( $resource_terms ) ) {
+            foreach ( $resource_terms as $term ) { 
+               $term_slug = $term->slug;
+               break;
+            }
+        }
+        $permalink = get_home_url() ."/categorie/" . $term_slug . '/' . $post->post_name;
+    }
+    return $permalink;
+}
+
+ 
+
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+	wp_redirect( home_url() );
+	exit();
+}
