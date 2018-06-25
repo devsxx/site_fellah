@@ -18,7 +18,7 @@
 				text-align: center;
 				cursor: pointer;
 				height: oe_rem(46px);
-				// width: oe_rem(72px);
+				flex: 1;
 				a{
 					img{
 						@include position(absolute, 0, 0, 0, 0);

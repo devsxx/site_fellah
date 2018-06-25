@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Adverts\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
-"POT-Creation-Date: 2018-06-18 10:57+0100\n"
-"PO-Revision-Date: 2018-06-18 10:57+0100\n"
+"POT-Creation-Date: 2018-06-25 12:17+0100\n"
+"PO-Revision-Date: 2018-06-25 12:23+0100\n"
 "Last-Translator: admin <daniel@pomzed.ch>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -131,10 +131,8 @@ msgid "Your Name"
 msgstr "Votre nom"
 
 #: ../../plugins/wpadverts/addons/contact-form/contact-form.php:241
-#, fuzzy
-#| msgid "Email"
 msgid "Your Email"
-msgstr "E mail"
+msgstr "Votre Email"
 
 #: ../../plugins/wpadverts/addons/contact-form/contact-form.php:252
 msgid "Subject"
@@ -154,10 +152,8 @@ msgid "From Name"
 msgstr ""
 
 #: ../../plugins/wpadverts/addons/contact-form/includes/admin-pages.php:89
-#, fuzzy
-#| msgid "Email"
 msgid "From Email"
-msgstr "E mail"
+msgstr "De l'email"
 
 #: ../../plugins/wpadverts/addons/core/admin/options-gallery.php:15
 #: ../../plugins/wpadverts/addons/core/admin/options.php:15
@@ -360,16 +356,12 @@ msgstr ""
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:459
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:460
-#, fuzzy
-#| msgid "Image Properties"
 msgid "Image Sizes"
-msgstr "Propriété de l'image"
+msgstr "Taille image"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:466
-#, fuzzy
-#| msgid "Gallery"
 msgid "Adverts Gallery"
-msgstr "Galerie"
+msgstr "Galerie d'annonces"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:467
 msgid ""
@@ -377,10 +369,8 @@ msgid ""
 msgstr ""
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:473
-#, fuzzy
-#| msgid "Adverts Options"
 msgid "Adverts List"
-msgstr "Options des annonces"
+msgstr "Liste des annonces"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:474
 msgid "This image size is being used in the [adverts_list] shortcode."
@@ -404,9 +394,8 @@ msgstr ""
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:559
 #, fuzzy
-#| msgid "Drop Images Here"
 msgid "crop image"
-msgstr "Déposer l'image ici"
+msgstr "Recadrer l’image"
 
 #: ../../plugins/wpadverts/addons/featured/admin/options.php:15
 #: ../../plugins/wpadverts/includes/admin-pages.php:128
@@ -497,10 +486,8 @@ msgstr "Voir les types"
 
 #: ../../plugins/wpadverts/addons/payments/admin/payment-history-edit.php:116
 #: ../../plugins/wpadverts/addons/payments/admin/payment-history-list.php:113
-#, fuzzy
-#| msgid "Listing"
 msgid "Posting"
-msgstr "Liste"
+msgstr "Imputation"
 
 #: ../../plugins/wpadverts/addons/payments/admin/payment-history-edit.php:118
 #: ../../plugins/wpadverts/addons/payments/admin/payment-history-list.php:115
@@ -552,10 +539,9 @@ msgstr "Action en masse"
 
 #: ../../plugins/wpadverts/addons/payments/admin/payment-history-list.php:38
 #: ../../plugins/wpadverts/addons/payments/admin/payment-history-list.php:150
-#, fuzzy, php-format
-#| msgid "Status"
+#, php-format
 msgid "Set status: %s"
-msgstr "Statut"
+msgstr "Définir l'état à : %s"
 
 #: ../../plugins/wpadverts/addons/payments/admin/payment-history-list.php:40
 #: ../../plugins/wpadverts/addons/payments/admin/payment-history-list.php:88
@@ -816,16 +802,12 @@ msgid "Default Pricing"
 msgstr "Prix par défaut"
 
 #: ../../plugins/wpadverts/addons/payments/includes/admin-pages.php:651
-#, fuzzy
-#| msgid "Listing Type"
 msgid "Pricing Type"
-msgstr "Liste par type"
+msgstr "Type de tarification"
 
 #: ../../plugins/wpadverts/addons/payments/includes/admin-pages.php:655
-#, fuzzy
-#| msgid "Adverts Options"
 msgid "New Advert Posting"
-msgstr "Options des annonces"
+msgstr "Annonce de nouvelles annonces"
 
 #: ../../plugins/wpadverts/addons/payments/includes/admin-pages.php:656
 msgid "Advert Renewal"
@@ -905,12 +887,11 @@ msgid "Listing"
 msgstr "Liste"
 
 #: ../../plugins/wpadverts/addons/payments/payments.php:381
-#, fuzzy, php-format
-#| msgid "Visible"
+#, php-format
 msgid "Visible 1 day"
 msgid_plural "Visible %d days"
-msgstr[0] "Visible"
-msgstr[1] "Visible"
+msgstr[0] "Visible 1 jour"
+msgstr[1] "Visible %d jours"
 
 #: ../../plugins/wpadverts/addons/payments/payments.php:439
 #: ../../plugins/wpadverts/includes/shortcodes.php:456
@@ -918,8 +899,6 @@ msgid "Thank you for submitting your ad!"
 msgstr "Merci d'avoir publié votre annonce!"
 
 #: ../../plugins/wpadverts/addons/payments/payments.php:553
-#, fuzzy
-#| msgid "View Ad"
 msgid "Renew Ad"
 msgstr "Voir annonce"
 
@@ -967,8 +946,6 @@ msgid "Total"
 msgstr "Total"
 
 #: ../../plugins/wpadverts/addons/payments/templates/add-payment.php:27
-#, fuzzy
-#| msgid "No Payment Gateways Enabled!"
 msgid "No Payment Gateway Enabled!"
 msgstr "Pas de système de paiement permis!"
 
@@ -1057,10 +1034,8 @@ msgid ""
 msgstr ""
 
 #: ../../plugins/wpadverts/includes/admin-pages.php:109
-#, fuzzy
-#| msgid "Customer Details"
 msgid "Custom Fields"
-msgstr "Détails du client"
+msgstr "Les champs personnalisés"
 
 #: ../../plugins/wpadverts/includes/admin-pages.php:110
 msgid ""
@@ -1069,10 +1044,8 @@ msgid ""
 msgstr ""
 
 #: ../../plugins/wpadverts/includes/admin-pages.php:116
-#, fuzzy
-#| msgid "Author"
 msgid "Authors"
-msgstr "Auteur"
+msgstr "Auteurs"
 
 #: ../../plugins/wpadverts/includes/admin-pages.php:117
 msgid ""
@@ -1105,10 +1078,8 @@ msgid "Locations Taxonomy, Google Maps integration and more."
 msgstr "Taxonomie de la localité, intégration Google Maps et plus."
 
 #: ../../plugins/wpadverts/includes/admin-pages.php:147
-#, fuzzy
-#| msgid "Category"
 msgid "Fee Per Category"
-msgstr "Catégorie"
+msgstr "Frais par catégorie"
 
 #: ../../plugins/wpadverts/includes/admin-pages.php:148
 msgid ""
@@ -1137,10 +1108,8 @@ msgid ""
 msgstr ""
 
 #: ../../plugins/wpadverts/includes/admin-pages.php:168
-#, fuzzy
-#| msgid "Category Icon"
 msgid "Category Icons"
-msgstr "Icône de catégorie"
+msgstr "Icônes de catégorie"
 
 #: ../../plugins/wpadverts/includes/admin-pages.php:169
 msgid "Set custom icons (small and big) for each category."
@@ -1361,8 +1330,6 @@ msgid "Post with given ID does not exist."
 msgstr "Le post avec cet ID n'existe pas pas."
 
 #: ../../plugins/wpadverts/includes/ajax.php:947
-#, fuzzy
-#| msgid "Post with given ID does not exist."
 msgid "Post you are trying to delete does not exist."
 msgstr "Le post avec cet ID n'existe pas pas."
 
@@ -1371,16 +1338,13 @@ msgid "Post you are trying to delete does not belong to you."
 msgstr ""
 
 #: ../../plugins/wpadverts/includes/ajax.php:963
-#, fuzzy
-#| msgid "This Ad is in moderation."
 msgid "This post is not an Advert."
-msgstr "Cette annonce est en modération."
+msgstr "Ce message n'est pas une annonce."
 
 #: ../../plugins/wpadverts/includes/ajax.php:993
-#, fuzzy, php-format
-#| msgid "by <strong>%s</strong>"
+#, php-format
 msgid "Advert <strong>%s</strong> deleted."
-msgstr "par <strong>%s</strong>"
+msgstr "Publicité <strong>%s</strong> supprimé"
 
 #: ../../plugins/wpadverts/includes/class-form.php:174
 #: ../../plugins/wpadverts/includes/class-upload-helper.php:88
@@ -1419,10 +1383,8 @@ msgstr ""
 #: ../../plugins/wpadverts/includes/class-gallery-helper.php:239
 #: ../../plugins/wpadverts/includes/class-gallery-helper.php:357
 #: ../../plugins/wpadverts/includes/gallery.php:287
-#, fuzzy
-#| msgid "Allowed Files"
 msgid "Download File"
-msgstr "Fichiers autorisés"
+msgstr "Télécharger un fichier"
 
 #: ../../plugins/wpadverts/includes/class-gallery-helper.php:306
 msgid ""
@@ -1435,15 +1397,13 @@ msgid "Show Thumbnails ..."
 msgstr ""
 
 #: ../../plugins/wpadverts/includes/class-gallery-helper.php:399
-#, fuzzy
-#| msgid "Total"
 msgid "Total Files"
 msgstr "Total"
 
 #: ../../plugins/wpadverts/includes/class-gallery-helper.php:403
 #: ../../plugins/wpadverts/includes/class-gallery-helper.php:461
 msgid "Previous"
-msgstr "précédent"
+msgstr "Précédent"
 
 #: ../../plugins/wpadverts/includes/class-gallery-helper.php:407
 #: ../../plugins/wpadverts/includes/class-gallery-helper.php:494
@@ -1477,10 +1437,8 @@ msgid "Displays list of recent ads."
 msgstr "Afficher la liste des catégories disponibles."
 
 #: ../../plugins/wpadverts/includes/class-widget-ads.php:82
-#, fuzzy
-#| msgid "Amount"
 msgid "Count"
-msgstr "Somme"
+msgstr "Nombre"
 
 #: ../../plugins/wpadverts/includes/class-widget-ads.php:88
 msgid "Show images on the list."
@@ -1503,16 +1461,12 @@ msgid "Category"
 msgstr "Catégorie"
 
 #: ../../plugins/wpadverts/includes/class-widget-ads.php:110
-#, fuzzy
-#| msgid "Pricing"
 msgid "Price Min."
-msgstr "Prix"
+msgstr "Prix min"
 
 #: ../../plugins/wpadverts/includes/class-widget-ads.php:116
-#, fuzzy
-#| msgid "Price"
 msgid "Price Max."
-msgstr "Prix"
+msgstr "Prix max"
 
 #: ../../plugins/wpadverts/includes/class-widget-ads.php:122
 msgid "Sort By"
@@ -1538,8 +1492,6 @@ msgid "Ascending"
 msgstr "ascendant"
 
 #: ../../plugins/wpadverts/includes/class-widget-ads.php:166
-#, fuzzy
-#| msgid "Show top categories only"
 msgid "Show featured Ads only."
 msgstr "Montrer que les Tops catégories. "
 
@@ -1570,8 +1522,6 @@ msgid "Show top categories only"
 msgstr "Montrer que les Tops catégories. "
 
 #: ../../plugins/wpadverts/includes/class-widget-categories.php:134
-#, fuzzy
-#| msgid "Show top categories only"
 msgid "Show multiple category levels"
 msgstr "Montrer que les Tops catégories. "
 
@@ -1648,10 +1598,8 @@ msgid "URL"
 msgstr "URL"
 
 #: ../../plugins/wpadverts/includes/defaults.php:351
-#, fuzzy
-#| msgid "Provided email address is invalid."
 msgid "Provided URL is invalid."
-msgstr "Cette adresse email est invalide."
+msgstr "L’URL fournie n’est pas valide."
 
 #: ../../plugins/wpadverts/includes/defaults.php:359
 msgid "Is Integer"
@@ -1662,14 +1610,10 @@ msgid "Provided value is not an integer."
 msgstr "La valeur ajouté n'est pas un nombre entier."
 
 #: ../../plugins/wpadverts/includes/defaults.php:369
-#, fuzzy
-#| msgid "Phone Number"
 msgid "Is Number"
-msgstr "N° de téléphone"
+msgstr "Est un nombre"
 
 #: ../../plugins/wpadverts/includes/defaults.php:371
-#, fuzzy
-#| msgid "Provided value is not an integer."
 msgid "Provided value is not a number."
 msgstr "La valeur ajouté n'est pas un nombre entier."
 
@@ -1915,14 +1859,10 @@ msgid "Russian Rubles"
 msgstr "Roubles Russes"
 
 #: ../../plugins/wpadverts/includes/functions.php:1977
-#, fuzzy
-#| msgid "Suth African Rand"
 msgid "South African Rand"
-msgstr "Rand Sud Africain"
+msgstr "South African rand"
 
 #: ../../plugins/wpadverts/includes/functions.php:1978
-#, fuzzy
-#| msgid "Indian Rupee"
 msgid "Sri Lankan Rupees"
 msgstr "Roupie Indienne"
 
@@ -1931,11 +1871,8 @@ msgid "Show Contact Information"
 msgstr "Voir les infos du contact"
 
 #: ../../plugins/wpadverts/includes/functions.php:2593
-#, fuzzy
-#| msgctxt "pending status payment"
-#| msgid "Pending"
 msgid "Pending Ads"
-msgstr "En suspens [ pending status payment ]"
+msgstr "Annonces en attente"
 
 #: ../../plugins/wpadverts/includes/functions.php:2661
 #, php-format
@@ -1969,16 +1906,12 @@ msgid "Video"
 msgstr "Vidéo"
 
 #: ../../plugins/wpadverts/includes/gallery.php:197
-#, fuzzy
-#| msgid "Edit Image"
 msgid "Edit File"
-msgstr "Editer l'image"
+msgstr "Modifier le fichier"
 
 #: ../../plugins/wpadverts/includes/gallery.php:198
-#, fuzzy
-#| msgid "Delete"
 msgid "Delete File"
-msgstr "Supprimer"
+msgstr "Supprimer le fichier"
 
 #: ../../plugins/wpadverts/includes/gallery.php:210
 msgid "Attachment Details"
@@ -2023,8 +1956,6 @@ msgid "Create thumbnail from full size image."
 msgstr ""
 
 #: ../../plugins/wpadverts/includes/gallery.php:348
-#, fuzzy
-#| msgid "Delete Image"
 msgid "Create Image"
 msgstr "Supprimer l'image"
 
@@ -2101,10 +2032,8 @@ msgid "Actions"
 msgstr "Actions"
 
 #: ../../plugins/wpadverts/includes/gallery.php:435
-#, fuzzy
-#| msgid "Delete Image"
 msgid "Save Image"
-msgstr "Supprimer l'image"
+msgstr "Enregistrer l’image"
 
 #: ../../plugins/wpadverts/includes/gallery.php:435
 msgid "Save"
@@ -2127,10 +2056,8 @@ msgid "Original size:"
 msgstr ""
 
 #: ../../plugins/wpadverts/includes/gallery.php:461
-#, fuzzy
-#| msgid "Currency Position"
 msgid "Current size:"
-msgstr "Position de la devise"
+msgstr "La taille actuelle:"
 
 #: ../../plugins/wpadverts/includes/gallery.php:463
 msgid "Recommended size:"
@@ -2158,10 +2085,8 @@ msgid ""
 msgstr ""
 
 #: ../../plugins/wpadverts/includes/gallery.php:624
-#, fuzzy
-#| msgid "Gallery"
 msgid "Gallery - Slider"
-msgstr "Galerie"
+msgstr "Galerie - Curseur"
 
 #: ../../plugins/wpadverts/includes/gallery.php:625
 #, php-format
@@ -2171,10 +2096,8 @@ msgid ""
 msgstr ""
 
 #: ../../plugins/wpadverts/includes/gallery.php:629
-#, fuzzy
-#| msgid "Classifieds"
 msgid "Classifieds List"
-msgstr "Petites annonces"
+msgstr "Liste des annonces"
 
 #: ../../plugins/wpadverts/includes/gallery.php:630
 #, php-format
@@ -2315,22 +2238,17 @@ msgid "View Ad"
 msgstr "Voir annonce"
 
 #: ../../plugins/wpadverts/templates/manage.php:22
-#, fuzzy
-#| msgid "This Ad is in moderation."
 msgid "Inactive — This Ad is in moderation."
-msgstr "Cette annonce est en modération."
+msgstr "Inactive — Cette annonce est en modération."
 
 #: ../../plugins/wpadverts/templates/manage.php:26
-#, fuzzy
-#| msgid "This Ad expired."
 msgid "Inactive — This Ad expired."
-msgstr "Cette annonce a expirée."
+msgstr "Inactif — Cette annonce a expiré."
 
 #: ../../plugins/wpadverts/templates/manage.php:39
-#, fuzzy, php-format
-#| msgid "Expires"
+#, php-format
 msgid "Expires %s"
-msgstr "Expire"
+msgstr "Expire %s"
 
 #: ../../plugins/wpadverts/templates/manage.php:54
 msgid "View"

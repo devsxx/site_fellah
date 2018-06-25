@@ -18,7 +18,7 @@
 
 		<div class="catgories">
 			<div class="row">
-				<?php $advert_categories = get_terms("advert_category", array("orderby" => "date", "parent" => 0, 'hide_empty' => false,)); ?>
+				<?php $advert_categories = get_terms("advert_category", array("orderby" => "menu_order", "parent" => 0, 'hide_empty' => false,)); ?>
 				
 					<?php foreach($advert_categories as $key => $advert_category) :
 						$image = get_field('image', $advert_category);

@@ -114,7 +114,7 @@
 			</div>
 		</header><!-- #masthead -->
 		
-		<?php if (is_home() || is_page( 2264 ) || is_404() || is_archive()) : ?> 
+		<?php if (is_home() || is_page( 2264 ) || is_404() || is_post_type_archive('post')) : ?> 
 			<?php echo do_shortcode( "[form_search redirect_to='4']" );  ?> 
 		<?php endif; ?>
 

@@ -13443,12 +13443,12 @@ blockquote.hide p {
   bottom: 0;
   left: 0;
   transition: all 0.25s ease-in-out;
-  opacity: .65;
+  opacity: .5;
   z-index: 0;
 }
 
 .catgories .categorie:hover .hover {
-  opacity: .75;
+  opacity: .6;
 }
 
 .catgories .categorie:hover .img_zoom {
@@ -14468,6 +14468,8 @@ form textarea {
   text-align: center;
   cursor: pointer;
   height: 2.875rem;
+  -ms-flex: 1;
+      flex: 1;
 }
 
 .site-header .header_picto_container .header_picto .compte a img {
@@ -17116,6 +17118,10 @@ div.adverts-flash-messages {
   text-align: left !important;
 }
 
+#swipebox-bottom-bar {
+  bottom: 0 !important;
+}
+
 #buddypress div.item-list-tabs ul li.current a,
 #buddypress div.item-list-tabs ul li.selected a {
   background-color: #eee;
@@ -17252,6 +17258,10 @@ div.adverts-flash-messages {
     margin: 20px auto !important;
     display: block;
   }
+}
+
+#buddypress .standard-form input {
+  height: auto;
 }
 
 .short,

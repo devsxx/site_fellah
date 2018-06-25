@@ -226,7 +226,7 @@ jQuery(document).ready(function($) {
 				jQuery("#ajaxShadow").hide();
 			}
 		});
-	});
+	}); 
 
 	$("#creation_compte").on('click', function(e){
 		e.preventDefault();
@@ -281,50 +281,50 @@ jQuery(document).ready(function($) {
 				}
 			});
 		}
-});
+	});
 
 
 
-$("#update_compte").on('click', function(e){
-	e.preventDefault();
-	var prenom = $("#prenom").val(); 
-	var telephone = $("#telephone").val();
-	var nom = $("#nom").val(); 
+	$("#update_compte").on('click', function(e){
+		e.preventDefault();
+		var prenom = $("#prenom").val(); 
+		var telephone = $("#telephone").val();
+		var nom = $("#nom").val(); 
 
-	var submit = true;
+		var submit = true;
 
-	if(prenom == "" && nom == ""){
-		submit = false;
-	}  
+		if(prenom == "" && nom == ""){
+			submit = false;
+		}  
 
-	if(submit){
-		$.ajax({
-			type: 'POST',
-			dataType: 'json',
-			url: ajax_login_object.ajaxurl,
-			data: { 
-				'action': 'updateAccount',
-				'prenom' : prenom,
-				'nom' : nom, 
-				'telephone' : telephone, 
-			},
-			beforeSend: function() {
-				jQuery("#ajaxloader").show();
-				jQuery("#ajaxShadow").show();
-			},
-			success: function(data){ 
-				if(data.etat){
-					$(".adverts-field-name-connect .register_form").css("display", "none"); 
-					$(".advert_success").css("display", "block").delay(3000).slideUp(100);
-				}else{
-					$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
-				} 
-				jQuery("#ajaxloader").hide();
-				jQuery("#ajaxShadow").hide();
-			}
-		});
-	}
-});
+		if(submit){
+			$.ajax({
+				type: 'POST',
+				dataType: 'json',
+				url: ajax_login_object.ajaxurl,
+				data: { 
+					'action': 'updateAccount',
+					'prenom' : prenom,
+					'nom' : nom, 
+					'telephone' : telephone, 
+				},
+				beforeSend: function() {
+					jQuery("#ajaxloader").show();
+					jQuery("#ajaxShadow").show();
+				},
+				success: function(data){ 
+					if(data.etat){
+						$(".adverts-field-name-connect .register_form").css("display", "none"); 
+						$(".advert_success").css("display", "block").delay(3000).slideUp(100);
+					}else{
+						$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
+					} 
+					jQuery("#ajaxloader").hide();
+					jQuery("#ajaxShadow").hide();
+				}
+			});
+		}
+	});
 
 
     $('.advert_success').click(function () {
@@ -420,7 +420,7 @@ $("#update_compte").on('click', function(e){
    	var allVals = [];
 
    	$("input[name='advert_category[]']:checked").each( function () {
-   		allVals.push($(this).val());
+   		allVals = $(this).val();
    	});
 
    	var id = $(this).val();
@@ -449,12 +449,12 @@ $("#update_compte").on('click', function(e){
 
 	});
 
-	$(".adverts-field-custom-localisation input[type='checkbox']").click(function(){
+	$(".adverts-field-custom-localisation input[type='radio']").click(function(){
    	var checkbox = $(this);
    	var allVals = [];
 
    	$("input[name='localisation[]']:checked").each( function () {
-   		allVals.push($(this).val());
+   		allVals = $(this).val();
    	});
 
    	var id = $(this).val();
@@ -493,26 +493,25 @@ $("#update_compte").on('click', function(e){
 	
 	$(".adverts-form-input-group-checkbox-localisation .adverts-control-container").live('click', function(){
 		var checked = [];
-		$( this ).find("input[type=checkbox]").each(function(j, c) {
+		$( this ).find("input[type=radio]").each(function(j, c) {
 			 if($(c).is(":checked")) {
 				 checked.push($(c).parent().text().trim());
+				 $("#show_localisation").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked.join(", ") + "</div>");
 			 }
 		});
-		$("#show_localisation").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked.join(", ") + "</div>");
 		$(this).removeClass('show');
 	}); 
+
 	$(".adverts-control-container-region").live('click', function(){
 		var checked = [];
-		$( this ).find("input[type=checkbox]").each(function(j, c) {
+		$( this ).find("input[type=radio]").each(function(j, c) {
 			 if($(c).is(":checked")) {
 				 checked.push($(c).parent().text().trim());
+				 $("#show_localisation_region").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked.join(", ") + "</div>");
 			 }
 		});
-		$("#show_localisation_region").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked.join(", ") + "</div>");
 		$(this).removeClass('show');
-	}); 
-
-
+	});  
 	
 	$(".adverts-form-input-group-checkbox-localisation .adverts-control-container .checkbox").live('click', function(){
 		
@@ -662,8 +661,20 @@ $("#update_compte").on('click', function(e){
 	});
 	 
 
-});
+	$(".custom_radio input[type=checkbox]").change(function()	{
+		$(".custom_radio input[type=checkbox]").parent().removeClass('checked')
+		$(this).parent().addClass('checked'); 
+	});
 
+	// $('.checkbox_2 input:checkbox').each(function(){
+	// 	if($(this).is(':checked')) 
+	// 	$(this).parent().addClass('checked'); 
+	// 	else 
+	// 	$(this).parent().removeClass('checked')
+	// });
+	
+	
+});
 
 
 function number_format (number, decimals, decPoint, thousandsSep) { // eslint-disable-line camelcase

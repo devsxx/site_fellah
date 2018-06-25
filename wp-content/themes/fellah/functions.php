@@ -660,7 +660,7 @@ function my_adverts_form_load( $form ) {
 	
 	$form["field"][] =  array(
 		"type" => "adverts_field_checkbox",
-		"class" => "checkbox_2",
+		"class" => "checkbox_2 custom_radio",
 		"name" => "type_annonce", 
 		"label" => __("Type d'annonce", "fellah"),
 		"meta" => array(
@@ -1013,9 +1013,10 @@ function ajax_signup(){
 			update_user_meta($user_id, 'telephone', $telephone);
 			$user_id = wp_update_user( array( 
 				'ID' => $user_id, 
+				'user_login' => $prenom,
 				'first_name' => $prenom,
 				'last_name' => $nom,
-				'role' => 'author'
+				'role' => 'subscriber'
 			) );
 			if ( is_wp_error( $user_id ) ) {
 				$error_code = 1;
@@ -1107,40 +1108,41 @@ function ajaxsouscat(){
 
 	if(isset($_POST["ids"]) && !empty($_POST["ids"])){
 		
-		$htmls.= '
-		<div class="adverts-control-group adverts-field-customadvertssouscategory adverts-field-name-sous_categorie ajaxed">
-			<div>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<label for="sous_categorie"> ' . __('Sous catégorie', 'fellah') . '  </label>
-							<div class="adverts-form-input-group adverts-form-input-group-checkbox adverts-field-rows-0">
-								<div>'; 
-								
-								$i = 0;
-								foreach($_POST["ids"] as $id){
-									$terms = get_terms( array(
-										'taxonomy' => 'advert_category',
-										'hide_empty' => false,
-										'parent'   => $id
-										) );
-									foreach($terms as $term){
-										$i++;
-											
-										$htmls .= '<div class="checkbox">
-										<input type="checkbox" class="filled-in" name="advert_category[]" id="advert_sub_category_'.$i.'" value="'.$term->term_id.'"> 
-										<label for="advert_sub_category_'.$i.'">'.$term->name.'</label>
-										</div>';
-									}
-								}
+		$i = 0; 
+			$terms = get_terms( array(
+				'taxonomy' => 'advert_category',
+				'hide_empty' => false,
+				'parent'   => $_POST["ids"]
+				) );
+				
+		if(isset($terms) && !empty($terms)){
+			$htmls.= '
+			<div class="adverts-control-group adverts-field-customadvertssouscategory adverts-field-name-sous_categorie ajaxed">
+				<div>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<label for="sous_categorie"> ' . __('Sous catégorie', 'fellah') . '  </label>
+								<div class="adverts-form-input-group adverts-form-input-group-checkbox adverts-field-rows-0">
+									<div>'; 
+									
+										foreach($terms as $term){
+											$i++;
+												
+											$htmls .= '<div class="checkbox">
+											<input type="checkbox" class="filled-in" name="advert_category[]" id="advert_sub_category_'.$i.'" value="'.$term->term_id.'"> 
+											<label for="advert_sub_category_'.$i.'">'.$term->name.'</label>
+											</div>';
+										} 
 
-			$htmls.=' </div>
+				$htmls.=' </div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		</div></div>';
+			</div></div>';
+		}
 	}
 	echo $htmls;
 	die();
@@ -1152,42 +1154,43 @@ function ajaxSousLocalisation(){
 	$htmls = "";
 
 	if(isset($_POST["ids"]) && !empty($_POST["ids"])){
-		
-		$htmls.= '
-		<div class="adverts-control-group adverts-field-custom-sub-localisation adverts-field-name-sub-localisation ajaxed">
-			<div >
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<label for="sub-localisation"> </label>
-							<div id="show_localisation" class="show_localisation"><i class="fas fa-map-pin"></i> ' . __('Toutes les villes', 'fellah') . ' </div>
-							<div class="adverts-form-input-group adverts-form-input-group-checkbox-localisation adverts-field-rows-0">
-							<div class="adverts-control-container">'; 
-								
-								$i = 0;
-								foreach($_POST["ids"] as $id){
-									$terms = get_terms( array(
-										'taxonomy' => 'localisation',
-										'hide_empty' => false,
-										'parent'   => $id
-										) );
+		$i = 0; 
+		$terms = get_terms( array(
+			'taxonomy' => 'localisation',
+			'hide_empty' => false,
+			'parent'   => $_POST["ids"]
+			) );
+
+			if ( isset($terms) && !empty($terms) ) {
+			$htmls.= '
+			<div class="adverts-control-group adverts-field-custom-sub-localisation adverts-field-name-sub-localisation ajaxed">
+				<div >
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<label for="sub-localisation"> </label>
+								<div id="show_localisation" class="show_localisation"><i class="fas fa-map-pin"></i> ' . __('Toutes les villes', 'fellah') . ' </div>
+								<div class="adverts-form-input-group adverts-form-input-group-checkbox-localisation adverts-field-rows-0">
+								<div class="adverts-control-container">'; 
+									
+									
 									foreach($terms as $term){
 										$i++;
 											
 										$htmls .= '<div class="checkbox">
-										<input type="checkbox" class="filled-in" name="localisation[]" id="sub_localisation_'.$i.'" value="'.$term->term_id.'"> 
+										<input type="radio" class="filled-in" name="localisation[]" id="sub_localisation_'.$i.'" value="'.$term->term_id.'"> 
 										<label for="sub_localisation_'.$i.'">'.$term->name.'</label>
 										</div>';
-									}
-								}
+									} 
 
-			$htmls.=' </div>
+				$htmls.=' </div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		</div></div>';
+			</div></div>';
+		}
 	}
 	echo $htmls;
 	die();
@@ -1446,7 +1449,7 @@ function adverts_field_custom_localisation( $field ) {
 
 		$htmls .= '
 		<div class="checkbox">
-			<input type="checkbox" class="filled-in" name="localisation[]" id="localisation_'.$i.'" value="'.$term->term_id.'"> 
+			<input type="radio" class="filled-in" name="localisation[]" id="localisation_'.$i.'" value="'.$term->term_id.'"> 
 			<label for="localisation_'.$i.'">'.$term->name.'</label>
 		</div>';
 	}

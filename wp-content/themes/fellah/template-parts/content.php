@@ -11,6 +11,13 @@
 <div class="page_blog">
 	<div class="container">
 		<div class="row">
+
+			<div class="col-md-12">
+					<!-- start breadcrumbs -->
+					<?php the_breadcrumb(); ?>
+					<!-- end breadcrumbs -->
+			</div>
+			
 			<div class="col-md-12 col-lg-8">
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -70,7 +77,12 @@
 						) ); 
 					?> 
 				</div>
-
+				<?php 
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif; 
+				?>
 			</div>
 
 			<div class="col-md-12 col-lg-4">

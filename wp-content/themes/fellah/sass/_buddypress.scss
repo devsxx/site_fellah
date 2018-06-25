@@ -129,7 +129,7 @@
     display: none;
 }
 #buddypress  {
-   @include media("<md"){
+    @include media("<md"){
         #item-header {
             img.avatar {
                 float: none !important;
@@ -137,7 +137,12 @@
                 display: block;
             }
         }
-   }
+    }
+    .standard-form {
+        input{
+            height: auto;
+        }
+    }
 }
 
 .short,

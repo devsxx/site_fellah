@@ -393,12 +393,12 @@ blockquote {
 		.hover{
 			@include position(absolute, 0, 0, 0, 0);
 			@include transition(all, .25s, ease-in-out);
-			opacity: .65;
+			opacity: .5;
 			z-index: 0;
 		}
 		&:hover{
 			.hover{ 
-				opacity: .75; 
+				opacity: .6; 
 			}
 			.img_zoom {
 				transform: matrix(1.2, 0, 0, 1.2, 0, 0);

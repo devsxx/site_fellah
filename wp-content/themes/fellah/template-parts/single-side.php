@@ -32,7 +32,8 @@
                   array( 
                         'title_li' => '',
                         'hide_empty' => 1,
-                        'depth' => 2 
+                        'depth' => 2,
+                        'exclude' => 1
                   )
             ); ?>
             </ul>

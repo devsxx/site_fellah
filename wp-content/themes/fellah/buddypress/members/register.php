@@ -36,7 +36,7 @@
 						<i class="far fa-user"></i>
 						<input type="text" placeholder="<?php _e("Nom","fellah") ?>" name="nom" id="nom">                                
 					</div>
-
+ 
 					<div class="input_container">
 						<i class="far fa-envelope"></i>
 						<input type="email" placeholder="<?php _e("Email","fellah") ?>" name="email" id="email">                                
