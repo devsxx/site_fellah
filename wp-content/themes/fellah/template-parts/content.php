@@ -18,6 +18,10 @@
 					<!-- end breadcrumbs -->
 			</div>
 			
+			<div class="col-md-12 col-lg-4">
+				<?php get_template_part( 'template-parts/single','side' ) ?>
+			</div>
+			
 			<div class="col-md-12 col-lg-8">
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -85,9 +89,6 @@
 				?>
 			</div>
 
-			<div class="col-md-12 col-lg-4">
-				<?php get_template_part( 'template-parts/single','side' ) ?>
-			</div>
 
 		</div>
 	</div>

@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12"> 
-                <div class="titre">explorez les annonces agricoles fellah.ma</div>
+                <div class="titre"><php _e('Explorez les annonces agricoles fellah.ma', 'fellah'); ?></div>
                     <form action="<?php echo esc_attr( $action ) ?>" class="adverts-search-form" method="get">
                         <div class="search_zone">
                             <?php foreach($form->get_fields( array( "type" => array( "adverts_field_hidden" ) ) ) as $field): ?>

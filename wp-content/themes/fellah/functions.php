@@ -382,8 +382,9 @@ function shortcode_adverts_form_search( $atts ) {
 	} else {
 		 $adverts_sort = $order_by;
 		 $orderby["date"] = "desc"; 
-	}
-	
+	} 
+
+
 	$args = apply_filters( "adverts_list_query", array( 
 		 'author' => $author,
 		 'post_type' => 'advert', 
@@ -1156,7 +1157,9 @@ function ajaxSousLocalisation(){
 	if(isset($_POST["ids"]) && !empty($_POST["ids"])){
 		$i = 0; 
 		$terms = get_terms( array(
-			'taxonomy' => 'localisation',
+			'taxonomy' => 'localisation', 
+			'orderby' => 'name', 
+			'order' => 'ASC',
 			'hide_empty' => false,
 			'parent'   => $_POST["ids"]
 			) );
@@ -1427,10 +1430,15 @@ function adverts_field_custom_localisation( $field ) {
 	$htmls .= '<div class="adverts-control-container-region">';
 	$terms = get_terms( array(
 		'taxonomy' => 'localisation',
+		'orderby' => 'name', 
+      'order' => 'ASC',
 		'hide_empty' => false,
 		'parent'   => 0
 	) );
 		$i = 0;
+		echo '<pre>';
+		var_dump($terms);
+		die();
 	foreach($terms as $term){
 		$i++;
 		

@@ -16540,7 +16540,7 @@ form textarea {
 }
 
 .search_container .sidebare_titre {
-  padding: 1.875rem 0;
+  padding: 0 0 1.875rem 0;
 }
 
 .search_container form {
