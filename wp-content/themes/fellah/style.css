@@ -16507,7 +16507,7 @@ form textarea {
 .sidebare_titre {
   font-size: 1.8125rem;
   font-weight: 500;
-  padding: 1.875rem 0;
+  padding: 0 0 1.875rem 0;
 }
 
 .sidebare_titre i {
@@ -16540,7 +16540,7 @@ form textarea {
 }
 
 .search_container .sidebare_titre {
-  padding: 0 0 1.875rem 0;
+  padding: 1.875rem 0;
 }
 
 .search_container form {
