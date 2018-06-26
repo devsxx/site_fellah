@@ -17176,6 +17176,10 @@ div.adverts-flash-messages {
   transform: translate3d(0, -50px, 0) !important;
 }
 
+.wpadverts-slide-nav-thumbnails-list {
+  display: none;
+}
+
 #buddypress div.item-list-tabs ul li.current a,
 #buddypress div.item-list-tabs ul li.selected a {
   background-color: #eee;
