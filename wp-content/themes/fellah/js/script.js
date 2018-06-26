@@ -27,8 +27,7 @@ jQuery(document).ready(function($) {
 	}); 
 
 	$( "#swipebox-slider" ).live('click',function( ){ 
-		$( "#swipebox-close" ).trigger(); 
-		alert('erere');
+		$( "#swipebox-close" ).trigger("click"); 
 	});  
 
 	$('.wpadverts-slide-nav-thumbnails').click(function (evt) {

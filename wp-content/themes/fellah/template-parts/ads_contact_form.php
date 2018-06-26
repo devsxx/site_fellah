@@ -148,94 +148,97 @@ if (isset($_POST['submitted'])) {
 
 
 ?>
+<?php if (get_current_user_id() && get_current_user_id() > 0 && $post && $post->post_author == get_current_user_id()) { ?>
 
-<div id="advertisement">
+<?php } else { ?> 
+	<div id="advertisement">
 
-	<?php if (isset($emailSent) && $emailSent == true) { ?>
-		<div data-alert class="alert-box info radius">
-			<?php esc_html_e( 'Your Message have been sent!', 'fellah' ); ?> <a href="#" class="close">&times;</a>
+		<?php if (isset($emailSent) && $emailSent == true) { ?>
+			<div data-alert class="advert_alert advert_success">
+				<?php esc_html_e( 'Your Message have been sent!', 'fellah' ); ?>
+			</div>
+		<?php } ?>
+
+		<div class="adverts-single-actions">
+			<a href="#" class="adverts-button adverts-show-contact-form">
+				CONTACTER L'ANNONCEUR <span class="adverts-icon-down-open"></span>
+			</a>
 		</div>
-	<?php } ?>
 
-	<div class="adverts-single-actions">
-		<a href="#" class="adverts-button adverts-show-contact-form">
-			CONTACTER L'ANNONCEUR <span class="adverts-icon-down-open"></span>
-		</a>
-	</div>
+		<div class="adverts-contact-box"> 
+			<div class="message_contact_form">
+				<form name="contactForm" action="<?php the_permalink(); ?>" id="contact-form" method="post" class="adverts-form adverts-form-aligned contactform" >
+					<div class="row">
+						<?php if($hasError == true && $emailSent != true) {?>
+							<div class="col-md-12">
+								<h4>
+									<?php 
+									if(!empty($nameError)){
+										echo $nameError."<br />";
+									}
+									if(!empty($subjectError)){
+										echo $subjectError."<br />";
+									}
+									if(!empty($emailError)){
+										echo $emailError."<br />";
+									}
+									if(!empty($commentError)){
+										echo $commentError."<br />";
+									}
+									if(!empty($humanTestError)){
+										echo $humanTestError."<br />";
+									}
+									?>
+								</h4>
+							</div>
+						<?php }?>
 
-	<div class="adverts-contact-box"> 
-		<div class="message_contact_form">
-			<form name="contactForm" action="<?php the_permalink(); ?>" id="contact-form" method="post" class="adverts-form adverts-form-aligned contactform" >
-				<div class="row">
-					<?php if($hasError == true && $emailSent != true) {?>
-						<div class="col-md-12">
-							<h4>
-								<?php 
-								if(!empty($nameError)){
-									echo $nameError."<br />";
-								}
-								if(!empty($subjectError)){
-									echo $subjectError."<br />";
-								}
-								if(!empty($emailError)){
-									echo $emailError."<br />";
-								}
-								if(!empty($commentError)){
-									echo $commentError."<br />";
-								}
-								if(!empty($humanTestError)){
-									echo $humanTestError."<br />";
-								}
-								?>
-							</h4>
-						</div>
-					<?php }?>
+					
+						
+							<div class="col-md-12">
+								<label for="contactName">
+									<?php _e('Your name', 'fellah'); ?> <span class="adverts-form-required">*</span>
+								</label>
+								<input type="text" name="contactName" id="contactName" class="" />
+							</div><!--End Name-->
+							<div class="col-md-12">
+								<label for="email">
+									<?php _e('Your email', 'fellah'); ?> <span class="adverts-form-required">*</span>
+								</label>
+								<input type="text" name="email" id="email" class="" />
+							</div><!--End Email-->
+							<div class="col-md-12">
+								<label for="subject">
+									<?php _e('Subject', 'fellah'); ?> <span class="adverts-form-required">*</span>
+								</label>
+								<input type="text" name="subject" id="subject" class="" />
+							</div><!--End Subjext-->
+							<div class="col-md-12">
+								<label for="commentsText">
+									<?php _e('Message', 'fellah'); ?> <span class="adverts-form-required">*</span>
+								</label>
+								<textarea name="comments" id="commentsText" cols="8" rows="5" ></textarea>
+							</div><!--End Your Message-->
 
-					<?php if (get_current_user_id() && get_current_user_id() > 0 && $post && $post->post_author == get_current_user_id()) { ?>
-					<?php } else { ?> 
-						<div class="col-md-12">
-							<label for="contactName">
-								<?php _e('Your name', 'fellah'); ?> <span class="adverts-form-required">*</span>
-							</label>
-							<input type="text" name="contactName" id="contactName" class="" />
-						</div><!--End Name-->
-						<div class="col-md-12">
-							<label for="email">
-								<?php _e('Your email', 'fellah'); ?> <span class="adverts-form-required">*</span>
-							</label>
-							<input type="text" name="email" id="email" class="" />
-						</div><!--End Email-->
-						<div class="col-md-12">
-							<label for="subject">
-								<?php _e('Subject', 'fellah'); ?> <span class="adverts-form-required">*</span>
-							</label>
-							<input type="text" name="subject" id="subject" class="" />
-						</div><!--End Subjext-->
-						<div class="col-md-12">
-							<label for="commentsText">
-								<?php _e('Message', 'fellah'); ?> <span class="adverts-form-required">*</span>
-							</label>
-							<textarea name="comments" id="commentsText" cols="8" rows="5" ></textarea>
-						</div><!--End Your Message-->
-
-						<input type="hidden" name="classiera_post_title" id="classiera_post_title" value="<?php the_title(); ?>" />
-						<input type="hidden" name="classiera_post_url" id="classiera_post_url" value="<?php the_permalink(); ?>"  />
+							<input type="hidden" name="classiera_post_title" id="classiera_post_title" value="<?php the_title(); ?>" />
+							<input type="hidden" name="classiera_post_url" id="classiera_post_url" value="<?php the_permalink(); ?>"  />
 
 
-						<?php 
-						$classieraFirstNumber = rand(1,9);
-						$classieraLastNumber = rand(1,9);
-						$classieraNumberAnswer = $classieraFirstNumber + $classieraLastNumber;
-						?> 
-						<div class="col-md-12">
-							<input class="button round btnfull" name="submitted" type="submit" value="<?php esc_html_e( 'Send Message', 'fellah' ); ?>" class="input-submit"/>
-						</div>
-					<?php } ?>
-				</div>
-			</form>
-		</div>
-	</div><!-- End author Message --> 
+							<?php 
+							$classieraFirstNumber = rand(1,9);
+							$classieraLastNumber = rand(1,9);
+							$classieraNumberAnswer = $classieraFirstNumber + $classieraLastNumber;
+							?> 
+							<div class="col-md-12">
+								<input class="button round btnfull" name="submitted" type="submit" value="<?php esc_html_e( 'Send Message', 'fellah' ); ?>" class="input-submit"/>
+							</div>
+				
+					</div>
+				</form>
+			</div>
+		</div><!-- End author Message --> 
 
 
-</div><!-- End advertisement --> 
+	</div><!-- End advertisement --> 
 
+<?php } ?>

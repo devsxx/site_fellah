@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-26 12:31+0100\n"
-"PO-Revision-Date: 2018-06-26 12:32+0100\n"
+"POT-Creation-Date: 2018-06-26 17:06+0100\n"
+"PO-Revision-Date: 2018-06-26 17:08+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -36,30 +36,30 @@ msgid "Create an account. Simple and free !"
 msgstr "Créer un compte. Simple et gratuit !"
 
 #: buddypress/members/register.php:32
-#: buddypress/members/single/profile/edit.php:27 functions.php:1201
+#: buddypress/members/single/profile/edit.php:27 functions.php:1204
 msgid "Prénom"
 msgstr "Prénom"
 
 #: buddypress/members/register.php:37
-#: buddypress/members/single/profile/edit.php:32 functions.php:1207
+#: buddypress/members/single/profile/edit.php:32 functions.php:1210
 msgid "Nom"
 msgstr "Nom"
 
-#: buddypress/members/register.php:42 functions.php:1213
+#: buddypress/members/register.php:42 functions.php:1216
 msgid "Email"
 msgstr "E mail"
 
-#: buddypress/members/register.php:47 functions.php:1180 functions.php:1222
+#: buddypress/members/register.php:47 functions.php:1183 functions.php:1225
 msgid "Mot de passe"
 msgstr ""
 
-#: buddypress/members/register.php:52 functions.php:1228
+#: buddypress/members/register.php:52 functions.php:1231
 msgid "Confirmer le mot de passe"
 msgstr ""
 
 #: buddypress/members/register.php:57
-#: buddypress/members/single/profile/edit.php:37 functions.php:583
-#: wpadverts/single.php:109
+#: buddypress/members/single/profile/edit.php:37 functions.php:586
+#: wpadverts/single.php:110
 msgid "Phone"
 msgstr "Téléphone"
 
@@ -67,13 +67,13 @@ msgstr "Téléphone"
 msgid "Create my account"
 msgstr "Créer mon compte"
 
-#: buddypress/members/register.php:62 functions.php:1252
+#: buddypress/members/register.php:62 functions.php:1255
 msgid "wrong acces"
 msgstr ""
 
-#: buddypress/members/register.php:63 functions.php:1253
-msgid "You are connected"
-msgstr "Tu es connecté"
+#: buddypress/members/register.php:63
+msgid "Vous êtes bien inscrit. A présent, connectez-vous ! "
+msgstr ""
 
 #: buddypress/members/register.php:100
 msgid "User registration is currently not allowed."
@@ -247,7 +247,7 @@ msgstr "Enregistrer les modifications"
 msgid "Update denied"
 msgstr "Mise à jour refusé"
 
-#: buddypress/members/single/profile/edit.php:43 functions.php:1018
+#: buddypress/members/single/profile/edit.php:43 functions.php:1021
 msgid "Update successful"
 msgstr "Mise à jour réussie"
 
@@ -260,7 +260,7 @@ msgstr "Mon profil"
 msgid "%s's Profile"
 msgstr "Profil de %s"
 
-#: buddypress/members/single/profile/profile-wp.php:35 wpadverts/single.php:127
+#: buddypress/members/single/profile/profile-wp.php:35 wpadverts/single.php:128
 msgid "Name"
 msgstr "Nom"
 
@@ -284,27 +284,25 @@ msgstr "AOL Messenger"
 msgid "Yahoo Messenger"
 msgstr "Yahoo Messenger"
 
-#: comments.php:35
+#: comments.php:37
 #, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
-#: comments.php:66
+#: comments.php:68
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
-
-#: footer.php:23
-msgid "https://wordpress.org/"
-msgstr "https://wpfr.net/"
 
 #: footer.php:24
 #, php-format
 msgid "All rights reserved %d"
 msgstr "Tous droits réservés %d"
 
-#: footer.php:27
-msgid "https://fellah.ma/"
-msgstr "https://fellah.ma/"
+#: func/BP_Add_Page.php:20
+#, fuzzy
+#| msgid "Send Message"
+msgid "Messages"
+msgstr "Envoyer le message"
 
 #: func/breadcrumb.php:228
 msgid "Page"
@@ -388,192 +386,197 @@ msgstr "Toutes les catégories"
 msgid "All regions"
 msgstr "Toutes les régions"
 
-#: functions.php:327 functions.php:350 functions.php:351
+#: functions.php:330 functions.php:353 functions.php:354
 msgid "Publish Date"
 msgstr "Date de publication"
 
-#: functions.php:329 functions.php:351
+#: functions.php:332 functions.php:354
 msgid "Newest First"
 msgstr "Le plus récent d'abord"
 
-#: functions.php:330
+#: functions.php:333
 msgid "Oldest First"
 msgstr "Le plus ancien en premier"
 
-#: functions.php:334 wpadverts/single.php:103
+#: functions.php:337 wpadverts/single.php:104
 msgid "Price"
 msgstr "Prix"
 
-#: functions.php:336
+#: functions.php:339
 msgid "Cheapest First"
 msgstr "Moins cher en premier"
 
-#: functions.php:337
+#: functions.php:340
 msgid "Most Expensive First"
 msgstr "Le plus cher en premier"
 
-#: functions.php:341
+#: functions.php:344
 msgid "Title"
 msgstr "Titre"
 
-#: functions.php:343
+#: functions.php:346
 msgid "From A to Z"
 msgstr "De A à Z"
 
-#: functions.php:344
+#: functions.php:347
 msgid "From Z to A"
 msgstr "De Z à A"
 
-#: functions.php:351 functions.php:381
+#: functions.php:354 functions.php:384
 #, php-format
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: functions.php:496
+#: functions.php:499
 msgid "Send"
 msgstr "Envoyer"
 
-#: functions.php:538
+#: functions.php:541
 msgid "Your message has been sent."
 msgstr "Votre message a été envoyé."
 
-#: functions.php:543
+#: functions.php:546
 msgid "There are errors in your form."
 msgstr "Il y a des erreurs dans votre formulaire."
 
-#: functions.php:576
+#: functions.php:579 template-parts/ads_contact_form.php:233
+#: templates/template-user-messages.php:169
 msgid "Send Message"
 msgstr "Envoyer le message"
 
-#: functions.php:649
+#: functions.php:652
 msgid "1. Votre annonce"
 msgstr "1. Votre annonce"
 
-#: functions.php:666
+#: functions.php:669
 msgid "Type d'annonce"
 msgstr "Type d'annonce"
 
-#: functions.php:697
+#: functions.php:700
 msgid "Catégorie d'annonce"
 msgstr "Catégorie d'annonce"
 
-#: functions.php:713
+#: functions.php:716
 msgid "2. Description"
 msgstr "2. Description"
 
-#: functions.php:730
+#: functions.php:733
 msgid "Catégorie"
 msgstr "Catégorie"
 
-#: functions.php:751
+#: functions.php:754
 msgid "Titre de l'annoce"
 msgstr "Titre de l'annoce"
 
-#: functions.php:770
+#: functions.php:773
 msgid "Description"
 msgstr "Description"
 
-#: functions.php:790
+#: functions.php:793
 msgid "DH - devise du site Fellah.ma"
 msgstr "DH - devise du site Fellah.ma"
 
-#: functions.php:812
+#: functions.php:815
 msgid "Image"
 msgstr "Image"
 
-#: functions.php:840
+#: functions.php:843
 msgid "Region and city"
 msgstr "Région et ville"
 
-#: functions.php:873
+#: functions.php:876
 msgid "3. Vos coordonnées"
 msgstr "3. Vos coordonnées"
 
-#: functions.php:911 functions.php:965
+#: functions.php:914 functions.php:968
 msgid "Wrong username or password."
 msgstr "Mauvais nom d'utilisateur ou mot de passe."
 
-#: functions.php:914 functions.php:970
+#: functions.php:917 functions.php:973
 msgid "Login successful"
 msgstr "Login successful"
 
-#: functions.php:957
+#: functions.php:960
 msgid "Can't login."
 msgstr "Impossible de se connecter."
 
-#: functions.php:974
+#: functions.php:977
 msgid "User already exists.  Password inherited."
 msgstr "L'utilisateur existe déjà. Mot de passe hérité."
 
-#: functions.php:1020
+#: functions.php:1023
 msgid "User don't exists."
 msgstr ""
 
-#: functions.php:1058
+#: functions.php:1061
 msgid "Sous catégorie"
 msgstr "Sous catégorie"
 
-#: functions.php:1107
+#: functions.php:1110
 msgid "Toutes les villes"
 msgstr ""
 
-#: functions.php:1143
+#: functions.php:1146
 msgid "Est-ce que vous avez un compte?"
 msgstr ""
 
-#: functions.php:1149
+#: functions.php:1152
 msgid "Me connecter"
 msgstr "Tu es connecté"
 
-#: functions.php:1152 functions.php:1241
+#: functions.php:1155 functions.php:1244
 msgid "Créer mon compte"
 msgstr ""
 
-#: functions.php:1168
+#: functions.php:1171
 msgid "Connectez-vous"
 msgstr ""
 
-#: functions.php:1174
+#: functions.php:1177
 msgid "Identifiant ou Email"
 msgstr ""
 
-#: functions.php:1234
+#: functions.php:1237
 msgid "Telephone"
 msgstr "Télephone"
 
-#: functions.php:1264 functions.php:1282
+#: functions.php:1256
+msgid "You are connected"
+msgstr "Tu es connecté"
+
+#: functions.php:1267 functions.php:1285
 msgid "Continuer"
 msgstr ""
 
-#: functions.php:1279 functions.php:1297
+#: functions.php:1282 functions.php:1300
 msgid "Retour"
 msgstr ""
 
-#: functions.php:1351
+#: functions.php:1354
 msgid "Toutes les Région"
 msgstr ""
 
-#: functions.php:1465
+#: functions.php:1468
 msgid "Email : "
 msgstr "Email: "
 
-#: functions.php:1466
+#: functions.php:1469
 msgid "First name : "
 msgstr "Prénom : "
 
-#: functions.php:1467
+#: functions.php:1470
 msgid "Last name : "
 msgstr "Nom : "
 
-#: functions.php:1468
+#: functions.php:1471
 msgid "Phone : "
 msgstr "Téléphone : "
 
-#: functions.php:1481
+#: functions.php:1484
 msgid "Télephone"
 msgstr "Télephone"
 
-#: functions.php:1484
+#: functions.php:1487
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "S'il vous plait, entrez votre numéro de téléphone."
 
@@ -651,6 +654,34 @@ msgstr "Résultats de recherche pour : %s"
 msgid "Actualités"
 msgstr "Actualités"
 
+#: template-parts/ads_contact_form.php:158
+#: templates/template-user-messages.php:118
+#, fuzzy
+#| msgid "Your message has been sent."
+msgid "Your Message have been sent!"
+msgstr "Votre message a été envoyé."
+
+#: template-parts/ads_contact_form.php:200
+msgid "Your name"
+msgstr "Votre nom"
+
+#: template-parts/ads_contact_form.php:206
+msgid "Your email"
+msgstr "Votre email"
+
+#: template-parts/ads_contact_form.php:212
+#: templates/template-user-messages.php:138
+#: templates/template-user-messages.php:159
+msgid "Subject"
+msgstr "sujet"
+
+#: template-parts/ads_contact_form.php:218
+#: templates/template-user-messages.php:139
+#, fuzzy
+#| msgid "Send Message"
+msgid "Message"
+msgstr "Envoyer le message"
+
 #: template-parts/categories.php:7
 msgid "Catégories"
 msgstr "Catégories"
@@ -695,16 +726,16 @@ msgstr ""
 "Il semble que nous ne puissions pas trouver ce que vous cherchez. Peut-être "
 "que la recherche peut aider."
 
-#: template-parts/content.php:62
+#: template-parts/content.php:57
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content.php:79
+#: template-parts/content.php:74
 msgid "&laquo Previous"
 msgstr ""
 
-#: template-parts/content.php:80
+#: template-parts/content.php:75
 msgid "Next &raquo"
 msgstr ""
 
@@ -735,6 +766,16 @@ msgstr "Sélection des meilleures annonces du moment"
 #: templates/news_agricoles.php:54
 msgid "Sorry, no posts matched your criteria."
 msgstr "Aucun message ne correspond à vos critères de recherche."
+
+#: templates/template-user-messages.php:164
+#, fuzzy
+#| msgid "Your message has been sent."
+msgid "Write your message here..."
+msgstr "Votre message a été envoyé."
+
+#: templates/template-user-messages.php:204
+msgid "View / Reply"
+msgstr ""
 
 #: wpadverts/add-preview.php:11
 msgid "Edit Listing"
@@ -858,28 +899,29 @@ msgstr "Plus"
 msgid "You do not have any Ads posted yet."
 msgstr "Vous n'avez pas encore publié d'annonces."
 
-#: wpadverts/single.php:117
+#: wpadverts/single.php:118
 msgid "Region"
 msgstr "Région"
 
-#: wpadverts/single.php:204
+#: wpadverts/single.php:206
 msgid "Annonces similaires"
 msgstr "Annonces similaires"
 
-#: wpadverts/single.php:207
+#: wpadverts/single.php:209
 msgid "Ces annonces pourraient aussi vous intéresser"
 msgstr "Ces annonces pourraient aussi vous intéresser"
+
+#~ msgid "https://wordpress.org/"
+#~ msgstr "https://wpfr.net/"
+
+#~ msgid "https://fellah.ma/"
+#~ msgstr "https://fellah.ma/"
 
 #~ msgid "logout"
 #~ msgstr "Se Déconnecter"
 
 #~ msgid "Editing '%s' Profile Group"
 #~ msgstr "Modification des champs du groupe : %s"
-
-#, fuzzy
-#~| msgid "User email: "
-#~ msgid "User email : "
-#~ msgstr "E mail : "
 
 #~ msgid "Phone *"
 #~ msgstr "Téléphone *"

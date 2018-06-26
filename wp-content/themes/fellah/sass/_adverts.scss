@@ -527,6 +527,6 @@ div.adverts-flash-messages {
   text-align: left !important;
 }
 
-#swipebox-bottom-bar {
-  bottom: 0 !important;
+#swipebox-bottom-bar, #swipebox-top-bar { 
+  transform: translate3d(0,-50px,0) !important;
 }

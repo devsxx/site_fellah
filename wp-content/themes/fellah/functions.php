@@ -231,24 +231,6 @@ add_filter( 'the_title', 'ou_trim_words' );
 add_filter( 'manage_advert_posts_columns', array( 'WPPostRatingsAdmin', 'postrating_admin_column_title' ) );
 add_action( 'manage_advert_posts_custom_column', array( 'WPPostRatingsAdmin', 'postrating_admin_column_content' ) ); 
 
-// $adverts_namespace['gallery'] = array(
-// 	'option_name' => 'adverts_gallery',
-// 	'default' => array(
-// 		 'ui' => 'pagination', // either paginator or thumbnails
-// 		 'visible_items' => 5,
-// 		 'scrolling_items' => 1,
-// 		 'lightbox' => 1,
-// 		 'image_edit_cap' => 'read',
-// 		 'image_sizes' => array(
-// 			  // supported sizes: adverts-upload-thumbnail, adverts-list, adverts-gallery
-// 			  "adverts-gallery" => array( 'enabled' => 1, 'width' => 650, 'height' => 300, 'crop' => true ),
-// 			  "adverts-list" => array( 'enabled' => 1, 'width' => 255, 'height' => 255, 'crop' => true ),
-// 			  "adverts-upload-thumbnail" => array( 'enabled' => 1, 'width' => 150, 'height' => 150, 'crop' => true ),
-// 			  //"adverts-gallery-thumbnail"
-// 		 ),
-// 	)
-// );
-
 require get_template_directory() . '/func/add-currency.php';
 require get_template_directory() . '/func/custom-fields-taxonomies.php';
 require get_template_directory() . '/func/override_templates.php';
@@ -258,14 +240,6 @@ require get_template_directory() . '/func/search-by-category.php';
 require get_template_directory() . '/func/compteur-vues.php';
 require get_template_directory() . '/func/breadcrumb.php';
 require get_template_directory() . '/func/BP_Add_Page.php';
-
-
-
-// if( !defined("ADVERTS_FILE") ) {
-// 	define( "ADVERTS_FILE", __FILE__ );
-// 	define( "ADVERTS_PATH", plugin_dir_path( ADVERTS_FILE ) );
-// 	define( "ADVERTS_URL", plugins_url() . "/" . basename(ADVERTS_PATH) );
-// } 
 
 add_shortcode('form_search', 'shortcode_adverts_form_search');
 function shortcode_adverts_form_search( $atts ) {
@@ -474,11 +448,6 @@ function shortcode_adverts_form_search( $atts ) {
 	include apply_filters( "adverts_template_load", get_template_directory() . 'wpadverts/form_search.php' );
 	return ob_get_clean();
 }
-
-// remove_action( 'adverts_tpl_single_bottom', 'adverts_single_contact_information' );
-// remove_action( 'adverts_tpl_single_bottom', 'adext_contact_form' );
-// remove_action( 'adverts_tpl_single_bottom', 'adext_bp_send_private_message_button', 50 );
-// add_action('adverts_tpl_single_bottom', '_adext_contact_form_custom');
 
 function _adext_contact_form_custom( $post_id ) {
 
@@ -1454,8 +1423,6 @@ adverts_form_add_fieldr("adverts_field_custom_localisation", array(
 	"callback_bind" => "adverts_bind_single",
 ));
 
-
-
 bp_core_remove_nav_item( 'profile' );
 bp_core_remove_subnav_item( 'profile', 'change-avatar' );
 
@@ -1557,8 +1524,6 @@ function change_link( $permalink, $post ) {
     }
     return $permalink;
 }
-
- 
 
 add_action('wp_logout','auto_redirect_after_logout');
 function auto_redirect_after_logout(){
