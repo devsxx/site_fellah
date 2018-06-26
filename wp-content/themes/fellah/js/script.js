@@ -12,36 +12,29 @@ jQuery(document).ready(function($) {
 			$('.GoToHeader').removeClass('show');
 		}
 	});
-
-	// if (window.matchMedia("(min-width: 992px)").matches) {  
-		$a = $( "#site-navigation .show-sub-menu > a" ); 
-		$a.click(function(evt){
-			evt.preventDefault(); 
-			$ul = $(this).next('ul');  
-			$ul.toggleClass('showAll'); 
-			$( ".showAll .close" ).remove();
-			$( ".showAll" ).append("<div class='close'><i class='fas fa-times'></i></div>");
-		}); 
-		
-		$( ".showAll .close" ).live('click',function( ){ 
-			$( "#site-navigation .show-sub-menu > a" ).next('ul').removeClass('showAll'); 
-		}); 
-
-		$( "#swipebox-slider" ).live('click',function( ){ 
-			$( "#swipebox-close" ).trigger(); 
-		 	alert('erere');
-		});  
-
-		$('.wpadverts-slide-nav-thumbnails').click(function (evt) {
-			evt.preventDefault();  
-			$(".wpadverts-swipe").trigger("click");
-		});
 	
-		// $('.slide.current').click(function () {
-		// 	alert('erere');
-		// });
+	$a = $( "#site-navigation .show-sub-menu > a" ); 
+	$a.click(function(evt){
+		evt.preventDefault(); 
+		$ul = $(this).next('ul');  
+		$ul.toggleClass('showAll'); 
+		$( ".showAll .close" ).remove();
+		$( ".showAll" ).append("<div class='close'><i class='fas fa-times'></i></div>");
+	}); 
+	
+	$( ".showAll .close" ).live('click',function( ){ 
+		$( "#site-navigation .show-sub-menu > a" ).next('ul').removeClass('showAll'); 
+	}); 
 
-	// }
+	$( "#swipebox-slider" ).live('click',function( ){ 
+		$( "#swipebox-close" ).trigger(); 
+		alert('erere');
+	});  
+
+	$('.wpadverts-slide-nav-thumbnails').click(function (evt) {
+		evt.preventDefault();  
+		$(".wpadverts-swipe").trigger("click");
+	}); 
 
 	$(document).on( 'scroll', function(){
 		if (window.matchMedia("(min-width: 1200px)").matches) { 
@@ -62,8 +55,6 @@ jQuery(document).ready(function($) {
 
 		}
 	});
-
-
 
 	$('.GoToHeader').click(function(){
 		$('html').animate({scrollTop:0}, 'slow');
@@ -197,8 +188,6 @@ jQuery(document).ready(function($) {
 			$(this).parent().removeClass('checked')
 	});
 
-
-
    // Perform AJAX login on form submit
    $('#connect').on('click', function(e){
    	e.preventDefault();
@@ -285,8 +274,6 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-
-
 	$("#update_compte").on('click', function(e){
 		e.preventDefault();
 		var prenom = $("#prenom").val(); 
@@ -328,14 +315,13 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	$('.advert_success').click(function () {
+		$(this).slideUp();
+	});
 
-    $('.advert_success').click(function () {
-   		$(this).slideUp();
-    });
-
-    $('.advert_danger').click(function () {
-   		$(this).slideUp();
-    });
+	$('.advert_danger').click(function () {
+		$(this).slideUp();
+	});
 
    $('.adverts-field-prev-next-2').addClass("hide_section"); 
    $('.adverts-field-prev-next-3').addClass("hide_section");
@@ -425,8 +411,6 @@ jQuery(document).ready(function($) {
 		$(".custom_radio input[type=checkbox]").parent().removeClass('checked')
 		$(this).parent().addClass('checked'); 
 	});
-
-	
 	
 	$("input[type=checkbox].class_advert_category ").change(function()	{
 		var group = "input:checkbox[name='"+$(this).attr("name")+"'].class_advert_category ";
@@ -470,9 +454,6 @@ jQuery(document).ready(function($) {
 
 
 	});
-
-	
-	
  
 	$(document).on('change', 'input[type=checkbox].class_localisation',function()	{
 		var group = "input:checkbox[name='"+$(this).attr("name")+"'].class_localisation";
@@ -553,11 +534,7 @@ jQuery(document).ready(function($) {
 			 }
 		});
 		$(this).removeClass('show');
-	});  
-	
-	$(".adverts-form-input-group-checkbox-localisation .adverts-control-container .checkbox").live('click', function(){
-		
-	}); 
+	});   
 
    $('.adverts-field-name-gallery').find('.row').append("<div class='col-md-6'><div class='gallerymessage'>" + ajax_login_object.GALLERYMESSAGE + "</div></div>");
    $("select.adverts-multiselect").each(function(index, item) {
@@ -677,7 +654,6 @@ jQuery(document).ready(function($) {
    $( "#input-amount-LCD" ).val( $( "#slider-range-LCD" ).slider( "values", 0 ) + "-" + $( "#slider-range-LCD" ).slider( "values", 1 ) );
    $( "#amount-LCD" ).html( SEARCH_VARS.price + number_format($( "#slider-range-LCD" ).slider( "values", 0 ), 0, ',', ' ')  + " DH - " + number_format($( "#slider-range-LCD" ).slider( "values", 1 ), 0, ',', ' ') + " DH &nbsp;&nbsp;"  );
 
-
 	$('#post_title').keyup(function(e){
 		updateOutput();
 	});
@@ -701,9 +677,6 @@ jQuery(document).ready(function($) {
 	$("#pics").change(function(){ 
 		$("#adverts-search-form").submit(); 
 	});
-	 
-
-	
 	
 });
 

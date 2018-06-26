@@ -548,6 +548,13 @@ section{
 	.comment-list{
 		li{
 			padding-bottom: oe_rem(30px);
+			.comment-meta{
+				.comment-author{
+					img{
+						display: none;
+					}
+				}
+			}
 		}
 	}
 

@@ -20,13 +20,16 @@
 			<div class="row">
 				<div class="col-md-10">
 					<div class="site-info">
-						<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fellah' ) ); ?>">
+						<a href="<?php bloginfo( 'url' ) ?>">
 							<?php printf( esc_html__( 'All rights reserved %d', 'fellah' ), date('Y') ); ?>
 						</a>
 						<span class="sprt"> - </span>
-						<a href="<?php echo esc_url( __( 'https://fellah.ma/', 'fellah' ) ); ?>">Fellah.ma</a>
+						<a href="<?php bloginfo( 'url' ) ?>">Fellah.ma</a>
 						<span class="sprt"> | </span>
 						<?php $ID = 33;  ?>
+						<a href="<?php the_permalink( $ID  ); ?>" class="uppercase"><?php echo get_the_title( $ID ); ?></a>
+						<span class="sprt"> | </span>
+						<?php $ID = 2362;  ?>
 						<a href="<?php the_permalink( $ID  ); ?>" class="uppercase"><?php echo get_the_title( $ID ); ?></a>
 					</div>
 				</div>

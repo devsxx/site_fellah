@@ -13618,6 +13618,10 @@ section .section_sousTitle {
   padding-bottom: 1.875rem;
 }
 
+#comments .comment-list li .comment-meta .comment-author img {
+  display: none;
+}
+
 form input[type="text"], form input[type="password"], form input[type="email"], form input[type="url"], form input[type="date"], form input[type="month"], form input[type="time"], form input[type="datetime"], form input[type="datetime-local"], form input[type="week"], form input[type="number"], form input[type="search"], form input[type="tel"], form input[type="color"] {
   width: 100%;
   font-size: 0.875rem;

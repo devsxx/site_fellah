@@ -11,7 +11,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="offset-md-2 col-md-8 pull-md-2">
+		<div class="offset-md-2 col-md-8">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
