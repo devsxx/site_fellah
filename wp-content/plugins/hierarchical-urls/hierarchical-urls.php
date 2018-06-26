@@ -108,9 +108,8 @@ function get_rules_tree( $args = false ) {
 	);
 	$args = wp_parse_args( $args, $defaults );
 
-	echo '<pre>';
-	var_dump($args);
-	echo '</pre>';
+	echo '<pre>
+	
 
 	$terms = get_terms( $args['taxonomy_name'], array( 'parent' => $args['parent'] ) );
 	if ( empty( $terms ) )

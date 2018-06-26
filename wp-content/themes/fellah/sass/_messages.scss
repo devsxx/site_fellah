@@ -1,0 +1,38 @@
+#messages{
+   .messages_container{
+      .authorHead{
+
+      }
+      .authorBio{
+         .usermessages{
+            .message_description{
+               .sujet{
+                  .my-message-title{
+                     padding-top: oe_rem(15px);
+                     display: block;
+                     text-transform: uppercase;
+                     font-weight: 600;
+                     font-size: oe_rem(14px);
+                  }   
+               }
+               .inline-list{
+                  list-style: none;
+                  @include flex(center, flex-start, row);
+                  padding: oe_rem(15px) 0;
+                  margin: oe_rem(10px) 0;
+                  border: 1px solid #e6e6e6;
+                  li{
+                     display: block;
+                     padding: 0 oe_rem(15px);
+                     a{
+                     }
+                     i{
+                        padding: 5px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

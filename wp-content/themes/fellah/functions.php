@@ -257,6 +257,9 @@ require get_template_directory() . '/func/search-by-category.php';
 
 require get_template_directory() . '/func/compteur-vues.php';
 require get_template_directory() . '/func/breadcrumb.php';
+require get_template_directory() . '/func/BP_Add_Page.php';
+
+
 
 // if( !defined("ADVERTS_FILE") ) {
 // 	define( "ADVERTS_FILE", __FILE__ );
