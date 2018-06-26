@@ -115,6 +115,7 @@
 		& > div{
 			@include flex(flex-start, flex-start, row);
 			flex-wrap: wrap; 
+			margin: 0;
 			.checkbox{
 				margin: 0 oe_rem(20px) oe_rem(15px) 0;
 				float: none;
@@ -127,7 +128,6 @@
 			}
 		}
 	}
-
 
 	.show_localisation{
 		cursor: pointer;
@@ -158,6 +158,7 @@
 			margin: 0 auto;
 		}
 	}
+
 	.adverts-form-input-group-checkbox-localisation{
 		.adverts-control-container{
 			display: none;
@@ -194,6 +195,7 @@
 
 		
 	}
+
 	.adverts-control-container-region{
 		display: none;
 		&.show{
@@ -222,6 +224,7 @@
 			} 
 		}
 	}
+
 	.checkbox{
 		width: oe_rem(245px);
 		height: oe_rem(50px); 
@@ -290,7 +293,6 @@
 
 	}
 
-
 	.checkbox_2{
 		width: oe_rem(160px);
 		height: oe_rem(50px); 
@@ -299,6 +301,9 @@
 		margin: 0 oe_rem(20px) oe_rem(10px) 0;
 		text-align: center !important;
 		overflow: hidden;
+		&.custom_radio{
+			margin-right: 10px !important;
+		}
 		[type=checkbox], [type=radio] {
 			position: absolute;
 			left: -9999px;

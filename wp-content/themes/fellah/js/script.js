@@ -31,9 +31,11 @@ jQuery(document).ready(function($) {
 			$( "#swipebox-close" ).trigger(); 
 		 	alert('erere');
 		});  
-		// $('.slide.current').click(function () {
-		// 	$("#swipebox-close").trigger();
-		// });
+
+		$('.wpadverts-slide-nav-thumbnails').click(function (evt) {
+			evt.preventDefault();  
+			$(".wpadverts-swipe").trigger("click");
+		});
 	
 		// $('.slide.current').click(function () {
 		// 	alert('erere');
@@ -414,14 +416,34 @@ jQuery(document).ready(function($) {
    	$('.adverts-field-name-connect').removeClass("hide_section");
    	$('.adverts-field-name-submit').removeClass("hide_section");
    });
+	
+	$(".custom_radio input[type=checkbox]").change(function()	{
+		var group = ".custom_radio input:checkbox[name='"+$(this).attr("name")+"']";
+		$(group).attr("checked",false);
+		$(this).attr("checked",true);
+
+		$(".custom_radio input[type=checkbox]").parent().removeClass('checked')
+		$(this).parent().addClass('checked'); 
+	});
+
+	
+	
+	$("input[type=checkbox].class_advert_category ").change(function()	{
+		var group = "input:checkbox[name='"+$(this).attr("name")+"'].class_advert_category ";
+		$(group).attr("checked",false);
+		$(this).attr("checked",true);
+
+		$("input[type=checkbox].class_advert_category ").parent().removeClass('checked')
+		$(this).parent().addClass('checked'); 
+	});
 
    $(".adverts-field-customadvertscategory input[type='checkbox']").click(function(){
    	var checkbox = $(this);
-   	var allVals = [];
-
-   	$("input[name='advert_category[]']:checked").each( function () {
-   		allVals = $(this).val();
-   	});
+		var allVals = 0;
+		
+		if ( $( this ).is(':checked') ) {
+			allVals = $(this).val(); 
+		} 
 
    	var id = $(this).val();
    	$.ajax({
@@ -449,13 +471,34 @@ jQuery(document).ready(function($) {
 
 	});
 
-	$(".adverts-field-custom-localisation input[type='radio']").click(function(){
-   	var checkbox = $(this);
-   	var allVals = [];
+	
+	
+ 
+	$(document).on('change', 'input[type=checkbox].class_localisation',function()	{
+		var group = "input:checkbox[name='"+$(this).attr("name")+"'].class_localisation";
+		$(group).attr("checked",false);
+		$(this).attr("checked",true);
 
-   	$("input[name='localisation[]']:checked").each( function () {
-   		allVals = $(this).val();
-   	});
+		$("input[type=checkbox].class_localisation").parent().removeClass('checked')
+		$(this).parent().addClass('checked'); 
+	});
+
+	$("input[type=checkbox].class_localisation_parent").change(function()	{
+		var group = "input:checkbox[name='"+$(this).attr("name")+"'].class_localisation_parent";
+		$(group).attr("checked",false);
+		$(this).attr("checked",true);
+
+		$("input[type=checkbox].class_localisation_parent").parent().removeClass('checked')
+		$(this).parent().addClass('checked'); 
+	});
+
+	$(".adverts-field-custom-localisation input[type='checkbox']").click(function(){
+   	var localisation_checkbox = $(this); 
+		var localisation_allVals = 0;
+		
+		if ( $( this ).is(':checked') ) {
+			localisation_allVals = $(this).val(); 
+		} 
 
    	var id = $(this).val();
    	$.ajax({
@@ -463,18 +506,17 @@ jQuery(document).ready(function($) {
    		url: ajax_login_object.ajaxurl,
    		data: { 
    			'action': 'ajaxSousLocalisation',
-   			'ids' : allVals,
+   			'ids' : localisation_allVals,
    		},
    		beforeSend: function() {
    			jQuery("#ajaxloader").show();
    			jQuery("#ajaxShadow").show();
    		},
    		success: function(response){
-   			if($(".ajaxed").length > 0){
-   				$(".ajaxed").remove();
+   			if($(".ajaxedLocalisation").length > 0){
+   				$(".ajaxedLocalisation").remove();
    			}
-   			checkbox.closest(".adverts-field-custom-localisation")
-   			.append( response );
+   			localisation_checkbox.closest(".adverts-field-custom-localisation").append( response );
    			jQuery("#ajaxloader").hide();
    			jQuery("#ajaxShadow").hide();
    		}
@@ -493,10 +535,10 @@ jQuery(document).ready(function($) {
 	
 	$(".adverts-form-input-group-checkbox-localisation .adverts-control-container").live('click', function(){
 		var checked = [];
-		$( this ).find("input[type=radio]").each(function(j, c) {
-			 if($(c).is(":checked")) {
-				 checked.push($(c).parent().text().trim());
-				 $("#show_localisation").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked.join(", ") + "</div>");
+		$( this ).find("input[type=checkbox]").each(function(j, c) {
+			 if($(c).is(":checked")) { 
+				 checked = $(c).parent().text().trim();
+				 $("#show_localisation").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked + "</div>");
 			 }
 		});
 		$(this).removeClass('show');
@@ -504,10 +546,10 @@ jQuery(document).ready(function($) {
 
 	$(".adverts-control-container-region").live('click', function(){
 		var checked = [];
-		$( this ).find("input[type=radio]").each(function(j, c) {
+		$( this ).find("input[type=checkbox]").each(function(j, c) {
 			 if($(c).is(":checked")) {
-				 checked.push($(c).parent().text().trim());
-				 $("#show_localisation_region").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked.join(", ") + "</div>");
+				 checked = $(c).parent().text().trim();
+				 $("#show_localisation_region").html("<i class='fas fa-map-pin'></i><div class=''>" +  checked + "</div>");
 			 }
 		});
 		$(this).removeClass('show');
@@ -661,17 +703,6 @@ jQuery(document).ready(function($) {
 	});
 	 
 
-	$(".custom_radio input[type=checkbox]").change(function()	{
-		$(".custom_radio input[type=checkbox]").parent().removeClass('checked')
-		$(this).parent().addClass('checked'); 
-	});
-
-	// $('.checkbox_2 input:checkbox').each(function(){
-	// 	if($(this).is(':checked')) 
-	// 	$(this).parent().addClass('checked'); 
-	// 	else 
-	// 	$(this).parent().removeClass('checked')
-	// });
 	
 	
 });

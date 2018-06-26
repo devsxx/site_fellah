@@ -29,27 +29,27 @@
 
 					<div class="input_container">
 						<i class="far fa-user"></i>
-						<input type="text" placeholder="<?php _e("Prénom","fellah") ?>" name="prenom" id="prenom">                                
+						<input type="text" placeholder="<?php _e("Prénom","fellah") ?>" name="prenom" id="prenom" required>                                
 					</div>
 
 					<div class="input_container">
 						<i class="far fa-user"></i>
-						<input type="text" placeholder="<?php _e("Nom","fellah") ?>" name="nom" id="nom">                                
+						<input type="text" placeholder="<?php _e("Nom","fellah") ?>" name="nom" id="nom" required>                                
 					</div>
  
 					<div class="input_container">
 						<i class="far fa-envelope"></i>
-						<input type="email" placeholder="<?php _e("Email","fellah") ?>" name="email" id="email">                                
+						<input type="email" placeholder="<?php _e("Email","fellah") ?>" name="email" id="email" required>                                
 					</div>
 
 					<div class="input_container">
 						<i class="far fa-edit"></i>
-						<input type="password" placeholder="<?php _e("Mot de passe","fellah") ?>" name="mot_passe" id="mot_passe">                                
+						<input type="password" placeholder="<?php _e("Mot de passe","fellah") ?>" name="mot_passe" id="mot_passe" required>                                
 					</div>
 
 					<div class="input_container">
 						<i class="far fa-edit"></i>
-						<input type="password" placeholder="<?php _e("Confirmer le mot de passe","fellah") ?>" name="confirm_mot_passe" id="confirm_mot_passe">                                
+						<input type="password" placeholder="<?php _e("Confirmer le mot de passe","fellah") ?>" name="confirm_mot_passe" id="confirm_mot_passe" required>                                
 					</div>
 
 					<div class="input_container">
@@ -59,8 +59,8 @@
 
 					<button name="creation_compte" id="creation_compte"><?php _e("Create my account", "fellah") ?></button>
 
-					<div class="advert_alert advert_danger"><?php  echo __("wrong acces","fellah") ?></div>
-					<div class="advert_alert advert_success"><?php  echo __("You are connected","fellah") ?></div>
+					<div class="advert_alert advert_danger"><?php _e("wrong acces","fellah") ?></div>
+					<div class="advert_alert advert_success"><?php _e("Vous êtes bien inscrit. A présent, connectez-vous ! ","fellah") ?></div>
 
 				</div>
 			</div>

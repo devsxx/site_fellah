@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-20 09:43+0100\n"
-"PO-Revision-Date: 2018-06-20 15:27+0100\n"
+"POT-Creation-Date: 2018-06-26 12:31+0100\n"
+"PO-Revision-Date: 2018-06-26 12:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -38,29 +38,29 @@ msgid "Create an account. Simple and free !"
 msgstr "انشئ حساب. بسيطة ومجان!"
 
 #: buddypress/members/register.php:32
-#: buddypress/members/single/profile/edit.php:27 functions.php:1277
+#: buddypress/members/single/profile/edit.php:27 functions.php:1201
 msgid "Prénom"
 msgstr "الأسم"
 
 #: buddypress/members/register.php:37
-#: buddypress/members/single/profile/edit.php:32 functions.php:1283
+#: buddypress/members/single/profile/edit.php:32 functions.php:1207
 msgid "Nom"
 msgstr "اسم"
 
-#: buddypress/members/register.php:42 functions.php:1289
+#: buddypress/members/register.php:42 functions.php:1213
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
-#: buddypress/members/register.php:47 functions.php:1256 functions.php:1298
+#: buddypress/members/register.php:47 functions.php:1180 functions.php:1222
 msgid "Mot de passe"
 msgstr "كلمة السر"
 
-#: buddypress/members/register.php:52 functions.php:1304
+#: buddypress/members/register.php:52 functions.php:1228
 msgid "Confirmer le mot de passe"
 msgstr "أكد كلمة المرور"
 
 #: buddypress/members/register.php:57
-#: buddypress/members/single/profile/edit.php:37 functions.php:582
+#: buddypress/members/single/profile/edit.php:37 functions.php:583
 #: wpadverts/single.php:109
 msgid "Phone"
 msgstr "هاتف"
@@ -69,11 +69,11 @@ msgstr "هاتف"
 msgid "Create my account"
 msgstr "إنشيء حسابي"
 
-#: buddypress/members/register.php:62 functions.php:1328
+#: buddypress/members/register.php:62 functions.php:1252
 msgid "wrong acces"
 msgstr ""
 
-#: buddypress/members/register.php:63 functions.php:1329
+#: buddypress/members/register.php:63 functions.php:1253
 msgid "You are connected"
 msgstr "انت متصل"
 
@@ -179,6 +179,10 @@ msgstr ""
 msgid "Member primary navigation"
 msgstr ""
 
+#: buddypress/members/single/home.php:54
+msgid "Sign out"
+msgstr "تسجيل الخروج"
+
 #: buddypress/members/single/plugins.php:22
 #: buddypress/members/single/profile.php:12
 msgid "Member secondary navigation"
@@ -262,7 +266,7 @@ msgstr "حفظ التغييرات"
 msgid "Update denied"
 msgstr "التحديث مرفوض"
 
-#: buddypress/members/single/profile/edit.php:43 functions.php:1084
+#: buddypress/members/single/profile/edit.php:43 functions.php:1018
 msgid "Update successful"
 msgstr "تحديث ناجح"
 
@@ -321,11 +325,11 @@ msgstr "جميع الحقوق محفوظة %d"
 msgid "https://fellah.ma/"
 msgstr ""
 
-#: func/breadcrumb.php:213
+#: func/breadcrumb.php:228
 msgid "Page"
 msgstr "صفحة"
 
-#: func/breadcrumb.php:218
+#: func/breadcrumb.php:233
 msgid "Search results for: "
 msgstr "نتائج البحث عن : "
 
@@ -442,151 +446,151 @@ msgstr ""
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: functions.php:495
+#: functions.php:496
 msgid "Send"
 msgstr "إرسال"
 
-#: functions.php:537
+#: functions.php:538
 msgid "Your message has been sent."
 msgstr "لقد تم إرسال رسالتك."
 
-#: functions.php:542
+#: functions.php:543
 msgid "There are errors in your form."
 msgstr "هناك أخطاء في النموذج الخاص بك."
 
-#: functions.php:575
+#: functions.php:576
 msgid "Send Message"
 msgstr "ارسل رسالة"
 
-#: functions.php:648
+#: functions.php:649
 msgid "1. Votre annonce"
 msgstr "1. إعلانكم"
 
-#: functions.php:665
+#: functions.php:666
 msgid "Type d'annonce"
 msgstr "نوع الاعلان"
 
-#: functions.php:696
+#: functions.php:697
 msgid "Catégorie d'annonce"
 msgstr "عنوان الاعلان"
 
-#: functions.php:712
+#: functions.php:713
 msgid "2. Description"
 msgstr "2. وصف"
 
-#: functions.php:729
+#: functions.php:730
 msgid "Catégorie"
 msgstr "فئة"
 
-#: functions.php:750
+#: functions.php:751
 msgid "Titre de l'annoce"
 msgstr "عنوان الاعلان"
 
-#: functions.php:805
+#: functions.php:770
 msgid "Description"
 msgstr "وصف"
 
-#: functions.php:825
+#: functions.php:790
 msgid "DH - devise du site Fellah.ma"
 msgstr "درهم - عملة الموقع Fellah.ma"
 
-#: functions.php:847
+#: functions.php:812
 msgid "Image"
 msgstr "صوره"
 
-#: functions.php:907
+#: functions.php:840
 msgid "Region and city"
 msgstr "المنطقة والمدينة"
 
-#: functions.php:940
+#: functions.php:873
 msgid "3. Vos coordonnées"
 msgstr "3. التفاصيل الخاصة بك"
 
-#: functions.php:978 functions.php:1031
+#: functions.php:911 functions.php:965
 msgid "Wrong username or password."
 msgstr "اسم مستخدم أو كلمة مرور خاطئة."
 
-#: functions.php:981 functions.php:1036
+#: functions.php:914 functions.php:970
 msgid "Login successful"
 msgstr "تسجيل الدخول ناجح"
 
-#: functions.php:1023
+#: functions.php:957
 msgid "Can't login."
 msgstr "لا يمكن تسجيل الدخول."
 
-#: functions.php:1040
+#: functions.php:974
 msgid "User already exists.  Password inherited."
 msgstr "المستخدم موجود بالفعل. كلمة المرور الموروثة."
 
-#: functions.php:1086
+#: functions.php:1020
 msgid "User don't exists."
 msgstr ""
 
-#: functions.php:1116
+#: functions.php:1058
 msgid "Sous catégorie"
 msgstr "فئة فرعية"
 
-#: functions.php:1163
+#: functions.php:1107
 msgid "Toutes les villes"
 msgstr "جميع المدن"
 
-#: functions.php:1219
+#: functions.php:1143
 msgid "Est-ce que vous avez un compte?"
 msgstr "هل لديك حساب؟"
 
-#: functions.php:1225
+#: functions.php:1149
 msgid "Me connecter"
 msgstr "تسجيل الدخول"
 
-#: functions.php:1228 functions.php:1317
+#: functions.php:1152 functions.php:1241
 msgid "Créer mon compte"
 msgstr "قم بإنشاء حسابي"
 
-#: functions.php:1244
+#: functions.php:1168
 msgid "Connectez-vous"
 msgstr "دخول"
 
-#: functions.php:1250
+#: functions.php:1174
 msgid "Identifiant ou Email"
 msgstr "تسجيل الدخول أو البريد الإلكتروني"
 
-#: functions.php:1310
+#: functions.php:1234
 msgid "Telephone"
 msgstr "هاتف"
 
-#: functions.php:1340 functions.php:1358
+#: functions.php:1264 functions.php:1282
 msgid "Continuer"
 msgstr "استمر"
 
-#: functions.php:1355 functions.php:1373
+#: functions.php:1279 functions.php:1297
 msgid "Retour"
 msgstr "عودة"
 
-#: functions.php:1422
+#: functions.php:1351
 msgid "Toutes les Région"
 msgstr "كل المنطقة"
 
-#: functions.php:1534
+#: functions.php:1465
 msgid "Email : "
 msgstr "البريد الإلكتروني : "
 
-#: functions.php:1535
+#: functions.php:1466
 msgid "First name : "
 msgstr "اسم المستخدم الأول : "
 
-#: functions.php:1536
+#: functions.php:1467
 msgid "Last name : "
 msgstr "اسم المستخدم الأخير : "
 
-#: functions.php:1537
+#: functions.php:1468
 msgid "Phone : "
 msgstr "الهاتف: "
 
-#: functions.php:1553
+#: functions.php:1481
 msgid "Télephone"
 msgstr "هاتف"
 
-#: functions.php:1556
+#: functions.php:1484
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "يرجى إدخال رقم هاتفك."
 
@@ -660,7 +664,7 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/actus_header.php:7 templates/news_agricoles.php:21
+#: template-parts/actus_header.php:7 templates/news_agricoles.php:25
 msgid "Actualités"
 msgstr "أخبار"
 
@@ -703,16 +707,16 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content.php:51
+#: template-parts/content.php:62
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content.php:68
+#: template-parts/content.php:79
 msgid "&laquo Previous"
 msgstr "السابق &laquo"
 
-#: template-parts/content.php:69
+#: template-parts/content.php:80
 msgid "Next &raquo"
 msgstr "&raquo التالي"
 
@@ -724,11 +728,11 @@ msgstr "جديد"
 msgid "Découvrez toutes les dernières annonces"
 msgstr "اكتشاف جميع أحدث الإعلانات"
 
-#: template-parts/single-side.php:26
+#: template-parts/single-side.php:5
 msgid "Categories"
 msgstr "الاقسام"
 
-#: template-parts/single-side.php:44
+#: template-parts/single-side.php:24
 msgid "Search an article"
 msgstr "بحث مقال"
 
@@ -740,7 +744,7 @@ msgstr "أعلى الإعلانات"
 msgid "Sélection des meilleures annonces du moment"
 msgstr "اختيار أفضل الإعلانات في الوقت الحالي"
 
-#: templates/news_agricoles.php:50
+#: templates/news_agricoles.php:54
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 

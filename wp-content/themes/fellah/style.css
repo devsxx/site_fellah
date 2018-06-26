@@ -13610,6 +13610,14 @@ section .section_sousTitle {
   }
 }
 
+#comments .comments-title {
+  display: none;
+}
+
+#comments .comment-list li {
+  padding-bottom: 1.875rem;
+}
+
 form input[type="text"], form input[type="password"], form input[type="email"], form input[type="url"], form input[type="date"], form input[type="month"], form input[type="time"], form input[type="datetime"], form input[type="datetime-local"], form input[type="week"], form input[type="number"], form input[type="search"], form input[type="tel"], form input[type="color"] {
   width: 100%;
   font-size: 0.875rem;
@@ -15921,6 +15929,7 @@ form textarea {
   flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0;
 }
 
 .pub_annonce .adverts-form-input-group-checkbox > div .checkbox {
@@ -16171,6 +16180,10 @@ form textarea {
   margin: 0 1.25rem 0.625rem 0;
   text-align: center !important;
   overflow: hidden;
+}
+
+.pub_annonce .checkbox_2.custom_radio {
+  margin-right: 10px !important;
 }
 
 .pub_annonce .checkbox_2 [type=checkbox], .pub_annonce .checkbox_2 [type=radio] {

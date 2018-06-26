@@ -152,8 +152,8 @@ function fellah_scripts() {
 		'GALLERYMESSAGE' => __('Add your photos to make your ad even more visible. You can download up to 5 images.', 'fellah')
   ));
 
-  	$prices     = adverts_request("price");
-	$price = explode("-", $prices); 
+  	$prices 	= adverts_request("price");
+	$price 	= explode("-", $prices); 
 
 	$slider_min_value = (isset($price[0])) ? $price[0] : 10 ;
 	$slider_max_value = (isset($price[1])) ? $price[1] : 10000000 ;
@@ -203,24 +203,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+function my_function_admin_bar($content) {
+
+	return ( current_user_can("administrator") ) ? $content : false;
+
+}
+
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+
 add_filter( 'get_the_archive_title', function ($title) {
-
 	if ( is_category() ) {
-
-			  $title = single_cat_title( '', false );
-
-		 } elseif ( is_tag() ) {
-
-			  $title = single_tag_title( '', false );
-
-		 } elseif ( is_author() ) {
-
-			  $title = '<span class="vcard">' . get_the_author() . '</span>' ;
-
-		 }
-
+		$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	} elseif ( is_author() ) {
+		$title = '<span class="vcard">' . get_the_author() . '</span>' ;
+	}
 	return $title;
-
 });
 
 function ou_custom_excerpt_length( $length ) { return 30; }
@@ -547,18 +547,18 @@ function _adext_contact_form_custom( $post_id ) {
 			}
 	} else {
 			
-			if( get_current_user_id() > 0 ) {
-				$user = wp_get_current_user();
-				/* @var $user WP_User */
-				
-				$bind = array(
-					"message_name" => $user->display_name,
-					"message_email" => $user->user_email
-				);
-				
-				$form->bind( $bind );
-				
-			}
+		if( get_current_user_id() > 0 ) {
+			$user = wp_get_current_user();
+			/* @var $user WP_User */
+			
+			$bind = array(
+				"message_name" => $user->display_name,
+				"message_email" => $user->user_email
+			);
+			
+			$form->bind( $bind );
+			
+		}
 	}
 	
 	?>
@@ -691,7 +691,7 @@ function my_adverts_form_load( $form ) {
 	);
 
 	$form["field"][] =  array(
-		"name" => "advert_category",
+		"name" => "advert_category", 
 		"type" => "adverts_field_customadvertscategory",
 		"order" => 4, 
 		"label" => __("Catégorie d'annonce", "fellah"),
@@ -762,43 +762,7 @@ function my_adverts_form_load( $form ) {
 			)
 		),
 		"cf_saved" => 1,
-	);
-
-	// $form["field"][] = array(
-	// 	"type" => "adverts_field_text",
-	// 	"placeholder" => __("Phone *", "fellah"),
-	// 	"name" => "adverts_phone", 
-	// 	"label" => "",
-	// 	"meta" => array(
-	// 		"cf_saved" => 1,
-	// 		"cf_builtin" => 1,
-	// 	),
-	// 	"order" => 7,
-	// 	"validator" => array(
-	// 		"0" => array(
-	// 			"name" => "is_required",
-	// 		)
-	// 	),
-	// 	"cf_saved" => 1,
-	// );
-
-	// $form["field"][] = array(
-	// 	"type" => "adverts_field_text",
-	// 	"placeholder" => __("E mail *", "fellah"),
-	// 	"name" => "adverts_email", 
-	// 	"label" => "",
-	// 	"meta" => array(
-	// 		"cf_saved" => 1,
-	// 		"cf_builtin" => 1,
-	// 	),
-	// 	"order" => 8,
-	// 	"validator" => array(
-	// 		"0" => array(
-	// 			"name" => "is_required",
-	// 		)
-	// 	),
-	// 	"cf_saved" => 1,
-	// );
+	); 
 	
 	$form["field"][] =  array(
 		"type" => "adverts_field_textarea",
@@ -868,38 +832,6 @@ function my_adverts_form_load( $form ) {
 
 		"cf_saved" => 1,
 	);
-
-	// $form["field"][] =  array(
-	// 	"type" => "adverts_field_checkbox",
-	// 	"class"  => "checkbox_2",
-	// 	"name" => "localisation",
-	// 	"label" => __('Region and city', 'fellah'),
-	// 	"meta" => array(
-	// 		"cf_builtin" => "",
-	// 		"cf_saved" => 1,
-	// 		"cf_options_fill_method" => "callback",
-	// 		"cf_data_source" => "localisation",
-	// 		"cf_display" => "anywhere",
-	// 		"cf_display_type" => "table-row",
-	// 		"cf_display_as" => "text",
-	// 		"cf_display_icon" => "",
-	// 		"cf_display_style" => "inline-coma",
-	// 	),
-
-	// 	"validator" => array(
-	// 		0 => array(
-	// 			"name" => "is_required"
-	// 		)
-	// 	),
-
-	// 	"rows" => "",
-	// 		"max_choices" => "",
-	// 		"options" => array(
-	// 	),
-	// 	"order" => 12,
-	// 	"cf_saved" => 1,
-	// 	"options_callback" => "custom_fields_localisation_taxonomies_data_source",
-	// );
 
 	$form["field"][] =  array(
 		"name" => "localisation",
@@ -1166,7 +1098,7 @@ function ajaxSousLocalisation(){
 
 			if ( isset($terms) && !empty($terms) ) {
 			$htmls.= '
-			<div class="adverts-control-group adverts-field-custom-sub-localisation adverts-field-name-sub-localisation ajaxed">
+			<div class="adverts-control-group adverts-field-custom-sub-localisation adverts-field-name-sub-localisation ajaxedLocalisation">
 				<div >
 					<div class="container">
 						<div class="row">
@@ -1181,7 +1113,7 @@ function ajaxSousLocalisation(){
 										$i++;
 											
 										$htmls .= '<div class="checkbox">
-										<input type="radio" class="filled-in" name="localisation[]" id="sub_localisation_'.$i.'" value="'.$term->term_id.'"> 
+										<input type="checkbox" class="filled-in class_localisation" name="localisation[]" id="sub_localisation_'.$i.'" value="'.$term->term_id.'"> 
 										<label for="sub_localisation_'.$i.'">'.$term->name.'</label>
 										</div>';
 									} 
@@ -1199,20 +1131,6 @@ function ajaxSousLocalisation(){
 	die();
 }
 
-/**
- * Form checkbox input(s) renderer
- * 
- * Prints (to browser) HTML for <input type="checkox" /> input
- * 
- * $field params:
- * - name: string
- * - value: mixed (scalar or array)
- * - options: array (for example array(array("value"=>1, "text"=>"title")) )
- * 
- * @param array $field
- * @since 0.1
- * @return void
- */
 function adverts_field_login_or_subscribe( $field ) {
     
 	$htmls = '
@@ -1386,16 +1304,17 @@ function adverts_field_prev_next_3( $field ) {
 
 function adverts_field_customadvertscategory( $field ) {
 	
-	 $checked= '';  
-	 $value = $field['value'];
-		$htmls = '';
+	$checked= '';  
+	$value = $field['value'];
+	$htmls = '';
 	
 	$terms = get_terms( array(
 		'taxonomy' => 'advert_category',
 		'hide_empty' => false,
 		'parent'   => 0
 	) );
-		$i = 0;
+	$i = 0; 
+
 	foreach($terms as $term){
 
 		$i++;
@@ -1403,16 +1322,20 @@ function adverts_field_customadvertscategory( $field ) {
 			if (is_array($value)) {
 				if ( in_array( $term->term_id, $value ) ) {
 					$checked = 'checked'; 
+				} else{
+					$checked = ''; 
 				} 
 			}else{
 				if (  $term->term_id == $value  ) {
 					$checked = 'checked'; 
+				}else{
+					$checked = ''; 
 				} 
 			}
 		}
 		
 		$htmls .= '<div class="checkbox">
-		<input type="checkbox" class="filled-in" name="advert_category[]" id="advert_category_'.$i.'" value="'.$term->term_id.'" ' . $checked . ' > 
+		<input type="checkbox" class="filled-in class_advert_category" name="advert_category[]" id="advert_category_'.$i.'" value="'.$term->term_id.'" ' . $checked . ' > 
 		<label for="advert_category_'.$i.'">'.$term->name.'</label>
 		</div>';
 	}
@@ -1435,10 +1358,7 @@ function adverts_field_custom_localisation( $field ) {
 		'hide_empty' => false,
 		'parent'   => 0
 	) );
-		$i = 0;
-		echo '<pre>';
-		var_dump($terms);
-		die();
+		$i = 0; 
 	foreach($terms as $term){
 		$i++;
 		
@@ -1457,7 +1377,7 @@ function adverts_field_custom_localisation( $field ) {
 
 		$htmls .= '
 		<div class="checkbox">
-			<input type="radio" class="filled-in" name="localisation[]" id="localisation_'.$i.'" value="'.$term->term_id.'"> 
+			<input type="checkbox" class="filled-in class_localisation_parent" name="localisation[]" id="localisation_'.$i.'" value="'.$term->term_id.'"> 
 			<label for="localisation_'.$i.'">'.$term->name.'</label>
 		</div>';
 	}
@@ -1546,10 +1466,7 @@ function display_user_color_pref() {
 	echo '<div><strong>' . __('First name : ', 'fellah') . '</strong>' . $current_user->user_firstname . '</div>';
 	echo '<div><strong>' . __('Last name : ', 'fellah') . '</strong>' . $current_user->user_lastname . '</div>'; 
 	echo '<div><strong>' . __('Phone : ', 'fellah') . '</strong>' . @get_user_meta( $current_user->ID , 'telephone', true ) . '</div>';  
-	echo '</div>';
-	// echo '<pre>';
-	// var_dump($current_user);
-	// die();
+	echo '</div>'; 
 }
 
 //Add a mailchimp permission field, on user creation, user profile update
@@ -1575,15 +1492,12 @@ function telephone_field($user) {
 add_action('user_register', 'save_telephone_field');
 add_action('edit_user_profile_update', 'save_telephone_field');
 
-function save_telephone_field($user_id) {
-	 
-
+function save_telephone_field($user_id) { 
 	if (current_user_can("edit_user", $user_id)) {
 		if (isset($_POST["telephone"]) ) {
 			update_user_meta( $user_id, "telephone", $_POST["telephone"] );
 		}
-	}
-	 
+	} 
 }
  
 add_action( 'init', 'oe_modify_taxonomy', 11 );   

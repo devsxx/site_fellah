@@ -536,3 +536,19 @@ section{
 	  opacity: .2
 	}
  }
+
+
+
+#comments{
+
+	.comments-title{
+		display: none;
+	}
+
+	.comment-list{
+		li{
+			padding-bottom: oe_rem(30px);
+		}
+	}
+
+}

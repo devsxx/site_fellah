@@ -1617,6 +1617,7 @@ function adverts_field_gallery($field) {
  * @return void
  */
 function adverts_save_single( $post_id, $key, $value ) {
+    echo 'post_id : ' . $post_id . ', key : ' . $key . ', value : ' . $value . '<br>';
     if( $value == '' ) {
         delete_post_meta( $post_id, $key );
     } else {
