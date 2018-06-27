@@ -114,7 +114,7 @@ class Personalize_Login_Plugin {
 			}
 
 			// The rest are redirected to the login page
-			$login_url = home_url( 'member-login' );
+			$login_url = home_url( 'inscription' );
 			if ( ! empty( $_REQUEST['redirect_to'] ) ) {
 				$login_url = add_query_arg( 'redirect_to', $_REQUEST['redirect_to'], $login_url );
 			}
@@ -144,7 +144,7 @@ class Personalize_Login_Plugin {
 			if ( is_wp_error( $user ) ) {
 				$error_codes = join( ',', $user->get_error_codes() );
 
-				$login_url = home_url( 'member-login' );
+				$login_url = home_url( 'inscription' );
 				$login_url = add_query_arg( 'login', $error_codes, $login_url );
 
 				wp_redirect( $login_url );
@@ -190,7 +190,7 @@ class Personalize_Login_Plugin {
 	 * Redirect to custom login page after the user has been logged out.
 	 */
 	public function redirect_after_logout() {
-		$redirect_url = home_url( 'member-login?logged_out=true' );
+		$redirect_url = home_url( 'inscription?logged_out=true' );
 		wp_redirect( $redirect_url );
 		exit;
 	}
@@ -236,9 +236,9 @@ class Personalize_Login_Plugin {
 			$user = check_password_reset_key( $_REQUEST['key'], $_REQUEST['login'] );
 			if ( ! $user || is_wp_error( $user ) ) {
 				if ( $user && $user->get_error_code() === 'expired_key' ) {
-					wp_redirect( home_url( 'member-login?login=expiredkey' ) );
+					wp_redirect( home_url( 'inscription?login=expiredkey' ) );
 				} else {
-					wp_redirect( home_url( 'member-login?login=invalidkey' ) );
+					wp_redirect( home_url( 'inscription?login=invalidkey' ) );
 				}
 				exit;
 			}
@@ -481,7 +481,7 @@ class Personalize_Login_Plugin {
 					$redirect_url = add_query_arg( 'register-errors', $errors, $redirect_url );
 				} else {
 					// Success, redirect to login page.
-					$redirect_url = home_url( 'member-login' );
+					$redirect_url = home_url( 'inscription' );
 					$redirect_url = add_query_arg( 'registered', $email, $redirect_url );
 				}
 			}
@@ -527,9 +527,9 @@ class Personalize_Login_Plugin {
 
 			if ( ! $user || is_wp_error( $user ) ) {
 				if ( $user && $user->get_error_code() === 'expired_key' ) {
-					wp_redirect( home_url( 'member-login?login=expiredkey' ) );
+					wp_redirect( home_url( 'inscription?login=expiredkey' ) );
 				} else {
-					wp_redirect( home_url( 'member-login?login=invalidkey' ) );
+					wp_redirect( home_url( 'inscription?login=invalidkey' ) );
 				}
 				exit;
 			}
