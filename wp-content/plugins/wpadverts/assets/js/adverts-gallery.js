@@ -254,17 +254,22 @@ WPADVERTS.File.Uploader.Plupload.prototype.BeforeUpload = function(up,file) {
 };
 
 WPADVERTS.File.Uploader.Plupload.prototype.FilesAdded = function(up, files){
+    
     var maxfiles = 5;
     if(up.files.length > maxfiles ){
         up.splice(maxfiles);
-        alert('Pas plus de ' + maxfiles + ' photo(s) ' + up.files.length);
-    }else{
-        jQuery.each(files, jQuery.proxy(this.engine.FileAdded, this), up);
+        alert('Pas plus de ' + maxfiles + ' photo(s) ');
     }
     
+    if (up.files.length === maxfiles) {
+        jQuery('#adverts-plupload-upload-ui-gallery .adverts-gallery').hide("slow"); // provided there is only one #uploader_browse on page
+    }
 
-    up.refresh();
-    up.start();
+    jQuery.each(files, jQuery.proxy(this.engine.FileAdded, this), up);
+
+    // console.log(up); 
+    up.refresh(); 
+    up.start(); 
 };
 
 WPADVERTS.File.Uploader.Plupload.prototype.FileAdded = function(index, file) {

@@ -17176,15 +17176,6 @@ div.adverts-flash-messages {
   margin: 0;
 }
 
-#swipebox-slider .slide {
-  height: 100%;
-  width: 68% !important;
-  line-height: 1px;
-  text-align: center;
-  display: block !important;
-  margin: 0 auto;
-}
-
 .adverts-pagination {
   margin: 2.5rem 0;
   text-align: left !important;
