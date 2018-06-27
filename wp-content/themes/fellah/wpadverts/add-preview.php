@@ -7,18 +7,15 @@
             <form action="" method="post" style="display:inline">
                 <input type="hidden" name="_adverts_action" value="" />
                 <input type="hidden" name="_post_id" id="_post_id" value="<?php echo esc_attr($post_id) ?>" />
-                <input type="submit" value="<?php _e("Edit ad", "fellah") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
+                <input type="submit" value="<?php _e("Edit ad", "fellah") ?>" class="adverts-cancel-unload" />
             </form>
 
             <form action="" method="post" style="display:inline">
                 <input type="hidden" name="_adverts_action" value="save" />
                 <input type="hidden" name="_post_id" id="_post_id" value="<?php echo esc_attr($post_id) ?>" />
-                <input type="submit" value="<?php _e("Publish ad", "fellah") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
+                <input type="submit" value="<?php _e("Publish ad", "fellah") ?>" class="adverts-cancel-unload" />
             </form>
             
         </div>
     </div>
 </div>
-
-
-

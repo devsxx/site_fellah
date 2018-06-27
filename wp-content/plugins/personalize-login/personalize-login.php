@@ -503,8 +503,8 @@ class Personalize_Login_Plugin {
 				$redirect_url = add_query_arg( 'errors', join( ',', $errors->get_error_codes() ), $redirect_url );
 			} else {
 				// Email sent
-				$redirect_url = home_url( 'member-login' );
-				$redirect_url = add_query_arg( 'checkemail', 'confirm', $redirect_url );
+				$redirect_url = home_url( 'inscription' );
+				// $redirect_url = add_query_arg( 'checkemail', 'confirm', $redirect_url );
 				if ( ! empty( $_REQUEST['redirect_to'] ) ) {
 					$redirect_url = $_REQUEST['redirect_to'];
 				}
@@ -562,7 +562,7 @@ class Personalize_Login_Plugin {
 
 				// Parameter checks OK, reset password
 				reset_password( $user, $_POST['pass1'] );
-				wp_redirect( home_url( 'member-login?password=changed' ) );
+				wp_redirect( home_url( 'inscription' ) );
 			} else {
 				echo "Invalid request.";
 			}
