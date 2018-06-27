@@ -180,7 +180,7 @@ class Personalize_Login_Plugin {
 			}
 		} else {
 			// Non-admin users always go to their account page after login
-			$redirect_url = home_url( 'member-account' );
+			$redirect_url = home_url( '/' );
 		}
 
 		return wp_validate_redirect( $redirect_url, home_url() );
@@ -695,7 +695,7 @@ class Personalize_Login_Plugin {
 				wp_redirect( admin_url() );
 			}
 		} else {
-			wp_redirect( home_url( 'member-account' ) );
+			wp_redirect( home_url( '/' ) );
 		}
 	}
 
