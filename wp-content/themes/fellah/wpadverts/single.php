@@ -143,7 +143,7 @@ wp_enqueue_script( 'adverts-frontend' );
         <div class="row">
             <div class="col-md-12 col-lg-7">
                 <?php // do_action( "adverts_tpl_single_bottom", $post_id ) ?> 
-                <?php include( realpath(dirname(__FILE__).'/..').'/template-parts/ads_contact_form.php' );  ?>
+                <?php // include( realpath(dirname(__FILE__).'/..').'/template-parts/ads_contact_form.php' );  ?>
             </div>
         </div>
     </div>

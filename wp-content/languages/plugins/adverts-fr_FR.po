@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Adverts\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
-"POT-Creation-Date: 2018-06-25 12:17+0100\n"
-"PO-Revision-Date: 2018-06-25 12:23+0100\n"
+"POT-Creation-Date: 2018-06-27 12:10+0100\n"
+"PO-Revision-Date: 2018-06-27 12:16+0100\n"
 "Last-Translator: admin <daniel@pomzed.ch>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -393,7 +393,6 @@ msgid "max. height"
 msgstr ""
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:559
-#, fuzzy
 msgid "crop image"
 msgstr "Recadrer l’image"
 
@@ -1163,10 +1162,6 @@ msgid "Whoops, the provided date is invalid."
 msgstr "Oups, la date entré n'est pas valide."
 
 #: ../../plugins/wpadverts/includes/admin-post-type.php:202
-#, fuzzy
-#| msgid ""
-#| "Post updated, but <strong>cannot be published</strong> since some "
-#| "required data is not filled properly."
 msgid "Post updated, but some required data is not filled properly."
 msgstr ""
 "Post mis à jour, mais ne peut pas être publié tant que certaines données"
@@ -1306,7 +1301,7 @@ msgstr "Fichier joint n'existe pas."
 
 #: ../../plugins/wpadverts/includes/ajax.php:280
 msgid "Incorrect attachment ID."
-msgstr "ID incorrect"
+msgstr "ID incorrect."
 
 #: ../../plugins/wpadverts/includes/ajax.php:284
 msgid "File could not be deleted."
@@ -1894,7 +1889,7 @@ msgstr "Fichiers autorisés"
 
 #: ../../plugins/wpadverts/includes/gallery.php:78
 msgid "Drop files here to add them."
-msgstr ""
+msgstr "Glisser et déposer vos photos."
 
 #: ../../plugins/wpadverts/includes/gallery.php:79
 msgid "browse files ..."

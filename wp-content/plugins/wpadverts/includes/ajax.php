@@ -54,7 +54,7 @@ function adverts_author_suggest() {
  * @since 0.1
  * @return void
  */
-function adverts_gallery_upload() {
+function adverts_gallery_upload() { 
 
     if( ! check_ajax_referer( 'adverts-gallery', '_ajax_nonce', false ) ) {
         echo json_encode( array( 
@@ -119,7 +119,7 @@ function adverts_gallery_upload() {
 
     // Create post if does not exist
     if( $parent_post_id < 1 ) {
-        
+         
         add_filter("post_type_link", "__return_empty_string");
         
         $parent_post_id = wp_insert_post( apply_filters( "adverts_insert_post", array( 

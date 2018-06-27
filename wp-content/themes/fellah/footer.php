@@ -28,9 +28,6 @@
 						<span class="sprt"> | </span>
 						<?php $ID = 33;  ?>
 						<a href="<?php the_permalink( $ID  ); ?>" class="uppercase"><?php echo get_the_title( $ID ); ?></a>
-						<span class="sprt"> | </span>
-						<?php $ID = 2362;  ?>
-						<a href="<?php the_permalink( $ID  ); ?>" class="uppercase"><?php echo get_the_title( $ID ); ?></a>
 					</div>
 				</div>
 				<div class="col-md-2">

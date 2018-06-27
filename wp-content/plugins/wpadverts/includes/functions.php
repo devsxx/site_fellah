@@ -1118,9 +1118,9 @@ function adverts_filter_number( $data ) {
  */
 function adverts_field_hidden( $field ) {
     $html = new Adverts_Html("input", array(
-        "type" => "hidden",
-        "name" => $field["name"],
-        "id" => $field["name"],
+        "type"  => "hidden",
+        "name"  => $field["name"],
+        "id"    => $field["name"],
         "class" => isset($field["class"]) ? $field["class"] : null,
         "value" => isset($field["value"]) ? $field["value"] : "",
     ));
@@ -1616,8 +1616,7 @@ function adverts_field_gallery($field) {
  * @param string $value Meta value
  * @return void
  */
-function adverts_save_single( $post_id, $key, $value ) {
-    echo 'post_id : ' . $post_id . ', key : ' . $key . ', value : ' . $value . '<br>';
+function adverts_save_single( $post_id, $key, $value ) { 
     if( $value == '' ) {
         delete_post_meta( $post_id, $key );
     } else {

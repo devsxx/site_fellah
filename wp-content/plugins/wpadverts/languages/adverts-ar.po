@@ -4,12 +4,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Adverts 1.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
-"POT-Creation-Date: 2018-05-30 11:28+0000\n"
+"POT-Creation-Date: 2018-06-27 12:14+0100\n"
+"PO-Revision-Date: 2018-06-27 12:14+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-14 14:41+0000\n"
-"Language-Team: \n"
 "X-Generator: Poedit 2.0.8\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
@@ -19,8 +21,6 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
-"Last-Translator: \n"
-"Language: ar\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: addons/bank-transfer/admin/options.php:15
@@ -99,13 +99,16 @@ msgid "Contact Form"
 msgstr "نموذج الاتصال"
 
 #: addons/contact-form/contact-form.php:60
-#: addons/contact-form/contact-form.php:138
-msgid "Send Message"
-msgstr "ارسل رسالة"
+msgid "Send"
+msgstr "إرسال"
 
 #: addons/contact-form/contact-form.php:103
 msgid "Your message has been sent."
 msgstr "لقد تم إرسال رسالتك."
+
+#: addons/contact-form/contact-form.php:138
+msgid "Send Message"
+msgstr "ارسل رسالة"
 
 #: addons/contact-form/contact-form.php:145 includes/functions.php:2417
 msgid "Phone"
@@ -599,14 +602,14 @@ msgstr ""
 #: includes/admin-post-type.php:548 includes/class-widget-ads.php:77
 #: includes/class-widget-ads.php:133 includes/class-widget-categories.php:76
 #: includes/defaults.php:96 includes/gallery.php:304
-#: includes/shortcodes.php:105
+#: includes/shortcodes.php:106
 msgid "Title"
 msgstr "لقب"
 
 #: addons/payments/admin/pricing-list.php:49
 #: addons/payments/includes/admin-pages.php:681
 #: includes/admin-post-type.php:549 includes/class-widget-ads.php:138
-#: includes/defaults.php:142 includes/shortcodes.php:98
+#: includes/defaults.php:142 includes/shortcodes.php:99
 msgid "Price"
 msgstr "السعر"
 
@@ -879,7 +882,7 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: addons/payments/payments.php:439 includes/shortcodes.php:438
+#: addons/payments/payments.php:439 includes/shortcodes.php:456
 msgid "Thank you for submitting your ad!"
 msgstr ""
 
@@ -943,7 +946,7 @@ msgstr ""
 
 #: admin/options.php:27 admin/options.php:35 admin/options.php:49
 msgid "Settings"
-msgstr ""
+msgstr "معلومات الاتصال"
 
 #: admin/options.php:34
 msgid "Addon Uploaded and Activated"
@@ -1411,8 +1414,8 @@ msgstr ""
 msgid "Sort By"
 msgstr ""
 
-#: includes/class-widget-ads.php:128 includes/shortcodes.php:91
-#: includes/shortcodes.php:114 includes/shortcodes.php:115
+#: includes/class-widget-ads.php:128 includes/shortcodes.php:92
+#: includes/shortcodes.php:115 includes/shortcodes.php:116
 msgid "Publish Date"
 msgstr ""
 
@@ -1640,149 +1643,149 @@ msgstr ""
 msgid "Uploaded file is NOT an image"
 msgstr ""
 
-#: includes/functions.php:427
+#: includes/functions.php:428
 #, php-format
 msgid "Category: %s"
 msgstr "الفئة: %s"
 
-#: includes/functions.php:1559
+#: includes/functions.php:1560
 #, php-format
 msgid ""
 "You are posting as <strong>%1$s</strong>. <br/>If you want to use a "
 "different account, please <a href=\"%2$s\">logout</a>."
 msgstr ""
 
-#: includes/functions.php:1564
+#: includes/functions.php:1565
 #, php-format
 msgid ""
 "Create an account for me so I can manage all my ads from one place (password "
 "will be emailed to you) or <a href=\"%s\">Sign In</a>"
 msgstr ""
 
-#: includes/functions.php:1779
+#: includes/functions.php:1780
 msgid "Redirecting"
 msgstr ""
 
-#: includes/functions.php:1780
+#: includes/functions.php:1781
 #, php-format
 msgid ""
 "Your are being redirected to Edit page. <a href=\"%s\">Click here</a> if it "
 "is taking to long. "
 msgstr ""
 
-#: includes/functions.php:1949
+#: includes/functions.php:1950
 msgid "US Dollars"
 msgstr ""
 
-#: includes/functions.php:1950
+#: includes/functions.php:1951
 msgid "Euros"
 msgstr ""
 
-#: includes/functions.php:1951
+#: includes/functions.php:1952
 msgid "Pounds Sterling"
 msgstr ""
 
-#: includes/functions.php:1952
+#: includes/functions.php:1953
 msgid "Australian Dollars"
 msgstr ""
 
-#: includes/functions.php:1953
+#: includes/functions.php:1954
 msgid "Brazilian Real"
 msgstr ""
 
-#: includes/functions.php:1954
+#: includes/functions.php:1955
 msgid "Canadian Dollars"
 msgstr ""
 
-#: includes/functions.php:1955
+#: includes/functions.php:1956
 msgid "Czech Koruna"
 msgstr ""
 
-#: includes/functions.php:1956
+#: includes/functions.php:1957
 msgid "Danish Krone"
 msgstr ""
 
-#: includes/functions.php:1957
+#: includes/functions.php:1958
 msgid "Hong Kong Dollar"
 msgstr ""
 
-#: includes/functions.php:1958
+#: includes/functions.php:1959
 msgid "Hungarian Forint"
 msgstr ""
 
-#: includes/functions.php:1959
+#: includes/functions.php:1960
 msgid "Israeli Shekel"
 msgstr ""
 
-#: includes/functions.php:1960
+#: includes/functions.php:1961
 msgid "Japanese Yen"
 msgstr ""
 
-#: includes/functions.php:1961
+#: includes/functions.php:1962
 msgid "Malaysian Ringgits"
 msgstr ""
 
-#: includes/functions.php:1962
+#: includes/functions.php:1963
 msgid "Mexican Peso"
 msgstr ""
 
-#: includes/functions.php:1963
+#: includes/functions.php:1964
 msgid "New Zealand Dollar"
 msgstr ""
 
-#: includes/functions.php:1964
+#: includes/functions.php:1965
 msgid "Norwegian Krone"
 msgstr ""
 
-#: includes/functions.php:1965
+#: includes/functions.php:1966
 msgid "Philippine Pesos"
 msgstr ""
 
-#: includes/functions.php:1966
+#: includes/functions.php:1967
 msgid "Polish Zloty"
 msgstr ""
 
-#: includes/functions.php:1967
+#: includes/functions.php:1968
 msgid "Singapore Dollar"
 msgstr ""
 
-#: includes/functions.php:1968
+#: includes/functions.php:1969
 msgid "Swedish Krona"
 msgstr ""
 
-#: includes/functions.php:1969
+#: includes/functions.php:1970
 msgid "Swiss Franc"
 msgstr ""
 
-#: includes/functions.php:1970
+#: includes/functions.php:1971
 msgid "Taiwan New Dollars"
 msgstr ""
 
-#: includes/functions.php:1971
+#: includes/functions.php:1972
 msgid "Thai Baht"
 msgstr ""
 
-#: includes/functions.php:1972
+#: includes/functions.php:1973
 msgid "Indian Rupee"
 msgstr ""
 
-#: includes/functions.php:1973
+#: includes/functions.php:1974
 msgid "Turkish Lira"
 msgstr ""
 
-#: includes/functions.php:1974
+#: includes/functions.php:1975
 msgid "Iranian Rial"
 msgstr ""
 
-#: includes/functions.php:1975
+#: includes/functions.php:1976
 msgid "Russian Rubles"
 msgstr ""
 
-#: includes/functions.php:1976
+#: includes/functions.php:1977
 msgid "South African Rand"
 msgstr ""
 
-#: includes/functions.php:1977
+#: includes/functions.php:1978
 msgid "Sri Lankan Rupees"
 msgstr ""
 
@@ -1818,7 +1821,7 @@ msgstr ""
 
 #: includes/gallery.php:79
 msgid "browse files ..."
-msgstr ""
+msgstr "تصفح ملفات ..."
 
 #: includes/gallery.php:191 includes/gallery.php:331
 msgid "Video"
@@ -2030,64 +2033,64 @@ msgstr ""
 msgid "Image resized to %d x %d - the image visible in upload preview."
 msgstr ""
 
-#: includes/shortcodes.php:93 includes/shortcodes.php:115
+#: includes/shortcodes.php:94 includes/shortcodes.php:116
 msgid "Newest First"
 msgstr ""
 
-#: includes/shortcodes.php:94
+#: includes/shortcodes.php:95
 msgid "Oldest First"
 msgstr ""
 
-#: includes/shortcodes.php:100
+#: includes/shortcodes.php:101
 msgid "Cheapest First"
 msgstr ""
 
-#: includes/shortcodes.php:101
+#: includes/shortcodes.php:102
 msgid "Most Expensive First"
 msgstr ""
 
-#: includes/shortcodes.php:107
+#: includes/shortcodes.php:108
 msgid "From A to Z"
 msgstr ""
 
-#: includes/shortcodes.php:108
+#: includes/shortcodes.php:109
 msgid "From Z to A"
 msgstr ""
 
-#: includes/shortcodes.php:115 includes/shortcodes.php:145
+#: includes/shortcodes.php:116 includes/shortcodes.php:146
 #, php-format
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: includes/shortcodes.php:273 includes/shortcodes.php:484
+#: includes/shortcodes.php:291 includes/shortcodes.php:502
 #, php-format
 msgid ""
 "Only logged in users can access this page. <a href=\"%1$s\">Login</a> or <a "
 "href=\"%2$s\">Register</a>."
 msgstr ""
 
-#: includes/shortcodes.php:416
+#: includes/shortcodes.php:434
 msgid "There are errors in your form. Please correct them before proceeding."
 msgstr ""
 
-#: includes/shortcodes.php:607
+#: includes/shortcodes.php:625
 msgid "Ad does not exist."
 msgstr "الإعلان غير موجود."
 
-#: includes/shortcodes.php:617
+#: includes/shortcodes.php:635
 msgid "You do not own this Ad."
 msgstr "أنت لا تملك هذا الإعلان."
 
-#: includes/shortcodes.php:629
+#: includes/shortcodes.php:647
 #, php-format
 msgid "Incorrect post status [%s]."
 msgstr ""
 
-#: includes/shortcodes.php:686
+#: includes/shortcodes.php:704
 msgid "Post has been updated."
 msgstr "تم تحديث المشاركة."
 
-#: includes/shortcodes.php:693
+#: includes/shortcodes.php:711
 msgid "Cannot update. There are errors in your form."
 msgstr ""
 

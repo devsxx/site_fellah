@@ -579,41 +579,9 @@ function my_adverts_form_load( $form ) {
         return $form;
 	}
 
-	$form["field"][] = array(
-		"type" => "adverts_field_hidden",
-		"name" => "_post_id",
-		"label" => "",
-		"meta" => array(
-					"cf_saved" => 1,
-					"cf_builtin" => 1,
-		),
-		"order" => 0,
-		"cf_saved" => 1
-	);
-    
-	$form["field"][] = array(
-		"type" => "adverts_field_hidden",
-		"name" => "_post_id",
-		"label" => "",
-		"meta" => array(
-			"cf_saved" => 1,
-			"cf_builtin" => 1,
-		),
-		"order" => 0,
-		"cf_saved" => 1,
-	);
-
-	$form["field"][] = array(
-		"type" => "adverts_field_hidden",
-		"name" => "_adverts_action",
-		"label" => "",
-		"meta" => array(
-			"cf_saved" => 1,
-			"cf_builtin" => 1,
-		),
-		"order" => 1,
-		"cf_saved" => 1
-	);
+	// global $wpdb;
+	// $last = $wpdb->get_row("SHOW TABLE STATUS LIKE 'fe_posts'");
+	// $lastid = $last->Auto_increment; 
 
 	$form["field"][] = array(
 		"type" => "adverts_field_header",
@@ -812,23 +780,6 @@ function my_adverts_form_load( $form ) {
 		"label" => __('Region and city', 'fellah'),
 	);
 
-	$form["field"][] =  array(
-			"name" => "_form_scheme",
-			"type" => "adverts_field_hidden",
-			"order" => 0,
-			"label" => "",
-			"value" => 1,
-			"class" => "wpadverts-plupload-multipart-default",
-	);
-
-	$form["field"][] =  array(
-			"name" => "_form_scheme_id",
-			"type" => "adverts_field_hidden",
-			"order" => 0,
-			"label" => "",
-			"class" => "wpadverts-plupload-multipart-default",
-	);
-
 	if(!is_admin()){
 		$form["field"][] =  array(
 			"name" => "prev_next",
@@ -910,47 +861,57 @@ function ajax_signup(){
 	$result = array();
 	$etat = true;
 
-	if($mot_passe == $confirm_mot_passe){
 
-		$user_id = username_exists( $email );
-		if ( !$user_id and email_exists($email) == false ) {
-			$user_id = wp_create_user( $email, $mot_passe, $email );
-			update_user_meta($user_id, 'telephone', $telephone);
-			$user_id = wp_update_user( array( 
-				'ID' => $user_id, 
-				'user_login' => $prenom,
-				'first_name' => $prenom,
-				'last_name' => $nom,
-				'role' => 'subscriber'
-			) );
-			if ( is_wp_error( $user_id ) ) {
-				$error_code = 1;
-				$etat = false;
-				$message = __("Can't login.","fellah");
-			} else {
-				$info = array();
-				$info['user_login'] = $email;
-				$info['user_password'] = $mot_passe;
-				$info['remember'] = true;
-				$user_signon = wp_signon( $info, false );
-				if ( is_wp_error($user_signon) ){
-					$message = __('Wrong username or password.', 'fellah');
-					$error_code = 4; 
+	if( $prenom == "" || $nom == "" || $email == "" || $mot_passe == "" ){
+		$error_code = 11;
+		$etat = false;
+		$message = __("Un ou plusieurs champs obligatoires ne sont pas remplis !","fellah");
+	}else{
+
+		if($mot_passe == $confirm_mot_passe){
+
+			$user_id = username_exists( $email );
+			if ( !$user_id and email_exists($email) == false ) {
+				$user_id = wp_create_user( $email, $mot_passe, $email );
+				update_user_meta($user_id, 'telephone', $telephone);
+				$user_id = wp_update_user( array( 
+					'ID' => $user_id, 
+					'user_login' => $prenom,
+					'first_name' => $prenom,
+					'last_name' => $nom,
+					'role' => 'subscriber'
+				) );
+				if ( is_wp_error( $user_id ) ) {
+					$error_code = 1;
 					$etat = false;
+					$message = __("Can't logins.","fellah");
 				} else {
-					$etat = true;
-					$message = __('Login successful', 'fellah');
+					$info = array();
+					$info['user_login'] = $email;
+					$info['user_password'] = $mot_passe;
+					$info['remember'] = true;
+					$user_signon = wp_signon( $info, false );
+					if ( is_wp_error($user_signon) ){
+						$message = __('Wrong username or password.', 'fellah');
+						$error_code = 4; 
+						$etat = false;
+					} else {
+						$etat = true;
+						$message = __('Vous êtes bien inscrit. A présent, connectez-vous !', 'fellah');
+						
+					}
 				}
+			} else {
+				$message = __('User already exists.', 'fellah');
+				$error_code = 3;
+				$etat = false;
 			}
-		} else {
-			$message = __('User already exists.  Password inherited.', 'fellah');
-			$error_code = 3;
+
+		}else{
+			$message = __('Les 2 mots de passe sont différents!', 'fellah');
+			$error_code = 2;
 			$etat = false;
 		}
-
-	}else{
-		$error_code = 2;
-		$etat = false;
 	}
 
 	$result =	array(
@@ -964,21 +925,24 @@ function ajax_signup(){
 	
 }
 
-
 add_action( 'wp_ajax_nopriv_updateAccount', 'ajax_update_account' );
 add_action( 'wp_ajax_updateAccount', 'ajax_update_account' );
 function ajax_update_account(){
 
 	$prenom = $_POST['prenom'];
 	$nom = $_POST['nom'];
-	$telephone = $_POST['telephone'];
-	$email = $_POST['email']; 
+	$telephone = $_POST['telephone']; 
 
 	$error_code = 0;
 
 	$result = array();
 	$etat = true;
  
+	if( $prenom == "" || $nom == "" ){
+		$error_code = 11;
+		$etat = false;
+		$message = __("Un ou plusieurs champs obligatoires ne sont pas remplis !","fellah");
+	}else{
 		$user_id = bp_loggedin_user_id();
 		if ( $user_id ) { 
 			update_user_meta($user_id, 'telephone', $telephone);
@@ -993,7 +957,7 @@ function ajax_update_account(){
 			$error_code = 3;
 			$etat = false;
 		}
- 
+	}
 
 	$result =	array(
 		'etat' => $etat,
@@ -1078,7 +1042,7 @@ function ajaxSousLocalisation(){
 								<label for="sub-localisation"> </label>
 								<div id="show_localisation" class="show_localisation"><i class="fas fa-map-pin"></i> ' . __('Toutes les villes', 'fellah') . ' </div>
 								<div class="adverts-form-input-group adverts-form-input-group-checkbox-localisation adverts-field-rows-0">
-								<div class="adverts-control-container">'; 
+								<div class="adverts-control-container style-4">'; 
 									
 									
 									foreach($terms as $term){
@@ -1153,7 +1117,7 @@ function adverts_field_login_or_subscribe( $field ) {
 							</div>
 						</div>
 						<div class="col-md-1">  
-							<button name="connect" id="connect">Ok</button>
+							<button name="connect" id="connect">' . __('Ok','fellah') . '</button>
 						</div> 
 					</div>
 				</div>
@@ -1165,7 +1129,7 @@ function adverts_field_login_or_subscribe( $field ) {
 
 					<div class="row">
 						<div class="col-md-12"> 
-							<label>Créer un compte</label>
+							<label>' . __('Create an account', 'fellah') . '</label>
 						</div>
 						<div class="col-md-3">
 							<div class="input_container">
@@ -1322,7 +1286,7 @@ function adverts_field_custom_localisation( $field ) {
 	 $value = $field['value'];
 	$htmls = '<div id="show_localisation_region" class="show_localisation"><i class="fas fa-map-pin"></i> ' . __('Toutes les Région', 'fellah') . ' </div>';
 	
-	$htmls .= '<div class="adverts-control-container-region">';
+	$htmls .= '<div class="adverts-control-container-region style-4">';
 	$terms = get_terms( array(
 		'taxonomy' => 'localisation',
 		'orderby' => 'name', 

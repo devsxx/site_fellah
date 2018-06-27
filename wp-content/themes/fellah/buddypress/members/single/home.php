@@ -51,7 +51,7 @@
 							 * @since 1.2.4
 							 */
 							do_action( 'bp_member_options_nav' ); ?>
-							<li><a href="<?php bloginfo( 'url' ) ?>/wp-login.php?action=logout"><?php _e('Sign out','fellah'); ?></a></li>
+							<li><a href="<?php echo wp_logout_url('/') ?>"><?php _e('Sign out','fellah'); ?></a></li>
 						</ul>
 					</div>
 				</div><!-- #item-nav -->

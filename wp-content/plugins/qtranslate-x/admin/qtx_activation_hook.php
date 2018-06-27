@@ -732,8 +732,8 @@ function qtranxf_admin_notice_deactivated($plugin)
 {
 	$plugin_file=WP_CONTENT_DIR.'/plugins/'.$plugin;
 	$plugin_data=get_plugin_data( plugin_file, false, true );
-echo "qtranxf_admin_notice_deactivated: $plugin";
-var_dump($plugin_data);
+	echo "qtranxf_admin_notice_deactivated: $plugin";
+	var_dump($plugin_data);
 	if(!$plugin_data) return;
 	$nm='<a href="https://wordpress.org/plugins/'.dirname($plugin).'/">'.$plugin_data['Name'].'</a>';
 	echo printf(__('Plugin qTranslate&#8209;X deactivated plugin %s since they cannot run simultaneously. You may import compatible settings from %s to qTranslate&#8209;X on Settings/"<a href="%s">Languages</a>" configuration page.','qtranslate'),$nm,$nm,admin_url('options-general.php?page=qtranslate-x'));

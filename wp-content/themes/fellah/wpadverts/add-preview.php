@@ -1,22 +1,24 @@
-<?php include apply_filters( "adverts_template_load", ADVERTS_PATH . 'templates/single.php' ); ?>
-
-<hr/>
+<?php include apply_filters( "adverts_template_load", ADVERTS_PATH . 'templates/single_2.php' ); ?>
+ 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             
-            <form action="" method="post" style="display:inline">
+            <!-- <form action="" method="post" style="display:inline">
                 <input type="hidden" name="_adverts_action" value="" />
                 <input type="hidden" name="_post_id" id="_post_id" value="<?php echo esc_attr($post_id) ?>" />
                 <input type="submit" value="<?php _e("Edit Listing", "adverts") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
-            </form>
+            </form> -->
 
             <form action="" method="post" style="display:inline">
                 <input type="hidden" name="_adverts_action" value="save" />
                 <input type="hidden" name="_post_id" id="_post_id" value="<?php echo esc_attr($post_id) ?>" />
-                <input type="submit" value="<?php _e("Publish Listing", "adverts") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
+                <input type="submit" value="<?php _e("Publish ad", "adverts") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
             </form>
             
         </div>
     </div>
 </div>
+
+
+

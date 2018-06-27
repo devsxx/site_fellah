@@ -254,7 +254,14 @@ WPADVERTS.File.Uploader.Plupload.prototype.BeforeUpload = function(up,file) {
 };
 
 WPADVERTS.File.Uploader.Plupload.prototype.FilesAdded = function(up, files){
-    jQuery.each(files, jQuery.proxy(this.engine.FileAdded, this), up);
+    var maxfiles = 5;
+    if(up.files.length > maxfiles ){
+        up.splice(maxfiles);
+        alert('Pas plus de ' + maxfiles + ' photo(s) ' + up.files.length);
+    }else{
+        jQuery.each(files, jQuery.proxy(this.engine.FileAdded, this), up);
+    }
+    
 
     up.refresh();
     up.start();

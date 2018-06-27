@@ -59,8 +59,8 @@
 
 					<button name="creation_compte" id="creation_compte"><?php _e("Create my account", "fellah") ?></button>
 
-					<div class="advert_alert advert_danger"><?php _e("wrong acces","fellah") ?></div>
-					<div class="advert_alert advert_success"><?php _e("Vous êtes bien inscrit. A présent, connectez-vous ! ","fellah") ?></div>
+					<div class="advert_alert advert_danger"> </div>
+					<div class="advert_alert advert_success"> </div>
 
 				</div>
 			</div>
