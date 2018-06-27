@@ -8,6 +8,7 @@
 
 ?>
 
+
 <div id="buddypresss">
 
 	<div class="buddypress_form">
