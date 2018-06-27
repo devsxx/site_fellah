@@ -18,7 +18,7 @@
 					<?php
 					_e(
 						"Enter your email address and we'll send you a link you can use to pick a new password.",
-						'personalize_login'
+						'personalize-login'
 					);
 					?>
 				</p>

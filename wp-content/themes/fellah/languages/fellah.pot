@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-27 12:09+0100\n"
+"POT-Creation-Date: 2018-06-27 15:00+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,24 +36,24 @@ msgid "Create an account. Simple and free !"
 msgstr ""
 
 #: buddypress/members/register.php:32
-#: buddypress/members/single/profile/edit.php:27 functions.php:1187
+#: buddypress/members/single/profile/edit.php:27 functions.php:1137
 msgid "Prénom"
 msgstr ""
 
 #: buddypress/members/register.php:37
-#: buddypress/members/single/profile/edit.php:32 functions.php:1193
+#: buddypress/members/single/profile/edit.php:32 functions.php:1143
 msgid "Nom"
 msgstr ""
 
-#: buddypress/members/register.php:42 functions.php:1199
+#: buddypress/members/register.php:42 functions.php:1149
 msgid "Email"
 msgstr ""
 
-#: buddypress/members/register.php:47 functions.php:1166 functions.php:1208
+#: buddypress/members/register.php:47 functions.php:1116 functions.php:1158
 msgid "Mot de passe"
 msgstr ""
 
-#: buddypress/members/register.php:52 functions.php:1214
+#: buddypress/members/register.php:52 functions.php:1164
 msgid "Confirmer le mot de passe"
 msgstr ""
 
@@ -248,7 +248,7 @@ msgstr ""
 msgid "Update denied"
 msgstr ""
 
-#: buddypress/members/single/profile/edit.php:43 functions.php:1004
+#: buddypress/members/single/profile/edit.php:43 functions.php:954
 msgid "Update successful"
 msgstr ""
 
@@ -441,163 +441,163 @@ msgstr ""
 msgid "Send Message"
 msgstr ""
 
-#: functions.php:621
+#: functions.php:589
 msgid "1. Votre annonce"
 msgstr ""
 
-#: functions.php:638
+#: functions.php:606
 msgid "Type d'annonce"
 msgstr ""
 
-#: functions.php:669
+#: functions.php:637
 msgid "Catégorie d'annonce"
 msgstr ""
 
-#: functions.php:685
+#: functions.php:653
 msgid "2. Description"
 msgstr ""
 
-#: functions.php:702
+#: functions.php:670
 msgid "Catégorie"
 msgstr ""
 
-#: functions.php:723
+#: functions.php:691
 msgid "Titre de l'annoce"
 msgstr ""
 
-#: functions.php:742
+#: functions.php:710
 msgid "Description"
 msgstr ""
 
-#: functions.php:762
+#: functions.php:730
 msgid "DH - devise du site Fellah.ma"
 msgstr ""
 
-#: functions.php:784
+#: functions.php:752
 msgid "Image"
 msgstr ""
 
-#: functions.php:812
+#: functions.php:780
 msgid "Region and city"
 msgstr ""
 
-#: functions.php:845
+#: functions.php:796
 msgid "3. Vos coordonnées"
 msgstr ""
 
-#: functions.php:883 functions.php:944
+#: functions.php:834 functions.php:895
 msgid "Wrong username or password."
 msgstr ""
 
-#: functions.php:886
+#: functions.php:837
 msgid "Login successful"
 msgstr ""
 
-#: functions.php:917 functions.php:994
+#: functions.php:868 functions.php:944
 msgid "Un ou plusieurs champs obligatoires ne sont pas remplis !"
 msgstr ""
 
-#: functions.php:936
+#: functions.php:887
 msgid "Can't logins."
 msgstr ""
 
-#: functions.php:949
+#: functions.php:900
 msgid "Vous êtes bien inscrit. A présent, connectez-vous !"
 msgstr ""
 
-#: functions.php:954
+#: functions.php:905
 msgid "User already exists."
 msgstr ""
 
-#: functions.php:960
-msgid "Les 2 mots de passe sont différents!"
+#: functions.php:911
+msgid "The two passwords you entered don't match."
 msgstr ""
 
-#: functions.php:1006
+#: functions.php:956
 msgid "User don't exists."
 msgstr ""
 
-#: functions.php:1044
+#: functions.php:994
 msgid "Sous catégorie"
 msgstr ""
 
-#: functions.php:1093
+#: functions.php:1043
 msgid "Toutes les villes"
 msgstr ""
 
-#: functions.php:1129
+#: functions.php:1079
 msgid "Est-ce que vous avez un compte?"
 msgstr ""
 
-#: functions.php:1135
+#: functions.php:1085
 msgid "Me connecter"
 msgstr ""
 
-#: functions.php:1138 functions.php:1227
+#: functions.php:1088 functions.php:1177
 msgid "Créer mon compte"
 msgstr ""
 
-#: functions.php:1154
+#: functions.php:1104
 msgid "Connectez-vous"
 msgstr ""
 
-#: functions.php:1160
+#: functions.php:1110
 msgid "Identifiant ou Email"
 msgstr ""
 
-#: functions.php:1170
+#: functions.php:1120
 msgid "Ok"
 msgstr ""
 
-#: functions.php:1182
+#: functions.php:1132
 msgid "Create an account"
 msgstr ""
 
-#: functions.php:1220
+#: functions.php:1170
 msgid "Telephone"
 msgstr ""
 
-#: functions.php:1238
+#: functions.php:1188
 msgid "wrong acces"
 msgstr ""
 
-#: functions.php:1239
+#: functions.php:1189
 msgid "You are connected"
 msgstr ""
 
-#: functions.php:1250 functions.php:1268
+#: functions.php:1200 functions.php:1218
 msgid "Continuer"
 msgstr ""
 
-#: functions.php:1265 functions.php:1283
+#: functions.php:1215 functions.php:1233
 msgid "Retour"
 msgstr ""
 
-#: functions.php:1337
+#: functions.php:1287
 msgid "Toutes les Région"
 msgstr ""
 
-#: functions.php:1449
+#: functions.php:1399
 msgid "Email : "
 msgstr ""
 
-#: functions.php:1450
+#: functions.php:1400
 msgid "First name : "
 msgstr ""
 
-#: functions.php:1451
+#: functions.php:1401
 msgid "Last name : "
 msgstr ""
 
-#: functions.php:1452
+#: functions.php:1402
 msgid "Phone : "
 msgstr ""
 
-#: functions.php:1465
+#: functions.php:1415
 msgid "Télephone"
 msgstr ""
 
-#: functions.php:1468
+#: functions.php:1418
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
@@ -786,7 +786,7 @@ msgid "View / Reply"
 msgstr ""
 
 #: wpadverts/add-preview.php:10
-msgid "Edit Listing"
+msgid "Edit ad"
 msgstr ""
 
 #: wpadverts/add-preview.php:16

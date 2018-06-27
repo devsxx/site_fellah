@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-26 12:31+0100\n"
-"PO-Revision-Date: 2018-06-26 12:32+0100\n"
+"POT-Creation-Date: 2018-06-27 15:00+0100\n"
+"PO-Revision-Date: 2018-06-27 15:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -38,44 +38,36 @@ msgid "Create an account. Simple and free !"
 msgstr "انشئ حساب. بسيطة ومجان!"
 
 #: buddypress/members/register.php:32
-#: buddypress/members/single/profile/edit.php:27 functions.php:1201
+#: buddypress/members/single/profile/edit.php:27 functions.php:1137
 msgid "Prénom"
 msgstr "الأسم"
 
 #: buddypress/members/register.php:37
-#: buddypress/members/single/profile/edit.php:32 functions.php:1207
+#: buddypress/members/single/profile/edit.php:32 functions.php:1143
 msgid "Nom"
 msgstr "اسم"
 
-#: buddypress/members/register.php:42 functions.php:1213
+#: buddypress/members/register.php:42 functions.php:1149
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
-#: buddypress/members/register.php:47 functions.php:1180 functions.php:1222
+#: buddypress/members/register.php:47 functions.php:1116 functions.php:1158
 msgid "Mot de passe"
 msgstr "كلمة السر"
 
-#: buddypress/members/register.php:52 functions.php:1228
+#: buddypress/members/register.php:52 functions.php:1164
 msgid "Confirmer le mot de passe"
 msgstr "أكد كلمة المرور"
 
 #: buddypress/members/register.php:57
-#: buddypress/members/single/profile/edit.php:37 functions.php:583
-#: wpadverts/single.php:109
+#: buddypress/members/single/profile/edit.php:37 functions.php:555
+#: wpadverts/single.php:110
 msgid "Phone"
 msgstr "هاتف"
 
 #: buddypress/members/register.php:60 buddypress/members/register.php:408
 msgid "Create my account"
 msgstr "إنشيء حسابي"
-
-#: buddypress/members/register.php:62 functions.php:1252
-msgid "wrong acces"
-msgstr ""
-
-#: buddypress/members/register.php:63 functions.php:1253
-msgid "You are connected"
-msgstr "انت متصل"
 
 #: buddypress/members/register.php:100
 msgid "User registration is currently not allowed."
@@ -266,7 +258,7 @@ msgstr "حفظ التغييرات"
 msgid "Update denied"
 msgstr "التحديث مرفوض"
 
-#: buddypress/members/single/profile/edit.php:43 functions.php:1018
+#: buddypress/members/single/profile/edit.php:43 functions.php:954
 msgid "Update successful"
 msgstr "تحديث ناجح"
 
@@ -279,7 +271,7 @@ msgstr "ملفي"
 msgid "%s's Profile"
 msgstr ""
 
-#: buddypress/members/single/profile/profile-wp.php:35 wpadverts/single.php:127
+#: buddypress/members/single/profile/profile-wp.php:35 wpadverts/single.php:128
 msgid "Name"
 msgstr "اسم"
 
@@ -303,17 +295,13 @@ msgstr ""
 msgid "Yahoo Messenger"
 msgstr ""
 
-#: comments.php:35
+#: comments.php:37
 #, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
-#: comments.php:66
+#: comments.php:68
 msgid "Comments are closed."
-msgstr ""
-
-#: footer.php:23
-msgid "https://wordpress.org/"
 msgstr ""
 
 #: footer.php:24
@@ -321,9 +309,9 @@ msgstr ""
 msgid "All rights reserved %d"
 msgstr "جميع الحقوق محفوظة %d"
 
-#: footer.php:27
-msgid "https://fellah.ma/"
-msgstr ""
+#: func/BP_Add_Page.php:20
+msgid "Messages"
+msgstr "رسالة"
 
 #: func/breadcrumb.php:228
 msgid "Page"
@@ -405,192 +393,221 @@ msgstr "جميع الفئات"
 msgid "All regions"
 msgstr "جميع المناطق"
 
-#: functions.php:327 functions.php:350 functions.php:351
+#: functions.php:304 functions.php:327 functions.php:328
 msgid "Publish Date"
-msgstr ""
+msgstr "تاريخ النشر"
 
-#: functions.php:329 functions.php:351
+#: functions.php:306 functions.php:328
 msgid "Newest First"
 msgstr ""
 
-#: functions.php:330
+#: functions.php:307
 msgid "Oldest First"
 msgstr ""
 
-#: functions.php:334 wpadverts/single.php:103
+#: functions.php:311 wpadverts/single.php:104
 msgid "Price"
 msgstr "السعر"
 
-#: functions.php:336
+#: functions.php:313
 msgid "Cheapest First"
 msgstr ""
 
-#: functions.php:337
+#: functions.php:314
 msgid "Most Expensive First"
 msgstr ""
 
-#: functions.php:341
+#: functions.php:318
 msgid "Title"
 msgstr "لقب"
 
-#: functions.php:343
+#: functions.php:320
 msgid "From A to Z"
 msgstr ""
 
-#: functions.php:344
+#: functions.php:321
 msgid "From Z to A"
 msgstr ""
 
-#: functions.php:351 functions.php:381
+#: functions.php:328 functions.php:358
 #, php-format
 msgid "Sort By: %s - %s"
 msgstr ""
 
-#: functions.php:496
+#: functions.php:468
 msgid "Send"
 msgstr "إرسال"
 
-#: functions.php:538
+#: functions.php:510
 msgid "Your message has been sent."
 msgstr "لقد تم إرسال رسالتك."
 
-#: functions.php:543
+#: functions.php:515
 msgid "There are errors in your form."
 msgstr "هناك أخطاء في النموذج الخاص بك."
 
-#: functions.php:576
+#: functions.php:548 template-parts/ads_contact_form.php:233
+#: templates/template-user-messages.php:169
 msgid "Send Message"
 msgstr "ارسل رسالة"
 
-#: functions.php:649
+#: functions.php:589
 msgid "1. Votre annonce"
 msgstr "1. إعلانكم"
 
-#: functions.php:666
+#: functions.php:606
 msgid "Type d'annonce"
 msgstr "نوع الاعلان"
 
-#: functions.php:697
+#: functions.php:637
 msgid "Catégorie d'annonce"
 msgstr "عنوان الاعلان"
 
-#: functions.php:713
+#: functions.php:653
 msgid "2. Description"
 msgstr "2. وصف"
 
-#: functions.php:730
+#: functions.php:670
 msgid "Catégorie"
 msgstr "فئة"
 
-#: functions.php:751
+#: functions.php:691
 msgid "Titre de l'annoce"
 msgstr "عنوان الاعلان"
 
-#: functions.php:770
+#: functions.php:710
 msgid "Description"
 msgstr "وصف"
 
-#: functions.php:790
+#: functions.php:730
 msgid "DH - devise du site Fellah.ma"
 msgstr "درهم - عملة الموقع Fellah.ma"
 
-#: functions.php:812
+#: functions.php:752
 msgid "Image"
 msgstr "صوره"
 
-#: functions.php:840
+#: functions.php:780
 msgid "Region and city"
 msgstr "المنطقة والمدينة"
 
-#: functions.php:873
+#: functions.php:796
 msgid "3. Vos coordonnées"
 msgstr "3. التفاصيل الخاصة بك"
 
-#: functions.php:911 functions.php:965
+#: functions.php:834 functions.php:895
 msgid "Wrong username or password."
 msgstr "اسم مستخدم أو كلمة مرور خاطئة."
 
-#: functions.php:914 functions.php:970
+#: functions.php:837
 msgid "Login successful"
 msgstr "تسجيل الدخول ناجح"
 
-#: functions.php:957
-msgid "Can't login."
+#: functions.php:868 functions.php:944
+msgid "Un ou plusieurs champs obligatoires ne sont pas remplis !"
+msgstr ""
+
+#: functions.php:887
+msgid "Can't logins."
 msgstr "لا يمكن تسجيل الدخول."
 
-#: functions.php:974
-msgid "User already exists.  Password inherited."
-msgstr "المستخدم موجود بالفعل. كلمة المرور الموروثة."
+#: functions.php:900
+msgid "Vous êtes bien inscrit. A présent, connectez-vous !"
+msgstr ""
 
-#: functions.php:1020
+#: functions.php:905
+msgid "User already exists."
+msgstr "المستخدم موجود بالفعل."
+
+#: functions.php:911
+msgid "The two passwords you entered don't match."
+msgstr "كلمتا المرور اللتان أدخلتهما غير متطابقتين."
+
+#: functions.php:956
 msgid "User don't exists."
 msgstr ""
 
-#: functions.php:1058
+#: functions.php:994
 msgid "Sous catégorie"
 msgstr "فئة فرعية"
 
-#: functions.php:1107
+#: functions.php:1043
 msgid "Toutes les villes"
 msgstr "جميع المدن"
 
-#: functions.php:1143
+#: functions.php:1079
 msgid "Est-ce que vous avez un compte?"
 msgstr "هل لديك حساب؟"
 
-#: functions.php:1149
+#: functions.php:1085
 msgid "Me connecter"
 msgstr "تسجيل الدخول"
 
-#: functions.php:1152 functions.php:1241
+#: functions.php:1088 functions.php:1177
 msgid "Créer mon compte"
 msgstr "قم بإنشاء حسابي"
 
-#: functions.php:1168
+#: functions.php:1104
 msgid "Connectez-vous"
 msgstr "دخول"
 
-#: functions.php:1174
+#: functions.php:1110
 msgid "Identifiant ou Email"
 msgstr "تسجيل الدخول أو البريد الإلكتروني"
 
-#: functions.php:1234
+#: functions.php:1120
+msgid "Ok"
+msgstr "حسنا"
+
+#: functions.php:1132
+msgid "Create an account"
+msgstr "إنشيء حسابي"
+
+#: functions.php:1170
 msgid "Telephone"
 msgstr "هاتف"
 
-#: functions.php:1264 functions.php:1282
+#: functions.php:1188
+msgid "wrong acces"
+msgstr ""
+
+#: functions.php:1189
+msgid "You are connected"
+msgstr "انت متصل"
+
+#: functions.php:1200 functions.php:1218
 msgid "Continuer"
 msgstr "استمر"
 
-#: functions.php:1279 functions.php:1297
+#: functions.php:1215 functions.php:1233
 msgid "Retour"
 msgstr "عودة"
 
-#: functions.php:1351
+#: functions.php:1287
 msgid "Toutes les Région"
 msgstr "كل المنطقة"
 
-#: functions.php:1465
+#: functions.php:1399
 msgid "Email : "
 msgstr "البريد الإلكتروني : "
 
-#: functions.php:1466
+#: functions.php:1400
 msgid "First name : "
 msgstr "اسم المستخدم الأول : "
 
-#: functions.php:1467
+#: functions.php:1401
 msgid "Last name : "
 msgstr "اسم المستخدم الأخير : "
 
-#: functions.php:1468
+#: functions.php:1402
 msgid "Phone : "
 msgstr "الهاتف: "
 
-#: functions.php:1481
+#: functions.php:1415
 msgid "Télephone"
 msgstr "هاتف"
 
-#: functions.php:1484
+#: functions.php:1418
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "يرجى إدخال رقم هاتفك."
 
@@ -668,6 +685,30 @@ msgstr ""
 msgid "Actualités"
 msgstr "أخبار"
 
+#: template-parts/ads_contact_form.php:158
+#: templates/template-user-messages.php:118
+msgid "Your Message have been sent!"
+msgstr "لقد تم إرسال رسالتك!"
+
+#: template-parts/ads_contact_form.php:200
+msgid "Your name"
+msgstr ""
+
+#: template-parts/ads_contact_form.php:206
+msgid "Your email"
+msgstr "بريدك الالكتروني"
+
+#: template-parts/ads_contact_form.php:212
+#: templates/template-user-messages.php:138
+#: templates/template-user-messages.php:159
+msgid "Subject"
+msgstr "موضوع"
+
+#: template-parts/ads_contact_form.php:218
+#: templates/template-user-messages.php:139
+msgid "Message"
+msgstr "رسالة"
+
 #: template-parts/categories.php:7
 msgid "Catégories"
 msgstr "الفئات"
@@ -681,7 +722,6 @@ msgid "Choisissez la catégorie correspondant à vos besoins"
 msgstr "اختر الفئة التي تناسب احتياجاتك"
 
 #: template-parts/content-advert.php:19 template-parts/content-contact.php:27
-#: template-parts/content-page.php:24
 msgid "Pages:"
 msgstr "الصفحات:"
 
@@ -707,16 +747,16 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content.php:62
+#: template-parts/content.php:57
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content.php:79
+#: template-parts/content.php:74
 msgid "&laquo Previous"
 msgstr "السابق &laquo"
 
-#: template-parts/content.php:80
+#: template-parts/content.php:75
 msgid "Next &raquo"
 msgstr "&raquo التالي"
 
@@ -748,13 +788,21 @@ msgstr "اختيار أفضل الإعلانات في الوقت الحالي"
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: wpadverts/add-preview.php:11
-msgid "Edit Listing"
-msgstr "تحرير قائمة"
+#: templates/template-user-messages.php:164
+msgid "Write your message here..."
+msgstr "اكتب رسالتك هنا..."
 
-#: wpadverts/add-preview.php:17
-msgid "Publish Listing"
-msgstr "أنشر الإعلان"
+#: templates/template-user-messages.php:204
+msgid "View / Reply"
+msgstr ""
+
+#: wpadverts/add-preview.php:10
+msgid "Edit ad"
+msgstr "تحرير الاعلان"
+
+#: wpadverts/add-preview.php:16
+msgid "Publish ad"
+msgstr "نشر الاعلان"
 
 #: wpadverts/add-save.php:5
 msgid ""
@@ -875,20 +923,20 @@ msgstr "المزيد"
 msgid "You do not have any Ads posted yet."
 msgstr "ليس لديك اعلانات بعد."
 
-#: wpadverts/single.php:117
+#: wpadverts/single.php:118
 msgid "Region"
 msgstr "المنطقة"
 
-#: wpadverts/single.php:204
+#: wpadverts/single.php:206
 msgid "Annonces similaires"
 msgstr "إعلانات مماثلة"
 
-#: wpadverts/single.php:207
+#: wpadverts/single.php:209
 msgid "Ces annonces pourraient aussi vous intéresser"
 msgstr "قد تهمك هذه الإعلانات أيضًا"
 
+#~ msgid "Edit Listing"
+#~ msgstr "تحرير قائمة"
+
 #~ msgid "Profile field groups"
 #~ msgstr "مجموعات حقول الملف الشخصي"
-
-#~ msgid "User email : "
-#~ msgstr "البريد الإلكتروني للمستخدم : "

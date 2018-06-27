@@ -4,16 +4,16 @@
     <div class="row">
         <div class="col-md-12">
             
-            <!-- <form action="" method="post" style="display:inline">
+            <form action="" method="post" style="display:inline">
                 <input type="hidden" name="_adverts_action" value="" />
                 <input type="hidden" name="_post_id" id="_post_id" value="<?php echo esc_attr($post_id) ?>" />
-                <input type="submit" value="<?php _e("Edit Listing", "adverts") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
-            </form> -->
+                <input type="submit" value="<?php _e("Edit ad", "fellah") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
+            </form>
 
             <form action="" method="post" style="display:inline">
                 <input type="hidden" name="_adverts_action" value="save" />
                 <input type="hidden" name="_post_id" id="_post_id" value="<?php echo esc_attr($post_id) ?>" />
-                <input type="submit" value="<?php _e("Publish ad", "adverts") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
+                <input type="submit" value="<?php _e("Publish ad", "fellah") ?>" style="font-size:1.2em" class="adverts-cancel-unload" />
             </form>
             
         </div>

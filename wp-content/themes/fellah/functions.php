@@ -908,7 +908,7 @@ function ajax_signup(){
 			}
 
 		}else{
-			$message = __('Les 2 mots de passe sont différents!', 'fellah');
+			$message = __('The two passwords you entered don\'t match.', 'fellah');
 			$error_code = 2;
 			$etat = false;
 		}
