@@ -27,8 +27,7 @@ jQuery(document).ready(function($) {
 	}); 
 
 	$( "#swipebox-slider" ).live('click',function( ){ 
-		$( "#swipebox-close" ).trigger(); 
-		alert('erere');
+		$( "#swipebox-close" ).trigger("click"); 
 	});  
 
 	$('.wpadverts-slide-nav-thumbnails').click(function (evt) {
@@ -213,9 +212,11 @@ jQuery(document).ready(function($) {
 			//'security': $('form#login #security').val() },
 			success: function(data){  
 				if(data.etat){
+					$(".advert_success").text(data.message);
 					$(".adverts-field-name-connect .register_form").css("display", "none"); 
 					$(".advert_success").css("display", "block").delay(3000).slideUp(100);
 				}else{
+					$(".advert_danger").text(data.message);
 					$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
 				}
 				jQuery("#ajaxloader").hide();
@@ -236,16 +237,16 @@ jQuery(document).ready(function($) {
 
 		var submit = true;
 
-		if(prenom == "" && nom == ""){
-			submit = false;
-		}
+		// if(prenom == "" && nom == ""){
+		// 	submit = false;
+		// }
 
-		if( mot_passe == "" || mot_passe == "" || confirm_mot_passe == "" )
-			submit = false;
+		// if( mot_passe == "" || mot_passe == "" || confirm_mot_passe == "" )
+		// 	submit = false;
 
-		if(confirm_mot_passe != mot_passe){
-			submit = false;
-		}
+		// if(confirm_mot_passe != mot_passe){
+		// 	submit = false;
+		// }
 
 		if(submit){
 			$.ajax({
@@ -267,11 +268,14 @@ jQuery(document).ready(function($) {
 				},
 				success: function(data){ 
 					if(data.etat){
+						$(".advert_success").text(data.message);
 						$(".adverts-field-name-connect .register_form").css("display", "none"); 
 						$(".advert_success").css("display", "block").delay(3000).slideUp(100);
+						document.location.href="/";
 					}else{
+						$(".advert_danger").text(data.message);
 						$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
-					} 
+					}  
 					jQuery("#ajaxloader").hide();
 					jQuery("#ajaxShadow").hide();
 				}
@@ -308,9 +312,11 @@ jQuery(document).ready(function($) {
 				},
 				success: function(data){ 
 					if(data.etat){
+						$(".advert_success").text(data.message);
 						$(".adverts-field-name-connect .register_form").css("display", "none"); 
 						$(".advert_success").css("display", "block").delay(3000).slideUp(100);
 					}else{
+						$(".advert_danger").text(data.message);
 						$(".advert_danger").css("display", "block").delay(3000).slideUp(100);
 					} 
 					jQuery("#ajaxloader").hide();

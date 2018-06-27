@@ -16028,7 +16028,6 @@ form textarea {
 }
 
 .pub_annonce .adverts-form-input-group-checkbox-localisation .adverts-control-container.show {
-  width: 36.25rem;
   margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -16080,7 +16079,6 @@ form textarea {
 }
 
 .pub_annonce .adverts-control-container-region.show {
-  width: 36.25rem;
   margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;

@@ -1282,19 +1282,26 @@ function adverts_field_customadvertscategory( $field ) {
 
 function adverts_field_custom_localisation( $field ) {
     
-	 $checked= '';  
-	 $value = $field['value'];
+	$checked= '';  
+	$value = $field['value'];
 	$htmls = '<div id="show_localisation_region" class="show_localisation"><i class="fas fa-map-pin"></i> ' . __('Toutes les Région', 'fellah') . ' </div>';
 	
 	$htmls .= '<div class="adverts-control-container-region style-4">';
-	$terms = get_terms( array(
-		'taxonomy' => 'localisation',
-		'orderby' => 'name', 
-      'order' => 'ASC',
+	$args = array(
+		'taxonomy' => 'localisation', 
+		'orderby' => 'slug', 
+		'order' => 'ASC', 
 		'hide_empty' => false,
 		'parent'   => 0
-	) );
-		$i = 0; 
+	) ;
+	$terms = get_terms( $args );
+	usort($terms, function($a, $b){
+		return strcmp($a->name, $b->name);
+  });
+	
+
+	$i = 0; 
+	
 	foreach($terms as $term){
 		$i++;
 		
@@ -1316,6 +1323,7 @@ function adverts_field_custom_localisation( $field ) {
 			<input type="checkbox" class="filled-in class_localisation_parent" name="localisation[]" id="localisation_'.$i.'" value="'.$term->term_id.'"> 
 			<label for="localisation_'.$i.'">'.$term->name.'</label>
 		</div>';
+
 	}
 	$htmls .= '</div>';
 		

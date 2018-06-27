@@ -19,18 +19,18 @@ class Personalize_Login_Plugin {
 	public function __construct() {
 
 		// Redirects
-		// add_action( 'login_form_login', array( $this, 'redirect_to_custom_login' ) );
-		// add_filter( 'authenticate', array( $this, 'maybe_redirect_at_authenticate' ), 101, 3 );
-		// add_filter( 'login_redirect', array( $this, 'redirect_after_login' ), 10, 3 );
-		// add_action( 'wp_logout', array( $this, 'redirect_after_logout' ) );
+		add_action( 'login_form_login', array( $this, 'redirect_to_custom_login' ) );
+		add_filter( 'authenticate', array( $this, 'maybe_redirect_at_authenticate' ), 101, 3 );
+		add_filter( 'login_redirect', array( $this, 'redirect_after_login' ), 10, 3 );
+		add_action( 'wp_logout', array( $this, 'redirect_after_logout' ) );
 
-		// add_action( 'login_form_register', array( $this, 'redirect_to_custom_register' ) );
+		add_action( 'login_form_register', array( $this, 'redirect_to_custom_register' ) );
 		add_action( 'login_form_lostpassword', array( $this, 'redirect_to_custom_lostpassword' ) );
 		add_action( 'login_form_rp', array( $this, 'redirect_to_custom_password_reset' ) );
 		add_action( 'login_form_resetpass', array( $this, 'redirect_to_custom_password_reset' ) );
 
 		// Handlers for form posting actions
-		// add_action( 'login_form_register', array( $this, 'do_register_user' ) );
+		add_action( 'login_form_register', array( $this, 'do_register_user' ) );
 		add_action( 'login_form_lostpassword', array( $this, 'do_password_lost' ) );
 		add_action( 'login_form_rp', array( $this, 'do_password_reset' ) );
 		add_action( 'login_form_resetpass', array( $this, 'do_password_reset' ) );

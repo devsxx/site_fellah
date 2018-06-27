@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2018-06-27 15:01+0100\n"
-"PO-Revision-Date: 2018-06-27 15:01+0100\n"
+"PO-Revision-Date: 2018-06-27 17:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -456,7 +456,7 @@ msgstr "Catégorie"
 
 #: functions.php:691
 msgid "Titre de l'annoce"
-msgstr "Titre de l'annoce"
+msgstr "Titre de l'annonce"
 
 #: functions.php:710
 msgid "Description"
@@ -568,7 +568,7 @@ msgstr "Retour"
 
 #: functions.php:1287
 msgid "Toutes les Région"
-msgstr "Toutes les Région"
+msgstr "Toutes les Régions"
 
 #: functions.php:1399
 msgid "Email : "
@@ -786,11 +786,11 @@ msgstr "Voir / Répondre"
 
 #: wpadverts/add-preview.php:10
 msgid "Edit ad"
-msgstr "Modifier l'annonce"
+msgstr "Modifier mon annonce"
 
 #: wpadverts/add-preview.php:16
 msgid "Publish ad"
-msgstr "Publier une annonce"
+msgstr "Publier mon annonce"
 
 #: wpadverts/add-save.php:5
 msgid ""

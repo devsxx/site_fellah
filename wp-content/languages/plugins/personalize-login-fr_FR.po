@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2018-06-27 14:14+0100\n"
-"PO-Revision-Date: 2018-06-27 14:25+0100\n"
+"PO-Revision-Date: 2018-06-27 17:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -212,7 +212,7 @@ msgstr "Nouveau mot de passe"
 
 #: templates/password_reset_form.php:26
 msgid "Repeat new password"
-msgstr "Répété le nouveau mot de passe"
+msgstr "Répéter le nouveau mot de passe"
 
 #: templates/register_form.php:21
 msgid "First name"
