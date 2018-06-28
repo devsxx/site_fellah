@@ -12674,10 +12674,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   cursor: -ms-grab;
   cursor: grab;
 }
-
-.owl-carousel.owl-rtl {
-  direction: ltr;
-}
+ 
 
 .owl-carousel.owl-rtl .owl-item {
   float: left;
