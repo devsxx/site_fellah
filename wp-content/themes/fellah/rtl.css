@@ -16410,6 +16410,10 @@ form textarea {
   margin: 0.1875rem;
 }
 
+.owl-carousel .owl-nav [class*='owl-'] img{
+  transform: rotate(180deg);
+}
+
 .owl-carousel .owl-nav [class*='owl-']:hover {
   background: transparent;
 }
