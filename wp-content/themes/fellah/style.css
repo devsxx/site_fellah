@@ -17199,6 +17199,10 @@ div.adverts-flash-messages {
   display: none !important;
 }
 
+.wpadverts-attachment-info {
+  display: none;
+}
+
 #buddypress div.item-list-tabs ul li.current a,
 #buddypress div.item-list-tabs ul li.selected a {
   background-color: #eee;
