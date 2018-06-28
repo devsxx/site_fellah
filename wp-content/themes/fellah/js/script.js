@@ -17,9 +17,9 @@ jQuery(document).ready(function($) {
 	$a.click(function(evt){
 		evt.preventDefault(); 
 		$ul = $(this).next('ul');  
-		$ul.toggleClass('showAll'); 
-		$( ".showAll .close" ).remove();
-		$( ".showAll" ).append("<div class='close'><i class='fas fa-times'></i></div>");
+		// $ul.toggleClass('showAll'); 
+		// $( ".showAll .close" ).remove();
+		// $( ".showAll" ).append("<div class='close'><i class='fas fa-times'></i></div>");
 	}); 
 	
 	$( ".showAll .close" ).live('click',function( ){ 

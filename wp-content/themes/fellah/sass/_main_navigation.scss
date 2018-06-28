@@ -19,6 +19,7 @@
 			&.free{
 				&:after{
 					content: "";
+					overflow-y: scroll;
 					width: oe_rem(35px);
 					height: oe_rem(12px);
 					background-size: contain;
@@ -135,7 +136,8 @@
 					li{ 
 						a{
 							border: none; 
-							margin-bottom: oe_rem(15px);
+							height: initial;
+							margin-bottom: oe_rem(10px);
 						}
 					}
 					ul{  
@@ -143,7 +145,7 @@
 							width: 100%;
 							a{     
 								margin-bottom: 0;    
-								height: 40px;
+								height: initial;
 							}
 						}
 					}

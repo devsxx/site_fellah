@@ -169,7 +169,7 @@
 				padding: oe_rem(25px);
 				overflow-y: scroll;
 				z-index: 999999999;
-				@include flex(center, center, column); 
+				@include flex(center, center, row); 
 				@include position(fixed, 0, 0, 0, 0); 
 				&:before{
 					content: "";
@@ -198,7 +198,7 @@
 			padding: oe_rem(25px);
 			overflow-y: scroll;
 			z-index: 999999999;
-			@include flex(center, center, column); 
+			@include flex(center, center, row); 
 			@include position(fixed, 0, 0, 0, 0);
 			&:before{
 				content: "";
@@ -341,6 +341,10 @@
 		@include media("<md"){
 			float: none;
 			margin: oe_rem(15px) auto !important;
+			
+			&.custom_radio{
+				margin-right: auto !important;
+			}
 		}
 	}
 

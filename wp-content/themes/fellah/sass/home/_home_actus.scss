@@ -8,6 +8,9 @@
 				height: oe_rem(190px); 
 				border-radius: oe_rem(6px);
 				overflow: hidden;
+				img{
+					min-width: 100%;
+				}
 				.info{
 					color: white;
 					height: oe_rem(85px);  

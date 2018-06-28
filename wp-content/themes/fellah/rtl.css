@@ -18,11 +18,7 @@ https://codex.wordpress.org/Right-to-Left_Language_Support
  * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
- *!
- * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
+ @font-face {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
@@ -13365,9 +13361,12 @@ blockquote.hide p {
   -ms-flex-direction: row;
   flex-direction: row;
 }
-
+.posts-navigation .nav-links a i{
+  transform: rotate(180deg);
+}
 .posts-navigation .nav-links .nav-next {
   margin-right: auto;
+  margin-left: initial;
 }
 
 .catgories .categorie {
@@ -13397,6 +13396,7 @@ blockquote.hide p {
 }
 
 .catgories .categorie .img_zoom {
+  min-width: 100%;
   transition: all 0.2s ease-in-out;
   transform: matrix(1, 0, 0, 1, 0, 0);
 }
@@ -13473,6 +13473,9 @@ section .section_title .toutes_cats {
   font-size: 1.25rem;
   color: #000;
 }
+section .section_title .toutes_cats img{
+  transform: rotate(180deg);
+}
 
 section .section_title .toutes_cats:hover {
   color: #007e1d;
@@ -13519,6 +13522,10 @@ section .section_sousTitle {
 
 .breadcrumbs a {
   color: #000;
+}
+
+.breadcrumbs span {
+  float: right;
 }
 
 .breadcrumbs a:hover {
@@ -14896,6 +14903,7 @@ form textarea {
 
 .main-navigation ul li.free:after {
   content: "";
+  overflow-y: scroll;
   width: 2.1875rem;
   height: 0.75rem;
   background-size: contain;
@@ -15108,14 +15116,15 @@ form textarea {
   }
   .main-navigation ul li .sub-menu li a {
     border: none;
-    margin-bottom: 0.9375rem;
+    height: initial;
+    margin-bottom: 0.625rem;
   }
   .main-navigation ul li .sub-menu ul li {
     width: 100%;
   }
   .main-navigation ul li .sub-menu ul li a {
     margin-bottom: 0;
-    height: 40px;
+    height: initial;
   }
   .main-navigation ul li .showAll .close {
     color: #fff;
@@ -15687,6 +15696,10 @@ form textarea {
   overflow: hidden;
 }
 
+.home_actualites .actu a .bloc img {
+  min-width: 100%;
+}
+
 .home_actualites .actu a .bloc .info {
   color: white;
   height: 5.3125rem;
@@ -16004,6 +16017,7 @@ form textarea {
 .pub_annonce .show_localisation i {
   position: absolute;
   right: 15px;
+  left: initial;
   top: 50%;
   margin-top: -10px;
 }
@@ -16020,7 +16034,6 @@ form textarea {
 }
 
 .pub_annonce .adverts-form-input-group-checkbox-localisation .adverts-control-container.show {
-  width: 36.25rem;
   margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -16037,9 +16050,9 @@ form textarea {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   position: fixed;
   top: 0;
   left: 0;
@@ -16072,7 +16085,6 @@ form textarea {
 }
 
 .pub_annonce .adverts-control-container-region.show {
-  width: 36.25rem;
   margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -16089,9 +16101,9 @@ form textarea {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   position: fixed;
   top: 0;
   left: 0;
@@ -16250,6 +16262,9 @@ form textarea {
   .pub_annonce .checkbox_2 {
     float: none;
     margin: 0.9375rem auto !important;
+  }
+  .pub_annonce .checkbox_2.custom_radio {
+    margin-left: auto !important;
   }
 }
 
@@ -16590,7 +16605,7 @@ form textarea {
 .categoris_container ul {
   font-size: 1.25rem;
   font-weight: 300;
-  list-style: url("./img/icons/arrow_list.png");
+  list-style: url("./img/icons/arrow_list_rtl.png");
 }
 
 .categoris_container ul li a {
@@ -17054,7 +17069,9 @@ form textarea {
   text-align: center;
   font-weight: 500;
 }
-
+.prev_next_container a i{
+  transform: rotate(180deg);
+}
 .prev_next_container a:hover {
   color: white;
   background-color: #007e1d;
@@ -17168,15 +17185,6 @@ div.adverts-flash-messages {
 
 .single_advert_slider .wpadverts-slides {
   margin: 0;
-}
-
-#swipebox-slider .slide {
-  height: 100%;
-  width: 68% !important;
-  line-height: 1px;
-  text-align: center;
-  display: block !important;
-  margin: 0 auto;
 }
 
 .adverts-pagination {

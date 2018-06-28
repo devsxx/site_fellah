@@ -377,6 +377,7 @@ blockquote {
 		overflow: hidden;
 		@include flex(center, center, row);
 		.img_zoom{
+			min-width: 100%;
 			@include transition();
 			transform: matrix(1, 0, 0, 1, 0, 0);
 		} 
