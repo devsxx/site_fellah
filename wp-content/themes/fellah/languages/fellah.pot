@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-28 12:27+0100\n"
+"POT-Creation-Date: 2018-06-28 17:03+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -285,6 +285,42 @@ msgstr ""
 msgid "Yahoo Messenger"
 msgstr ""
 
+#: buddypress/members/single/profile/template-user-messages.php:118
+#: template-parts/ads_contact_form.php:160
+#: templates/template-user-messages.php:118
+msgid "Your Message have been sent!"
+msgstr ""
+
+#: buddypress/members/single/profile/template-user-messages.php:138
+#: buddypress/members/single/profile/template-user-messages.php:159
+#: template-parts/ads_contact_form.php:214
+#: templates/template-user-messages.php:138
+#: templates/template-user-messages.php:159
+msgid "Subject"
+msgstr ""
+
+#: buddypress/members/single/profile/template-user-messages.php:139
+#: template-parts/ads_contact_form.php:220
+#: templates/template-user-messages.php:139
+msgid "Message"
+msgstr ""
+
+#: buddypress/members/single/profile/template-user-messages.php:164
+#: templates/template-user-messages.php:164
+msgid "Write your message here..."
+msgstr ""
+
+#: buddypress/members/single/profile/template-user-messages.php:169
+#: functions.php:548 template-parts/ads_contact_form.php:235
+#: templates/template-user-messages.php:169
+msgid "Send Message"
+msgstr ""
+
+#: buddypress/members/single/profile/template-user-messages.php:204
+#: templates/template-user-messages.php:204
+msgid "View / Reply"
+msgstr ""
+
 #: comments.php:37
 #, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
@@ -301,6 +337,10 @@ msgstr ""
 
 #: func/BP_Add_Page.php:20
 msgid "Messages"
+msgstr ""
+
+#: func/breadcrumb.php:14
+msgid "Accueil"
 msgstr ""
 
 #: func/breadcrumb.php:228
@@ -434,11 +474,6 @@ msgstr ""
 
 #: functions.php:515
 msgid "There are errors in your form."
-msgstr ""
-
-#: functions.php:548 template-parts/ads_contact_form.php:235
-#: templates/template-user-messages.php:169
-msgid "Send Message"
 msgstr ""
 
 #: functions.php:589
@@ -691,11 +726,6 @@ msgstr ""
 msgid "Sorry, we don`'t accept empty subject."
 msgstr ""
 
-#: template-parts/ads_contact_form.php:160
-#: templates/template-user-messages.php:118
-msgid "Your Message have been sent!"
-msgstr ""
-
 #: template-parts/ads_contact_form.php:166
 msgid "CONTACTER L'ANNONCEUR"
 msgstr ""
@@ -706,17 +736,6 @@ msgstr ""
 
 #: template-parts/ads_contact_form.php:208
 msgid "Your email"
-msgstr ""
-
-#: template-parts/ads_contact_form.php:214
-#: templates/template-user-messages.php:138
-#: templates/template-user-messages.php:159
-msgid "Subject"
-msgstr ""
-
-#: template-parts/ads_contact_form.php:220
-#: templates/template-user-messages.php:139
-msgid "Message"
 msgstr ""
 
 #: template-parts/categories.php:7
@@ -795,14 +814,6 @@ msgstr ""
 
 #: templates/news_agricoles.php:54
 msgid "Sorry, no posts matched your criteria."
-msgstr ""
-
-#: templates/template-user-messages.php:164
-msgid "Write your message here..."
-msgstr ""
-
-#: templates/template-user-messages.php:204
-msgid "View / Reply"
 msgstr ""
 
 #: wpadverts/add-preview.php:10

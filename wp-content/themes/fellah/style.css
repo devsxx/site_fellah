@@ -14905,7 +14905,6 @@ form textarea {
 
 .main-navigation ul li.free:after {
   content: "";
-  overflow-y: scroll;
   width: 2.1875rem;
   height: 0.75rem;
   background-size: contain;
@@ -15115,6 +15114,7 @@ form textarea {
   .main-navigation ul li .sub-menu.showAll {
     display: -ms-flexbox;
     display: flex;
+    overflow-y: scroll;
   }
   .main-navigation ul li .sub-menu li a {
     border: none;
@@ -17201,6 +17201,10 @@ div.adverts-flash-messages {
 
 .wpadverts-attachment-info {
   display: none;
+}
+
+.adverts-js {
+  height: 3.125rem;
 }
 
 #buddypress div.item-list-tabs ul li.current a,

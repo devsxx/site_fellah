@@ -19,7 +19,6 @@
 			&.free{
 				&:after{
 					content: "";
-					overflow-y: scroll;
 					width: oe_rem(35px);
 					height: oe_rem(12px);
 					background-size: contain;
@@ -128,6 +127,7 @@
 					
 					&.showAll{
 						display: flex;
+						overflow-y: scroll;
 					}
 					@include position(fixed, 0, 0, 0, 0);
 					@include flex(center, center, row);

@@ -13326,7 +13326,7 @@ blockquote.hide p {
   background-repeat: no-repeat;
   background-size: contain;
   color: transparent;
-  background-image: url("./img/icons/arrow-left.png");
+  background-image: url("./img/icons/arrow-right.png");
 }
 
 .wp-pagenavi .previouspostslink:hover,
@@ -13335,7 +13335,7 @@ blockquote.hide p {
 }
 
 .wp-pagenavi .nextpostslink {
-  background-image: url("./img/icons/arrow-right.png");
+  background-image: url("./img/icons/arrow-left.png");
 }
 
 .posts-navigation {
@@ -14899,8 +14899,7 @@ form textarea {
 }
 
 .main-navigation ul li.free:after {
-  content: "";
-  overflow-y: scroll;
+  content: ""; 
   width: 2.1875rem;
   height: 0.75rem;
   background-size: contain;
@@ -14954,6 +14953,7 @@ form textarea {
 .main-navigation ul li .sub-menu.showAll {
   display: -ms-flexbox;
   display: flex;
+  overflow-y: scroll;
 }
 
 .main-navigation ul li .sub-menu li {
@@ -15876,6 +15876,7 @@ form textarea {
 }
 
 .annoce_container .info_container .info .date {
+	direction: ltr;
   font-size: 0.875rem;
   font-weight: 300;
   padding-left: 0.875rem;
@@ -16890,6 +16891,7 @@ form textarea {
 
 .advert_single_container .advert_info .advert_share {
   margin-right: auto;
+  margin-left: initial;
   display: -ms-flexbox;
   display: flex;
   -moz-align-items: center;
@@ -17201,6 +17203,14 @@ div.adverts-flash-messages {
   display: none !important;
 }
 
+.wpadverts-attachment-info {
+  display: none;
+}
+
+.adverts-js {
+  height: 3.125rem;
+}
+
 #buddypress div.item-list-tabs ul li.current a,
 #buddypress div.item-list-tabs ul li.selected a {
   background-color: #eee;
@@ -17462,6 +17472,10 @@ div.adverts-flash-messages {
 }
 
 
-.wpadverts-attachment-info{
-  display: none;
+ 
+.annonce-price-box,
+#amount-LCD{
+  direction: ltr;
 }
+
+
