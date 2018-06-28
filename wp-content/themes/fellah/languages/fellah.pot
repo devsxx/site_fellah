@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-27 15:00+0100\n"
+"POT-Creation-Date: 2018-06-28 12:27+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,138 +23,138 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: buddypress/members/register.php:18
+#: buddypress/members/register.php:19
 msgid "Already have an account ?"
 msgstr ""
 
-#: buddypress/members/register.php:22
+#: buddypress/members/register.php:23
 msgid "Forgot your password ?"
 msgstr ""
 
-#: buddypress/members/register.php:28 buddypress/members/register.php:122
+#: buddypress/members/register.php:29 buddypress/members/register.php:123
 msgid "Create an account. Simple and free !"
 msgstr ""
 
-#: buddypress/members/register.php:32
+#: buddypress/members/register.php:33
 #: buddypress/members/single/profile/edit.php:27 functions.php:1137
 msgid "Prénom"
 msgstr ""
 
-#: buddypress/members/register.php:37
+#: buddypress/members/register.php:38
 #: buddypress/members/single/profile/edit.php:32 functions.php:1143
 msgid "Nom"
 msgstr ""
 
-#: buddypress/members/register.php:42 functions.php:1149
+#: buddypress/members/register.php:43 functions.php:1149
 msgid "Email"
 msgstr ""
 
-#: buddypress/members/register.php:47 functions.php:1116 functions.php:1158
+#: buddypress/members/register.php:48 functions.php:1116 functions.php:1158
 msgid "Mot de passe"
 msgstr ""
 
-#: buddypress/members/register.php:52 functions.php:1164
+#: buddypress/members/register.php:53 functions.php:1164
 msgid "Confirmer le mot de passe"
 msgstr ""
 
-#: buddypress/members/register.php:57
+#: buddypress/members/register.php:58
 #: buddypress/members/single/profile/edit.php:37 functions.php:555
 #: wpadverts/single.php:110
 msgid "Phone"
 msgstr ""
 
-#: buddypress/members/register.php:60 buddypress/members/register.php:408
+#: buddypress/members/register.php:61 buddypress/members/register.php:409
 msgid "Create my account"
 msgstr ""
 
-#: buddypress/members/register.php:100
+#: buddypress/members/register.php:101
 msgid "User registration is currently not allowed."
 msgstr ""
 
-#: buddypress/members/register.php:141
+#: buddypress/members/register.php:142
 msgid "Profile Details"
 msgstr ""
 
-#: buddypress/members/register.php:165 buddypress/members/register.php:187
+#: buddypress/members/register.php:166 buddypress/members/register.php:188
 #, php-format
 msgid "This field can be seen by: %s"
 msgstr ""
 
-#: buddypress/members/register.php:170
+#: buddypress/members/register.php:171
 msgid "Change"
 msgstr ""
 
-#: buddypress/members/register.php:175
+#: buddypress/members/register.php:176
 msgid "Who can see this field?"
 msgstr ""
 
-#: buddypress/members/register.php:180
+#: buddypress/members/register.php:181
 msgid "Close"
 msgstr ""
 
-#: buddypress/members/register.php:248
+#: buddypress/members/register.php:249
 msgid "Blog Details"
 msgstr ""
 
-#: buddypress/members/register.php:250
+#: buddypress/members/register.php:251
 msgid "Yes, I'd like to create a new site"
 msgstr ""
 
-#: buddypress/members/register.php:254
+#: buddypress/members/register.php:255
 msgid "Blog URL"
 msgstr ""
 
-#: buddypress/members/register.php:254 buddypress/members/register.php:270
-#: buddypress/members/register.php:332 buddypress/members/register.php:343
-#: buddypress/members/register.php:354 buddypress/members/register.php:366
+#: buddypress/members/register.php:255 buddypress/members/register.php:271
+#: buddypress/members/register.php:333 buddypress/members/register.php:344
+#: buddypress/members/register.php:355 buddypress/members/register.php:367
 msgid "(required)"
 msgstr ""
 
-#: buddypress/members/register.php:270
+#: buddypress/members/register.php:271
 msgid "Site Title"
 msgstr ""
 
-#: buddypress/members/register.php:281
+#: buddypress/members/register.php:282
 msgid ""
 "Privacy: I would like my site to appear in search engines, and in public "
 "listings around this network."
 msgstr ""
 
-#: buddypress/members/register.php:291 wpadverts/manage.php:68
+#: buddypress/members/register.php:292 wpadverts/manage.php:68
 msgid "Yes"
 msgstr ""
 
-#: buddypress/members/register.php:292
+#: buddypress/members/register.php:293
 msgid "No"
 msgstr ""
 
-#: buddypress/members/register.php:330
+#: buddypress/members/register.php:331
 msgid "Account Details"
 msgstr ""
 
-#: buddypress/members/register.php:332
+#: buddypress/members/register.php:333
 msgid "Username"
 msgstr ""
 
-#: buddypress/members/register.php:343
+#: buddypress/members/register.php:344
 msgid "Email Address"
 msgstr ""
 
-#: buddypress/members/register.php:354
+#: buddypress/members/register.php:355
 msgid "Choose a Password"
 msgstr ""
 
-#: buddypress/members/register.php:366
+#: buddypress/members/register.php:367
 msgid "Confirm Password"
 msgstr ""
 
-#: buddypress/members/register.php:445
+#: buddypress/members/register.php:446
 msgid ""
 "You have successfully created your account! To begin using this site you will "
 "need to activate your account via the email we have just sent to your address."
 msgstr ""
 
-#: buddypress/members/register.php:447
+#: buddypress/members/register.php:448
 msgid ""
 "You have successfully created your account! Please log in using the username "
 "and password you have just created."
@@ -436,7 +436,7 @@ msgstr ""
 msgid "There are errors in your form."
 msgstr ""
 
-#: functions.php:548 template-parts/ads_contact_form.php:233
+#: functions.php:548 template-parts/ads_contact_form.php:235
 #: templates/template-user-messages.php:169
 msgid "Send Message"
 msgstr ""
@@ -577,27 +577,27 @@ msgstr ""
 msgid "Toutes les Région"
 msgstr ""
 
-#: functions.php:1399
+#: functions.php:1407
 msgid "Email : "
 msgstr ""
 
-#: functions.php:1400
+#: functions.php:1408
 msgid "First name : "
 msgstr ""
 
-#: functions.php:1401
+#: functions.php:1409
 msgid "Last name : "
 msgstr ""
 
-#: functions.php:1402
+#: functions.php:1410
 msgid "Phone : "
 msgstr ""
 
-#: functions.php:1415
+#: functions.php:1423
 msgid "Télephone"
 msgstr ""
 
-#: functions.php:1418
+#: functions.php:1426
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
@@ -675,26 +675,46 @@ msgstr ""
 msgid "Actualités"
 msgstr ""
 
-#: template-parts/ads_contact_form.php:158
+#: template-parts/ads_contact_form.php:15
+msgid "Sorry, we don't accept empty email."
+msgstr ""
+
+#: template-parts/ads_contact_form.php:16
+msgid "Sorry, we don't accept empty name."
+msgstr ""
+
+#: template-parts/ads_contact_form.php:17
+msgid "Sorry, we don`'t accept empty message."
+msgstr ""
+
+#: template-parts/ads_contact_form.php:18
+msgid "Sorry, we don`'t accept empty subject."
+msgstr ""
+
+#: template-parts/ads_contact_form.php:160
 #: templates/template-user-messages.php:118
 msgid "Your Message have been sent!"
 msgstr ""
 
-#: template-parts/ads_contact_form.php:200
+#: template-parts/ads_contact_form.php:166
+msgid "CONTACTER L'ANNONCEUR"
+msgstr ""
+
+#: template-parts/ads_contact_form.php:202
 msgid "Your name"
 msgstr ""
 
-#: template-parts/ads_contact_form.php:206
+#: template-parts/ads_contact_form.php:208
 msgid "Your email"
 msgstr ""
 
-#: template-parts/ads_contact_form.php:212
+#: template-parts/ads_contact_form.php:214
 #: templates/template-user-messages.php:138
 #: templates/template-user-messages.php:159
 msgid "Subject"
 msgstr ""
 
-#: template-parts/ads_contact_form.php:218
+#: template-parts/ads_contact_form.php:220
 #: templates/template-user-messages.php:139
 msgid "Message"
 msgstr ""

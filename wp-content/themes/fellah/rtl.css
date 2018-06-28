@@ -17460,3 +17460,8 @@ div.adverts-flash-messages {
     right: 0;
   }
 }
+
+
+.wpadverts-attachment-info{
+  display: none;
+}

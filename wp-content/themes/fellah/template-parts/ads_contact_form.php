@@ -12,9 +12,11 @@ $emailSent = false;
 
 $profileLink = get_the_author_meta( 'user_url', $user_ID );
 $contact_email = get_the_author_meta('user_email');
-$classieraContactEmailError = 'contact-email-error';
-$classieraContactNameError = 'contact-name-error';
-$classieraConMsgError = 'contact-message-error';
+$classieraContactEmailError = __('Sorry, we don\'t accept empty email.', 'fellah');
+$classieraContactNameError = __('Sorry, we don\'t accept empty name.', 'fellah');
+$classieraConMsgError = __('Sorry, we don`\'t accept empty message.', 'fellah');
+$classiera_contact_subject_error = __('Sorry, we don`\'t accept empty subject.', 'fellah');
+
 $classieraContactThankyou = 'contact-thankyou-message';
 $classieraRelatedCount = 'classiera_related_ads_count';
 $category_icon_code = "";
@@ -161,7 +163,7 @@ if (isset($_POST['submitted'])) {
 
 		<div class="adverts-single-actions">
 			<a href="#" class="adverts-button adverts-show-contact-form">
-				CONTACTER L'ANNONCEUR <span class="adverts-icon-down-open"></span>
+				<?php _e('CONTACTER L\'ANNONCEUR','fellah'); ?> <span class="adverts-icon-down-open"></span>
 			</a>
 		</div>
 
@@ -171,7 +173,7 @@ if (isset($_POST['submitted'])) {
 					<div class="row">
 						<?php if($hasError == true && $emailSent != true) {?>
 							<div class="col-md-12">
-								<h4>
+								<p>
 									<?php 
 									if(!empty($nameError)){
 										echo $nameError."<br />";
@@ -189,7 +191,7 @@ if (isset($_POST['submitted'])) {
 										echo $humanTestError."<br />";
 									}
 									?>
-								</h4>
+								</p>
 							</div>
 						<?php }?>
 
@@ -199,25 +201,25 @@ if (isset($_POST['submitted'])) {
 								<label for="contactName">
 									<?php _e('Your name', 'fellah'); ?> <span class="adverts-form-required">*</span>
 								</label>
-								<input type="text" name="contactName" id="contactName" class="" />
+								<input type="text" name="contactName" id="contactName" class="" required />
 							</div><!--End Name-->
 							<div class="col-md-12">
 								<label for="email">
 									<?php _e('Your email', 'fellah'); ?> <span class="adverts-form-required">*</span>
 								</label>
-								<input type="text" name="email" id="email" class="" />
+								<input type="email" name="email" id="email" class="" required />
 							</div><!--End Email-->
 							<div class="col-md-12">
 								<label for="subject">
 									<?php _e('Subject', 'fellah'); ?> <span class="adverts-form-required">*</span>
 								</label>
-								<input type="text" name="subject" id="subject" class="" />
+								<input type="text" name="subject" id="subject" class="" required />
 							</div><!--End Subjext-->
 							<div class="col-md-12">
 								<label for="commentsText">
 									<?php _e('Message', 'fellah'); ?> <span class="adverts-form-required">*</span>
 								</label>
-								<textarea name="comments" id="commentsText" cols="8" rows="5" ></textarea>
+								<textarea name="comments" id="commentsText" cols="8" rows="5" required></textarea>
 							</div><!--End Your Message-->
 
 							<input type="hidden" name="classiera_post_title" id="classiera_post_title" value="<?php the_title(); ?>" />

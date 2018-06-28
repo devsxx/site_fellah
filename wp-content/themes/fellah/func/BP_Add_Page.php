@@ -27,7 +27,8 @@ function bp_custom_user_nav_item() {
 
     bp_core_new_nav_item( $args );
 }
-// add_action( 'bp_setup_nav', 'bp_custom_user_nav_item', 99 );
+
+add_action( 'bp_setup_nav', 'bp_custom_user_nav_item', 99 );
 
 /**
  * the calback function from our nav item arguments
@@ -40,8 +41,9 @@ function bp_custom_user_nav_item_screen() {
 /**
  * the function hooked to bp_template_content, this hook is in plugns.php
  */
-function bp_custom_screen_content() {
+function bp_custom_screen_content() { 
 
-   echo bp_buffer_template_part('templates/template-user-messages.php');
+//    include realpath(dirname(__FILE__) . '/..' ) . '/templates/template-user-messages.php';
+//    echo realpath(dirname(__FILE__) . '/..') . '/buddypress/members/single/template-user-messages.php';
 
 }
