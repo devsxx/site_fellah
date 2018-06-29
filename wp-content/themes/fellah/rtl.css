@@ -15816,6 +15816,7 @@ form textarea {
   font-size: 0.875rem;
   font-weight: 300;
   padding-left: 0.875rem;
+  padding-right: 0;
   font-family: "Quicksand", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -17075,7 +17076,7 @@ div.adverts-flash-messages {
   top: initial !important;
   left: initial !important;
   bottom: 0;
-  right: 40px;
+  right: 40px !important;
   padding: 0 !important;
   z-index: 99;
 }
