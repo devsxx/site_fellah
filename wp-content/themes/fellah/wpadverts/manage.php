@@ -46,10 +46,7 @@
 
                             </span>
                             
-                        </span>
-                        
-                    
-                    
+                        </span> 
                     </div>
                     
                     <div class="advert-published adverts-manage-actions-wrap">
@@ -85,24 +82,24 @@
                     <?php do_action( "adverts_sh_manage_actions_after", $post->ID, $baseurl ) ?>
                     
                 </div>
-                
+
                 <?php endwhile; ?>
                 <?php else: ?>
-                <div class="adverts-grid-row adverts-grid-compact">
-                    <div class="adverts-grid-col adverts-col">
-                        <em><?php _e("You do not have any Ads posted yet.", "adverts") ?></em>
+                    <div class="adverts-grid-row adverts-grid-compact">
+                        <div class="adverts-grid-col adverts-col">
+                            <em><?php _e("You do not have any Ads posted yet.", "adverts") ?></em>
+                        </div>
                     </div>
-                </div>
                 <?php endif; ?>
                 <?php wp_reset_query(); ?>
             </div>
 
             <div class="adverts-pagination">
                 <?php echo paginate_links( array(
-                    'base' => $paginate_base,
-                'format' => $paginate_format,
-                'current' => max( 1, $paged ),
-                'total' => $loop->max_num_pages,
+                    'base'      => $paginate_base,
+                    'format'    => $paginate_format,
+                    'current'   => max( 1, $paged ),
+                    'total'     => $loop->max_num_pages,
                     'prev_next' => false
                 ) ); ?>
             </div>

@@ -138,8 +138,12 @@ if (isset($_POST['submitted'])) {
 		$messageData['message']    = $comments;
 		$messageData['created_at'] = $messageData['updated_at'] = date('Y-m-d H:i:s');
 		$wpdb->insert( "{$wpdb->prefix}messages", $messageData, array('%d', '%d', '%s', '%s', '%s', '%s'));
-
 		$messageId = $wpdb->insert_id; 
+		
+		/********** Notification Email to User Start **********/
+		newMessageNotificationToUser($messageData['to_id'], $current_user->display_name); // notify user about new reply
+		/********** Notification Email to User End **********/
+		
 		$emailSent = true;
 		// echo "<pre>";
 		// print_r($messageData); 
@@ -156,7 +160,7 @@ if (isset($_POST['submitted'])) {
 	<div id="advertisement">
 
 		<?php if (isset($emailSent) && $emailSent == true) { ?>
-			<div data-alert class="advert_alert advert_success">
+			<div data-alert class="advert_alert advert_success" style="display: none;">
 				<?php esc_html_e( 'Your Message have been sent!', 'fellah' ); ?>
 			</div>
 		<?php } ?>

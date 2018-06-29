@@ -42,8 +42,10 @@ function bp_custom_user_nav_item_screen() {
  * the function hooked to bp_template_content, this hook is in plugns.php
  */
 function bp_custom_screen_content() { 
-
-//    include realpath(dirname(__FILE__) . '/..' ) . '/templates/template-user-messages.php';
-//    echo realpath(dirname(__FILE__) . '/..') . '/buddypress/members/single/template-user-messages.php';
+    ob_start();	
+    include(get_template_directory() . '/templates/template-user-messages.php');
+    ob_end_clean();
+    // include realpath(dirname(__FILE__) . '/..' ) . '/templates/template-user-messages.php';
+    // echo realpath(dirname(__FILE__) . '/..') . '/buddypress/members/single/template-user-messages.php';
 
 }

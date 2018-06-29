@@ -114,7 +114,7 @@ $current_page_id = $page->ID;
 				<center><h3><?php echo $post->post_title; ?></h3></center>
 
 				<?php if (isset($emailSent) && $emailSent == true) { ?>
-					<div data-alert class="advert_alert advert_success#swipebox-bottom-bar">
+					<div data-alert class="advert_alert advert_success" style="display: none;">
 						<?php esc_html_e( 'Your Message have been sent!', 'fellah' ); ?>  
 					</div>
 				<?php } ?>

@@ -10,33 +10,30 @@
  */
 
 if ( !is_user_logged_in() ) { 
-
-	global $redux_demo; 
-	$login = $redux_demo['login'];
+	$login = '/';
 	wp_redirect( $login ); exit;
-
 }
 
-$messagesTable = $wpdb->prefix . 'messages';
+global $current_user, 
+$user_id, 
+$wpdb;
 
-global $redux_demo; 
-$edit = $redux_demo['edit'];
+$messagesTable = $wpdb->prefix . 'messages';
 $pagepermalink = get_permalink($post->ID);
 
-global $current_user, $user_id;
-wp_get_current_user();
-$user_info = get_userdata($user_ID);
+wp_get_current_user(); 
 $user_id = $current_user->ID; // You can set $user_id to any users, but this gets the current users ID.
-$user_id = 51; // You can set $user_id to any users, but this gets the current users ID.
-
 
 if (isset($_GET['id']) && $_GET['id'] > 0) {
 	$msgId    = $_GET['id'];
 	$querystr = "SELECT $messagesTable.* FROM $messagesTable WHERE $messagesTable.message_id = $msgId";
 	$record   = $wpdb->get_row($querystr, OBJECT);
+	$messagePageId       = $wpdb->get_var( $wpdb->prepare("SELECT post_id FROM $wpdb->postmeta WHERE meta_value = %s LIMIT 1" , 'template-user-messages.php') );
+	$sidebarMessagesLink = get_permalink($messagePageId);
 
 	if ($record->to_id != $user_id) {
 		$messagePageId       = $wpdb->get_var( $wpdb->prepare("SELECT post_id FROM $wpdb->postmeta WHERE meta_value = %s LIMIT 1" , 'template-user-messages.php') );
+		$messagePageId       = '/';
 		$sidebarMessagesLink = get_permalink($messagePageId);
 		wp_redirect( $sidebarMessagesLink ); exit;
 	}
@@ -75,7 +72,7 @@ if (isset($_POST['submitted']) && $record) {
 		/********** New Message Code End **********/
 
 		/********** Notification Email to User Start **********/
-		// newMessageNotificationToUser($messageData['to_id'], $current_user->display_name); // notify user about new reply
+		newMessageNotificationToUser($messageData['to_id'], $current_user->display_name); // notify user about new reply
 		/********** Notification Email to User End **********/
 
 		$emailSent = true;
@@ -83,29 +80,9 @@ if (isset($_POST['submitted']) && $record) {
 }
 
 get_header(); 
+?>
 
-
-?>
-<?php 
-global $wpdb; 
-global $redux_demo; 
-$featured_ads_option = $redux_demo['featured-options-on'];
-$profile = $redux_demo['profile'];
-$all_adds = $redux_demo['all-ads'];
-$allFavourite = $redux_demo['all-favourite'];
-$newPostAds = $redux_demo['new_post'];
-$caticoncolor="";
-$category_icon_code ="";
-$category_icon="";
-$category_icon_color="";
-?>
-<?php 
-$page = get_page($post->ID);
-$current_page_id = $page->ID;
-?>
-<?php $page_custom_title = get_post_meta($current_page_id, 'page_custom_title', true); ?>
-<!-- page Heading -->
-<?php $titleBg = $redux_demo['title-bg']['url']; ?>	
+<!-- page Heading --> 
 <section id="messages" class="messages">
 	<div class="container">
 
@@ -114,7 +91,7 @@ $current_page_id = $page->ID;
 				<center><h3><?php echo $post->post_title; ?></h3></center>
 
 				<?php if (isset($emailSent) && $emailSent == true) { ?>
-					<div data-alert class="advert_alert advert_success#swipebox-bottom-bar">
+					<div data-alert class="advert_alert advert_success" style="display: none;">
 						<?php esc_html_e( 'Your Message have been sent!', 'fellah' ); ?>  
 					</div>
 				<?php } ?>

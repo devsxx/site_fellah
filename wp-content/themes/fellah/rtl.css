@@ -14595,6 +14595,10 @@ form textarea {
   height: 5rem;
 }
 
+.site-header.fixed .site-header-container .main-navigation ul li .sub-menu.showAll {
+  top: 80px !important;
+}
+
 .site-header.fixed .site-header-container .header_picto_container {
   height: 5rem;
 }

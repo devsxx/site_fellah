@@ -86,6 +86,15 @@
 			}
 			.main-navigation{
 				height: oe_rem(80px); 
+				ul {
+					li {
+						.sub-menu{
+							&.showAll {
+								top: 80px !important; 
+						  }
+						}
+					}
+				}
 			}
 			.header_picto_container{
 				height: oe_rem(80px); 
@@ -130,6 +139,7 @@
 					}	
 				}
 			}
+
 		}
 	}
 
