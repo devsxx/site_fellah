@@ -28,7 +28,7 @@ function bp_custom_user_nav_item() {
     bp_core_new_nav_item( $args );
 }
 
-add_action( 'bp_setup_nav', 'bp_custom_user_nav_item', 99 );
+// add_action( 'bp_setup_nav', 'bp_custom_user_nav_item', 99 );
 
 /**
  * the calback function from our nav item arguments
