@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-29 15:40+0100\n"
+"PO-Revision-Date: 2018-06-29 16:47+0100\n"
 "Language-Team: ENGLISH <jjj@buddypress.org>\n"
 "X-Generator: Poedit 2.0.8\n"
 "Last-Translator: \n"
@@ -19,30 +19,30 @@ msgstr ""
 #: bp-activity/actions/delete.php:52
 #: bp-templates/bp-nouveau/includes/activity/ajax.php:249
 msgid "Activity deleted successfully"
-msgstr ""
+msgstr "تم حذف النشاط بنجاح"
 
 #: bp-activity/actions/delete.php:54
 msgid "There was an error when deleting that activity"
-msgstr ""
+msgstr "حدث خطأ أثناء حذف هذا النشاط"
 
 #: bp-activity/actions/favorite.php:25
 msgid "Activity marked as favorite."
-msgstr ""
+msgstr "النشاط الذي تم وضع علامة عليه كمفضل."
 
 #: bp-activity/actions/favorite.php:27
 msgid ""
 "There was an error marking that activity as a favorite. Please try again."
-msgstr ""
+msgstr "حدث خطأ في وضع علامة على هذا النشاط باعتباره مفضلًا. حاول مرة اخرى."
 
 #. translators: Sitewide activity RSS title - "[Site Name] | Site Wide
 #. Activity"
 #: bp-activity/actions/feeds.php:28
 msgid "%s | Site-Wide Activity"
-msgstr ""
+msgstr "%s | نشاط على مستوى الموقع"
 
 #: bp-activity/actions/feeds.php:31
 msgid "Activity feed for the entire site."
-msgstr ""
+msgstr "خلاصة الأنشطة للموقع بأكمله."
 
 #. translators: Personal activity RSS title - "[Site Name] | [User Display
 #. Name] | Activity"
@@ -50,7 +50,7 @@ msgstr ""
 #. Activity"
 #: bp-activity/actions/feeds.php:54 bp-groups/actions/feed.php:36
 msgid "%1$s | %2$s | Activity"
-msgstr ""
+msgstr "%1$s | %2$s | النشاط"
 
 #: bp-activity/actions/feeds.php:57
 msgid "Activity feed for %s."
@@ -130,12 +130,12 @@ msgstr ""
 
 #: bp-activity/actions/unfavorite.php:25
 msgid "Activity removed as favorite."
-msgstr ""
+msgstr "النشاط الذي تم وضع علامة عليه كمفضل."
 
 #: bp-activity/actions/unfavorite.php:27
 msgid ""
 "There was an error removing that activity as a favorite. Please try again."
-msgstr ""
+msgstr "حدث خطأ في وضع علامة على هذا النشاط باعتباره مفضلًا. حاول مرة اخرى."
 
 #: bp-activity/bp-activity-admin.php:88
 msgid "ERROR: Please type a reply."
@@ -182,7 +182,7 @@ msgstr ""
 
 #: bp-activity/bp-activity-admin.php:232
 msgid "Item, Link, Type"
-msgstr ""
+msgstr "البند ، وصلة ، نوع"
 
 #: bp-activity/bp-activity-admin.php:234
 msgid ""
@@ -220,7 +220,7 @@ msgstr ""
 #: bp-members/classes/class-bp-members-admin.php:783
 #: bp-members/classes/class-bp-members-admin.php:1542
 msgid "For more information:"
-msgstr ""
+msgstr "تم حذف النشاط بنجاح..."
 
 #: bp-activity/bp-activity-admin.php:243
 msgid ""
@@ -281,7 +281,7 @@ msgstr ""
 #. translators: accessibility text
 #: bp-activity/bp-activity-admin.php:301
 msgid "Activity list navigation"
-msgstr ""
+msgstr "التنقل في قائمة الأنشطة"
 
 #: bp-activity/bp-activity-admin.php:663
 msgid "Editing Activity (ID #%s)"
@@ -1120,7 +1120,7 @@ msgstr ""
 #: bp-messages/bp-messages-template.php:859
 #: bp-templates/bp-legacy/buddypress/common/search/dir-search-form.php:15
 msgid "Search"
-msgstr ""
+msgstr "بحث"
 
 #: bp-blogs/bp-blogs-template.php:1471
 msgid "Visit Site"
@@ -1356,7 +1356,7 @@ msgstr ""
 #: bp-core/classes/class-bp-core-login-widget.php:120
 #: bp-members/bp-members-adminbar.php:63
 msgid "Register"
-msgstr ""
+msgstr "تسجيل"
 
 #: bp-core/admin/bp-core-admin-functions.php:296
 msgid ""
@@ -1977,7 +1977,7 @@ msgstr ""
 
 #: bp-core/bp-core-avatars.php:343
 msgid "Profile Photo"
-msgstr ""
+msgstr "الصورة الشخصية"
 
 #: bp-core/bp-core-avatars.php:930
 msgid "Upload failed! Error was: %s"
@@ -3252,7 +3252,7 @@ msgstr "اسم المستخدم"
 
 #: bp-core/classes/class-bp-core-login-widget.php:111
 msgid "Password"
-msgstr ""
+msgstr "كلمة السر"
 
 #: bp-core/classes/class-bp-core-login-widget.php:114
 msgid "Remember Me"
@@ -3304,22 +3304,22 @@ msgstr "عني"
 #: bp-templates/bp-legacy/buddypress/members/single/profile/profile-wp.php:54
 #: bp-templates/bp-nouveau/includes/members/functions.php:472
 msgid "Website"
-msgstr ""
+msgstr "موقع الكتروني"
 
 #: bp-core/deprecated/1.5.php:180
 #: bp-templates/bp-legacy/buddypress/members/single/profile/profile-wp.php:63
 msgid "Jabber"
-msgstr ""
+msgstr "Jabber"
 
 #: bp-core/deprecated/1.5.php:189
 #: bp-templates/bp-legacy/buddypress/members/single/profile/profile-wp.php:72
 msgid "AOL Messenger"
-msgstr ""
+msgstr "AOL Messenger"
 
 #: bp-core/deprecated/1.5.php:198
 #: bp-templates/bp-legacy/buddypress/members/single/profile/profile-wp.php:81
 msgid "Yahoo Messenger"
-msgstr ""
+msgstr "Yahoo Messenger"
 
 #: bp-core/deprecated/1.5.php:358
 msgid "%1$s mentioned you in the group \"%2$s\""
@@ -3578,7 +3578,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/includes/groups/functions.php:139
 #: bp-templates/bp-nouveau/includes/members/functions.php:62
 msgid "My Friends"
-msgstr ""
+msgstr "أصدقائى"
 
 #: bp-friends/bp-friends-template.php:84
 #: bp-friends/classes/class-bp-core-friends-widget.php:67
@@ -5182,7 +5182,7 @@ msgstr ""
 
 #: bp-members/classes/class-bp-members-admin.php:1022
 msgid "No user found with this ID."
-msgstr "لم يتم العثور على شيء"
+msgstr "لم يتم العثور على شيء."
 
 #: bp-members/classes/class-bp-members-admin.php:1055
 msgid "User account has not yet been activated"
@@ -5371,7 +5371,7 @@ msgstr "اسمك"
 #: bp-settings/classes/class-bp-settings-component.php:163
 #: bp-settings/classes/class-bp-settings-component.php:238
 msgid "Email"
-msgstr "البريد الإلكتروني "
+msgstr "البريد الإلكتروني"
 
 #: bp-members/classes/class-bp-members-admin.php:2165
 msgid "Last notified: %s"
@@ -5652,7 +5652,7 @@ msgstr[5] ""
 #: bp-messages/classes/class-bp-messages-component.php:223
 #: bp-messages/classes/class-bp-messages-component.php:331
 msgid "Messages"
-msgstr ""
+msgstr "رسائل"
 
 #: bp-messages/bp-messages-notifications.php:272
 msgid "A member sends you a new message"
@@ -5986,12 +5986,12 @@ msgstr[5] ""
 #: bp-notifications/bp-notifications-template.php:1003
 #: bp-templates/bp-nouveau/includes/notifications/template-tags.php:85
 msgid "Newest First"
-msgstr ""
+msgstr "الأحدث أولا"
 
 #: bp-notifications/bp-notifications-template.php:1004
 #: bp-templates/bp-nouveau/includes/notifications/template-tags.php:86
 msgid "Oldest First"
-msgstr ""
+msgstr "الأقدم أولا"
 
 #: bp-notifications/bp-notifications-template.php:1008
 msgid "Go"
@@ -6055,7 +6055,7 @@ msgstr ""
 
 #: bp-settings/actions/general.php:232
 msgid "No changes were made to your account."
-msgstr ""
+msgstr "لم يتم إجراء أية تغييرات على حسابك."
 
 #: bp-settings/actions/general.php:234
 msgid "No changes were made to this account."
@@ -6870,7 +6870,7 @@ msgstr "تفاصيل الحساب"
 #: bp-templates/bp-nouveau/includes/template-tags.php:2259
 #: bp-xprofile/bp-xprofile-template.php:1463
 msgid "(required)"
-msgstr ""
+msgstr "(مطلوب)"
 
 #: bp-templates/bp-legacy/buddypress/members/register.php:96
 #: bp-templates/bp-nouveau/includes/functions.php:1145
@@ -6898,7 +6898,7 @@ msgstr "تفاصيل الملف الشخصي"
 #: bp-templates/bp-legacy/buddypress/members/single/profile/edit.php:81
 #: bp-xprofile/classes/class-bp-xprofile-user-admin.php:380
 msgid "This field can be seen by: %s"
-msgstr ""
+msgstr "يمكن رؤية هذا الحقل من خلال: %s"
 
 #: bp-templates/bp-legacy/buddypress/members/register.php:200
 #: bp-templates/bp-legacy/buddypress/members/single/profile/edit.php:70
@@ -6924,7 +6924,7 @@ msgstr "نعم ، أرغب في إنشاء موقع جديد"
 
 #: bp-templates/bp-legacy/buddypress/members/register.php:280
 msgid "Blog URL"
-msgstr ""
+msgstr "رابط المدونة"
 
 #: bp-templates/bp-legacy/buddypress/members/register.php:296
 #: bp-templates/bp-nouveau/includes/functions.php:1179
@@ -6936,6 +6936,8 @@ msgid ""
 "Privacy: I would like my site to appear in search engines, and in public "
 "listings around this network."
 msgstr ""
+"الخصوصية: أريد أن يظهر موقعي في محركات البحث ، وفي القوائم العامة حول هذه "
+"الشبكة."
 
 #: bp-templates/bp-legacy/buddypress/members/register.php:356
 #: bp-templates/bp-nouveau/includes/functions.php:1248
@@ -6971,7 +6973,7 @@ msgstr ""
 #: bp-templates/bp-legacy/buddypress/members/single/profile.php:12
 #: bp-templates/bp-legacy/buddypress/members/single/settings.php:12
 msgid "Member secondary navigation"
-msgstr ""
+msgstr "عضو ثانوي الملاحة"
 
 #. translators: accessibility text
 #: bp-templates/bp-legacy/buddypress/members/single/friends/requests.php:21
@@ -7016,7 +7018,7 @@ msgstr ""
 
 #: bp-templates/bp-legacy/buddypress/members/single/home.php:39
 msgid "Member primary navigation"
-msgstr ""
+msgstr "عضو الملاحة الرئيسي"
 
 #. translators: accessibility text
 #: bp-templates/bp-legacy/buddypress/members/single/messages/compose.php:13
@@ -7194,6 +7196,8 @@ msgid ""
 "Click below to select a JPG, GIF or PNG format photo from your computer and "
 "then click 'Upload Image' to proceed."
 msgstr ""
+"انقر أدناه لتحديد صورة بتنسيق JPG أو GIF أو PNG من جهاز الكمبيوتر الخاص بك ، "
+"ثم انقر فوق \"Upload Image\" للمتابعة."
 
 #: bp-templates/bp-legacy/buddypress/members/single/profile/change-avatar.php:53
 #: bp-templates/bp-nouveau/buddypress/members/single/profile/change-avatar.php:44
@@ -7217,7 +7221,7 @@ msgstr "تغيير صورة الغلاف"
 #: bp-templates/bp-legacy/buddypress/members/single/profile/change-cover-image.php:23
 #: bp-templates/bp-nouveau/buddypress/members/single/profile/change-cover-image.php:17
 msgid "Your Cover Image will be used to customize the header of your profile."
-msgstr ""
+msgstr "سيتم استخدام صورة الغلاف لتخصيص رأس ملفك الشخصي."
 
 #: bp-templates/bp-legacy/buddypress/members/single/profile/edit.php:27
 msgid "Editing '%s' Profile Group"
@@ -7231,7 +7235,7 @@ msgstr "مجموعات حقول الملف الشخصي"
 #: bp-templates/bp-legacy/buddypress/members/single/profile/profile-wp.php:29
 #: bp-templates/bp-nouveau/buddypress/members/single/profile/profile-wp.php:20
 msgid "%s's Profile"
-msgstr ""
+msgstr "ملفي %s"
 
 #: bp-templates/bp-legacy/buddypress/members/single/settings/capabilities.php:26
 msgid "This user is a spammer."
@@ -7818,7 +7822,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/includes/groups/functions.php:118
 #: bp-templates/bp-nouveau/includes/members/functions.php:49
 msgid "All Members"
-msgstr ""
+msgstr "كل الأعضاء"
 
 #: bp-templates/bp-nouveau/includes/activity/functions.php:253
 #: bp-templates/bp-nouveau/includes/groups/functions.php:517
@@ -9291,7 +9295,7 @@ msgstr ""
 #: bp-core/admin/bp-core-admin-schema.php:322
 msgctxt "Display name field"
 msgid "Display Name"
-msgstr ""
+msgstr "اسمك"
 
 #: bp-core/admin/bp-core-admin-tools.php:410
 msgctxt "buddypress tools intro"
@@ -9379,7 +9383,7 @@ msgstr ""
 #: bp-core/bp-core-functions.php:758
 msgctxt "Page title for the user registration screen."
 msgid "Register"
-msgstr ""
+msgstr "تسجيل"
 
 #: bp-core/bp-core-functions.php:1298
 msgctxt "Separator in time since"
@@ -10168,7 +10172,7 @@ msgstr ""
 #: bp-members/classes/class-bp-members-component.php:326
 msgctxt "Member profile main navigation"
 msgid "Profile"
-msgstr ""
+msgstr "ملفي"
 
 #: bp-members/classes/class-bp-members-component.php:342
 msgctxt "Member profile view"
@@ -10243,7 +10247,7 @@ msgstr ""
 #: bp-xprofile/bp-xprofile-admin.php:28
 msgctxt "Admin Users menu"
 msgid "Profile Fields"
-msgstr ""
+msgstr "حقول الملف الشخصي"
 
 #: bp-messages/classes/class-bp-messages-notices-list-table.php:78
 msgctxt "Admin Notices column header"
@@ -10423,7 +10427,7 @@ msgstr "إرسال"
 #: bp-templates/bp-nouveau/includes/messages/functions.php:149
 msgctxt "button"
 msgid "Search"
-msgstr ""
+msgstr "بحث"
 
 #: bp-templates/bp-nouveau/buddypress/common/js-templates/messages/index.php:126
 #: bp-templates/bp-nouveau/buddypress/common/js-templates/messages/index.php:128
@@ -10533,7 +10537,7 @@ msgstr ""
 #: bp-templates/bp-nouveau/buddypress/common/js-templates/messages/index.php:100
 msgctxt "search placeholder text"
 msgid "Search"
-msgstr ""
+msgstr "بحث"
 
 #: bp-templates/bp-nouveau/buddypress/common/js-templates/invites/index.php:143
 #: bp-templates/bp-nouveau/buddypress/common/js-templates/invites/index.php:145
@@ -10612,12 +10616,12 @@ msgstr ""
 #: bp-xprofile/bp-xprofile-admin.php:28
 msgctxt "xProfile admin page title"
 msgid "Profile Fields"
-msgstr ""
+msgstr "حقول الملف الشخصي"
 
 #: bp-xprofile/bp-xprofile-admin.php:147 bp-xprofile/bp-xprofile-admin.php:156
 msgctxt "Settings page header"
 msgid "Profile Fields"
-msgstr ""
+msgstr "حقول الملف الشخصي"
 
 #: bp-xprofile/bp-xprofile-admin.php:235
 msgctxt "Edit Profile Fields Group"
@@ -10690,22 +10694,22 @@ msgstr ""
 #: bp-xprofile/classes/class-bp-xprofile-component.php:181
 msgctxt "Visibility level setting"
 msgid "Everyone"
-msgstr ""
+msgstr "كل واحد"
 
 #: bp-xprofile/classes/class-bp-xprofile-component.php:185
 msgctxt "Visibility level setting"
 msgid "Only Me"
-msgstr ""
+msgstr "انا فقط"
 
 #: bp-xprofile/classes/class-bp-xprofile-component.php:189
 msgctxt "Visibility level setting"
 msgid "All Members"
-msgstr ""
+msgstr "كل الأعضاء"
 
 #: bp-xprofile/classes/class-bp-xprofile-component.php:196
 msgctxt "Visibility level setting"
 msgid "My Friends"
-msgstr ""
+msgstr "أصدقائى"
 
 #: bp-xprofile/classes/class-bp-xprofile-component.php:252
 msgctxt "Profile header menu"
@@ -10775,7 +10779,7 @@ msgstr ""
 #: bp-xprofile/classes/class-bp-xprofile-component.php:486
 msgctxt "My Account Settings sub nav"
 msgid "Profile"
-msgstr ""
+msgstr "ملفي"
 
 #: bp-xprofile/classes/class-bp-xprofile-field-type-checkbox.php:29
 msgctxt "xprofile field type"
@@ -10795,7 +10799,7 @@ msgstr ""
 #: bp-xprofile/classes/class-bp-xprofile-field-type-number.php:29
 msgctxt "xprofile field type"
 msgid "Number"
-msgstr ""
+msgstr "رقم"
 
 #: bp-xprofile/classes/class-bp-xprofile-field-type-radiobutton.php:29
 msgctxt "xprofile field type"
@@ -10830,7 +10834,7 @@ msgstr ""
 #: bp-xprofile/classes/class-bp-xprofile-field.php:1388
 msgctxt "XProfile admin edit field"
 msgid "Name (required)"
-msgstr ""
+msgstr "الاسم (مطلوب)"
 
 #: bp-xprofile/classes/class-bp-xprofile-field.php:1394
 msgctxt "XProfile admin edit field"
@@ -10840,9 +10844,9 @@ msgstr "وصف"
 #: bp-xprofile/classes/class-bp-xprofile-user-admin.php:151
 msgctxt "xprofile user-admin edit screen"
 msgid "User marked as a spammer"
-msgstr ""
+msgstr "وضع المستخدم علامة كمرسلي رسائل غير مرغوب فيها"
 
 #: bp-xprofile/classes/class-bp-xprofile-user-admin.php:163
 msgctxt "xprofile user-admin edit screen"
 msgid "Profile Photo"
-msgstr ""
+msgstr "الصورة الشخصية"

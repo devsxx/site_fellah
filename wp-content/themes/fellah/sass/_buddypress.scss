@@ -154,3 +154,16 @@
     color: $brand-success;
 }
 
+#buddypress div#message {
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+#buddypress div#message.error p {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    clear: left;
+    color: #d9534f;
+    margin: 0 auto;
+}

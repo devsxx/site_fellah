@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WP Adverts 1.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
 "POT-Creation-Date: 2018-06-27 12:14+0100\n"
-"PO-Revision-Date: 2018-06-29 15:37+0100\n"
+"PO-Revision-Date: 2018-06-29 17:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -1521,7 +1521,7 @@ msgstr "مطلوب"
 
 #: includes/defaults.php:320
 msgid "Field cannot be empty."
-msgstr ""
+msgstr "لا يمكن أن يكون الحقل خاليًا."
 
 #: includes/defaults.php:331
 msgid "Provided email address is invalid."

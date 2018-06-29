@@ -418,6 +418,8 @@ div.adverts-flash-messages {
   border-radius: oe_rem(4px);
   @include oe_box-shadow-light;
   cursor: pointer;
+  width: oe_rem(600px);
+  max-width: 100%;
   &.advert_danger{
     color: #fff;
     background-color: $brand-danger;
@@ -533,4 +535,28 @@ div.adverts-flash-messages {
 
 .adverts-js{
   height: oe_rem(50px);
+}
+
+.adverts-form .adverts-field-error {
+  color: #d9534f !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  background-color: transparent !important;
+}
+div.adverts-flash-messages.adverts-flash-error {
+  background-color: transparent !important;
+  color: #d9534f !important;
+  text-align: center !important;
+}
+.adverts-form .adverts-field-error-list {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  clear: both;
+  overflow: hidden;
+}
+.adverts-form .adverts-field-error-list > li {
+  color: #d9534f !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }

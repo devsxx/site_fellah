@@ -828,14 +828,20 @@ function ajax_login(){
 	$info['remember'] = true;
 	$error_code = 0;
 
-	$user_signon = wp_signon( $info, false );
-	if ( is_wp_error($user_signon) ){
-
-		$message = __('Wrong username or password.', 'fellah');
+	if( $info['user_login'] == "" || $info['user_password'] == "" ){
+		$error_code = 11;
 		$etat = false;
-	} else {
-		$message = __('Login successful', 'fellah');
-		$etat = true;
+		$message = __("Un ou plusieurs champs obligatoires ne sont pas remplis !","fellah");
+	}else{
+
+		$user_signon = wp_signon( $info, false );
+		if ( is_wp_error($user_signon) ){
+			$message = __('Wrong username or password.', 'fellah');
+			$etat = false;
+		} else {
+			$message = __('Login successful', 'fellah');
+			$etat = true;
+		}
 	}
 	$result =	array(
 		'etat' => $etat,

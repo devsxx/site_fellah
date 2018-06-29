@@ -13962,8 +13962,7 @@ form textarea {
     padding: 0 2px;
   }
   .header_bandeau_content .header_bandeau .search_zone .adverts-form-submit {
-    width: 100%;
-    margin: 0.625rem 0;
+    width: 100%; 
   }
 }
 
@@ -16126,7 +16125,9 @@ form textarea {
   text-rendering: auto;
   line-height: 1;
   margin-left: 0.625rem;
+  margin-right: 0;
   right: 16px;
+  left: initial;
   position: absolute;
   top: 50%;
   margin-top: -10px;
@@ -17042,6 +17043,8 @@ div.adverts-flash-messages {
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
+  width: 600px;
+  max-width: 100%;
 }
 
 .advert_alert.advert_danger {
@@ -17419,4 +17422,12 @@ div.adverts-flash-messages {
   direction: ltr;
 }
 
-
+ 
+.adverts-manage-info {
+  float: left !important;
+  direction: ltr;
+}
+.advert-item-col-1 .advert-post-title, .advert-item-col-1 .advert-published {
+  margin-right: 110px;
+  margin-left: 0 !important;
+}

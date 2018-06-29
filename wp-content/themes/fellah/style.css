@@ -13999,7 +13999,7 @@ form textarea {
   }
   .header_bandeau_content .header_bandeau {
     height: auto;
-    margin: 1.25rem 0;
+    margin: 0;
   }
   .header_bandeau_content .header_bandeau .titre {
     font-size: 1.5rem;
@@ -17105,6 +17105,8 @@ div.adverts-flash-messages {
   border-radius: 0.25rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
+  width: 37.5rem;
+  max-width: 100%;
 }
 
 .advert_alert.advert_danger {
@@ -17213,6 +17215,33 @@ div.adverts-flash-messages {
 
 .adverts-js {
   height: 3.125rem;
+}
+
+.adverts-form .adverts-field-error {
+  color: #d9534f !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  background-color: transparent !important;
+}
+
+div.adverts-flash-messages.adverts-flash-error {
+  background-color: transparent !important;
+  color: #d9534f !important;
+  text-align: center !important;
+}
+
+.adverts-form .adverts-field-error-list {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  clear: both;
+  overflow: hidden;
+}
+
+.adverts-form .adverts-field-error-list > li {
+  color: #d9534f !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 #buddypress div.item-list-tabs ul li.current a,
@@ -17365,6 +17394,20 @@ div.adverts-flash-messages {
 .good,
 .strong {
   color: #5cb85c;
+}
+
+#buddypress div#message {
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+#buddypress div#message.error p {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  clear: left;
+  color: #d9534f;
+  margin: 0 auto;
 }
 
 .site-footer {
