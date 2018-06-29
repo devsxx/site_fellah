@@ -42,7 +42,7 @@ if (isset($_GET['id']) && $_GET['id'] > 0) {
 if (isset($_POST['submitted']) && $record) {
 	//Check to make sure that the subject field is not empty
 	if(trim($_POST['subject']) === '') {
-		$subjectError = esc_html('Subject field is rquired.', 'fellah' );
+		$subjectError = __('Subject field is rquired.', 'fellah' );
 		$hasError = true;
 	} else {
 		$subject = trim($_POST['subject']);
@@ -50,7 +50,7 @@ if (isset($_POST['submitted']) && $record) {
 
 	//Check to make sure comments were entered	
 	if(trim($_POST['comments']) === '') {
-		$commentError = esc_html('Message field is rquired.', 'fellah' );
+		$commentError = __('Message field is rquired.', 'fellah' );
 		$hasError = true;
 	} else {
 		if(function_exists('stripslashes')) {
@@ -91,7 +91,7 @@ get_header();
 				<center><h3><?php echo $post->post_title; ?></h3></center>
 
 				<?php if (isset($emailSent) && $emailSent == true) { ?>
-					<div data-alert class="advert_alert advert_success" style="display: block;">
+					<div data-alert class="advert_alert advert_success" style="display: block; color: #d9534f;">
 						<?php esc_html_e( 'Your Message have been sent!', 'fellah' ); ?>  
 					</div>
 				<?php } ?>
@@ -122,7 +122,7 @@ get_header();
 										<div class="row">						
 											<?php if($hasError == true && $emailSent != true) {?>
 												<div class="col-md-12">
-													<span style="color:red;">
+													<span style="color: #d9534f;">
 														<?php
 														if(!empty($subjectError)){
 															echo $subjectError."<br />";

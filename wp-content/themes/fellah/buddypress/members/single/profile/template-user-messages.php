@@ -114,7 +114,7 @@ $current_page_id = $page->ID;
 				<center><h3><?php echo $post->post_title; ?></h3></center>
 
 				<?php if (isset($emailSent) && $emailSent == true) { ?>
-					<div data-alert class="advert_alert advert_success" style="display: block;">
+					<div data-alert class="advert_alert advert_success" style="display: block;color: #d9534f;">
 						<?php esc_html_e( 'Your Message have been sent!', 'fellah' ); ?>  
 					</div>
 				<?php } ?>
@@ -142,7 +142,7 @@ $current_page_id = $page->ID;
 										<div class="row">						
 											<?php if($hasError == true && $emailSent != true) {?>
 												<div class="col-md-12">
-													<span style="color:red;">
+													<span style="color: #d9534f;">
 														<?php
 														if(!empty($subjectError)){
 															echo $subjectError."<br />";
