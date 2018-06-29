@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-19 10:32+0100\n"
+"PO-Revision-Date: 2018-06-29 15:40+0100\n"
 "Language-Team: ENGLISH <jjj@buddypress.org>\n"
 "X-Generator: Poedit 2.0.8\n"
 "Last-Translator: \n"
@@ -10710,7 +10710,7 @@ msgstr ""
 #: bp-xprofile/classes/class-bp-xprofile-component.php:252
 msgctxt "Profile header menu"
 msgid "Profile"
-msgstr ""
+msgstr "الملف الشخصي"
 
 #: bp-xprofile/classes/class-bp-xprofile-component.php:262
 msgctxt "Profile header sub menu"
@@ -10740,7 +10740,7 @@ msgstr ""
 #: bp-xprofile/classes/class-bp-xprofile-component.php:369
 msgctxt "My Account Profile"
 msgid "Profile"
-msgstr ""
+msgstr "الملف الشخصي"
 
 #: bp-xprofile/classes/class-bp-xprofile-component.php:377
 msgctxt "My Account Profile sub nav"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-28 17:03+0100\n"
+"POT-Creation-Date: 2018-06-29 15:14+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -120,7 +120,7 @@ msgid ""
 "listings around this network."
 msgstr ""
 
-#: buddypress/members/register.php:292 wpadverts/manage.php:68
+#: buddypress/members/register.php:292 wpadverts/manage.php:65
 msgid "Yes"
 msgstr ""
 
@@ -164,7 +164,11 @@ msgstr ""
 msgid "Member primary navigation"
 msgstr ""
 
-#: buddypress/members/single/home.php:54
+#: buddypress/members/single/home.php:54 func/BP_Add_Page.php:20
+msgid "Messages"
+msgstr ""
+
+#: buddypress/members/single/home.php:55
 msgid "Sign out"
 msgstr ""
 
@@ -286,38 +290,38 @@ msgid "Yahoo Messenger"
 msgstr ""
 
 #: buddypress/members/single/profile/template-user-messages.php:118
-#: template-parts/ads_contact_form.php:160
-#: templates/template-user-messages.php:118
+#: template-parts/ads_contact_form.php:164
+#: templates/template-user-messages.php:95
 msgid "Your Message have been sent!"
 msgstr ""
 
 #: buddypress/members/single/profile/template-user-messages.php:138
 #: buddypress/members/single/profile/template-user-messages.php:159
-#: template-parts/ads_contact_form.php:214
-#: templates/template-user-messages.php:138
-#: templates/template-user-messages.php:159
+#: template-parts/ads_contact_form.php:218
+#: templates/template-user-messages.php:115
+#: templates/template-user-messages.php:139
 msgid "Subject"
 msgstr ""
 
 #: buddypress/members/single/profile/template-user-messages.php:139
-#: template-parts/ads_contact_form.php:220
-#: templates/template-user-messages.php:139
+#: template-parts/ads_contact_form.php:224
+#: templates/template-user-messages.php:116
 msgid "Message"
 msgstr ""
 
 #: buddypress/members/single/profile/template-user-messages.php:164
-#: templates/template-user-messages.php:164
+#: templates/template-user-messages.php:144
 msgid "Write your message here..."
 msgstr ""
 
 #: buddypress/members/single/profile/template-user-messages.php:169
-#: functions.php:548 template-parts/ads_contact_form.php:235
-#: templates/template-user-messages.php:169
+#: functions.php:548 template-parts/ads_contact_form.php:239
+#: templates/template-user-messages.php:149
 msgid "Send Message"
 msgstr ""
 
 #: buddypress/members/single/profile/template-user-messages.php:204
-#: templates/template-user-messages.php:204
+#: templates/template-user-messages.php:184
 msgid "View / Reply"
 msgstr ""
 
@@ -333,10 +337,6 @@ msgstr ""
 #: footer.php:24
 #, php-format
 msgid "All rights reserved %d"
-msgstr ""
-
-#: func/BP_Add_Page.php:20
-msgid "Messages"
 msgstr ""
 
 #: func/breadcrumb.php:14
@@ -636,6 +636,20 @@ msgstr ""
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr ""
 
+#: functions.php:1529
+msgid " a répondu à votre message"
+msgstr ""
+
+#: functions.php:1547
+msgid ""
+"vient de répondre a votre message.  Afin de pouvoir lui répondre, vous devrez "
+"vous connecter sur"
+msgstr ""
+
+#: functions.php:1549
+msgid "pour accéder à votre Messagerie."
+msgstr ""
+
 #: header.php:25
 msgid "Skip to content"
 msgstr ""
@@ -726,15 +740,15 @@ msgstr ""
 msgid "Sorry, we don`'t accept empty subject."
 msgstr ""
 
-#: template-parts/ads_contact_form.php:166
+#: template-parts/ads_contact_form.php:170
 msgid "CONTACTER L'ANNONCEUR"
 msgstr ""
 
-#: template-parts/ads_contact_form.php:202
+#: template-parts/ads_contact_form.php:206
 msgid "Your name"
 msgstr ""
 
-#: template-parts/ads_contact_form.php:208
+#: template-parts/ads_contact_form.php:212
 msgid "Your email"
 msgstr ""
 
@@ -812,8 +826,32 @@ msgstr ""
 msgid "Sélection des meilleures annonces du moment"
 msgstr ""
 
+#: templates/email/email-footer.php:2
+msgid "Cordialement"
+msgstr ""
+
+#: templates/email/email-footer.php:4
+msgid "Equipe fellah.ma"
+msgstr ""
+
+#: templates/email/email-footer.php:9
+msgid "Vous avez reçu cet e-mail parce que vous êtes membre de"
+msgstr ""
+
 #: templates/news_agricoles.php:54
 msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: templates/template-user-messages.php:45
+msgid "Subject field is rquired."
+msgstr ""
+
+#: templates/template-user-messages.php:53
+msgid "Message field is rquired."
+msgstr ""
+
+#: templates/template-user-messages.php:118
+msgid "Répondre"
 msgstr ""
 
 #: wpadverts/add-preview.php:10
@@ -914,31 +952,31 @@ msgstr ""
 msgid "Y/m/d"
 msgstr ""
 
-#: wpadverts/manage.php:58
+#: wpadverts/manage.php:55
 msgid "View"
 msgstr ""
 
-#: wpadverts/manage.php:59
+#: wpadverts/manage.php:56
 msgid "Edit"
 msgstr ""
 
-#: wpadverts/manage.php:60 wpadverts/manage.php:61
+#: wpadverts/manage.php:57 wpadverts/manage.php:58
 msgid "Delete"
 msgstr ""
 
-#: wpadverts/manage.php:66
+#: wpadverts/manage.php:63
 msgid "Are you sure?"
 msgstr ""
 
-#: wpadverts/manage.php:69
+#: wpadverts/manage.php:66
 msgid "Cancel"
 msgstr ""
 
-#: wpadverts/manage.php:77
+#: wpadverts/manage.php:74
 msgid "More"
 msgstr ""
 
-#: wpadverts/manage.php:93
+#: wpadverts/manage.php:90
 msgid "You do not have any Ads posted yet."
 msgstr ""
 

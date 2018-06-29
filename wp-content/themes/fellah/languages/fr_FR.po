@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-28 12:27+0100\n"
-"PO-Revision-Date: 2018-06-29 11:17+0100\n"
+"POT-Creation-Date: 2018-06-29 15:14+0100\n"
+"PO-Revision-Date: 2018-06-29 15:19+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -63,7 +63,7 @@ msgstr "Confirmer le mot de passe"
 msgid "Phone"
 msgstr "Téléphone"
 
-#: buddypress/members/register.php:61
+#: buddypress/members/register.php:61 buddypress/members/register.php:409
 msgid "Create my account"
 msgstr "Créer mon compte"
 
@@ -79,6 +79,10 @@ msgstr "Détails du profil"
 #, php-format
 msgid "This field can be seen by: %s"
 msgstr "Ce champ peut être vu par: %s"
+
+#: buddypress/members/register.php:171
+msgid "Change"
+msgstr "Changer"
 
 #: buddypress/members/register.php:176
 msgid "Who can see this field?"
@@ -118,7 +122,7 @@ msgstr ""
 "Vie privée&nbsp;:&nbsp;Je souhaite que mon blog apparaisse dans les moteurs "
 "de recherche et sur les listes publiques de ce réseau."
 
-#: buddypress/members/register.php:292 wpadverts/manage.php:68
+#: buddypress/members/register.php:292 wpadverts/manage.php:65
 msgid "Yes"
 msgstr "Oui"
 
@@ -163,9 +167,22 @@ msgstr ""
 "Votre compte est activ&eacute;. Vous pouvez vous connecter en utilisant les "
 "identifiants que vous avez indiqué lors de votre inscription."
 
-#: buddypress/members/single/home.php:54
+#: buddypress/members/single/home.php:41
+msgid "Member primary navigation"
+msgstr "Navigation principale du membre"
+
+#: buddypress/members/single/home.php:54 func/BP_Add_Page.php:20
+msgid "Messages"
+msgstr "Mes messages"
+
+#: buddypress/members/single/home.php:55
 msgid "Sign out"
 msgstr "Se déconnecter"
+
+#: buddypress/members/single/plugins.php:22
+#: buddypress/members/single/profile.php:12
+msgid "Member secondary navigation"
+msgstr "Navigation secondaire de membre"
 
 #: buddypress/members/single/profile/change-avatar.php:12
 msgid "Change Profile Photo"
@@ -195,6 +212,10 @@ msgstr ""
 msgid "Select an image"
 msgstr "Sélectionner une image"
 
+#: buddypress/members/single/profile/change-avatar.php:40
+msgid "Upload Image"
+msgstr "Télécharger l'image"
+
 #: buddypress/members/single/profile/change-avatar.php:45
 msgid ""
 "If you'd like to delete your current profile photo but not upload a new one, "
@@ -210,6 +231,18 @@ msgstr "Supprimer mon profil Photo"
 #: buddypress/members/single/profile/change-avatar.php:53
 msgid "Crop Your New Profile Photo"
 msgstr "Retailler la nouvelle photo du profil"
+
+#: buddypress/members/single/profile/change-avatar.php:55
+msgid "Profile photo to crop"
+msgstr "Logo à retailler"
+
+#: buddypress/members/single/profile/change-avatar.php:58
+msgid "Profile photo preview"
+msgstr "Prévisualisation du logo du groupe"
+
+#: buddypress/members/single/profile/change-avatar.php:61
+msgid "Crop Image"
+msgstr "Recadrer l’image"
 
 #: buddypress/members/single/profile/change-avatar.php:85
 msgid ""
@@ -276,6 +309,42 @@ msgstr "AOL Messenger"
 msgid "Yahoo Messenger"
 msgstr "Yahoo Messenger"
 
+#: buddypress/members/single/profile/template-user-messages.php:118
+#: template-parts/ads_contact_form.php:164
+#: templates/template-user-messages.php:95
+msgid "Your Message have been sent!"
+msgstr "Votre message a été envoyé!"
+
+#: buddypress/members/single/profile/template-user-messages.php:138
+#: buddypress/members/single/profile/template-user-messages.php:159
+#: template-parts/ads_contact_form.php:218
+#: templates/template-user-messages.php:115
+#: templates/template-user-messages.php:139
+msgid "Subject"
+msgstr "Sujet"
+
+#: buddypress/members/single/profile/template-user-messages.php:139
+#: template-parts/ads_contact_form.php:224
+#: templates/template-user-messages.php:116
+msgid "Message"
+msgstr "Message"
+
+#: buddypress/members/single/profile/template-user-messages.php:164
+#: templates/template-user-messages.php:144
+msgid "Write your message here..."
+msgstr "Tapez votre message ici..."
+
+#: buddypress/members/single/profile/template-user-messages.php:169
+#: functions.php:548 template-parts/ads_contact_form.php:239
+#: templates/template-user-messages.php:149
+msgid "Send Message"
+msgstr "Envoyer le message"
+
+#: buddypress/members/single/profile/template-user-messages.php:204
+#: templates/template-user-messages.php:184
+msgid "View / Reply"
+msgstr "Voir / Répondre"
+
 #: comments.php:37
 #, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
@@ -290,9 +359,9 @@ msgstr "Les commentaires sont fermés."
 msgid "All rights reserved %d"
 msgstr "Tous droits réservés %d"
 
-#: func/BP_Add_Page.php:20
-msgid "Messages"
-msgstr "Messages"
+#: func/breadcrumb.php:14
+msgid "Accueil"
+msgstr "Accueil"
 
 #: func/breadcrumb.php:228
 msgid "Page"
@@ -428,11 +497,6 @@ msgstr "Votre message a été envoyé."
 #: functions.php:515
 msgid "There are errors in your form."
 msgstr "Il y a des erreurs dans votre formulaire."
-
-#: functions.php:548 template-parts/ads_contact_form.php:235
-#: templates/template-user-messages.php:169
-msgid "Send Message"
-msgstr "Envoyer le message"
 
 #: functions.php:589
 msgid "1. Votre annonce"
@@ -594,6 +658,22 @@ msgstr "Télephone"
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "S'il vous plait, entrez votre numéro de téléphone."
 
+#: functions.php:1529
+msgid " a répondu à votre message"
+msgstr " a répondu à votre message"
+
+#: functions.php:1547
+msgid ""
+"vient de répondre a votre message.  Afin de pouvoir lui répondre, vous "
+"devrez vous connecter sur"
+msgstr ""
+"vient de répondre a votre message.  Afin de pouvoir lui répondre, vous "
+"devrez vous connecter sur"
+
+#: functions.php:1549
+msgid "pour accéder à votre Messagerie."
+msgstr "pour accéder à votre Messagerie."
+
 #: header.php:25
 msgid "Skip to content"
 msgstr "Aller au contenu"
@@ -684,33 +764,17 @@ msgstr "Désolé, nous don'' t accepter message vide."
 msgid "Sorry, we don`'t accept empty subject."
 msgstr "Désolé, nous n’acceptons pas un champ vide pour le sujet."
 
-#: template-parts/ads_contact_form.php:160
-#: templates/template-user-messages.php:118
-msgid "Your Message have been sent!"
-msgstr "Votre message a été envoyé!"
-
-#: template-parts/ads_contact_form.php:166
+#: template-parts/ads_contact_form.php:170
 msgid "CONTACTER L'ANNONCEUR"
-msgstr ""
+msgstr "CONTACTER L'ANNONCEUR"
 
-#: template-parts/ads_contact_form.php:202
+#: template-parts/ads_contact_form.php:206
 msgid "Your name"
 msgstr "Votre nom"
 
-#: template-parts/ads_contact_form.php:208
+#: template-parts/ads_contact_form.php:212
 msgid "Your email"
 msgstr "Votre email"
-
-#: template-parts/ads_contact_form.php:214
-#: templates/template-user-messages.php:138
-#: templates/template-user-messages.php:159
-msgid "Subject"
-msgstr "Sujet"
-
-#: template-parts/ads_contact_form.php:220
-#: templates/template-user-messages.php:139
-msgid "Message"
-msgstr "Message"
 
 #: template-parts/categories.php:7
 msgid "Catégories"
@@ -792,17 +856,33 @@ msgstr "Top annonces"
 msgid "Sélection des meilleures annonces du moment"
 msgstr "Sélection des meilleures annonces du moment"
 
+#: templates/email/email-footer.php:2
+msgid "Cordialement"
+msgstr "Cordialement"
+
+#: templates/email/email-footer.php:4
+msgid "Equipe fellah.ma"
+msgstr "Equipe fellah.ma"
+
+#: templates/email/email-footer.php:9
+msgid "Vous avez reçu cet e-mail parce que vous êtes membre de"
+msgstr "Vous avez reçu cet e-mail parce que vous êtes membre de"
+
 #: templates/news_agricoles.php:54
 msgid "Sorry, no posts matched your criteria."
 msgstr "Aucun message ne correspond à vos critères de recherche."
 
-#: templates/template-user-messages.php:164
-msgid "Write your message here..."
-msgstr "Tapez votre message ici..."
+#: templates/template-user-messages.php:45
+msgid "Subject field is rquired."
+msgstr "Champ objet est obligatoire."
 
-#: templates/template-user-messages.php:204
-msgid "View / Reply"
-msgstr "Voir / Répondre"
+#: templates/template-user-messages.php:53
+msgid "Message field is rquired."
+msgstr "Champ message est obligatoire."
+
+#: templates/template-user-messages.php:118
+msgid "Répondre"
+msgstr "Répondre"
 
 #: wpadverts/add-preview.php:10
 msgid "Edit ad"
@@ -835,6 +915,14 @@ msgstr "Envoyer mon annonce"
 #: wpadverts/categories-all.php:57 wpadverts/categories-top.php:25
 msgid "No categories found."
 msgstr "Aucune catégorie trouvée."
+
+#: wpadverts/form_search.php:47
+msgid "Grid"
+msgstr "La grille"
+
+#: wpadverts/form_search.php:48
+msgid "List"
+msgstr "Liste"
 
 #: wpadverts/form_search.php:83 wpadverts/list.php:86
 msgid "Advanced Search"
@@ -898,31 +986,31 @@ msgstr "Expire %s"
 msgid "Y/m/d"
 msgstr "Y/m/d"
 
-#: wpadverts/manage.php:58
+#: wpadverts/manage.php:55
 msgid "View"
 msgstr "Voir"
 
-#: wpadverts/manage.php:59
+#: wpadverts/manage.php:56
 msgid "Edit"
 msgstr "Modifier"
 
-#: wpadverts/manage.php:60 wpadverts/manage.php:61
+#: wpadverts/manage.php:57 wpadverts/manage.php:58
 msgid "Delete"
 msgstr "Supprimer"
 
-#: wpadverts/manage.php:66
+#: wpadverts/manage.php:63
 msgid "Are you sure?"
 msgstr "Êtes-vous sûr?"
 
-#: wpadverts/manage.php:69
+#: wpadverts/manage.php:66
 msgid "Cancel"
 msgstr "Annuler"
 
-#: wpadverts/manage.php:77
+#: wpadverts/manage.php:74
 msgid "More"
 msgstr "Plus"
 
-#: wpadverts/manage.php:93
+#: wpadverts/manage.php:90
 msgid "You do not have any Ads posted yet."
 msgstr "Vous n'avez pas encore publié d'annonces."
 
@@ -999,35 +1087,11 @@ msgstr "Ces annonces pourraient aussi vous intéresser"
 #~ msgid "Visibility"
 #~ msgstr "Visibilité"
 
-#~ msgid "Change"
-#~ msgstr "Changer"
-
-#~ msgid "Member primary navigation"
-#~ msgstr "Navigation principale du membre"
-
-#~ msgid "Member secondary navigation"
-#~ msgstr "Navigation secondaire de membre"
-
-#~ msgid "Upload Image"
-#~ msgstr "Télécharger l'image"
-
-#~ msgid "Profile photo to crop"
-#~ msgstr "Logo à retailler"
-
-#~ msgid "Profile photo preview"
-#~ msgstr "Prévisualisation du logo du groupe"
-
 #~ msgid "Profile field groups"
 #~ msgstr "Détails du profil"
 
 #~ msgid "Actualités de FELLAH"
 #~ msgstr "Actualités de FELLAH"
-
-#~ msgid "Grid"
-#~ msgstr "la grille"
-
-#~ msgid "List"
-#~ msgstr "liste"
 
 #~ msgid "SEARCH"
 #~ msgstr "CHERCHER"

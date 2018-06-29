@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-06-28 17:04+0100\n"
-"PO-Revision-Date: 2018-06-28 17:15+0100\n"
+"POT-Creation-Date: 2018-06-29 15:19+0100\n"
+"PO-Revision-Date: 2018-06-29 15:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "وجه الفتاة! لا يمكن العثور على هذه الصفحة."
 
 #: buddypress/members/register.php:19
 msgid "Already have an account ?"
@@ -80,7 +80,7 @@ msgstr "تفاصيل الملف الشخصي"
 #: buddypress/members/register.php:166 buddypress/members/register.php:188
 #, php-format
 msgid "This field can be seen by: %s"
-msgstr ""
+msgstr "يمكن رؤية هذا الحقل من خلال: %s"
 
 #: buddypress/members/register.php:171
 msgid "Change"
@@ -104,13 +104,13 @@ msgstr "نعم ، أرغب في إنشاء موقع جديد"
 
 #: buddypress/members/register.php:255
 msgid "Blog URL"
-msgstr ""
+msgstr "رابط المدونة"
 
 #: buddypress/members/register.php:255 buddypress/members/register.php:271
 #: buddypress/members/register.php:333 buddypress/members/register.php:344
 #: buddypress/members/register.php:355 buddypress/members/register.php:367
 msgid "(required)"
-msgstr ""
+msgstr "(مطلوب)"
 
 #: buddypress/members/register.php:271
 msgid "Site Title"
@@ -121,8 +121,10 @@ msgid ""
 "Privacy: I would like my site to appear in search engines, and in public "
 "listings around this network."
 msgstr ""
+"الخصوصية: أريد أن يظهر موقعي في محركات البحث ، وفي القوائم العامة حول هذه "
+"الشبكة."
 
-#: buddypress/members/register.php:292 wpadverts/manage.php:68
+#: buddypress/members/register.php:292 wpadverts/manage.php:65
 msgid "Yes"
 msgstr "نعم"
 
@@ -169,16 +171,20 @@ msgstr ""
 
 #: buddypress/members/single/home.php:41
 msgid "Member primary navigation"
-msgstr ""
+msgstr "عضو الملاحة الرئيسي"
 
-#: buddypress/members/single/home.php:54
+#: buddypress/members/single/home.php:54 func/BP_Add_Page.php:20
+msgid "Messages"
+msgstr "رسائل"
+
+#: buddypress/members/single/home.php:55
 msgid "Sign out"
 msgstr "تسجيل الخروج"
 
 #: buddypress/members/single/plugins.php:22
 #: buddypress/members/single/profile.php:12
 msgid "Member secondary navigation"
-msgstr ""
+msgstr "عضو ثانوي الملاحة"
 
 #: buddypress/members/single/profile/change-avatar.php:12
 msgid "Change Profile Photo"
@@ -197,6 +203,8 @@ msgid ""
 "Click below to select a JPG, GIF or PNG format photo from your computer and "
 "then click 'Upload Image' to proceed."
 msgstr ""
+"انقر أدناه لتحديد صورة بتنسيق JPG أو GIF أو PNG من جهاز الكمبيوتر الخاص بك ، "
+"ثم انقر فوق \"Upload Image\" للمتابعة."
 
 #: buddypress/members/single/profile/change-avatar.php:37
 msgid "Select an image"
@@ -248,7 +256,7 @@ msgstr "تغيير صورة الغلاف"
 
 #: buddypress/members/single/profile/change-cover-image.php:23
 msgid "Your Cover Image will be used to customize the header of your profile."
-msgstr ""
+msgstr "سيتم استخدام صورة الغلاف لتخصيص رأس ملفك الشخصي."
 
 #: buddypress/members/single/profile/edit.php:40
 msgid "Save Changes"
@@ -269,7 +277,7 @@ msgstr "ملفي"
 #: buddypress/members/single/profile/profile-wp.php:28
 #, php-format
 msgid "%s's Profile"
-msgstr ""
+msgstr "ملفي %s"
 
 #: buddypress/members/single/profile/profile-wp.php:35 wpadverts/single.php:128
 msgid "Name"
@@ -281,53 +289,53 @@ msgstr "عني"
 
 #: buddypress/members/single/profile/profile-wp.php:53
 msgid "Website"
-msgstr ""
+msgstr "موقع الكتروني"
 
 #: buddypress/members/single/profile/profile-wp.php:62
 msgid "Jabber"
-msgstr ""
+msgstr "Jabber"
 
 #: buddypress/members/single/profile/profile-wp.php:71
 msgid "AOL Messenger"
-msgstr ""
+msgstr "AOL Messenger"
 
 #: buddypress/members/single/profile/profile-wp.php:80
 msgid "Yahoo Messenger"
-msgstr ""
+msgstr "Yahoo Messenger"
 
 #: buddypress/members/single/profile/template-user-messages.php:118
-#: template-parts/ads_contact_form.php:160
-#: templates/template-user-messages.php:118
+#: template-parts/ads_contact_form.php:164
+#: templates/template-user-messages.php:95
 msgid "Your Message have been sent!"
 msgstr "لقد تم إرسال رسالتك!"
 
 #: buddypress/members/single/profile/template-user-messages.php:138
 #: buddypress/members/single/profile/template-user-messages.php:159
-#: template-parts/ads_contact_form.php:214
-#: templates/template-user-messages.php:138
-#: templates/template-user-messages.php:159
+#: template-parts/ads_contact_form.php:218
+#: templates/template-user-messages.php:115
+#: templates/template-user-messages.php:139
 msgid "Subject"
 msgstr "موضوع"
 
 #: buddypress/members/single/profile/template-user-messages.php:139
-#: template-parts/ads_contact_form.php:220
-#: templates/template-user-messages.php:139
+#: template-parts/ads_contact_form.php:224
+#: templates/template-user-messages.php:116
 msgid "Message"
 msgstr "رسالة"
 
 #: buddypress/members/single/profile/template-user-messages.php:164
-#: templates/template-user-messages.php:164
+#: templates/template-user-messages.php:144
 msgid "Write your message here..."
 msgstr "اكتب رسالتك هنا..."
 
 #: buddypress/members/single/profile/template-user-messages.php:169
-#: functions.php:548 template-parts/ads_contact_form.php:235
-#: templates/template-user-messages.php:169
+#: functions.php:548 template-parts/ads_contact_form.php:239
+#: templates/template-user-messages.php:149
 msgid "Send Message"
 msgstr "ارسل رسالة"
 
 #: buddypress/members/single/profile/template-user-messages.php:204
-#: templates/template-user-messages.php:204
+#: templates/template-user-messages.php:184
 msgid "View / Reply"
 msgstr "عرض / رد"
 
@@ -338,16 +346,12 @@ msgstr ""
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr ""
+msgstr "التعليقات مغلقة."
 
 #: footer.php:24
 #, php-format
 msgid "All rights reserved %d"
 msgstr "جميع الحقوق محفوظة %d"
-
-#: func/BP_Add_Page.php:20
-msgid "Messages"
-msgstr "رسائل"
 
 #: func/breadcrumb.php:14
 msgid "Accueil"
@@ -397,23 +401,23 @@ msgstr "نوع الاعلان"
 
 #: func/search-by-category.php:159
 msgid "Views"
-msgstr ""
+msgstr "الآراء"
 
 #: functions.php:47
 msgid "Primary"
-msgstr ""
+msgstr "ابتدائي"
 
 #: functions.php:108
 msgid "Sidebar"
-msgstr ""
+msgstr "الشريط الجانبي"
 
 #: functions.php:110
 msgid "Add widgets here."
-msgstr ""
+msgstr "أضف الأدوات هنا."
 
 #: functions.php:151
 msgid "Sending user info, please wait..."
-msgstr ""
+msgstr "إرسال معلومات المستخدم ، يرجى الانتظار ..."
 
 #: functions.php:152
 msgid ""
@@ -443,11 +447,11 @@ msgstr "تاريخ النشر"
 
 #: functions.php:306 functions.php:328
 msgid "Newest First"
-msgstr ""
+msgstr "الأحدث أولا"
 
 #: functions.php:307
 msgid "Oldest First"
-msgstr ""
+msgstr "الأقدم أولا"
 
 #: functions.php:311 wpadverts/single.php:104
 msgid "Price"
@@ -455,11 +459,11 @@ msgstr "السعر"
 
 #: functions.php:313
 msgid "Cheapest First"
-msgstr ""
+msgstr "أرخص أولا"
 
 #: functions.php:314
 msgid "Most Expensive First"
-msgstr ""
+msgstr "أغلى ثمنا"
 
 #: functions.php:318
 msgid "Title"
@@ -467,16 +471,16 @@ msgstr "لقب"
 
 #: functions.php:320
 msgid "From A to Z"
-msgstr ""
+msgstr "من A إلى Z"
 
 #: functions.php:321
 msgid "From Z to A"
-msgstr ""
+msgstr "من Z إلى A"
 
 #: functions.php:328 functions.php:358
 #, php-format
 msgid "Sort By: %s - %s"
-msgstr ""
+msgstr "رتب حسب: %s - %s"
 
 #: functions.php:468
 msgid "Send"
@@ -544,7 +548,7 @@ msgstr "تسجيل الدخول ناجح"
 
 #: functions.php:868 functions.php:944
 msgid "Un ou plusieurs champs obligatoires ne sont pas remplis !"
-msgstr ""
+msgstr "لا يتم ملء حقل واحد أو أكثر من الحقول المطلوبة!"
 
 #: functions.php:887
 msgid "Can't logins."
@@ -552,7 +556,7 @@ msgstr "لا يمكن تسجيل الدخول."
 
 #: functions.php:900
 msgid "Vous êtes bien inscrit. A présent, connectez-vous !"
-msgstr ""
+msgstr "أنت مسجل. اتصل الآن!"
 
 #: functions.php:905
 msgid "User already exists."
@@ -564,7 +568,7 @@ msgstr "كلمتا المرور اللتان أدخلتهما غير متطاب�
 
 #: functions.php:956
 msgid "User don't exists."
-msgstr ""
+msgstr "المستخدم غير موجود."
 
 #: functions.php:994
 msgid "Sous catégorie"
@@ -608,7 +612,7 @@ msgstr "هاتف"
 
 #: functions.php:1188
 msgid "wrong acces"
-msgstr ""
+msgstr "وصول سيئة"
 
 #: functions.php:1189
 msgid "You are connected"
@@ -650,13 +654,27 @@ msgstr "هاتف"
 msgid "S'il vous plait, entrez votre numéro de téléphone."
 msgstr "يرجى إدخال رقم هاتفك."
 
+#: functions.php:1529
+msgid " a répondu à votre message"
+msgstr " رد على رسالتك"
+
+#: functions.php:1547
+msgid ""
+"vient de répondre a votre message.  Afin de pouvoir lui répondre, vous "
+"devrez vous connecter sur"
+msgstr "فقط ردت على رسالتك. للرد عليه ، سيكون عليك تسجيل الدخول إلى"
+
+#: functions.php:1549
+msgid "pour accéder à votre Messagerie."
+msgstr "للوصول إلى المراسلة الخاصة بك."
+
 #: header.php:25
 msgid "Skip to content"
 msgstr "تخطي إلى المحتوى"
 
 #: header.php:40
 msgid "Primary Menu"
-msgstr ""
+msgstr "Primary Menu"
 
 #: header.php:71
 msgid "My account"
@@ -672,11 +690,11 @@ msgstr "تابعنا"
 
 #: inc/customizer.php:63
 msgid "qTranslateXWidget"
-msgstr ""
+msgstr "qTranslateXWidget"
 
 #: inc/customizer.php:65
 msgid "Widgets in this area will be shown on all posts and pages."
-msgstr ""
+msgstr "سيتم عرض الأدوات في هذا المجال على كل المشاركات والصفحات."
 
 #: inc/template-functions.php:61
 msgid "Partager"
@@ -689,21 +707,21 @@ msgstr "شارك هذا الحدث"
 #: inc/template-tags.php:29 inc/template-tags.php:45
 #, php-format
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #: inc/template-tags.php:62 inc/template-tags.php:69
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: inc/template-tags.php:65
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "تم النشر في %1$s"
 
 #: inc/template-tags.php:72
 #, php-format
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "الكلمات الدلالية %1$s"
 
 #: inc/template-tags.php:82
 #, php-format
@@ -718,7 +736,7 @@ msgstr ""
 #: search.php:28
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "نتائج البحث عن: %s"
 
 #: template-parts/actus_header.php:7 templates/news_agricoles.php:25
 msgid "Actualités"
@@ -740,15 +758,15 @@ msgstr "عذرًا ، لا نقبل الحقول الفارغة للرسائل."
 msgid "Sorry, we don`'t accept empty subject."
 msgstr "عذرًا ، لا نقبل الحقول الفارغة للموضوع."
 
-#: template-parts/ads_contact_form.php:166
+#: template-parts/ads_contact_form.php:170
 msgid "CONTACTER L'ANNONCEUR"
 msgstr "اتصل بالمعلن"
 
-#: template-parts/ads_contact_form.php:202
+#: template-parts/ads_contact_form.php:206
 msgid "Your name"
 msgstr "اسمك"
 
-#: template-parts/ads_contact_form.php:208
+#: template-parts/ads_contact_form.php:212
 msgid "Your email"
 msgstr "بريدك الالكتروني"
 
@@ -790,7 +808,7 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "يبدو أننا لا نستطيع العثور على ما تبحث عنه. ربما البحث يمكن أن يساعد."
 
 #: template-parts/content.php:57
 #, php-format
@@ -829,9 +847,33 @@ msgstr "أعلى الإعلانات"
 msgid "Sélection des meilleures annonces du moment"
 msgstr "اختيار أفضل الإعلانات في الوقت الحالي"
 
+#: templates/email/email-footer.php:2
+msgid "Cordialement"
+msgstr "بشكل ودي"
+
+#: templates/email/email-footer.php:4
+msgid "Equipe fellah.ma"
+msgstr "Equipe fellah.ma"
+
+#: templates/email/email-footer.php:9
+msgid "Vous avez reçu cet e-mail parce que vous êtes membre de"
+msgstr "لقد تلقيت هذه الرسالة الإلكترونية لأنك عضو فيها"
+
 #: templates/news_agricoles.php:54
 msgid "Sorry, no posts matched your criteria."
-msgstr ""
+msgstr "عفوا، لا يوجد منشور يطابق معيارك."
+
+#: templates/template-user-messages.php:45
+msgid "Subject field is rquired."
+msgstr "حقل الموضوع مطلوب."
+
+#: templates/template-user-messages.php:53
+msgid "Message field is rquired."
+msgstr "حقل الرسالة مطلوب."
+
+#: templates/template-user-messages.php:118
+msgid "Répondre"
+msgstr "إجابة"
 
 #: wpadverts/add-preview.php:10
 msgid "Edit ad"
@@ -926,37 +968,37 @@ msgstr "غير نشط — انتهت صلاحية هذا الإعلان."
 #: wpadverts/manage.php:43
 #, php-format
 msgid "Expires %s"
-msgstr ""
+msgstr "تنتهي %s"
 
 #: wpadverts/manage.php:43
 msgid "Y/m/d"
-msgstr ""
+msgstr "d/m/Y"
 
-#: wpadverts/manage.php:58
+#: wpadverts/manage.php:55
 msgid "View"
 msgstr "عرض"
 
-#: wpadverts/manage.php:59
+#: wpadverts/manage.php:56
 msgid "Edit"
 msgstr "تحرير"
 
-#: wpadverts/manage.php:60 wpadverts/manage.php:61
+#: wpadverts/manage.php:57 wpadverts/manage.php:58
 msgid "Delete"
 msgstr "حذف"
 
-#: wpadverts/manage.php:66
+#: wpadverts/manage.php:63
 msgid "Are you sure?"
 msgstr "هل أنت واثق؟"
 
-#: wpadverts/manage.php:69
+#: wpadverts/manage.php:66
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: wpadverts/manage.php:77
+#: wpadverts/manage.php:74
 msgid "More"
 msgstr "المزيد"
 
-#: wpadverts/manage.php:93
+#: wpadverts/manage.php:90
 msgid "You do not have any Ads posted yet."
 msgstr "ليس لديك اعلانات بعد."
 

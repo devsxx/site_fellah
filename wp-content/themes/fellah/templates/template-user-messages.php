@@ -42,7 +42,7 @@ if (isset($_GET['id']) && $_GET['id'] > 0) {
 if (isset($_POST['submitted']) && $record) {
 	//Check to make sure that the subject field is not empty
 	if(trim($_POST['subject']) === '') {
-		$subjectError = esc_html(translate( 'Subject field is rquired.', 'fellah' ));
+		$subjectError = esc_html('Subject field is rquired.', 'fellah' );
 		$hasError = true;
 	} else {
 		$subject = trim($_POST['subject']);
@@ -50,7 +50,7 @@ if (isset($_POST['submitted']) && $record) {
 
 	//Check to make sure comments were entered	
 	if(trim($_POST['comments']) === '') {
-		$commentError = esc_html(translate( 'Message field is rquired.', 'fellah' ));
+		$commentError = esc_html('Message field is rquired.', 'fellah' );
 		$hasError = true;
 	} else {
 		if(function_exists('stripslashes')) {
@@ -114,6 +114,9 @@ get_header();
 							<?php if ($record) { ?>
 								<div><strong><?php esc_html_e( 'Subject', 'fellah' ); ?>:</strong> <?php echo $record->subject; ?></div>
 								<div><strong><?php esc_html_e( 'Message', 'fellah' ); ?>:</strong> <?php echo nl2br($record->message); ?></div>
+								<br>
+								<center><h3 style="color:#007e1d;"><?php _e('Répondre', 'fellah'); ?></center>
+								<br>
 								<div>
 									<form name="contactForm" action="" id="contact-form" method="post" class="contactform" >
 										<div class="row">						

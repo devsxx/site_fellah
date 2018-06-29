@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Adverts\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
-"POT-Creation-Date: 2018-06-27 12:10+0100\n"
-"PO-Revision-Date: 2018-06-27 12:16+0100\n"
+"POT-Creation-Date: 2018-06-29 15:31+0100\n"
+"PO-Revision-Date: 2018-06-29 15:36+0100\n"
 "Last-Translator: admin <daniel@pomzed.ch>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -145,11 +145,11 @@ msgstr "N° de téléphone"
 
 #: ../../plugins/wpadverts/addons/contact-form/includes/admin-pages.php:73
 msgid "Show phone number next to contact button."
-msgstr ""
+msgstr "Afficher le numéro de téléphone à côté du bouton de contact."
 
 #: ../../plugins/wpadverts/addons/contact-form/includes/admin-pages.php:82
 msgid "From Name"
-msgstr ""
+msgstr "Du nom"
 
 #: ../../plugins/wpadverts/addons/contact-form/includes/admin-pages.php:89
 msgid "From Email"
@@ -191,11 +191,11 @@ msgstr "Nombre de jour qu'une annonce va rester par défaut."
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:254
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:255
 msgid "Defaults Values For [adverts_list]"
-msgstr ""
+msgstr "Valeurs par défaut pour [adverts_list]"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:260
 msgid "Search Bar"
-msgstr ""
+msgstr "Barre de recherche"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:263
 msgid "Enabled"
@@ -207,15 +207,15 @@ msgstr "Désactivée"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:270
 msgid "Display Ads As"
-msgstr ""
+msgstr "Afficher les annonces en tant que"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:273
 msgid "Grid (2 or more columns)"
-msgstr ""
+msgstr "Grid (2 or more columns)"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:274
 msgid "List (1 column)"
-msgstr ""
+msgstr "List (1 column)"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:281
 msgid "Columns"
@@ -223,15 +223,15 @@ msgstr "Colonnes"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:292
 msgid "Posts Per Page"
-msgstr ""
+msgstr "Posts par page"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:301
 msgid "Switch Views"
-msgstr ""
+msgstr "Changer de vue"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:304
 msgid "Allow users to switch between grid and list view."
-msgstr ""
+msgstr "Autoriser les utilisateurs à basculer entre la grille et la liste."
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:311
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:312
@@ -269,11 +269,11 @@ msgstr "Séparateur des millièmes"
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:357
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:358
 msgid "Expired Ads Handling"
-msgstr ""
+msgstr "Les annonces expirées Handling"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:364
 msgid "Expired Ad HTTP Status"
-msgstr ""
+msgstr "Statut HTTP Ad expiré"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:367
 msgid "<strong>404</strong> — Show 'Page Not Found' Error"
@@ -294,7 +294,7 @@ msgstr "Redirection"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:383
 msgid "Always Visible For"
-msgstr ""
+msgstr "Toujours visible pour"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:387
 msgid "Cabability (or Role) required to always see expired Ads details pages."
@@ -303,39 +303,41 @@ msgstr ""
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:401
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:402
 msgid "Advert Details Pages"
-msgstr ""
+msgstr "Pages détaillées de l'annonce"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:408
 msgid "Gallery Pagination"
-msgstr ""
+msgstr "Galerie Pagination"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:410
 msgid "Next and Previous Buttons"
-msgstr ""
+msgstr "Boutons Suivant et Précédent"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:411
 msgid "Thumbnails Slider"
-msgstr ""
+msgstr "Glisseur de vignettes"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:419
 msgid "Visible Thumbnails"
-msgstr ""
+msgstr "Vignettes visibles"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:420
 msgid "Number of thumbnails to show below gallery."
-msgstr ""
+msgstr "Nombre de vignettes à afficher en dessous de la galerie."
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:426
 msgid "Scrolling Thumbnails"
-msgstr ""
+msgstr "Défilement des vignettes"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:427
 msgid "Number of thumbnails to scroll when clicking Previous or Next buttons."
 msgstr ""
+"Nombre de vignettes à faire défiler lorsque vous cliquez sur les boutons "
+"Précédent ou Suivant."
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:433
 msgid "Lightbox"
-msgstr ""
+msgstr "Lightbox"
 
 #: ../../plugins/wpadverts/addons/core/includes/admin-pages.php:435
 msgid "Allow opening Gallery images in a Lightbox."
@@ -1956,11 +1958,11 @@ msgstr "Supprimer l'image"
 
 #: ../../plugins/wpadverts/includes/gallery.php:353
 msgid "Capture ..."
-msgstr ""
+msgstr "Capturer ..."
 
 #: ../../plugins/wpadverts/includes/gallery.php:357
 msgid "Save Thumbnail"
-msgstr ""
+msgstr "Enregistrer la miniature"
 
 #: ../../plugins/wpadverts/includes/gallery.php:373
 msgid "File name:"
@@ -1988,11 +1990,11 @@ msgstr "Durée :"
 
 #: ../../plugins/wpadverts/includes/gallery.php:414
 msgid "Image Manipulation"
-msgstr ""
+msgstr "Manipulation d'image"
 
 #: ../../plugins/wpadverts/includes/gallery.php:415
 msgid "Crop"
-msgstr ""
+msgstr "Surgir"
 
 #: ../../plugins/wpadverts/includes/gallery.php:416
 msgid "Rotate 90 degrees"
@@ -2004,11 +2006,11 @@ msgstr ""
 
 #: ../../plugins/wpadverts/includes/gallery.php:418
 msgid "Flip Vertically"
-msgstr ""
+msgstr "Retourner verticalement"
 
 #: ../../plugins/wpadverts/includes/gallery.php:419
 msgid "Flip Horizontally"
-msgstr ""
+msgstr "Retourner horizontalement"
 
 #: ../../plugins/wpadverts/includes/gallery.php:420
 msgid "Undo"
@@ -2020,7 +2022,7 @@ msgstr "Taille de l’image"
 
 #: ../../plugins/wpadverts/includes/gallery.php:429
 msgid "Scale"
-msgstr ""
+msgstr "Scale"
 
 #: ../../plugins/wpadverts/includes/gallery.php:433
 msgid "Actions"
@@ -2060,7 +2062,7 @@ msgstr ""
 
 #: ../../plugins/wpadverts/includes/gallery.php:465
 msgid "Zoom:"
-msgstr ""
+msgstr "Zoomer:"
 
 #: ../../plugins/wpadverts/includes/gallery.php:466
 msgid "Selection:"
@@ -2072,7 +2074,7 @@ msgstr "Fermer"
 
 #: ../../plugins/wpadverts/includes/gallery.php:619
 msgid "Gallery - Full Size"
-msgstr ""
+msgstr "Gallery - Full Size"
 
 #: ../../plugins/wpadverts/includes/gallery.php:620
 msgid ""
@@ -2137,7 +2139,7 @@ msgstr "De Z à A"
 #: ../../plugins/wpadverts/includes/shortcodes.php:146
 #, php-format
 msgid "Sort By: %s - %s"
-msgstr ""
+msgstr "Trier par : %s - %s"
 
 #: ../../plugins/wpadverts/includes/shortcodes.php:291
 #: ../../plugins/wpadverts/includes/shortcodes.php:502

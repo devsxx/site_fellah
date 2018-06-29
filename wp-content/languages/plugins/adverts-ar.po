@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WP Adverts 1.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
 "POT-Creation-Date: 2018-06-27 12:14+0100\n"
-"PO-Revision-Date: 2018-06-27 12:17+0100\n"
+"PO-Revision-Date: 2018-06-29 15:37+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -1185,7 +1185,7 @@ msgstr ""
 
 #: includes/admin-post-type.php:442
 msgid "(required)"
-msgstr ""
+msgstr "(مطلوب)"
 
 #: includes/admin-post-type.php:479 includes/admin-post-type.php:719
 msgid "Expired"
@@ -1213,7 +1213,7 @@ msgstr ""
 
 #: includes/admin-post-type.php:592 templates/manage.php:39
 msgid "Y/m/d"
-msgstr ""
+msgstr "d/m/Y"
 
 #: includes/admin-post-type.php:595
 #, php-format
@@ -1417,7 +1417,7 @@ msgstr ""
 #: includes/class-widget-ads.php:128 includes/shortcodes.php:92
 #: includes/shortcodes.php:115 includes/shortcodes.php:116
 msgid "Publish Date"
-msgstr ""
+msgstr "تاريخ النشر"
 
 #: includes/class-widget-ads.php:144
 msgid "Order"
@@ -2035,32 +2035,32 @@ msgstr ""
 
 #: includes/shortcodes.php:94 includes/shortcodes.php:116
 msgid "Newest First"
-msgstr ""
+msgstr "الأحدث أولا"
 
 #: includes/shortcodes.php:95
 msgid "Oldest First"
-msgstr ""
+msgstr "الأقدم أولا"
 
 #: includes/shortcodes.php:101
 msgid "Cheapest First"
-msgstr ""
+msgstr "أرخص أولا"
 
 #: includes/shortcodes.php:102
 msgid "Most Expensive First"
-msgstr ""
+msgstr "أغلى ثمنا"
 
 #: includes/shortcodes.php:108
 msgid "From A to Z"
-msgstr ""
+msgstr "من A إلى Z"
 
 #: includes/shortcodes.php:109
 msgid "From Z to A"
-msgstr ""
+msgstr "من Z إلى A"
 
 #: includes/shortcodes.php:116 includes/shortcodes.php:146
 #, php-format
 msgid "Sort By: %s - %s"
-msgstr ""
+msgstr "رتب حسب: %s - %s"
 
 #: includes/shortcodes.php:291 includes/shortcodes.php:502
 #, php-format
@@ -2149,16 +2149,16 @@ msgstr "عرض الإعلان"
 
 #: templates/manage.php:22
 msgid "Inactive — This Ad is in moderation."
-msgstr ""
+msgstr "غير نشط — هذا الإعلان قيد الإشراف."
 
 #: templates/manage.php:26
 msgid "Inactive — This Ad expired."
-msgstr ""
+msgstr "غير نشط — انتهت صلاحية هذا الإعلان."
 
 #: templates/manage.php:39
 #, php-format
 msgid "Expires %s"
-msgstr ""
+msgstr "تنتهي %s"
 
 #: templates/manage.php:54
 msgid "View"
