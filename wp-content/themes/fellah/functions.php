@@ -1513,11 +1513,13 @@ function auto_redirect_after_logout(){
 }
 
 
-
+add_filter ("wp_mail_content_type", "fellah_mail_content_type");
+function fellah_mail_content_type() {
+	return "text/html";
+}
 
 /* New message notification email to user, code start */
 function newMessageNotificationToUser($userId, $senderName) {
-	global $redux_demo;
 	$blog_title    = get_bloginfo('name');
 	$blog_url      = esc_url( home_url() ) ;
 	$adminEmail    = get_bloginfo('admin_email');
