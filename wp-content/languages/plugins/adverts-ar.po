@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WP Adverts 1.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
 "POT-Creation-Date: 2018-06-27 12:14+0100\n"
-"PO-Revision-Date: 2018-06-29 17:31+0100\n"
+"PO-Revision-Date: 2018-07-02 12:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -622,7 +622,7 @@ msgstr ""
 #: addons/payments/admin/pricing-list.php:65 includes/admin-post-type.php:370
 #: templates/manage.php:55
 msgid "Edit"
-msgstr "تحرير"
+msgstr "تغيير"
 
 #: addons/payments/admin/pricing-list.php:72
 msgid "New Post"
@@ -884,7 +884,7 @@ msgstr[5] ""
 
 #: addons/payments/payments.php:439 includes/shortcodes.php:456
 msgid "Thank you for submitting your ad!"
-msgstr ""
+msgstr "شكرا لإرسال إعلانك!"
 
 #: addons/payments/payments.php:553
 msgid "Renew Ad"
@@ -1493,7 +1493,7 @@ msgstr ""
 
 #: includes/defaults.php:169
 msgid "Keyword ..."
-msgstr "الكلمة الرئيسية ..."
+msgstr "بحث ..."
 
 #: includes/defaults.php:181
 msgid "Location ..."
@@ -2096,7 +2096,7 @@ msgstr ""
 
 #: templates/add-preview.php:8
 msgid "Edit Listing"
-msgstr "تحرير قائمة"
+msgstr "تغيير قائمة"
 
 #: templates/add-preview.php:14
 msgid "Publish Listing"

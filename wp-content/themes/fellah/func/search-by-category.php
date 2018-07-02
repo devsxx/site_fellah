@@ -134,14 +134,20 @@ function adverts_localisation_taxonomies( $taxonomy = 'localisation' ) {
 		'parent'   => 0
         
     );
+
    
     
     include_once ADVERTS_PATH . '/includes/class-walker-category-options.php';
     
     $walker = new Adverts_Walker_Category_Options;
+    
+    $terms = get_terms( $taxonomy, $args );
+	usort($terms, function($a, $b){
+		return strcmp($a->name, $b->name);
+    });
 
     $params = array(
-        get_terms( $taxonomy, $args ),
+        $terms,
         0,
         $args
     );

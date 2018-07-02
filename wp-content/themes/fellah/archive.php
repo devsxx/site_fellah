@@ -14,13 +14,18 @@ get_header();
 		<main id="main" class="site-main container">
 			<div class="container">
 				<div class="row">
-				
-				<div class="col-md-12">
-					<!-- start breadcrumbs -->
-					<?php the_breadcrumb(); ?>
-					<!-- end breadcrumbs -->
-				</div>
-					<div class="col-md-8">
+					
+					<div class="col-md-12">
+						<!-- start breadcrumbs -->
+						<?php the_breadcrumb(); ?>
+						<!-- end breadcrumbs -->
+					</div>
+
+					<div class="col-md-12 col-lg-4">
+						<?php get_template_part( 'template-parts/single','side' ) ?>
+					</div>
+
+					<div class="offset-1 offset-md-0 col-10 col-md-12 col-lg-8">
 						<div class="page_blog">
 							<?php 
 							if ( have_posts() ) :   the_archive_title( '<h1 class="page_titre">', '</h1>' ); 
@@ -34,9 +39,7 @@ get_header();
 							endif; ?>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<?php get_template_part( 'template-parts/single','side' ) ?>
-					</div>
+					
 				</div>
 			</div>
 		</main><!-- #main -->

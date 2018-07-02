@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2018-06-29 15:14+0100\n"
-"PO-Revision-Date: 2018-06-29 16:11+0100\n"
+"PO-Revision-Date: 2018-07-02 11:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -548,7 +548,7 @@ msgstr "Mauvais nom d'utilisateur ou mot de passe."
 
 #: functions.php:837
 msgid "Login successful"
-msgstr "Login successful"
+msgstr "Connexion réussie"
 
 #: functions.php:868 functions.php:944
 msgid "Un ou plusieurs champs obligatoires ne sont pas remplis !"
@@ -588,7 +588,7 @@ msgstr "Est-ce que vous avez un compte?"
 
 #: functions.php:1085
 msgid "Me connecter"
-msgstr "Tu es connecté"
+msgstr "Vous avez un compte"
 
 #: functions.php:1088 functions.php:1177
 msgid "Créer mon compte"
@@ -620,7 +620,7 @@ msgstr ""
 
 #: functions.php:1189
 msgid "You are connected"
-msgstr "Tu es connecté"
+msgstr "Vous avez un compte"
 
 #: functions.php:1200 functions.php:1218
 msgid "Continuer"

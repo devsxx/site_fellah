@@ -1448,9 +1448,9 @@ function save_telephone_field($user_id) {
 	} 
 }
 
-add_filter( 'term_link', 'rudr_term_permalink', 10, 3 );
+add_filter( 'term_link', 'fellah_term_permalink', 10, 3 );
  
-function rudr_term_permalink( $url, $term, $taxonomy ){
+function fellah_term_permalink( $url, $term, $taxonomy ){
  
 	$taxonomy_name = 'advert_category'; // your taxonomy name here
 	$taxonomy_slug = 'advert-category'; // the taxonomy slug can be different with the taxonomy name (like 'post_tag' and 'tag' )
@@ -1463,8 +1463,8 @@ function rudr_term_permalink( $url, $term, $taxonomy ){
 	return $url;
 }
  
-add_action( 'init', 'oe_modify_taxonomy', 11 );   
-function oe_modify_taxonomy() { 
+add_action( 'init', 'fellah_modify_taxonomy', 11 );   
+function fellah_modify_taxonomy() { 
 	$advert_category_args = get_taxonomy( 'advert_category' ); 
 	$advert_category_args->show_admin_column = true;
 	// $advert_category_args->rewrite['slug'] = 'categories';
@@ -1511,13 +1511,6 @@ function change_link( $permalink, $post ) {
     }
     return $permalink;
 }
-
-add_action('wp_logout','auto_redirect_after_logout');
-function auto_redirect_after_logout(){
-	wp_redirect( home_url() );
-	exit();
-}
-
 
 add_filter ("wp_mail_content_type", "fellah_mail_content_type");
 function fellah_mail_content_type() {

@@ -17244,6 +17244,14 @@ div.adverts-flash-messages.adverts-flash-error {
   padding: 0 !important;
 }
 
+.adverts-option-depth-0 {
+  font-weight: bold;
+}
+
+.adverts-option-depth-1 {
+  padding-left: 20px;
+}
+
 #buddypress div.item-list-tabs ul li.current a,
 #buddypress div.item-list-tabs ul li.selected a {
   background-color: #eee;

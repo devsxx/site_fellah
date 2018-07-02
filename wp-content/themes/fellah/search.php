@@ -19,7 +19,12 @@ get_header();
 				<div class="col-md-12"> 
 						<?php the_breadcrumb(); ?> 
 				</div>
-				<div class="offset-1 offset-md-0 col-10 col-md-8">
+
+				<div class="col-md-12 col-lg-4">
+					<?php get_template_part( 'template-parts/single','side' ) ?>
+				</div>
+
+				<div class="offset-1 offset-md-0 col-10 col-md-12 col-lg-8">
 					<div class="page_blog">
 
 						<?php if ( have_posts() ) : ?>
@@ -43,9 +48,7 @@ get_header();
 					</div>
 				</div>
 
-				<div class="col-md-4">
-					<?php get_template_part( 'template-parts/single','side' ) ?>
-				</div>
+				
 
 			</div>
 		</div>

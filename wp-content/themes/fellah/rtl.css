@@ -16611,7 +16611,15 @@ form textarea {
 .adverts {
   display: block !important;
 }
-
+.adverts-form-aligned .adverts-plupload-upload-ui {
+  width: 60%;
+  float: right; 
+}
+div.adverts-flash-messages .adverts-flash-message-text.adverts-flash-padding {
+  margin-right: 40px;
+  padding-right: 10px;
+  border-left: 1px solid rgba(255,255,255,0.25);
+}
 .adverts-form.adverts-form-update .adverts-control-group.adverts-field-header {
   height: 2.8125rem;
   margin-top: -1px !important;
@@ -16741,6 +16749,13 @@ form textarea {
   clear: both;
   overflow: hidden;
 }
+
+.adverts-option-depth-0 {
+  font-weight: bold;
+} 
+.adverts-option-depth-1 {
+  padding-right: 20px !important; 
+} 
 
 .adverts-form input[type="text"], .adverts-form input[type="password"], .adverts-form input[type="email"], .adverts-form input[type="url"], .adverts-form input[type="date"], .adverts-form input[type="month"], .adverts-form input[type="time"], .adverts-form input[type="datetime"], .adverts-form input[type="datetime-local"], .adverts-form input[type="week"], .adverts-form input[type="number"], .adverts-form input[type="search"], .adverts-form input[type="tel"], .adverts-form input[type="color"] {
   width: 100%;
@@ -17430,4 +17445,8 @@ div.adverts-flash-messages {
 .advert-item-col-1 .advert-post-title, .advert-item-col-1 .advert-published {
   margin-right: 110px;
   margin-left: 0 !important;
+}
+
+div.wpcf7 { 
+	direction: rtl !important;
 }

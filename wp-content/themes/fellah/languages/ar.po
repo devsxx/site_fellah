@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2018-06-29 15:19+0100\n"
-"PO-Revision-Date: 2018-06-29 15:31+0100\n"
+"PO-Revision-Date: 2018-07-02 12:36+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "وجه الفتاة! لا يمكن العثور على هذه الصفحة."
+msgstr "عفوا! لا يمكن العثور علي هذه الصفحة."
 
 #: buddypress/members/register.php:19
 msgid "Already have an account ?"
@@ -35,7 +35,7 @@ msgstr "نسيت رقمك السري ؟"
 
 #: buddypress/members/register.php:29 buddypress/members/register.php:123
 msgid "Create an account. Simple and free !"
-msgstr "انشئ حساب. بسيطة ومجان!"
+msgstr "انشئ حساب مجاني"
 
 #: buddypress/members/register.php:33
 #: buddypress/members/single/profile/edit.php:27 functions.php:1137
@@ -45,7 +45,7 @@ msgstr "الأسم"
 #: buddypress/members/register.php:38
 #: buddypress/members/single/profile/edit.php:32 functions.php:1143
 msgid "Nom"
-msgstr "اسم"
+msgstr "اسم العائلة"
 
 #: buddypress/members/register.php:43 functions.php:1149
 msgid "Email"
@@ -281,7 +281,7 @@ msgstr "ملفي %s"
 
 #: buddypress/members/single/profile/profile-wp.php:35 wpadverts/single.php:128
 msgid "Name"
-msgstr "اسم"
+msgstr "اسم العائلة"
 
 #: buddypress/members/single/profile/profile-wp.php:44
 msgid "About Me"
@@ -427,7 +427,7 @@ msgstr "أضف صورك لجعل إعلانك أكثر وضوحًا. يمكنك 
 
 #: functions.php:162
 msgid "Price: "
-msgstr "السعر : "
+msgstr "الثمن : "
 
 #: functions.php:168
 msgid "Select options ..."
@@ -455,7 +455,7 @@ msgstr "الأقدم أولا"
 
 #: functions.php:311 wpadverts/single.php:104
 msgid "Price"
-msgstr "السعر"
+msgstr "الثمن"
 
 #: functions.php:313
 msgid "Cheapest First"
@@ -588,7 +588,7 @@ msgstr "تسجيل الدخول"
 
 #: functions.php:1088 functions.php:1177
 msgid "Créer mon compte"
-msgstr "قم بإنشاء حسابي"
+msgstr "إنشاء حساب (مجاني)"
 
 #: functions.php:1104
 msgid "Connectez-vous"
@@ -596,7 +596,7 @@ msgstr "دخول"
 
 #: functions.php:1110
 msgid "Identifiant ou Email"
-msgstr "تسجيل الدخول أو البريد الإلكتروني"
+msgstr "بريدك الإلكتروني"
 
 #: functions.php:1120
 msgid "Ok"
@@ -628,7 +628,7 @@ msgstr "عودة"
 
 #: functions.php:1287
 msgid "Toutes les Région"
-msgstr "كل المنطقة"
+msgstr "كل المناطق"
 
 #: functions.php:1407
 msgid "Email : "
@@ -636,11 +636,11 @@ msgstr "البريد الإلكتروني : "
 
 #: functions.php:1408
 msgid "First name : "
-msgstr "اسم المستخدم الأول : "
+msgstr "الإسم : "
 
 #: functions.php:1409
 msgid "Last name : "
-msgstr "اسم المستخدم الأخير : "
+msgstr "اسم العائلة:"
 
 #: functions.php:1410
 msgid "Phone : "
@@ -825,7 +825,7 @@ msgstr "التالي &raquo"
 
 #: template-parts/nouveautes.php:6
 msgid "Nouveautés"
-msgstr "جديد"
+msgstr "آخر الإعلانات"
 
 #: template-parts/nouveautes.php:9
 msgid "Découvrez toutes les dernières annonces"
@@ -841,7 +841,7 @@ msgstr "بحث مقال"
 
 #: template-parts/top_annonces.php:7
 msgid "Top annonces"
-msgstr "أعلى الإعلانات"
+msgstr "الإعلانات الأكثر مشاهدة"
 
 #: template-parts/top_annonces.php:10
 msgid "Sélection des meilleures annonces du moment"
@@ -877,7 +877,7 @@ msgstr "إجابة"
 
 #: wpadverts/add-preview.php:10
 msgid "Edit ad"
-msgstr "تحرير الاعلان"
+msgstr "تغيير الاعلان"
 
 #: wpadverts/add-preview.php:16
 msgid "Publish ad"
@@ -980,7 +980,7 @@ msgstr "عرض"
 
 #: wpadverts/manage.php:56
 msgid "Edit"
-msgstr "تحرير"
+msgstr "تغيير"
 
 #: wpadverts/manage.php:57 wpadverts/manage.php:58
 msgid "Delete"
