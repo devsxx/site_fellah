@@ -423,14 +423,24 @@ jQuery(document).ready(function($) {
 		$(this).parent().addClass('checked'); 
 	});
 	
-	$("input[type=checkbox].class_advert_category ").change(function()	{
-		var group = "input:checkbox[name='"+$(this).attr("name")+"'].class_advert_category ";
+	$("input[type=checkbox].class_advert_category").change(function()	{
+		var group = "input:checkbox[name='"+$(this).attr("name")+"'].class_advert_category";
 		$(group).attr("checked",false);
 		$(this).attr("checked",true);
 
-		$("input[type=checkbox].class_advert_category ").parent().removeClass('checked')
+		$("input[type=checkbox].class_advert_category").parent().removeClass('checked')
 		$(this).parent().addClass('checked'); 
 	});
+	
+	$(document).on("change", "input[type=checkbox].class_advert_sous_category", function()	{
+		var group = "input:checkbox[name='"+$(this).attr("name")+"'].class_advert_sous_category";
+		$(group).attr("checked",false);
+		$(this).attr("checked",true);
+
+		$("input[type=checkbox].class_advert_sous_category").parent().removeClass('checked')
+		$(this).parent().addClass('checked'); 
+	});
+
 
    $(".adverts-field-customadvertscategory input[type='checkbox']").click(function(){
    	var checkbox = $(this);

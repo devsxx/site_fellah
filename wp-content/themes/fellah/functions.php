@@ -1005,7 +1005,7 @@ function ajaxsouscat(){
 											$i++;
 												
 											$htmls .= '<div class="checkbox">
-											<input type="checkbox" class="filled-in" name="advert_category[]" id="advert_sub_category_'.$i.'" value="'.$term->term_id.'"> 
+											<input type="checkbox" class="filled-in class_advert_sous_category" name="advert_category[]" id="advert_sub_category_'.$i.'" value="'.$term->term_id.'"> 
 											<label for="advert_sub_category_'.$i.'">'.$term->name.'</label>
 											</div>';
 										} 
@@ -1555,3 +1555,6 @@ function newMessageNotificationToUser($userId, $senderName) {
 		ob_end_clean();
 		wp_mail($user->user_email, $email_subject, $message);
 	}
+
+
+ 

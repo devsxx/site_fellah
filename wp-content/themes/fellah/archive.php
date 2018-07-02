@@ -32,7 +32,8 @@ get_header();
 								while ( have_posts() ) :
 									the_post(); 
 									get_template_part('template-parts/actus');
-								endwhile;
+								endwhile; 
+								wp_pagenavi( );  
 								the_posts_navigation();
 							else :
 								get_template_part( 'template-parts/content', 'none' );

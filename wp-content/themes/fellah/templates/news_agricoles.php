@@ -39,7 +39,7 @@ get_header();
                                                 get_template_part('template-parts/actus');
                                           endwhile;
                                           
-                                          if ( $the_query->found_posts > 6):  
+                                          if ( $the_query->found_posts >12):  
                                           wp_pagenavi( 
                                                 array( 
                                                 'options' => PageNavi_Core::$options->get_defaults(),
