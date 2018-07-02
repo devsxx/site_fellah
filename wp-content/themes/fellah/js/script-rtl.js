@@ -519,10 +519,12 @@ jQuery(document).ready(function($) {
 
 	$("#show_localisation").live('click', function(){
 		$(".adverts-form-input-group-checkbox-localisation .adverts-control-container").addClass('show');
+		$("body").addClass('no-scroll');
 	});
 
 	$("#show_localisation_region").live('click', function(){
 		$(".adverts-control-container-region").addClass('show');
+		$("body").addClass('no-scroll');
 	});
 	
 	$(".adverts-form-input-group-checkbox-localisation .adverts-control-container").live('click', function(){
@@ -534,6 +536,7 @@ jQuery(document).ready(function($) {
 			 }
 		});
 		$(this).removeClass('show');
+		$("body").removeClass('no-scroll');
 	}); 
 
 	$(".adverts-control-container-region").live('click', function(){
@@ -545,6 +548,7 @@ jQuery(document).ready(function($) {
 			 }
 		});
 		$(this).removeClass('show');
+		$("body").removeClass('no-scroll');
 	});   
 
    $('.adverts-field-name-gallery').find('.row').append("<div class='col-md-6'><div class='gallerymessage'>" + ajax_login_object.GALLERYMESSAGE + "</div></div>");

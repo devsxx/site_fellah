@@ -3,6 +3,7 @@
 *:focus {
 	outline: none;
 }
+
 h1, .h1 {
 	line-height: oe_rem(50px);
 }
@@ -146,6 +147,9 @@ body {
 
 	&.single-events .menu-item-103 > a{
 		color: $second_main_color;
+	}
+	&.no-scroll{
+		overflow: hidden;
 	}
 
 }

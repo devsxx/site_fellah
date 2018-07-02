@@ -13146,6 +13146,10 @@ body.single-events .menu-item-103 > a {
   color: #e5e5e5;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 a:hover, a:focus, a:active {
   text-decoration: none;
 }

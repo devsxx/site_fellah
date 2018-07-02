@@ -13063,6 +13063,10 @@ body.single-events .menu-item-103 > a {
   color: #e5e5e5;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 a:hover, a:focus, a:active {
   text-decoration: none;
 }
@@ -16612,8 +16616,7 @@ form textarea {
   display: block !important;
 }
 .adverts-form-aligned .adverts-plupload-upload-ui {
-  width: 60%;
-  float: right; 
+  float: right !important ; 
 }
 div.adverts-flash-messages .adverts-flash-message-text.adverts-flash-padding {
   margin-right: 40px;
