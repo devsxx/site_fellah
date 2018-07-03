@@ -24,7 +24,7 @@
  * @subpackage BuddyPress
  * @author Grzegorz Winiarski
  * @global $adverts_namespace array
- * @version 1.0
+ * @version 19.5.8
  */
 
 // Register activation function
@@ -197,12 +197,20 @@ function adext_bp_tabs() {
     $published = sprintf( '<span class="no-count">%d</span>', $posts );
     
     bp_core_new_nav_item( apply_filters( "adext_bp_core_nav_item", array(
-        'name'                  => adverts_config("bp.nav_title_listings") . $published,
+        'name'                  => __("Mes annonces", "wpadverts-bp") . $published,
         'slug'                  => $main_slug,
         'screen_function'       => 'adext_bp_screen_manage',			
         'position'              => 200,
         'default_subnav_slug'   => adverts_config("bp.nav_slug_manage"),
     ) ) );
+
+    // bp_core_new_nav_item( apply_filters( "adext_bp_core_nav_item", array(
+    //     'name'                  => adverts_config("bp.nav_title_listings") . $published,
+    //     'slug'                  => $main_slug,
+    //     'screen_function'       => 'adext_bp_screen_manage',			
+    //     'position'              => 200,
+    //     'default_subnav_slug'   => adverts_config("bp.nav_slug_manage"),
+    // ) ) );
 
     // bp_core_new_subnav_item( apply_filters( "adext_bp_core_subnav_item_browse", array(
     //     'name'                  => adverts_config("bp.nav_title_browse"),

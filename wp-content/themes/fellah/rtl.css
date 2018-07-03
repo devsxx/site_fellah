@@ -17157,6 +17157,10 @@ div.adverts-flash-messages {
   text-align: right !important;
 }
 
+#swipebox-overlay{
+  direction: ltr;
+}
+
 #swipebox-bottom-bar, #swipebox-top-bar {
   transform: translate3d(0, -50px, 0) !important;
 }

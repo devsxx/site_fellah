@@ -1558,3 +1558,33 @@ function newMessageNotificationToUser($userId, $senderName) {
 
 
  
+
+ 
+ 
+
+ function my_filter_plugin_updates( $value ) {
+   if( isset( $value->response['wpadverts/wpadverts.php'] ) ) {        
+      unset( $value->response['wpadverts/wpadverts.php'] );
+    }
+    
+    if( isset( $value->response['wpadverts-bp/wpadverts-bp.php'] ) ) {        
+      unset( $value->response['wpadverts-bp/wpadverts-bp.php'] );
+    }
+    return $value;
+ }
+ add_filter( 'site_transient_update_plugins', 'my_filter_plugin_updates' );
+
+
+
+ // Adds query vars for shop post type
+function fellah_add_shop_query_vars( $vars ) {
+	$vars[] = 'news-agricoles'; 
+	return $vars;       
+}
+add_filter( 'query_vars', 'fellah_add_shop_query_vars' );
+
+// Adds rewrite rules for shop post type
+function fellah_add_shop_rewrite_rules() {
+    add_rewrite_rule( '^news-agricoles/page\/([0-9]*)$', 'index.php?page_id=2264&paged=$matches[1]', 'top' ); 
+}
+add_action( 'init', 'fellah_add_shop_rewrite_rules', 10, 0 );

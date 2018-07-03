@@ -160,7 +160,7 @@ if (isset($_POST['submitted'])) {
 	<div id="advertisement">
 
 		<?php if (isset($emailSent) && $emailSent == true) { ?>
-			<div data-alert class="advert_alert advert_success" style="display: block; color: #d9534f;">
+			<div data-alert class="advert_alert advert_success" style="display: block;">
 				<?php esc_html_e( 'Your Message have been sent!', 'fellah' ); ?>
 			</div>
 		<?php } ?>

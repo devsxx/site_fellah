@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WP Adverts 1.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpadverts\n"
 "POT-Creation-Date: 2018-06-27 12:14+0100\n"
-"PO-Revision-Date: 2018-07-02 12:32+0100\n"
+"PO-Revision-Date: 2018-07-03 11:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -25,11 +25,11 @@ msgstr ""
 
 #: addons/bank-transfer/admin/options.php:15
 msgid "Payment Gateway / Bank Transfer"
-msgstr ""
+msgstr "بوابة الدفع/التحويل المصرفي"
 
 #: addons/bank-transfer/bank-transfer.php:42 includes/admin-pages.php:187
 msgid "Bank Transfer"
-msgstr ""
+msgstr "التحويل البنكي"
 
 #: addons/bank-transfer/bank-transfer.php:63
 #: addons/payments/includes/admin-pages.php:573 includes/defaults.php:56
@@ -191,7 +191,7 @@ msgstr ""
 
 #: addons/core/includes/admin-pages.php:270
 msgid "Display Ads As"
-msgstr ""
+msgstr "عرض إعلان"
 
 #: addons/core/includes/admin-pages.php:273
 msgid "Grid (2 or more columns)"
@@ -253,7 +253,7 @@ msgstr ""
 #: addons/core/includes/admin-pages.php:357
 #: addons/core/includes/admin-pages.php:358
 msgid "Expired Ads Handling"
-msgstr ""
+msgstr "انتهت صلاحية الإعلانات المناولة"
 
 #: addons/core/includes/admin-pages.php:364
 msgid "Expired Ad HTTP Status"
@@ -283,6 +283,7 @@ msgstr ""
 #: addons/core/includes/admin-pages.php:387
 msgid "Cabability (or Role) required to always see expired Ads details pages."
 msgstr ""
+"القدرة (أو الدور) مطلوب لرؤية صفحات تفاصيل الإعلانات منتهية الصلاحية دائمًا."
 
 #: addons/core/includes/admin-pages.php:401
 #: addons/core/includes/admin-pages.php:402

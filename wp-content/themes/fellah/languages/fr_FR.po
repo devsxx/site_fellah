@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2018-06-29 15:14+0100\n"
-"PO-Revision-Date: 2018-07-02 11:53+0100\n"
+"PO-Revision-Date: 2018-07-03 11:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -850,7 +850,7 @@ msgstr "Rechercher un article"
 
 #: template-parts/top_annonces.php:7
 msgid "Top annonces"
-msgstr "Top annonces"
+msgstr "Les plus populaires"
 
 #: template-parts/top_annonces.php:10
 msgid "Sélection des meilleures annonces du moment"

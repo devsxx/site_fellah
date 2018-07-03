@@ -23,7 +23,7 @@
  * @package Adverts
  * @category Core
  * @author Grzegorz Winiarski
- * @version 1.0.0
+ * @version 18.5.7
  */
 
 if( !defined("ADVERTS_FILE") ) {

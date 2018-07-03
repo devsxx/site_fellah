@@ -118,7 +118,7 @@ wp_enqueue_script( 'adverts-frontend' );
                     <span class="name"><?php _e('Region', 'fellah'); ?></span>
                     <span>
                         <?php foreach($localisation as $lc): ?> 
-                            <?php echo $lc->name ?>   
+                            <?php echo $lc->name; break; ?>   
                         <?php endforeach; ?>
                     </span>
                 </div>  
