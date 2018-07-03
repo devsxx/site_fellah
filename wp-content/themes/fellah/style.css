@@ -14037,6 +14037,7 @@ form textarea {
   .header_bandeau_content .header_bandeau .search_zone .adverts-js {
     width: 50%;
     padding: 0 2px;
+    height: auto;
   }
   .header_bandeau_content .header_bandeau .search_zone .adverts-form-submit {
     width: 100%;
@@ -14081,6 +14082,7 @@ form textarea {
   .header_bandeau_content .header_bandeau .search_zone .adverts-js {
     width: 100%;
     padding: 0;
+    height: auto;
   }
   .header_bandeau_content .header_bandeau .search_zone .adverts-form-submit {
     width: 100%;
