@@ -1578,13 +1578,13 @@ function newMessageNotificationToUser($userId, $senderName) {
 
  // Adds query vars for shop post type
 function fellah_add_shop_query_vars( $vars ) {
-	$vars[] = 'news-agricoles'; 
+	$vars[] = 'fellah-centre'; 
 	return $vars;       
 }
 add_filter( 'query_vars', 'fellah_add_shop_query_vars' );
 
 // Adds rewrite rules for shop post type
 function fellah_add_shop_rewrite_rules() {
-    add_rewrite_rule( '^news-agricoles/page\/([0-9]*)$', 'index.php?page_id=2264&paged=$matches[1]', 'top' ); 
+    add_rewrite_rule( '^fellah-centre/page\/([0-9]*)$', 'index.php?page_id=2264&paged=$matches[1]', 'top' ); 
 }
 add_action( 'init', 'fellah_add_shop_rewrite_rules', 10, 0 );
