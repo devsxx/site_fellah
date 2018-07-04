@@ -13847,7 +13847,6 @@ form textarea {
   .advert_bandeau .header_bandeau_content .header_bandeau .search_zone .advert-input {
     width: 100%;
   }
-  .advert_bandeau .header_bandeau_content .header_bandeau .search_zone input,
   .advert_bandeau .header_bandeau_content .header_bandeau .search_zone select,
   .advert_bandeau .header_bandeau_content .header_bandeau .search_zone .adverts-js {
     width: 100%;
@@ -14722,6 +14721,7 @@ form textarea {
     flex-direction: row;
   }
   .site-header .header_picto_container .header_picto .compte {
+    height: auto;
     cursor: pointer;
   }
   .site-header .header_picto_container .header_picto .compte span {
@@ -14830,13 +14830,29 @@ form textarea {
 #selecteur_lang #lang_animate .qtranxs_widget {
   clear: both;
   position: relative;
-  top: -11px;
+}
+
+#selecteur_lang #lang_animate .qtranxs_widget ul {
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 #selecteur_lang #lang_animate .qtranxs_widget ul li {
   display: block;
   margin: 0;
   padding: 0;
+  border: 1px solid #eee;
+  opacity: 0.3;
+}
+
+#selecteur_lang #lang_animate .qtranxs_widget ul li.active {
+  opacity: 0.9;
+}
+
+#selecteur_lang #lang_animate .qtranxs_widget ul li a span {
+  opacity: 1;
+  padding: 2px;
 }
 
 #selecteur_lang #lang_animate .qtranxs_widget select {
@@ -16975,6 +16991,12 @@ form textarea {
 
 .annonce_detail_side .annonce-row .author {
   text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .annonce_detail_side .annonce-row {
+    font-size: 1.125rem;
+  }
 }
 
 .contacter_annonceur {

@@ -160,6 +160,7 @@
 			.header_picto{
 				@include flex(center, center, row);
 				.compte{ 
+					height: auto;
 					cursor: pointer;
 					span{
 						display: none;
@@ -261,12 +262,27 @@
 
 		.qtranxs_widget {
 			clear: both;
-			position: relative;
-			top: -11px;
-			ul li {
-				display: block;
-				margin: 0;
+			position: relative; 
+			ul {
+				text-align: center;
 				padding: 0;
+				margin: 0;
+				li {
+					display: block;
+					margin: 0;
+					padding: 0;
+					border: 1px solid #eee;
+					opacity: 0.3;
+					&.active{
+						opacity: 0.9;
+					}
+					a{
+						span{
+							opacity: 1;
+							padding: 2px;
+						}
+					}
+				}
 			}
 			select{
 				border: none;

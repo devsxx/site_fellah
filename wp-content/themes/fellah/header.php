@@ -102,7 +102,7 @@
 													</figure> 
 												</div> 
 
-												<?php the_widget('qTranslateXWidget', array('type' => 'dropdown', 'format' => '%n', 'hide-title' => true) ); ?>
+												<?php the_widget('qTranslateXWidget', array('type' => 'text', 'format' => '%n', 'hide-title' => true) ); ?>
 											</div>
 										</div>
 									</div>
