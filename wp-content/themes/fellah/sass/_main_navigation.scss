@@ -94,6 +94,10 @@
 			.showAll{
 				.close{ 
 					display: none;
+					height: oe_rem(60px);
+					width: oe_rem(60px);
+					text-align: center;
+					line-height: oe_rem(60px);
 				}
 			}
 		}

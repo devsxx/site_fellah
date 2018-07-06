@@ -14972,6 +14972,10 @@ form textarea {
 
 .main-navigation ul li .showAll .close {
   display: none;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  line-height: 60px;
 }
 
 @media (max-width: 1199px) {
@@ -15754,6 +15758,7 @@ form textarea {
 }
 
 .annoce_container {
+  max-width: 100%;
   width: 15.625rem;
   margin-bottom: 0.625rem;
 }
