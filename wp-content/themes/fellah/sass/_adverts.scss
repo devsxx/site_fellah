@@ -279,7 +279,7 @@
    .annonce-row{
       @include flex(center, space-between, row);
       padding: oe_rem(8px) 0;
-      font-size: oe_rem(23px); 
+      font-size: oe_rem(22px); 
       font-family: $second-font-family-sans-serif;
       font-weight: 300;
       .name{

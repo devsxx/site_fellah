@@ -14756,6 +14756,7 @@ form textarea {
 #selecteur_lang #lang_animate .qtranxs_widget {
   clear: both;
   position: relative;
+  background: #fff;
 }
 
 #selecteur_lang #lang_animate .qtranxs_widget ul {
@@ -16932,7 +16933,7 @@ div.adverts-flash-messages .adverts-flash-message-text.adverts-flash-padding {
   -ms-flex-direction: row;
   flex-direction: row;
   padding: 0.5rem 0;
-  font-size: 1.4375rem;
+  font-size: 1.375rem;
   font-family: "Quicksand", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
 }
