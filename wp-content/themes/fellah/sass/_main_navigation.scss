@@ -19,8 +19,8 @@
 			&.free{
 				&:after{
 					content: "";
-					width: oe_rem(35px);
-					height: oe_rem(12px);
+					width: oe_rem(36px);
+					height: oe_rem(13px);
 					background-size: contain;
 					background-image: url(./img/icons/free.png);
 					@include position(absolute, oe_rem(-15px), 0, 0, initial);
