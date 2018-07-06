@@ -36,7 +36,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-lg-3 col-md-4">
 				<div id="item-nav">
 					<div class="item-list-tabs no-ajax" id="object-nav" aria-label="<?php esc_attr_e( 'Member primary navigation', 'buddypress' ); ?>" role="navigation">
 						<ul>
@@ -58,7 +58,7 @@
 				</div><!-- #item-nav -->
 			</div>
  
-			<div class="col-md-9">
+			<div class="col-lg-9 col-md-8">
 				
 				<div id="item-body">
 
