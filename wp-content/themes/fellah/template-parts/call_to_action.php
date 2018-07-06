@@ -13,6 +13,7 @@ if($call_to_action){
       $blank="target='blank'";
    }else{
       $lien = get_field('lien_interne');
+      $blank=""; 
    }
 ?>
    
@@ -20,7 +21,7 @@ if($call_to_action){
     <div class="info">
         <div class="titre"><?php the_title(); ?></div>
         <div class="description"><?php the_field('description'); ?></div>
-        <a href="<?php echo $lien; ?>" <?php echo $rel . $blank ?>> <?php the_field('titre_bouton'); ?>  </a>
+        <a href="<?php echo $lien; ?>" <?php echo $rel . $blank ?>> <?php the_field('titre_bouton'); ?>  </a> 
     </div>
 </div>
 

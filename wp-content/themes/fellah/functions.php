@@ -1110,19 +1110,19 @@ function adverts_field_login_or_subscribe( $field ) {
 							<label>' . __('Connectez-vous', 'fellah') . '</label>
 						</div>
 					
-						<div class="col-md-4"> 
+						<div class="col-lg-4 col-md-5"> 
 							<div class="input_container">
 								<i class="far fa-envelope"></i>
 								<input type="text" name="username" placeholder="' . __('Identifiant ou Email', 'fellah') . '" id="username">                                
 							</div> 
 						</div> 
-						<div class="col-md-4"> 
+						<div class="col-lg-4 col-md-5"> 
 							<div class="input_container">
 								<i class="far fa-edit"></i>
 								<input type="password" name="password" placeholder="' . __('Mot de passe', 'fellah') . '" id="password">                                
 							</div>
 						</div>
-						<div class="col-md-1">  
+						<div class="col-lg-1 col-md-2">  
 							<button name="connect" id="connect">' . __('Ok','fellah') . '</button>
 						</div> 
 					</div>
@@ -1137,19 +1137,19 @@ function adverts_field_login_or_subscribe( $field ) {
 						<div class="col-md-12"> 
 							<label>' . __('Create an account', 'fellah') . '</label>
 						</div>
-						<div class="col-md-3">
+						<div class="col-lg-3 col-md-4">
 							<div class="input_container">
 								<i class="far fa-user"></i>
 								<input type="text" placeholder="' . __('Prénom', 'fellah') . '" name="prenom" id="prenom">                                
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-lg-3 col-md-4">
 							<div class="input_container">
 								<i class="far fa-user"></i>
 								<input type="text" placeholder="' . __('Nom', 'fellah') . '" name="nom" id="nom">                                
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-lg-3 col-md-4">
 							<div class="input_container">
 								<i class="far fa-envelope"></i>
 								<input type="email" placeholder="' . __('Email', 'fellah') . '" name="email" id="email">                                
@@ -1158,19 +1158,19 @@ function adverts_field_login_or_subscribe( $field ) {
 					</div>
 
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-lg-3 col-md-4">
 							<div class="input_container">
 								<i class="far fa-edit"></i>
 								<input type="password" placeholder="' . __('Mot de passe', 'fellah') . '" name="mot_passe" id="mot_passe">                                
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-lg-3 col-md-4">
 							<div class="input_container">
 								<i class="far fa-edit"></i>
 								<input type="password" placeholder="' . __('Confirmer le mot de passe', 'fellah') . '" name="confirm_mot_passe" id="confirm_mot_passe">                                
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-lg-3 col-md-4">
 							<div class="input_container">
 							<i class="fas fa-phone"></i>
 								<input type="text" placeholder="' . __('Telephone', 'fellah') . '" name="telephone" id="telephone">                                
@@ -1179,7 +1179,7 @@ function adverts_field_login_or_subscribe( $field ) {
 					</div>
 
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-lg-3 col-md-4">
 							<button name="creation_compte" id="creation_compte">' . __('Créer mon compte', 'fellah') . '</button>
 						</div>
 					</div>
