@@ -5,7 +5,7 @@
  * Description: This module allows to integrate WPAdverts with BuddyPress plugin.
  * Author: Greg Winiarski
  * Text Domain: wpadverts-bp
- * Version: 1.0.2
+ * Version: 19.0.2
  * 
  * WPAdverts is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

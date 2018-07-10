@@ -5,7 +5,7 @@
  * Description: Customize: Advert Add, Search and Contact forms using easy to use drag and drop editor.
  * Author: Greg Winiarski
  * Text Domain: wpadverts-custom-fields
- * Version: 1.1.0
+ * Version: 1.2.0
  * 
  * Adverts is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -110,7 +110,7 @@ function wpadverts_custom_fields_init_admin() {
     $manager = new Adverts_Updates_Manager(
         "wpadverts-custom-fields/wpadverts-custom-fields.php", 
         "wpadverts-custom-fields", 
-        "1.1.0"
+        "1.2.0"
     );
     $manager->connect();
 
@@ -296,14 +296,19 @@ function wpadverts_custom_fields_form_bind( $form ) {
  */
 function wpadverts_custom_fields_form_load( $form ) {
     
+    $form_group = apply_filters( "wpadverts_cf_form_load_names", array(
+        "special" => array( "contact" ),
+        "normal" => array( "advert", "search" )
+    ) );
+    
     // special treatment for contact form
-    if( $form["name"] == "contact" ) {
-        $scheme = wpadverts_custom_fields_get_form_scheme( "contact" );
+    if( in_array( $form["name"], $form_group["special"] ) ) {
+        $scheme = wpadverts_custom_fields_get_form_scheme( $form["name"] );
         
         if( $scheme instanceof WP_Post ) {
             $form_scheme  = wpadverts_custom_fields_form_load_prepare( $scheme );
             $form["field"] = $form_scheme["field"];
-            
+
             if(isset($form_scheme["layout"])) {
                 $form["layout"] = $form_scheme["layout"];
             }
@@ -316,11 +321,11 @@ function wpadverts_custom_fields_form_load( $form ) {
     if( ! isset( $form["form_scheme_id"] ) ) {
         return $form;
     }
-    
-    if( ! in_array( $form["name"], array( "advert", "search" ) ) ) {
+
+    if( ! in_array( $form["name"], $form_group["normal"] ) ) {
         return $form;
     } 
-    
+
     $scheme = get_post( $form["form_scheme_id"] );
     $form_scheme  = wpadverts_custom_fields_form_load_prepare( $scheme );
     
@@ -400,6 +405,14 @@ function wpadverts_custom_fields_form_load_prepare( $scheme ) {
     }
     
     foreach( $fields["field"] as $key => $field ) {
+        
+        if( isset( $field["max_choices"] ) && $field["max_choices"] > 0 ) {
+            $fields["field"][$key]["validator"][] = array(
+                "name" => "max_choices",
+                "params" => array( "max_choices" => $field["max_choices"] )
+            );
+        }
+        
         if( ! isset($field["meta"]["cf_options_fill_method"]) ) {
             continue;
         }
@@ -413,7 +426,7 @@ function wpadverts_custom_fields_form_load_prepare( $scheme ) {
         
 
     }
-    
+
     return $fields;
 }
 
@@ -427,13 +440,15 @@ function wpadverts_custom_fields_form_load_prepare( $scheme ) {
  * 
  * @since 1.0.0
  * @since 1.0.1             $params variable
+ * @since 1.2.0             $form_type variable
  * 
  * @access public
- * @param array $args       WP_Query args
- * @param array $params     [adverts_list] shortcode params
- * @return array            Updated WP_Query args
+ * @param array     $args       WP_Query args
+ * @param array     $params     [adverts_list] shortcode params
+ * @param string    $form_type  The search form type
+ * @return array                Updated WP_Query args
  */
-function wpadverts_custom_fields_list_query( $args, $params = null ) {
+function wpadverts_custom_fields_list_query( $args, $params = null, $form_type = 'search' ) {
     
     $scheme_name = null;
     
@@ -441,7 +456,7 @@ function wpadverts_custom_fields_list_query( $args, $params = null ) {
         $scheme_name = $params["form_scheme"];
     }
     
-    $scheme = wpadverts_custom_fields_get_form_scheme( 'search', $scheme_name );
+    $scheme = wpadverts_custom_fields_get_form_scheme( $form_type, $scheme_name );
 
     if( $scheme === null ) {
         return $args;
@@ -696,10 +711,15 @@ function wpadverts_custom_fields_post_save( $form, $post_id ) {
  */
 function wpadverts_custom_fields_get_form_scheme( $type, $name = null ) {
     
-    if( !in_array($type, array( "add", "search", "contact" ) ) ) {
-        trigger_error( 'First param ($type) has to be one of "add", "search" or "contact".' );
+    $types = array();
+    foreach( array_keys( wpadverts_custom_fields_form_types() ) as $t ) {
+        $types[] = str_replace( "wpad-form-", "", $t );
     }
     
+    if( ! in_array($type, $types ) ) {
+        trigger_error( 'First param ($type) is incorrect.' );
+    }
+
     $list = new WP_Query(array(
         'post_type' => 'wpadverts-form', 
         'post_status' => 'wpad-form-' . $type,
@@ -814,6 +834,10 @@ function wpadverts_custom_fields_tpl_single( $post_id, $collect ) {
         
         if( isset( $field["meta"]["cf_builtin"] ) && $field["meta"]["cf_builtin"] == 1 ) {
             continue;
+        }
+        
+        if( ! isset( $field["meta"]["cf_display"] ) ) {
+            continue;;
         }
         
         if( $field["meta"]["cf_display"] != "anywhere" ) {
@@ -936,4 +960,30 @@ function wpadverts_custom_fields_tpl_single( $post_id, $collect ) {
         }
     }
  
+}
+
+/**
+ * Returns registered form types
+ * 
+ * @since 1.1.2
+ * @return array
+ */
+function wpadverts_custom_fields_form_types() {
+    
+    $forms = array(
+        "wpad-form-add" => array(
+            "class" => "wpadverts-custom-fields-type-add",
+            "template" => dirname( ADVERTS_PATH ) . '/wpadverts-custom-fields/admin/editor-add.php'
+        ),
+        "wpad-form-search" => array(
+            "class" => "wpadverts-custom-fields-type-search",
+            "template" => dirname( ADVERTS_PATH ) . '/wpadverts-custom-fields/admin/editor-search.php'
+        ),
+        "wpad-form-contact" => array(
+            "class" => "wpadverts-custom-fields-type-contact",
+            "template" => dirname( ADVERTS_PATH ) . '/wpadverts-custom-fields/admin/editor-contact.php'
+        )
+    );
+    
+    return apply_filters( 'wpadverts_cf_form_types', $forms );
 }

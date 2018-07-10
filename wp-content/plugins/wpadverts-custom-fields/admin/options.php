@@ -22,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
     <?php adverts_admin_flash() ?>
 
-
     <table cellspacing="0" class="widefat post fixed">
         <?php foreach(array("thead", "tfoot") as $tx): ?>
         <<?php echo $tx; ?>>
@@ -50,13 +49,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 </td>
                 <td class="">
                     <?php if($item->post_status == 'wpad-form-add'): ?>
-                    <?php _e( "Create Ad", 'wpadverts-custom-fields' ) ?>
+                    <?php _e( "Advert — Create", 'wpadverts-custom-fields' ) ?>
                     <?php elseif($item->post_status == 'wpad-form-search'): ?>
-                    <?php _e( "Search", 'wpadverts-custom-fields' ) ?>
+                    <?php _e( "Advert — Search", 'wpadverts-custom-fields' ) ?>
                     <?php elseif($item->post_status == 'wpad-form-contact'): ?>
-                    <?php _e( "Contact", 'wpadverts-custom-fields' ) ?>
+                    <?php _e( "Advert — Contact", 'wpadverts-custom-fields' ) ?>
                     <?php else: ?>
-                    -
+                    <?php echo apply_filters( 'wpadverts_cf_form_type_label', '—', $item ); ?>
                     <?php endif; ?>
                 </td>
                 <td class="">

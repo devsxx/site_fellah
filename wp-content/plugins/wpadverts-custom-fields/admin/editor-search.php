@@ -5,7 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 wp_enqueue_script( 'wpadverts-custom-fields-editor-search' );
 
-$form = Adverts::instance()->get("form_search");
+if( ! isset( $form ) ) {
+    $form = Adverts::instance()->get("form_search");
+}
 
 $post = get_post( $id );
 if( @unserialize( $post->post_content ) ) {
@@ -237,6 +239,8 @@ $fields = array(
     ),
 
 );
+
+$fields = apply_filters( "wpadverts_cf_editor_fields", $fields, $data, $form, $post );
 
 ?>
 <script type="text/html" id="tmpl-cf-visual-search-separator">

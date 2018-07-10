@@ -1,0 +1,427 @@
+#wpadverts-custom-fields-editor h2.wpacf-mode-visual:hover,
+#wpadverts-custom-fields-editor div.wpacf-mode-visual.inside:hover {
+    outline: 2px dashed silver;
+    outline-offset: -2px;
+    cursor: move;
+}
+
+#wpadverts-custom-fields-editor h2.wpacf-mode-config,
+#wpadverts-custom-fields-editor div.wpacf-mode-config.inside {
+    outline: 1px solid silver;
+    background-color: whitesmoke;
+}
+
+#wpadverts-custom-fields-editor.postbox .inside {
+    margin: 0;
+    padding: 12px;
+}
+
+.wpacf-visual {
+    position: relative;
+}
+
+.inside:hover .wpacf-visual .wpacf-visual-actions {
+    display: block;
+}
+
+.wpacf-visual-actions {
+    position: absolute;
+    display: none;
+    right: 0px;
+    top: 0px;
+}
+
+.wpacf-visual-actions > a {
+    text-decoration: none !important;
+}
+
+.wpacf-visual-actions > a > span {
+    font-size: 24px;
+}
+
+.wpacf-config-legend {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0;
+}
+
+
+
+.wpacf-config-field {
+    clear: both;
+    overflow: hidden;
+    padding: 5px 0 5px 0;
+    margin: 5px 5px 5px 5px;
+}
+
+.wpacf-config-label {
+    float: left;
+    display: inline-block;
+    width: 30%;
+    line-height: 24px;
+    font-size: 13px;
+}
+
+.wpacf-config-fieldset {
+    margin-top: 15px;
+}
+
+.wpacf-config-fieldset:first-child {
+    margin-top: 0px;
+}
+
+.wpacf-config-input {
+    float: left;
+    display: block;
+    width: 69%;
+    box-sizing: content-box;
+}
+
+.wpacf-config-field-error {
+    background-color: pink;
+}
+
+.wpacf-config-field-error-msg {
+    color: darkred;
+}
+
+.wpacf-visual-label {
+    width: 33%;
+    float: left;
+    display: block;
+    box-sizing: content-box;
+}
+
+.wpacf-field-is-required {
+    color: darkred;
+}
+
+.wpacf-tinymce-editor-header {
+    position: absolute; 
+    left: 33%; 
+    padding: 1px;
+    border-bottom: 1px solid #ddd;
+    background: #f5f5f5;
+    width: 66.5%;
+}
+
+#wpadverts-custom-fields-basic-fields {
+
+}
+
+#wpadverts-custom-fields-basic-fields .wpadverts-custom-fields-input-template {
+    display: inline-block;
+    width: 47%;
+    margin: 1%;
+}
+
+#wpadverts-custom-fields-trash .wpadverts-custom-fields-input-template {
+    display: inline-block;
+    width: 98%;
+    margin: 1%;
+}
+
+.wpadverts-custom-fields-input-template {
+    list-style-type: none;
+}
+
+#wpadverts-custom-fields-trash .wpadverts-custom-fields-input-template a:before {
+    vertical-align: baseline;
+    font-size: 20px;
+    line-height: 28px;
+    height: 28px;
+    margin-left: 5px;
+}
+
+.wpadverts-custom-fields-input-template > span {
+    width: 100%;
+    font-weight: bold;
+    cursor: move !important;
+}
+
+.wpacf-plain-text-body,
+.wpacf-tinymce-editor-body {
+    min-width: 305px; 
+    min-height: 150px   ;
+    width: 100%;
+}
+
+.wpacf-tinymce-editor-body {
+
+}
+
+.wpacf-header h2 {
+    padding-left: 0 !important;
+}
+
+.wpacf-header h2 .wpacf-header-label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.wpacf-header h2 .wpacf-header-description {
+    display: block;
+    
+}
+
+/* SEARCH FIELD SPECIFIC */
+
+.wpadverts-custom-fields-type-search .wpacf-visual-label {
+    
+}
+
+.wpadverts-custom-fields-type-search #wpadverts-custom-fields-editor {
+    clear: both;
+}
+
+.wpadverts-custom-fields-type-search .wpacf-visual-half {
+    width: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.wpadverts-custom-fields-type-search input[type=text] {
+    width: 100%;
+}
+
+.wpacf-visual-search-separator {
+    width: 100%; 
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+.wpacf-visual-search-separator:before,
+.wpacf-visual-search-separator:after {
+    background-color: #444;
+    content: "";
+    display: inline-block;
+    height: 1.5px;
+    position: relative;
+    vertical-align: middle;
+    width: 47.5%;
+    opacity: 0.8;
+}
+.wpacf-visual-search-separator:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.wpacf-visual-search-separator:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.wpacf-madlib-wrap {
+    display: inline-block;
+}
+
+.wpacf-madlib-suggest {
+    position: absolute;
+    background-color: silver;
+    box-shadow: 2px 2px 8px rgba(0,0,0, 0.4);
+    border: 0px solid silver;
+    margin: 0;
+    padding: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.wpacf-madlib-text .dashicons {
+    margin-left: -5px;
+    margin-right: 1px;
+}
+
+.wpacf-madlib-suggest > li {
+    display: block;
+    padding: 2px 8px;
+}
+
+.wpacf-madlib-suggest > li:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+}
+
+.wpacf-madlib-text:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.wpadverts-custom-fields-type-search .wpacf-multiselect-options-add input[type=text] {
+    width: 48%;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.wpacf-multiselect-show-values-wrap {
+        line-height: 28px;
+    font-size: 14px;
+    text-align: right;
+    display: inline-block;
+    float: right;
+}
+
+.wpacf-multiselect-options {
+    border: 1px solid silver;
+    padding: 4px;
+    min-height: 75px;
+    max-height: 150px;
+    overflow-y: scroll;
+    margin: 0 0 10px 0;
+}
+
+.wpacf-multiselect-options > li {
+    margin: 0;
+    padding: 4px 0 4px 0;
+}
+
+.wpacf-multiselect-options input[type=text] {
+    width: 80%;
+    width: calc(100% - 50px);
+    
+}
+
+.wpacf-multiselect-options.wpacf-multiselect-uses-values input[type=text] {
+    width: 40%;
+    width: calc(50% - 30px);
+}
+
+.wpacf-multiselect-options .dashicons {
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.wpadverts-multiselect-option-value {
+    display: none;
+}
+
+.wpacf-multiselect-uses-values .wpadverts-multiselect-option-value {
+    display: inline;
+}
+
+.wpadverts-multiselect-option-drag {
+    cursor: move;
+}
+
+.wpadverts-multiselect-option-trash {
+    cursor: pointer;
+}
+
+.wpacf-multiselect-rows {
+    clear: both;
+    overflow: hidden;
+}
+
+.wpacf-multiselect-rows label {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px 10px 0;
+}
+
+.wpacf-multiselect-rows[data-rows="1"] label {
+    width: 100%;
+}
+.wpacf-multiselect-rows[data-rows="2"] label {
+    width: 50%;
+}
+.wpacf-multiselect-rows[data-rows="3"] label {
+    width: 33%;
+}
+.wpacf-multiselect-rows[data-rows="4"] label {
+    width: 25%;
+}
+.wpacf-multiselect-rows[data-rows="5"] label {
+    width: 20%;
+}
+
+.wpadverts-custom-fields-save-ok {
+    display: none;
+}
+
+.wpadverts-custom-fields-save-ok:before {
+    vertical-align: bottom;
+    font-size: 28px;
+    
+}
+
+#wpbody-content #wpadverts-custom-fields .postbox-container {
+    width: 66%;
+}
+#wpbody-content #wpadverts-custom-fields #postbox-container-2 {
+    float: right;
+    width: 34%;
+}
+
+#wpadverts-custom-fields .meta-box-sortables {
+    margin: 0 8px;
+    min-height: 100px;
+}
+
+.wpadverts-cf-save-error {
+    display: none;
+    border: 1px solid darkorange;
+    background: cornsilk;
+    padding: 0;
+}
+
+.wpadverts-cf-save-error p {
+    margin: 0.5em;
+}
+
+.wpacf-visual-input-wrap {
+    margin-left: 33%;
+}
+
+.wpadverts-custom-fields-type-search .wpacf-visual-input-wrap {
+    margin-left: 0;
+}
+
+.wpacf-visual-input-wrap > textarea,
+.wpacf-visual-input-wrap > input[type=text] {
+    width: 100%;
+}
+
+.wpadverts-custom-fields-icon-picker {
+    padding: 1em;
+    margin: 0;
+    background-color: white;
+    background-color: #fff;
+    color: #333;
+}
+
+.wpadverts-custom-fields-icon-picker > li {
+    display: block;
+    margin: 0 1em 1em 0;
+    padding: 0;
+    height: 30px;
+    width: 38px;
+    float: left;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.wpadverts-custom-fields-icon-picker > li a {
+    width: 42px;
+}
+
+#wpadverts-custom-fields-icon-filter {
+    width:100%;
+    position: static;
+}
+
+.adverts-form-stacked .wpacf-visual-label {
+    width: 100%;
+    display: block;
+}
+
+.adverts-form-stacked .wpacf-visual-input-wrap {
+    margin-left: 0;
+    clear: both;
+}
+
+.adverts-form-stacked .wpacf-tinymce-editor-header {
+    left: 1px;
+    padding: 1px;
+    width: 99.5%;
+    top: 20px;
+}

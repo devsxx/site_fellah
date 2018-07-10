@@ -3,15 +3,33 @@
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-function wpadverts_custom_fields_get_unique_metas() {
+/**
+ * 
+ * @since 1.2
+ * @param type $post_type
+ * @return type
+ */
+function wpadverts_custom_fields_get_default_metas( $post_type = 'advert' ) {
+    $arr = array(
+        array( "name" => "adverts_person", "label" => __( "Contact Person", "wpadverts-custom-fields" ) ),
+        array( "name" => "adverts_email", "label" => __( "Contact Email", "wpadverts-custom-fields" ) ),
+        array( "name" => "adverts_phone", "label" => __( "Contact Phone", "wpadverts-custom-fields" ) ),
+        array( "name" => "adverts_price", "label" => __( "Price", "wpadverts-custom-fields" ) ),
+        array( "name" => "adverts_location", "label" => __( "Location", "wpadverts-custom-fields" ) ),
+    );
+    
+    return apply_filters( "wpadverts_cf_default_metas", $arr, $post_type );
+}
+
+function wpadverts_custom_fields_get_unique_metas( $post_status = 'wpad-form-add' ) {
     $metas = array();
     $forms = new WP_Query(array(
         'post_type' => 'wpadverts-form', 
-        'post_status' => 'wpad-form-add',
+        'post_status' => $post_status,
         'orderby' => array( 'menu_order' => 'DESC' ),
         'posts_per_page' => -1
     ));
-    
+
     foreach( $forms->posts as $form ) {
         $form_scheme = unserialize( $form->post_content );
         foreach( $form_scheme["field"] as $f ) {
@@ -87,20 +105,26 @@ function wpadverts_custom_fields_editor( $data, $form, $fields, $post ) {
                                             <div class="inside">
                                                 <div class="">
                                                     <p>
-                                                        <span class="label"><strong><?php _e( "Title", "wpadverts-custom-fields" ) ?></strong></span>&nbsp;
+                                                        <span class="label"><strong><?php _e( "Type", "wpadverts-custom-fields" ) ?></strong></span>&nbsp;
                                                         <span>
-                                                            
-                                                        <?php echo esc_html( $post->post_title ) ?> -
-                                                            
+
                                                         <?php if($post->post_status == 'wpad-form-add'): ?>
-                                                        <?php _e( "Create Ad", 'wpadverts-custom-fields' ) ?>
+                                                        <?php _e( "Advert — Create", 'wpadverts-custom-fields' ) ?>
                                                         <?php elseif($post->post_status == 'wpad-form-search'): ?>
-                                                        <?php _e( "Search", 'wpadverts-custom-fields' ) ?>
+                                                        <?php _e( "Advert — Search", 'wpadverts-custom-fields' ) ?>
                                                         <?php elseif($post->post_status == 'wpad-form-contact'): ?>
-                                                        <?php _e( "Contact", 'wpadverts-custom-fields' ) ?>
+                                                        <?php _e( "Advert — Contact", 'wpadverts-custom-fields' ) ?>
                                                         <?php else: ?>
+                                                        <?php echo apply_filters( 'wpadverts_cf_form_type_label', '—', $post ); ?>
                                                         <?php endif; ?>
                                                         </span>
+                                                    </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p>
+                                                        <span class="label"><strong><?php _e( "Title", "wpadverts-custom-fields" ) ?></strong></span>&nbsp;
+                                                        <span><?php echo esc_html( $post->post_title ) ?></span>
                                                     </p>
                                                 </div>
 
@@ -563,7 +587,19 @@ function wpadverts_custom_fields_option_upload() {
     <?php
 }
 
-function wpadverts_custom_fields_option_cf_search_field() {
+function wpadverts_custom_fields_option_cf_search_field($data = null) {
+    
+    $post_type = "advert";
+    $form_type = "wpad-form-search";
+    
+    if( isset( $data["post_type"] ) ) {
+        $post_type = $data["post_type"];
+    }
+    
+    if( isset( $data["form_type"] ) ) {
+        $form_type = $data["form_type"];
+    }
+    
     ?>
     
     <# if( data.meta.cf_builtin ) { #>
@@ -572,6 +608,7 @@ function wpadverts_custom_fields_option_cf_search_field() {
     <# } else { #>
     
     <div class="wpacf-config-field">
+        <?php wpadverts_custom_fields_get_unique_metas( $form_type ) ?>
         <label class="wpacf-config-label"><?php _e("Search By", "wpadverts-custom-fields" ) ?></label>
         <div class="wpacf-config-input">
 
@@ -593,28 +630,20 @@ function wpadverts_custom_fields_option_cf_search_field() {
                 </optgroup>
                 
                 <optgroup label="<?php echo esc_attr( "Taxonomies", "wpadverts-custom-fields" ) ?>">
-                    <?php foreach( get_object_taxonomies( 'advert', 'objects' ) as $tax ): ?>
+                    <?php foreach( get_object_taxonomies( $post_type, 'objects' ) as $tax ): ?>
                     <option value="taxonomy__<?php echo esc_html($tax->name) ?>" {{ HTML.selected( field.getMeta( "cf_search_field" ) === "taxonomy__<?php echo esc_html($tax->name) ?>" ) }}><?php echo esc_html( $tax->label ) ?></option>
                     <?php endforeach; ?>
                 </optgroup>
                 
-                <optgroup label="<?php echo esc_attr( "Custom Fields", "wpadverts-custom-fields" ) ?>">
-                    <option value="meta__adverts_person" {{ HTML.selected( field.getMeta( "cf_search_field" ) === "meta__adverts_person" ) }}><?php _e( "Contact Person", "wpadverts-custom-fields" ) ?></option>
-                    <option value="meta__adverts_email" {{ HTML.selected( field.getMeta( "cf_search_field" ) === "meta__adverts_email" ) }}><?php _e( "Contact Email", "wpadverts-custom-fields" ) ?></option>
-                    <option value="meta__adverts_phone" {{ HTML.selected( field.getMeta( "cf_search_field" ) === "meta__adverts_phone" ) }}><?php _e( "Contact Phone", "wpadverts-custom-fields" ) ?></option>
-                    <option value="meta__adverts_price" {{ HTML.selected( field.getMeta( "cf_search_field" ) === "meta__adverts_price" ) }}><?php _e( "Price", "wpadverts-custom-fields" ) ?></option>
-                    <option value="meta__adverts_location" {{ HTML.selected( field.getMeta( "cf_search_field" ) === "meta__adverts_location" ) }}><?php _e( "Location", "wpadverts-custom-fields" ) ?></option>
-                    <?php foreach( wpadverts_custom_fields_get_unique_metas() as $meta ): ?>
+                <optgroup label="<?php echo esc_attr( "Custom Fields", "wpadverts-custom-fields" ) ?>">  
+                    <?php foreach( wpadverts_custom_fields_get_default_metas( $post_type ) as $meta ): ?>
+                    <option value="meta__<?php echo esc_html( $meta["name"] ) ?>" {{ HTML.selected( field.getMeta( "cf_search_field" ) === "meta__<?php echo esc_html( $meta["name"] ) ?>" ) }}><?php echo esc_html( $meta["label"] ) ?></option>
+                    <?php endforeach; ?>
+                    <?php foreach( wpadverts_custom_fields_get_unique_metas( $form_type ) as $meta ): ?>
                     <option value="meta__<?php echo esc_html( $meta["name"] ) ?>" {{ HTML.selected( field.getMeta( "cf_search_field" ) === "meta__<?php echo esc_html( $meta["name"] ) ?>" ) }}><?php echo esc_html( $meta["label"] ) ?></option>
                     <?php endforeach; ?>
                 </optgroup>
-                
-                <!--
-                <option value="email" {{ HTML.selected( field.getValidatorParam("string_validate_as", "type") == "email" ) }}>Email</option>
-                <option value="url" {{ HTML.selected( field.getValidatorParam("string_validate_as", "type") == "url" ) }}>URL</option>
-                <option value="number" {{ HTML.selected( field.getValidatorParam("string_validate_as", "type") == "number" ) }}>Number</option>
-                <option value="integer" {{ HTML.selected( field.getValidatorParam("string_validate_as", "type") == "integer" ) }}>Integer</option>
-                -->
+
             </select>
         </div>
     </div>

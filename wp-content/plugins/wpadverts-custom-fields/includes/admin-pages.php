@@ -123,7 +123,7 @@ function _wpadverts_custom_fields_page_add() {
                 'post_status' => $form->get_value( "form_type" ),
                 'menu_order' => absint( $form->get_value("is_default") ),
                 'post_type' => "wpadverts-form"
-            ) );
+            ), true );
             
             $m = __('Form Created. Loading Form Editor. If it is taking to long <a href="%s">click here</a>.', "wpadverts-custom-fields");
             
@@ -149,21 +149,7 @@ function _wpadverts_custom_fields_page_edit() {
     }
     
     $status = $scheme->post_status;
-    
-    $forms = array(
-        "wpad-form-add" => array(
-            "class" => "wpadverts-custom-fields-type-add",
-            "template" => "editor-add.php"
-        ),
-        "wpad-form-search" => array(
-            "class" => "wpadverts-custom-fields-type-search",
-            "template" => "editor-search.php"
-        ),
-        "wpad-form-contact" => array(
-            "class" => "wpadverts-custom-fields-type-contact",
-            "template" => "editor-contact.php"
-        )
-    );
+    $forms = wpadverts_custom_fields_form_types();
     
     if( ! isset( $forms[ $scheme->post_status ] ) ) {
         echo __( "Inocrrect Form Type", "wpadverts-custom-fields" );
@@ -177,7 +163,7 @@ function _wpadverts_custom_fields_page_edit() {
     wp_enqueue_style( 'wpadverts-custom-fields-editor' );
     
     
-    include dirname( ADVERTS_PATH ) . '/wpadverts-custom-fields/admin/' . $data["template"];
+    include $data["template"];
 }
 
 
@@ -185,10 +171,10 @@ function _wpadverts_custom_fields_page_list() {
     
     $loop = new WP_Query(array(
         'post_type' => 'wpadverts-form',
-        'post_status' => array('wpad-form-add', 'wpad-form-contact', 'wpad-form-search'),
+        'post_status' => array_keys( wpadverts_custom_fields_form_types() ),
         'posts_per_page' => -1
     ));
-    
+
     include dirname( ADVERTS_PATH ) . '/wpadverts-custom-fields/admin/options.php';
 }
 
@@ -215,7 +201,7 @@ function wpadverts_custom_fields_name_exists( $value ) {
     
     $query = new WP_Query(array(
         "post_type" => "wpadverts-form",
-        'post_status' => array('wpad-form-add', 'wpad-form-contact', 'wpad-form-search'),
+        'post_status' => array_keys( wpadverts_custom_fields_form_types() ),
         "name" => $value
     ));
     
