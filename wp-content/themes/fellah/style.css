@@ -14844,11 +14844,6 @@ form textarea {
   margin: 0;
   padding: 0;
   border: 1px solid #eee;
-  opacity: 0.3;
-}
-
-#selecteur_lang #lang_animate .qtranxs_widget ul li.active {
-  opacity: 0.9;
 }
 
 #selecteur_lang #lang_animate .qtranxs_widget ul li a span {
