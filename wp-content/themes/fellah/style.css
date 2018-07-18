@@ -14956,6 +14956,7 @@ form textarea {
 }
 
 .main-navigation ul li .sub-menu {
+  opacity: 0;
   padding: 1.25rem 0;
   background-color: #dbdbdb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -14973,10 +14974,11 @@ form textarea {
   -ms-flex-direction: row;
   flex-direction: row;
   position: fixed;
-  top: 150px;
+  top: initial;
   right: 0;
   bottom: initial;
   left: 0;
+  transition: opacity .25s ease-in-out;
   display: none;
   z-index: 999;
 }
@@ -14984,6 +14986,11 @@ form textarea {
 .main-navigation ul li .sub-menu.showAll {
   display: -ms-flexbox;
   display: flex;
+  opacity: 1;
+}
+
+.main-navigation ul li .sub-menu.showAll .sub-menu {
+  opacity: 1;
 }
 
 .main-navigation ul li .sub-menu li {

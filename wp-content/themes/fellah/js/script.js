@@ -574,10 +574,23 @@ jQuery(document).ready(function($) {
    	input.attr("id", $this.attr("id"));
    	input.attr("placeholder", text);
    	input.attr("autocomplete", "off");
-   	input.addClass("adverts-multiselect-input");
-   	input.on("focus", function(e) {
+		input.addClass("adverts-multiselect-input");
+		
+		
+   	input.on("blur", function(e) {
+   		e.stopPropagation();
 
-   		$(this).blur();
+			if($(this).hasClass("adverts-multiselect-open")) {
+				$(this).removeClass("adverts-multiselect-open");
+				$(this).parent().find(".adverts-multiselect-options").hide();
+			} else {
+				$(this).addClass("adverts-multiselect-open");
+				$(this).parent().find(".adverts-multiselect-options").css("width", $(this).outerWidth()-1);
+				$(this).parent().find(".adverts-multiselect-options").show();
+			}
+		});
+		
+   	input.on("focus", function(e) {
    		e.stopPropagation();
 
    		if($(this).hasClass("adverts-multiselect-open")) {

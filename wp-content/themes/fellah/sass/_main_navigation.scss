@@ -46,12 +46,18 @@
 			.sub-menu{
 				&.showAll{
 					display: flex;
+					opacity: 1;
+					.sub-menu{
+						opacity: 1;
+					}
 				}
+				opacity: 0;
 				padding: oe_rem(20px) 0;
 				background-color: $light_color;
 				@include oe_box-shadow;
 				@include flex(stretch, center, row);
-				@include position(fixed, 150px, 0, initial, 0);
+				@include position(fixed, initial, 0, initial, 0);
+				transition: opacity .25s ease-in-out;
 				display: none;
 				z-index: 999;
 				li{
